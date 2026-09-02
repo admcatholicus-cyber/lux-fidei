@@ -1,0 +1,376 @@
+.wrap {
+  --paper: #fbfaf5;
+  --ink: #1c2f4f;
+  --gold: #c9b876;
+  --gold-dark: #a89358;
+  --paper-old: #f5f2e8;
+  --border: #d8d0b8;
+
+  margin: 3.5rem 0;
+  background: var(--paper);
+  border: 1px solid var(--border);
+  border-top: 4px solid var(--ink);
+  border-radius: 2px;
+  padding: 2rem 2.25rem;
+  box-shadow: 0 4px 20px rgba(28, 47, 79, 0.08);
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px dashed var(--border);
+}
+
+.label {
+  display: inline-block;
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: var(--gold-dark);
+  margin-bottom: 0.5rem;
+}
+
+.titulo {
+  font-family: Georgia, serif;
+  font-size: 1.6rem;
+  color: var(--ink);
+  margin: 0 0 0.4rem;
+  font-weight: 400;
+  letter-spacing: 0.03em;
+}
+
+.sub {
+  font-size: 0.85rem;
+  color: #6a5a3a;
+  margin: 0 auto;
+  font-style: italic;
+  max-width: 680px;
+  line-height: 1.5;
+}
+
+.legendaCat {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem 1.5rem;
+  justify-content: center;
+  margin-bottom: 1.75rem;
+  padding: 0.85rem;
+  background: var(--paper-old);
+  border: 1px solid var(--border);
+  border-radius: 2px;
+}
+
+.catItem {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.78rem;
+  color: #2a2418;
+  font-weight: 500;
+}
+
+.catCor {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1.35fr 1fr;
+  gap: 1.75rem;
+}
+
+.obra {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.obraImg {
+  position: relative;
+  background: var(--ink);
+  padding: 1rem;
+  border-radius: 2px;
+  border: 1px solid var(--gold);
+  overflow: hidden;
+  aspect-ratio: 3 / 4;
+}
+
+.obraImg img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+  border: 1px solid rgba(201, 184, 118, 0.3);
+}
+
+.hotspot {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+
+  /* Mais transparente para deixar a pintura aparecer */
+  background: color-mix(in srgb, var(--cor, var(--gold)) 68%, transparent);
+
+  color: rgba(255, 255, 255, 0.95);
+
+  /* Borda bem mais discreta */
+  border: 1.5px solid rgba(255, 255, 255, 0.75);
+
+  cursor: pointer;
+
+  font-family: Georgia, serif;
+  font-size: 0.85rem;
+  font-weight: 700;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  /* Sombra mais suave */
+  box-shadow:
+    0 1px 5px rgba(0, 0, 0, 0.25);
+
+  z-index: 2;
+
+  transition:
+    transform 0.2s ease,
+    background 0.2s ease,
+    box-shadow 0.2s ease,
+    border-color 0.2s ease;
+}
+
+
+.hotspot:hover {
+  transform: translate(-50%, -50%) scale(1.12);
+
+  background: color-mix(
+    in srgb,
+    var(--cor, var(--gold)) 82%,
+    transparent
+  );
+
+  border-color: rgba(255, 255, 255, 0.95);
+
+  box-shadow:
+    0 2px 8px rgba(0, 0, 0, 0.3);
+
+  z-index: 3;
+}
+
+
+.hotspotAtivo {
+  transform: translate(-50%, -50%) scale(1.16);
+
+  background: color-mix(
+    in srgb,
+    var(--cor, var(--gold)) 82%,
+    transparent
+  );
+
+  border: 2px solid rgba(255, 255, 255, 0.95);
+
+  box-shadow:
+    0 0 0 2px rgba(255, 255, 255, 0.2),
+    0 3px 10px rgba(0, 0, 0, 0.35);
+
+  z-index: 4;
+}
+
+
+.hotspotAtivo::after {
+  content: '';
+
+  position: absolute;
+
+  /* Menor que antes */
+  inset: -5px;
+
+  border-radius: 50%;
+
+  border: 1px solid var(--cor);
+
+  opacity: 0.35;
+
+  animation: pulseSpot 1.8s ease-out infinite;
+}
+
+
+@keyframes pulseSpot {
+  0% {
+    transform: scale(1);
+    opacity: 0.35;
+  }
+
+  100% {
+    transform: scale(1.5);
+    opacity: 0;
+  }
+}
+
+
+
+
+
+
+
+.obraCap {
+  font-size: 0.75rem;
+  color: #6a5a3a;
+  font-style: italic;
+  text-align: center;
+  margin: 0;
+}
+
+.painel {
+  background: var(--paper-old);
+  border: 1px solid var(--border);
+  border-top: 3px solid var(--gold);
+  border-radius: 2px;
+  padding: 1.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.painelHeader {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px dashed var(--border);
+}
+
+.painelNum {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: Georgia, serif;
+  font-size: 1.3rem;
+  font-weight: 700;
+  flex-shrink: 0;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+}
+
+.painelCat {
+  display: block;
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  margin-bottom: 0.15rem;
+}
+
+.painelTit {
+  font-family: Georgia, serif;
+  font-size: 1.4rem;
+  color: var(--ink);
+  margin: 0;
+  font-weight: 400;
+  line-height: 1.2;
+}
+
+.painelDesc {
+  font-family: Georgia, serif;
+  font-size: 0.98rem;
+  line-height: 1.7;
+  color: #2a2418;
+  margin: 0;
+}
+
+.painelLista {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.4rem;
+  padding-top: 1rem;
+  border-top: 1px dashed var(--border);
+}
+
+.itemBtn {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  width: 100%;
+  padding: 0.5rem 0.7rem;
+  background: var(--paper);
+  border: 1px solid var(--border);
+  border-radius: 2px;
+  cursor: pointer;
+  transition: all 0.15s;
+  font-family: inherit;
+  text-align: left;
+}
+
+.itemBtn:hover {
+  background: white;
+  transform: translateX(2px);
+}
+
+.itemAtivo {
+  background: var(--ink);
+  border-color: var(--ink);
+}
+
+.itemAtivo .itemTit {
+  color: var(--gold);
+}
+
+.itemNum {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: Georgia, serif;
+  font-size: 0.7rem;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.itemTit {
+  font-family: Georgia, serif;
+  font-size: 0.78rem;
+  color: var(--ink);
+  line-height: 1.2;
+}
+
+@media (max-width: 900px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+  .painelLista {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 500px) {
+  .wrap {
+    padding: 1.5rem 1rem;
+  }
+  .painel {
+    padding: 1.25rem;
+  }
+  .painelLista {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .hotspot {
+    width: 26px;
+    height: 26px;
+    font-size: 0.72rem;
+  }
+}

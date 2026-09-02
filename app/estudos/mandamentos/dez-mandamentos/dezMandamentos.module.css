@@ -1,0 +1,5 @@
+.pagina {
+  background: var(--cor-fundo-pagina);
+  min-height: 100vh;
+  padding-top: 60px; /* altura da barra fixa */
+}

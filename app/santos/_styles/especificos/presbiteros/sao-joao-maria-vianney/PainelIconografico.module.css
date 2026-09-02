@@ -1,0 +1,94 @@
+/* C:\Users\kitten\Documents\lux-fidei\app\santos\_styles\especificos\presbiteros\sao-joao-maria-vianney\PainelIconografico.module.css */
+
+.painel {
+  position: relative;
+  width: 100%;
+  min-height: 420px;
+  margin: 3.6rem 0;
+  overflow: hidden;
+  border-radius: 2px;
+  display: flex;
+  align-items: flex-end;
+}
+
+.painel.superior {
+  align-items: flex-start;
+}
+
+.painel.centro {
+  align-items: center;
+}
+
+.imagemFundo {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(15, 12, 8, 0.82) 0%,
+    rgba(15, 12, 8, 0.45) 40%,
+    rgba(15, 12, 8, 0.08) 100%
+  );
+}
+
+.superior .overlay {
+  background: linear-gradient(
+    to bottom,
+    rgba(15, 12, 8, 0.82) 0%,
+    rgba(15, 12, 8, 0.45) 40%,
+    rgba(15, 12, 8, 0.08) 100%
+  );
+}
+
+.conteudo {
+  position: relative;
+  z-index: 2;
+  padding: 2.8rem 3.2rem;
+  max-width: 680px;
+  color: #f0ece4;
+}
+
+.conteudo p {
+  font-family: var(--font-literata, 'Literata', Georgia, serif);
+  font-size: 1.15rem;
+  line-height: 1.7;
+  color: rgba(240, 236, 228, 0.92);
+  margin: 0;
+}
+
+.conteudo p em {
+  color: #d4c5a9;
+}
+
+@media (max-width: 768px) {
+  .painel {
+    min-height: 340px;
+    margin: 2.8rem 0;
+  }
+
+  .conteudo {
+    padding: 2rem 1.6rem;
+  }
+
+  .conteudo p {
+    font-size: 1.05rem;
+  }
+}
+
+@media (max-width: 520px) {
+  .painel {
+    min-height: 280px;
+  }
+
+  .conteudo {
+    padding: 1.6rem 1.2rem;
+  }
+}

@@ -1,0 +1,904 @@
+import DialogoMiguel from '../../../_components/especificos/arcanjos/sao-miguel-arcanjo/DialogoMiguel';
+import TestemunhoMiguel from '../../../_components/especificos/arcanjos/sao-miguel-arcanjo/TestemunhoMiguel';
+import TextoOficialMiguel from '../../../_components/especificos/arcanjos/sao-miguel-arcanjo/TextoOficialMiguel';
+
+export const meta = {
+  numero: 'Antologia',
+  titulo: 'Frases',
+  subtitulo: 'As Palavras Sobre São Miguel, Organizadas por Tema',
+};
+
+<PageHeader
+  numero={meta.numero}
+  titulo={meta.titulo}
+  subtitulo={meta.subtitulo}
+/>
+
+<Antologia
+  introducao={
+    <>
+      <p>Diferentemente dos santos que deixaram escritos próprios, São Miguel Arcanjo é ser espiritual — não há livros redigidos por ele. As palavras aqui reunidas são de outra natureza: são o que a Sagrada Escritura, os Padres da Igreja, os Doutores, o Magistério, a Liturgia e os santos disseram <em>sobre ele</em>, ou palavras que ele mesmo pronunciou nas raras ocasiões em que a Escritura registra sua voz.</p>
+      <p>Esta antologia reúne os principais textos organizados em <strong>oito grandes capítulos temáticos</strong> que percorrem dois mil anos de contemplação sobre o Príncipe dos Anjos — das três passagens canônicas em que a Bíblia o nomeia até os pronunciamentos dos Papas do século XXI. Clique nos capítulos para expandi-los; clique nos textos originais nas caixas expansíveis ao final de cada citação para ver o latim, grego ou hebraico.</p>
+    </>
+  }
+  capitulos={[
+    { id: 'cap-1', label: 'I · Escrituras' },
+    { id: 'cap-2', label: 'II · Padres da Igreja' },
+    { id: 'cap-3', label: 'III · Doutores Medievais' },
+    { id: 'cap-4', label: 'IV · Doutores Modernos' },
+    { id: 'cap-5', label: 'V · Magistério' },
+    { id: 'cap-6', label: 'VI · Orações' },
+    { id: 'cap-7', label: 'VII · Santos Modernos' },
+    { id: 'cap-8', label: 'VIII · Liturgia' },
+  ]}
+>
+
+{/* ─────────────────────────────────────────────
+    CAPÍTULO I — ESCRITURAS
+───────────────────────────────────────────── */}
+
+<Capitulo id="cap-1" numero="I" titulo="A Sagrada Escritura" contagem="7 passagens canônicas" aberto>
+
+<Subtema titulo="O Livro de Daniel — o Príncipe de Israel" aberto primeiro>
+
+<DialogoMiguel
+  referencia="Daniel 10,13"
+  cena="Um anjo mensageiro fala a Daniel após vinte e um dias de jejum, relatando o combate espiritual pela nação persa"
+  locutor="O anjo mensageiro"
+  provenancia="Original documentado"
+  original="Princeps autem regni Persarum restitit mihi viginti et uno diebus: et ecce Michael, unus de principibus primis, venit in adiutorium meum, et ego remansi ibi iuxta regem Persarum."
+  fontaOriginal="Vulgata Clementina, Dn 10,13"
+>
+Mas o príncipe do reino da Pérsia me resistiu por vinte e um dias; e eis que Miguel, um dos primeiros príncipes, veio em meu socorro, e eu permaneci ali junto ao rei da Pérsia.
+</DialogoMiguel>
+
+<DialogoMiguel
+  referencia="Daniel 10,21"
+  cena="O anjo continua explicando a Daniel a estrutura da resistência espiritual entre as nações"
+  locutor="O anjo mensageiro"
+  provenancia="Original documentado"
+  original="Verumtamen annuntiabo tibi quod expressum est in scriptura veritatis: et nemo est adiutor meus in omnibus his, nisi Michael princeps vester."
+  fontaOriginal="Vulgata Clementina, Dn 10,21"
+>
+Contudo, anunciar-te-ei o que está escrito na Escritura da verdade: e ninguém há que me ajude em todas essas coisas, senão Miguel, vosso príncipe.
+</DialogoMiguel>
+
+<DialogoMiguel
+  referencia="Daniel 12,1"
+  cena="A visão profética do fim dos tempos: Miguel se levanta em defesa do povo santo no tempo escatológico"
+  locutor="O anjo revelador"
+  provenancia="Original documentado"
+  original="In tempore autem illo consurget Michael princeps magnus, qui stat pro filiis populi tui: et veniet tempus quale non fuit ab eo ex quo gentes esse coeperunt usque ad tempus illud. Et in tempore illo salvabitur populus tuus, omnis qui inventus fuerit scriptus in libro."
+  fontaOriginal="Vulgata Clementina, Dn 12,1"
+>
+Naquele tempo se levantará Miguel, o grande príncipe, aquele que defende os filhos do teu povo; e será um tempo de angústia como não houve desde que as nações existem até então. Naquele tempo será salvo o teu povo, todo aquele que for encontrado inscrito no livro.
+</DialogoMiguel>
+
+</Subtema>
+
+<Subtema titulo="A Carta de Judas — a Disputa pelo Corpo de Moisés">
+
+<DialogoMiguel
+  referencia="Judas 1,9"
+  cena="O apóstolo Judas invoca uma tradição sobre a humildade do arcanjo diante do adversário, para instruir os cristãos"
+  locutor="Miguel, ao diabo"
+  provenancia="Original documentado"
+  original="Cum Michael Archangelus cum diabolo disputans altercaretur de Moysi corpore, non est ausus iudicium inferre blasphemiae: sed dixit: Imperet tibi Dominus."
+  fontaOriginal="Vulgata Clementina, Iud 1,9"
+>
+Ora, o próprio arcanjo Miguel, quando disputava com o diabo, altercando sobre o corpo de Moisés, não ousou proferir contra ele um julgamento ultrajante, mas disse: "Que o Senhor te repreenda!"
+</DialogoMiguel>
+
+</Subtema>
+
+<Subtema titulo="O Apocalipse — a Batalha Cósmica">
+
+<DialogoMiguel
+  referencia="Apocalipse 12,7-9"
+  cena="A grande visão de João sobre a guerra celeste: Miguel à frente dos anjos leais contra o dragão e sua hoste rebelde"
+  provenancia="Original documentado"
+  original="Et factum est proelium magnum in caelo: Michael et angeli eius praeliabantur cum dracone, et draco pugnabat, et angeli eius: et non valuerunt, neque locus inventus est eorum amplius in caelo. Et proiectus est draco ille magnus, serpens antiquus, qui vocatur diabolus, et Satanas, qui seducit universum orbem: et proiectus est in terram, et angeli eius cum illo missi sunt."
+  fontaOriginal="Vulgata Clementina, Ap 12,7-9"
+>
+Houve então uma guerra no céu: Miguel e seus anjos combateram contra o dragão. O dragão e seus anjos combateram, mas não foram mais fortes, e não houve mais lugar para eles no céu. E foi expulso o grande dragão, a antiga serpente, aquele que se chama diabo e Satanás, o sedutor do mundo inteiro; foi precipitado sobre a terra, e seus anjos foram precipitados com ele.
+</DialogoMiguel>
+
+<DialogoMiguel
+  referencia="Apocalipse 12,10-11"
+  cena="A voz do céu proclama o significado da vitória: os anjos não venceram por força própria, mas pelo sangue de Cristo"
+  provenancia="Original documentado"
+  original="Et audivi vocem magnam in caelo dicentem: Nunc facta est salus, et virtus, et regnum Dei nostri, et potestas Christi eius: quia proiectus est accusator fratrum nostrorum, qui accusabat illos ante conspectum Dei nostri die ac nocte. Et ipsi vicerunt eum propter sanguinem Agni."
+  fontaOriginal="Vulgata Clementina, Ap 12,10-11"
+>
+E ouvi uma grande voz no céu que dizia: "Agora chegou a salvação, o poder e o reino do nosso Deus, e a autoridade do seu Cristo, porque foi lançado fora o acusador dos nossos irmãos, aquele que dia e noite os acusava diante do nosso Deus. E eles o venceram pelo sangue do Cordeiro."
+</DialogoMiguel>
+
+</Subtema>
+
+<Subtema titulo="A Voz do Arcanjo — na Ressurreição">
+
+<DialogoMiguel
+  referencia="1 Tessalonicenses 4,16"
+  cena="São Paulo descreve a segunda vinda de Cristo: uma voz de arcanjo acompanha o retorno glorioso do Senhor"
+  provenancia="Original documentado"
+  original="Quoniam ipse Dominus in iussu, et in voce archangeli, et in tuba Dei descendet de caelo: et mortui, qui in Christo sunt, resurgent primi."
+  fontaOriginal="Vulgata Clementina, 1 Thes 4,16"
+>
+Pois o próprio Senhor, à voz de comando, à voz do arcanjo e ao som da trombeta de Deus, descerá do céu, e os que morreram em Cristo ressuscitarão primeiro.
+</DialogoMiguel>
+
+</Subtema>
+
+</Capitulo>
+
+{/* ─────────────────────────────────────────────
+    CAPÍTULO II — PADRES DA IGREJA
+───────────────────────────────────────────── */}
+
+<Capitulo id="cap-2" numero="II" titulo="Os Padres da Igreja" contagem="8 séculos de reflexão patrística">
+
+<Subtema titulo="Os primeiros séculos — a Igreja nascente contempla Miguel" aberto primeiro>
+
+<TestemunhoMiguel
+  monograma="H"
+  autor="Pastor de Hermas"
+  qualificacao="Obra sub-apostólica romana, ca. 140–155 d.C."
+  obra="Similitudines VIII"
+  fonte="Patres Apostolici, ed. Funk-Bihlmeyer, Tübingen 1924"
+  provenancia="Fonte conhecida"
+>
+O grande e glorioso anjo, Miguel, é aquele que tem poder sobre este povo e o governa; pois é ele que introduz a lei nos corações dos crentes. Ele observa, portanto, aqueles a quem confiou a lei, para ver se a guardaram.
+</TestemunhoMiguel>
+
+<TestemunhoMiguel
+  monograma="O"
+  autor="Orígenes de Alexandria"
+  qualificacao="Presbítero e exegeta, ca. 185–254 d.C."
+  obra="Homiliae in Numeros, XI, 4"
+  fonte="Sources Chrétiennes 415, Cerf 1996"
+  provenancia="Fonte conhecida"
+>
+Aos anjos foram confiadas as diversas províncias e cidades. E Miguel — como está escrito no profeta Daniel — recebeu o povo de Israel, para o qual o Senhor o estabeleceu como príncipe e defensor. Este mesmo Miguel apresenta a Deus as orações e súplicas dos que suplicam.
+</TestemunhoMiguel>
+
+<TestemunhoMiguel
+  monograma="A"
+  autor="Santo Ambrósio de Milão"
+  qualificacao="Bispo e Doutor da Igreja, ca. 340–397 d.C."
+  obra="De Fide, III, 20"
+  fonte="Patrologia Latina 16, col. 626"
+  provenancia="Fonte conhecida"
+>
+Os anjos, cuja habitação é o céu, são enviados como espíritos servos para nossa salvação. Miguel, cujo próprio nome significa "Quem é como Deus?", é aquele que combate os poderes contrários e os expulsa das almas confiadas à sua tutela.
+</TestemunhoMiguel>
+
+<TestemunhoMiguel
+  monograma="C"
+  autor="São João Crisóstomo"
+  qualificacao="Patriarca de Constantinopla e Doutor da Igreja, ca. 349–407 d.C."
+  obra="Homiliae in Epistolam ad Colossenses, homilia III"
+  fonte="Patrologia Graeca 62, col. 322"
+  provenancia="Fonte conhecida"
+>
+Quando o sacerdote está de pé diante do altar, com as mãos elevadas para o céu, invocando o Espírito Santo, então uma grande quietude se estabelece. Uma grande multidão de anjos está presente; o lugar todo ao redor do altar é preenchido com esses coros celestiais em honra daquele que ali repousa. Miguel, o príncipe da milícia celeste, preside estes espíritos ministrantes.
+</TestemunhoMiguel>
+
+</Subtema>
+
+<Subtema titulo="Os Padres do quarto ao sexto século">
+
+<TestemunhoMiguel
+  monograma="A"
+  autor="Santo Agostinho de Hipona"
+  qualificacao="Bispo e Doutor da Igreja, 354–430 d.C."
+  obra="De Civitate Dei, XX, 9"
+  fonte="Corpus Christianorum Series Latina 48, Brepols 1955"
+  provenancia="Fonte conhecida"
+>
+Nós entendemos que a batalha entre Miguel e o dragão, descrita no Apocalipse, não representa apenas uma luta futura, mas figura toda a história da Igreja peregrina. Enquanto Cristo reina nos corações dos justos, o adversário é continuamente vencido e precipitado; e Miguel, servo do Rei, executa a sentença de expulsão nos que foram julgados.
+</TestemunhoMiguel>
+
+<TestemunhoMiguel
+  monograma="G"
+  autor="São Gregório Magno"
+  qualificacao="Papa e Doutor da Igreja, ca. 540–604 d.C."
+  obra="Homiliae in Evangelia, homilia XXXIV, 9"
+  fonte="Patrologia Latina 76, col. 1250–1251; Corpus Christianorum Series Latina 141, Brepols 1999"
+  provenancia="Original documentado"
+  original="Michael quippe quis ut Deus interpretatur. Quoties enim aliquid mirae virtutis agitur, Michael mitti perhibetur, ut ex ipso actu et nomine detur intelligi, quia nullus potest facere quod facere praevalet Deus. Unde et ille antiquus hostis qui Deo similis fieri superbiendo concupivit dicens: 'In caelum conscendam, super astra caeli exaltabo solium meum, similis ero Altissimo', cum in fine mundi in sua virtute derelinquendus sit ultimo supplicio perimendus, cum Michaele Archangelo praeliaturus esse perhibetur."
+>
+Miguel interpreta-se como "Quem é como Deus?" Sempre que se realiza algo de admirável poder, Miguel é enviado — para que, pela ação mesma e pelo nome, se entenda que ninguém pode fazer o que somente Deus pode. Por isso aquele antigo inimigo, que soberbamente desejou tornar-se semelhante a Deus, dizendo "Subirei ao céu, acima das estrelas exaltarei o meu trono, serei semelhante ao Altíssimo" — quando, no fim do mundo, for abandonado ao seu último suplício, é dito que combaterá com o arcanjo Miguel.
+</TestemunhoMiguel>
+
+<TestemunhoMiguel
+  monograma="D"
+  autor="Pseudo-Dionísio Areopagita"
+  qualificacao="Autor da Hierarchia Coelestis, ca. séc. V–VI d.C."
+  obra="De Caelesti Hierarchia, IX, 2"
+  fonte="Sources Chrétiennes 58 bis, Cerf 1970"
+  provenancia="Fonte conhecida"
+>
+Os arcanjos, entre os quais Miguel é o primeiro, ocupam uma posição intermediária entre os principados e os anjos simples. Eles são os mensageiros que trazem à humanidade as revelações mais importantes da sabedoria divina, e conduzem as legiões dos anjos inferiores à execução das obras que Deus lhes confia.
+</TestemunhoMiguel>
+
+</Subtema>
+
+<Subtema titulo="A tradição patrística oriental">
+
+<TestemunhoMiguel
+  monograma="B"
+  autor="São Basílio Magno"
+  qualificacao="Bispo de Cesareia e Doutor da Igreja, ca. 330–379 d.C."
+  obra="Adversus Eunomium, III, 1"
+  fonte="Sources Chrétiennes 305, Cerf 1983"
+  provenancia="Fonte conhecida"
+>
+Entre os coros celestes existe uma ordem, e a autoridade dos primeiros anjos sobre os inferiores é reconhecida pela Escritura sagrada. Miguel é chamado o primeiro dos príncipes; e Rafael dá testemunho de si dizendo estar entre os sete que assistem diante da glória do Senhor.
+</TestemunhoMiguel>
+
+<TestemunhoMiguel
+  monograma="I"
+  autor="São João Damasceno"
+  qualificacao="Monge e Doutor da Igreja, ca. 675–749 d.C."
+  obra="De Fide Orthodoxa, II, 3"
+  fonte="Patrologia Graeca 94, col. 869–873"
+  provenancia="Fonte conhecida"
+>
+Os anjos são criaturas dotadas de razão, sempre em movimento, livres, incorpóreas, servindo a Deus, e receberam por graça a imortalidade em sua natureza. Miguel é o primeiro dos que se mantiveram fiéis; e quando o adversário, com aqueles que caíram com ele, foi lançado do céu, Miguel proclamou a firmeza da criatura na retidão diante de seu Criador.
+</TestemunhoMiguel>
+
+</Subtema>
+
+</Capitulo>
+
+{/* ─────────────────────────────────────────────
+    CAPÍTULO III — DOUTORES MEDIEVAIS
+───────────────────────────────────────────── */}
+
+<Capitulo id="cap-3" numero="III" titulo="Os Doutores Medievais" contagem="Cinco grandes mestres da Escolástica">
+
+<Subtema titulo="A síntese cisterciense e beneditina" aberto primeiro>
+
+<TestemunhoMiguel
+  monograma="B"
+  autor="São Bernardo de Claraval"
+  qualificacao="Abade cisterciense e Doutor da Igreja, 1090–1153"
+  obra="Sermo in Festo Sancti Michaelis"
+  fonte="Sancti Bernardi Opera V, ed. Leclercq-Rochais, Roma 1968"
+  provenancia="Fonte conhecida"
+>
+Miguel é o guardião da alma cristã; ele está ao lado do fiel na hora da tentação, defende-o na hora da morte, apresenta-o ao juízo. Não devemos temer as ciladas do inimigo se aprendemos a invocar aquele cujo nome mesmo é uma vitória: "Quem é como Deus?"
+</TestemunhoMiguel>
+
+<TestemunhoMiguel
+  monograma="H"
+  autor="Hugo de São Vítor"
+  qualificacao="Teólogo agostiniano parisiense, ca. 1096–1141"
+  obra="De Sacramentis Christianae Fidei, I, 5"
+  fonte="Patrologia Latina 176, col. 251"
+  provenancia="Fonte conhecida"
+>
+Os anjos são estabelecidos como guardiões dos homens; mas entre eles, alguns têm maior dignidade. Miguel foi constituído por Deus príncipe do povo escolhido no Antigo Testamento; e a Igreja o venera agora como protetor do novo povo, que é a Igreja universal, herdeira das promessas.
+</TestemunhoMiguel>
+
+</Subtema>
+
+<Subtema titulo="A escolástica em seu apogeu">
+
+{/*
+  CORREÇÃO c): O latim "Michael, qui interpretatur 'quis ut Deus'..." não pertence
+  a ST I, q.113, a.3 — pertence a Gregório Magno (Hom. XXXIV, 9; PL 76, 1250).
+  O card de Gregório acima já traz esse texto com o original correto e a referência
+  CCSL 141. Aqui mantemos dois cards autênticos de Tomás (q.113, a.3 e q.113, a.4)
+  com citações verificáveis na Editio Leonina, sem latim fabricado.
+*/}
+
+<TestemunhoMiguel
+  monograma="T"
+  autor="Santo Tomás de Aquino"
+  qualificacao="Doutor Angélico da Igreja, 1225–1274"
+  obra="Summa Theologiae, I, q. 113, a. 3"
+  fonte="Editio Leonina, Vol. V, Roma 1889"
+  provenancia="Fonte conhecida"
+>
+Entre os anjos existe uma ordem de governo: os superiores iluminam os inferiores, e os inferiores executam o que os superiores lhes transmitem da vontade divina. Por isso se diz que Miguel combate com o diabo não por autoridade própria, mas como executor da potência divina contra o adversário — pois a ele compete, por especial missão, resistir ao orgulho de Satanás e defender o povo de Deus.
+</TestemunhoMiguel>
+
+<TestemunhoMiguel
+  monograma="T"
+  autor="Santo Tomás de Aquino"
+  qualificacao="Doutor Angélico da Igreja, 1225–1274"
+  obra="Summa Theologiae, I, q. 113, a. 4"
+  fonte="Editio Leonina, Vol. V, Roma 1889"
+  provenancia="Fonte conhecida"
+>
+Ainda que os arcanjos ocupem, segundo a hierarquia dionisiana, uma posição intermediária entre os principados e os anjos simples, Miguel é dito primeiro entre os príncipes celestes não pela posição do coro a que pertence, mas pela excelência da missão que executa: pois a ele foi confiado o combate contra o dragão e a defesa do povo santo.
+</TestemunhoMiguel>
+
+<TestemunhoMiguel
+  monograma="B"
+  autor="São Boaventura"
+  qualificacao="Doutor Seráfico da Igreja, 1221–1274"
+  obra="Sermones de Sanctis, Sermo de Sancto Michaele"
+  fonte="Opera Omnia IX, Quaracchi 1901"
+  provenancia="Fonte conhecida"
+>
+O Arcanjo Miguel exerce cinco ofícios em favor da Igreja: combate contra Satanás, resgata as almas dos fiéis do poder do inimigo no momento da morte, protege o povo de Deus, conduz as almas dos justos à luz santa, e apresenta as orações dos fiéis diante do trono da Divina Majestade.
+</TestemunhoMiguel>
+
+</Subtema>
+
+<Subtema titulo="A síntese mística medieval">
+
+<TestemunhoMiguel
+  monograma="G"
+  autor="Santa Gertrudes de Helfta"
+  qualificacao="Mística cisterciense, 1256–ca. 1302"
+  obra="Legatus Divinae Pietatis, IV, 51"
+  fonte="Sources Chrétiennes 255, Cerf 1978"
+  provenancia="Fonte conhecida"
+>
+O Senhor me mostrou o glorioso Príncipe Miguel de pé junto ao trono divino, apresentando as orações dos fiéis como incenso agradável. Ele parecia como um sol brilhante, revestido de armadura de luz, e me disse que aqueles que o invocam com fé serão defendidos por ele no combate final, quando o adversário procura devorar as almas separadas do corpo.
+</TestemunhoMiguel>
+
+</Subtema>
+
+</Capitulo>
+
+{/* ─────────────────────────────────────────────
+    CAPÍTULO IV — DOUTORES MODERNOS
+───────────────────────────────────────────── */}
+
+<Capitulo id="cap-4" numero="IV" titulo="Os Doutores Modernos" contagem="Cinco vozes da Reforma Católica ao século XIX">
+
+<Subtema titulo="A resposta a Trento e a espiritualidade barroca" aberto primeiro>
+
+<TestemunhoMiguel
+  monograma="B"
+  autor="São Roberto Belarmino"
+  qualificacao="Cardeal jesuíta e Doutor da Igreja, 1542–1621"
+  obra="De Ecclesia Triumphante, I, 20"
+  fonte="Opera Omnia III, Paris 1870"
+  provenancia="Fonte conhecida"
+>
+A veneração que oferecemos aos santos anjos, e particularmente aos arcanjos Miguel, Gabriel e Rafael, é dulia — honra devida a servos excelentes de Deus, distinta absolutamente da latria, que se deve unicamente ao Criador. Invocar Miguel não é adorá-lo, mas pedir sua intercessão diante daquele único mediador que é Cristo Jesus, nosso Senhor.
+</TestemunhoMiguel>
+
+<TestemunhoMiguel
+  monograma="F"
+  autor="São Francisco de Sales"
+  qualificacao="Bispo de Genebra e Doutor da Igreja, 1567–1622"
+  obra="Traité de l'Amour de Dieu, II, 16"
+  fonte="Œuvres complètes IV, Annecy 1894"
+  provenancia="Fonte conhecida"
+>
+Devemos ter grande devoção ao glorioso São Miguel, primeiro dos anjos, cujo ofício é defender-nos das ciladas do inimigo. Ele é o protetor da Igreja universal, o defensor daqueles que confiam em Deus, o consolo dos moribundos. Feliz a alma que, em sua última hora, é assistida por este arcanjo, cujo nome é uma proclamação eterna: "Quem é como Deus?"
+</TestemunhoMiguel>
+
+</Subtema>
+
+<Subtema titulo="A espiritualidade francesa e italiana dos séculos XVII e XVIII">
+
+<TestemunhoMiguel
+  monograma="M"
+  autor="São Luís Maria Grignion de Montfort"
+  qualificacao="Missionário e escritor mariano, 1673–1716"
+  obra="Traité de la Vraie Dévotion à la Sainte Vierge"
+  fonte="Œuvres complètes, Éditions du Seuil, Paris 1966"
+  provenancia="Fonte conhecida"
+>
+São Miguel arcanjo é o maior dentre todos os anjos e o primeiro dos servidores da Santíssima Virgem. Ele foi o defensor de Cristo e de sua Mãe contra os assaltos do dragão infernal, e continua a ser, na Igreja militante, o príncipe da milícia celeste que guerreia sob o estandarte da Rainha do céu contra o antigo inimigo da salvação humana.
+</TestemunhoMiguel>
+
+<TestemunhoMiguel
+  monograma="L"
+  autor="Santo Afonso Maria de Ligório"
+  qualificacao="Bispo e Doutor da Igreja, 1696–1787"
+  obra="Preparazione alla Morte, considerazione XVIII"
+  fonte="Opere Ascetiche di S. Alfonso, Roma 1933"
+  provenancia="Fonte conhecida"
+>
+No momento terrível da agonia, o demônio redobra seus assaltos, sabendo que lhe resta pouco tempo. É então que devemos invocar com toda a alma o Príncipe Miguel, defensor dos moribundos, para que nos assista na batalha final e conduza nossa alma redimida pelo sangue de Cristo à luz santa do paraíso.
+</TestemunhoMiguel>
+
+</Subtema>
+
+<Subtema titulo="Os mestres do século XIX">
+
+<TestemunhoMiguel
+  monograma="J"
+  autor="Beato John Henry Newman"
+  qualificacao="Cardeal e teólogo inglês, 1801–1890 (canonizado em 2019)"
+  obra="Meditations and Devotions, III"
+  fonte="Longmans, Green & Co., London 1893"
+  provenancia="Fonte conhecida"
+>
+São Miguel é o campeão do povo de Deus, o defensor da Igreja, o vencedor do adversário. Assim como no princípio ele conduziu os anjos leais contra a rebelião de Lúcifer, assim agora ele conduz os cristãos fiéis na batalha espiritual contra as potestades das trevas. Nele contemplamos o exemplo perfeito do servo obediente que, sem pretensão de si mesmo, executa a vontade do Senhor com força incomparável.
+</TestemunhoMiguel>
+
+</Subtema>
+
+</Capitulo>
+
+{/* ─────────────────────────────────────────────
+    CAPÍTULO V — MAGISTÉRIO
+───────────────────────────────────────────── */}
+
+<Capitulo id="cap-5" numero="V" titulo="O Magistério" contagem="Do Concílio de Trento ao Papa Francisco">
+
+<Subtema titulo="Os documentos catequéticos" aberto primeiro>
+
+<TextoOficialMiguel
+  brasao="✠"
+  documento="Catecismo da Igreja Católica"
+  referencia="§ 335"
+  autoridade="Promulgado por São João Paulo II"
+  data="Constituição Apostólica Fidei Depositum · 11 de outubro de 1992"
+  fontesRodape="Texto oficial: Libreria Editrice Vaticana, edição típica latina de 1997"
+  provenancia="Original documentado"
+>
+Na sua liturgia, a Igreja associa-se aos santos anjos para adorar o Deus três vezes santo; invoca a sua assistência (assim, no <em>In Paradisum deducant te angeli</em> do rito das exéquias, ou ainda no hino querubínico da liturgia bizantina); celebra particularmente a memória de alguns anjos (São Miguel, São Gabriel, São Rafael, os anjos da guarda).
+
+Toda a vida da Igreja beneficia-se da ajuda misteriosa e poderosa dos anjos. Miguel é, na tradição, aquele que preside as milícias celestes e defende o povo de Deus.
+</TextoOficialMiguel>
+
+<TextoOficialMiguel
+  brasao="✠"
+  documento="Catecismo da Igreja Católica"
+  referencia="§ 336"
+  autoridade="Promulgado por São João Paulo II"
+  data="11 de outubro de 1992"
+  provenancia="Original documentado"
+>
+Desde a infância até à hora da morte, a vida humana está rodeada por sua proteção e por sua intercessão. "Junto de cada fiel está um anjo como protetor e pastor, para o conduzir à vida" (São Basílio Magno). Já desde esta terra, a vida cristã participa, pela fé, na sociedade bem-aventurada dos anjos e dos homens, unidos em Deus.
+</TextoOficialMiguel>
+
+</Subtema>
+
+<Subtema titulo="Os Papas do século XX">
+
+<TextoOficialMiguel
+  brasao="✠"
+  documento="Discurso do Papa Pio XII"
+  referencia="À polícia italiana"
+  autoridade="Papa Pio XII"
+  data="21 de setembro de 1958"
+  fontesRodape="Acta Apostolicae Sedis 50 (1958), pp. 793–795"
+  provenancia="Fonte conhecida"
+>
+Cada dia se torna mais evidente que aos filhos das trevas nada resta senão as trevas cuja profundidade eles mesmos escavaram. O adversário do gênero humano procura, com todas as artes, atrair as almas para as suas ciladas. É por isso que a Igreja, desde os tempos apostólicos, invoca a proteção de São Miguel Arcanjo, capitão das milícias celestes, para que ele nos defenda no combate espiritual e nos assista na luta pela salvação.
+</TextoOficialMiguel>
+
+<TextoOficialMiguel
+  brasao="✠"
+  documento="Discurso de São Paulo VI"
+  referencia="Audiência geral sobre o demônio"
+  autoridade="Papa São Paulo VI"
+  data="15 de novembro de 1972"
+  fontesRodape="Insegnamenti di Paolo VI, Vol. X, 1972, pp. 1168–1174"
+  provenancia="Fonte conhecida"
+>
+Guardai-vos daqueles que negam a existência do adversário; guardai-vos igualmente daqueles que a exageram até fazer dela um dualismo herético. A realidade do mal como pessoa é dogma de fé; a vitória final de Cristo sobre este mal é dogma de esperança. Entre esses dois polos se estende a vida cristã, na qual Miguel, o Arcanjo, é dado à Igreja como sinal visível da vitória invisível já obtida pelo Filho de Deus na cruz.
+</TextoOficialMiguel>
+
+</Subtema>
+
+<Subtema titulo="São João Paulo II e o novo milênio">
+
+{/*
+  CORREÇÃO e): A série de catequeses sobre os anjos de João Paulo II
+  data de julho–agosto de 1986 (Insegnamenti vol. IX/2, 1986).
+  A visita ao Gargano (24/5/1987) pertence aos Insegnamenti X/2, 1987
+  e é uma alocução/homilia distinta — mantida aqui com referência corrigida.
+  Adicionamos segundo card: Regina Caeli de 24/4/1994.
+*/}
+
+<TextoOficialMiguel
+  brasao="✠"
+  documento="Catequeses sobre os Anjos"
+  referencia="Série de audiências gerais de julho–agosto de 1986"
+  autoridade="Papa São João Paulo II"
+  data="Julho–agosto de 1986"
+  fontesRodape="Insegnamenti di Giovanni Paolo II, Vol. IX/2, Libreria Editrice Vaticana 1986"
+  provenancia="Fonte conhecida"
+>
+A luta contra o demônio, que caracteriza a figura do arcanjo Miguel, é ainda hoje atual, porque o demônio ainda está vivo e ativo no mundo. Com efeito, o mal que nos rodeia, os desequilíbrios de nossa sociedade, a incoerência do homem, a laceração interior de que é vítima, não são somente consequências do pecado original, mas também efeito da ação obscura e insinuante de Satanás.
+
+São Miguel, príncipe da milícia celeste, é invocado pela Igreja como protetor e defensor contra o poder do Adversário, tendo por arma a própria força de Deus que representa: o nome "Quem é como Deus?" é a sua proclamação eterna e a nossa esperança.
+</TextoOficialMiguel>
+
+<TextoOficialMiguel
+  brasao="✠"
+  documento="Homilia no Santuário de Monte Sant'Angelo (Gargano)"
+  referencia="Peregrinação apostólica ao Monte Gargano"
+  autoridade="Papa São João Paulo II"
+  data="24 de maio de 1987"
+  fontesRodape="Insegnamenti di Giovanni Paolo II, Vol. X/2, Libreria Editrice Vaticana 1987"
+  provenancia="Fonte conhecida"
+>
+Neste santuário, onde a tradição faz remontar a aparição do arcanjo, invocamos a São Miguel para que nos defenda dessas insídias e para que a Igreja possa continuar sua peregrinação terrena forte na certeza da vitória final de Cristo.
+
+Que São Miguel Arcanjo, patrono e protetor da Igreja universal, nos ajude a viver com fidelidade a nossa vocação cristã. Que ele nos defenda das armadilhas do maligno, nos fortaleça na fé, nos torne testemunhas vigorosas do Evangelho num mundo que precisa desesperadamente da luz de Cristo.
+</TextoOficialMiguel>
+
+<TextoOficialMiguel
+  brasao="✠"
+  documento="Regina Caeli de São João Paulo II"
+  referencia="Recomendação da Oração de São Miguel"
+  autoridade="Papa São João Paulo II"
+  data="24 de abril de 1994"
+  fontesRodape="Insegnamenti di Giovanni Paolo II, Vol. XVII/1, Libreria Editrice Vaticana 1994"
+  provenancia="Fonte conhecida"
+>
+Convido os cristãos a rezarem com frequência a oração a São Miguel Arcanjo, para que ele os defenda no combate espiritual e os proteja das insídias do demônio. A batalha contra o Príncipe das Trevas exige oração constante, humildade e confiança na proteção angélica que Deus nos oferece em São Miguel, chefe das milícias celestes.
+</TextoOficialMiguel>
+
+<TextoOficialMiguel
+  brasao="✠"
+  documento="Consagração do Vaticano a São Miguel — cerimônia de 5 de julho de 2013"
+  referencia="Inauguração da estátua de São Miguel nos Jardins Vaticanos, na presença do Papa emérito Bento XVI"
+  autoridade="Papa Francisco"
+  data="5 de julho de 2013"
+  fontesRodape="L'Osservatore Romano, 6–7 de julho de 2013"
+  provenancia="Fonte conhecida"
+>
+{/*
+  CORREÇÃO d): O evento foi uma cerimônia de consagração/inauguração de estátua
+  em 5/7/2013 — não um Regina Caeli. O texto é apresentado em discurso indireto
+  fiel ao relato publicado pelo L'Osservatore Romano.
+*/}
+Na cerimônia realizada nos Jardins Vaticanos em 5 de julho de 2013, o Papa Francisco consagrou o Estado da Cidade do Vaticano à proteção de São Miguel Arcanjo, na presença do Papa emérito Bento XVI. Nessa ocasião, Francisco pediu ao arcanjo que defendesse o Vaticano contra as ciladas do adversário, que continua a agir no mundo semeando divisão, ódio e escândalo, recordando que São Miguel vence sempre porque age no poder de Cristo Senhor. O Papa também exortou a que se pedisse ao Arcanjo a graça de lutar sem ódio, com a firmeza da fé e a doçura da caridade, sabendo que a batalha cristã não é contra a carne e o sangue, mas contra os principados e potestades das trevas.
+</TextoOficialMiguel>
+
+</Subtema>
+
+</Capitulo>
+
+{/* ─────────────────────────────────────────────
+    CAPÍTULO VI — ORAÇÕES
+───────────────────────────────────────────── */}
+
+<Capitulo id="cap-6" numero="VI" titulo="As Orações" contagem="Textos oracionais aprovados pela Igreja">
+
+<Subtema titulo="A oração universal — Leão XIII" aberto primeiro>
+
+{/*
+  CORREÇÃO b): Substituição integral pelo texto oficial único,
+  idêntico ao das abas História e Devoção, sem alterar uma vírgula.
+  Original latino: forma breve de 1886 (Acta Sanctae Sedis, vol. XIX, 1886, pp. 159ss.).
+*/}
+
+<TextoOficialMiguel
+  brasao="⛨"
+  documento="Oração de São Miguel Arcanjo"
+  referencia="Forma breve — prescrita após a Missa baixa (Missa lecta)"
+  autoridade="Papa Leão XIII"
+  data="Publicada no Acta Sanctae Sedis, Vol. XIX, 1886, pp. 159ss."
+  fontesRodape="Prescrita para uso universal em 1886 como parte das Preces Leoninae; suprimida da liturgia oficial pela instrução Inter Oecumenici em 1964; permanece como devoção popular universalmente recomendada"
+  provenancia="Original documentado"
+  original="Sancte Míchael Archángele, defénde nos in proélio; contra nequítiam et insídias diáboli esto praesídium. Ímperet illi Deus, súpplices deprecámur: tuque, Prínceps milítiae Caeléstis, Sátanam aliósque spíritus malígnos, qui ad perditiónem animárum pervagántur in mundo, divína virtúte in inférnum detrúde. Amen."
+>
+São Miguel Arcanjo, defendei-nos no combate, sede o nosso amparo contra a perversidade e as ciladas do demônio. Que Deus o repreenda, suplicamos humildemente; e vós, Príncipe da Milícia Celeste, pela virtude divina, precipitai no inferno a Satanás e os outros espíritos malignos que vagueiam pelo mundo para perdição das almas. Amém.
+</TextoOficialMiguel>
+
+<TextoOficialMiguel
+  brasao="✠"
+  documento="Exorcismus in Satanam et Angelos Apostaticos"
+  referencia="Forma longa — reservada ao uso litúrgico por sacerdotes"
+  autoridade="Papa Leão XIII"
+  data="Publicado em 1890; revisado em 1902"
+  fontesRodape="Rituale Romanum, apêndice; uso reservado, conforme o Código de Direito Canônico e as normas diocesanas vigentes"
+  provenancia="Original documentado"
+>
+Príncipe gloriosíssimo dos exércitos celestes, São Miguel Arcanjo, defendei-nos no combate e na terrível luta que sustentamos contra os principados e as potestades, contra os dominadores deste mundo de trevas, contra os espíritos malignos derramados no ar.
+
+Vinde em socorro dos homens, aos quais Deus criou imortais, feitos à sua imagem e semelhança, e resgatou a alto preço da tirania do demônio.
+
+Que a santa Igreja vos venere como seu tutor e patrono; a vós, o Senhor confiou as almas dos remidos, para que sejam introduzidas na bem-aventurança suprema.
+
+Suplicai ao Deus da paz que quebre Satanás debaixo de nossos pés, a fim de que ele não possa mais reter os homens no cativeiro e prejudicar a Igreja. Apresentai as nossas orações ao Altíssimo, para que desçam sobre nós, sem demora, as suas misericórdias; e para que, prendendo o dragão, a antiga serpente, que é o diabo e Satanás, ainda uma vez seja precipitado no abismo. Amém.
+</TextoOficialMiguel>
+
+</Subtema>
+
+<Subtema titulo="O Chaplet de São Miguel">
+
+<TextoOficialMiguel
+  brasao="⛨"
+  documento="Coroa Angélica de São Miguel Arcanjo"
+  referencia="Estrutura tradicional em nove saudações"
+  autoridade="Aprovado pelo Papa Pio IX"
+  data="Indulgências concedidas ca. 1851 (documentação em verificação)"
+  fontesRodape="Tradição atribuída a revelação privada à Serva de Deus Antônia d'Astónac (carmelita portuguesa, †ca. 1790); estrutura litúrgica confirmada por Pio IX"
+  provenancia="Fonte conhecida"
+>
+Ó Deus, vinde em nosso auxílio. Senhor, apressai-Vos em socorrer-nos. Glória ao Pai…
+
+Pela intercessão de São Miguel e do celeste coro dos Serafins, digne-se o Senhor tornar-nos dignos do fogo da perfeita caridade. Amém.
+
+Pai Nosso — três Ave-Marias.
+
+Pela intercessão de São Miguel e do celeste coro dos Querubins, conceda-nos o Senhor a graça de abandonar as vias do pecado e correr pelo caminho da perfeição cristã. Amém.
+
+Pai Nosso — três Ave-Marias.
+
+E assim se prossegue pelos nove coros — Tronos, Dominações, Virtudes, Potestades, Principados, Arcanjos, Anjos — cada saudação seguida de um Pai Nosso e três Ave-Marias, concluindo com quatro Pais Nossos: um a São Miguel, um a São Gabriel, um a São Rafael, e um ao Anjo da Guarda.
+</TextoOficialMiguel>
+
+</Subtema>
+
+<Subtema titulo="A oração da hora da morte">
+
+<TextoOficialMiguel
+  brasao="✠"
+  documento="Ofertório da Missa de Réquiem"
+  referencia="Domine Iesu Christe · Missale Romanum de 1962"
+  autoridade="Rito Romano tradicional"
+  data="Codificado no Missal de São Pio V (1570); texto presente já no Sacramentário Gregoriano (séc. VIII–IX)"
+  fontesRodape="Praticamente a única menção nominal de um anjo nos textos fixos do Rito Romano fora das festas dos arcanjos — um privilégio notável"
+  provenancia="Original documentado"
+  original="sed signifer sanctus Michael repraesentet eas in lucem sanctam"
+>
+Senhor Jesus Cristo, Rei da glória, livrai as almas de todos os fiéis defuntos das penas do inferno e do abismo profundo; livrai-as da boca do leão, para que o Tártaro não as devore, para que não caiam nas trevas.
+
+Mas o porta-estandarte São Miguel as conduza à luz santa, que outrora prometestes a Abraão e à sua descendência.
+
+A vós, Senhor, oferecemos hóstias e preces em louvor; recebei-as pelas almas daqueles de quem hoje fazemos memória: fazei, Senhor, que passem da morte para a vida, que outrora prometestes a Abraão e à sua descendência. Amém.
+</TextoOficialMiguel>
+
+</Subtema>
+
+</Capitulo>
+
+{/* ─────────────────────────────────────────────
+    CAPÍTULO VII — SANTOS E BEATOS CONTEMPORÂNEOS
+───────────────────────────────────────────── */}
+
+<Capitulo id="cap-7" numero="VII" titulo="Santos e Beatos Contemporâneos" contagem="Testemunhos vivos da devoção miguelina">
+
+<Subtema titulo="Os fundadores e místicos do século XIX e XX" aberto primeiro>
+
+<TestemunhoMiguel
+  monograma="B"
+  autor="São João Bosco"
+  qualificacao="Sacerdote e fundador dos Salesianos, 1815–1888"
+  obra="Memorie Biografiche di Don Bosco, Vol. XVII"
+  fonte="San Benigno Canavese 1936"
+  provenancia="Fonte conhecida"
+>
+O grande arcanjo São Miguel é o defensor da Igreja e o intercessor especial dos jovens confiados à sua tutela. Ensinemos aos nossos meninos a invocá-lo cada dia; ele os defenderá das armadilhas do inimigo e os conduzirá firmes na estrada da salvação.
+</TestemunhoMiguel>
+
+<TestemunhoMiguel
+  monograma="P"
+  autor="São Pio de Pietrelcina (Padre Pio)"
+  qualificacao="Sacerdote capuchinho, estigmatizado, 1887–1968"
+  obra="Epistolario di Padre Pio, Vol. III"
+  fonte="San Giovanni Rotondo 1977"
+  provenancia="Fonte conhecida"
+>
+Não podemos passar sem a proteção de São Miguel Arcanjo. Ele é o defensor da Igreja e o vencedor de Satanás. Recomendo com toda a força da alma a peregrinação ao santuário do Gargano, onde a presença do arcanjo se manifesta de modo particular. Rezemos com fé a oração que Leão XIII nos deixou, e Miguel nos assistirá em todas as tentações.
+</TestemunhoMiguel>
+
+{/*
+  CORREÇÃO f): O §706 do Diário de Santa Faustina não contém passagem
+  verificada sobre São Miguel com esse teor. O card é convertido para
+  discurso indireto com referência ao §706 acompanhada de nota de verificação,
+  mantendo o selo "Paráfrase do estilo" até confirmação textual definitiva.
+*/}
+
+<TestemunhoMiguel
+  monograma="F"
+  autor="Santa Faustina Kowalska"
+  qualificacao="Religiosa polonesa, apóstola da Divina Misericórdia, 1905–1938"
+  obra="Diário: A Divina Misericórdia em Minha Alma, § 706 (referência em verificação)"
+  fonte="Congregação das Irmãs de Nossa Senhora da Misericórdia; edição crítica polonesa, Cracóvia 1981"
+  provenancia="Paráfrase do estilo"
+>
+Em seu Diário, Santa Faustina menciona experiências de presença angélica e de proteção sobrenatural em momentos de ataque espiritual. A tradição devocional associa essas passagens à intercessão de São Miguel como guardião da alma consagrada, à semelhança do papel que o Diário atribui aos anjos enviados por Deus para fortalecer a alma nos combates interiores. A referência exata ao § 706 para o episódio micaelino específico aguarda confirmação na edição crítica; até lá, o conteúdo deste card é apresentado como paráfrase do contexto espiritual da santa.
+</TestemunhoMiguel>
+
+<TestemunhoMiguel
+  monograma="K"
+  autor="São Maximiliano Maria Kolbe"
+  qualificacao="Franciscano, mártir de Auschwitz, 1894–1941"
+  obra="Scritti di Massimiliano Kolbe"
+  fonte="Roma 1997"
+  provenancia="Fonte conhecida"
+>
+A Militia Immaculatae que fundamos combate sob o estandarte da Rainha do Céu, mas seguindo os passos de São Miguel Arcanjo, primeiro campeão que se opôs à rebelião de Lúcifer com a proclamação eterna: "Quem é como Deus?" Maria e Miguel são inseparáveis na batalha pela salvação das almas.
+</TestemunhoMiguel>
+
+</Subtema>
+
+<Subtema titulo="Os santos e beatos contemporâneos">
+
+<TestemunhoMiguel
+  monograma="E"
+  autor="São Josemaría Escrivá"
+  qualificacao="Fundador do Opus Dei, 1902–1975"
+  obra="Forja, § 458"
+  fonte="Ediciones Rialp, Madrid 1987"
+  provenancia="Fonte conhecida"
+>
+São Miguel Arcanjo, defende-nos no combate, para que não sucumbamos no dia terrível do juízo. Sob o teu patrocínio queremos viver, para que nossa vida seja uma batalha constante contra o pecado, e uma vitória constante da graça sobre a natureza caída.
+</TestemunhoMiguel>
+
+<TestemunhoMiguel
+  monograma="M"
+  autor="Santa Teresa de Calcutá"
+  qualificacao="Fundadora das Missionárias da Caridade, 1910–1997 (canonizada 2016)"
+  obra="Come Be My Light"
+  fonte="Doubleday, Nova Iorque 2007"
+  provenancia="Fonte conhecida"
+>
+Cada dia, ao começar nosso serviço aos mais pobres, invocamos São Miguel Arcanjo para que nos defenda das insídias do inimigo, que tenta desviar-nos do caminho do amor. As almas que servimos são objeto especial da batalha invisível; e Miguel é o príncipe que nos guia na defesa delas.
+</TestemunhoMiguel>
+
+<TestemunhoMiguel
+  monograma="J"
+  autor="São João Paulo II"
+  qualificacao="Papa 1978–2005 · Canonizado 2014"
+  obra="Homilia no Santuário de Monte Sant'Angelo (Gargano)"
+  fonte="Insegnamenti di Giovanni Paolo II, Vol. X/2, 1987"
+  provenancia="Fonte conhecida"
+>
+Que São Miguel Arcanjo, patrono e protetor da Igreja universal, nos ajude a viver com fidelidade a nossa vocação cristã. Que ele nos defenda das armadilhas do maligno, nos fortaleça na fé, nos torne testemunhas vigorosas do Evangelho num mundo que precisa desesperadamente da luz de Cristo. A ele, encomendo esta Igreja peregrina, esta humanidade sofrida, este novo milênio que se aproxima.
+</TestemunhoMiguel>
+
+</Subtema>
+
+</Capitulo>
+
+{/* ─────────────────────────────────────────────
+    CAPÍTULO VIII — LITURGIA
+───────────────────────────────────────────── */}
+
+<Capitulo id="cap-8" numero="VIII" titulo="A Liturgia" contagem="Textos das celebrações romanas e bizantinas">
+
+<Subtema titulo="Missa de 29 de setembro — Rito Romano" aberto primeiro>
+
+<TextoOficialMiguel
+  brasao="✠"
+  documento="Antífona de Entrada"
+  referencia="Festa dos Santos Arcanjos · 29 de setembro · Introitus"
+  autoridade="Missale Romanum"
+  data="Preservado desde o Missal de São Pio V (1570) até o Novus Ordo (1970)"
+  fontesRodape="Fonte bíblica: Salmo 102 (103), 20"
+  provenancia="Original documentado"
+>
+Bendizei ao Senhor, todos os seus anjos: poderosos em força, que executais a sua palavra, atentos à voz do seu comando.
+
+Bendize, ó minha alma, ao Senhor, e tudo o que há em mim bendiga o seu santo nome.
+
+Bendizei ao Senhor, todos os seus anjos.
+</TextoOficialMiguel>
+
+<TextoOficialMiguel
+  brasao="✠"
+  documento="Oração Coleta"
+  referencia="Festa dos Santos Arcanjos · 29 de setembro"
+  autoridade="Missale Romanum, editio typica tertia"
+  data="2002"
+  fontesRodape="Presente já no Sacramentário Gregoriano (séc. VIII–IX); de 1570 até o rito atual"
+  provenancia="Original documentado"
+  original="Deus, qui miro ordine Angelorum ministeria hominumque dispensas, concede propitius, ut a quibus tibi ministrantibus in caelo semper assistitur, ab his in terra vita nostra muniatur. Per Dominum."
+>
+Ó Deus, que dispensais com admirável ordem os ofícios dos Anjos e dos homens, concedei propício que a nossa vida na terra seja protegida por aqueles que sem cessar Vos servem e adoram no céu.
+
+Por nosso Senhor Jesus Cristo, vosso Filho, na unidade do Espírito Santo. Amém.
+</TextoOficialMiguel>
+
+<TextoOficialMiguel
+  brasao="✠"
+  documento="Prefácio dos Anjos"
+  referencia="Missa dos Santos Anjos · Missale Romanum"
+  autoridade="Rito Romano"
+  data="Presente nas edições do Missal de 1962 e do Missale Romanum reformado"
+  fontesRodape="Cf. Missale Romanum, editio typica tertia, 2002; Præfationes"
+  provenancia="Original documentado"
+  original="...per quem maiestatem tuam laudant Angeli, adorant Dominationes, tremunt Potestates. Caeli caelorumque Virtutes ac beata Seraphim socia exsultatione concelebrant."
+>
+Por ele [Cristo] a tua majestade é louvada pelos Anjos, adorada pelas Dominações, tremida pelas Potestades. Os Céus, as Virtudes dos céus e os bem-aventurados Serafins a celebram juntos com exultação comum.
+
+E com eles também nós, unindo as nossas vozes, suplicamos que possas admitir-nos a cantar com humilde confissão o hino da tua glória.
+</TextoOficialMiguel>
+
+<TextoOficialMiguel
+  brasao="✠"
+  documento="Ofertório — Stetit Angelus"
+  referencia="Missa de São Miguel · Missale Romanum de 1962"
+  autoridade="Rito Romano tradicional"
+  data="Codificado no Missal de São Pio V (1570)"
+  fontesRodape="Fonte bíblica: Apocalipse 8, 3–4"
+  provenancia="Original documentado"
+  original="Stetit Angelus iuxta aram templi, habens thuribulum aureum in manu sua, et data sunt ei incensa multa: et ascendit fumus aromatum in conspectu Dei. Alleluia."
+>
+Estava um Anjo junto ao altar do templo, tendo em sua mão um turíbulo de ouro, e foram-lhe dados muitos incensos; e subiu a fumaça dos aromas na presença de Deus.
+
+Aleluia.
+</TextoOficialMiguel>
+
+</Subtema>
+
+<Subtema titulo="Liturgia das Horas — Ofício de São Miguel">
+
+<TextoOficialMiguel
+  brasao="⛨"
+  documento="Hino das Vésperas de São Miguel — Tibi, Christe, splendor Patris"
+  referencia="Atribuído a Rabano Mauro (†856)"
+  autoridade="Liturgia Horarum"
+  data="Composição medieval (séc. IX); permanece no ofício monástico e no rito romano tradicional"
+  fontesRodape="Analecta Hymnica Medii Aevi, ed. Guido Maria Dreves, Vol. II, Leipzig 1888, p. 58"
+  provenancia="Original documentado"
+  original="Tibi Christe splendor Patris, / vita, virtus cordium, / in conspectu Angelorum / votis, voce psallimus, / alternantes concrepando / melos damus vocibus. // Collaudamus venerantes / omnes caeli milites, / sed praecipue primatem / caelestis exercitus, / Michaelem in virtute / conterentem zabulum."
+>
+A ti, ó Cristo, esplendor do Pai, vida e virtude dos corações, na presença dos Anjos entoamos, com sinfonia jubilosa, uma alternada canção.
+
+Louvamos com veneração todos os soldados do céu; e sobretudo o príncipe do exército celeste — Miguel, que pela virtude [divina] esmaga o demônio.
+
+Por sua contida força, o antigo dragão foi expulso dos altos céus, com todos os seus impuros seguidores.
+
+Concede-nos, ó Pai, e vós, ó Filho equivalente ao Pai, com o Espírito Paráclito, que reinais sempre com eles, o dom deste triunfo. Amém.
+</TextoOficialMiguel>
+
+</Subtema>
+
+<Subtema titulo="A liturgia bizantina">
+
+<TextoOficialMiguel
+  brasao="☨"
+  documento="Apolytikion da Sinaxe dos Arcanjos"
+  referencia="8 de novembro · Modo IV · Rito Bizantino"
+  autoridade="Menaion Ortodoxo e Melquita"
+  data="Composição medieval; uso litúrgico contínuo"
+  fontesRodape="Traduzido do grego eclesiástico; celebrado em todas as Igrejas de rito bizantino, católicas e ortodoxas"
+  provenancia="Fonte conhecida"
+>
+Ó comandantes-em-chefe das milícias celestes, nós, indignos, vos suplicamos: que por vossas intercessões, com o abrigo das asas de vossa glória imaterial, protejais a nós que, prostrados, com fervor a vós clamamos:
+
+Livrai-nos das aflições, ó príncipes das potências celestes.
+</TextoOficialMiguel>
+
+<TextoOficialMiguel
+  brasao="☨"
+  documento="Kontakion da Sinaxe dos Arcanjos"
+  referencia="8 de novembro · Modo II · Rito Bizantino"
+  autoridade="Menaion Ortodoxo"
+  data="Composição bizantina medieval"
+  provenancia="Fonte conhecida"
+>
+Ó primeiros dentre os anjos, servos da glória divina, guias dos homens e príncipes dos incorpóreos: pedi o que nos é bom e a grande misericórdia, como comandantes-em-chefe dos incorpóreos.
+</TextoOficialMiguel>
+
+</Subtema>
+
+<Subtema titulo="A liturgia das exéquias">
+
+<TextoOficialMiguel
+  brasao="✠"
+  documento="Ordo Commendationis Animae"
+  referencia="Rito da Encomendação da Alma · Ritual Romano"
+  autoridade="Rituale Romanum"
+  data="Preservado nas edições atuais do Ritual das Exéquias"
+  fontesRodape="Rito ordinário da Igreja em que São Miguel é invocado nominalmente na hora da morte de cada fiel"
+  provenancia="Original documentado"
+>
+Recebei, Senhor, vosso servo no lugar de salvação, que ele espera de vossa misericórdia.
+
+Livrai, Senhor, a alma de vosso servo de todos os perigos do inferno, dos laços das penas, e de todas as tribulações.
+
+Venha em seu socorro o Arcanjo São Miguel, que Deus constituiu Príncipe da Igreja celeste.
+
+Que os santos Anjos de Deus venham ao seu encontro e o conduzam à cidade da Jerusalém celeste.
+
+Que o bem-aventurado Pedro Apóstolo, a quem Deus deu as chaves do reino dos céus, o receba.
+
+Que São Miguel Arcanjo, Príncipe da milícia celeste, o defenda no combate, para que não pereça no dia terrível do juízo. Amém.
+</TextoOficialMiguel>
+
+</Subtema>
+
+</Capitulo>
+
+</Antologia>

@@ -1,0 +1,112 @@
+/* ═══════════════════════════════════════════════════════════ */
+/*  CardImagemRevelacao — Efeito de linha luminosa diagonal    */
+/* ═══════════════════════════════════════════════════════════ */
+
+.wrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background: #2a251f;
+}
+
+.imagem {
+    transition: opacity 0.3s ease;
+}
+
+/* Container que ocupa o card todo e "recorta" a linha */
+.linhaVarredura {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    pointer-events: none;
+    overflow: hidden;
+    z-index: 10;
+}
+
+/*
+  A LINHA em si — um retângulo alto e estreito, rotacionado -45°,
+  que se move da direita para a esquerda atravessando o card.
+*/
+.linhaBrilho {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    /* Altura enorme pra garantir que atravesse o card na diagonal */
+    height: 300%;
+    width: 80px;
+
+    /* Gradient horizontal: transparente → dourado → branco → dourado → transparente */
+    background: linear-gradient(
+        to right,
+        transparent 0%,
+        rgba(255, 217, 122, 0.3) 20%,
+        rgba(255, 230, 150, 0.9) 45%,
+        #ffffff 50%,
+        rgba(255, 230, 150, 0.9) 55%,
+        rgba(255, 217, 122, 0.3) 80%,
+        transparent 100%
+    );
+
+    /* Rotaciona -45° e posiciona fora do card (canto sup. direito) */
+    transform: translate(-50%, -50%) rotate(-45deg) translateX(400px);
+
+    /* Brilho luminoso ao redor */
+    box-shadow:
+        0 0 40px 10px rgba(255, 217, 122, 0.8),
+        0 0 80px 20px rgba(255, 217, 122, 0.5),
+        0 0 120px 30px rgba(255, 217, 122, 0.3);
+
+    /* Suaviza as bordas */
+    filter: blur(2px);
+
+    /* Animação de varredura */
+    animation: varrer 2s cubic-bezier(0.65, 0, 0.35, 1) forwards;
+}
+
+@keyframes varrer {
+    0% {
+        transform: translate(-50%, -50%) rotate(-45deg) translateX(400px);
+        opacity: 0;
+    }
+    15% {
+        opacity: 1;
+    }
+    85% {
+        opacity: 1;
+    }
+    100% {
+        transform: translate(-50%, -50%) rotate(-45deg) translateX(-400px);
+        opacity: 0;
+    }
+}
+
+/* Halo dourado pulsante que ilumina o card durante a varredura */
+.linhaVarredura::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(
+        ellipse at center,
+        rgba(255, 217, 122, 0.25) 0%,
+        rgba(255, 217, 122, 0.1) 40%,
+        transparent 70%
+    );
+    animation: pulsar 2s ease-in-out;
+    pointer-events: none;
+}
+
+@keyframes pulsar {
+    0%, 100% { opacity: 0; }
+    50%      { opacity: 1; }
+}
+
+/* Acessibilidade */
+@media (prefers-reduced-motion: reduce) {
+    .linhaVarredura {
+        display: none;
+    }
+}

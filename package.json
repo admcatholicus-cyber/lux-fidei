@@ -1,0 +1,43 @@
+{
+  "name": "lux-fidei",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+
+    "index-estudos": "node scripts/index-estudos.mjs",
+    "generate:santos": "tsx scripts/generate-santos-manifest.mts",
+    "generate:all": "npm run index-estudos && npm run generate:santos",
+
+    "predev": "npm run generate:all",
+    "prebuild": "npm run generate:all"
+  },
+  "dependencies": {
+    "@mdx-js/loader": "^3.1.1",
+    "@mdx-js/react": "^3.1.1",
+    "@next/mdx": "^16.2.11",
+    "@vercel/analytics": "^2.0.1",
+    "framer-motion": "^12.42.2",
+    "gray-matter": "^4.0.3",
+    "next": "16.2.9",
+    "node-vibrant": "^4.0.4",
+    "react": "19.2.4",
+    "react-dom": "19.2.4",
+    "reading-time": "^1.5.0"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4",
+    "@types/mdx": "^2.0.14",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "eslint": "^9",
+    "eslint-config-next": "16.2.9",
+    "tailwindcss": "^4",
+    "tsx": "^4.19.2",
+    "typescript": "^5"
+  }
+}

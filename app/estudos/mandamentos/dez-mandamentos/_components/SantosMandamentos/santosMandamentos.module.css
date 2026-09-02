@@ -1,0 +1,107 @@
+.secao {
+  padding: var(--espaco-secao) 0;
+  background: var(--cor-fundo-destaque);
+}
+
+.container {
+  max-width: var(--largura-maxima);
+  margin: 0 auto;
+  padding: 0 var(--espaco-interno);
+}
+
+.titulo {
+  font-family: var(--fonte-titulo);
+  font-size: var(--tamanho-h2);
+  color: var(--cor-dourado-escuro);
+  text-align: center;
+  margin-bottom: var(--espaco-minimo);
+}
+
+.subtitulo {
+  font-family: var(--fonte-texto);
+  font-size: var(--tamanho-texto);
+  color: var(--cor-texto-secundario);
+  text-align: center;
+  font-style: italic;
+  margin-bottom: var(--espaco-interno);
+}
+
+.grid {
+  display: flex;
+  flex-direction: column;
+  gap: var(--espaco-pequeno);
+}
+
+.card {
+  background: var(--cor-fundo-card);
+  border: 1px solid var(--cor-borda);
+  border-radius: var(--borda-raio-grande);
+  padding: var(--espaco-interno);
+  box-shadow: var(--sombra-card);
+  transition: box-shadow var(--transicao);
+}
+
+.card:hover {
+  box-shadow: var(--sombra-hover);
+}
+
+.cardTopo {
+  display: flex;
+  align-items: baseline;
+  gap: var(--espaco-pequeno);
+  margin-bottom: var(--espaco-pequeno);
+  padding-bottom: var(--espaco-pequeno);
+  border-bottom: 1px solid var(--cor-borda-leve);
+}
+
+.numero {
+  font-family: var(--fonte-titulo);
+  font-size: var(--tamanho-h2);
+  color: var(--cor-dourado);
+  font-weight: bold;
+  min-width: 3rem;
+}
+
+.mandamentoTitulo {
+  font-family: var(--fonte-texto);
+  font-size: var(--tamanho-pequeno);
+  color: var(--cor-texto-secundario);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.nomeSanto {
+  font-family: var(--fonte-titulo);
+  font-size: var(--tamanho-h3);
+  color: var(--cor-vinho);
+  margin-bottom: var(--espaco-minimo);
+}
+
+.anos {
+  display: block;
+  font-family: var(--fonte-texto);
+  font-size: var(--tamanho-pequeno);
+  color: var(--cor-texto-secundario);
+  margin-bottom: var(--espaco-pequeno);
+}
+
+.frase {
+  background: var(--cor-fundo-destaque);
+  border-left: 3px solid var(--cor-dourado);
+  padding: var(--espaco-pequeno) var(--espaco-interno);
+  margin: var(--espaco-pequeno) 0;
+  font-family: var(--fonte-titulo);
+  font-style: italic;
+  font-size: var(--tamanho-citacao);
+  color: var(--cor-texto-principal);
+  line-height: 1.5;
+  border-radius: 0 var(--borda-raio) var(--borda-raio) 0;
+}
+
+.historia {
+  font-family: var(--fonte-texto);
+  font-size: var(--tamanho-texto);
+  color: var(--cor-texto-principal);
+  line-height: 1.7;
+  margin: 0;
+}

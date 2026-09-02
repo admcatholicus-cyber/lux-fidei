@@ -1,0 +1,1274 @@
+/* batismo.module.css */
+
+/* ============================================
+   RESET & BASE (scoped to .body)
+   ============================================ */
+.body {
+  font-family: 'Inter', sans-serif;
+  background: #f8f6f2;
+  color: #4a4a5a;
+  line-height: 1.8;
+  font-size: 16px;
+  padding-top: 64px;
+  min-height: 100vh;
+}
+
+/* ============================================
+   NAVBAR (Voltar + Índice juntos) — AUTO-HIDE
+   ============================================ */
+.indiceRapido {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background: #0a1628;
+  border-bottom: 2px solid #c9a84c;
+  padding: 0.75rem 1.5rem;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.2);
+  transform: translateY(0);
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.indiceRapidoEscondida {
+  transform: translateY(-100%);
+}
+
+.navContainer {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  position: relative;
+}
+
+/* ============================================
+   BOTÃO VOLTAR
+   ============================================ */
+.btnVoltar {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 0.5rem 1.3rem;
+  background: #c9a84c;
+  color: #0a1628;
+  border: none;
+  border-radius: 22px;
+  font-family: 'Cinzel', serif;
+  font-weight: 600;
+  font-size: 0.82rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background 0.25s, transform 0.2s, box-shadow 0.25s;
+  white-space: nowrap;
+  box-shadow: 0 2px 8px rgba(201, 168, 76, 0.3);
+}
+
+.btnVoltar:hover {
+  background: #e8c97a;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 14px rgba(201, 168, 76, 0.5);
+}
+
+.btnVoltarTexto {
+  /* visible by default, hidden on small screens */
+}
+
+/* ============================================
+   BOTÃO ÍNDICE
+   ============================================ */
+.indiceBtn {
+  background: #c9a84c;
+  color: #0a1628;
+  border: none;
+  padding: 0.5rem 1.3rem;
+  border-radius: 22px;
+  font-family: 'Cinzel', serif;
+  font-weight: 600;
+  font-size: 0.82rem;
+  cursor: pointer;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  transition: background 0.25s, transform 0.2s, box-shadow 0.25s;
+  white-space: nowrap;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  box-shadow: 0 2px 8px rgba(201, 168, 76, 0.3);
+}
+
+.indiceBtn:hover {
+  background: #e8c97a;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 14px rgba(201, 168, 76, 0.5);
+}
+
+.indiceBtnAberto {
+  background: #ffffff;
+}
+
+/* ============================================
+   MENU DROPDOWN DO ÍNDICE
+   ============================================ */
+.indiceMenu {
+  display: none;
+  position: absolute;
+  top: calc(100% + 12px);
+  left: 0;
+  right: 0;
+  background: linear-gradient(180deg, #0a1628 0%, #0d1d3a 100%);
+  border-top: 2px solid #c9a84c;
+  border-bottom: 2px solid #c9a84c;
+  border-radius: 0 0 12px 12px;
+  padding: 1.5rem 2rem;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  justify-content: center;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+  animation: deslizarBaixo 0.3s ease;
+  max-height: 80vh;
+  overflow-y: auto;
+}
+
+.indiceMenuAberto {
+  display: flex;
+}
+
+@keyframes deslizarBaixo {
+  from {
+    opacity: 0;
+    transform: translateY(-15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.indiceMenu a {
+  color: #e8c97a;
+  text-decoration: none;
+  font-size: 0.85rem;
+  padding: 0.5rem 1.1rem;
+  border: 1px solid rgba(201, 168, 76, 0.35);
+  border-radius: 18px;
+  transition: all 0.25s;
+  white-space: nowrap;
+  font-family: 'Inter', sans-serif;
+  letter-spacing: 0.03em;
+}
+
+.indiceMenu a:hover {
+  background: #c9a84c;
+  border-color: #c9a84c;
+  color: #0a1628;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(201, 168, 76, 0.4);
+}
+
+/* ============================================
+   SEÇÕES GERAIS
+   ============================================ */
+.estudoSection {
+  max-width: 1100px;
+  margin: 0 auto 3rem;
+  padding: 2.5rem 2rem;
+  scroll-margin-top: 90px;
+}
+
+.estudoSection h3 {
+  font-family: 'Cinzel', serif;
+  font-size: clamp(1.2rem, 2.5vw, 1.6rem);
+  color: #1e3a8a;
+  border-bottom: 2px solid #c9a84c;
+  padding-bottom: 0.6rem;
+  margin-bottom: 2rem;
+  letter-spacing: 0.05em;
+}
+
+.estudoSection:first-of-type {
+  padding-top: 3rem;
+}
+
+/* ============================================
+   HERO
+   ============================================ */
+.heroEstudo {
+  background: linear-gradient(135deg, #0a1628 0%, #102244 50%, #1a2f5e 100%);
+  color: #ffffff;
+  border-radius: 16px;
+  padding: clamp(2rem, 5vw, 4rem) clamp(1.5rem, 4vw, 3.5rem);
+  text-align: center;
+  margin-bottom: 3rem;
+  border: 2px solid #c9a84c;
+  box-shadow: 0 8px 40px rgba(0, 0, 0, 0.28);
+  position: relative;
+  overflow: hidden;
+}
+
+.heroEstudo::before {
+  content: '✦';
+  position: absolute;
+  top: 1rem;
+  left: 2rem;
+  font-size: 1.5rem;
+  color: rgba(201, 168, 76, 0.2);
+}
+
+.heroEstudo::after {
+  content: '✦';
+  position: absolute;
+  bottom: 1rem;
+  right: 2rem;
+  font-size: 1.5rem;
+  color: rgba(201, 168, 76, 0.2);
+}
+
+.heroEstudo h2 {
+  font-family: 'Cinzel', serif;
+  font-size: clamp(1.8rem, 5vw, 3rem);
+  color: #e8c97a;
+  letter-spacing: 0.12em;
+  margin-bottom: 0.5rem;
+  text-shadow: 0 2px 16px rgba(0, 0, 0, 0.5);
+}
+
+.subtituloPrincipal {
+  font-family: 'Libre Baskerville', serif;
+  font-style: italic;
+  font-size: clamp(1rem, 2vw, 1.2rem);
+  color: rgba(232, 201, 122, 0.85);
+  margin-bottom: 2rem;
+  letter-spacing: 0.06em;
+}
+
+.citacaoInicio {
+  background: rgba(255, 255, 255, 0.06);
+  border-left: 4px solid #c9a84c;
+  border-radius: 8px;
+  padding: 1.2rem 1.8rem;
+  font-family: 'Libre Baskerville', serif;
+  font-style: italic;
+  font-size: clamp(0.95rem, 1.8vw, 1.1rem);
+  color: #f5e6c0;
+  line-height: 1.9;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.citacaoInicio strong {
+  color: #e8c97a;
+  font-style: normal;
+}
+
+/* ============================================
+   LAYOUT FLEXÍVEL (INTRO)
+   ============================================ */
+.conteudoFlexivel {
+  display: grid;
+  grid-template-columns: 1fr 320px;
+  gap: 2rem;
+  align-items: start;
+}
+
+.textoPrincipal p {
+  margin-bottom: 1.2rem;
+  color: #2a2a3a;
+  font-size: 1rem;
+}
+
+.caixaDestaque {
+  background: linear-gradient(135deg, #fffbf0, #fef3d0);
+  border-left: 5px solid #c9a84c;
+  border-radius: 10px;
+  padding: 1.4rem 1.6rem;
+  margin-top: 1.5rem;
+  box-shadow: 0 2px 12px rgba(201, 168, 76, 0.15);
+}
+
+.caixaDestaque h4 {
+  font-family: 'Cinzel', serif;
+  color: #1e3a8a;
+  margin-bottom: 0.6rem;
+  font-size: 0.95rem;
+  letter-spacing: 0.04em;
+}
+
+.infoDestaque {
+  background: #0a1628;
+  border-radius: 12px;
+  padding: 1.5rem;
+  border: 2px solid #c9a84c;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.18);
+}
+
+.infoDestaque h4 {
+  font-family: 'Cinzel', serif;
+  color: #e8c97a;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid rgba(201, 168, 76, 0.3);
+  letter-spacing: 0.05em;
+}
+
+.infoDestaque ul {
+  list-style: none;
+}
+
+.infoDestaque li {
+  color: rgba(232, 201, 122, 0.9);
+  font-size: 0.85rem;
+  padding: 0.4rem 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  line-height: 1.5;
+}
+
+.infoDestaque li strong {
+  color: #e8c97a;
+}
+
+/* ============================================
+   AVISO DE CITAÇÕES
+   ============================================ */
+.avisoCitacao {
+  background: #fff8e1;
+  border: 1px solid #f0c040;
+  border-left: 4px solid #d4a017;
+  border-radius: 8px;
+  padding: 0.9rem 1.2rem;
+  font-size: 0.85rem;
+  color: #5a4a00;
+  margin-bottom: 2rem;
+  display: flex;
+  align-items: flex-start;
+  gap: 0.6rem;
+}
+
+.avisoCitacao::before {
+  content: '⚠️';
+  flex-shrink: 0;
+}
+
+/* ============================================
+   CARDS DE TEOLOGIA
+   ============================================ */
+.cardTeologia {
+  background: #ffffff;
+  border-radius: 14px;
+  padding: 2rem;
+  margin-bottom: 1.8rem;
+  border-top: 4px solid #c9a84c;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.18);
+  transition: transform 0.25s, box-shadow 0.25s;
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+.cardTeologia:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 40px rgba(0, 0, 0, 0.28);
+}
+
+.cardTeologia.visivel {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.cardTeologia h4 {
+  font-family: 'Cinzel', serif;
+  color: #1e3a8a;
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+  letter-spacing: 0.04em;
+}
+
+.cardTeologia p {
+  margin-bottom: 0.8rem;
+  color: #4a4a5a;
+  font-size: 0.95rem;
+}
+
+.citacaoCard {
+  background: linear-gradient(135deg, #f0f4ff, #e8edff);
+  border-left: 4px solid #1e3a8a;
+  border-radius: 8px;
+  padding: 1.1rem 1.4rem;
+  font-family: 'Libre Baskerville', serif;
+  font-style: italic;
+  font-size: 0.95rem;
+  color: #1a2a5e;
+  margin: 1rem 0;
+  line-height: 1.85;
+}
+
+.citacaoCard strong {
+  font-style: normal;
+  color: #1e3a8a;
+}
+
+/* ============================================
+   TIMELINE
+   ============================================ */
+.timeline {
+  position: relative;
+  padding-left: 2.5rem;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 1rem;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: linear-gradient(to bottom, #c9a84c, rgba(201, 168, 76, 0.1));
+}
+
+.timelineItem {
+  position: relative;
+  margin-bottom: 2.5rem;
+  display: grid;
+  grid-template-columns: 100px 1fr;
+  gap: 1.5rem;
+  align-items: start;
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+.timelineItem.visivel {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.timelineMarker {
+  text-align: right;
+  padding-top: 0.2rem;
+  position: relative;
+}
+
+.timelineMarker::after {
+  content: '';
+  position: absolute;
+  right: -1.9rem;
+  top: 0.6rem;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #c9a84c;
+  border: 3px solid #ffffff;
+  box-shadow: 0 0 0 2px #c9a84c;
+}
+
+.ano {
+  font-family: 'Cinzel', serif;
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: #c9a84c;
+  letter-spacing: 0.04em;
+  background: #0a1628;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  display: inline-block;
+}
+
+.timelineConteudo {
+  background: #ffffff;
+  border-radius: 10px;
+  padding: 1.3rem 1.5rem;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+  border-left: 3px solid #c9a84c;
+}
+
+.timelineConteudo h4 {
+  font-family: 'Cinzel', serif;
+  color: #1e3a8a;
+  font-size: 0.95rem;
+  margin-bottom: 0.5rem;
+  letter-spacing: 0.03em;
+}
+
+.timelineConteudo p {
+  font-size: 0.92rem;
+  color: #3a3a4a;
+}
+
+/* ============================================
+   BÍBLIA GRID
+   ============================================ */
+.bibliaGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+  gap: 1.5rem;
+}
+
+.bibliaCard {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 1.5rem;
+  border-top: 4px solid #1e3a8a;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.18);
+  transition: transform 0.2s;
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+.bibliaCard.visivel {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.bibliaCard:hover {
+  transform: translateY(-3px);
+}
+
+.bibliaCard h4 {
+  font-family: 'Cinzel', serif;
+  color: #1e3a8a;
+  font-size: 0.95rem;
+  margin-bottom: 0.8rem;
+  letter-spacing: 0.04em;
+}
+
+.bibliaCard blockquote {
+  font-family: 'Libre Baskerville', serif;
+  font-style: italic;
+  font-size: 0.9rem;
+  color: #2a2a4a;
+  border-left: 3px solid #c9a84c;
+  padding-left: 0.9rem;
+  margin-bottom: 0.8rem;
+  line-height: 1.75;
+}
+
+.bibliaCard p {
+  font-size: 0.87rem;
+  color: #5a5a6a;
+}
+
+/* ============================================
+   TIPOS DE BATISMO
+   ============================================ */
+.tiposContainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.8rem;
+  margin-bottom: 2rem;
+}
+
+.tipoCard {
+  border-radius: 14px;
+  padding: 1.8rem;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.18);
+  color: #ffffff;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.25s;
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+.tipoCard.visivel {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.tipoCard:hover {
+  transform: translateY(-4px);
+}
+
+.tipoCard::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: #c9a84c;
+}
+
+.tipoAgua {
+  background: linear-gradient(135deg, #0a2a5e, #1a4080);
+}
+
+.tipoSangue {
+  background: linear-gradient(135deg, #5c0a0a, #8c1a1a);
+}
+
+.tipoDesejo {
+  background: linear-gradient(135deg, #2a0a5c, #4a1a8c);
+}
+
+.tipoCard h4 {
+  font-family: 'Cinzel', serif;
+  color: #e8c97a;
+  font-size: 1rem;
+  margin-bottom: 0.8rem;
+  letter-spacing: 0.04em;
+}
+
+.tipoCard p {
+  font-size: 0.92rem;
+  line-height: 1.7;
+  opacity: 0.92;
+}
+
+.detalhes {
+  margin-top: 1rem;
+  border-top: 1px solid rgba(201, 168, 76, 0.3);
+  padding-top: 1rem;
+}
+
+.detalhes p {
+  font-size: 0.85rem;
+  color: #f5e6c0;
+  margin-bottom: 0.4rem;
+}
+
+.tipoCard ul {
+  list-style: none;
+}
+
+.tipoCard ul li {
+  font-size: 0.84rem;
+  padding: 0.25rem 0;
+  padding-left: 1rem;
+  position: relative;
+  opacity: 0.9;
+}
+
+.tipoCard ul li::before {
+  content: '›';
+  position: absolute;
+  left: 0;
+  color: #c9a84c;
+  font-weight: bold;
+}
+
+.caixaImportante {
+  background: linear-gradient(135deg, #fff8e1, #fef3c7);
+  border: 2px solid #c9a84c;
+  border-radius: 12px;
+  padding: 1.4rem 1.8rem;
+  box-shadow: 0 2px 12px rgba(201, 168, 76, 0.15);
+}
+
+.caixaImportante h4 {
+  font-family: 'Cinzel', serif;
+  color: #7a5000;
+  margin-bottom: 0.6rem;
+  font-size: 0.95rem;
+}
+
+.caixaImportante p {
+  color: #5a4000;
+  font-size: 0.93rem;
+}
+
+/* ============================================
+   RITO — PASSOS
+   ============================================ */
+.introRito {
+  font-family: 'Libre Baskerville', serif;
+  font-style: italic;
+  color: #3a3a5a;
+  margin-bottom: 2rem;
+  font-size: 1rem;
+  text-align: center;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.ritoPassos {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.passo {
+  display: grid;
+  grid-template-columns: 60px 1fr;
+  gap: 1.5rem;
+  align-items: start;
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 1.4rem 1.6rem;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.07);
+  border-left: 4px solid #c9a84c;
+  transition: transform 0.2s, box-shadow 0.2s;
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+.passo.visivel {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.passo:hover {
+  transform: translateX(4px);
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.18);
+}
+
+.numeroPasso {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #1e3a8a, #0a1628);
+  color: #e8c97a;
+  font-family: 'Cinzel', serif;
+  font-size: 1.2rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  flex-shrink: 0;
+}
+
+.descricaoPasso h4 {
+  font-family: 'Cinzel', serif;
+  color: #1e3a8a;
+  font-size: 0.95rem;
+  margin-bottom: 0.4rem;
+  letter-spacing: 0.03em;
+}
+
+.descricaoPasso p {
+  font-size: 0.92rem;
+  color: #3a3a4a;
+}
+
+.notaRito {
+  margin-top: 2rem;
+  background: #f0f4ff;
+  border-left: 4px solid #1e3a8a;
+  border-radius: 8px;
+  padding: 1rem 1.4rem;
+  font-size: 0.88rem;
+  color: #2a2a5a;
+}
+
+/* ============================================
+   EFEITOS ESPIRITUAIS
+   ============================================ */
+.efeitosGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 1.4rem;
+}
+
+.efeitoCard {
+  background: #ffffff;
+  border-radius: 14px;
+  padding: 1.5rem;
+  text-align: center;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.18);
+  border-bottom: 4px solid #c9a84c;
+  transition: transform 0.25s, box-shadow 0.25s;
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+.efeitoCard.visivel {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.efeitoCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 40px rgba(0, 0, 0, 0.28);
+}
+
+.efeitoIcone {
+  font-size: 2rem;
+  margin-bottom: 0.7rem;
+  display: block;
+}
+
+.efeitoCard h4 {
+  font-family: 'Cinzel', serif;
+  color: #1e3a8a;
+  font-size: 0.9rem;
+  margin-bottom: 0.6rem;
+  letter-spacing: 0.03em;
+}
+
+.efeitoCard p {
+  font-size: 0.87rem;
+  color: #4a4a5a;
+}
+
+.detalhe {
+  margin-top: 0.6rem;
+  font-size: 0.82rem !important;
+  color: #888 !important;
+  border-top: 1px solid #eee;
+  padding-top: 0.5rem;
+}
+
+/* ============================================
+   VOZES DOS SANTOS
+   ============================================ */
+.introSantos {
+  font-family: 'Libre Baskerville', serif;
+  font-style: italic;
+  color: #4a4a5a;
+  margin-bottom: 2rem;
+  text-align: center;
+  font-size: 1rem;
+}
+
+.santosGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.6rem;
+}
+
+.santoCard {
+  background: linear-gradient(135deg, #0a1628 0%, #102244 100%);
+  border-radius: 14px;
+  padding: 1.8rem;
+  border: 1px solid rgba(201, 168, 76, 0.2);
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.18);
+  transition: transform 0.25s, border-color 0.25s;
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+.santoCard.visivel {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.santoCard:hover {
+  transform: translateY(-4px);
+  border-color: rgba(201, 168, 76, 0.5);
+}
+
+.santoCard h4 {
+  font-family: 'Cinzel', serif;
+  color: #e8c97a;
+  font-size: 0.92rem;
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid rgba(201, 168, 76, 0.25);
+  letter-spacing: 0.04em;
+}
+
+.santoCard blockquote {
+  font-family: 'Libre Baskerville', serif;
+  font-style: italic;
+  font-size: 0.92rem;
+  color: #f5e6c0;
+  line-height: 1.8;
+  margin-bottom: 1rem;
+  padding-left: 0.8rem;
+  border-left: 3px solid rgba(201, 168, 76, 0.4);
+}
+
+.notaSanto {
+  font-size: 0.82rem;
+  color: rgba(232, 201, 122, 0.65);
+  line-height: 1.6;
+}
+
+.notaSanto strong {
+  color: #e8c97a;
+}
+
+/* ============================================
+   NA PRÁTICA
+   ============================================ */
+.praticaBloco {
+  background: #ffffff;
+  border-radius: 14px;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.18);
+  border-top: 4px solid #c9a84c;
+}
+
+.praticaBloco h4 {
+  font-family: 'Cinzel', serif;
+  color: #1e3a8a;
+  font-size: 1.05rem;
+  margin-bottom: 1.2rem;
+  letter-spacing: 0.04em;
+}
+
+.praticaBloco p {
+  font-size: 0.95rem;
+  color: #4a4a5a;
+  margin-bottom: 0.8rem;
+}
+
+.comparacao {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.4rem;
+  margin-top: 1rem;
+}
+
+.itemComparacao {
+  background: #f8f6f2;
+  border-radius: 10px;
+  padding: 1.2rem;
+  border-top: 3px solid #1e3a8a;
+}
+
+.itemComparacao h5 {
+  font-family: 'Cinzel', serif;
+  color: #1e3a8a;
+  font-size: 0.88rem;
+  margin-bottom: 0.8rem;
+  letter-spacing: 0.03em;
+}
+
+.itemComparacao ul {
+  list-style: none;
+}
+
+.itemComparacao li {
+  font-size: 0.87rem;
+  color: #3a3a5a;
+  padding: 0.25rem 0;
+  padding-left: 1rem;
+  position: relative;
+}
+
+.itemComparacao li::before {
+  content: '•';
+  position: absolute;
+  left: 0;
+  color: #c9a84c;
+}
+
+.listaPratica {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.itemLista {
+  background: #f8f6f2;
+  border-radius: 10px;
+  padding: 1.1rem 1.3rem;
+  border-left: 4px solid #1e3a8a;
+}
+
+.itemLista strong {
+  display: block;
+  font-family: 'Cinzel', serif;
+  color: #1e3a8a;
+  font-size: 0.88rem;
+  margin-bottom: 0.4rem;
+  letter-spacing: 0.03em;
+}
+
+.itemLista p {
+  font-size: 0.9rem;
+  color: #3a3a5a;
+}
+
+.citacaoCarismatica,
+.citacaoTradicional {
+  background: linear-gradient(135deg, #f8f4ff, #ede8ff);
+  border-left: 4px solid #7a4aaa;
+  border-radius: 8px;
+  padding: 1rem 1.3rem;
+  font-family: 'Libre Baskerville', serif;
+  font-style: italic;
+  font-size: 0.92rem;
+  color: #3a1a5a;
+  margin: 1rem 0;
+}
+
+/* ============================================
+   FAQ
+   ============================================ */
+.faqContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.faqItem {
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.07);
+  overflow: hidden;
+  border: 1px solid rgba(201, 168, 76, 0.15);
+  transition: border-color 0.2s;
+}
+
+.faqItem:hover {
+  border-color: rgba(201, 168, 76, 0.4);
+}
+
+.faqPergunta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.2rem 1.5rem;
+  cursor: pointer;
+  gap: 1rem;
+  background: linear-gradient(135deg, #f8f6ff, #f0f4ff);
+  transition: background 0.2s;
+  border: none;
+  width: 100%;
+  text-align: left;
+  font: inherit;
+}
+
+.faqPergunta:hover {
+  background: linear-gradient(135deg, #ede8ff, #e8edff);
+}
+
+.faqPergunta h4 {
+  font-family: 'Libre Baskerville', serif;
+  color: #1e3a8a;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  font-weight: 400;
+}
+
+.faqSeta {
+  color: #c9a84c;
+  font-size: 1rem;
+  flex-shrink: 0;
+  transition: transform 0.3s;
+}
+
+.faqSetaAberta {
+  transform: rotate(180deg);
+}
+
+.faqResposta {
+  display: none;
+  padding: 1.3rem 1.5rem;
+  border-top: 1px solid rgba(201, 168, 76, 0.15);
+}
+
+.faqRespostaAberta {
+  display: block;
+}
+
+.faqResposta p {
+  font-size: 0.92rem;
+  color: #3a3a5a;
+  margin-bottom: 0.7rem;
+}
+
+.faqResposta ul {
+  margin-left: 1.5rem;
+  margin-top: 0.5rem;
+}
+
+.faqResposta ul li {
+  font-size: 0.9rem;
+  color: #4a4a5a;
+  padding: 0.2rem 0;
+}
+
+.faqResposta blockquote {
+  background: #f5f5ff;
+  border-left: 3px solid #1e3a8a;
+  border-radius: 6px;
+  padding: 0.8rem 1.1rem;
+  font-family: 'Libre Baskerville', serif;
+  font-style: italic;
+  font-size: 0.9rem;
+  color: #2a2a5a;
+  margin: 0.8rem 0;
+}
+
+/* ============================================
+   FONTES BIBLIOGRÁFICAS
+   ============================================ */
+.fontesSection {
+  background: #0a1628;
+  border-radius: 14px;
+  padding: 2rem;
+  margin-top: 2rem;
+  border: 2px solid #c9a84c;
+}
+
+.fontesSection h4 {
+  font-family: 'Cinzel', serif;
+  color: #e8c97a;
+  font-size: 1rem;
+  margin-bottom: 1.2rem;
+  letter-spacing: 0.05em;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid rgba(201, 168, 76, 0.3);
+}
+
+.fontesGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 0.8rem;
+}
+
+.fonteItem {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 8px;
+  padding: 0.8rem 1rem;
+  border-left: 3px solid #c9a84c;
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+.fonteItem.visivel {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.fonteItem strong {
+  display: block;
+  color: #e8c97a;
+  font-size: 0.83rem;
+  margin-bottom: 0.2rem;
+}
+
+.fonteItem span {
+  color: rgba(232, 201, 122, 0.65);
+  font-size: 0.8rem;
+}
+
+/* ============================================
+   CONCLUSÃO
+   ============================================ */
+.conclusao {
+  background: linear-gradient(135deg, #0a1628 0%, #102244 100%);
+  border-radius: 16px;
+  padding: clamp(2rem, 5vw, 3.5rem);
+  color: #ffffff;
+  border: 2px solid #c9a84c;
+  box-shadow: 0 8px 40px rgba(0, 0, 0, 0.28);
+  max-width: 1100px;
+  margin: 0 auto 3rem;
+}
+
+.conclusao h3 {
+  font-family: 'Cinzel', serif;
+  color: #e8c97a;
+  font-size: clamp(1.2rem, 2.5vw, 1.6rem);
+  border-bottom: 2px solid #c9a84c;
+  padding-bottom: 0.6rem;
+  margin-bottom: 2rem;
+  letter-spacing: 0.07em;
+}
+
+.textoConclusao p {
+  font-size: clamp(0.95rem, 1.5vw, 1.05rem);
+  color: rgba(255, 255, 255, 0.88);
+  margin-bottom: 1.2rem;
+  line-height: 1.9;
+}
+
+.textoConclusao strong {
+  color: #e8c97a;
+}
+
+.assinaturaConclusao {
+  margin-top: 2rem !important;
+  font-family: 'Libre Baskerville', serif;
+  font-style: italic;
+  color: #f5e6c0 !important;
+  text-align: center;
+  border-top: 1px solid rgba(201, 168, 76, 0.3);
+  padding-top: 1.5rem;
+  font-size: 1rem !important;
+}
+
+/* ============================================
+   RODAPÉ
+   ============================================ */
+.footer {
+  background: #0a1628;
+  color: rgba(232, 201, 122, 0.6);
+  text-align: center;
+  padding: 1.5rem;
+  font-family: 'Cinzel', serif;
+  font-size: 0.8rem;
+  letter-spacing: 0.1em;
+  border-top: 2px solid #c9a84c;
+}
+
+/* ============================================
+   RESPONSIVIDADE
+   ============================================ */
+@media (max-width: 768px) {
+  .conteudoFlexivel {
+    grid-template-columns: 1fr;
+  }
+
+  .estudoSection {
+    padding: 1.5rem 1rem;
+  }
+
+  .timelineItem {
+    grid-template-columns: 80px 1fr;
+    gap: 1rem;
+  }
+
+  .passo {
+    grid-template-columns: 48px 1fr;
+    gap: 1rem;
+    padding: 1.1rem;
+  }
+
+  .indiceRapido {
+    padding: 0.6rem 1rem;
+  }
+
+  .btnVoltar,
+  .indiceBtn {
+    padding: 0.4rem 1rem;
+    font-size: 0.75rem;
+  }
+
+  .indiceMenu {
+    padding: 1rem;
+  }
+
+  .comparacao {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .timelineItem {
+    grid-template-columns: 1fr;
+  }
+
+  .timelineMarker {
+    text-align: left;
+  }
+
+  .timelineMarker::after {
+    display: none;
+  }
+
+  .btnVoltarTexto {
+    display: none;
+  }
+
+  .btnVoltar {
+    padding: 0.4rem 0.9rem;
+  }
+}

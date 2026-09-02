@@ -1,0 +1,840 @@
+/* =========================================================
+   RESET GLOBAL & ESTILOS — BIBLIOTECA DE SÃO FILIPE NÉRI
+   ========================================================= */
+
+/* Zerar margens do body/html quando estiver nesta seção */
+:global(html),
+:global(body) {
+  margin: 0 !important;
+  padding: 0 !important;
+  background-color: #faf8f4 !important;
+  overflow-x: hidden;
+}
+
+.pagina {
+  --bio-dourado: #b08a3c;
+  --bio-dourado-claro: #d4b872;
+  --bio-texto: #3a3530;
+  --bio-texto-leve: #6f6758;
+  --bio-borda: #e2dcd0;
+  --bio-borda-leve: #ece8df;
+  --bio-bege: #faf8f4;
+  --bio-bege-forte: #f5f1e8;
+  --bio-nota-borda: #d4c9a8;
+
+  min-height: 100vh;
+  width: 100%;
+  background: var(--bio-bege);
+  color: var(--bio-texto);
+  font-family: Georgia, "Times New Roman", "Noto Serif", serif;
+  padding: 20px 20px 80px;
+  box-sizing: border-box;
+}
+
+/* ========= NAVEGAÇÃO SUPERIOR (VOLTAR) ========= */
+
+.topoNav {
+  max-width: 1080px;
+  margin: 10px auto 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 0;
+  border-bottom: 1px solid var(--bio-borda-leve);
+}
+
+.linkVoltar {
+  font-size: 13px;
+  color: var(--bio-texto-leve);
+  text-decoration: none;
+  letter-spacing: 0.03em;
+  transition: color 0.2s;
+}
+
+.linkVoltar:hover {
+  color: var(--bio-dourado);
+}
+
+.migalhas {
+  font-size: 12px;
+  color: var(--bio-texto-leve);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+/* ========= CAPA PRINCIPAL ========= */
+
+.capa {
+  max-width: 780px;
+  margin: 40px auto 30px;
+  text-align: center;
+  padding: 50px 40px;
+  background: linear-gradient(180deg, #faf5ea 0%, #f5efe0 100%);
+  border: 1px solid var(--bio-nota-borda);
+  border-radius: 4px;
+  box-shadow: 0 2px 20px rgba(120, 100, 60, 0.08);
+}
+
+.capaOrnamentoTop,
+.capaOrnamentoBottom {
+  font-size: 24px;
+  color: var(--bio-dourado);
+  opacity: 0.7;
+  margin: 0 0 20px;
+}
+
+.capaOrnamentoBottom {
+  margin: 28px 0 0;
+}
+
+.capaSupratitulo {
+  font-size: 11px;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--bio-dourado);
+  margin: 0 0 16px;
+  font-family: "Inter", sans-serif;
+}
+
+.capaTitulo {
+  font-family: "Libre Baskerville", Georgia, serif;
+  font-size: 40px;
+  line-height: 1.1;
+  margin: 0 0 8px;
+  color: var(--bio-texto);
+}
+
+.capaVida {
+  font-size: 14px;
+  color: var(--bio-texto-leve);
+  font-style: italic;
+  margin: 0 0 10px;
+}
+
+.capaSubtitulo {
+  font-size: 12px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--bio-texto-leve);
+  margin: 0;
+}
+
+.capaSeparador {
+  color: var(--bio-dourado);
+  letter-spacing: 0.5em;
+  margin: 24px 0;
+  font-size: 13px;
+}
+
+.capaObraTitulo {
+  font-family: "Libre Baskerville", Georgia, serif;
+  font-size: 20px;
+  font-weight: 400;
+  font-style: italic;
+  margin: 0;
+}
+
+.capaEpigrafe {
+  max-width: 540px;
+  margin: 24px auto 0;
+  padding-top: 20px;
+  border-top: 1px solid var(--bio-nota-borda);
+}
+
+.capaEpigrafe p {
+  font-size: 14px;
+  line-height: 1.7;
+  font-style: italic;
+  color: var(--bio-texto-leve);
+  margin: 0 0 10px;
+}
+
+.capaEpigrafe footer {
+  font-size: 11px;
+  color: var(--bio-texto-leve);
+}
+
+.notaGeral {
+  max-width: 720px;
+  margin: 30px auto;
+  text-align: center;
+}
+
+.notaGeral p {
+  font-size: 15px;
+  line-height: 1.8;
+  color: var(--bio-texto);
+  font-style: italic;
+}
+
+/* ========= HEADERS DE SEÇÃO ========= */
+
+.cabecalhoSecao {
+  max-width: 1080px;
+  margin: 20px auto 30px;
+  text-align: center;
+  background: #fff;
+  padding: 40px 30px;
+  border: 1px solid var(--bio-borda-leve);
+  border-radius: 4px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.02);
+}
+
+.cabecalhoSecaoIcone {
+  font-size: 36px;
+  margin-bottom: 12px;
+}
+
+.cabecalhoSecaoTitulo {
+  font-family: "Libre Baskerville", Georgia, serif;
+  font-size: 32px;
+  font-weight: 400;
+  margin: 0 0 12px;
+}
+
+.cabecalhoSecaoDescricao {
+  max-width: 680px;
+  margin: 0 auto 20px;
+  font-size: 15px;
+  line-height: 1.7;
+  color: var(--bio-texto-leve);
+}
+
+.estatisticasBanner {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  flex-wrap: wrap;
+  margin-top: 20px;
+  padding-top: 20px;
+  border-top: 1px solid var(--bio-borda-leve);
+}
+
+.estatisticaItem {
+  font-size: 12px;
+  letter-spacing: 0.05em;
+  color: var(--bio-texto-leve);
+}
+
+.estatisticaItem strong {
+  color: var(--bio-dourado);
+  font-size: 14px;
+}
+
+/* ========= CARDS DA SEÇÃO PRINCIPAL ========= */
+
+.secoes {
+  max-width: 1080px;
+  margin: 50px auto;
+  background: #fff;
+  padding: 40px;
+  border: 1px solid var(--bio-borda-leve);
+  border-radius: 4px;
+}
+
+.secoesTitulo {
+  font-family: "Libre Baskerville", Georgia, serif;
+  text-align: center;
+  font-size: 22px;
+  font-weight: 400;
+  margin: 0 0 32px;
+}
+
+.secoesGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 20px;
+}
+
+.cardSecao {
+  display: flex;
+  flex-direction: column;
+  padding: 28px 20px;
+  background: var(--bio-bege);
+  border: 1px solid var(--bio-borda-leve);
+  border-radius: 4px;
+  text-decoration: none;
+  color: inherit;
+  transition: all 0.25s ease;
+}
+
+.cardSecao:hover {
+  border-color: var(--bio-dourado);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(176, 138, 60, 0.1);
+  background: #fdfbf7;
+}
+
+.cardSecaoIcone {
+  font-size: 28px;
+  color: var(--bio-dourado);
+  margin-bottom: 12px;
+}
+
+.cardSecaoTitulo {
+  font-family: "Libre Baskerville", Georgia, serif;
+  font-size: 18px;
+  font-weight: 400;
+  margin: 0 0 10px;
+}
+
+.cardSecaoDescricao {
+  font-size: 13px;
+  line-height: 1.6;
+  color: var(--bio-texto-leve);
+  margin: 0 0 16px;
+  flex-grow: 1;
+}
+
+.cardSecaoContagem {
+  font-size: 11px;
+  color: var(--bio-dourado);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  font-weight: 500;
+}
+
+.cardSecaoAcao {
+  font-size: 12px;
+  color: var(--bio-texto);
+  border-top: 1px solid var(--bio-borda-leve);
+  padding-top: 10px;
+}
+
+/* ========= LISTA DE CARTAS ========= */
+
+.gridCartas {
+  max-width: 1080px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 20px;
+}
+
+.cardCarta {
+  background: #fff;
+  border: 1px solid var(--bio-borda-leve);
+  border-radius: 4px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  color: inherit;
+  transition: all 0.2s ease;
+}
+
+.cardCarta:hover {
+  border-color: var(--bio-dourado);
+  box-shadow: 0 4px 16px rgba(176, 138, 60, 0.08);
+}
+
+.cardCartaTop {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.cardCartaNumero {
+  font-family: "Libre Baskerville", Georgia, serif;
+  font-size: 14px;
+  color: var(--bio-dourado);
+  font-weight: bold;
+}
+
+.cardCartaDestinatario {
+  font-family: "Libre Baskerville", Georgia, serif;
+  font-size: 18px;
+  margin: 0 0 4px;
+  color: var(--bio-texto);
+}
+
+.cardCartaQualificacao {
+  font-size: 12px;
+  color: var(--bio-texto-leve);
+  font-style: italic;
+  margin: 0 0 12px;
+}
+
+.cardCartaDataLocal {
+  font-size: 12px;
+  color: var(--bio-texto-leve);
+  margin-bottom: 12px;
+  font-family: "Inter", sans-serif;
+}
+
+.cardCartaContexto {
+  font-size: 13px;
+  line-height: 1.6;
+  color: var(--bio-texto);
+  margin-bottom: 16px;
+  flex-grow: 1;
+}
+
+.cardCartaRodape {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 12px;
+  border-top: 1px solid var(--bio-borda-leve);
+  font-size: 12px;
+  color: var(--bio-dourado);
+}
+
+/* ========= MÁXIMAS — CALENDÁRIO E BUSCA ========= */
+
+.filtroMaximas {
+  max-width: 1080px;
+  margin: 0 auto 30px;
+  background: #fff;
+  padding: 24px;
+  border: 1px solid var(--bio-borda-leve);
+  border-radius: 4px;
+}
+
+.cardMaximaDia {
+  max-width: 1080px;
+  margin: 0 auto 40px;
+  background: linear-gradient(135deg, #faf5ea 0%, #f5efe0 100%);
+  border: 1px solid var(--bio-nota-borda);
+  border-radius: 4px;
+  padding: 30px;
+  text-align: center;
+}
+
+.cardMaximaDiaHeader {
+  font-size: 11px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--bio-dourado);
+  margin-bottom: 12px;
+  font-family: "Inter", sans-serif;
+}
+
+.cardMaximaDiaTexto {
+  font-family: "Libre Baskerville", Georgia, serif;
+  font-size: 20px;
+  line-height: 1.6;
+  color: var(--bio-texto);
+  margin: 0 0 16px;
+}
+
+.cardMaximaDiaAcao {
+  font-size: 12px;
+  color: var(--bio-dourado);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.mesesGrid {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.btnMes {
+  padding: 6px 14px;
+  font-size: 12px;
+  background: var(--bio-bege);
+  border: 1px solid var(--bio-borda);
+  border-radius: 20px;
+  cursor: pointer;
+  text-decoration: none;
+  color: var(--bio-texto);
+  transition: all 0.2s;
+}
+
+.btnMes:hover,
+.btnMesAtivo {
+  background: var(--bio-dourado);
+  color: #fff;
+  border-color: var(--bio-dourado);
+}
+
+.gridMaximas {
+  max-width: 1080px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 16px;
+}
+
+.cardMaxima {
+  background: #fff;
+  border: 1px solid var(--bio-borda-leve);
+  border-radius: 4px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  color: inherit;
+  transition: all 0.2s;
+}
+
+.cardMaxima:hover {
+  border-color: var(--bio-dourado);
+  box-shadow: 0 4px 12px rgba(176, 138, 60, 0.08);
+}
+
+.cardMaximaHeader {
+  display: flex;
+  justify-content: space-between;
+  font-size: 11px;
+  color: var(--bio-dourado);
+  margin-bottom: 10px;
+  font-family: "Inter", sans-serif;
+  letter-spacing: 0.05em;
+}
+
+.cardMaximaTexto {
+  font-family: "Libre Baskerville", Georgia, serif;
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--bio-texto);
+  margin: 0 0 12px;
+  flex-grow: 1;
+}
+
+.cardMaximaTema {
+  font-size: 11px;
+  color: var(--bio-texto-leve);
+  font-style: italic;
+}
+
+/* ========= LEITOR INDIVIDUAL (CARTAS E MÁXIMAS) ========= */
+
+.leitorContainer {
+  max-width: 820px;
+  margin: 30px auto;
+  background: #fff;
+  border: 1px solid var(--bio-borda-leve);
+  border-radius: 4px;
+  padding: 50px 40px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.03);
+}
+
+.leitorHeader {
+  text-align: center;
+  padding-bottom: 30px;
+  margin-bottom: 30px;
+  border-bottom: 1px solid var(--bio-borda-leve);
+}
+
+.leitorNumero {
+  font-size: 12px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--bio-dourado);
+  margin-bottom: 10px;
+  font-family: "Inter", sans-serif;
+}
+
+.leitorTitulo {
+  font-family: "Libre Baskerville", Georgia, serif;
+  font-size: 30px;
+  margin: 0 0 8px;
+}
+
+.leitorSubtitulo {
+  font-size: 14px;
+  color: var(--bio-texto-leve);
+  font-style: italic;
+  margin: 0 0 16px;
+}
+
+.leitorMeta {
+  font-size: 13px;
+  color: var(--bio-texto-leve);
+  margin-bottom: 16px;
+}
+
+.leitorContexto {
+  background: var(--bio-bege-forte);
+  padding: 16px 20px;
+  border-left: 3px solid var(--bio-dourado);
+  font-size: 13px;
+  line-height: 1.6;
+  color: var(--bio-texto);
+  text-align: left;
+  margin-top: 20px;
+  border-radius: 0 4px 4px 0;
+}
+
+/* ========= TEXTO DO LEITOR ========= */
+
+.leitorCorpo {
+  font-size: 16px;
+  line-height: 1.9;
+  color: #2c2825;
+}
+
+.leitorCorpo p {
+  margin-bottom: 20px;
+  text-align: justify;
+}
+
+.caixaOriginal {
+  margin-top: 40px;
+  padding: 30px;
+  background: var(--bio-bege);
+  border: 1px solid var(--bio-borda-leve);
+  border-radius: 4px;
+}
+
+.caixaOriginalTitulo {
+  font-size: 12px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--bio-dourado);
+  margin: 0 0 16px;
+  font-family: "Inter", sans-serif;
+}
+
+.caixaOriginalTexto {
+  font-size: 14px;
+  line-height: 1.8;
+  font-style: italic;
+  color: var(--bio-texto-leve);
+  white-space: pre-line;
+}
+
+/* ========= LATIM E BÍBLIA ========= */
+
+.caixaLatim,
+.caixaBiblia {
+  margin-top: 30px;
+  padding: 20px;
+  background: var(--bio-bege-forte);
+  border: 1px solid var(--bio-nota-borda);
+  border-radius: 4px;
+}
+
+.caixaLatimTitulo,
+.caixaBibliaTitulo {
+  font-size: 11px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--bio-dourado);
+  margin: 0 0 12px;
+  font-family: "Inter", sans-serif;
+}
+
+.itemLatim,
+.itemBiblia {
+  font-size: 13px;
+  line-height: 1.6;
+  margin-bottom: 10px;
+  border-bottom: 1px dotted var(--bio-borda-leve);
+  padding-bottom: 8px;
+}
+
+.itemLatim:last-child,
+.itemBiblia:last-child {
+  margin-bottom: 0;
+  padding-bottom: 0;
+  border-bottom: none;
+}
+
+/* ========= NOTAS E FONTES ========= */
+
+.caixaNotas {
+  margin-top: 40px;
+  padding-top: 24px;
+  border-top: 1px solid var(--bio-borda-leve);
+  font-size: 12px;
+  line-height: 1.6;
+  color: var(--bio-texto-leve);
+}
+
+.caixaNotas h4 {
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--bio-dourado);
+  margin: 0 0 10px;
+  font-family: "Inter", sans-serif;
+}
+
+.caixaNotas ul {
+  padding-left: 18px;
+  margin: 0 0 16px;
+}
+
+/* ========= POESIA / SONETOS ========= */
+
+.poesiaGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  margin-top: 30px;
+}
+
+.poesiaColuna {
+  background: var(--bio-bege);
+  padding: 24px;
+  border: 1px solid var(--bio-borda-leve);
+  border-radius: 4px;
+}
+
+.poesiaVersos {
+  font-style: italic;
+  font-size: 15px;
+  line-height: 2;
+  white-space: pre-line;
+}
+
+/* ========= NAVEGAÇÃO ENTRE ITENS (ANTERIOR/PRÓXIMO) ========= */
+
+.navegacaoItem {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 40px;
+  padding-top: 20px;
+  border-top: 1px solid var(--bio-borda-leve);
+}
+
+.btnNavegacao {
+  font-size: 13px;
+  color: var(--bio-dourado);
+  text-decoration: none;
+}
+
+.btnNavegacao:hover {
+  text-decoration: underline;
+}
+
+/* ========= NOTA EDITORIAL & BIBLIOGRAFIA ========= */
+
+.notaEditorial {
+  max-width: 720px;
+  margin: 60px auto;
+  padding: 36px;
+  background: var(--bio-bege-forte);
+  border-left: 3px solid var(--bio-dourado);
+  border-radius: 2px;
+}
+
+.notaEditorialTitulo {
+  font-family: "Libre Baskerville", Georgia, serif;
+  font-size: 18px;
+  font-weight: 400;
+  margin: 0 0 16px;
+}
+
+.notaEditorial p {
+  font-size: 14px;
+  line-height: 1.8;
+  margin: 0 0 12px;
+}
+
+.bibliografia {
+  max-width: 720px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+.bibliografiaTitulo {
+  font-family: "Libre Baskerville", Georgia, serif;
+  font-size: 16px;
+  font-weight: 400;
+  margin: 0 0 16px;
+  text-align: center;
+}
+
+.bibliografia ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.bibliografia li {
+  font-size: 13px;
+  line-height: 1.7;
+  color: var(--bio-texto-leve);
+  padding: 8px 0;
+  border-bottom: 1px dotted var(--bio-borda-leve);
+}
+
+.rodape {
+  max-width: 720px;
+  margin: 60px auto 0;
+  padding: 24px 20px;
+  text-align: center;
+  border-top: 1px solid var(--bio-borda-leve);
+}
+
+.rodape p {
+  font-size: 12px;
+  color: var(--bio-texto-leve);
+  font-style: italic;
+}
+
+/* ========= ETIQUETAS DE STATUS ========= */
+
+.etiqueta {
+  display: inline-block;
+  padding: 4px 10px;
+  font-size: 11px;
+  letter-spacing: 0.05em;
+  border-radius: 2px;
+  font-family: "Inter", sans-serif;
+  font-weight: 500;
+  border: 1px solid;
+}
+
+.etiquetaCompacta {
+  padding: 2px 6px;
+  font-size: 10px;
+}
+
+.statusIntegral { background: #edf5ed; color: #446644; border-color: #c5dcc5; }
+.statusFragmentario { background: #fdf3e3; color: #8a6a2a; border-color: #e3d2a5; }
+.statusCatalogo { background: #eef1f7; color: #4a5a7a; border-color: #c9d1e0; }
+.statusTradicional { background: #f5f1e8; color: #6f6040; border-color: #d4c9a8; }
+.statusAutentico { background: #edf5ed; color: #446644; border-color: #c5dcc5; }
+.statusProvavel { background: #f5f1e8; color: #6f6040; border-color: #d4c9a8; }
+.statusRejeitado { background: #f7ebeb; color: #7a4a4a; border-color: #dcbcbc; }
+
+/* ========= RESPONSIVO ========= */
+
+@media (max-width: 768px) {
+  .poesiaGrid { grid-template-columns: 1fr; }
+  .gridCartas, .gridMaximas { grid-template-columns: 1fr; }
+  .leitorContainer { padding: 30px 20px; }
+  .cabecalhoSecao { padding: 30px 20px; }
+  .capaTitulo { font-size: 32px; }
+}
+.barraSecoes {
+  max-width: 1080px;
+  margin: 0 auto 18px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: center;
+}
+
+.barraSecoesItem {
+  text-decoration: none;
+  font-size: 12px;
+  letter-spacing: 0.04em;
+  color: var(--bio-texto-leve);
+  border: 1px solid var(--bio-borda);
+  background: #fff;
+  border-radius: 999px;
+  padding: 7px 12px;
+  transition: all 0.2s ease;
+}
+
+.barraSecoesItem:hover {
+  border-color: var(--bio-dourado);
+  color: var(--bio-texto);
+}
+
+.barraSecoesItemAtivo {
+  background: var(--bio-dourado);
+  border-color: var(--bio-dourado);
+  color: #fff;
+}

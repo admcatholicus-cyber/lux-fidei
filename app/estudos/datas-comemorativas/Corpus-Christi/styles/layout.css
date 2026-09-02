@@ -1,0 +1,262 @@
+/* ===========================
+   BACK TO TOP
+   =========================== */
+.back-to-top {
+    position: fixed;
+    bottom: 30px; right: 30px;
+    width: 55px; height: 55px;
+    background: linear-gradient(135deg, var(--wine), var(--wine-dark));
+    color: var(--gold);
+    border: 2px solid var(--gold);
+    border-radius: 50%;
+    font-size: 1.5rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    z-index: 999;
+    box-shadow: 0 4px 15px var(--shadow-strong);
+}
+
+.back-to-top.visible { opacity: 1; visibility: visible; }
+
+.back-to-top:hover {
+    background: var(--gold);
+    color: var(--wine);
+    transform: translateY(-3px) scale(1.05);
+}
+
+/* ===========================
+   FOOTER
+   =========================== */
+footer {
+    background: linear-gradient(
+        135deg,
+        var(--wine-dark),
+        var(--brown),
+        var(--wine-dark)
+    );
+    color: var(--gold-light);
+    padding: 4rem 2rem 2rem;
+    text-align: center;
+    margin-top: 4rem;
+}
+
+.footer-host {
+    font-size: 3.5rem;
+    color: var(--gold);
+    margin-bottom: 1rem;
+    display: block;
+    animation: pulse 3s ease-in-out infinite;
+}
+
+.footer-title {
+    font-family: 'Cinzel', serif;
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--gold);
+    letter-spacing: 5px;
+    margin-bottom: 0.5rem;
+}
+
+.footer-subtitle {
+    font-family: 'Cinzel', serif;
+    font-size: 0.9rem;
+    color: rgba(232,212,139,0.6);
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-bottom: 2rem;
+}
+
+.footer-quote {
+    max-width: 600px;
+    margin: 0 auto 2rem;
+    padding: 1.5rem 2rem;
+    border: 1px solid rgba(201,168,76,0.3);
+    border-radius: 12px;
+    background: rgba(255,255,255,0.03);
+}
+
+.footer-quote p {
+    font-style: italic;
+    font-size: 1.05rem;
+    color: rgba(232,212,139,0.85);
+    text-align: center;
+    margin-bottom: 0.5rem;
+}
+
+.footer-quote cite {
+    font-family: 'Cinzel', serif;
+    font-size: 0.82rem;
+    color: var(--gold);
+    font-style: normal;
+}
+
+.footer-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.8rem;
+    margin: 2rem 0;
+    padding: 2rem 0;
+    border-top: 1px solid rgba(201,168,76,0.2);
+    border-bottom: 1px solid rgba(201,168,76,0.2);
+}
+
+.footer-links a {
+    color: rgba(232,212,139,0.7);
+    text-decoration: none;
+    font-family: 'Cinzel', serif;
+    font-size: 0.75rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: color 0.3s ease;
+    padding: 4px 8px;
+}
+
+.footer-links a:hover { color: var(--gold); }
+
+.footer-latin { margin: 2rem auto; max-width: 500px; }
+
+.footer-latin p {
+    font-style: italic;
+    font-size: 0.95rem;
+    color: rgba(232,212,139,0.6);
+    text-align: center;
+    margin-bottom: 0.3rem;
+    line-height: 1.7;
+}
+
+.footer-copy {
+    margin-top: 2rem;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(201,168,76,0.15);
+}
+
+.footer-copy p {
+    font-size: 0.85rem;
+    color: rgba(232,212,139,0.4);
+    text-align: center;
+    margin-bottom: 0.4rem;
+    line-height: 1.6;
+}
+
+.footer-nota {
+    font-size: 0.78rem !important;
+    color: rgba(232,212,139,0.3) !important;
+    margin-top: 1rem !important;
+}
+
+/* ===========================
+   ANIMAÇÕES ENTRADA
+   =========================== */
+.fade-in {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ===========================
+   RESPONSIVO — 900px
+   =========================== */
+@media (max-width: 900px) {
+    .world-grid { grid-template-columns: 1fr; }
+}
+
+/* ===========================
+   RESPONSIVO — 768px
+   =========================== */
+@media (max-width: 768px) {
+
+    /* Nav */
+    .nav-topo    { padding: 10px 14px; gap: 0.5rem; }
+    .btn-voltar  { font-size: 0.75rem; padding: 8px 16px; letter-spacing: 1px; }
+    .nav-toggle  { font-size: 0.85rem; padding: 10px 22px; letter-spacing: 2px; min-width: auto; }
+
+    .nav-menu.active { max-height: 800px; flex-direction: column; padding: 10px 5px; }
+    .nav-menu a      { padding: 10px 20px; font-size: 0.75rem; text-align: center; width: 100%; margin: 2px 0; }
+
+    /* Timeline */
+    .timeline::before { left: 16px; }
+
+    .timeline-item,
+    .timeline-item:nth-child(odd) {
+        flex-direction: column;
+        padding-left: 50px;
+    }
+
+    .timeline-content,
+    .timeline-item:nth-child(odd)  .timeline-content,
+    .timeline-item:nth-child(even) .timeline-content {
+        width: 100%;
+        margin: 0;
+    }
+
+    .timeline-dot { left: 16px; top: 10px; }
+
+    /* Layouts */
+    .two-columns       { grid-template-columns: 1fr; gap: 1.5rem; }
+    .card-grid         { grid-template-columns: 1fr; }
+    .symbols-grid      { grid-template-columns: repeat(2, 1fr); }
+    .curiosities-grid  { grid-template-columns: 1fr; }
+
+    /* Header */
+    .header-icon { font-size: 70px; }
+
+    /* Sections */
+    section { padding: 3rem 0; }
+    main    { padding: 0 1.2rem; }
+    h2      { font-size: 1.7rem; }
+    h3      { font-size: 1.25rem; }
+    p       { text-align: left; }
+
+    /* Components */
+    .faq-question { font-size: 0.92rem; padding: 1.2rem 1.5rem; }
+    .prayer-card  { padding: 2rem 1.5rem; }
+    blockquote    { padding: 1.5rem 1.5rem 1.5rem 2rem; }
+    .doc-item     { flex-direction: column; gap: 0.8rem; }
+    .stats-row    { gap: 1rem; }
+}
+
+/* ===========================
+   RESPONSIVO — 480px
+   =========================== */
+@media (max-width: 480px) {
+
+    /* Nav */
+    .btn-voltar-texto { display: none; }
+    .btn-voltar       { padding: 8px 12px; }
+    .nav-toggle       { font-size: 0.78rem; padding: 9px 18px; gap: 8px; }
+    .nav-toggle-text  { font-size: 0.78rem; }
+
+    /* Layout */
+    .symbols-grid { grid-template-columns: 1fr; }
+
+    /* Header */
+    header        { min-height: 90vh; }
+    .header-icon  { font-size: 60px; }
+    header h1     { font-size: 2rem; }
+
+    /* Components */
+    .hymn-container { padding: 1.5rem 1rem; }
+    .tapete-gallery { grid-template-columns: 1fr; }
+
+    /* Footer */
+    .footer-title { font-size: 1.5rem; }
+
+    /* Stats */
+    .stat-number       { font-size: 2rem; }
+    .curiosity-number  { font-size: 2rem; }
+
+    /* Back to top */
+    .back-to-top { bottom: 20px; right: 20px; width: 48px; height: 48px; }
+}

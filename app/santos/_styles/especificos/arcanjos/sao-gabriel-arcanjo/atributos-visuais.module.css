@@ -1,0 +1,228 @@
+.tabua {
+  --paper: #fbfaf5;
+  --ink: #1c2f4f;
+  --gold: #c9b876;
+  --gold-dark: #a89358;
+  --paper-old: #f5f2e8;
+  --border: #d8d0b8;
+
+  margin: 3rem 0;
+  background: var(--paper);
+  border: 1px solid var(--border);
+  border-top: 4px solid var(--ink);
+  border-radius: 2px;
+  padding: 2rem 2.25rem;
+  box-shadow: 0 4px 20px rgba(28, 47, 79, 0.08);
+}
+
+.tabuaHeader {
+  text-align: center;
+  margin-bottom: 2rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px dashed var(--border);
+}
+
+.tabuaLabel {
+  display: inline-block;
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: var(--gold-dark);
+  margin-bottom: 0.5rem;
+}
+
+.tabuaTitulo {
+  font-family: Georgia, serif;
+  font-size: 1.6rem;
+  color: var(--ink);
+  margin: 0 0 0.4rem;
+  font-weight: 400;
+  letter-spacing: 0.03em;
+}
+
+.tabuaSub {
+  font-size: 0.85rem;
+  color: #6a5a3a;
+  margin: 0;
+  font-style: italic;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 0.75rem;
+  margin-bottom: 2rem;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 1.1rem 0.6rem;
+  background: var(--paper);
+  border: 1px solid var(--border);
+  border-top: 2px solid var(--ink);
+  border-radius: 2px;
+  cursor: pointer;
+  transition: all 0.25s;
+  color: var(--ink);
+  font-family: inherit;
+}
+
+.card:hover {
+  background: var(--paper-old);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(28, 47, 79, 0.12);
+}
+
+.cardAtivo {
+  background: var(--ink);
+  color: var(--paper);
+  border-top-color: var(--gold);
+  border-color: var(--ink);
+  transform: translateY(-3px);
+  box-shadow: 0 6px 16px rgba(28, 47, 79, 0.2);
+}
+
+.cardAtivo .iconeWrap {
+  color: var(--gold);
+}
+
+.iconeWrap {
+  width: 48px;
+  height: 48px;
+  color: var(--ink);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.iconeWrap svg {
+  width: 100%;
+  height: 100%;
+}
+
+.cardNome {
+  font-size: 0.75rem;
+  line-height: 1.2;
+  text-align: center;
+  font-weight: 500;
+}
+
+.detalhe {
+  background: var(--paper-old);
+  border: 1px solid var(--border);
+  border-left: 4px solid var(--gold);
+  border-radius: 2px;
+  padding: 1.75rem 2rem;
+}
+
+.detalheHeader {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1.25rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.detalheIcone {
+  width: 56px;
+  height: 56px;
+  color: var(--ink);
+  flex-shrink: 0;
+}
+
+.detalheIcone svg {
+  width: 100%;
+  height: 100%;
+}
+
+.detalheNome {
+  font-family: Georgia, serif;
+  font-size: 1.35rem;
+  color: var(--ink);
+  margin: 0 0 0.2rem;
+  font-weight: 400;
+}
+
+.detalhePeriodo {
+  font-size: 0.8rem;
+  color: var(--gold-dark);
+  font-style: italic;
+}
+
+.badge {
+  margin-left: auto;
+  padding: 0.4rem 0.85rem;
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: white;
+  border-radius: 2px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  white-space: nowrap;
+}
+
+.detalheDl {
+  margin: 0;
+  display: grid;
+  grid-template-columns: 140px 1fr;
+  gap: 0.85rem 1.5rem;
+}
+
+.detalheDl dt {
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--gold-dark);
+  padding-top: 0.2rem;
+}
+
+.detalheDl dd {
+  margin: 0;
+  font-size: 0.95rem;
+  line-height: 1.65;
+  color: #2a2418;
+}
+
+.notaCritica {
+  padding: 0.75rem 1rem;
+  background: var(--paper);
+  border-left: 3px solid var(--gold-dark);
+  font-style: italic;
+  color: #4a3e28 !important;
+  border-radius: 1px;
+}
+
+@media (max-width: 900px) {
+  .grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .detalheDl {
+    grid-template-columns: 1fr;
+    gap: 0.35rem 0;
+  }
+  .detalheDl dd {
+    margin-bottom: 1rem;
+  }
+  .detalheHeader {
+    flex-wrap: wrap;
+  }
+  .badge {
+    margin-left: 0;
+    margin-top: 0.5rem;
+  }
+}
+
+@media (max-width: 500px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .tabua {
+    padding: 1.5rem 1rem;
+  }
+}

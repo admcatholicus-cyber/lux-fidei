@@ -1,0 +1,229 @@
+/* ============================================
+   GALERIA ICONOGRÁFICA — SÃO JUDAS TADEU
+   ============================================ */
+
+.galeria {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 0;
+}
+
+/* ---------- INTRODUÇÃO ---------- */
+
+.introducao {
+  max-width: 780px;
+  margin: 0 auto 48px;
+  font-family: Georgia, 'Times New Roman', 'Noto Serif', serif;
+  font-size: 1.08rem;
+  line-height: 1.85;
+  color: #3a3530;
+  text-align: center;
+}
+
+.introducao p {
+  margin: 0 0 16px;
+}
+
+.introducao p:last-child {
+  margin-bottom: 0;
+}
+
+/* ---------- NAVEGAÇÃO ---------- */
+
+.nav {
+  max-width: 780px;
+  margin: 0 auto 56px;
+  border: 1px solid #e2dcd0;
+  border-radius: 6px;
+  background: #faf8f4;
+  overflow: hidden;
+}
+
+.navToggle {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 16px 20px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  font-family: Georgia, 'Times New Roman', 'Noto Serif', serif;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #3a3530;
+  letter-spacing: 0.03em;
+  text-align: left;
+  transition: background 0.2s ease;
+}
+
+.navToggle:hover {
+  background: #f5f1e8;
+}
+
+.navToggleIcone {
+  color: #b08a3c;
+  font-size: 1.1rem;
+}
+
+.navSeta {
+  margin-left: auto;
+  font-size: 0.8rem;
+  color: #6f6758;
+  transition: transform 0.3s ease;
+}
+
+.navSetaAberta {
+  transform: rotate(180deg);
+}
+
+.navLista {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease;
+}
+
+.navListaAberta {
+  max-height: 600px;
+  border-top: 1px solid #e2dcd0;
+}
+
+.navItem {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  padding: 12px 24px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  font-family: Georgia, 'Times New Roman', 'Noto Serif', serif;
+  font-size: 0.9rem;
+  color: #3a3530;
+  text-align: left;
+  transition: background 0.15s ease, color 0.15s ease;
+}
+
+.navItem:hover {
+  background: #f5f1e8;
+  color: #b08a3c;
+}
+
+.navIcone {
+  font-size: 1rem;
+  width: 24px;
+  text-align: center;
+  flex-shrink: 0;
+}
+
+/* ---------- CONTEÚDO ---------- */
+
+.conteudo {
+  display: flex;
+  flex-direction: column;
+  gap: 64px;
+}
+
+/* ---------- SEÇÃO ---------- */
+
+.secao {
+  scroll-margin-top: 32px;
+}
+
+.secaoHeader {
+  text-align: center;
+  margin-bottom: 40px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid #e2dcd0;
+}
+
+.secaoIcone {
+  display: block;
+  font-size: 1.6rem;
+  margin-bottom: 8px;
+  color: #b08a3c;
+}
+
+.secaoSupra {
+  display: block;
+  font-family: Georgia, 'Times New Roman', 'Noto Serif', serif;
+  font-size: 0.78rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #b08a3c;
+  margin-bottom: 6px;
+}
+
+.secaoTitulo {
+  font-family: 'Libre Baskerville', Georgia, serif;
+  font-size: 1.55rem;
+  font-weight: 700;
+  color: #3a3530;
+  margin: 0 0 6px;
+  letter-spacing: 0.01em;
+}
+
+.secaoSubtitulo {
+  font-family: Georgia, 'Times New Roman', 'Noto Serif', serif;
+  font-size: 0.92rem;
+  font-style: italic;
+  color: #6f6758;
+  margin: 0;
+}
+
+.secaoCorpo {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+/* ---------- SUBSEÇÃO ---------- */
+
+.subsecao {
+  padding-top: 8px;
+}
+
+.subsecaoTitulo {
+  font-family: Georgia, 'Times New Roman', 'Noto Serif', serif;
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: #b08a3c;
+  margin: 0 0 20px;
+  padding-bottom: 10px;
+  border-bottom: 1px dotted #d4c9a8;
+  letter-spacing: 0.02em;
+}
+
+.subsecaoCorpo {
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
+}
+
+/* ---------- RESPONSIVO ---------- */
+
+@media (max-width: 768px) {
+  .galeria {
+    padding: 0;
+  }
+
+  .introducao {
+    font-size: 1rem;
+    padding: 0 4px;
+  }
+
+  .secaoTitulo {
+    font-size: 1.3rem;
+  }
+
+  .conteudo {
+    gap: 48px;
+  }
+
+  .secaoCorpo {
+    gap: 32px;
+  }
+}

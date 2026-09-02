@@ -1,0 +1,105 @@
+/* C:\Users\kitten\Documents\lux-fidei\app\santos\_styles\especificos\presbiteros\sao-joao-maria-vianney\ImagemDevocional.module.css */
+
+.figura {
+  margin: 3.2rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.figura.esquerda {
+  align-items: flex-start;
+}
+
+.figura.direita {
+  align-items: flex-end;
+}
+
+.moldura {
+  width: 100%;
+  max-width: 780px;
+  overflow: hidden;
+  border-radius: 2px;
+  box-shadow:
+    0 4px 24px rgba(0, 0, 0, 0.12),
+    0 1px 4px rgba(0, 0, 0, 0.08);
+  position: relative;
+}
+
+.moldura::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border: 1px solid rgba(139, 109, 71, 0.15);
+  border-radius: 2px;
+  pointer-events: none;
+}
+
+.normal .moldura {
+  max-width: 780px;
+}
+
+.larga .moldura {
+  max-width: 100%;
+}
+
+.estreita .moldura {
+  max-width: 520px;
+}
+
+.retrato .moldura {
+  max-width: 440px;
+}
+
+.imagem {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.6s cubic-bezier(0.25, 0.1, 0.25, 1);
+}
+
+.figura:hover .imagem {
+  transform: scale(1.015);
+}
+
+.legenda {
+  margin-top: 1rem;
+  max-width: 780px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  text-align: center;
+}
+
+.legendaTexto {
+  font-family: var(--font-literata, 'Literata', Georgia, serif);
+  font-size: 0.9rem;
+  line-height: 1.5;
+  color: var(--cor-texto-suave, #5a5347);
+  font-style: italic;
+}
+
+.legendaFonte {
+  font-family: var(--font-alegreya-sans, 'Alegreya Sans', sans-serif);
+  font-size: 0.75rem;
+  color: var(--cor-texto-terciario, #8a8279);
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+
+@media (max-width: 768px) {
+  .figura {
+    margin: 2.4rem 0;
+  }
+
+  .moldura {
+    border-radius: 0;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+  }
+
+  .estreita .moldura,
+  .retrato .moldura {
+    max-width: 100%;
+  }
+}

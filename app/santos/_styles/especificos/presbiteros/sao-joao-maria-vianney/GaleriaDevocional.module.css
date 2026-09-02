@@ -1,0 +1,45 @@
+/* C:\Users\kitten\Documents\lux-fidei\app\santos\_styles\especificos\presbiteros\sao-joao-maria-vianney\GaleriaDevocional.module.css */
+
+.galeria {
+  margin: 3.2rem 0;
+}
+
+.grade {
+  display: grid;
+  gap: 1.2rem;
+}
+
+.galeria[data-colunas="2"] .grade {
+  grid-template-columns: 1fr 1fr;
+}
+
+.galeria[data-colunas="3"] .grade {
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.legendaGaleria {
+  margin-top: 1.2rem;
+  text-align: center;
+  font-family: var(--font-literata, 'Literata', Georgia, serif);
+  font-size: 0.85rem;
+  color: var(--cor-texto-suave, #5a5347);
+  font-style: italic;
+  line-height: 1.5;
+}
+
+@media (max-width: 768px) {
+  .galeria[data-colunas="3"] .grade {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 520px) {
+  .galeria[data-colunas="2"] .grade,
+  .galeria[data-colunas="3"] .grade {
+    grid-template-columns: 1fr;
+  }
+
+  .galeria {
+    margin: 2.4rem 0;
+  }
+}

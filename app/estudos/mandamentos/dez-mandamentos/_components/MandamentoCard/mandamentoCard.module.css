@@ -1,0 +1,72 @@
+ .card {
+  background: var(--cor-fundo-card);
+  border: 1px solid var(--cor-borda);
+  border-radius: var(--borda-raio);
+  overflow: hidden;
+  box-shadow: var(--sombra-card);
+  transition: box-shadow var(--transicao);
+}
+
+.card:hover {
+  box-shadow: var(--sombra-hover);
+}
+
+.cabecalho {
+  display: flex;
+  align-items: center;
+  gap: var(--espaco-pequeno);
+  width: 100%;
+  padding: var(--espaco-pequeno) var(--espaco-interno);
+  background: none;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+  transition: background var(--transicao);
+}
+
+.cabecalhoAberto {
+  background: var(--cor-fundo-destaque);
+}
+
+.numero {
+  font-family: var(--fonte-titulo);
+  font-size: var(--tamanho-h2);
+  color: var(--cor-dourado);
+  min-width: 3rem;
+  text-align: center;
+}
+
+.textos {
+  flex: 1;
+}
+
+.titulo {
+  font-family: var(--fonte-titulo);
+  font-size: var(--tamanho-h4);
+  color: var(--cor-texto-principal);
+  margin: 0 0 var(--espaco-minimo) 0;
+}
+
+.catequetico {
+  font-family: var(--fonte-texto);
+  font-size: var(--tamanho-pequeno);
+  color: var(--cor-texto-secundario);
+  margin: 0;
+}
+
+.seta {
+  font-size: var(--tamanho-pequeno);
+  color: var(--cor-texto-secundario);
+  transition: transform var(--transicao);
+}
+
+.setaAberta {
+  transform: rotate(180deg);
+}
+
+.conteudo {
+  padding: var(--espaco-interno);
+  border-top: 1px solid var(--cor-borda-leve);
+  background: var(--cor-fundo-card);
+}
+

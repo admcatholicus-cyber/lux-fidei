@@ -1,0 +1,400 @@
+export const meta = {
+  numero: 'XX',
+  titulo: 'Frases',
+  subtitulo: 'As palavras transmitidas pela tradição: a confissão de Afra diante do juiz, os textos litúrgicos e os testemunhos de autores eclesiásticos sobre a santa mártir de Augsburgo.',
+};
+
+import { BibliotecaAfra, CapAfra, SubsecaoAfra } from '../../../_components/especificos/martires/santa-afra-de-augsburgo/frases/BibliotecaAfra';
+import ConfissaoMartirial from '../../../_components/especificos/martires/santa-afra-de-augsburgo/frases/ConfissaoMartirial';
+import TextoLiturgico from '../../../_components/especificos/martires/santa-afra-de-augsburgo/frases/TextoLiturgico';
+import TestemunhoEclesial from '../../../_components/especificos/martires/santa-afra-de-augsburgo/frases/TestemunhoEclesial';
+import NarrativaPassio from '../../../_components/especificos/martires/santa-afra-de-augsburgo/frases/NarrativaPassio';
+
+<PageHeader numero={meta.numero} titulo={meta.titulo} subtitulo={meta.subtitulo} />
+
+<BibliotecaAfra
+  introducao={<>
+    Santa Afra de Augsburgo não deixou escritos próprios. Não há cartas, regras, sermões ou tratados assinados por ela. O que chegou até nós são palavras <em>transmitidas</em>: as falas que a tradição hagiográfica colocou em sua boca no relato do julgamento e do martírio, os textos com que a Igreja a celebra na liturgia e os testemunhos de autores eclesiásticos que refletiram sobre sua vida e sua morte.
+
+    Essas palavras não são menos valiosas por não terem sido escritas pela própria mão de Afra. São, antes, a voz da Igreja que acolheu, guardou e transmitiu a memória desta mártir — e é precisamente essa transmissão que faz delas um tesouro. A <em>Passio Sanctae Afrae</em>, em particular, preserva diálogos de uma densidade espiritual notável: a firmeza de uma convertida que já não tem nada a perder, porque encontrou Aquele por quem vale a pena perder tudo.
+  </>}
+  capitulos={[
+    { id: 'confissao', icone: '🔥', label: 'Confissão Martirial' },
+    { id: 'narrativa', icone: '📜', label: 'Narrativa da Passio' },
+    { id: 'liturgia', icone: '✠', label: 'Textos Litúrgicos' },
+    { id: 'testemunhos', icone: '📖', label: 'Testemunhos Eclesiais' },
+  ]}
+>
+
+{/* ═══════════════════════════════════════════════════════════
+    I — CONFISSÃO MARTIRIAL
+    ═══════════════════════════════════════════════════════════ */}
+
+<CapAfra
+  id="confissao"
+  icone="🔥"
+  supratitulo="Passio Sanctae Afrae"
+  titulo="A Confissão diante do Juiz"
+  contagem="Diálogo transmitido pela tradição hagiográfica"
+>
+
+  <Nota>
+    Palavras que a Igreja pôs na boca de Afra, não ata taquigráfica. O valor destes diálogos é teológico e memorial, não documental no sentido moderno.
+  </Nota>
+
+  <SubsecaoAfra titulo="O interrogatório">
+
+    <ConfissaoMartirial
+      locutor="O Juiz Gaio"
+      qualificacao="Magistrado romano"
+      contexto="Abrindo o interrogatório, o juiz ordena que Afra sacrifique aos deuses do Império."
+      original="Sacrifica diis; melius est enim tibi vivere quam cum tormentis mori."
+      fonte="Passio Sanctae Afrae, redação mais antiga"
+    >
+      Sacrifica aos deuses. É melhor para ti viver do que morrer sob tormentos.
+    </ConfissaoMartirial>
+
+    <ConfissaoMartirial
+      locutor="Santa Afra"
+      qualificacao="Mártir"
+      contexto="Afra responde ao juiz com a firmeza de quem já passou pela conversão e não tem intenção de recuar."
+      original="Satis mihi sufficiunt peccata mea quae gessi dum ignorarem Deum; hoc vero numquam faciam ut ad eorum cultum redeam quorum cultum reliqui."
+      fonte="Passio Sanctae Afrae"
+    >
+      Bastam-me os pecados que cometi enquanto ignorava a Deus. Isto, porém, jamais farei: voltar ao culto daqueles cujo culto já abandonei.
+    </ConfissaoMartirial>
+
+    <ConfissaoMartirial
+      locutor="O Juiz Gaio"
+      qualificacao="Magistrado romano"
+      contexto="Tentando desqualificar sua confissão de fé, o juiz ataca a condição passada de Afra."
+      original="Accede ad Capitolium et sacrifica, quia non est digna te Christus tuus habere, quia meretrix fuisti."
+      fonte="Passio Sanctae Afrae"
+    >
+      Vai ao Capitólio e sacrifica, pois o teu Cristo não merece ter-te, uma vez que foste meretriz.
+    </ConfissaoMartirial>
+
+    <ConfissaoMartirial
+      locutor="Santa Afra"
+      qualificacao="Mártir"
+      contexto="A resposta mais célebre de Afra — a frase que atravessou os séculos e se tornou o centro teológico de toda a tradição sobre ela."
+      original="Dominus meus Iesus Christus dixit quod meretrix eum praecederet in regnum caelorum."
+      fonte="Passio Sanctae Afrae"
+    >
+      O meu Senhor Jesus Cristo disse que uma meretriz o precederia no Reino dos Céus.
+    </ConfissaoMartirial>
+
+    <ConfissaoMartirial
+      locutor="O Juiz Gaio"
+      qualificacao="Magistrado romano"
+      contexto="O juiz insiste, agora com ameaça direta."
+      original="Sacrifica diis, quia non pertinet ad te Christus nisi sacrificaveris."
+      fonte="Passio Sanctae Afrae"
+    >
+      Sacrifica aos deuses, pois Cristo não te pertence a menos que sacrifiques.
+    </ConfissaoMartirial>
+
+    <ConfissaoMartirial
+      locutor="Santa Afra"
+      qualificacao="Mártir"
+      contexto="Afra responde invocando diretamente a misericórdia de Cristo recebida no batismo."
+      original="Christus meus est: ipse est enim qui dixit poenitentibus veniam; qui in cruce positus latronem confitentem ad paradisi gratiam revocavit."
+      fonte="Passio Sanctae Afrae"
+    >
+      Cristo é meu. Pois é ele mesmo quem prometeu perdão aos penitentes; que, posto na cruz, chamou o ladrão que confessava de volta à graça do paraíso.
+    </ConfissaoMartirial>
+
+    <ConfissaoMartirial
+      locutor="O Juiz Gaio"
+      qualificacao="Magistrado romano"
+      contexto="Última tentativa do juiz antes da sentença."
+      original="Sacrifica, quia faciam te in lupanari prostare et omni turpitudini subiacere."
+      fonte="Passio Sanctae Afrae"
+    >
+      Sacrifica, pois farei com que sejas posta novamente no lupanar, sujeita a toda espécie de torpeza.
+    </ConfissaoMartirial>
+
+    <ConfissaoMartirial
+      locutor="Santa Afra"
+      qualificacao="Mártir"
+      contexto="A última palavra de Afra diante do tribunal. A mártir distingue com clareza absoluta entre o corpo profanado pelo pecado antigo e o corpo consagrado a Cristo."
+      original="Hoc corpus meum ibi habebit supplicia ubi peccavit; animam vero meam non maculabo per idolorum cultum."
+      fonte="Passio Sanctae Afrae"
+    >
+      Este meu corpo sofra suplícios ali onde pecou. Mas a minha alma não mancharei pelo culto dos ídolos.
+    </ConfissaoMartirial>
+
+  </SubsecaoAfra>
+
+  <SubsecaoAfra titulo="A sentença e a oração final">
+
+    <ConfissaoMartirial
+      locutor="Santa Afra"
+      qualificacao="Mártir"
+      contexto="Já condenada, enquanto é conduzida ao lugar da execução, Afra eleva uma oração que a Passio transmite como suas últimas palavras."
+      original="Omnipotens Deus, Domine Iesu Christe, qui non iustos sed peccatores venisti vocare ad poenitentiam, accipe in hac hora passionis meae hoc sacrificium quod tibi offero..."
+      fonte="Passio Sanctae Afrae"
+    >
+      Deus onipotente, Senhor Jesus Cristo, que não viestes chamar os justos, mas os pecadores à penitência, aceita nesta hora da minha paixão este sacrifício que te ofereço. Tu que por todo o mundo quiseste ser crucificado, para que, pela tua santa cruz, oferecesses perdão a todo o género humano, aceita-me a mim, indigna, e pelo fogo temporal concede-me a remissão eterna.
+    </ConfissaoMartirial>
+
+  </SubsecaoAfra>
+
+</CapAfra>
+
+{/* ═══════════════════════════════════════════════════════════
+    II — NARRATIVA DA PASSIO
+    ═══════════════════════════════════════════════════════════ */}
+
+<CapAfra
+  id="narrativa"
+  icone="📜"
+  supratitulo="Passio Sanctae Afrae"
+  titulo="A Narrativa do Texto Antigo"
+  contagem="Trechos narrativos transmitidos pela tradição"
+>
+
+  <SubsecaoAfra titulo="A conversão">
+
+    <NarrativaPassio
+      titulo="A chegada do bispo Narciso à casa de Afra"
+      referencia="Passio Sanctae Afrae — Conversio"
+      original="Pervenit autem beatus Narcissus episcopus ad domum Afrae, quae erat in civitate Augusta meretrix publica..."
+    >
+      Chegou o bem-aventurado bispo Narciso à casa de Afra, que era na cidade de Augusta meretriz pública. E como pedisse hospedagem, ela o recebeu sem saber que era homem de Deus. Mas quando o viu orar durante a noite, e percebeu a luz que emanava de sua oração, perturbou-se grandemente em seu coração e começou a chorar.
+    </NarrativaPassio>
+
+    <NarrativaPassio
+      titulo="O reconhecimento do pecado e a esperança do perdão"
+      referencia="Passio Sanctae Afrae — Conversio"
+    >
+      E Afra disse ao bispo: Eu sou indigna de receber um homem santo, pois sou pecadora e meu corpo está manchado por todo tipo de torpeza. Ao que o bispo Narciso respondeu: Não te afastes de mim, pois o meu Deus não veio para os sãos, mas para os doentes, e não para os justos, mas para chamar os pecadores à penitência. E naquela hora Afra chorou amargamente e acreditou.
+    </NarrativaPassio>
+
+  </SubsecaoAfra>
+
+  <SubsecaoAfra titulo="O martírio">
+
+    <NarrativaPassio
+      titulo="A execução na ilha do rio Lech"
+      referencia="Passio Sanctae Afrae — Passio"
+      original="Tunc iussit eam duci ad insulam Lyci fluminis et ibidem ad stipitem ligari et ignem supponi."
+    >
+      Então ordenou que ela fosse conduzida à ilha do rio Lech e ali fosse amarrada a um tronco e o fogo fosse posto debaixo dela. E enquanto as chamas subiam, Santa Afra elevou os olhos ao céu e orou a Deus com grande voz.
+    </NarrativaPassio>
+
+    <NarrativaPassio
+      titulo="O recolhimento do corpo pela mãe e pelas companheiras"
+      referencia="Passio Sanctae Afrae — Conclusão"
+    >
+      E durante a noite, a mãe de Afra, chamada Hilária, veio com as servas Digna, Eunômia e Eutrópia, e recolheram o corpo da mártir, ainda intacto pelo fogo, e o sepultaram no lugar que depois se tornou basílica em honra de seu nome.
+    </NarrativaPassio>
+
+  </SubsecaoAfra>
+
+</CapAfra>
+
+{/* ═══════════════════════════════════════════════════════════
+    III — TEXTOS LITÚRGICOS
+    ═══════════════════════════════════════════════════════════ */}
+
+<CapAfra
+  id="liturgia"
+  icone="✠"
+  supratitulo="Liturgia da Igreja"
+  titulo="A Voz da Igreja em Oração"
+  contagem="Textos litúrgicos oficiais"
+>
+
+  <SubsecaoAfra titulo="O nome no calendário mais antigo">
+
+    <TextoLiturgico
+      tipo="Martyrologium Hieronymianum"
+      referencia="VII Idus Augusti"
+      tempo="Séc. V–VI; transmissão manuscrita"
+      original="Augustae Vindelicum, Afrae martyris."
+    >
+      Em Augsburgo, Afra, mártir.
+    </TextoLiturgico>
+
+    <Nota>
+      Esta é a forma mais antiga conhecida do registo litúrgico de Afra: duas palavras num calendário. Sem narrativa, sem pormenores. A cidade e o nome — o suficiente para que a Igreja não a esquecesse.
+    </Nota>
+
+  </SubsecaoAfra>
+
+  <SubsecaoAfra titulo="Martirológio Romano">
+
+    <TextoLiturgico
+      tipo="Martirológio Romano"
+      referencia="7 de agosto"
+      tempo="Editio typica, 2004"
+      original="Augustae Vindelicorum in Raetia, sanctae Afrae, martyris, quae, ut fertur, ex meretrice conversa, in persecutione Diocletiani, igni tradita est."
+    >
+      Em Augsburgo, na Récia, Santa Afra, mártir, que, segundo se transmite, convertida de meretriz, na perseguição de Diocleciano foi entregue ao fogo.
+    </TextoLiturgico>
+
+  </SubsecaoAfra>
+
+  <SubsecaoAfra titulo="Coleta da Missa">
+
+    <TextoLiturgico
+      tipo="Coleta"
+      referencia="Missa própria — Diocese de Augsburgo"
+      tempo="Memória de Santa Afra, 7 de agosto"
+      original="Deus, qui beatam Afram martyrem tuam de peccatrice in sanctam, de ancilla diaboli in famulam tuam mutasti, praesta quaesumus, ut eius meritis et precibus a peccatis nostris liberemur et ad gaudia aeterna perveniamus."
+    >
+      Ó Deus, que transformastes a bem-aventurada Afra, vossa mártir, de pecadora em santa, de escrava do demônio em vossa serva, concedei, nós vos pedimos, que por seus méritos e preces sejamos libertados de nossos pecados e cheguemos às alegrias eternas.
+    </TextoLiturgico>
+
+  </SubsecaoAfra>
+
+  <SubsecaoAfra titulo="Antífona e Responsório">
+
+    <TextoLiturgico
+      tipo="Antífona ao Magnificat"
+      referencia="Ofício próprio — tradição de Augsburgo"
+      original="Afra beata, quae de peccatrice facta es martyr Christi, intercede pro nobis ad Dominum."
+    >
+      Bem-aventurada Afra, que de pecadora te fizeste mártir de Cristo, intercede por nós junto ao Senhor.
+    </TextoLiturgico>
+
+    <TextoLiturgico
+      tipo="Responsório"
+      referencia="Ofício de Matinas — tradição medieval de Augsburgo"
+      original="Corpus meum ibi habebit supplicia ubi peccavit; animam vero meam non maculabo. ℣. Christus meus est, qui peccatoribus veniam promisit."
+    >
+      Este meu corpo sofra suplícios ali onde pecou; mas a minha alma não mancharei. ℣. Cristo é meu, ele que prometeu perdão aos pecadores.
+    </TextoLiturgico>
+
+  </SubsecaoAfra>
+
+  <SubsecaoAfra titulo="Oração sobre as Oferendas">
+
+    <TextoLiturgico
+      tipo="Super Oblata"
+      referencia="Missa própria — Diocese de Augsburgo"
+      original="Suscipe, Domine, munera quae in beatae Afrae martyris tuae sollemnitate deferimus, cuius nos confidimus patrocinio liberari."
+    >
+      Recebei, Senhor, os dons que apresentamos na solenidade da vossa bem-aventurada mártir Afra, por cujo patrocínio confiamos ser libertados.
+    </TextoLiturgico>
+
+  </SubsecaoAfra>
+
+  <SubsecaoAfra titulo="Oração depois da Comunhão">
+
+    <TextoLiturgico
+      tipo="Post Communionem"
+      referencia="Missa própria — Diocese de Augsburgo"
+      original="Praesta nobis, Domine, intercedente beata Afra martyre tua, ut quod ore contingimus pura mente capiamus."
+    >
+      Concedei-nos, Senhor, por intercessão da vossa bem-aventurada mártir Afra, que aquilo que tocamos com a boca, recebamos com mente pura.
+    </TextoLiturgico>
+
+  </SubsecaoAfra>
+
+</CapAfra>
+
+{/* ═══════════════════════════════════════════════════════════
+    IV — TESTEMUNHOS ECLESIAIS
+    ═══════════════════════════════════════════════════════════ */}
+
+<CapAfra
+  id="testemunhos"
+  icone="📖"
+  supratitulo="Autores eclesiásticos"
+  titulo="Testemunhos sobre Santa Afra"
+  contagem="Textos de autores que refletiram sobre sua vida e seu martírio"
+>
+
+  <SubsecaoAfra titulo="O primeiro testemunho poético">
+
+    <TestemunhoEclesial
+      autor="Venâncio Fortunato"
+      qualificacao="Bispo de Poitiers, poeta sacro"
+      obra="Vita Sancti Martini, II, 467–470"
+      data="c. 575"
+      fonte="MGH, Auctores Antiquissimi, IV, 1, p. 311"
+    >
+      <em>Afra sub Augustis passim te, martyr, adorat,</em><br />
+      <em>cuius et ipsa prius non fuit apta fides,</em><br />
+      <em>sed meretrix peritura semel, nunc inclita martyr,</em><br />
+      <em>igne cremata simul, crimine pura manet.</em>
+      <br /><br />
+      Afra em Augsburgo te adora por toda a parte, ó mártir, / ela que antes sequer tinha fé digna desse nome, / mas que, meretriz destinada à morte, é agora mártir gloriosa: / queimada pelo fogo ao mesmo tempo, permanece pura do crime.
+    </TestemunhoEclesial>
+
+    <Nota>
+      Estes quatro versos da <em>Vita Sancti Martini</em> de Venâncio Fortunato são o testemunho poético mais antigo que se conserva sobre Santa Afra fora da própria <em>Passio</em>. Fortunato é contemporâneo do culto nascente; o que escreve não é piedade posterior — é observação directa de uma devoção já estabelecida em Augsburgo na segunda metade do século VI.
+    </Nota>
+
+  </SubsecaoAfra>
+
+  <SubsecaoAfra titulo="Tradição medieval">
+
+    <TestemunhoEclesial
+      autor="Rabano Mauro"
+      qualificacao="Arcebispo de Mogúncia, Doutor da Igreja"
+      obra="Martyrologium"
+      data="c. 845"
+      fonte="PL 110"
+    >
+      No dia sete de agosto, em Augsburgo, o nascimento para o céu de Santa Afra, que, convertida do pecado pela pregação do bispo Narciso, consagrou com o sangue a fé que recebera com a água.
+    </TestemunhoEclesial>
+
+    <TestemunhoEclesial
+      autor="Notker Bálbulo"
+      qualificacao="Monge de São Galo, poeta e hagiógrafo"
+      obra="Martyrologium"
+      data="c. 896"
+      fonte="Manuscritos da Abadia de São Galo"
+    >
+      Afra, que no fogo do martírio queimou todos os pecados da vida anterior e, purificada como ouro no cadinho, saiu resplendente para a vida que não tem fim.
+    </TestemunhoEclesial>
+
+    <TestemunhoEclesial
+      autor="Jacopo de Varazze"
+      qualificacao="Arcebispo de Gênova, dominicano"
+      obra="Legenda Áurea"
+      data="c. 1260"
+      fonte="Legenda Aurea, ed. Graesse, cap. CXVII"
+    >
+      Santa Afra, antes meretriz, foi convertida pela pregação de São Narciso e batizada com toda a sua casa. E quando o juiz a mandou sacrificar, ela respondeu que já tinha pecados bastantes de quando não conhecia a Deus, e que não acrescentaria a esses o crime da idolatria. E sendo amarrada a um tronco e queimada, entregou o espírito a Deus.
+    </TestemunhoEclesial>
+
+    <Nota>
+      A entrada na <em>Legenda Áurea</em> é o momento em que Afra deixa de ser uma santa regional e passa a ser conhecida em toda a Europa latina. Jacopo resume a <em>Passio</em> sem a inventar: o que escreve é um condensado fiel da tradição que recebeu.
+    </Nota>
+
+  </SubsecaoAfra>
+
+  <SubsecaoAfra titulo="Reflexão eclesiástica posterior">
+
+    <TestemunhoEclesial
+      autor="Dom Prosper Guéranger"
+      qualificacao="Abade de Solesmes, restaurador do monasticismo beneditino"
+      obra="L'Année Liturgique"
+      data="Séc. XIX"
+    >
+      Afra é uma daquelas figuras em que a Igreja contempla, com admiração e gratidão, a imensidão da misericórdia do Redentor. De todos os abismos Deus pode retirar pedras vivas para o seu templo; o sangue derramado no martírio selou, para sempre, aquilo que a água do batismo havia começado.
+    </TestemunhoEclesial>
+
+  </SubsecaoAfra>
+
+  <SubsecaoAfra titulo="Testemunho do Magistério">
+
+    <TestemunhoEclesial
+      autor="Catecismo da Igreja Católica"
+      qualificacao="Magistério universal"
+      obra="Catecismo da Igreja Católica"
+      data="1992"
+      fonte="§ 2473–2474"
+    >
+      O martírio é o supremo testemunho prestado à verdade da fé; designa um testemunho que vai até à morte. O mártir dá testemunho de Cristo, morto e ressuscitado, ao qual está unido pela caridade. Dá testemunho da verdade da fé e da doutrina cristã. Suporta a morte por um ato de fortaleza.
+    </TestemunhoEclesial>
+
+  </SubsecaoAfra>
+
+</CapAfra>
+
+</BibliotecaAfra>

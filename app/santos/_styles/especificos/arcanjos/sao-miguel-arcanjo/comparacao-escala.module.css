@@ -1,0 +1,355 @@
+/* ============================================================
+   COMPARAÇÃO DE ESCALA — VITRAL MIGUELINO
+   Fundo vermelho borgonha com padrão heráldico + imagens
+   com enquadramento profissional (object-fit: cover)
+   ============================================================ */
+
+.container {
+  position: relative;
+  max-width: 1200px;
+  margin: 100px auto;
+  padding: 70px 50px;
+  color: #f4e7c8;
+  border: 2px solid #c9a961;
+  outline: 1px solid #8b6f2f;
+  outline-offset: -10px;
+  box-shadow:
+    0 30px 80px rgba(0, 0, 0, 0.5),
+    inset 0 0 120px rgba(0, 0, 0, 0.4);
+
+  background:
+    radial-gradient(ellipse at top, rgba(180, 60, 50, 0.2), transparent 60%),
+    radial-gradient(ellipse at bottom, rgba(0, 0, 0, 0.4), transparent 70%),
+    linear-gradient(135deg, #5a1a1a 0%, #6b1f1e 40%, #4a1414 100%);
+
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 1.2s ease, transform 1.2s ease;
+  overflow: hidden;
+}
+
+.container.visivel {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Textura de pergaminho */
+.container::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' /%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.4'/%3E%3C/svg%3E");
+  mix-blend-mode: overlay;
+  opacity: 0.35;
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Padrão heráldico — balanças, espadas, cruzes celtas */
+.container::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140' viewBox='0 0 140 140'%3E%3Cg fill='none' stroke='%23c9a961' stroke-width='0.6' opacity='0.35'%3E%3Cline x1='70' y1='35' x2='70' y2='75'/%3E%3Cline x1='55' y1='45' x2='85' y2='45'/%3E%3Cline x1='55' y1='45' x2='55' y2='55'/%3E%3Cline x1='85' y1='45' x2='85' y2='55'/%3E%3Cpath d='M 48 55 Q 55 62 62 55'/%3E%3Cpath d='M 78 55 Q 85 62 92 55'/%3E%3Cline x1='48' y1='55' x2='62' y2='55'/%3E%3Cline x1='78' y1='55' x2='92' y2='55'/%3E%3Ccircle cx='70' cy='35' r='2' fill='%23c9a961'/%3E%3Cg transform='translate(15 15) rotate(45)'%3E%3Cline x1='0' y1='-8' x2='0' y2='8' stroke-width='0.8'/%3E%3Cline x1='-3' y1='-6' x2='3' y2='-6'/%3E%3C/g%3E%3Cg transform='translate(125 15) rotate(-45)'%3E%3Cline x1='0' y1='-8' x2='0' y2='8' stroke-width='0.8'/%3E%3Cline x1='-3' y1='-6' x2='3' y2='-6'/%3E%3C/g%3E%3Cg transform='translate(15 125) rotate(-45)'%3E%3Cline x1='0' y1='-8' x2='0' y2='8' stroke-width='0.8'/%3E%3Cline x1='-3' y1='-6' x2='3' y2='-6'/%3E%3C/g%3E%3Cg transform='translate(125 125) rotate(45)'%3E%3Cline x1='0' y1='-8' x2='0' y2='8' stroke-width='0.8'/%3E%3Cline x1='-3' y1='-6' x2='3' y2='-6'/%3E%3C/g%3E%3Cg transform='translate(70 100)'%3E%3Cline x1='0' y1='-6' x2='0' y2='6'/%3E%3Cline x1='-6' y1='0' x2='6' y2='0'/%3E%3Ccircle cx='0' cy='0' r='3.5'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  background-repeat: repeat;
+  opacity: 0.55;
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Header */
+.header {
+  position: relative;
+  z-index: 3;
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.suprat {
+  display: inline-block;
+  font-size: 0.7rem;
+  letter-spacing: 0.4em;
+  text-transform: uppercase;
+  color: #d4b872;
+  margin-bottom: 20px;
+  font-weight: 600;
+  padding: 6px 20px;
+  border: 1px solid rgba(212, 184, 114, 0.4);
+}
+
+.titulo {
+  font-family: Georgia, 'Libre Baskerville', serif;
+  font-size: clamp(2rem, 4vw, 2.8rem);
+  font-weight: 400;
+  margin: 0 0 14px;
+  color: #f4e7c8;
+  letter-spacing: 0.02em;
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.6);
+}
+
+.subtitulo {
+  font-family: Georgia, serif;
+  font-style: italic;
+  font-size: 1rem;
+  color: #e8d4a0;
+  max-width: 700px;
+  margin: 0 auto;
+  line-height: 1.7;
+}
+
+/* Comparação */
+.comparacao {
+  position: relative;
+  z-index: 3;
+  display: grid;
+  grid-template-columns: 80px 1fr;
+  gap: 20px;
+  min-height: 520px;
+  margin-bottom: 40px;
+}
+
+/* Escala vertical à esquerda */
+.escala {
+  position: relative;
+  height: 520px;
+  border-right: 1px solid rgba(212, 184, 114, 0.4);
+  padding-right: 12px;
+}
+
+.escalaMarcador {
+  position: absolute;
+  right: 12px;
+  transform: translateY(50%);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.escalaMarcador::after {
+  content: '';
+  position: absolute;
+  right: -12px;
+  top: 50%;
+  width: 8px;
+  height: 1px;
+  background: rgba(212, 184, 114, 0.6);
+  transform: translateY(-50%);
+}
+
+.escalaMarcador span {
+  font-family: Georgia, serif;
+  font-size: 0.78rem;
+  color: #e8d4a0;
+  letter-spacing: 0.05em;
+  white-space: nowrap;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+/* Colunas */
+.colunas {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  align-items: end;
+  height: 520px;
+}
+
+.coluna {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  justify-content: flex-end;
+}
+
+/* SILHUETA — o container da imagem */
+.silhueta {
+  position: relative;
+  width: 100%;
+  border: 2px solid #c9a961;
+  border-bottom: none;
+  transition: height 1.5s cubic-bezier(0.16, 1, 0.3, 1);
+  min-height: 60px;
+  overflow: hidden;                            /* ← IMPORTANTE: recorta a imagem no container */
+  box-shadow:
+    0 8px 24px rgba(0, 0, 0, 0.5),
+    inset 0 0 40px rgba(0, 0, 0, 0.3);
+}
+
+/* IMAGEM real dentro da silhueta — permite crop verdadeiro */
+.silhuetaImg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;                           /* ← Preenche mantendo proporção */
+  object-position: center center;              /* ← Sobrescrito no TSX por foco individual */
+  display: block;
+}
+
+/* Detalhe heráldico nos cantos superiores das silhuetas */
+.silhueta::before,
+.silhueta::after {
+  content: '';
+  position: absolute;
+  top: -1px;
+  width: 12px;
+  height: 12px;
+  border: 2px solid #c9a961;
+  z-index: 3;
+}
+
+.silhueta::before {
+  left: -1px;
+  border-right: none;
+  border-bottom: none;
+}
+
+.silhueta::after {
+  right: -1px;
+  border-left: none;
+  border-bottom: none;
+}
+
+.silhuetaOverlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(90, 26, 26, 0.15) 0%,
+    transparent 40%,
+    rgba(0, 0, 0, 0.5) 100%
+  );
+  z-index: 2;
+  pointer-events: none;
+}
+
+.silhuetaAltura {
+  position: absolute;
+  top: 14px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 5px 12px;
+  background: rgba(74, 20, 20, 0.9);
+  border: 1px solid #c9a961;
+  color: #f4d98a;
+  font-family: Georgia, serif;
+  font-size: 0.85rem;
+  font-weight: 600;
+  z-index: 4;
+  white-space: nowrap;
+  backdrop-filter: blur(4px);
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+  letter-spacing: 0.03em;
+}
+
+/* LABEL DA COLUNA */
+.colunaLabel {
+  padding: 16px 8px 0;
+  text-align: center;
+  border-top: 2px solid #c9a961;
+  width: 100%;
+  position: relative;
+}
+
+.colunaLabel::before {
+  content: '✦';
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #d4b872;
+  font-size: 0.9rem;
+  background: #5a1a1a;
+  padding: 0 6px;
+}
+
+.colunaNome {
+  font-family: Georgia, 'Libre Baskerville', serif;
+  font-size: 0.95rem;
+  color: #f4e7c8;
+  margin-bottom: 4px;
+  line-height: 1.2;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.colunaPais {
+  font-size: 0.65rem;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: #d4b872;
+  margin-bottom: 6px;
+  font-weight: 600;
+}
+
+.colunaDesc {
+  font-family: Georgia, serif;
+  font-style: italic;
+  font-size: 0.78rem;
+  color: #e8d4a0;
+  line-height: 1.5;
+  opacity: 0.9;
+}
+
+/* Legenda */
+.legenda {
+  position: relative;
+  z-index: 3;
+  padding: 22px 26px;
+  background: rgba(0, 0, 0, 0.35);
+  border: 1px solid rgba(212, 184, 114, 0.4);
+  margin-top: 50px;
+}
+
+.legenda p {
+  margin: 0;
+  font-family: Georgia, serif;
+  font-size: 0.92rem;
+  line-height: 1.75;
+  color: #ede1c3;
+  font-style: italic;
+}
+
+.legenda strong {
+  color: #f4d98a;
+  font-style: normal;
+  font-weight: 600;
+}
+
+/* Responsivo */
+@media (max-width: 900px) {
+  .container {
+    padding: 50px 25px;
+    margin: 60px 10px;
+    outline-offset: -6px;
+  }
+
+  .comparacao {
+    grid-template-columns: 55px 1fr;
+    min-height: 420px;
+  }
+
+  .escala,
+  .colunas {
+    height: 420px;
+  }
+
+  .colunas {
+    gap: 10px;
+  }
+
+  .colunaNome {
+    font-size: 0.8rem;
+  }
+
+  .colunaPais,
+  .colunaDesc {
+    font-size: 0.65rem;
+  }
+
+  .silhuetaAltura {
+    font-size: 0.75rem;
+    padding: 3px 8px;
+    top: 8px;
+  }
+}

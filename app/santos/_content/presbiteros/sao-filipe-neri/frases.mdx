@@ -1,0 +1,135 @@
+export const meta = {
+  numero: 'XVIII',
+  titulo: 'A Voz Viva',
+  subtitulo: 'Diálogos, arroubos místicos e o humor cortante do Apóstolo de Roma.',
+};
+
+<PageHeader numero={meta.numero} titulo={meta.titulo} subtitulo={meta.subtitulo} />
+
+<Antologia
+  introducao={
+    <>
+      <p>As sentenças curtas e os conselhos diários de São Filipe Néri estão catalogados em nossa <strong>Biblioteca</strong>. Aqui, reunimos algo diferente: a voz viva do santo em ação. São os diálogos registrados por seus primeiros biógrafos, suas orações espontâneas ouvidas por testemunhas durante seus êxtases, e o humor desconcertante com que curava a vaidade de cardeais, nobres e discípulos.</p>
+      <p>Nestas palavras, vemos o método nereano na prática: a caridade que desarma, a ironia que humilha o orgulho sem destruir a pessoa, e o coração que, literalmente dilatado pelo fogo de Pentecostes, não conseguia se conter diante do altar.</p>
+    </>
+  }
+  capitulos={[
+    { id: 'oracao', label: 'I · Orações e Arroubos' },
+    { id: 'pedagogia', label: 'II · O Bisturi do Humor' },
+    { id: 'amizade', label: 'III · Papas e Discípulos' },
+    { id: 'ultimos-dias', label: 'IV · O Viático e o Fim' },
+  ]}
+>
+
+  <Capitulo id="oracao" numero="I" titulo="Orações e Arroubos" contagem="5 registros" aperto>
+    <Subtema titulo="A desconfiança de si mesmo" aberto primeiro>
+      <Frase numero={1} fonte="Pietro Giacomo Bacci, Vita di S. Filippo Neri (1622)">
+        Senhor, não te fies em Filipe! Senhor, segurai-me a mão e guardai-me a cada instante. Se me deixardes solto, hoje mesmo eu Vos traio e me torno um muçulmano!
+      </Frase>
+      <Frase numero={2} fonte="Testemunho do processo de canonização">
+        Meu Jesus, eu já Vos disse: não confieis em mim. Eu só sei fazer o mal. Não espereis de mim senão pecados e quedas.
+      </Frase>
+    </Subtema>
+
+    <Subtema titulo="O fogo do coração dilatado">
+      <Frase numero={3} original="Vulnerasti cor meum, vulnerasti cor meum..." fonte="Suspiros frequentemente ouvidos na Chiesa Nuova">
+        Feristes o meu coração, Senhor! Feristes o meu coração! Amor, eu não aguento mais, eu não posso mais! Ó meu Deus, deixai-me, recuai um pouco, porque eu morro de tanto amor!
+      </Frase>
+      <Frase numero={4} fonte="Gallonio, Vita di San Filippo (1600)">
+        Senhor, por que me dais tanta alegria, se me dais um corpo tão fraco para suportá-la? Dilatai a minha capacidade, ou detende a torrente das Vossas consolações.
+      </Frase>
+      <Frase numero={5} original="O dulcissime Jesu..." fonte="Encontrado escrito em um pequeno papel em sua cela">
+        Ó dulcíssimo Jesus, quem não Vos ama não sabe o que faz; quem não Vos busca não sabe o que perde; quem não Vos serve não sabe o que é a verdadeira liberdade.
+      </Frase>
+    </Subtema>
+  </Capitulo>
+
+
+  <Capitulo id="pedagogia" numero="II" titulo="O Bisturi do Humor" contagem="5 diálogos">
+    <Subtema titulo="O diálogo do 'E depois?' com Francesco Zazzara" aberto primeiro>
+      <Frase numero={6} fonte="Episódio clássico nos Detti Memorabili">
+        — Ó Padre, estou estudando Direito. Logo serei doutor! 
+        <br/><br/>
+        — Muito bem, Francesco. <strong>E depois?</strong>
+        <br/><br/>
+        — Depois serei um advogado famoso, ganharei muito dinheiro, comprarei uma bela casa, casarei e terei filhos!
+        <br/><br/>
+        — Excelente. <strong>E depois?</strong>
+        <br/><br/>
+        — Depois serei respeitado por todos em Roma, quem sabe até juiz ou prelado da Cúria!
+        <br/><br/>
+        — Magnífico, Francesco. <strong>E depois?</strong>
+        <br/><br/>
+        — Bom, Padre... depois, serei velho, me aposentarei, e um dia terei que morrer.
+        <br/><br/>
+        — <strong>E depois?</strong>
+        <br/><br/>
+        <em>(A insistência no último "e depois?" provocou a conversão do jovem brilhante, que abandonou a vaidade e se tornou um dos padres do Oratório).</em>
+      </Frase>
+    </Subtema>
+
+    <Subtema titulo="Contra a vaidade e a presunção">
+      <Frase numero={7} fonte="Resposta a um jovem que se queixava de distrações na Igreja">
+        Filho, se não queres ter distrações olhando para as mulheres bonitas na igreja, olha para os altares e para os santos. Mas se ainda assim os olhos te traírem, olha para a ponta do teu próprio nariz, que é feio o suficiente para te tirar qualquer distração.
+      </Frase>
+      <Frase numero={8} fonte="A uma nobre senhora que usava saltos altíssimos por vaidade">
+        Cuidado, senhora! Estais com tanto medo de tocar a terra, mas esquecestes que o Paraíso fica lá no alto, e de saltos é muito mais fácil tropeçar e cair no inferno.
+      </Frase>
+      <Frase numero={9} fonte="Resposta a um frade orgulhoso que pedia um cargo de pregador">
+        Queres pregar aos outros sobre a humildade e não consegues suportar que te mandem calar? Vai varrer o convento por um ano; quando a poeira cobrir a tua soberba, talvez a tua voz sirva para Deus.
+      </Frase>
+      <Frase numero={10} fonte="O método nereano contra o moralismo amargo">
+        As almas não se curam com vinagre, mas com mel. E quando o mel não funciona, às vezes uma boa risada faz o demônio ir embora, porque ele não suporta a alegria verdadeira.
+      </Frase>
+    </Subtema>
+  </Capitulo>
+
+
+  <Capitulo id="amizade" numero="III" titulo="Papas e Discípulos" contagem="4 diálogos">
+    <Subtema titulo="Recusando o Cardinalato" aberto primeiro>
+      <Frase numero={11} original="Paradiso, paradiso!" fonte="Ao Papa Gregório XIV, que lhe enviou o chapéu vermelho de Cardeal">
+        <em>(Filipe pegou o chapéu cardinalício encarnado, atirou-o para o ar como se fosse um brinquedo de criança, e começou a rir dizendo:)</em>
+        <br/><br/>
+        Paraíso! Paraíso! O meu chapéu vermelho é o sangue de Cristo; o meu Cardinalato é o Céu. Levai isso de volta ao Santo Padre e dizei-lhe que Filipe prefere o Paraíso!
+      </Frase>
+    </Subtema>
+
+    <Subtema titulo="A amizade com São Carlos Borromeu">
+      <Frase numero={12} fonte="Diálogo registrado na Chiesa Nuova">
+        — Filipe, os teus padres cantam, passeiam, riem e não fazem penitências severas, e no entanto Roma se converte. Os meus sacerdotes em Milão têm regras estritas, jejuns rigorosos, e a cidade continua dura. Qual é o teu segredo?
+        <br/><br/>
+        — Carlos, tu queres reformar o clero mudando primeiro os decretos. Eu quero reformar os clérigos aquecendo-lhes primeiro o coração. Um coração quente suporta qualquer regra; um coração frio transforma a regra numa prisão.
+      </Frase>
+    </Subtema>
+
+    <Subtema titulo="Ao Cardeal Cesare Baronius">
+      <Frase numero={13} fonte="Ordem dada ao historiador, que sofria de úlcera e cansaço">
+        Cesare, tu pensas muito em ti mesmo. Não me importa se a cabeça dói ou se o estômago queima. Obediência, Cesare! Vai para o teu quarto e continua a escrever os teus Anais da Igreja. Deus não quer o teu descanso agora, quer o teu sacrifício na escrivaninha!
+      </Frase>
+      <Frase numero={14} original="Obedientia et pax." fonte="Lema informal do Oratório">
+        Não te peço votos religiosos solenes como os frades. Peço-te apenas duas coisas: obediência sem murmuração e paz de espírito. Quem tem essas duas, já é um perfeito religioso sem precisar de correntes.
+      </Frase>
+    </Subtema>
+  </Capitulo>
+
+
+  <Capitulo id="ultimos-dias" numero="IV" titulo="O Viático e o Fim" contagem="3 registros">
+    <Subtema titulo="No leito de morte (Maio de 1595)" aberto primeiro>
+      <Frase numero={15} fonte="Ao médico que perguntou como ele estava, dias antes de morrer">
+        Sinto-me tão bem, que nunca me senti melhor em toda a minha vida. Sei que vou morrer, mas o corpo não importa; a alma já está à porta esperando para sair.
+      </Frase>
+      <Frase numero={16} fonte="Aos padres do Oratório, que choravam ao redor de sua cama">
+        Não choreis, meus filhos. O que queríeis? Que eu ficasse aqui para sempre? Eu não fundei o Oratório; foi a Virgem Maria quem o fundou. Confiai nela, sede humildes, e eu vos ajudarei muito mais de lá de cima do que aqui de baixo.
+      </Frase>
+    </Subtema>
+
+    <Subtema titulo="A última oração">
+      <Frase numero={17} original="Domine, non sum dignus..." fonte="Bacci, relatando o momento em que o Cardeal Borromeo (Federico) lhe trouxe a Eucaristia no Viático">
+        <em>(Ao ver o Santíssimo Sacramento entrar no quarto, Filipe começou a chorar copiosamente, ergueu-se um pouco do leito e gritou em voz alta:)</em>
+        <br/><br/>
+        Eis o meu amor! Eis o meu amor! Senhor, eu não sou digno... eu nunca fui digno, eu nunca fiz nada de bom na minha vida! Meu Jesus, Vós viestes a mim...
+      </Frase>
+    </Subtema>
+  </Capitulo>
+
+</Antologia>

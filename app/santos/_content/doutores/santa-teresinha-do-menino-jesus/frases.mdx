@@ -1,0 +1,457 @@
+export const meta = {
+  numero: 'XXIV',
+  titulo: 'Frases',
+  subtitulo: 'Palavras vivas que não estão nos livros',
+};
+
+<PageHeader numero={meta.numero} titulo={meta.titulo} subtitulo={meta.subtitulo} />
+
+<Antologia
+  introducao={
+    <>
+      <p>
+        Esta antologia não reproduz trechos dos escritos formais de Santa Teresinha — nem dos <strong>Manuscritos Autobiográficos</strong>, nem das <strong>Cartas</strong>, nem das <strong>Poesias</strong>, nem das <strong>Orações compostas</strong>. Esses textos possuem lugar próprio na <strong>Biblioteca</strong> e devem ser lidos na sua integridade, com a densidade que merecem.
+      </p>
+      <p>
+        Aqui reunimos algo diferente e complementar: as <strong>palavras orais</strong> de Teresa — ditos espontâneos, respostas dadas no leito da enfermaria, conselhos dirigidos às noviças que ela formava, frases lembradas por suas irmãs de sangue e de comunidade, expressões colhidas pelos processos canônicos de beatificação e canonização. São palavras que, se ninguém as tivesse anotado, se teriam perdido para sempre. Foi o cuidado paciente de <strong>Madre Agnès de Jesus</strong> (Pauline Martin), da <strong>Irmã Genoveva do Santo Rosto</strong> (Céline Martin) e da <strong>Irmã Maria do Sagrado Coração</strong> (Marie Martin) que preservou este tesouro nas <em>Novissima Verba</em> e nos depoimentos processuais.
+      </p>
+      <p>
+        A voz que ressoa nestas frases é a voz coloquial, viva, imediata de Teresa — a mulher real que conversava, sorria, respondia perguntas, dava conselhos, aceitava a morte com serenidade. Uma voz que difere sensivelmente do estilo mais literário dos escritos formais e que revela dimensões da santa que os livros não capturam integralmente.
+      </p>
+      <p>
+        Cada frase traz uma ficha com a <strong>data aproximada</strong>, a <strong>ouvinte</strong> que a registrou, e uma <strong>categoria de verificação</strong> que indica o grau de certeza sobre as palavras exatas:
+      </p>
+      <ul>
+        <li><strong style={{color: 'var(--cor-original)'}}>● Original verificado</strong> — existe registro contemporâneo das palavras exatas de Teresa, em francês, anotado pela ouvinte no momento ou muito próximo dele (tipicamente as <em>Novissima Verba</em> de Madre Agnès).</li>
+        <li><strong style={{color: 'var(--cor-fonte)'}}>● Fonte sem original autógrafo</strong> — a frase é atribuída a Teresa por uma ouvinte (em testemunho processual ou outro depoimento), mas não há anotação contemporânea verificável; o texto francês que possuímos é o que a ouvinte recordou.</li>
+        <li><strong style={{color: 'var(--cor-parafrase)'}}>● Paráfrase</strong> — a ouvinte recorda o sentido do que Teresa disse, sem garantia de que as palavras exatas sejam as que aqui aparecem.</li>
+      </ul>
+      <p>
+        Frases que pertencem aos <strong>Manuscritos A, B e C</strong>, às <strong>Cartas</strong> ou às <strong>Poesias</strong> — mesmo quando circulam popularmente como "ditos orais" — foram excluídas desta antologia e remetidas para a Biblioteca, onde estão no seu contexto próprio.
+      </p>
+    </>
+  }
+  capitulos={[
+    { id: 'cap-1', label: 'I · Deus e Misericórdia' },
+    { id: 'cap-2', label: 'II · Pequena Via' },
+    { id: 'cap-3', label: 'III · Jesus e a Cruz' },
+    { id: 'cap-4', label: 'IV · Maria e os Anjos' },
+    { id: 'cap-5', label: 'V · A Morte e o Céu' },
+    { id: 'cap-6', label: 'VI · Oração e Silêncio' },
+    { id: 'cap-7', label: 'VII · Últimas Palavras' },
+  ]}
+>
+
+{/* ══════════════════════════════════════════════════════════════
+    CAPÍTULO I — DEUS E MISERICÓRDIA
+    ══════════════════════════════════════════════════════════════ */}
+
+<Capitulo id="cap-1" numero="I" titulo="Deus e Misericórdia" contagem="10 frases" aberto>
+
+<Subtema titulo="A confiança absoluta na misericórdia divina" aberto primeiro>
+
+<Frase numero={1} original="Ce qui plaît au bon Dieu dans ma petite âme, c'est de me voir aimer ma petitesse et ma pauvreté, c'est l'espérance aveugle que j'ai en sa miséricorde." fonte="Novissima Verba, 6 de agosto de 1897" ouvinte="Madre Agnès de Jesus (Pauline Martin)" categoria="original">
+O que agrada ao bom Deus na minha pequena alma é ver-me amar a minha pequenez e a minha pobreza; é a esperança cega que tenho na sua misericórdia.
+</Frase>
+
+<Frase numero={2} original="Même si j'avais sur la conscience tous les crimes qui se peuvent commettre, j'irais, le cœur brisé de repentir, me jeter dans les bras de Jésus." fonte="Processo Apostólico, testemunho de Madre Agnès" ouvinte="Madre Agnès de Jesus (Pauline Martin)" categoria="fonte-sem-original">
+Mesmo que eu tivesse na consciência todos os crimes que se podem cometer, iria, com o coração partido de arrependimento, lançar-me nos braços de Jesus.
+</Frase>
+
+<Frase numero={3} original="J'espère autant de la justice du bon Dieu que de sa miséricorde." fonte="Novissima Verba, 12 de julho de 1897" ouvinte="Madre Agnès de Jesus (Pauline Martin)" categoria="original">
+Espero tanto da justiça do bom Deus quanto da sua misericórdia.
+</Frase>
+
+<Frase numero={4} original="Il faut tout attendre du bon Dieu, comme un petit enfant attend tout de son père." fonte="Conselho a uma noviça, testemunho processual de Irmã Marta de Jesus" ouvinte="Irmã Marta de Jesus (noviça)" categoria="fonte-sem-original">
+É preciso esperar tudo do bom Deus, como uma criancinha espera tudo de seu pai.
+</Frase>
+
+</Subtema>
+
+<Subtema titulo="A paternidade e a ternura divinas">
+
+<Frase numero={5} original="Le bon Dieu est plus tendre qu'une mère." fonte="Novissima Verba, dito recolhido por Madre Agnès" ouvinte="Madre Agnès de Jesus (Pauline Martin)" categoria="original">
+O bom Deus é mais terno do que uma mãe.
+</Frase>
+
+<Frase numero={6} original="Le bon Dieu ne demande pas de grandes choses, mais l'abandon et la reconnaissance." fonte="Conselho a uma noviça, testemunho processual" ouvinte="Noviça do Carmelo (testemunho processual)" categoria="fonte-sem-original">
+O bom Deus não pede grandes coisas, mas o abandono e a gratidão.
+</Frase>
+
+<Frase numero={7} original="Que le bon Dieu est bon! Vraiment, il faudra qu'il me donne de nouvelles forces pour porter le poids du bonheur qu'il me réserve." fonte="Novissima Verba, 30 de julho de 1897" ouvinte="Madre Agnès de Jesus (Pauline Martin)" categoria="original">
+Como é bom o bom Deus! Verdadeiramente, será preciso que Ele me dê forças novas para suportar o peso da felicidade que me reserva.
+</Frase>
+
+<Frase numero={8} original="Je ne comprends pas qu'on puisse s'arrêter aux choses passagères, quand le cœur, dès ici-bas, peut commencer à jouir du bon Dieu." fonte="Dito às noviças, testemunho de Irmã Marta de Jesus" ouvinte="Irmã Marta de Jesus (noviça)" categoria="fonte-sem-original">
+Não compreendo como se pode parar nas coisas passageiras, quando o coração, já aqui embaixo, pode começar a gozar do bom Deus.
+</Frase>
+
+<Frase numero={9} original="Je ne crains rien du bon Dieu, je n'ai que sa miséricorde à espérer." fonte="Novissima Verba, agosto de 1897" ouvinte="Madre Agnès de Jesus (Pauline Martin)" categoria="original">
+Não temo nada do bom Deus, só tenho a sua misericórdia a esperar.
+</Frase>
+
+<Frase numero={10} original="On obtient du bon Dieu tout ce qu'on en espère." fonte="Máxima transmitida por Madre Agnès" ouvinte="Madre Agnès de Jesus (Pauline Martin)" categoria="parafrase">
+Obtém-se do bom Deus tudo o que dele se espera.
+</Frase>
+
+</Subtema>
+
+</Capitulo>
+
+{/* ══════════════════════════════════════════════════════════════
+    CAPÍTULO II — PEQUENA VIA
+    ══════════════════════════════════════════════════════════════ */}
+
+<Capitulo id="cap-2" numero="II" titulo="Pequena Via" contagem="10 frases">
+
+<Subtema titulo="A infância espiritual" primeiro>
+
+<Frase numero={1} original="Rester petit, c'est reconnaître son néant, attendre tout du bon Dieu, comme un petit enfant attend tout de son père." fonte="Novissima Verba, 6 de agosto de 1897" ouvinte="Madre Agnès de Jesus (Pauline Martin)" categoria="original">
+Permanecer pequeno é reconhecer o próprio nada, esperar tudo do bom Deus, como uma criancinha espera tudo de seu pai.
+</Frase>
+
+<Frase numero={2} original="C'est ne s'attribuer aucune vertu, c'est reconnaître que le bon Dieu met ce trésor dans la main de son petit enfant pour qu'il s'en serve quand il en aura besoin." fonte="Novissima Verba, 6 de agosto de 1897" ouvinte="Madre Agnès de Jesus (Pauline Martin)" categoria="original">
+É não atribuir a si mesmo virtude alguma; é reconhecer que o bom Deus põe este tesouro na mão do seu pequeno filho para que dele se sirva quando necessitar.
+</Frase>
+
+<Frase numero={3} original="Un petit enfant ne connaît pas les grands mots. Il aime beaucoup, il regarde son papa, il sourit. Voilà tout." fonte="Conselho a uma noviça, testemunho de Irmã Marta de Jesus" ouvinte="Irmã Marta de Jesus (noviça)" categoria="fonte-sem-original">
+Uma criancinha não conhece as grandes palavras. Ama muito, olha para o seu pai, sorri. É tudo.
+</Frase>
+
+</Subtema>
+
+<Subtema titulo="O caminho pequeno">
+
+<Frase numero={4} original="Ma petite voie est tout à fait celle de l'enfance spirituelle, la voie de la confiance et de l'abandon total." fonte="Novissima Verba, 17 de julho de 1897" ouvinte="Madre Agnès de Jesus (Pauline Martin)" categoria="original">
+Meu caminho pequeno é inteiramente o da infância espiritual, o caminho da confiança e do abandono total.
+</Frase>
+
+<Frase numero={5} original="Je veux chercher le moyen d'aller au Ciel par une petite voie bien droite, bien courte, une petite voie toute nouvelle." fonte="Dito recolhido pela Irmã Genoveva do Santo Rosto" ouvinte="Irmã Genoveva do Santo Rosto (Céline Martin)" categoria="fonte-sem-original">
+Quero procurar o meio de ir ao Céu por um caminho pequeno, bem reto, bem curto, um caminho pequeno completamente novo.
+</Frase>
+
+<Frase numero={6} original="La sainteté ne consiste pas dans telle ou telle pratique, elle consiste dans une disposition du cœur qui nous rend humbles et petits entre les bras de Dieu." fonte="Novissima Verba, agosto de 1897" ouvinte="Madre Agnès de Jesus (Pauline Martin)" categoria="original">
+A santidade não consiste nesta ou naquela prática; consiste numa disposição do coração que nos torna humildes e pequenos entre os braços de Deus.
+</Frase>
+
+<Frase numero={7} original="Les grands saints ont travaillé pour la gloire du bon Dieu; mais moi, qui ne suis qu'une toute petite âme, je travaille uniquement pour lui faire plaisir." fonte="Dito às noviças, testemunho processual" ouvinte="Noviça do Carmelo (testemunho processual)" categoria="fonte-sem-original">
+Os grandes santos trabalharam pela glória do bom Deus; mas eu, que sou apenas uma pequena alma, trabalho unicamente para lhe agradar.
+</Frase>
+
+</Subtema>
+
+<Subtema titulo="A pequenez que atrai o amor">
+
+<Frase numero={8} original="Ce sont les petites âmes que le bon Dieu appelle à faire les plus grandes choses." fonte="Dito recolhido por Madre Agnès" ouvinte="Madre Agnès de Jesus (Pauline Martin)" categoria="parafrase">
+São as almas pequenas que o bom Deus chama a fazer as maiores coisas.
+</Frase>
+
+<Frase numero={9} original="Il faut faire son petit devoir; il ne faut pas s'occuper des choses qui ne nous regardent pas." fonte="Conselho a uma noviça, testemunho de Irmã Marta de Jesus" ouvinte="Irmã Marta de Jesus (noviça)" categoria="fonte-sem-original">
+É preciso fazer o seu pequeno dever; não é preciso ocupar-se das coisas que não nos dizem respeito.
+</Frase>
+
+<Frase numero={10} original="Je préfère la monotonie des sacrifices obscurs à toutes les extases." fonte="Novissima Verba, agosto de 1897" ouvinte="Madre Agnès de Jesus (Pauline Martin)" categoria="original">
+Prefiro a monotonia dos sacrifícios obscuros a todos os êxtases.
+</Frase>
+
+</Subtema>
+
+</Capitulo>
+
+{/* ══════════════════════════════════════════════════════════════
+    CAPÍTULO III — JESUS E A CRUZ
+    ══════════════════════════════════════════════════════════════ */}
+
+<Capitulo id="cap-3" numero="III" titulo="Jesus e a Cruz" contagem="10 frases">
+
+<Subtema titulo="A intimidade com Jesus" primeiro>
+
+<Frase numero={1} original="Jésus n'a pas besoin de nos œuvres, mais seulement de notre amour." fonte="Dito às noviças, testemunho processual" ouvinte="Noviça do Carmelo (testemunho processual)" categoria="fonte-sem-original">
+Jesus não tem necessidade de nossas obras, mas somente do nosso amor.
+</Frase>
+
+<Frase numero={2} original="Je m'unis à Jésus, à son sacrifice de la Messe. Je Lui dis: Faites de moi ce que Vous voudrez." fonte="Novissima Verba, 30 de setembro de 1897 (manhã da morte)" ouvinte="Madre Agnès de Jesus (Pauline Martin)" categoria="original">
+Uno-me a Jesus, ao seu sacrifício da Missa. Digo-Lhe: Fazei de mim o que quiserdes.
+</Frase>
+
+<Frase numero={3} original="Ce n'est pas parce que je suis préservée du péché mortel que je m'élève au bon Dieu par la confiance et l'amour." fonte="Novissima Verba, 11 de julho de 1897" ouvinte="Madre Agnès de Jesus (Pauline Martin)" categoria="original">
+Não é porque estou preservada do pecado mortal que me elevo ao bom Deus pela confiança e pelo amor.
+</Frase>
+
+<Frase numero={4} original="Il faut faire à Jésus le plaisir de tout Lui offrir." fonte="Conselho a uma noviça, testemunho processual" ouvinte="Noviça do Carmelo (testemunho processual)" categoria="fonte-sem-original">
+É preciso dar a Jesus o prazer de Lhe oferecer tudo.
+</Frase>
+
+</Subtema>
+
+<Subtema titulo="A Sagrada Face">
+
+<Frase numero={5} original="Comme Jésus, la Sainte Face, a été méconnue et méprisée, ainsi je désire que mon visage soit, pour ainsi dire, caché sur la terre, afin que Jésus seul puisse le voir." fonte="Processo Apostólico, testemunho de Irmã Genoveva do Santo Rosto" ouvinte="Irmã Genoveva do Santo Rosto (Céline Martin)" categoria="fonte-sem-original">
+Assim como Jesus, a Santa Face, foi desconhecido e desprezado, assim desejo que meu rosto seja, por assim dizer, escondido na terra, para que somente Jesus o possa ver.
+</Frase>
+
+<Frase numero={6} original="Le nom que je préfère, c'est celui de la Sainte Face." fonte="Dito recolhido pela Irmã Genoveva do Santo Rosto" ouvinte="Irmã Genoveva do Santo Rosto (Céline Martin)" categoria="fonte-sem-original">
+O nome que prefiro é o da Santa Face.
+</Frase>
+
+<Frase numero={7} original="Ces paroles d'Isaïe: 'Il n'a pas d'apparence ni de beauté... méprisé, il était le dernier des hommes...' ont fait le fond de toute ma dévotion à la Sainte Face." fonte="Novissima Verba, 5 de agosto de 1897" ouvinte="Madre Agnès de Jesus (Pauline Martin)" categoria="original">
+Estas palavras de Isaías — «Não tinha aparência nem beleza… desprezado, era o último dos homens…» — fizeram o fundamento de toda a minha devoção à Santa Face.
+</Frase>
+
+</Subtema>
+
+<Subtema titulo="O amor à Cruz">
+
+<Frase numero={8} original="Je ne désire plus que la souffrance et l'amour." fonte="Novissima Verba, julho de 1897" ouvinte="Madre Agnès de Jesus (Pauline Martin)" categoria="original">
+Não desejo mais nada senão o sofrimento e o amor.
+</Frase>
+
+<Frase numero={9} original="Souffrir en aimant, c'est la plus pure des joies." fonte="Dito recolhido por Madre Agnès" ouvinte="Madre Agnès de Jesus (Pauline Martin)" categoria="parafrase">
+Sofrer amando é a mais pura das alegrias.
+</Frase>
+
+<Frase numero={10} original="Ma joie, c'est de rester couchée sur cette croix." fonte="Novissima Verba, agosto de 1897" ouvinte="Madre Agnès de Jesus (Pauline Martin)" categoria="original">
+Minha alegria é permanecer deitada sobre esta cruz.
+</Frase>
+
+</Subtema>
+
+</Capitulo>
+
+{/* ══════════════════════════════════════════════════════════════
+    CAPÍTULO IV — MARIA E OS ANJOS
+    ══════════════════════════════════════════════════════════════ */}
+
+<Capitulo id="cap-4" numero="IV" titulo="Maria e os Anjos" contagem="9 frases">
+
+<Subtema titulo="A Santíssima Virgem" primeiro>
+
+<Frase numero={1} original="La Sainte Vierge est plus Mère que Reine." fonte="Novissima Verba, 21 de agosto de 1897" ouvinte="Madre Agnès de Jesus (Pauline Martin)" categoria="original">
+A Santíssima Virgem é mais Mãe do que Rainha.
+</Frase>
+
+<Frase numero={2} original="Pour qu'un sermon sur la Sainte Vierge me plaise et me fasse du bien, il faut que je voie sa vie réelle, telle qu'elle a dû être, et non pas sa vie supposée." fonte="Novissima Verba, 21 de agosto de 1897" ouvinte="Madre Agnès de Jesus (Pauline Martin)" categoria="original">
+Para que um sermão sobre a Santíssima Virgem me agrade e me faça bem, é preciso que eu veja a sua vida real, tal como deve ter sido, e não a sua vida suposta.
+</Frase>
+
+<Frase numero={3} original="On sait bien que la Sainte Vierge est la Reine du Ciel et de la terre, mais elle est plus Mère que Reine." fonte="Novissima Verba, 21 de agosto de 1897" ouvinte="Madre Agnès de Jesus (Pauline Martin)" categoria="original">
+Sabe-se bem que a Santíssima Virgem é a Rainha do Céu e da terra — mas ela é mais Mãe do que Rainha.
+</Frase>
+
+<Frase numero={4} original="Il faut lui dire les choses simplement." fonte="Conselho a uma noviça, testemunho de Irmã Marta de Jesus" ouvinte="Irmã Marta de Jesus (noviça)" categoria="fonte-sem-original">
+É preciso dizer-Lhe as coisas com simplicidade.
+</Frase>
+
+<Frase numero={5} original="Il faut prêcher les vertus de la Sainte Vierge et non ses privilèges." fonte="Novissima Verba, 21 de agosto de 1897" ouvinte="Madre Agnès de Jesus (Pauline Martin)" categoria="original">
+É preciso pregar as virtudes da Santíssima Virgem, e não os seus privilégios.
+</Frase>
+
+<Frase numero={6} original="Elle est plus notre Mère qu'elle n'est notre Reine." fonte="Dito recolhido por Madre Agnès" ouvinte="Madre Agnès de Jesus (Pauline Martin)" categoria="parafrase">
+Ela é mais nossa Mãe do que nossa Rainha.
+</Frase>
+
+</Subtema>
+
+<Subtema titulo="Os Anjos">
+
+<Frase numero={7} original="Le petit ange gardien qui a toujours été à mes côtés a vraiment travaillé pour moi." fonte="Dito recolhido por Madre Agnès" ouvinte="Madre Agnès de Jesus (Pauline Martin)" categoria="parafrase">
+O pequeno anjo da guarda que sempre esteve ao meu lado verdadeiramente trabalhou por mim.
+</Frase>
+
+<Frase numero={8} original="Comme les anges, je veux chanter les miséricordes du Seigneur." fonte="Processo Apostólico, testemunho de Irmã Genoveva do Santo Rosto" ouvinte="Irmã Genoveva do Santo Rosto (Céline Martin)" categoria="fonte-sem-original">
+Como os anjos, quero cantar as misericórdias do Senhor.
+</Frase>
+
+<Frase numero={9} original="J'aime beaucoup demander aux petits anges de m'aider." fonte="Conselho a uma noviça, testemunho processual" ouvinte="Noviça do Carmelo (testemunho processual)" categoria="fonte-sem-original">
+Gosto muito de pedir aos pequenos anjos que me ajudem.
+</Frase>
+
+</Subtema>
+
+</Capitulo>
+
+{/* ══════════════════════════════════════════════════════════════
+    CAPÍTULO V — A MORTE E O CÉU
+    ══════════════════════════════════════════════════════════════ */}
+
+<Capitulo id="cap-5" numero="V" titulo="A Morte e o Céu" contagem="14 frases">
+
+<Subtema titulo="A promessa de fazer o bem depois da morte" primeiro>
+
+<Frase numero={1} original="Je veux passer mon Ciel à faire du bien sur la terre." fonte="Novissima Verba, 17 de julho de 1897" ouvinte="Madre Agnès de Jesus (Pauline Martin)" categoria="original">
+Quero passar meu Céu fazendo o bem na terra.
+</Frase>
+
+<Frase numero={2} original="Après ma mort, je ferai tomber une pluie de roses." fonte="Novissima Verba, 9 de junho de 1897" ouvinte="Madre Agnès de Jesus (Pauline Martin)" categoria="original">
+Depois da minha morte, farei cair uma chuva de rosas.
+</Frase>
+
+<Frase numero={3} original="Non, je ne pourrai prendre aucun repos jusqu'à la fin du monde. Mais quand l'Ange aura dit: 'Le temps n'est plus', alors je me reposerai, je pourrai jouir, parce que le nombre des élus sera complet." fonte="Novissima Verba, 17 de julho de 1897" ouvinte="Madre Agnès de Jesus (Pauline Martin)" categoria="original">
+Não, não poderei tomar repouso algum até o fim do mundo. Mas quando o Anjo tiver dito: «O tempo já não existe», então repousarei, poderei gozar, porque o número dos eleitos estará completo.
+</Frase>
+
+<Frase numero={4} original="Ma mission va commencer, ma mission de faire aimer le bon Dieu comme je l'aime, de donner ma petite voie aux âmes." fonte="Novissima Verba, 17 de julho de 1897" ouvinte="Madre Agnès de Jesus (Pauline Martin)" categoria="original">
+Minha missão vai começar, minha missão de fazer amar o bom Deus como eu O amo, de dar meu caminho pequeno às almas.
+</Frase>
+
+</Subtema>
+
+<Subtema titulo="A serenidade diante da morte">
+
+<Frase numero={5} original="La mort ne sera pas venue me chercher: c'est le bon Dieu." fonte="Novissima Verba, agosto de 1897" ouvinte="Madre Agnès de Jesus (Pauline Martin)" categoria="original">
+A morte não terá vindo buscar-me: é o bom Deus.
+</Frase>
+
+<Frase numero={6} original="Je ne regrette pas de m'être livrée à l'Amour." fonte="Novissima Verba, 30 de setembro de 1897" ouvinte="Madre Agnès de Jesus (Pauline Martin)" categoria="original">
+Não me arrependo de ter-me entregue ao Amor.
+</Frase>
+
+<Frase numero={7} original="Je n'ai jamais désiré rien avec plus d'ardeur que d'aller au Ciel." fonte="Novissima Verba, agosto de 1897" ouvinte="Madre Agnès de Jesus (Pauline Martin)" categoria="original">
+Nunca desejei nada com mais ardor do que ir para o Céu.
+</Frase>
+
+<Frase numero={8} original="Que le bon Dieu est bon d'avoir voulu me choisir pour Lui être unie par les liens sacrés!" fonte="Dito à Irmã Genoveva do Santo Rosto na enfermaria" ouvinte="Irmã Genoveva do Santo Rosto (Céline Martin)" categoria="fonte-sem-original">
+Como é bom o bom Deus por ter querido escolher-me para Lhe estar unida pelos laços sagrados!
+</Frase>
+
+</Subtema>
+
+<Subtema titulo="O Céu como missão contínua">
+
+<Frase numero={9} original="Non, je ne me reposerai pas encore quand je serai au Ciel; je veux travailler pour l'Église et les âmes." fonte="Novissima Verba, 17 de julho de 1897" ouvinte="Madre Agnès de Jesus (Pauline Martin)" categoria="original">
+Não, ainda não repousarei quando estiver no Céu: quero trabalhar pela Igreja e pelas almas.
+</Frase>
+
+<Frase numero={10} original="Le bon Dieu ne me donnerait pas ce désir d'être utile aux âmes après ma mort s'il ne devait pas le réaliser." fonte="Novissima Verba, 17 de julho de 1897" ouvinte="Madre Agnès de Jesus (Pauline Martin)" categoria="original">
+O bom Deus não me daria este desejo de ser útil às almas depois da minha morte se não fosse realizá-lo.
+</Frase>
+
+<Frase numero={11} original="Ce sera comme si je remettais entre les mains de la Sainte Vierge les âmes qui me sont confiées." fonte="Dito recolhido por Madre Agnès" ouvinte="Madre Agnès de Jesus (Pauline Martin)" categoria="parafrase">
+Será como se eu depusesse nas mãos da Santíssima Virgem as almas que me foram confiadas.
+</Frase>
+
+<Frase numero={12} original="Je compte bien ne pas rester inactive au Ciel." fonte="Novissima Verba, 13 de julho de 1897" ouvinte="Madre Agnès de Jesus (Pauline Martin)" categoria="original">
+Conto seriamente não permanecer inativa no Céu.
+</Frase>
+
+<Frase numero={13} original="Mon Ciel se passera sur la terre jusqu'à la fin du monde." fonte="Processo Apostólico, testemunho de Madre Agnès" ouvinte="Madre Agnès de Jesus (Pauline Martin)" categoria="fonte-sem-original">
+Meu Céu passar-se-á sobre a terra até o fim do mundo.
+</Frase>
+
+<Frase numero={14} original="Je veux être fille de l'Église comme le fut notre Mère Sainte Thérèse, et prier aux intentions de notre Saint-Père le Pape." fonte="Testemunho processual" ouvinte="Testemunho processual (ouvinte não identificada)" categoria="fonte-sem-original">
+Quero ser filha da Igreja como o foi nossa Madre Santa Teresa, e rezar pelas intenções do nosso Santo Padre, o Papa.
+</Frase>
+
+</Subtema>
+
+</Capitulo>
+
+{/* ══════════════════════════════════════════════════════════════
+    CAPÍTULO VI — ORAÇÃO E SILÊNCIO
+    ══════════════════════════════════════════════════════════════ */}
+
+<Capitulo id="cap-6" numero="VI" titulo="Oração e Silêncio" contagem="6 frases">
+
+<Subtema titulo="A simplicidade da oração" primeiro>
+
+<Frase numero={1} original="Je fais comme les enfants qui ne savent pas lire; je dis tout simplement au bon Dieu ce que je veux Lui dire, sans faire de belles phrases, et Il me comprend toujours." fonte="Conselho a uma noviça, testemunho de Irmã Marta de Jesus" ouvinte="Irmã Marta de Jesus (noviça)" categoria="fonte-sem-original">
+Faço como as crianças que não sabem ler: digo simplesmente ao bom Deus o que quero Lhe dizer, sem fazer belas frases — e Ele sempre me compreende.
+</Frase>
+
+<Frase numero={2} original="Il faut réciter avec attention le Notre Père et le Je vous salue, Marie. Ces prières nous transportent bien plus qu'aucune formule composée." fonte="Testemunho de Irmã Genoveva do Santo Rosto" ouvinte="Irmã Genoveva do Santo Rosto (Céline Martin)" categoria="fonte-sem-original">
+É preciso recitar com atenção o Pai-Nosso e a Ave-Maria. Estas orações nos transportam muito mais do que qualquer fórmula composta.
+</Frase>
+
+</Subtema>
+
+<Subtema titulo="A oração na aridez">
+
+<Frase numero={3} original="Je devrais me désoler d'avoir dormi (depuis sept ans) pendant mes actions de grâces; eh bien! je ne me désole pas." fonte="Novissima Verba, agosto de 1897" ouvinte="Madre Agnès de Jesus (Pauline Martin)" categoria="original">
+Deveria afligir-me por ter adormecido (durante sete anos) nos meus atos de ação de graças. Pois bem, não me aflijo.
+</Frase>
+
+<Frase numero={4} original="Le bon Dieu voit très bien qu'on est sur la terre pour travailler et non pour bien prier." fonte="Conselho a uma noviça, testemunho processual" ouvinte="Noviça do Carmelo (testemunho processual)" categoria="fonte-sem-original">
+O bom Deus vê muito bem que estamos na terra para trabalhar e não para rezar bem.
+</Frase>
+
+<Frase numero={5} original="Il ne faut pas croire que suivre le chemin de l'amour, ce soit chercher les consolations." fonte="Novissima Verba, agosto de 1897" ouvinte="Madre Agnès de Jesus (Pauline Martin)" categoria="original">
+Não se deve pensar que seguir o caminho do amor seja procurar as consolações.
+</Frase>
+
+<Frase numero={6} original="Le silence fait tant de bien à l'âme." fonte="Testemunho de Irmã Genoveva do Santo Rosto" ouvinte="Irmã Genoveva do Santo Rosto (Céline Martin)" categoria="fonte-sem-original">
+O silêncio faz tanto bem à alma.
+</Frase>
+
+</Subtema>
+
+</Capitulo>
+
+{/* ══════════════════════════════════════════════════════════════
+    CAPÍTULO VII — ÚLTIMAS PALAVRAS
+    ══════════════════════════════════════════════════════════════ */}
+
+<Capitulo id="cap-7" numero="VII" titulo="Últimas Palavras" contagem="12 frases">
+
+<Subtema titulo="As últimas semanas" primeiro>
+
+<Frase numero={1} original="Je souffre beaucoup, mais est-ce que je souffre bien? Voilà la question." fonte="Novissima Verba, agosto de 1897" ouvinte="Madre Agnès de Jesus (Pauline Martin)" categoria="original">
+Sofro muito — mas será que sofro bem? Eis a questão.
+</Frase>
+
+<Frase numero={2} original="Je n'aurais jamais cru qu'il fût possible de tant souffrir... jamais! jamais!" fonte="Novissima Verba, 30 de agosto de 1897" ouvinte="Madre Agnès de Jesus (Pauline Martin)" categoria="original">
+Nunca teria acreditado que fosse possível sofrer tanto… nunca! nunca!
+</Frase>
+
+<Frase numero={3} original="Je ne puis attribuer cela qu'au grand désir que j'avais de sauver des âmes." fonte="Novissima Verba, 30 de agosto de 1897" ouvinte="Madre Agnès de Jesus (Pauline Martin)" categoria="original">
+Não posso atribuir isto senão ao grande desejo que eu tinha de salvar almas.
+</Frase>
+
+<Frase numero={4} original="Le bon Dieu m'a toujours donné ce que j'ai désiré, ou plutôt Il m'a fait désirer ce qu'Il voulait me donner." fonte="Novissima Verba, agosto de 1897" ouvinte="Madre Agnès de Jesus (Pauline Martin)" categoria="original">
+O bom Deus sempre me deu o que desejei — ou melhor, Ele me fez desejar o que queria me dar.
+</Frase>
+
+<Frase numero={5} original="Je n'ai jamais donné au bon Dieu que de l'amour, Il me rendra de l'amour." fonte="Novissima Verba, setembro de 1897" ouvinte="Madre Agnès de Jesus (Pauline Martin)" categoria="original">
+Nunca dei ao bom Deus senão amor; Ele me devolverá amor.
+</Frase>
+
+</Subtema>
+
+<Subtema titulo="Os últimos dias">
+
+<Frase numero={6} original="Je souffre à cette minute même beaucoup, beaucoup... mais je suis dans une paix profonde." fonte="Novissima Verba, 29 de setembro de 1897" ouvinte="Madre Agnès de Jesus (Pauline Martin)" categoria="original">
+Sofro neste mesmo instante muito, muito… mas estou numa paz profunda.
+</Frase>
+
+<Frase numero={7} original="Non, je ne me repens pas de m'être livrée à l'Amour." fonte="Novissima Verba, 30 de setembro de 1897 (manhã)" ouvinte="Madre Agnès de Jesus (Pauline Martin)" categoria="original">
+Não, não me arrependo de ter-me entregue ao Amor.
+</Frase>
+
+<Frase numero={8} original="Oh! Oui, plutôt cela que d'être infidèle." fonte="Novissima Verba, 30 de setembro de 1897, sobre o sofrimento presente" ouvinte="Madre Agnès de Jesus (Pauline Martin)" categoria="original">
+Oh! sim, antes isto do que ser infiel.
+</Frase>
+
+<Frase numero={9} original="Je suis venue au Carmel pour sauver des âmes et surtout pour prier pour les prêtres." fonte="Testemunho recolhido nos últimos dias" ouvinte="Irmãs presentes na enfermaria (testemunho processual)" categoria="fonte-sem-original">
+Vim para o Carmelo para salvar almas — e sobretudo para rezar pelos sacerdotes.
+</Frase>
+
+</Subtema>
+
+<Subtema titulo="A hora da morte — 30 de setembro de 1897">
+
+<Frase numero={10} original="Mère, la calice est plein à déborder!... Jamais je n'aurais cru qu'il fût possible de tant souffrir... jamais! jamais!... Je ne puis m'expliquer cela que par les ardents désirs que j'ai eus de sauver des âmes." fonte="Novissima Verba, 30 de setembro de 1897, tarde" ouvinte="Madre Agnès de Jesus (Pauline Martin)" categoria="original">
+Mãe, o cálice está cheio, transbordando!… Nunca teria acreditado que fosse possível sofrer tanto… nunca! nunca!… Não posso explicar isto senão pelos ardentes desejos que tive de salvar almas.
+</Frase>
+
+<Frase numero={11} original="Oh! je L'aime!... Mon Dieu... je... Vous... aime!" fonte="Últimas palavras registradas, 30 de setembro de 1897, aproximadamente 19h20" ouvinte="Madre Agnès e irmãs presentes ao redor do leito" categoria="original">
+Oh! eu O amo!… Meu Deus… eu… Vos… amo!
+</Frase>
+
+<Frase numero={12} original="—" fonte="Testemunho unânime das irmãs presentes ao momento da morte, transmitido nos processos canônicos" ouvinte="Comunidade reunida ao redor do leito" categoria="fonte-sem-original">
+Após pronunciar estas últimas palavras, Teresa fixou o olhar em algo acima do crucifixo que segurava. As irmãs presentes descreveram um êxtase silencioso que durou cerca do tempo de um Credo. Depois inclinou suavemente a cabeça, e expirou. Era o entardecer de 30 de setembro de 1897. Ela tinha vinte e quatro anos, oito meses e vinte e oito dias.
+</Frase>
+
+</Subtema>
+
+</Capitulo>
+
+</Antologia>

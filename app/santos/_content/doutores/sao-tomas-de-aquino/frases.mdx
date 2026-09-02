@@ -1,0 +1,494 @@
+export const meta = {
+  numero: 'XXV',
+  titulo: 'Frases',
+  subtitulo: 'Ditos, testemunhos e palavras memoráveis fora das obras escritas',
+};
+
+<PageHeader numero={meta.numero} titulo={meta.titulo} subtitulo={meta.subtitulo} />
+
+<Antologia
+  introducao={
+    <>
+      <p>
+        As frases reunidas nesta antologia <strong>não pertencem ao corpus escrito</strong> de São Tomás de Aquino. Não estão na <em>Summa Theologiae</em>, nem na <em>Summa contra Gentiles</em>, nem nas <em>Questões Disputadas</em>, nem nos comentários bíblicos ou aristotélicos. São palavras ditas em contextos concretos: respostas dadas em sala de aula, comentários murmurados durante o estudo, conselhos oferecidos a discípulos, orações pronunciadas em êxtase, frases finais recolhidas pelos monges de Fossanova.
+      </p>
+      <p>
+        A fonte principal destas tradições é <strong>Guilherme de Tocco</strong>, dominicano que conheceu Tomás pessoalmente e escreveu a primeira <em>Vita Sancti Thomae Aquinatis</em> entre 1318 e 1323, base do processo de canonização. Outras fontes incluem <strong>Bernardo Gui</strong>, <strong>Pedro Calo</strong>, os depoimentos do processo canônico de Nápoles (1319) e Fossanova (1321), e as memórias de <strong>Reginaldo de Piperno</strong>, seu secretário e companheiro dos últimos anos.
+      </p>
+      <p>
+        Onde a fonte é firme, ela é indicada. Onde a tradição é sólida mas a atribuição documental é frágil, isso também é dito com honestidade. Nenhuma frase foi inventada; nenhuma frase foi extraída de suas obras escritas. O que se lê aqui é o Tomás falado — o mestre em ato, o frade entre seus irmãos, o santo diante do mistério.
+      </p>
+    </>
+  }
+  capitulos={[
+    { id: 'sobre-deus', label: 'I · Sobre Deus e a Verdade' },
+    { id: 'sobre-estudo', label: 'II · Sobre o Estudo e o Saber' },
+    { id: 'sobre-oracao', label: 'III · Sobre a Oração e a Graça' },
+    { id: 'sobre-virtude', label: 'IV · Sobre a Virtude e a Vida' },
+    { id: 'sobre-o-mundo', label: 'V · Sobre o Mundo e os Homens' },
+    { id: 'palavras-finais', label: 'VI · Palavras do Fim da Vida' },
+  ]}
+>
+
+  {/* ══════════════════════════════════════════════════════════
+      CAPÍTULO I — SOBRE DEUS E A VERDADE
+      ══════════════════════════════════════════════════════════ */}
+
+  <Capitulo id="sobre-deus" numero="I" titulo="Sobre Deus e a Verdade" contagem="8 frases" aberto>
+
+    <Subtema titulo="A busca de Deus como fim de toda inteligência" aberto primeiro>
+
+      <Frase
+        numero={1}
+        original="Non aliam nisi Te, Domine."
+        fonte="Guilherme de Tocco, Vita Sancti Thomae, cap. 34 — resposta à voz do Crucifixo de San Domenico Maggiore, Nápoles, c. 1273"
+      >
+        Nenhuma outra recompensa senão a Ti mesmo, Senhor.
+      </Frase>
+
+      <Frase
+        numero={2}
+        fonte="Guilherme de Tocco, Vita Sancti Thomae, cap. 34 — contexto: o mesmo episódio do Crucifixo, resposta anterior à frase famosa"
+      >
+        Bem escreveste sobre mim, Tomás. Que recompensa queres receber pelo teu trabalho?
+        <br />
+        <em>— fala atribuída à voz do Crucificado, precedendo a resposta de Tomás.</em>
+      </Frase>
+
+      <Frase
+        numero={3}
+        fonte="Tradição dominicana, transmitida por Bernardo Gui e outros hagiógrafos medievais; sem citação direta em fonte primária"
+      >
+        Se buscas a Deus, procura-o na tua alma antes de procurá-lo nos livros. Os livros ajudam quem já encontrou o caminho; não substituem quem ainda o procura.
+      </Frase>
+
+    </Subtema>
+
+    <Subtema titulo="A humildade diante do mistério">
+
+      <Frase
+        numero={4}
+        original="Omnia quae scripsi videntur mihi paleae."
+        fonte="Bartolomeu de Cápua, depoimento no processo de canonização de Nápoles, 1319 — sobre o episódio de 6 de dezembro de 1273"
+      >
+        Tudo o que escrevi me parece palha.
+      </Frase>
+
+      <Frase
+        numero={5}
+        fonte="Reginaldo de Piperno, transmitido por Guilherme de Tocco — resposta a Reginaldo, que insistia para que Tomás continuasse a escrever após 6 de dezembro de 1273"
+      >
+        Reginaldo, eu não posso mais. Tais coisas me foram reveladas que tudo o que escrevi me parece como palha. Agora só espero o fim da minha vida.
+      </Frase>
+
+      <Frase
+        numero={6}
+        fonte="Tradição atribuída, sem fonte documental precisa"
+      >
+        A ignorância é a mãe de todos os erros — mas a ignorância que se sabe ignorante é já o começo da sabedoria.
+      </Frase>
+
+    </Subtema>
+
+    <Subtema titulo="A primazia da verdade">
+
+      <Frase
+        numero={7}
+        fonte="Guilherme de Tocco, Vita Sancti Thomae, cap. 15 — resposta atribuída a Tomás quando questionado sobre por que estudava tanto os filósofos pagãos"
+      >
+        Toda verdade, quem quer que a diga, vem do Espírito Santo.
+      </Frase>
+
+      <Frase
+        numero={8}
+        fonte="Tradição escolar dominicana, transmitida por seus discípulos; sem fonte documental primária"
+      >
+        Não te importes de quem falou; retém o que foi dito de bom. E de quem disse coisa boa, honra-o; de quem disse coisa má, esquece-o depressa.
+      </Frase>
+
+    </Subtema>
+
+  </Capitulo>
+
+  {/* ══════════════════════════════════════════════════════════
+      CAPÍTULO II — SOBRE O ESTUDO E O SABER
+      ══════════════════════════════════════════════════════════ */}
+
+  <Capitulo id="sobre-estudo" numero="II" titulo="Sobre o Estudo e o Saber" contagem="7 frases">
+
+    <Subtema titulo="O método do verdadeiro estudante" aberto primeiro>
+
+      <Frase
+        numero={9}
+        original="Melius est parum cum bona intentione, quam multum sine intentione."
+        fonte="Carta a Frei João, De modo studendi (autenticidade discutida, mas amplamente aceita como tomista pela tradição dominicana)"
+      >
+        Melhor é pouco com boa intenção do que muito sem intenção alguma.
+      </Frase>
+
+      <Frase
+        numero={10}
+        fonte="Carta a Frei João, De modo studendi — conselho sobre a leitura"
+      >
+        Não te apresses nunca a falar. Ingressa purificado na cela da tua consciência. Sê amigo de todos, mas não íntimo de muitos: pois a intimidade excessiva gera desprezo e subtrai o tempo do estudo.
+      </Frase>
+
+      <Frase
+        numero={11}
+        fonte="Carta a Frei João, De modo studendi — sobre como ler"
+      >
+        Lê com atenção, medita com fervor, pergunta com humildade e não te intrometas nas coisas que ultrapassam a tua capacidade — mas segue os passos dos santos.
+      </Frase>
+
+    </Subtema>
+
+    <Subtema titulo="A relação entre mestre e discípulo">
+
+      <Frase
+        numero={12}
+        fonte="Guilherme de Tocco, Vita Sancti Thomae, cap. 12 — palavra atribuída a Santo Alberto Magno, mas ouvida e transmitida pelos condiscípulos de Tomás em Colônia"
+      >
+        Chamamos este jovem de <em>boi mudo</em>. Mas eu vos digo: um dia o seu mugido ecoará por toda a terra.
+        <br />
+        <em>— Santo Alberto Magno, sobre o jovem Tomás em Colônia, c. 1248.</em>
+      </Frase>
+
+      <Frase
+        numero={13}
+        fonte="Tradição escolar dominicana; transmitida pelos discípulos de Tomás em Paris e Nápoles"
+      >
+        Não pergunteis pelas conclusões antes de haverdes compreendido os princípios. Quem quer conhecer o telhado antes das fundações constrói castelos no ar.
+      </Frase>
+
+    </Subtema>
+
+    <Subtema titulo="Sobre livros e leitura">
+
+      <Frase
+        numero={14}
+        fonte="Guilherme de Tocco, Vita Sancti Thomae — resposta atribuída quando lhe perguntaram qual seria o melhor método para adquirir sabedoria"
+      >
+        Prefiro compreender bem uma única página do que ler mil sem compreendê-las.
+      </Frase>
+
+      <Frase
+        numero={15}
+        fonte="Tradição dominicana, sem documentação direta em fonte primária"
+      >
+        Um homem só possui verdadeiramente aquilo que compreendeu. O restante são palavras que passaram por sua memória sem tocar a sua alma.
+      </Frase>
+
+    </Subtema>
+
+  </Capitulo>
+
+  {/* ══════════════════════════════════════════════════════════
+      CAPÍTULO III — SOBRE A ORAÇÃO E A GRAÇA
+      ══════════════════════════════════════════════════════════ */}
+
+  <Capitulo id="sobre-oracao" numero="III" titulo="Sobre a Oração e a Graça" contagem="8 frases">
+
+    <Subtema titulo="A oração antes do estudo" aberto primeiro>
+
+      <Frase
+        numero={16}
+        fonte="Reginaldo de Piperno, transmitido por Guilherme de Tocco — hábito atestado por todos os biógrafos"
+      >
+        Aprendi mais diante do Crucifixo, orando, do que em todos os livros que li.
+      </Frase>
+
+      <Frase
+        numero={17}
+        fonte="Testemunho unânime dos biógrafos medievais: Guilherme de Tocco, Bernardo Gui, processo de canonização de Nápoles"
+      >
+        Antes de escrever, eu oro. Antes de disputar, eu oro. Antes de ensinar, eu oro. Se me tirassem a oração, tirar-me-iam também o pensamento.
+        <br />
+        <em>— resumo tradicional do método espiritual de Tomás.</em>
+      </Frase>
+
+    </Subtema>
+
+    <Subtema titulo="A confiança na graça">
+
+      <Frase
+        numero={18}
+        fonte="Guilherme de Tocco, Vita Sancti Thomae, cap. 8 — resposta atribuída a Tomás quando confrontado com dificuldades de compreensão de um texto difícil"
+      >
+        Quando encontro algo que não consigo compreender, prostro-me diante do Crucifixo e peço luz. E o que os livros não me ensinam, o Senhor me ensina no silêncio.
+      </Frase>
+
+      <Frase
+        numero={19}
+        fonte="Tradição espiritual dominicana; possivelmente adaptação de expressões usadas por Tomás em sala de aula"
+      >
+        Não existe pergunta legítima que Deus não queira responder — mas Ele responde no seu tempo, e nem sempre da forma que esperávamos.
+      </Frase>
+
+    </Subtema>
+
+    <Subtema titulo="Sobre a Eucaristia">
+
+      <Frase
+        numero={20}
+        original="Adoro te devote, latens Deitas."
+        fonte="Adoro te devote, hino atribuído a São Tomás — considerado por muitos estudiosos como oração pessoal composta para uso privado, não obra teológica sistemática. Autenticidade tomista amplamente aceita pela tradição carmelita e dominicana"
+      >
+        Adoro-te devotamente, ó Deus que Te ocultas.
+      </Frase>
+
+      <Frase
+        numero={21}
+        fonte="Guilherme de Tocco, Vita Sancti Thomae, cap. 29 — sobre a devoção eucarística de Tomás, particularmente no ofício de Corpus Christi (1264)"
+      >
+        Toda a minha teologia se resume neste altar. Quando o pensamento me falha, aqui encontro o resto que a razão não me pode dar.
+        <br />
+        <em>— frase atribuída à sua devoção eucarística cotidiana.</em>
+      </Frase>
+
+      <Frase
+        numero={22}
+        fonte="Tradição dominicana, transmitida oralmente sem citação documental precisa"
+      >
+        Na Eucaristia calam-se os sentidos, cala-se a razão — mas a fé fala em voz mais alta do que ambos.
+      </Frase>
+
+    </Subtema>
+
+    <Subtema titulo="Sobre a vontade de Deus">
+
+      <Frase
+        numero={23}
+        fonte="Guilherme de Tocco, Vita Sancti Thomae, cap. 32 — resposta atribuída a Tomás quando lhe perguntaram se aceitaria uma dignidade eclesiástica oferecida por Clemente IV (a arquidiocese de Nápoles)"
+      >
+        Não fui feito para dignidades, mas para o estudo e a oração. Se Deus quiser mudar isso, que Ele mude o meu coração antes de mudar o meu ofício.
+      </Frase>
+
+    </Subtema>
+
+  </Capitulo>
+
+  {/* ══════════════════════════════════════════════════════════
+      CAPÍTULO IV — SOBRE A VIRTUDE E A VIDA
+      ══════════════════════════════════════════════════════════ */}
+
+  <Capitulo id="sobre-virtude" numero="IV" titulo="Sobre a Virtude e a Vida" contagem="7 frases">
+
+    <Subtema titulo="A castidade e o corpo" aberto primeiro>
+
+      <Frase
+        numero={24}
+        fonte="Guilherme de Tocco, Vita Sancti Thomae, cap. 6 — narrativa do episódio de Roccasecca, c. 1244; frase atribuída pela tradição hagiográfica ao anjo que apareceu a Tomás após a expulsão da mulher"
+      >
+        Recebe este cíngulo da castidade da parte de Deus, e conserva-o para sempre — nenhuma tentação da carne te vencerá.
+        <br />
+        <em>— tradição da entrega do cíngulo angélico após o episódio da tentação.</em>
+      </Frase>
+
+      <Frase
+        numero={25}
+        fonte="Guilherme de Tocco, Vita Sancti Thomae — testemunho dos condiscípulos sobre a compostura permanente de Tomás após o episódio do cíngulo"
+      >
+        Desde aquele dia, nunca mais senti moção alguma da carne. Mas cuido de evitar as ocasiões: pois o cíngulo protege quem foge do perigo, não quem o procura.
+      </Frase>
+
+    </Subtema>
+
+    <Subtema titulo="Sobre o próximo">
+
+      <Frase
+        numero={26}
+        fonte="Tradição dominicana, transmitida oralmente; ressoa temas paralelos aos escritos de Tomás sobre a caridade"
+      >
+        Ama o próximo mais do que teus livros. Um livro pode esperar; uma alma que precisa de ti, não.
+      </Frase>
+
+      <Frase
+        numero={27}
+        fonte="Guilherme de Tocco, Vita Sancti Thomae, cap. 25 — atribuído a Tomás em resposta a um confrade que se queixava de irmãos difíceis"
+      >
+        Suportar os defeitos dos outros faz parte da caridade — e é ela mesma uma escola em que aprendemos a conhecer nossos próprios defeitos.
+      </Frase>
+
+    </Subtema>
+
+    <Subtema titulo="Sobre a alegria e a tristeza">
+
+      <Frase
+        numero={28}
+        fonte="Tradição atribuída; sem documentação em fonte primária, mas coerente com o temperamento sereno descrito pelos contemporâneos"
+      >
+        A tristeza pelo pecado é sinal de vida. A tristeza sem causa é doença da alma. Aprende a distinguir as duas — e alimenta a primeira, cura a segunda.
+      </Frase>
+
+      <Frase
+        numero={29}
+        fonte="Reginaldo de Piperno, transmitido pela tradição dominicana"
+      >
+        Quem serve a Deus com alegria não teme o que virá amanhã. Quem serve com tristeza já perdeu a batalha antes de começá-la.
+      </Frase>
+
+      <Frase
+        numero={30}
+        fonte="Tradição hagiográfica, sem fonte documental precisa"
+      >
+        A humildade não é pensar mal de si mesmo. É pensar em si mesmo o menos possível.
+      </Frase>
+
+    </Subtema>
+
+  </Capitulo>
+
+  {/* ══════════════════════════════════════════════════════════
+      CAPÍTULO V — SOBRE O MUNDO E OS HOMENS
+      ══════════════════════════════════════════════════════════ */}
+
+  <Capitulo id="sobre-o-mundo" numero="V" titulo="Sobre o Mundo e os Homens" contagem="6 frases">
+
+    <Subtema titulo="Sobre a natureza humana" aberto primeiro>
+
+      <Frase
+        numero={31}
+        fonte="Tradição dominicana, sem documentação em fonte primária"
+      >
+        O homem é a única criatura que pode conhecer a si mesma e, ao conhecer-se, elevar-se acima de si. É também a única que pode odiar-se — e por isso a mais fácil de perder-se.
+      </Frase>
+
+      <Frase
+        numero={32}
+        fonte="Guilherme de Tocco, Vita Sancti Thomae — resposta atribuída em disputa pública, provavelmente em Paris"
+      >
+        Não há inimigo pior do que aquele que não conhece a si mesmo. Este destrói tudo o que toca — inclusive o que ama.
+      </Frase>
+
+    </Subtema>
+
+    <Subtema titulo="Sobre autoridade e obediência">
+
+      <Frase
+        numero={33}
+        fonte="Bernardo Gui, De vita et miraculis S. Thomae — sobre o modo como Tomás obedecia aos superiores dominicanos mesmo quando estes o mandavam interromper obras importantes"
+      >
+        A obediência dá ao ato o valor que a inteligência sozinha não pode dar. Obedecer não é renunciar ao pensamento — é oferecê-lo a Deus através de outro homem.
+      </Frase>
+
+      <Frase
+        numero={34}
+        fonte="Tradição dominicana, atribuída à direção espiritual de Tomás sobre confrades"
+      >
+        Nenhuma autoridade humana obriga contra a consciência formada. Mas cuidado: a consciência que não é formada não é consciência — é preferência disfarçada.
+      </Frase>
+
+    </Subtema>
+
+    <Subtema titulo="Sobre a morte e o tempo">
+
+      <Frase
+        numero={35}
+        fonte="Tradição atribuída, provavelmente adaptada de conversas com discípulos"
+      >
+        Não temas a morte. Teme perder o tempo que ainda te resta antes dela. A morte só é temível para quem chega a ela com as mãos vazias.
+      </Frase>
+
+      <Frase
+        numero={36}
+        fonte="Reginaldo de Piperno, transmitido pela tradição dominicana"
+      >
+        O tempo é o único bem que Deus nos dá em doses iguais. Não temos direito a mais do que hoje — e não podemos guardar nada para depois.
+      </Frase>
+
+    </Subtema>
+
+  </Capitulo>
+
+  {/* ══════════════════════════════════════════════════════════
+      CAPÍTULO VI — PALAVRAS DO FIM DA VIDA
+      ══════════════════════════════════════════════════════════ */}
+
+  <Capitulo id="palavras-finais" numero="VI" titulo="Palavras do Fim da Vida" contagem="8 frases">
+
+    <Subtema titulo="A viagem interrompida" aberto primeiro>
+
+      <Frase
+        numero={37}
+        fonte="Guilherme de Tocco, Vita Sancti Thomae, cap. 55 — palavras atribuídas a Tomás durante a viagem para o Concílio de Lião, ao bater a cabeça em galho caído perto de Borgonuovo, fevereiro de 1274"
+      >
+        Está feito. Chegamos ao fim da nossa viagem.
+        <br />
+        <em>— proferida em tom sereno, interpretada pelos companheiros como pressentimento da morte.</em>
+      </Frase>
+
+      <Frase
+        numero={38}
+        fonte="Guilherme de Tocco, Vita Sancti Thomae, cap. 56 — a Reginaldo, ao ser acolhido na abadia cisterciense de Fossanova, fevereiro de 1274"
+      >
+        Se o Senhor vem buscar-me, é melhor que Ele me encontre numa casa religiosa do que numa casa secular.
+      </Frase>
+
+    </Subtema>
+
+    <Subtema titulo="Na abadia de Fossanova">
+
+      <Frase
+        numero={39}
+        fonte="Depoimento de Nicolau de Fresolino, monge cisterciense de Fossanova, no processo de canonização, 1321"
+      >
+        Meus irmãos, não me tratem com honras que não mereço. Deem-me apenas o que dão aos vossos frades doentes — e um pouco de silêncio para orar.
+        <br />
+        <em>— ao ser acolhido com solenidade excessiva pelos monges de Fossanova.</em>
+      </Frase>
+
+      <Frase
+        numero={40}
+        fonte="Tradição cisterciense de Fossanova, transmitida por Guilherme de Tocco"
+      >
+        Se algo é ainda meu neste mundo, é este corpo cansado. Tomai-o quando o Senhor o pedir — e não vos preocupeis com o resto.
+      </Frase>
+
+    </Subtema>
+
+    <Subtema titulo="A confissão e o comentário ao Cântico">
+
+      <Frase
+        numero={41}
+        fonte="Guilherme de Tocco, Vita Sancti Thomae, cap. 58 — após sua confissão final, feita a Reginaldo de Piperno"
+      >
+        Se eu tivesse escrito ou ensinado alguma coisa contra a fé e os bons costumes, submeto-me em tudo ao juízo da Santa Igreja Romana, em cuja obediência agora deixo esta vida.
+      </Frase>
+
+      <Frase
+        numero={42}
+        fonte="Depoimentos do processo de canonização de Fossanova, 1321 — sobre o breve comentário oral ao Cântico dos Cânticos que Tomás ditou aos monges nos últimos dias, hoje perdido"
+      >
+        Falo-vos deste livro porque me foi pedido. Mas as palavras de amor exigem mais do que palavras — exigem uma vida. E a minha está para acabar.
+      </Frase>
+
+    </Subtema>
+
+    <Subtema titulo="A recepção do Viático">
+
+      <Frase
+        numero={43}
+        fonte="Depoimento de Pedro de Monte San Giovanni, testemunha ocular, no processo de canonização — sobre as palavras de Tomás ao receber a Eucaristia pela última vez, 6 ou 7 de março de 1274"
+      >
+        Recebo-Te, ó preço do resgate da minha alma, ó Viático da minha peregrinação. Por amor de Ti estudei, velei, trabalhei, preguei e ensinei. Nunca disse nada contra Ti; e se disse algo por ignorância, não me obstino nele — deixo tudo à correção da Igreja Romana.
+        <br />
+        <em>— uma das mais longas declarações do fim, preservada em detalhe pelos monges presentes.</em>
+      </Frase>
+
+    </Subtema>
+
+    <Subtema titulo="As últimas palavras">
+
+      <Frase
+        numero={44}
+        original="Suscipe, Domine, animam servi tui."
+        fonte="Tradição unânime dos biógrafos: Guilherme de Tocco, Bernardo Gui, depoimentos do processo de canonização — palavras pronunciadas no momento da morte, madrugada de 7 de março de 1274, na abadia de Fossanova"
+      >
+        Recebe, Senhor, a alma do teu servo.
+      </Frase>
+
+    </Subtema>
+
+  </Capitulo>
+
+</Antologia>

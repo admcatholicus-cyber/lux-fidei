@@ -1,0 +1,183 @@
+/* ============================================================
+   CRONOLOGIA VISUAL — Linha do tempo iconográfica
+   ============================================================ */
+
+.cronologiaWrapper {
+  max-width: 1160px;
+  margin: 0 auto 80px;
+  padding: 56px 0 0;
+  border-top: 1px solid #e2dcd0;
+}
+
+.cronologiaCabecalho {
+  max-width: 700px;
+  margin: 0 auto 56px;
+  text-align: center;
+}
+
+.cronologiaLabel {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.65rem;
+  font-weight: 600;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: #b08a3c;
+  display: block;
+  margin-bottom: 12px;
+}
+
+.cronologiaTitulo {
+  font-family: 'Libre Baskerville', Georgia, serif;
+  font-size: clamp(1.4rem, 2.2vw, 1.9rem);
+  font-weight: 700;
+  color: #2a2520;
+  margin: 0 0 12px;
+}
+
+.cronologiaIntro {
+  font-family: Georgia, serif;
+  font-size: 0.95rem;
+  font-style: italic;
+  color: #6f6758;
+  line-height: 1.7;
+  margin: 0;
+}
+
+/* Trilho da linha do tempo */
+.cronologiaTrilho {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0 80px;
+  padding: 0 0 40px;
+}
+
+/* Linha central */
+.cronologiaTrilho::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  width: 1px;
+  background: linear-gradient(to bottom, #b08a3c40, #b08a3c, #b08a3c40);
+  transform: translateX(-50%);
+}
+
+/* Item par = direita, ímpar = esquerda */
+.cronologiaItem {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 40px;
+}
+
+.cronologiaItem:nth-child(odd) {
+  text-align: right;
+  align-items: flex-end;
+  padding-right: 48px;
+}
+
+.cronologiaItem:nth-child(even) {
+  text-align: left;
+  align-items: flex-start;
+  padding-left: 48px;
+  margin-top: 80px;
+}
+
+/* Marcador central */
+.cronologiaItem::after {
+  display: none; /* usamos pseudo no wrapper */
+}
+
+.cronologiaMarcador {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 10px;
+  height: 10px;
+  background: #b08a3c;
+  border: 2px solid #faf8f4;
+  border-radius: 50%;
+  box-shadow: 0 0 0 3px rgba(176, 138, 60, 0.25);
+}
+
+/* Imagem do item */
+.cronologiaImagemWrapper {
+  position: relative;
+  overflow: hidden;
+  background: #0e0c08;
+  margin-bottom: 16px;
+  width: 100%;
+  max-width: 380px;
+}
+
+.cronologiaImagemWrapper img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  filter: sepia(18%) contrast(1.04);
+  transition: transform 0.45s ease, filter 0.35s ease;
+}
+
+.cronologiaItem:hover .cronologiaImagemWrapper img {
+  transform: scale(1.04);
+  filter: sepia(6%) contrast(1.02);
+}
+
+.cronologiaData {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.62rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #b08a3c;
+  margin-bottom: 6px;
+}
+
+.cronologiaNome {
+  font-family: 'Libre Baskerville', Georgia, serif;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #2a2520;
+  margin-bottom: 4px;
+  line-height: 1.2;
+}
+
+.cronologiaInfo {
+  font-family: Georgia, serif;
+  font-size: 0.83rem;
+  font-style: italic;
+  color: #6f6758;
+  margin-bottom: 10px;
+  line-height: 1.5;
+}
+
+.cronologiaTexto {
+  font-family: Georgia, serif;
+  font-size: 0.85rem;
+  line-height: 1.7;
+  color: #4a4540;
+  max-width: 340px;
+}
+
+@media (max-width: 760px) {
+  .cronologiaTrilho {
+    grid-template-columns: 1fr;
+    padding-left: 32px;
+  }
+
+  .cronologiaTrilho::before {
+    left: 0;
+  }
+
+  .cronologiaItem:nth-child(odd),
+  .cronologiaItem:nth-child(even) {
+    text-align: left;
+    align-items: flex-start;
+    padding-left: 24px;
+    padding-right: 0;
+    margin-top: 0;
+    margin-bottom: 40px;
+  }
+}

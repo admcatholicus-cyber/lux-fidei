@@ -1,0 +1,133 @@
+/* ============================================================
+   VISOR MANUSCRITO — Apresentação de cenas narrativas
+   (iluminuras que contam a vida de Tomás)
+   ============================================================ */
+
+.visorWrapper {
+  max-width: 1160px;
+  margin: 0 auto 80px;
+}
+
+/* Trilho horizontal com scroll  */
+.visorTrilho {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 3px;
+}
+
+@media (max-width: 860px) {
+  .visorTrilho {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 540px) {
+  .visorTrilho {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Cena individual */
+.visorCena {
+  position: relative;
+  overflow: hidden;
+  background: #0e0c08;
+  cursor: pointer;
+}
+
+.visorCena .imagemCena {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  filter: sepia(20%) contrast(1.03);
+  transition: transform 0.55s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+              filter 0.4s ease;
+}
+
+.visorCena:hover .imagemCena {
+  transform: scale(1.05);
+  filter: sepia(8%) contrast(1.01);
+}
+
+/* Velum de cena */
+.visorVelum {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(14, 12, 8, 0.85) 0%,
+    rgba(14, 12, 8, 0.35) 40%,
+    transparent 65%
+  );
+  transition: opacity 0.35s ease;
+}
+
+/* Legenda */
+.visorLegenda {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 32px 24px 24px;
+}
+
+.visorOrdinal {
+  font-family: 'Libre Baskerville', Georgia, serif;
+  font-size: 2rem;
+  font-weight: 700;
+  color: rgba(176, 138, 60, 0.35);
+  line-height: 1;
+  margin: 0 0 8px;
+  display: block;
+  user-select: none;
+}
+
+.visorTituloObra {
+  font-family: 'Libre Baskerville', Georgia, serif;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #f5f0e6;
+  margin: 0 0 4px;
+  line-height: 1.2;
+}
+
+.visorSubtexto {
+  font-family: Georgia, serif;
+  font-size: 0.8rem;
+  font-style: italic;
+  color: #c8bfa8;
+  margin: 0 0 10px;
+}
+
+.visorDescricaoCena {
+  font-family: Georgia, serif;
+  font-size: 0.82rem;
+  line-height: 1.6;
+  color: rgba(245, 240, 230, 0.8);
+  margin: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease;
+}
+
+.visorCena:hover .visorDescricaoCena {
+  max-height: 120px;
+}
+
+/* Chip de cena */
+.visorChip {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  padding: 4px 10px;
+  background: rgba(14, 12, 8, 0.65);
+  border: 1px solid rgba(176, 138, 60, 0.4);
+  font-family: 'Inter', sans-serif;
+  font-size: 0.58rem;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: #d4b872;
+  backdrop-filter: blur(4px);
+}

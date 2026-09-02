@@ -1,0 +1,515 @@
+/* ═════════════════════════════════════════════
+   ANTOLOGIA DE SÃO GABRIEL ARCANJO
+   Sistema visual próprio: sóbrio, litúrgico, 
+   com tipografia hierárquica clara.
+   ═════════════════════════════════════════════ */
+
+.antologia {
+  max-width: 780px;
+  margin: 0 auto;
+  padding: 2rem 1rem 6rem;
+  font-family: var(--font-serif, Georgia, 'Times New Roman', serif);
+  color: var(--cor-texto, #2a2418);
+}
+
+/* ─── Introdução ─── */
+.introducao {
+  margin-bottom: 3rem;
+  padding: 2rem;
+  background: linear-gradient(180deg, #faf7f0 0%, #f4efe4 100%);
+  border-left: 3px solid #a88a4a;
+  border-radius: 2px;
+}
+
+.introducaoInner p {
+  font-size: 1.05rem;
+  line-height: 1.75;
+  margin: 0 0 1rem;
+  color: #3a3220;
+}
+
+.introducaoInner p:last-child {
+  margin-bottom: 0;
+}
+
+/* ─── Busca ─── */
+.buscaWrap {
+  margin-bottom: 2rem;
+}
+
+.busca {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: 1px solid #d4c9a8;
+  background: #fdfbf5;
+  font-family: inherit;
+  font-size: 0.95rem;
+  color: #2a2418;
+  border-radius: 2px;
+  transition: border-color 0.2s;
+}
+
+.busca:focus {
+  outline: none;
+  border-color: #a88a4a;
+}
+
+.buscaInfo {
+  margin: 0.5rem 0 0;
+  font-size: 0.85rem;
+  color: #7a6a48;
+  font-style: italic;
+}
+
+/* ─── Navegação de Capítulos ─── */
+.navCapitulos {
+  margin-bottom: 4rem;
+  padding: 1.5rem;
+  background: #fdfbf5;
+  border: 1px solid #e8dfc8;
+  border-radius: 2px;
+}
+
+.navLista {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 0.5rem;
+}
+
+.navItem {
+  margin: 0;
+}
+
+.navLink {
+  display: flex;
+  align-items: baseline;
+  gap: 1rem;
+  padding: 0.5rem 0.75rem;
+  color: #3a3220;
+  text-decoration: none;
+  border-radius: 2px;
+  transition: background 0.15s;
+}
+
+.navLink:hover {
+  background: #f4efe4;
+}
+
+.navRomano {
+  font-family: var(--font-serif, Georgia, serif);
+  font-size: 0.95rem;
+  color: #a88a4a;
+  font-weight: 600;
+  min-width: 2.5rem;
+}
+
+.navTitulo {
+  font-size: 1rem;
+}
+
+/* ─── Capítulo ─── */
+.capitulo {
+  margin-bottom: 5rem;
+  scroll-margin-top: 2rem;
+}
+
+.capituloHeader {
+  margin-bottom: 3rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid #d4c9a8;
+  text-align: center;
+}
+
+.capituloRomano {
+  font-size: 2rem;
+  color: #a88a4a;
+  font-weight: 400;
+  letter-spacing: 0.1em;
+  margin-bottom: 0.5rem;
+}
+
+.capituloTitulo {
+  font-size: 1.75rem;
+  font-weight: 400;
+  margin: 0 0 1rem;
+  color: #2a2418;
+  letter-spacing: 0.02em;
+}
+
+.capituloEpigrafe {
+  font-style: italic;
+  color: #7a6a48;
+  font-size: 0.95rem;
+  margin: 0;
+  max-width: 32rem;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.6;
+}
+
+.capituloCorpo {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+/* ═════════════════════════════════════════════
+   FALA BÍBLICA — o núcleo do sistema
+   ═════════════════════════════════════════════ */
+
+.fala {
+  padding: 2rem 2.25rem;
+  background: #fdfbf5;
+  border: 1px solid #e8dfc8;
+  border-left: 4px solid #a88a4a;
+  border-radius: 2px;
+  position: relative;
+}
+
+.falaDestaque {
+  background: linear-gradient(180deg, #fdfbf5 0%, #f9f3e4 100%);
+  border-left-width: 6px;
+  border-left-color: #8b6f2e;
+  box-shadow: 0 2px 8px rgba(139, 111, 46, 0.08);
+}
+
+.falaHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 1rem;
+  margin-bottom: 0.75rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px dashed #d4c9a8;
+  flex-wrap: wrap;
+}
+
+.falaReferencia {
+  font-family: var(--font-serif, Georgia, serif);
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #8b6f2e;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.falaDestinatario {
+  font-size: 0.85rem;
+  color: #7a6a48;
+  font-style: italic;
+}
+
+.falaCena {
+  font-size: 0.9rem;
+  color: #6a5a3a;
+  font-style: italic;
+  margin: 0 0 1.5rem;
+  line-height: 1.6;
+}
+
+.falaTraducao {
+  margin: 0 0 1.5rem;
+  padding: 0;
+  border: none;
+}
+
+.falaTraducaoTexto {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  color: #2a2418;
+  font-family: var(--font-serif, Georgia, serif);
+  quotes: '\201C' '\201D';
+}
+
+.falaDestaque .falaTraducaoTexto {
+  font-size: 1.35rem;
+  font-weight: 500;
+}
+
+.falaTraducaoTexto::before {
+  content: open-quote;
+  color: #a88a4a;
+  font-size: 1.5em;
+  line-height: 0;
+  vertical-align: -0.2em;
+  margin-right: 0.1em;
+}
+
+.falaTraducaoTexto::after {
+  content: close-quote;
+  color: #a88a4a;
+  font-size: 1.5em;
+  line-height: 0;
+  vertical-align: -0.4em;
+  margin-left: 0.1em;
+}
+
+/* ─── Original (details/summary) ─── */
+.falaOriginal,
+.comentarioOriginal,
+.liturgicoOriginal {
+  margin-top: 1rem;
+  border-top: 1px solid #e8dfc8;
+  padding-top: 1rem;
+}
+
+.falaOriginalSummary {
+  cursor: pointer;
+  font-size: 0.85rem;
+  color: #8b6f2e;
+  font-family: var(--font-sans, system-ui, sans-serif);
+  padding: 0.25rem 0;
+  user-select: none;
+  list-style: none;
+}
+
+.falaOriginalSummary::before {
+  content: '▸ ';
+  transition: transform 0.2s;
+  display: inline-block;
+}
+
+.falaOriginal[open] .falaOriginalSummary::before,
+.comentarioOriginal[open] summary::before,
+.liturgicoOriginal[open] summary::before {
+  content: '▾ ';
+}
+
+.falaOriginalCorpo {
+  margin-top: 1rem;
+  padding: 1rem;
+  background: #f4efe4;
+  border-radius: 2px;
+}
+
+.originalBloco {
+  margin-bottom: 0.75rem;
+}
+
+.originalBloco:last-child {
+  margin-bottom: 0;
+}
+
+.originalLabel {
+  display: block;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #8b6f2e;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: 0.25rem;
+}
+
+.originalTexto {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: #3a3220;
+  margin: 0;
+}
+
+.originalTransliteracao {
+  font-style: italic;
+  font-size: 0.95rem;
+  color: #5a4a30;
+  margin: 0;
+}
+
+.originalFonte {
+  margin-top: 0.75rem;
+  font-size: 0.8rem;
+  color: #7a6a48;
+  font-style: italic;
+}
+
+/* ═════════════════════════════════════════════
+   COMENTÁRIO PATRÍSTICO/TEOLÓGICO
+   ═════════════════════════════════════════════ */
+
+.comentario {
+  display: grid;
+  grid-template-columns: 8rem 1fr;
+  gap: 1.5rem;
+  padding: 1.75rem;
+  background: #fdfbf5;
+  border: 1px solid #e8dfc8;
+  border-radius: 2px;
+}
+
+.comentarioIdent {
+  text-align: center;
+  padding-right: 1.5rem;
+  border-right: 1px solid #e8dfc8;
+}
+
+.comentarioInicial {
+  font-family: var(--font-serif, Georgia, serif);
+  font-size: 3.5rem;
+  color: #a88a4a;
+  line-height: 1;
+  margin-bottom: 0.75rem;
+  font-weight: 400;
+}
+
+.comentarioNome {
+  font-size: 0.95rem;
+  font-weight: 600;
+  margin: 0 0 0.25rem;
+  color: #2a2418;
+  line-height: 1.3;
+}
+
+.comentarioQualif {
+  font-size: 0.75rem;
+  color: #7a6a48;
+  margin: 0 0 0.5rem;
+  line-height: 1.4;
+}
+
+.comentarioObra {
+  font-size: 0.8rem;
+  color: #5a4a30;
+  margin: 0;
+  line-height: 1.4;
+}
+
+.comentarioTexto {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: #2a2418;
+  margin: 0 0 1rem;
+  padding: 0;
+  border: none;
+  font-style: italic;
+}
+
+.comentarioFonte {
+  font-size: 0.8rem;
+  color: #7a6a48;
+  font-style: italic;
+  margin: 0;
+  padding-top: 0.75rem;
+  border-top: 1px dashed #e8dfc8;
+}
+
+.comentarioOriginal summary,
+.liturgicoOriginal summary {
+  cursor: pointer;
+  font-size: 0.85rem;
+  color: #8b6f2e;
+  padding: 0.25rem 0;
+  list-style: none;
+  user-select: none;
+}
+
+.comentarioOriginal summary::before,
+.liturgicoOriginal summary::before {
+  content: '▸ ';
+  display: inline-block;
+}
+
+/* Responsivo comentário */
+@media (max-width: 640px) {
+  .comentario {
+    grid-template-columns: 1fr;
+  }
+  
+  .comentarioIdent {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    text-align: left;
+    padding-right: 0;
+    padding-bottom: 1rem;
+    border-right: none;
+    border-bottom: 1px solid #e8dfc8;
+  }
+  
+  .comentarioInicial {
+    font-size: 2.5rem;
+    margin-bottom: 0;
+  }
+}
+
+/* ═════════════════════════════════════════════
+   TEXTO LITÚRGICO
+   ═════════════════════════════════════════════ */
+
+.liturgico {
+  padding: 1.75rem;
+  background: linear-gradient(180deg, #fbf9f2 0%, #f4efe4 100%);
+  border: 1px solid #d4c9a8;
+  border-radius: 2px;
+}
+
+.liturgicoHeader {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.25rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #d4c9a8;
+}
+
+.liturgicoSelo {
+  font-size: 1.75rem;
+  color: #8b6f2e;
+  line-height: 1;
+}
+
+.liturgicoTitulo {
+  font-size: 1.25rem;
+  font-weight: 500;
+  margin: 0 0 0.25rem;
+  color: #2a2418;
+  letter-spacing: 0.02em;
+}
+
+.liturgicoTipo {
+  font-size: 0.8rem;
+  color: #7a6a48;
+  margin: 0;
+  font-style: italic;
+}
+
+.liturgicoMeta {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  margin-bottom: 1.5rem;
+  padding: 0.75rem 1rem;
+  background: #fdfbf5;
+  border-left: 2px solid #a88a4a;
+  font-size: 0.85rem;
+  color: #5a4a30;
+}
+
+.liturgicoMeta strong {
+  color: #8b6f2e;
+  font-weight: 600;
+}
+
+.liturgicoCorpo {
+  font-size: 1.05rem;
+  line-height: 1.85;
+  color: #2a2418;
+  font-family: var(--font-serif, Georgia, serif);
+}
+
+.liturgicoCorpo p {
+  margin: 0 0 1rem;
+}
+
+.liturgicoCorpo p:last-child {
+  margin-bottom: 0;
+}
+
+.liturgicoFonte {
+  margin: 1rem 0 0;
+  padding-top: 0.75rem;
+  border-top: 1px dashed #d4c9a8;
+  font-size: 0.8rem;
+  color: #7a6a48;
+  font-style: italic;
+}

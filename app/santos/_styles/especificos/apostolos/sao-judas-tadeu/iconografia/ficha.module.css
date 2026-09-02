@@ -1,0 +1,123 @@
+/* ============================================
+   FICHA DE OBRA — ICONOGRAFIA
+   ============================================ */
+
+.ficha {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0;
+  background: #ffffff;
+  border: 1px solid #e2dcd0;
+  border-radius: 6px;
+  overflow: hidden;
+  align-items: stretch;
+}
+
+/* ---------- IMAGEM ---------- */
+
+.fichaImagem {
+  background: #faf8f4;
+  display: block;
+  line-height: 0;
+  overflow: hidden;
+  position: relative;
+}
+
+.fichaImg {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  object-position: center top;
+}
+
+/* ---------- CONTEÚDO ---------- */
+
+.fichaConteudo {
+  padding: 28px 28px 32px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.fichaTitulo {
+  font-family: 'Libre Baskerville', Georgia, serif;
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #3a3530;
+  margin: 0 0 20px;
+  line-height: 1.35;
+  padding-bottom: 16px;
+  border-bottom: 2px solid #b08a3c;
+}
+
+/* ---------- TABELA ---------- */
+
+.fichaTabela {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+.fichaTabela th,
+.fichaTabela td {
+  padding: 7px 0;
+  font-family: Georgia, 'Times New Roman', 'Noto Serif', serif;
+  font-size: 0.85rem;
+  text-align: left;
+  vertical-align: top;
+  border-bottom: 1px solid #ece8df;
+}
+
+.fichaTabela th {
+  width: 110px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  font-size: 0.72rem;
+  color: #b08a3c;
+  padding-right: 12px;
+}
+
+.fichaTabela td {
+  color: #3a3530;
+}
+
+/* ---------- ANÁLISE ---------- */
+
+.fichaAnalise {
+  font-family: Georgia, 'Times New Roman', 'Noto Serif', serif;
+  font-size: 0.92rem;
+  line-height: 1.78;
+  color: #3a3530;
+  margin-top: auto;
+}
+
+.fichaAnalise p {
+  margin: 0 0 10px;
+}
+
+.fichaAnalise p:last-child {
+  margin-bottom: 0;
+}
+
+/* ---------- RESPONSIVO ---------- */
+
+@media (max-width: 900px) {
+  .ficha {
+    grid-template-columns: 1fr;
+    align-items: stretch;
+  }
+
+  .fichaImagem {
+    aspect-ratio: 4 / 3;
+  }
+
+  .fichaImg {
+    object-position: center top;
+  }
+
+  .fichaConteudo {
+    padding: 22px 20px 26px;
+  }
+}

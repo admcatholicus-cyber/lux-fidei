@@ -1,0 +1,39 @@
+ .hero {
+  background: var(--cor-fundo-destaque);
+  padding: var(--espaco-secao) 0;
+  text-align: center;
+  border-bottom: 2px solid var(--cor-borda);
+}
+
+.container {
+  max-width: var(--largura-maxima);
+  margin: 0 auto;
+  padding: 0 var(--espaco-interno);
+}
+
+.titulo {
+  font-family: var(--fonte-titulo);
+  font-size: var(--tamanho-h1);
+  color: var(--cor-dourado-escuro);
+  margin-bottom: var(--espaco-minimo);
+}
+
+.subtitulo {
+  font-family: var(--fonte-texto);
+  font-size: var(--tamanho-h4);
+  color: var(--cor-texto-secundario);
+  margin-bottom: var(--espaco-interno);
+}
+
+.conteudo {
+  text-align: left;
+}
+
+.paragrafo {
+  font-family: var(--fonte-texto);
+  font-size: var(--tamanho-texto);
+  color: var(--cor-texto-principal);
+  line-height: 1.8;
+  margin-bottom: var(--espaco-entre-itens);
+}
+

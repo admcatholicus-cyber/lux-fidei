@@ -1,0 +1,1369 @@
+/* app/estudos/sacramentos/primeira-comunhao/comunhao.module.css */
+/* ============================================================
+   RESET GLOBAL (escopo desta página)
+   ============================================================ */
+
+:global(html),
+:global(body) {
+  margin: 0 !important;
+  padding: 0 !important;
+  min-height: 100%;
+  background: #2a0a0a !important;  /* cor escura do fundo pra combinar */
+  overflow-x: hidden;
+}
+
+:global(*),
+:global(*::before),
+:global(*::after) {
+  box-sizing: border-box;
+}
+/* ============================================================
+   VARIÁVEIS
+   ============================================================ */
+
+.pageWrapper {
+  --wine: #8B1428;
+  --wine-deep: #5C0D1A;
+  --wine-light: #C41E3A;
+  --gold: #D4AF37;
+  --gold-light: #F0D060;
+  --gold-pale: #FFF8E1;
+  --cream: #FFFDF7;
+  --parchment: #F8F5F0;
+  --text: #2C2C2C;
+  --text-soft: #555;
+  --text-muted: #888;
+  --border: #E8E0D8;
+
+  font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+  color: var(--text);
+  background: var(--cream);
+  line-height: 1.7;
+  overflow-x: hidden;
+}
+
+/* ============================================================
+   NAV
+   ============================================================ */
+
+.navPrincipal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background: rgba(255, 253, 247, 0.92);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(139, 20, 40, 0.12);
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.06);
+  transition: transform 0.45s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.navEscondida {
+  transform: translateY(-100%);
+}
+
+.navContainer {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0,2rem 1.5rem;  /* ← era 0.65rem, agora 0.3rem (menos altura) */
+}
+
+.btnVoltar {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 18px;
+  background: transparent;
+  color: var(--wine);
+  border: 1.5px solid var(--wine);
+  border-radius: 24px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  text-decoration: none;
+  letter-spacing: 0.03em;
+  transition: all 0.3s ease;
+}
+
+.btnVoltar:hover {
+  background: var(--wine);
+  color: #fff;
+}
+
+.navLogo {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.navLogoText {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--wine);
+}
+
+.navToggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 20px;
+  background: var(--wine);
+  color: #fff;
+  border: none;
+  border-radius: 24px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.navToggle:hover {
+  background: var(--wine-deep);
+  transform: translateY(-1px);
+}
+
+.navToggleTexto {
+  text-transform: uppercase;
+}
+
+@media (max-width: 480px) {
+  .btnVoltarTexto { display: none; }
+  .navToggleTexto { display: none; }
+}
+
+/* ============================================================
+   SIDEBAR
+   ============================================================ */
+
+.sidebarOverlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0);
+  z-index: 1100;
+  pointer-events: none;
+  transition: background 0.4s ease;
+}
+
+.sidebarOverlayAtivo {
+  background: rgba(0, 0, 0, 0.55);
+  pointer-events: all;
+}
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  right: -400px;
+  width: 380px;
+  max-width: 90vw;
+  height: 100vh;
+  z-index: 1200;
+  background: linear-gradient(180deg, #1a0a10 0%, #2a0f18 40%, #1a0a10 100%);
+  color: #f0e6d3;
+  display: flex;
+  flex-direction: column;
+  transition: right 0.45s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: -10px 0 40px rgba(0, 0, 0, 0.4);
+}
+
+.sidebarAtivo {
+  right: 0;
+}
+
+.sidebarHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.5rem;
+  border-bottom: 1px solid rgba(212, 175, 55, 0.15);
+}
+
+.sidebarLogo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--gold);
+}
+
+.sidebarLogoIcon {
+  font-size: 1.4rem;
+}
+
+.sidebarFechar {
+  background: transparent;
+  border: 1px solid rgba(240, 230, 211, 0.2);
+  color: #f0e6d3;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.sidebarFechar:hover {
+  background: rgba(196, 30, 58, 0.3);
+  border-color: var(--wine-light);
+}
+
+.sidebarConteudo {
+  flex: 1;
+  overflow-y: auto;
+  padding: 1.5rem;
+}
+
+.sidebarSupratitulo {
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  color: var(--gold);
+  margin-bottom: 0.2rem;
+}
+
+.sidebarSubtitulo {
+  font-size: 0.82rem;
+  color: rgba(240, 230, 211, 0.5);
+  margin-bottom: 1.5rem;
+}
+
+.sidebarGrupo {
+  margin-bottom: 1.8rem;
+}
+
+.sidebarGrupoTitulo {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: rgba(240, 230, 211, 0.4);
+  margin-bottom: 0.8rem;
+  padding-bottom: 0.4rem;
+  border-bottom: 1px solid rgba(212, 175, 55, 0.1);
+}
+
+.sidebarLinks {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebarLinks li {
+  margin-bottom: 2px;
+}
+
+.sidebarLinks a {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 14px;
+  color: #f0e6d3;
+  text-decoration: none;
+  border-radius: 8px;
+  font-size: 0.92rem;
+  transition: all 0.25s ease;
+}
+
+.sidebarLinks a:hover {
+  background: rgba(212, 175, 55, 0.1);
+  color: var(--gold);
+}
+
+.ativoLink {
+  background: rgba(212, 175, 55, 0.15) !important;
+  color: var(--gold) !important;
+  font-weight: 600;
+  border-left: 3px solid var(--gold);
+}
+
+.sidebarNum {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 26px;
+  height: 26px;
+  background: rgba(212, 175, 55, 0.12);
+  border-radius: 6px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: var(--gold);
+  flex-shrink: 0;
+}
+
+.sidebarRodape {
+  padding: 1.2rem 1.5rem;
+  border-top: 1px solid rgba(212, 175, 55, 0.1);
+  text-align: center;
+  font-size: 0.85rem;
+  color: rgba(240, 230, 211, 0.5);
+}
+
+.sidebarRodapeRef {
+  font-size: 0.75rem;
+  margin-top: 0.3rem;
+  color: var(--gold);
+  opacity: 0.6;
+}
+
+/* ============================================================
+   HERO
+   ============================================================ */
+
+.hero {
+  position: relative;
+  min-height: 92vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(160deg, #1a0a10 0%, #2a0f18 30%, #3d1520 60%, #1a0a10 100%);
+  overflow: hidden;
+  padding: 6rem 2rem 4rem;
+}
+
+.heroContent {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  max-width: 800px;
+}
+
+.hero h1 {
+  font-size: clamp(2.5rem, 6vw, 4.2rem);
+  font-weight: 800;
+  color: #fff;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 0.6rem;
+  text-shadow: 0 4px 30px rgba(212, 175, 55, 0.3);
+}
+
+.heroSubtitle {
+  font-size: clamp(0.95rem, 2vw, 1.15rem);
+  color: var(--gold);
+  letter-spacing: 0.06em;
+  margin-bottom: 2rem;
+  opacity: 0.9;
+}
+
+.heroVerse {
+  max-width: 620px;
+  margin: 0 auto 2.5rem;
+  padding: 1.5rem 2rem;
+  background: rgba(212, 175, 55, 0.06);
+  border: 1px solid rgba(212, 175, 55, 0.15);
+  border-radius: 12px;
+}
+
+.heroVerse p {
+  color: rgba(255, 255, 255, 0.85);
+  font-style: italic;
+  font-size: 1.02rem;
+  line-height: 1.8;
+}
+
+.heroVerse cite {
+  display: block;
+  margin-top: 0.8rem;
+  color: var(--gold);
+  font-size: 0.85rem;
+  font-style: normal;
+  opacity: 0.8;
+}
+
+.heroBtns {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.heroParticles {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.particle {
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  background: var(--gold);
+  border-radius: 50%;
+  opacity: 0;
+  animation: particleRise 8s ease-in-out infinite;
+}
+
+.particle:nth-child(1)  { left: 8%;  animation-delay: 0s;   animation-duration: 7s; }
+.particle:nth-child(2)  { left: 18%; animation-delay: 1.2s; animation-duration: 9s; }
+.particle:nth-child(3)  { left: 28%; animation-delay: 0.5s; animation-duration: 6s; }
+.particle:nth-child(4)  { left: 38%; animation-delay: 2s;   animation-duration: 8s; }
+.particle:nth-child(5)  { left: 48%; animation-delay: 0.8s; animation-duration: 10s; }
+.particle:nth-child(6)  { left: 58%; animation-delay: 1.5s; animation-duration: 7s; }
+.particle:nth-child(7)  { left: 68%; animation-delay: 0.3s; animation-duration: 9s; }
+.particle:nth-child(8)  { left: 78%; animation-delay: 2.5s; animation-duration: 6.5s; }
+.particle:nth-child(9)  { left: 88%; animation-delay: 1s;   animation-duration: 8s; }
+.particle:nth-child(10) { left: 95%; animation-delay: 1.8s; animation-duration: 7.5s; }
+
+@keyframes particleRise {
+  0%   { bottom: -10%; opacity: 0; transform: scale(0.5); }
+  15%  { opacity: 0.6; }
+  50%  { opacity: 0.3; transform: scale(1); }
+  100% { bottom: 110%; opacity: 0; transform: scale(0.3); }
+}
+
+/* ============================================================
+   BOTÕES
+   ============================================================ */
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 14px 32px;
+  border-radius: 30px;
+  font-size: 0.9rem;
+  font-weight: 700;
+  text-decoration: none;
+  letter-spacing: 0.04em;
+  transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+  border: none;
+}
+
+.btnGold {
+  background: linear-gradient(135deg, var(--gold) 0%, #C9A025 100%);
+  color: #1a0a10;
+  box-shadow: 0 4px 20px rgba(212, 175, 55, 0.35);
+}
+
+.btnGold:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 30px rgba(212, 175, 55, 0.5);
+}
+
+.btnOutline {
+  background: transparent;
+  color: #fff;
+  border: 1.5px solid rgba(255, 255, 255, 0.35);
+}
+
+.btnOutline:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.6);
+  transform: translateY(-2px);
+}
+
+/* ============================================================
+   CONTAINERS & LAYOUT
+   ============================================================ */
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.sectionWrapper {
+  padding: 5rem 0;
+}
+
+.bgDark {
+  background: linear-gradient(180deg, #1a0a10 0%, #2a0f18 50%, #1a0a10 100%);
+  color: #f0e6d3;
+  padding: 5rem 0;
+}
+
+.bgLight {
+  background: var(--parchment);
+  padding: 5rem 0;
+}
+
+/* ============================================================
+   SECTION HEADERS
+   ============================================================ */
+
+.sectionHeader {
+  text-align: center;
+  margin-bottom: 3.5rem;
+}
+
+.sectionHeader h2 {
+  font-size: clamp(1.8rem, 4vw, 2.6rem);
+  font-weight: 800;
+  color: var(--wine);
+  margin-bottom: 0.8rem;
+  line-height: 1.2;
+}
+
+.sectionHeader p {
+  font-size: 1.05rem;
+  color: var(--text-soft);
+  max-width: 650px;
+  margin: 0 auto;
+}
+
+.sectionHeaderDark h2 {
+  color: #fff;
+}
+
+.sectionHeaderDark p {
+  color: rgba(240, 230, 211, 0.6);
+}
+
+.sectionTag {
+  display: inline-block;
+  padding: 6px 18px;
+  background: linear-gradient(135deg, rgba(139, 20, 40, 0.08), rgba(196, 30, 58, 0.05));
+  color: var(--wine);
+  border: 1px solid rgba(139, 20, 40, 0.15);
+  border-radius: 20px;
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  margin-bottom: 1rem;
+}
+
+.sectionTagDark {
+  display: inline-block;
+  padding: 6px 18px;
+  background: rgba(212, 175, 55, 0.1);
+  color: var(--gold);
+  border: 1px solid rgba(212, 175, 55, 0.2);
+  border-radius: 20px;
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  margin-bottom: 1rem;
+}
+
+/* ============================================================
+   GRIDS
+   ============================================================ */
+
+.grid2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.8rem;
+}
+
+.grid3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.8rem;
+}
+
+.grid4 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+}
+
+@media (max-width: 900px) {
+  .grid3 { grid-template-columns: repeat(2, 1fr); }
+  .grid4 { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 640px) {
+  .grid2 { grid-template-columns: 1fr; }
+  .grid3 { grid-template-columns: 1fr; }
+  .grid4 { grid-template-columns: 1fr; }
+}
+
+/* ============================================================
+   CARDS
+   ============================================================ */
+
+.card {
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 2rem;
+  transition: all 0.35s ease;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 35px rgba(139, 20, 40, 0.08);
+  border-color: rgba(139, 20, 40, 0.15);
+}
+
+.cardWine {
+  border-top: 4px solid var(--wine);
+}
+
+.cardGold {
+  border-top: 4px solid var(--gold);
+}
+
+.cardIcon {
+  font-size: 2.2rem;
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.card h3 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--wine);
+  margin-bottom: 0.8rem;
+}
+
+.card p {
+  color: var(--text-soft);
+  font-size: 0.95rem;
+  line-height: 1.75;
+}
+
+.cardDark {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(212, 175, 55, 0.1);
+  border-radius: 16px;
+  padding: 2rem;
+  transition: all 0.35s ease;
+}
+
+.cardDark:hover {
+  background: rgba(212, 175, 55, 0.06);
+  border-color: rgba(212, 175, 55, 0.2);
+  transform: translateY(-4px);
+}
+
+.cardDark h3 {
+  color: var(--gold);
+  margin-bottom: 0.8rem;
+}
+
+.cardDark p {
+  color: rgba(240, 230, 211, 0.7);
+}
+
+/* ============================================================
+   QUOTE BLOCK
+   ============================================================ */
+
+.quoteBlock {
+  position: relative;
+  padding: 2rem 2.5rem;
+  margin: 2rem 0;
+  background: linear-gradient(135deg, var(--gold-pale), #fff);
+  border-left: 4px solid var(--gold);
+  border-radius: 0 12px 12px 0;
+}
+
+.quoteBlock p {
+  font-style: italic;
+  color: var(--text);
+  font-size: 1.05rem;
+  line-height: 1.8;
+}
+
+.quoteBlock cite {
+  display: block;
+  margin-top: 0.8rem;
+  font-size: 0.85rem;
+  color: var(--wine);
+  font-style: normal;
+  font-weight: 600;
+}
+
+.quoteBlockDark {
+  background: rgba(212, 175, 55, 0.06);
+  border-left-color: var(--gold);
+}
+
+.quoteBlockDark p {
+  color: rgba(240, 230, 211, 0.85);
+}
+
+.quoteBlockDark cite {
+  color: var(--gold);
+}
+
+/* ============================================================
+   HIGHLIGHT
+   ============================================================ */
+
+.highlight {
+  padding: 1.5rem 2rem;
+  background: linear-gradient(135deg, rgba(139, 20, 40, 0.04), rgba(212, 175, 55, 0.06));
+  border: 1px solid rgba(139, 20, 40, 0.1);
+  border-radius: 12px;
+  margin: 2rem 0;
+}
+
+.highlight h4 {
+  color: var(--wine);
+  font-size: 1rem;
+  margin-bottom: 0.6rem;
+}
+
+.highlight p {
+  color: var(--text-soft);
+  font-size: 0.95rem;
+}
+
+/* ============================================================
+   DIVIDER
+   ============================================================ */
+
+.divider {
+  text-align: center;
+  padding: 2.5rem 0;
+  font-size: 1.2rem;
+  color: var(--gold);
+  letter-spacing: 0.8rem;
+  opacity: 0.5;
+}
+
+/* ============================================================
+   TIMELINE
+   ============================================================ */
+
+.timeline {
+  position: relative;
+  padding-left: 3rem;
+  margin: 2rem 0;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 14px;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: linear-gradient(180deg, var(--gold), var(--wine), var(--gold));
+  border-radius: 2px;
+}
+
+.timelineItem {
+  position: relative;
+  padding: 1.5rem 0 2.5rem 2rem;
+}
+
+.timelineItem::before {
+  content: '';
+  position: absolute;
+  left: -2.45rem;
+  top: 1.8rem;
+  width: 12px;
+  height: 12px;
+  background: var(--gold);
+  border-radius: 50%;
+  border: 3px solid var(--cream);
+  box-shadow: 0 0 0 2px var(--gold);
+}
+
+.timelineDate {
+  display: inline-block;
+  padding: 4px 14px;
+  background: var(--wine);
+  color: #fff;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  margin-bottom: 0.8rem;
+}
+
+.timelineItem h3 {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--wine);
+  margin-bottom: 0.6rem;
+}
+
+.timelineItem p {
+  color: var(--text-soft);
+  font-size: 0.95rem;
+  line-height: 1.75;
+}
+
+.bgDark .timelineItem::before {
+  border-color: #1a0a10;
+}
+
+.bgDark .timeline::before {
+  background: linear-gradient(180deg, var(--gold), rgba(212, 175, 55, 0.3), var(--gold));
+}
+
+.bgDark .timelineItem h3 { color: #fff; }
+.bgDark .timelineItem p { color: rgba(240, 230, 211, 0.7); }
+.bgDark .timelineDate { background: var(--gold); color: #1a0a10; }
+
+/* ============================================================
+   RITO STEPS
+   ============================================================ */
+
+.ritoStep {
+  position: relative;
+  padding: 2rem;
+  margin-bottom: 1.5rem;
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  transition: all 0.3s ease;
+}
+
+.ritoStep:hover {
+  border-color: rgba(139, 20, 40, 0.15);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
+}
+
+.ritoStepNumber {
+  display: inline-block;
+  padding: 4px 14px;
+  background: var(--wine);
+  color: #fff;
+  border-radius: 20px;
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  margin-bottom: 1rem;
+}
+
+.ritoStep h3 {
+  font-size: 1.15rem;
+  color: var(--wine);
+  margin-bottom: 0.6rem;
+}
+
+.ritoStep p {
+  color: var(--text-soft);
+  font-size: 0.95rem;
+  line-height: 1.75;
+}
+
+/* ============================================================
+   PREPARAÇÃO STEPS
+   ============================================================ */
+
+.step {
+  display: flex;
+  gap: 1.5rem;
+  align-items: flex-start;
+  margin-bottom: 2rem;
+}
+
+.stepNumber {
+  flex-shrink: 0;
+  width: 44px;
+  height: 44px;
+  background: linear-gradient(135deg, var(--wine), var(--wine-deep));
+  color: #fff;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  font-size: 1.1rem;
+}
+
+.stepContent h3 {
+  font-size: 1.1rem;
+  color: var(--wine);
+  margin-bottom: 0.4rem;
+}
+
+.stepContent p {
+  color: var(--text-soft);
+  font-size: 0.95rem;
+  line-height: 1.75;
+}
+
+/* ============================================================
+   SANTO CARDS
+   ============================================================ */
+
+.santoCard {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(212, 175, 55, 0.1);
+  border-radius: 16px;
+  overflow: hidden;
+  transition: all 0.35s ease;
+}
+
+.santoCard:hover {
+  border-color: rgba(212, 175, 55, 0.25);
+  transform: translateY(-4px);
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.2);
+}
+
+.santoHeader {
+  padding: 1.5rem;
+  text-align: center;
+  border-bottom: 1px solid rgba(212, 175, 55, 0.1);
+}
+
+.santoEmoji {
+  font-size: 2.5rem;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.santoHeader h3 {
+  font-size: 1.1rem;
+  color: #fff;
+  font-weight: 700;
+}
+
+.santoEpoca {
+  display: inline-block;
+  margin-top: 0.4rem;
+  padding: 3px 12px;
+  background: rgba(212, 175, 55, 0.1);
+  color: var(--gold);
+  border-radius: 12px;
+  font-size: 0.72rem;
+  font-weight: 600;
+}
+
+.santoBody {
+  padding: 1.5rem;
+}
+
+.santoBody blockquote {
+  font-style: italic;
+  color: rgba(240, 230, 211, 0.8);
+  font-size: 0.92rem;
+  line-height: 1.7;
+  padding: 1rem;
+  background: rgba(212, 175, 55, 0.04);
+  border-left: 3px solid var(--gold);
+  border-radius: 0 8px 8px 0;
+  margin-bottom: 1rem;
+}
+
+.santoBody p {
+  color: rgba(240, 230, 211, 0.6);
+  font-size: 0.88rem;
+  line-height: 1.7;
+}
+
+/* ============================================================
+   ORAÇÃO BOX
+   ============================================================ */
+
+.oracaoBox {
+  background: linear-gradient(135deg, #1a0a10, #2a0f18);
+  border: 1px solid rgba(212, 175, 55, 0.15);
+  border-radius: 16px;
+  padding: 2rem;
+  color: #f0e6d3;
+}
+
+.oracaoBox h3 {
+  color: var(--gold);
+  font-size: 1.05rem;
+  margin-bottom: 1rem;
+}
+
+.oracaoBox p {
+  color: rgba(240, 230, 211, 0.8);
+  font-style: italic;
+  line-height: 2;
+  font-size: 0.95rem;
+}
+
+.oracaoContexto {
+  font-size: 0.82rem !important;
+  color: rgba(240, 230, 211, 0.45) !important;
+  margin-bottom: 1rem !important;
+}
+
+/* ============================================================
+   DESTAQUE DARK BOX
+   ============================================================ */
+
+.destaqueBoxDark {
+  padding: 2.5rem;
+  background: rgba(212, 175, 55, 0.04);
+  border: 1px solid rgba(212, 175, 55, 0.15);
+  border-radius: 16px;
+  margin-top: 2rem;
+}
+
+.destaqueBoxDark h3 {
+  color: var(--gold);
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+.destaqueBoxDark p {
+  color: rgba(240, 230, 211, 0.7);
+  font-size: 0.95rem;
+  line-height: 1.8;
+  margin-bottom: 1rem;
+}
+
+/* ============================================================
+   HISTORIA BOX
+   ============================================================ */
+
+.historiaBox {
+  padding: 2.5rem;
+  background: linear-gradient(135deg, var(--gold-pale), #fff);
+  border: 1px solid rgba(212, 175, 55, 0.25);
+  border-radius: 16px;
+  margin: 2rem 0;
+}
+
+.historiaBox h3 {
+  color: var(--wine);
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+}
+
+.historiaBox p {
+  color: var(--text-soft);
+  font-size: 0.95rem;
+  line-height: 1.8;
+  margin-bottom: 1rem;
+}
+
+/* ============================================================
+   STAT CARD
+   ============================================================ */
+
+.statCard {
+  text-align: center;
+  padding: 2rem 1rem;
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  transition: all 0.35s ease;
+}
+
+.statCard:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+}
+
+.statNumber {
+  display: block;
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: var(--wine);
+  margin-bottom: 0.5rem;
+}
+
+.statLabel {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  line-height: 1.4;
+}
+
+/* ============================================================
+   ACCORDION (FAQ)
+   ============================================================ */
+
+.accordionItem {
+  margin-bottom: 0.8rem;
+  border: 1px solid rgba(212, 175, 55, 0.12);
+  border-radius: 12px;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.accordionHeader {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.2rem 1.5rem;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+  color: #f0e6d3;
+  transition: background 0.3s ease;
+}
+
+.accordionHeader:hover {
+  background: rgba(212, 175, 55, 0.06);
+}
+
+.accordionHeader h3 {
+  font-size: 0.95rem;
+  font-weight: 600;
+  margin: 0;
+  flex: 1;
+}
+
+.accordionIcon {
+  font-size: 0.8rem;
+  color: var(--gold);
+  transition: transform 0.3s ease;
+  flex-shrink: 0;
+  margin-left: 1rem;
+}
+
+.accordionIconRotated {
+  transform: rotate(180deg);
+}
+
+.accordionContent {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease;
+}
+
+.accordionContentActive {
+  max-height: 1200px;
+  padding: 0 1.5rem 1.5rem;
+}
+
+.accordionContent p {
+  color: rgba(240, 230, 211, 0.7);
+  font-size: 0.92rem;
+  line-height: 1.75;
+}
+
+/* ============================================================
+   TABELA
+   ============================================================ */
+
+.tabelaContainer {
+  overflow-x: auto;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+}
+
+.tabelaContainer table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.92rem;
+}
+
+.tabelaContainer th {
+  background: var(--wine);
+  color: #fff;
+  padding: 14px 18px;
+  text-align: left;
+  font-weight: 700;
+  font-size: 0.82rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.tabelaContainer td {
+  padding: 14px 18px;
+  border-bottom: 1px solid var(--border);
+  color: var(--text-soft);
+}
+
+.tabelaContainer tr:hover td {
+  background: rgba(139, 20, 40, 0.02);
+}
+
+/* ============================================================
+   MISSÃO (SEÇÃO FINAL)
+   ============================================================ */
+
+.missaoHero {
+  text-align: center;
+  padding: 4rem 2rem;
+  background: linear-gradient(135deg, #1a0a10, #2a0f18);
+  border-radius: 20px;
+  border: 1px solid rgba(212, 175, 55, 0.15);
+}
+
+.missaoHero h2 {
+  color: #fff;
+  font-size: clamp(1.5rem, 3.5vw, 2.2rem);
+  margin-bottom: 1.5rem;
+}
+
+.missaoHero p {
+  color: rgba(240, 230, 211, 0.7);
+  font-size: 1.02rem;
+  line-height: 1.8;
+  max-width: 700px;
+  margin: 0 auto 1rem;
+}
+
+.missaoBtns {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 2rem;
+}
+
+/* ============================================================
+   SYNOD BADGES
+   ============================================================ */
+
+.synodBadges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  justify-content: center;
+}
+
+.synodBadge {
+  padding: 8px 16px;
+  background: rgba(139, 20, 40, 0.06);
+  color: var(--wine);
+  border: 1px solid rgba(139, 20, 40, 0.12);
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+/* ============================================================
+   CONSAGRAÇÃO BOX (DESTAQUE CENTRAL)
+   ============================================================ */
+
+.consagracaoBox {
+  padding: 1.8rem 2.5rem;
+  background: linear-gradient(135deg, var(--gold-pale), #fff);
+  border: 2px solid var(--gold);
+  border-radius: 14px;
+  margin: 1.5rem 0;
+  text-align: center;
+}
+
+.consagracaoTexto {
+  font-size: 1.15rem;
+  font-style: italic;
+  color: var(--wine);
+  font-weight: 700;
+  line-height: 1.8;
+}
+
+/* ============================================================
+   FOOTER
+   ============================================================ */
+
+.footer {
+  background: linear-gradient(180deg, #1a0a10, #0d0508);
+  color: #f0e6d3;
+  text-align: center;
+  padding: 4rem 2rem 3rem;
+}
+
+.footerIcon {
+  font-size: 2.5rem;
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.footer h3 {
+  font-size: 1.4rem;
+  color: var(--gold);
+  margin-bottom: 0.5rem;
+}
+
+.footer > p {
+  color: rgba(240, 230, 211, 0.5);
+  font-size: 0.9rem;
+  margin-bottom: 2rem;
+}
+
+.footerLinks {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-bottom: 2.5rem;
+}
+
+.footerLinks a {
+  padding: 8px 16px;
+  color: rgba(240, 230, 211, 0.6);
+  text-decoration: none;
+  font-size: 0.85rem;
+  border: 1px solid rgba(240, 230, 211, 0.1);
+  border-radius: 20px;
+  transition: all 0.3s ease;
+}
+
+.footerLinks a:hover {
+  color: var(--gold);
+  border-color: rgba(212, 175, 55, 0.3);
+  background: rgba(212, 175, 55, 0.06);
+}
+
+.footerBottom {
+  padding-top: 2rem;
+  border-top: 1px solid rgba(240, 230, 211, 0.08);
+}
+
+.footerBottom p {
+  font-size: 0.82rem;
+  color: rgba(240, 230, 211, 0.35);
+  line-height: 1.7;
+}
+
+/* ============================================================
+   RESPONSIVO
+   ============================================================ */
+
+@media (max-width: 768px) {
+  .sectionWrapper,
+  .bgDark,
+  .bgLight {
+    padding: 3.5rem 0;
+  }
+
+  .hero {
+    min-height: 80vh;
+    padding: 5rem 1.5rem 3rem;
+  }
+
+  .sectionHeader {
+    margin-bottom: 2.5rem;
+  }
+
+  .step {
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+  }
+
+  .timeline {
+    padding-left: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 0 1rem;
+  }
+
+  .hero {
+    min-height: 70vh;
+  }
+
+  .navContainer {
+    padding: 0.5rem 1rem;
+  }
+}
+.navLogoImg {
+  height: 170px;
+  width: auto;
+  object-fit: contain;
+  display: block;
+   margin: -50px 0 -60px 0;  /* ← topo: -40px (menos), baixo: -60px (mais) */  
+ 
+}
+
+@media (max-width: 480px) {
+  .navLogoImg {
+    height: 32px;
+  }
+}

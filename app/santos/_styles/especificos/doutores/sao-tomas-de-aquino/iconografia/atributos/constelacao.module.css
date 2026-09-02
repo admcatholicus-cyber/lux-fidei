@@ -1,0 +1,295 @@
+/* ============================================================
+   CONSTELAÇÃO ATRIBUTOS — Retrato central com marcações
+   apontando cada símbolo (mapa iconográfico)
+   ============================================================ */
+
+.constelacaoWrapper {
+  max-width: 1160px;
+  margin: 0 auto 80px;
+  background: linear-gradient(180deg, #faf8f4 0%, #f5f1e8 100%);
+  border: 1px solid #e2dcd0;
+  padding: 56px 40px 48px;
+  position: relative;
+}
+
+/* Ornamento superior */
+.constelacaoWrapper::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 3px;
+  background: #b08a3c;
+}
+
+/* ---------- CABEÇALHO ---------- */
+.consCabecalho {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.consLabel {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.65rem;
+  font-weight: 600;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: #b08a3c;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.consTitulo {
+  font-family: 'Libre Baskerville', Georgia, serif;
+  font-size: clamp(1.5rem, 2.5vw, 2rem);
+  font-weight: 700;
+  color: #2a2520;
+  margin: 0 0 12px;
+  line-height: 1.2;
+}
+
+.consIntro {
+  font-family: Georgia, serif;
+  font-size: 0.95rem;
+  font-style: italic;
+  color: #6f6758;
+  line-height: 1.7;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* ---------- CORPO PRINCIPAL ---------- */
+.consCorpo {
+  display: grid;
+  grid-template-columns: 1fr 1.4fr 1fr;
+  gap: 32px;
+  align-items: start;
+}
+
+@media (max-width: 960px) {
+  .consCorpo {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+}
+
+/* Coluna central: retrato de referência */
+.consRetrato {
+  position: relative;
+  background: #0e0c08;
+  overflow: hidden;
+  aspect-ratio: 3 / 4;
+}
+
+.consRetrato img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: sepia(8%) contrast(1.05);
+}
+
+/* Moldura interna dourada */
+.consMoldura {
+  position: absolute;
+  inset: 12px;
+  border: 1px solid rgba(176, 138, 60, 0.4);
+  pointer-events: none;
+  z-index: 2;
+}
+
+/* Cantos ornamentais */
+.consCantoTopLeft,
+.consCantoTopRight,
+.consCantoBottomLeft,
+.consCantoBottomRight {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #b08a3c;
+  z-index: 3;
+}
+
+.consCantoTopLeft {
+  top: 8px;
+  left: 8px;
+  border-right: none;
+  border-bottom: none;
+}
+
+.consCantoTopRight {
+  top: 8px;
+  right: 8px;
+  border-left: none;
+  border-bottom: none;
+}
+
+.consCantoBottomLeft {
+  bottom: 8px;
+  left: 8px;
+  border-right: none;
+  border-top: none;
+}
+
+.consCantoBottomRight {
+  bottom: 8px;
+  right: 8px;
+  border-left: none;
+  border-top: none;
+}
+
+/* Legenda sobre o retrato */
+.consLegendaRetrato {
+  position: absolute;
+  bottom: 20px;
+  left: 0;
+  right: 0;
+  text-align: center;
+  z-index: 4;
+  padding: 8px 12px;
+  background: rgba(14, 12, 8, 0.7);
+  backdrop-filter: blur(4px);
+  margin: 0 20px;
+  border-top: 1px solid rgba(176, 138, 60, 0.4);
+}
+
+.consLegendaTitulo {
+  font-family: Georgia, serif;
+  font-size: 0.8rem;
+  font-style: italic;
+  color: #f5f0e6;
+  margin: 0;
+}
+
+.consLegendaAutor {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.6rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #d4b872;
+  margin: 4px 0 0;
+}
+
+/* ---------- COLUNAS LATERAIS DE MARCAÇÕES ---------- */
+.consColuna {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+  padding-top: 16px;
+}
+
+@media (max-width: 960px) {
+  .consColuna {
+    padding-top: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+  }
+}
+
+@media (max-width: 620px) {
+  .consColuna {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Item de marcação */
+.consItem {
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #e2dcd0;
+}
+
+.consItem:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+/* Marcador circular numerado */
+.consMarcador {
+  flex-shrink: 0;
+  width: 36px;
+  height: 36px;
+  background: #fff;
+  border: 2px solid #b08a3c;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Libre Baskerville', Georgia, serif;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #b08a3c;
+  position: relative;
+}
+
+.consMarcador::after {
+  content: '';
+  position: absolute;
+  inset: -4px;
+  border: 1px solid rgba(176, 138, 60, 0.25);
+  border-radius: 50%;
+}
+
+.consItemTexto {
+  flex: 1;
+  min-width: 0;
+}
+
+.consItemNome {
+  font-family: 'Libre Baskerville', Georgia, serif;
+  font-size: 0.92rem;
+  font-weight: 700;
+  color: #2a2520;
+  margin: 0 0 4px;
+  line-height: 1.3;
+}
+
+.consItemLatim {
+  font-family: Georgia, serif;
+  font-size: 0.72rem;
+  font-style: italic;
+  color: #b08a3c;
+  margin: 0 0 6px;
+}
+
+.consItemSignificado {
+  font-family: Georgia, serif;
+  font-size: 0.8rem;
+  line-height: 1.55;
+  color: #4a4540;
+  margin: 0;
+}
+
+/* ---------- CHAVE DE LEITURA (rodapé) ---------- */
+.consChave {
+  margin-top: 40px;
+  padding-top: 32px;
+  border-top: 1px solid #e2dcd0;
+  text-align: center;
+}
+
+.consChaveLabel {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.62rem;
+  font-weight: 600;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: #b08a3c;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.consChaveTexto {
+  font-family: Georgia, serif;
+  font-size: 0.88rem;
+  font-style: italic;
+  color: #6f6758;
+  line-height: 1.7;
+  max-width: 720px;
+  margin: 0 auto;
+}

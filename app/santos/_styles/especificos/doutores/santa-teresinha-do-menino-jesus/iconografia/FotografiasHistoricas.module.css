@@ -1,0 +1,525 @@
+/* C:\Users\kitten\Documents\lux-fidei\app\santos\_styles\especificos\doutores\santa-teresinha-do-menino-jesus\iconografia\FotografiasHistoricas.module.css */
+
+.section {
+  padding: 6rem 0;
+  background: #faf8f5;
+}
+
+.sectionHeader {
+  text-align: center;
+  padding: 0 2rem;
+  margin-bottom: 4rem;
+}
+
+.headerContent {
+  max-width: 700px;
+  margin: 0 auto;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.headerVisible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.sectionNumber {
+  display: inline-block;
+  font-family: var(--font-heading, 'Georgia', serif);
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.3em;
+  color: #c4956a;
+  border: 1px solid rgba(196, 149, 106, 0.3);
+  padding: 0.35rem 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.sectionTitle {
+  font-family: var(--font-heading, 'Georgia', serif);
+  font-size: clamp(1.75rem, 3.5vw, 2.5rem);
+  font-weight: 700;
+  color: #1a1512;
+  margin: 0 0 1.25rem;
+  line-height: 1.2;
+}
+
+.sectionDivider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 1.25rem;
+}
+
+.dividerLine {
+  display: block;
+  width: 40px;
+  height: 1px;
+  background: rgba(196, 149, 106, 0.4);
+}
+
+.dividerIcon {
+  font-size: 1.1rem;
+  opacity: 0.7;
+}
+
+.sectionSubtitle {
+  font-family: var(--font-body, 'Georgia', serif);
+  font-size: clamp(0.9rem, 1.1vw, 1rem);
+  line-height: 1.8;
+  color: #6b5e52;
+  max-width: 550px;
+  margin: 0 auto;
+}
+
+/* Desktop: 3-column layout */
+.fotografiasLayout {
+  display: grid;
+  grid-template-columns: 100px 1fr 380px;
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  align-items: start;
+}
+
+.thumbnailNav {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  position: sticky;
+  top: 100px;
+}
+
+.thumbnail {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.35rem;
+  background: none;
+  border: 2px solid transparent;
+  padding: 0.25rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border-radius: 4px;
+  opacity: 0.5;
+}
+
+.thumbnail:hover {
+  opacity: 0.8;
+}
+
+.thumbnailActive {
+  opacity: 1;
+  border-color: #c4956a;
+}
+
+.thumbnailImageWrapper {
+  position: relative;
+  width: 60px;
+  height: 60px;
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.thumbnailImage {
+  object-fit: cover;
+  filter: grayscale(0.3);
+}
+
+.thumbnailActive .thumbnailImage {
+  filter: grayscale(0);
+}
+
+.thumbnailYear {
+  font-size: 0.6rem;
+  font-weight: 600;
+  color: #6b5e52;
+  letter-spacing: 0.1em;
+}
+
+/* Main display */
+/* Main display */
+.mainDisplay {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  width: 100%;
+}
+
+.mainImageContainer {
+  position: relative;
+  width: 100%;
+  cursor: zoom-in;
+  overflow: hidden;
+  border-radius: 4px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+  transition: box-shadow 0.3s ease;
+}
+
+.mainImageContainer:hover {
+  box-shadow: 0 25px 70px rgba(0, 0, 0, 0.2);
+}
+
+.mainImageRetrato {
+  max-width: 480px;
+  aspect-ratio: 3/4;
+  margin: 0 auto;
+}
+
+.mainImagePaisagem {
+  max-width: 100%;
+  aspect-ratio: 4/3;
+}
+
+.mainImageContainer:hover {
+  box-shadow: 0 25px 70px rgba(0, 0, 0, 0.2);
+}
+
+.mainImageRetrato {
+  max-width: 450px;
+  aspect-ratio: 3/4;
+}
+
+.mainImagePaisagem {
+  max-width: 100%;
+  aspect-ratio: 4/3;
+}
+
+.mainImage {
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.mainImageContainer:hover .mainImage {
+  transform: scale(1.03);
+}
+
+.mainImageOverlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.3s ease;
+  z-index: 2;
+}
+
+.mainImageContainer:hover .mainImageOverlay {
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.zoomIcon {
+  font-size: 2rem;
+  opacity: 0;
+  transform: scale(0.8);
+  transition: all 0.3s ease;
+}
+
+.mainImageContainer:hover .zoomIcon {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.mainImageFrame {
+  position: absolute;
+  inset: 8px;
+  border: 1px solid rgba(196, 149, 106, 0.15);
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Info panel */
+.infoPanel {
+  position: sticky;
+  top: 100px;
+}
+
+.infoPanelInner {
+  padding: 2rem;
+  background: white;
+  border: 1px solid rgba(196, 149, 106, 0.15);
+  border-radius: 4px;
+}
+
+.infoDate {
+  display: inline-block;
+  font-family: var(--font-heading, 'Georgia', serif);
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.25em;
+  color: #c4956a;
+  text-transform: uppercase;
+  margin-bottom: 0.75rem;
+}
+
+.infoTitle {
+  font-family: var(--font-heading, 'Georgia', serif);
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #1a1512;
+  margin: 0 0 0.75rem;
+  line-height: 1.3;
+}
+
+.infoDescricao {
+  font-family: var(--font-body, 'Georgia', serif);
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: #3d342b;
+  margin: 0 0 1rem;
+}
+
+.infoDivider {
+  width: 30px;
+  height: 1px;
+  background: rgba(196, 149, 106, 0.3);
+  margin: 1.25rem 0;
+}
+
+.infoDetalhes {
+  font-family: var(--font-body, 'Georgia', serif);
+  font-size: 0.85rem;
+  line-height: 1.8;
+  color: #6b5e52;
+  margin: 0;
+  font-style: italic;
+}
+
+.infoFooter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1.5rem;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(196, 149, 106, 0.1);
+}
+
+.infoCredito,
+.infoDominio {
+  font-size: 0.65rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: #9e9189;
+}
+
+.infoDominio {
+  background: rgba(196, 149, 106, 0.1);
+  padding: 0.2rem 0.5rem;
+  border-radius: 2px;
+}
+
+/* Mobile grid */
+.mobileGrid {
+  display: none;
+}
+
+/* Lightbox */
+.lightbox {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.95);
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: fadeIn 0.3s ease;
+}
+
+.lightboxContent {
+  position: relative;
+  width: 90vw;
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.lightboxClose {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.5rem;
+  cursor: pointer;
+  padding: 1rem;
+  z-index: 10;
+  opacity: 0.7;
+  transition: opacity 0.2s;
+}
+
+.lightboxClose:hover {
+  opacity: 1;
+}
+
+.lightboxImageWrapper {
+  position: relative;
+  width: 100%;
+  height: 80%;
+}
+
+.lightboxImage {
+  object-fit: contain;
+}
+
+.lightboxNav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: white;
+  font-size: 2rem;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border-radius: 50%;
+  transition: background 0.2s;
+  z-index: 10;
+}
+
+.lightboxNav:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.lightboxPrev {
+  left: 1rem;
+}
+
+.lightboxNext {
+  right: 1rem;
+}
+
+.lightboxInfo {
+  text-align: center;
+  margin-top: 1.5rem;
+  color: white;
+}
+
+.lightboxInfo h3 {
+  font-family: var(--font-heading, 'Georgia', serif);
+  font-size: 1.2rem;
+  margin: 0 0 0.25rem;
+}
+
+.lightboxInfo p {
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.6);
+  margin: 0;
+}
+
+.lightboxCounter {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  color: rgba(255, 255, 255, 0.4);
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
+  padding: 1rem;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@media (max-width: 1024px) {
+  .fotografiasLayout {
+    display: none;
+  }
+
+  .mobileGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    padding: 0 1.5rem;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  .mobileCard {
+    position: relative;
+    border-radius: 4px;
+    overflow: hidden;
+    cursor: pointer;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  }
+
+  .mobileCardWide {
+    grid-column: 1 / -1;
+  }
+
+  .mobileCardImage {
+    position: relative;
+    aspect-ratio: 3/4;
+    width: 100%;
+  }
+
+  .mobileCardWide .mobileCardImage {
+    aspect-ratio: 4/3;
+  }
+
+  .mobileCardImg {
+    object-fit: cover;
+  }
+
+  .mobileCardOverlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, transparent 50%);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 1rem;
+  }
+
+  .mobileCardDate {
+    font-size: 0.65rem;
+    color: #c4956a;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    margin-bottom: 0.25rem;
+  }
+
+  .mobileCardTitle {
+    font-family: var(--font-heading, 'Georgia', serif);
+    font-size: 0.95rem;
+    color: white;
+    margin: 0;
+    font-weight: 600;
+  }
+}
+
+@media (max-width: 480px) {
+  .section {
+    padding: 4rem 0;
+  }
+
+  .sectionHeader {
+    margin-bottom: 2.5rem;
+  }
+
+  .mobileGrid {
+    grid-template-columns: 1fr;
+    padding: 0 1rem;
+  }
+}
+/* Desktop: 3-column layout */
+.fotografiasLayout {
+  display: grid;
+  grid-template-columns: 90px minmax(0, 1fr) 360px;
+  gap: 2.5rem;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  align-items: start;
+}

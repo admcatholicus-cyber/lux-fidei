@@ -1,0 +1,664 @@
+import VozLucas from '../../../_components/especificos/apostolos/sao-lucas/VozLucas';
+import PassagemLucana from '../../../_components/especificos/apostolos/sao-lucas/PassagemLucana';
+import TestemunhoSobreLucas from '../../../_components/especificos/apostolos/sao-lucas/TestemunhoSobreLucas';
+import DocumentoIgreja from '../../../_components/especificos/apostolos/sao-lucas/DocumentoIgreja';
+import { BibliotecaLucas, CapLucas, SubsecaoLucas } from '../../../_components/especificos/apostolos/sao-lucas/BibliotecaLucas';
+
+export const meta = {
+  numero: 'XI',
+  titulo: 'Frases & Textos',
+  subtitulo: 'A voz do evangelista, as palavras que só ele guardou, e o que a Igreja disse sobre ele',
+};
+
+<PageHeader numero={meta.numero} titulo={meta.titulo} subtitulo={meta.subtitulo} />
+
+<BibliotecaLucas
+  introducao={
+    <>
+      <p>
+        Lucas é, entre todos os hagiógrafos do Novo Testamento, aquele que menos fala de si.
+        Ao contrário de Paulo — que se apresenta, se defende, argumenta em primeira pessoa
+        em quase todas as cartas — Lucas se retira completamente atrás de sua obra. Não
+        deixou epístolas próprias, não deixou sermões, não deixou tratados. O que temos,
+        em sua voz direta, cabe em algumas poucas linhas: <strong>os dois prólogos</strong>
+        {' '}que abrem seus livros e <strong>as passagens em primeira pessoa do plural</strong>
+        {' '}dos Atos — as célebres "seções nós".
+      </p>
+      <p>
+        Mas seria um erro pensar que Lucas fala pouco. Ao contrário: ele é o hagiógrafo que
+        mais fala — não por si, mas <em>pelos outros</em>. Sem Lucas, a humanidade nunca teria
+        conhecido o <em>Magnificat</em> de Maria, o <em>Benedictus</em> de Zacarias, o
+        {' '}<em>Nunc Dimittis</em> de Simeão. Sem Lucas, a última palavra de Cristo na cruz
+        seria o grito de abandono de Marcos, e não o "Pai, em tuas mãos entrego o meu
+        espírito". Sem Lucas, não haveria o bom ladrão, não haveria os discípulos de Emaús,
+        não haveria a parábola do filho pródigo nem a do bom samaritano. Essas palavras não
+        são <em>dele</em>, mas <em>o mundo só as conhece por causa dele</em>. Esta antologia
+        as reúne como parte irrenunciável de sua voz.
+      </p>
+      <p>
+        Por fim, apresentamos aquilo que a Igreja disse <em>sobre</em> Lucas ao longo de dois
+        milênios: os testemunhos dos Padres, dos Doutores, dos santos e do Magistério oficial.
+        Neste espelho múltiplo — Lucas na sua voz, Lucas nas palavras que preservou, Lucas
+        visto pelos santos — desenha-se o rosto completo do médico grego de Antioquia que se
+        tornou pintor das almas.
+      </p>
+    </>
+  }
+
+>
+
+  {/* ═══════════════════════════════════════════════════════ */}
+  {/* CAPÍTULO I — A VOZ DE LUCAS                              */}
+  {/* ═══════════════════════════════════════════════════════ */}
+
+  <CapLucas
+    id="voz-lucas"
+    icone="✒"
+    suprat="Prólogos e Seções Nós"
+    titulo="A Voz de Lucas em Primeira Pessoa"
+    contagem="6 passagens · toda a voz direta de Lucas no Novo Testamento"
+  >
+
+    <SubsecaoLucas titulo="Os Dois Prólogos">
+
+      <VozLucas
+        contexto="Abertura do Evangelho. Lucas se apresenta como historiador consciente do seu ofício, dedicando a obra a Teófilo — figura de alto status social. É o único prólogo literário formal do Novo Testamento, redigido no estilo dos historiadores gregos clássicos como Tucídides e Políbio."
+        referencia="Lucas 1,1-4"
+        original="Ἐπειδήπερ πολλοὶ ἐπεχείρησαν ἀνατάξασθαι διήγησιν περὶ τῶν πεπληροφορημένων ἐν ἡμῖν πραγμάτων, καθὼς παρέδοσαν ἡμῖν οἱ ἀπ᾽ ἀρχῆς αὐτόπται καὶ ὑπηρέται γενόμενοι τοῦ λόγου, ἔδοξε κἀμοὶ παρηκολουθηκότι ἄνωθεν πᾶσιν ἀκριβῶς καθεξῆς σοι γράψαι, κράτιστε Θεόφιλε, ἵνα ἐπιγνῷς περὶ ὧν κατηχήθης λόγων τὴν ἀσφάλειαν."
+      >
+        Visto que muitos empreenderam compor uma narração dos fatos que entre nós se
+        cumpriram, conforme nos foram transmitidos pelos que desde o princípio foram
+        testemunhas oculares e ministros da Palavra, pareceu-me bem também a mim,
+        depois de haver investigado tudo cuidadosamente desde a origem, escrevê-los
+        para ti por ordem, ilustríssimo Teófilo, a fim de que reconheças a solidez
+        dos ensinamentos que recebeste.
+      </VozLucas>
+
+      <VozLucas
+        contexto="Abertura dos Atos dos Apóstolos. Lucas retoma o fio explicitamente, referindo-se ao Evangelho como seu 'primeiro tratado'. É este versículo que confirma a unidade da obra dupla: Evangelho + Atos como duas partes de um único projeto historiográfico."
+        referencia="Atos 1,1-2"
+        original="Τὸν μὲν πρῶτον λόγον ἐποιησάμην περὶ πάντων, ὦ Θεόφιλε, ὧν ἤρξατο ὁ Ἰησοῦς ποιεῖν τε καὶ διδάσκειν, ἄχρι ἧς ἡμέρας ἐντειλάμενος τοῖς ἀποστόλοις διὰ πνεύματος ἁγίου οὓς ἐξελέξατο ἀνελήφθη."
+      >
+        Fiz o meu primeiro tratado, ó Teófilo, acerca de tudo o que Jesus começou a
+        fazer e a ensinar, até o dia em que foi arrebatado ao alto, depois de haver
+        dado, pelo Espírito Santo, mandamentos aos apóstolos que escolhera.
+      </VozLucas>
+
+    </SubsecaoLucas>
+
+    <SubsecaoLucas titulo="As Seções Nós — Lucas como Testemunha Ocular">
+
+      <VozLucas
+        contexto="Primeira aparição do 'nós' nos Atos. Em Trôade, na segunda viagem missionária de Paulo (c. 50 d.C.), o narrador subitamente se inclui na ação. É o momento em que Lucas se integra ao grupo apostólico — sem apresentação, sem explicação, apenas pela mudança do pronome."
+        referencia="Atos 16,10-11"
+      >
+        Logo que teve esta visão, procuramos partir para a Macedônia, entendendo
+        que Deus nos chamava a evangelizá-los. Embarcando pois em Trôade, corremos
+        em direção reta para Samotrácia e, no dia seguinte, para Neápolis.
+      </VozLucas>
+
+      <VozLucas
+        contexto="Retomada do 'nós' na terceira viagem. Depois de anos em Filipos, Lucas se reencontra com Paulo. A precisão dos detalhes cronológicos e geográficos revela a memória de quem viu."
+        referencia="Atos 20,5-6"
+      >
+        Estes, indo adiante, esperaram-nos em Trôade. Nós, porém, depois dos dias
+        dos Ázimos, embarcamos em Filipos e, ao cabo de cinco dias, fomos ter com
+        eles em Trôade, onde ficamos sete dias.
+      </VozLucas>
+
+      <VozLucas
+        contexto="A viagem final para Jerusalém, onde Paulo será preso. A cena de despedida em Mileto, o passeio a pé por Assos, a hospedagem em Cesareia na casa de Filipe o Evangelista — tudo relatado em primeira pessoa com o detalhamento característico de Lucas."
+        referencia="Atos 21,1.7-8"
+      >
+        Depois de nos havermos separado deles, fizemo-nos ao mar e, seguindo em
+        direção reta, chegamos a Cós [...]. Terminada a nossa viagem por mar,
+        partimos de Tiro e chegamos a Ptolemaida, onde saudamos os irmãos e nos
+        detivemos com eles um dia. No dia seguinte, partindo dali, chegamos a
+        Cesareia; e, entrando na casa de Filipe, o evangelista, que era um dos
+        Sete, ficamos com ele.
+      </VozLucas>
+
+      <VozLucas
+        contexto="A viagem para Roma. O naufrágio junto a Malta, a chegada à capital do Império — Lucas ao lado de Paulo prisioneiro. A precisão náutica desta narrativa é tão grande que o estudioso escocês James Smith, no século XIX, conseguiu mapear a rota exata usando os dados do texto e confirmar sua exatidão."
+        referencia="Atos 27,1-2 · 28,16"
+      >
+        Como se decidisse que embarcássemos para a Itália, entregou-se Paulo, com
+        alguns outros presos, a um centurião chamado Júlio, da coorte Augusta.
+        Embarcamos num navio de Adramítio, que devia navegar para os portos da
+        Ásia, e fizemo-nos ao mar [...]. Quando chegamos a Roma, foi permitido a
+        Paulo morar sozinho, com o soldado que o guardava.
+      </VozLucas>
+
+    </SubsecaoLucas>
+
+  </CapLucas>
+
+  {/* ═══════════════════════════════════════════════════════ */}
+  {/* CAPÍTULO II — AS PALAVRAS QUE SÓ LUCAS GUARDOU           */}
+  {/* ═══════════════════════════════════════════════════════ */}
+
+  <CapLucas
+    id="palavras-guardou"
+    icone="📖"
+    suprat="Passagens exclusivas do Terceiro Evangelho"
+    titulo="As Palavras que só Lucas Guardou"
+    contagem="12 textos · palavras que a humanidade só conhece porque Lucas as escreveu"
+  >
+
+    <SubsecaoLucas titulo="Os Três Cânticos da Infância">
+
+      <PassagemLucana
+        titulo="O Magnificat"
+        contexto="Cântico de Maria em resposta à saudação de Isabel na Visitação. Nenhum outro evangelista o registrou. É rezado diariamente nas Vésperas da Liturgia das Horas há mais de mil e seiscentos anos."
+        locutor="A Virgem Maria"
+        referencia="Lucas 1,46-55"
+        observacao="Estrutura paralela ao Cântico de Ana (1Sm 2,1-10). É o texto mariano mais recitado da história."
+      >
+        Minha alma engrandece o Senhor, e meu espírito se alegra em Deus, meu
+        Salvador; porque olhou para a humildade de sua serva. Eis que doravante
+        todas as gerações me chamarão bem-aventurada. Porque o Todo-Poderoso fez
+        em mim maravilhas: Santo é o seu nome, e a sua misericórdia se estende
+        de geração em geração sobre os que o temem. Manifestou o poder do seu
+        braço: dispersou os soberbos de coração. Derrubou do trono os poderosos
+        e exaltou os humildes. Aos famintos encheu de bens, e aos ricos despediu
+        de mãos vazias. Acolheu a Israel, seu servo, lembrado da sua
+        misericórdia, como havia prometido a nossos pais, em favor de Abraão e
+        de sua descendência, para sempre.
+      </PassagemLucana>
+
+      <PassagemLucana
+        titulo="O Benedictus"
+        contexto="Profecia de Zacarias após o nascimento de João Batista, quando recupera a fala. Rezado diariamente nas Laudes da Liturgia das Horas."
+        locutor="Zacarias, pai de João Batista"
+        referencia="Lucas 1,68-79"
+        observacao="Cristo é aqui chamado 'sol nascente que vem do alto' (anatolē ex hypsous) — uma das primeiras imagens cristológicas do Novo Testamento."
+      >
+        Bendito seja o Senhor Deus de Israel, porque visitou e redimiu o seu
+        povo, e nos suscitou uma força de salvação na casa de Davi, seu servo,
+        como havia anunciado pela boca dos seus santos profetas dos tempos
+        antigos: para nos salvar dos nossos inimigos e das mãos de todos os que
+        nos odeiam [...]. E tu, menino, serás chamado profeta do Altíssimo,
+        porque irás à frente do Senhor a preparar-lhe os caminhos, para dar ao
+        seu povo o conhecimento da salvação, pela remissão dos seus pecados,
+        graças à ternura e misericórdia do nosso Deus, pela qual nos visitará o
+        sol nascente que vem do alto, para iluminar os que jazem nas trevas e
+        na sombra da morte, e dirigir nossos passos no caminho da paz.
+      </PassagemLucana>
+
+      <PassagemLucana
+        titulo="O Nunc Dimittis"
+        contexto="Cântico do ancião Simeão ao receber o Menino Jesus no Templo, no dia da Apresentação. Rezado diariamente nas Completas — a oração antes de dormir — como despedida do dia à luz da vida eterna."
+        locutor="Simeão, ancião justo"
+        referencia="Lucas 2,29-32"
+        observacao="Em latim: 'Nunc dimittis servum tuum, Domine' — 'Agora despedes teu servo, Senhor'. Presente em toda a tradição litúrgica cristã, oriental e ocidental."
+      >
+        Agora, ó Senhor, deixas partir teu servo em paz, segundo a tua palavra,
+        porque meus olhos viram a tua salvação, que preparaste diante de todos
+        os povos: luz para iluminar as nações e glória do teu povo, Israel.
+      </PassagemLucana>
+
+    </SubsecaoLucas>
+
+    <SubsecaoLucas titulo="A Anunciação e a Visitação">
+
+      <PassagemLucana
+        titulo="A Saudação Angélica"
+        contexto="A primeira metade da Ave Maria vem desta cena. As palavras de Gabriel a Maria em Nazaré, cerca do ano 6 antes de Cristo. Nenhum outro evangelista narra a Anunciação."
+        locutor="O Arcanjo Gabriel"
+        referencia="Lucas 1,28.42"
+        observacao="A expressão grega kecharitōmenē ('cheia de graça') está no perfeito passivo, indicando estado permanente — base patrística e dogmática para a Imaculada Conceição."
+      >
+        Ave, cheia de graça, o Senhor é contigo. [...] Bendita és tu entre as
+        mulheres, e bendito é o fruto do teu ventre.
+      </PassagemLucana>
+
+      <PassagemLucana
+        titulo="O Fiat de Maria"
+        contexto="A resposta de Maria ao anjo — o consentimento livre e humilde pelo qual o Verbo se fez carne. Exclusivo de Lucas."
+        locutor="A Virgem Maria"
+        referencia="Lucas 1,38"
+        observacao="Santo Ireneu contrapôs este 'sim' de Maria ao 'não' de Eva: 'O nó da desobediência de Eva foi desfeito pela obediência de Maria.'"
+      >
+        Eis aqui a serva do Senhor. Faça-se em mim segundo a tua palavra.
+      </PassagemLucana>
+
+    </SubsecaoLucas>
+
+    <SubsecaoLucas titulo="As Palavras de Jesus na Cruz">
+
+      <PassagemLucana
+        titulo="O Perdão aos Algozes"
+        contexto="A primeira das três 'palavras' de Jesus na cruz que só Lucas registra. Nenhum outro evangelista guardou este perdão."
+        locutor="Jesus Cristo, na cruz"
+        referencia="Lucas 23,34"
+        observacao="Alguns manuscritos antigos omitem este versículo, mas ele está atestado desde os Padres do séc. II. Sua remoção parece ter sido posterior, provavelmente por escrúpulos anti-judaicos — Deus não fabricaria excusa para os culpados. A Igreja, contudo, sempre o preservou como palavra autêntica de Cristo."
+      >
+        Pai, perdoa-lhes, porque não sabem o que fazem.
+      </PassagemLucana>
+
+      <PassagemLucana
+        titulo="O Bom Ladrão"
+        contexto="Diálogo entre Jesus e o ladrão arrependido crucificado à sua direita. Exclusivo de Lucas. Base teológica de toda a doutrina cristã sobre a possibilidade de conversão no último momento da vida."
+        locutor="Jesus Cristo e o Bom Ladrão"
+        referencia="Lucas 23,42-43"
+        observacao="A palavra 'hoje' (sēmeron) é uma palavra-chave em Lucas — a salvação é agora, não apenas no fim dos tempos. O bom ladrão é o único santo canonizado diretamente por Cristo na Escritura. A tradição lhe dá o nome de Dimas."
+      >
+        E dizia: 'Jesus, lembra-te de mim quando entrares no teu Reino.'
+        E Jesus lhe respondeu: 'Em verdade te digo: hoje estarás comigo no
+        paraíso.'
+      </PassagemLucana>
+
+      <PassagemLucana
+        titulo="A Última Palavra"
+        contexto="A morte de Jesus segundo Lucas. Enquanto Marcos e Mateus registram o grito de abandono ('Deus meu, por que me abandonaste?'), Lucas guarda esta palavra de confiança serena — que se tornou a oração cristã do momento da morte."
+        locutor="Jesus Cristo, expirando"
+        referencia="Lucas 23,46"
+        observacao="Citação do Salmo 31,6. Santo Estêvão, o primeiro mártir, repete esta oração ao morrer (At 7,59) — Lucas mostra assim a continuidade entre a morte de Cristo e a dos que O seguem."
+      >
+        Pai, em tuas mãos entrego o meu espírito.
+      </PassagemLucana>
+
+    </SubsecaoLucas>
+
+    <SubsecaoLucas titulo="As Grandes Parábolas da Misericórdia">
+
+      <PassagemLucana
+        titulo="O Filho Pródigo"
+        contexto="Considerada por muitos a maior parábola já contada — obra-prima da literatura universal, não apenas da Escritura. Exclusiva de Lucas."
+        locutor="Jesus Cristo"
+        referencia="Lucas 15,20"
+        observacao="O verbo grego esplanchnisthē ('moveu-se de compaixão') significa literalmente 'comoveu-se nas entranhas'. Lucas o usa três vezes, sempre em contextos-chave: aqui, no Bom Samaritano (10,33), e na viúva de Naim (7,13)."
+      >
+        Levantou-se, pois, e foi ter com seu pai. Estava ainda longe, quando
+        seu pai o viu e, movido de compaixão, correu-lhe ao encontro,
+        lançou-se-lhe ao pescoço e o beijou.
+      </PassagemLucana>
+
+      <PassagemLucana
+        titulo="O Bom Samaritano"
+        contexto="Resposta de Jesus à pergunta 'Quem é o meu próximo?'. Exclusiva de Lucas. O herói é justamente o odiado — inversão radical das expectativas do ouvinte judeu."
+        locutor="Jesus Cristo"
+        referencia="Lucas 10,33-34"
+      >
+        Um samaritano, porém, que ia de viagem, chegou junto dele e, vendo-o,
+        moveu-se de compaixão. Aproximou-se e ligou-lhe as feridas, deitando
+        nelas azeite e vinho; e, pondo-o sobre a sua própria montaria,
+        levou-o a uma hospedaria e cuidou dele.
+      </PassagemLucana>
+
+    </SubsecaoLucas>
+
+    <SubsecaoLucas titulo="Emaús — o Reconhecimento no Pão">
+
+      <PassagemLucana
+        titulo="Ficai Conosco"
+        contexto="Os dois discípulos convidam o estranho — Cristo ressuscitado ainda não reconhecido — a permanecer com eles ao entardecer. Exclusivo de Lucas. A oração 'Mane nobiscum, Domine' — 'Fica conosco, Senhor' — nasceu deste versículo."
+        locutor="Os dois discípulos de Emaús"
+        referencia="Lucas 24,29"
+        observacao="João Paulo II tomou esta expressão como título de sua última Carta Apostólica, Mane nobiscum Domine (2004), sobre o Ano da Eucaristia."
+      >
+        Fica conosco, porque já vem a noite, e o dia já declina.
+      </PassagemLucana>
+
+      <PassagemLucana
+        titulo="O Reconhecimento na Fração do Pão"
+        contexto="O momento culminante da narrativa de Emaús — matriz de toda a teologia eucarística da Igreja primitiva. Exclusivo de Lucas."
+        locutor="Narrador (Lucas)"
+        referencia="Lucas 24,30-31"
+        observacao="A expressão 'fração do pão' (klasis tou artou) tornar-se-á, nos Atos e na tradição patrística, o nome mais antigo da Eucaristia (At 2,42; 2,46; 20,7)."
+      >
+        Estando com eles à mesa, tomou o pão, benzeu-o, partiu-o e o deu a
+        eles. Nisto abriram-se-lhes os olhos e o reconheceram. Mas ele
+        desapareceu de sua vista.
+      </PassagemLucana>
+
+    </SubsecaoLucas>
+
+  </CapLucas>
+
+  {/* ═══════════════════════════════════════════════════════ */}
+  {/* CAPÍTULO III — OS PADRES DA IGREJA                       */}
+  {/* ═══════════════════════════════════════════════════════ */}
+
+  <CapLucas
+    id="padres-igreja"
+    icone="📜"
+    suprat="Séculos II a VIII"
+    titulo="Os Padres da Igreja sobre São Lucas"
+    contagem="8 testemunhos · o Ocidente e o Oriente unidos no reconhecimento"
+  >
+
+    <TestemunhoSobreLucas
+      autor="Santo Ireneu de Lyon"
+      qualificacao="Bispo, Padre da Igreja, discípulo de Policarpo (que fora discípulo de João Apóstolo)"
+      obra="Adversus Haereses, III, 1, 1"
+      fonte="c. 180 d.C. — o testemunho patrístico mais antigo sobre a autoria de Lucas"
+      epoca="Século II"
+      original="Lucas autem sectator Pauli, quod ab illo praedicabatur Evangelium, in libro condidit."
+    >
+      Lucas, o companheiro de Paulo, registrou em um livro o Evangelho que
+      era pregado por ele.
+    </TestemunhoSobreLucas>
+
+    <TestemunhoSobreLucas
+      autor="Tertuliano de Cartago"
+      qualificacao="Apologeta latino, o primeiro grande teólogo em língua latina"
+      obra="Adversus Marcionem, IV, 2"
+      fonte="c. 208 d.C. — defesa da autenticidade do texto lucano contra Marcião"
+      epoca="Século III"
+    >
+      Digo que entre nós o Evangelho de Lucas está de pé, desde os apóstolos,
+      pela sua origem canônica. Também Marcião conheceu essa autoridade
+      apostólica, e por isso escolheu justamente Lucas — não porque fosse o
+      mais antigo, mas porque, por ser mais adequado ao seu propósito, pôde
+      corrompê-lo. O nosso Evangelho de Lucas, portanto, é o mesmo que os
+      apóstolos e as igrejas fundadas pelos apóstolos sempre professaram.
+    </TestemunhoSobreLucas>
+
+    <TestemunhoSobreLucas
+      autor="Orígenes de Alexandria"
+      qualificacao="Exegeta, teólogo, o maior estudioso bíblico da antiguidade cristã"
+      obra="Homilias sobre o Evangelho de Lucas, Homilia I"
+      fonte="c. 233 d.C., transmitidas em latim por São Jerônimo"
+      epoca="Século III"
+    >
+      Lucas, entre todos os evangelistas, é aquele que mais amou a Igreja das
+      nações. Escreveu para os gentios, e por isso começou seu Evangelho não
+      com Abraão — pai só dos judeus —, mas subindo até Adão, pai de todos os
+      homens. Compreendeu que a salvação, tendo vindo por Israel, era destinada
+      ao mundo inteiro. E este médico do corpo tornou-se médico das almas de
+      todas as nações.
+    </TestemunhoSobreLucas>
+
+    <TestemunhoSobreLucas
+      autor="Eusébio de Cesareia"
+      qualificacao="Bispo, historiador, 'Pai da história eclesiástica'"
+      obra="Historia Ecclesiastica, III, 4"
+      fonte="c. 324 d.C. — a síntese autorizada da tradição sobre Lucas"
+      epoca="Século IV"
+      original="Λουκᾶς δὲ τὸ μὲν γένος ὢν τῶν ἀπ᾽ Ἀντιοχείας, τὴν ἐπιστήμην δὲ ἰατρός, τὰ πλεῖστα συγγεγονὼς τῷ Παύλῳ, καὶ τοῖς λοιποῖς δὲ οὐ παρέργως τῶν ἀποστόλων ὡμιληκώς, ἧς ἀπὸ τούτων προσεκτήσατο ψυχῶν θεραπευτικῆς ἐν δυσὶν ἡμῖν ὑποδείγματα θεοπνεύστοις καταλέλοιπε βιβλίοις."
+    >
+      Lucas, de origem antioquena e médico de profissão, tendo estado a maior
+      parte do tempo com Paulo e tendo convivido também de modo íntimo com os
+      demais apóstolos, deixou-nos, em dois livros divinamente inspirados,
+      exemplos da arte de curar as almas que deles aprendeu.
+    </TestemunhoSobreLucas>
+
+    <TestemunhoSobreLucas
+      autor="Santo Ambrósio de Milão"
+      qualificacao="Bispo, Doutor da Igreja, mestre de Santo Agostinho"
+      obra="Expositio Evangelii secundum Lucam, Prólogo"
+      fonte="c. 388 d.C. — o mais extenso comentário patrístico ao Evangelho de Lucas (10 livros)"
+      epoca="Século IV"
+    >
+      Cada evangelista possui sua graça própria. Mateus se estendeu sobre a
+      pessoa moral de Cristo, Marcos foi breve, João voou pelo alto do céu.
+      Lucas, porém, guardou uma dignidade sacerdotal — começou seu Evangelho
+      pelo sacerdote Zacarias no Templo. Ele é o evangelista da misericórdia,
+      da compaixão, da atenção aos humildes. Escreve como historiador, mas
+      canta como poeta, cura como médico, contempla como orante.
+    </TestemunhoSobreLucas>
+
+    <TestemunhoSobreLucas
+      autor="São João Crisóstomo"
+      qualificacao="Patriarca de Constantinopla, Doutor da Igreja, 'Boca de Ouro'"
+      obra="Homilias sobre os Atos dos Apóstolos, Homilia I"
+      fonte="c. 400 d.C. — 55 homilias sobre Atos, o principal comentário oriental à obra"
+      epoca="Séculos IV-V"
+    >
+      Este livro dos Atos pode, para muitos, parecer inferior aos Evangelhos.
+      Mas quem o lê com atenção descobre que ele não fica atrás em graça, em
+      doutrina, nem em sabedoria. Aqui vemos o Evangelho em ação, a promessa
+      transformada em fato, a Igreja nascendo. E tudo isto, o médico bem-amado
+      escreveu com tal exatidão, que somente uma testemunha ocular poderia
+      compor.
+    </TestemunhoSobreLucas>
+
+    <TestemunhoSobreLucas
+      autor="São Jerônimo"
+      qualificacao="Doutor da Igreja, tradutor da Vulgata Latina"
+      obra="De Viris Illustribus, capítulo 7"
+      fonte="c. 392 d.C. — a mais completa biografia patrística de Lucas"
+      epoca="Séculos IV-V"
+      original="Lucas medicus Antiochensis, ut eius scripta indicant, Graeci sermonis non ignarus fuit, sectator apostoli Pauli, et omnis peregrinationis eius comes. Scripsit Evangelium... Composuit et alium egregium volumen quod titulo Acta Apostolorum praenotatur..."
+    >
+      Lucas, médico de Antioquia, como seus escritos demonstram, não era
+      ignorante das letras gregas. Foi companheiro do apóstolo Paulo e
+      inseparável em toda a sua peregrinação. Escreveu o Evangelho, do qual o
+      próprio Paulo diz: 'enviamos com ele o irmão cujo louvor está no Evangelho
+      por todas as igrejas'. Compôs também outro excelente volume, intitulado
+      Atos dos Apóstolos. Sepultado em Constantinopla, para onde seus ossos, com
+      as relíquias do apóstolo André, foram transladados da Acaia no vigésimo
+      ano do imperador Constâncio.
+    </TestemunhoSobreLucas>
+
+    <TestemunhoSobreLucas
+      autor="São Beda, o Venerável"
+      qualificacao="Doutor da Igreja, historiador anglo-saxão, monge de Jarrow"
+      obra="In Lucae Evangelium Expositio, Prólogo"
+      fonte="c. 710 d.C. — comentário em 6 livros, síntese da tradição patrística ocidental"
+      epoca="Século VIII"
+    >
+      Escreveu Lucas seu Evangelho na Acaia, dirigindo-o especialmente aos
+      gregos, para que soubessem que a salvação vinda de Israel se abria a
+      todas as nações. E se pergunta alguém por que este evangelista alcançou
+      tão grande estilo e tão grande delicadeza no relato — respondo: porque
+      era médico. Como médico do corpo, aprendeu a observar com paciência; como
+      médico das almas, aprendeu a compadecer-se. Sua pena é doce como o azeite
+      que o samaritano derrama sobre as feridas do homem meio morto na estrada
+      de Jerusalém a Jericó.
+    </TestemunhoSobreLucas>
+
+  </CapLucas>
+
+  {/* ═══════════════════════════════════════════════════════ */}
+  {/* CAPÍTULO IV — DOUTORES E SANTOS                          */}
+  {/* ═══════════════════════════════════════════════════════ */}
+
+  <CapLucas
+    id="doutores-santos"
+    icone="✠"
+    suprat="Da Escolástica aos místicos modernos"
+    titulo="Doutores da Igreja e Santos sobre Lucas"
+    contagem="7 testemunhos · a herança lucana atravessa os séculos"
+  >
+
+    <TestemunhoSobreLucas
+      autor="Santo Tomás de Aquino"
+      qualificacao="Doutor Angélico, Doutor da Igreja, príncipe da teologia escolástica"
+      obra="Catena Aurea in Lucam, Prólogo"
+      fonte="c. 1266 — a Catena reúne o melhor da tradição patrística sobre cada Evangelho"
+      epoca="Século XIII"
+    >
+      Lucas, entre os quatro animais místicos que Ezequiel viu, é figurado
+      pelo touro — animal do sacrifício. E convém que assim seja: pois Lucas
+      é aquele que mais insiste na dimensão sacerdotal de Cristo, começando
+      no Templo com Zacarias e terminando no Templo com os discípulos que
+      voltam de Emaús. Todo o seu Evangelho é uma liturgia contínua da
+      misericórdia divina, oferecida ao Pai em favor dos pecadores.
+    </TestemunhoSobreLucas>
+
+    <TestemunhoSobreLucas
+      autor="São Boaventura"
+      qualificacao="Doutor Seráfico, Doutor da Igreja, ministro geral dos Franciscanos"
+      obra="Commentarius in Evangelium Lucae, Prólogo"
+      fonte="c. 1265 — comentário completo ao Evangelho de Lucas"
+      epoca="Século XIII"
+    >
+      Se buscas nos Evangelhos o rosto da misericórdia, olha para Lucas. Se
+      buscas o exemplo da pobreza evangélica, lê Lucas — pois só ele diz
+      'Bem-aventurados vós, os pobres', sem acrescentar 'em espírito', para
+      que ninguém pense que se trata apenas de metáfora. Se buscas a Mãe do
+      Senhor, corre para Lucas — pois foi ele quem primeiro pintou seu rosto
+      com palavras, antes de qualquer pincel humano ousar tocá-lo.
+    </TestemunhoSobreLucas>
+
+    <TestemunhoSobreLucas
+      autor="São Francisco de Sales"
+      qualificacao="Doutor da Igreja, Bispo de Genebra, mestre da espiritualidade da doçura"
+      obra="Tratado do Amor de Deus, Livro II, cap. 8"
+      fonte="1616 — obra-prima da mística salesiana"
+      epoca="Século XVII"
+    >
+      Ninguém pintou o coração de Deus com traços tão delicados como o
+      bem-amado médico Lucas. Nas três parábolas do capítulo quinze — a ovelha
+      perdida, a dracma perdida, o filho pródigo — está toda a teologia da
+      misericórdia. Ali aprendemos que Deus não espera o pecador arrependido
+      chegar até Ele: Ele mesmo corre ao encontro. O pai do pródigo é o retrato
+      mais fiel do coração do Pai celestial que já foi feito por mão humana.
+    </TestemunhoSobreLucas>
+
+    <TestemunhoSobreLucas
+      autor="Santa Teresa de Ávila"
+      qualificacao="Doutora da Igreja, reformadora do Carmelo, mestra da oração contemplativa"
+      obra="Caminho de Perfeição, cap. 34"
+      fonte="c. 1566"
+      epoca="Século XVI"
+    >
+      Quando penso na cena do bom ladrão que Lucas nos guardou — aquele homem
+      condenado, ao lado do Senhor moribundo, que num instante o reconhece e é
+      salvo — encho-me de esperança. Nenhuma vida está perdida enquanto ainda
+      resta um único instante de fé. Foi Lucas quem nos deu esta consolação, e
+      por ela lhe devemos as almas de todos os que se converteram no último
+      suspiro.
+    </TestemunhoSobreLucas>
+
+    <TestemunhoSobreLucas
+      autor="São João Maria Vianney"
+      qualificacao="Cura d'Ars, patrono dos sacerdotes, apóstolo do confessionário"
+      obra="Sermão sobre a misericórdia divina"
+      fonte="Recolhido pelo Abbé Monnin nos Sermões Autêntícos, c. 1855"
+      epoca="Século XIX"
+    >
+      Meus irmãos, se São Lucas não tivesse escrito o capítulo quinze do seu
+      Evangelho, quantos pecadores estariam hoje no inferno! Foi ele quem
+      guardou para nós o pai correndo ao encontro do filho pródigo. Cada vez que
+      um pecador se converte, é este pai que corre. E cada vez que absolvo alguém
+      no confessionário, sinto que é a mão de Lucas que segura minha pena,
+      porque foi ele quem primeiro pintou o rosto da misericórdia.
+    </TestemunhoSobreLucas>
+
+    <TestemunhoSobreLucas
+      autor="Santa Teresinha do Menino Jesus"
+      qualificacao="Doutora da Igreja, Carmelita de Lisieux, mestra do 'pequeno caminho'"
+      obra="Manuscritos Autobiográficos, Manuscrito B"
+      fonte="1896"
+      epoca="Século XIX"
+    >
+      O Evangelho que mais amo é o de São Lucas. Nele encontro a ternura de
+      Jesus para com os pequenos, os pobres, os pecadores. Foi Lucas quem
+      guardou o versículo que se tornou minha vida inteira: 'Se alguém é
+      pequenino, venha a mim'. É por isso que ouso ir a Deus como uma criança
+      confiante — porque Lucas me ensinou que o Deus de Jesus Cristo é um Pai
+      que corre ao encontro de seus filhos.
+    </TestemunhoSobreLucas>
+
+    <TestemunhoSobreLucas
+      autor="Bento XVI (Joseph Ratzinger)"
+      qualificacao="Papa emérito, teólogo, pastor universal"
+      obra="Jesus de Nazaré, vol. I, Introdução"
+      fonte="2007 — obra de síntese teológica do pontificado"
+      epoca="Século XXI"
+    >
+      Lucas é o evangelista da história e o evangelista da oração. Sem ele
+      não saberíamos que Jesus rezou antes de escolher os Doze, antes da
+      Transfiguração, antes de ensinar o Pai-Nosso, no Getsêmani, na cruz. É
+      Lucas quem nos mostra o Filho em oração constante ao Pai — e nesta
+      contemplação lucana da oração de Jesus, a Igreja aprendeu a rezar.
+    </TestemunhoSobreLucas>
+
+  </CapLucas>
+
+  {/* ═══════════════════════════════════════════════════════ */}
+  {/* CAPÍTULO V — MAGISTÉRIO                                  */}
+  {/* ═══════════════════════════════════════════════════════ */}
+
+  <CapLucas
+    id="magisterio"
+    icone="⛨"
+    suprat="Documentos oficiais da Igreja"
+    titulo="A Voz da Igreja sobre Lucas e sua Obra"
+    contagem="4 documentos magisteriais"
+  >
+
+    <DocumentoIgreja
+      documento="Dei Verbum"
+      autoridade="Concílio Ecumênico Vaticano II · Paulo VI"
+      data="18 de novembro de 1965"
+      referencia="Constituição Dogmática sobre a Divina Revelação, §19"
+      brasao="⛨"
+      fontesRodape="Acta Apostolicae Sedis 58 (1966), pp. 817-836 · Citação explícita de Lucas 1,2-4"
+    >
+      A Santa Mãe Igreja firme e constantemente sustentou e sustenta que os
+      quatro evangelhos indicados, cuja historicidade sem hesitar afirma,
+      transmitem fielmente o que Jesus, Filho de Deus, vivendo entre os homens,
+      realmente fez e ensinou para a salvação eterna deles [...]. Depois da
+      Ascensão do Senhor, os apóstolos transmitiram aos ouvintes aquilo que
+      Ele dissera e fizera, com aquela plena inteligência que os acontecimentos
+      gloriosos de Cristo e o ensino da luz do Espírito de Verdade lhes
+      ensinara. Os hagiógrafos, por sua vez, compuseram os quatro evangelhos,
+      escolhendo algumas coisas das muitas transmitidas oralmente ou já em
+      forma escrita, sintetizando algumas, ou explicando-as tendo em vista a
+      situação das Igrejas, conservando, enfim, a forma de proclamação de modo
+      que sempre nos comunicassem verdades sinceras acerca de Jesus.
+    </DocumentoIgreja>
+
+    <DocumentoIgreja
+      documento="Dives in Misericordia"
+      autoridade="São João Paulo II"
+      data="30 de novembro de 1980"
+      referencia="Carta Encíclica sobre a Misericórdia Divina, §5-6"
+      brasao="✠"
+      fontesRodape="Acta Apostolicae Sedis 72 (1980), pp. 1177-1232 · Encíclica inteiramente construída sobre as parábolas exclusivas de Lucas 15"
+    >
+      A parábola do filho pródigo, que São Lucas nos transmitiu, exprime de
+      modo simples, mas profundo, a realidade da conversão. Esta é a expressão
+      mais concreta da obra do amor e da presença da misericórdia no mundo
+      humano. O sentido verdadeiro e próprio da misericórdia não consiste
+      apenas no olhar, mesmo o mais penetrante e compassivo, dirigido ao mal
+      moral, físico ou material: a misericórdia manifesta-se no seu aspecto
+      verdadeiro e próprio quando revaloriza, promove e extrai o bem de todas
+      as formas de mal existentes no mundo e no homem. Assim entendida, ela
+      constitui o conteúdo fundamental da mensagem messiânica de Cristo — e
+      foi Lucas o evangelista que mais fielmente no-lo transmitiu.
+    </DocumentoIgreja>
+
+    <DocumentoIgreja
+      documento="Verbum Domini"
+      autoridade="Bento XVI"
+      data="30 de setembro de 2010"
+      referencia="Exortação Apostólica Pós-Sinodal sobre a Palavra de Deus, §85"
+      brasao="⛨"
+      fontesRodape="Documento pós-Sínodo dos Bispos de 2008 sobre 'A Palavra de Deus na Vida e Missão da Igreja'"
+    >
+      A obra de Lucas — Evangelho e Atos dos Apóstolos — apresenta-nos a
+      Palavra de Deus como uma realidade viva que caminha pelos caminhos do
+      mundo, partindo de Jerusalém até chegar a Roma. Nesta dinâmica, a Igreja
+      reconhece o modelo permanente da sua missão: a Palavra que se encarnou
+      em Cristo continua a encarnar-se na história dos homens, através do
+      testemunho dos que a acolhem e a transmitem. Lucas é o evangelista da
+      Palavra que caminha — e sua obra é, por isso, sempre atual sempre que a
+      Igreja se coloca a caminho da nova evangelização.
+    </DocumentoIgreja>
+
+    <DocumentoIgreja
+      documento="Catechismus Catholicae Ecclesiae"
+      autoridade="Catecismo da Igreja Católica · São João Paulo II"
+      data="11 de outubro de 1992"
+      referencia="§§ 2559, 2599, 2603 · sobre a oração no Evangelho de Lucas"
+      brasao="✠"
+      fontesRodape="O Catecismo cita o Evangelho de Lucas 358 vezes — mais que qualquer outro Evangelho depois de Mateus"
+    >
+      O Evangelho segundo São Lucas sublinha a ação do Espírito Santo e o
+      sentido da oração no ministério de Cristo. Jesus reza antes dos
+      momentos decisivos da sua missão, mas também antes dos momentos
+      decisivos da missão dos seus Apóstolos [...]. Antes de escolher os Doze,
+      Jesus passa a noite em oração; antes da Transfiguração, ora; antes de
+      ensinar o Pai-Nosso, ora. Este destaque dado por Lucas à oração de
+      Cristo é uma revelação: a Igreja aprende dele que orar é a primeira
+      atitude do discípulo, porque foi a primeira atitude do Mestre.
+    </DocumentoIgreja>
+
+  </CapLucas>
+
+</BibliotecaLucas>

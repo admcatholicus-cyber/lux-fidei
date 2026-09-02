@@ -1,0 +1,543 @@
+/* LinhaDoTempo.module.css — VERSÃO ALTURA NATURAL */
+
+.wrap {
+  --paper: #fbfaf5;
+  --ink: #1c2f4f;
+  --gold: #c9b876;
+  --gold-dark: #a89358;
+  --paper-old: #f5f2e8;
+  --border: #d8d0b8;
+
+  margin: 3.5rem 0;
+  background: var(--paper);
+  border: 1px solid var(--border);
+  border-top: 4px solid var(--ink);
+  border-radius: 2px;
+  padding: 2rem 2.25rem;
+  box-shadow: 0 4px 20px rgba(28, 47, 79, 0.08);
+}
+
+/* ─── Header ─────────────────────────────────── */
+
+.header {
+  text-align: center;
+  margin-bottom: 2rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px dashed var(--border);
+}
+
+.label {
+  display: inline-block;
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: var(--gold-dark);
+  margin-bottom: 0.5rem;
+}
+
+.titulo {
+  font-family: Georgia, serif;
+  font-size: 1.6rem;
+  color: var(--ink);
+  margin: 0 0 0.4rem;
+  font-weight: 400;
+  letter-spacing: 0.03em;
+}
+
+.sub {
+  font-size: 0.85rem;
+  color: #6a5a3a;
+  margin: 0;
+  font-style: italic;
+}
+
+/* ─── Corpo ──────────────────────────────────── */
+
+.corpo {
+  display: grid;
+  grid-template-columns: 230px minmax(0, 1fr);
+  gap: 1.75rem;
+  align-items: start;
+}
+
+/* ─── Trilha ─────────────────────────────────── */
+
+.trilha {
+  list-style: none;
+  padding: 0 0.5rem 0 0;
+  margin: 0;
+  position: relative;
+  max-height: 740px;
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: var(--gold-dark) transparent;
+  /* Sticky: a trilha fica fixada enquanto o painel cresce */
+  position: sticky;
+  top: 1rem;
+}
+
+.trilha::-webkit-scrollbar {
+  width: 3px;
+}
+.trilha::-webkit-scrollbar-thumb {
+  background: var(--gold-dark);
+  border-radius: 2px;
+}
+
+.trilha::before {
+  content: '';
+  position: absolute;
+  left: 12px;
+  top: 8px;
+  bottom: 8px;
+  width: 2px;
+  background: linear-gradient(to bottom, var(--gold) 0%, var(--gold-dark) 100%);
+}
+
+.item {
+  position: relative;
+  padding-left: 32px;
+  margin-bottom: 0.6rem;
+}
+
+.item::before {
+  content: '';
+  position: absolute;
+  left: 6px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: var(--paper);
+  border: 2px solid var(--gold-dark);
+  z-index: 2;
+  transition: all 0.25s ease;
+}
+
+.item:has(.pinoAtivo)::before {
+  background: var(--ink);
+  border-color: var(--gold);
+  transform: translateY(-50%) scale(1.2);
+  box-shadow: 0 0 0 4px rgba(201, 184, 118, 0.3);
+}
+
+.pino {
+  display: flex;
+  flex-direction: column;
+  gap: 0.12rem;
+  padding: 0.65rem 0.85rem;
+  background: var(--paper);
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--gold-dark);
+  border-radius: 2px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  width: 100%;
+  text-align: left;
+  font-family: inherit;
+  color: var(--ink);
+}
+
+.pino:hover {
+  background: var(--paper-old);
+  transform: translateX(3px);
+  border-left-color: var(--gold);
+}
+
+.pinoAtivo {
+  background: var(--ink);
+  color: var(--paper);
+  border-left-color: var(--gold);
+  transform: translateX(5px);
+  box-shadow: 0 3px 8px rgba(28, 47, 79, 0.25);
+}
+
+.pinoAtivo .pinoSeculo,
+.pinoAtivo .pinoPeriodo {
+  color: var(--gold);
+}
+
+.pinoSeculo {
+  font-family: Georgia, serif;
+  font-size: 0.68rem;
+  font-weight: 700;
+  color: var(--gold-dark);
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+
+.pinoPeriodo {
+  font-size: 0.67rem;
+  color: #6a5a3a;
+  font-style: italic;
+}
+
+.pinoTitulo {
+  font-size: 0.81rem;
+  font-weight: 500;
+  line-height: 1.3;
+  margin-top: 0.12rem;
+}
+
+/* ═══════════════════════════════════════════════
+   PAINEL
+   ═══════════════════════════════════════════════ */
+
+.painel {
+  background: var(--paper-old);
+  border: 1px solid var(--border);
+  border-top: 3px solid var(--gold);
+  border-radius: 2px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+/* ═══════════════════════════════════════════════
+   FIGURA — ALTURA NATURAL, SEM CORTE, SEM BARRAS
+
+   A imagem define a altura do container.
+   Funciona para qualquer proporção:
+   - Ícones verticais (portrait)
+   - Afrescos quadrados (landscape)  
+   - Leonardo panorâmico (21:8)
+   - Qualquer outra proporção futura
+   ═══════════════════════════════════════════════ */
+
+.figura {
+  margin: 0;
+  padding: 0;
+  position: relative;
+  border-bottom: 2px solid var(--gold);
+  isolation: isolate;
+  /* Sem background azul — se aparecer é bug no Next Image */
+  background: transparent;
+}
+
+.figuraImgWrap {
+  width: 100%;
+  position: relative;
+  /* Sem height. Sem aspect-ratio. A imagem empurra. */
+  line-height: 0; /* remove gap fantasma abaixo da img */
+}
+
+/* Limites para não ficarem absurdamente grandes ou pequenas */
+.figuraImgWrap img {
+  width: 100%;
+  height: auto;
+  display: block;
+  /* Retratos muito altos: limitar altura máxima */
+  max-height: 620px;
+  object-fit: contain;   /* dentro do max-height, sem corte */
+  object-position: center top;
+  transition: transform 0.5s ease;
+}
+
+/* Panorâmicas não precisam de max-height pois já são baixas */
+/* Mas limitamos para telas muito largas */
+.figuraImgWrap[data-ratio="panoramic"] img {
+  max-height: none;  /* sem limite — a proporção já é baixa */
+}
+
+/* Hover zoom só para não-panorâmicas */
+.figura:not([data-ratio="panoramic"]):hover .figuraImgWrap img {
+  transform: scale(1.02);
+}
+
+/* Gradiente sobre a imagem para a legenda */
+.figuraGradiente {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    transparent 0%,
+    transparent 50%,
+    rgba(8, 16, 32, 0.68) 100%
+  );
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Badge canto superior direito */
+.figuraBadge {
+  position: absolute;
+  top: 0.9rem;
+  right: 0.9rem;
+  z-index: 3;
+  background: rgba(8, 16, 32, 0.78);
+  border: 1px solid rgba(201, 184, 118, 0.5);
+  border-radius: 2px;
+  padding: 0.28rem 0.62rem;
+  font-size: 0.62rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.13em;
+  color: var(--gold);
+  backdrop-filter: blur(6px);
+  pointer-events: none;
+}
+
+/* Legenda sobreposta */
+.figuraCap {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 1.1rem 1.5rem 1rem;
+  font-size: 0.77rem;
+  color: rgba(255, 240, 195, 0.93);
+  font-style: italic;
+  text-align: center;
+  letter-spacing: 0.04em;
+  line-height: 1.45;
+  margin: 0;
+  z-index: 2;
+  text-shadow: 0 1px 6px rgba(0, 0, 0, 0.95);
+}
+
+/* ─── Conteúdo textual ─────────────────────── */
+
+.painelConteudo {
+  padding: 1.85rem 2.25rem 1.75rem;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  flex: 1;
+}
+
+.painelTop {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 0.75rem;
+  margin-bottom: 0.85rem;
+  padding-bottom: 0.85rem;
+  border-bottom: 1px solid var(--border);
+  flex-wrap: wrap;
+}
+
+.painelSeculo {
+  font-family: Georgia, serif;
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: var(--gold-dark);
+  flex-shrink: 0;
+}
+
+.painelLocal {
+  font-size: 0.78rem;
+  color: #6a5a3a;
+  font-style: italic;
+  text-align: right;
+}
+
+.painelTitulo {
+  font-family: Georgia, serif;
+  font-size: 1.75rem;
+  color: var(--ink);
+  margin: 0 0 0.3rem;
+  font-weight: 400;
+  letter-spacing: 0.02em;
+  line-height: 1.15;
+  word-wrap: break-word;
+}
+
+.painelPeriodo {
+  font-size: 0.84rem;
+  color: var(--gold-dark);
+  font-style: italic;
+  margin: 0 0 1.25rem;
+}
+
+.painelDesc {
+  font-family: Georgia, serif;
+  font-size: 1rem;
+  line-height: 1.8;
+  color: #2a2418;
+  margin: 0 0 1.4rem;
+  max-width: 66ch;
+}
+
+.painelInfo {
+  padding: 0.95rem 1.2rem;
+  background: var(--paper);
+  border-left: 3px solid var(--gold-dark);
+  border-radius: 1px;
+  margin-bottom: 1.5rem;
+  max-width: 66ch;
+}
+
+.infoLabel {
+  display: block;
+  font-size: 0.67rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: var(--gold-dark);
+  margin-bottom: 0.4rem;
+}
+
+.infoValor {
+  margin: 0;
+  font-size: 0.91rem;
+  color: #2a2418;
+  line-height: 1.65;
+}
+
+/* ─── Navegação ──────────────────────────────── */
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  padding-top: 1.1rem;
+  border-top: 1px dashed var(--border);
+  margin-top: auto;
+}
+
+.btnNav {
+  padding: 0.52rem 1.1rem;
+  font-family: inherit;
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: var(--ink);
+  background: transparent;
+  border: 1px solid var(--ink);
+  border-radius: 2px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.btnNav:hover:not(:disabled) {
+  background: var(--ink);
+  color: var(--paper);
+}
+
+.btnNav:disabled {
+  opacity: 0.28;
+  cursor: not-allowed;
+}
+
+.navCount {
+  font-size: 0.78rem;
+  color: var(--gold-dark);
+  font-style: italic;
+  letter-spacing: 0.05em;
+}
+
+/* ═══════════════════════════════════════════════
+   RESPONSIVO
+   ═══════════════════════════════════════════════ */
+
+@media (max-width: 960px) {
+  .corpo {
+    grid-template-columns: 200px minmax(0, 1fr);
+    gap: 1.25rem;
+  }
+
+  .figuraImgWrap img {
+    max-height: 500px;
+  }
+
+  .painelTitulo {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 760px) {
+  .corpo {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  /* Trilha vira carrossel horizontal */
+  .trilha {
+    position: static; /* cancela sticky no mobile */
+    display: flex;
+    flex-direction: row;
+    max-height: none;
+    overflow-x: auto;
+    overflow-y: hidden;
+    padding: 0 0 0.6rem;
+    gap: 0.5rem;
+    scrollbar-width: thin;
+  }
+
+  .trilha::before {
+    display: none;
+  }
+
+  .item {
+    flex-shrink: 0;
+    width: 145px;
+    padding-left: 0;
+    margin-bottom: 0;
+  }
+
+  .item::before {
+    display: none;
+  }
+
+  .pino:hover {
+    transform: translateY(-2px);
+  }
+
+  .pinoAtivo {
+    transform: translateY(-3px);
+    border-left: 1px solid var(--border);
+    border-top: 3px solid var(--gold);
+  }
+
+  .figuraImgWrap img {
+    max-height: 400px;
+  }
+
+  .painelConteudo {
+    padding: 1.4rem 1.25rem;
+  }
+
+  .painelTitulo {
+    font-size: 1.3rem;
+  }
+
+  .wrap {
+    padding: 1.5rem 1rem;
+    margin: 2rem 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .figuraImgWrap img {
+    max-height: 320px;
+  }
+
+  .painelTitulo {
+    font-size: 1.15rem;
+  }
+
+  .nav {
+    flex-wrap: wrap;
+    gap: 0.65rem;
+  }
+
+  .btnNav {
+    flex: 1;
+    text-align: center;
+    min-width: 100px;
+  }
+
+  .navCount {
+    width: 100%;
+    text-align: center;
+    order: -1;
+  }
+}

@@ -1,0 +1,428 @@
+.hero {
+  --paper: #fbfaf5;
+  --paper-old: #f5f2e8;
+  --ink: #1c2f4f20;
+  --ink-deep: #0f1a2e;
+  --gold: #c9b876;
+  --gold-light: #e8d896;
+  --gold-dark: #a89358;
+  --shadow: rgba(15, 26, 46, 0.6);
+
+  position: relative;
+  width: 100%;
+  min-height: 88vh;
+  overflow: hidden;
+  background: var(--ink-deep);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4rem 2rem;
+  isolation: isolate;
+}
+
+/* ============ CAMADAS DE FUNDO ============ */
+
+.fundo {
+  position: absolute;
+  inset: -5%;
+  background-size: cover;
+  background-position: center 30%;
+  filter: blur(3px) saturate(0.85) brightness(0.55);
+  transform: scale(1.05);
+  opacity: 0;
+  transition: opacity 2s ease;
+  z-index: -3;
+}
+
+.heroCarregado .fundo {
+  opacity: 1;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(
+      ellipse at 30% 50%,
+      rgba(15, 26, 46, 0.06) 0%,
+      rgba(15, 26, 46, 0.125) 70%
+    ),
+    linear-gradient(
+      180deg,
+      rgba(15, 26, 46, 0.038) 0%,
+      rgba(15, 26, 46, 0.07) 40%,
+      rgba(15, 26, 46, 0.195) 100%
+    );
+  z-index: -2;
+}
+
+.grao {
+  position: absolute;
+  inset: 0;
+  opacity: 0.06;
+  z-index: -1;
+  pointer-events: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+/* ============ CONTEÚDO EM DUAS COLUNAS ============ */
+
+.conteudo {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 5rem;
+  align-items: center;
+  max-width: 1300px;
+  width: 100%;
+  z-index: 1;
+}
+
+/* ============ COLUNA ESQUERDA: OBRA EM DESTAQUE ============ */
+
+.obra {
+  margin: 0;
+  opacity: 0;
+  transform: translateY(30px) scale(0.96);
+  transition: opacity 1.4s ease 0.3s, transform 1.4s ease 0.3s;
+}
+
+.heroCarregado .obra {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+.obraMoldura {
+  position: relative;
+  padding: 12px;
+  background: linear-gradient(
+    135deg,
+    var(--gold-dark) 0%,
+    var(--gold-light) 50%,
+    var(--gold-dark) 100%
+  );
+  box-shadow:
+    0 30px 80px rgba(0, 0, 0, 0.6),
+    0 0 0 1px rgba(201, 184, 118, 0.4),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.1);
+}
+
+.obraMoldura::before {
+  content: '';
+  position: absolute;
+  inset: 6px;
+  border: 1px solid rgba(15, 26, 46, 0.4);
+  pointer-events: none;
+  z-index: 2;
+}
+
+.obraImg {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: 68vh;
+  object-fit: cover;
+  filter: contrast(1.05) saturate(1.05);
+}
+
+.obraLegenda {
+  margin-top: 1.25rem;
+  padding-left: 0.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+  color: var(--paper);
+}
+
+.obraArtista {
+  font-family: Georgia, serif;
+  font-size: 0.95rem;
+  font-style: italic;
+  color: var(--gold-light);
+  letter-spacing: 0.02em;
+}
+
+.obraTitulo {
+  font-family: Georgia, serif;
+  font-size: 1.15rem;
+  font-weight: 400;
+  color: var(--paper);
+  letter-spacing: 0.03em;
+}
+
+.obraData {
+  font-size: 0.75rem;
+  color: rgba(251, 250, 245, 0.6);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-top: 0.25rem;
+}
+
+/* ============ COLUNA DIREITA: TEXTO EDITORIAL ============ */
+
+.texto {
+  color: var(--paper);
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 1.4s ease 0.6s, transform 1.4s ease 0.6s;
+}
+
+.heroCarregado .texto {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.supra {
+  display: block;
+  font-family: Georgia, serif;
+  font-size: 0.75rem;
+  font-style: italic;
+  color: var(--gold-light);
+  letter-spacing: 0.35em;
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+}
+
+.rubrica {
+  display: block;
+  font-family: Georgia, serif;
+  font-size: 0.7rem;
+  color: var(--gold);
+  letter-spacing: 0.5em;
+  text-transform: uppercase;
+  margin-bottom: 2rem;
+  padding-left: 3.25rem;
+  position: relative;
+}
+
+.rubrica::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 2.5rem;
+  height: 1px;
+  background: var(--gold);
+}
+
+.titulo {
+  font-family: Georgia, serif;
+  font-weight: 400;
+  line-height: 0.95;
+  margin: 0 0 2rem;
+  color: var(--paper);
+  letter-spacing: -0.01em;
+}
+
+.tituloLinha1 {
+  display: block;
+  font-size: clamp(3rem, 6vw, 5rem);
+  font-style: italic;
+  color: var(--gold-light);
+}
+
+.tituloLinha2 {
+  display: block;
+  font-size: clamp(4rem, 8vw, 6.5rem);
+  font-weight: 500;
+  margin-top: -0.5rem;
+  text-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+}
+
+.ornamento {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  max-width: 240px;
+}
+
+.ornamentoLinha {
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--gold), transparent);
+}
+
+.ornamentoSimbolo {
+  color: var(--gold);
+  font-size: 1rem;
+}
+
+.lead {
+  font-family: Georgia, serif;
+  font-size: 1.1rem;
+  line-height: 1.75;
+  color: rgba(251, 250, 245, 0.9);
+  margin: 0 0 2.5rem;
+  max-width: 560px;
+}
+
+.citacao {
+  position: relative;
+  padding: 1.5rem 1.5rem 1.5rem 3rem;
+  border-left: 2px solid var(--gold);
+  background: rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(4px);
+  max-width: 520px;
+}
+
+.citacaoAspas {
+  position: absolute;
+  top: 0.25rem;
+  left: 1rem;
+  font-family: Georgia, serif;
+  font-size: 3.5rem;
+  color: var(--gold);
+  line-height: 1;
+  opacity: 0.6;
+}
+
+.citacaoTexto {
+  font-family: Georgia, serif;
+  font-style: italic;
+  font-size: 0.98rem;
+  line-height: 1.65;
+  color: var(--paper);
+  margin: 0 0 0.75rem;
+}
+
+.citacaoRef {
+  display: block;
+  font-size: 0.72rem;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--gold-light);
+}
+
+/* ============ INDICADOR DE ROLAGEM ============ */
+
+.scroll {
+  position: absolute;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+  color: var(--gold);
+  opacity: 0;
+  transition: opacity 1s ease 1.5s;
+  z-index: 2;
+}
+
+.heroCarregado .scroll {
+  opacity: 0.8;
+}
+
+.scrollLabel {
+  font-family: Georgia, serif;
+  font-size: 0.7rem;
+  font-style: italic;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+}
+
+.scrollLinha {
+  width: 1px;
+  height: 40px;
+  background: linear-gradient(180deg, var(--gold), transparent);
+  animation: scrollPulse 2.5s ease-in-out infinite;
+}
+
+@keyframes scrollPulse {
+  0%, 100% {
+    opacity: 0.4;
+    transform: scaleY(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scaleY(1.15);
+  }
+}
+
+/* ============ RESPONSIVO ============ */
+
+@media (max-width: 1000px) {
+  .conteudo {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+    max-width: 600px;
+  }
+
+  .obra {
+    max-width: 380px;
+    margin: 0 auto;
+  }
+
+  .obraImg {
+    max-height: 55vh;
+  }
+}
+
+@media (max-width: 640px) {
+  .hero {
+    min-height: auto;
+    padding: 3rem 1.25rem 5rem;
+  }
+
+  .conteudo {
+    gap: 2.5rem;
+  }
+
+  .obra {
+    max-width: 100%;
+  }
+
+  .obraMoldura {
+    padding: 8px;
+  }
+
+  .obraImg {
+    max-height: 50vh;
+  }
+
+  .rubrica {
+    padding-left: 2.5rem;
+    letter-spacing: 0.35em;
+  }
+
+  .rubrica::before {
+    width: 1.75rem;
+  }
+
+  .lead {
+    font-size: 1rem;
+  }
+
+  .citacao {
+    padding: 1.25rem 1.25rem 1.25rem 2.5rem;
+  }
+
+  .citacaoAspas {
+    font-size: 2.75rem;
+    left: 0.75rem;
+  }
+
+  .scroll {
+    bottom: 1.25rem;
+  }
+
+  .scrollLinha {
+    height: 28px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .fundo,
+  .obra,
+  .texto,
+  .scroll {
+    transition: opacity 0.2s ease !important;
+    transform: none !important;
+  }
+
+  .scrollLinha {
+    animation: none;
+  }
+}

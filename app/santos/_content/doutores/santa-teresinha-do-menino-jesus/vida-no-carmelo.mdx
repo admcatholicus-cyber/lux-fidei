@@ -1,0 +1,170 @@
+export const meta = {
+  numero: 'V',
+  titulo: 'Vida no Carmelo',
+  subtitulo: 'O cotidiano escondido da carmelita de Lisieux',
+};
+
+<PageHeader numero={meta.numero} titulo={meta.titulo} subtitulo={meta.subtitulo} />
+
+<Section numero="01" titulo="O Carmelo de Lisieux — instituição e espaço">
+  <Bloco titulo="Uma fundação de 1838 no coração da Normandia">
+    <Capitular>O</Capitular> **Carmelo de Lisieux** havia sido fundado em **1838**, a partir de uma comunidade vinda de Poitiers, e era portanto um mosteiro relativamente jovem quando Teresa Martin atravessou seu portal em abril de 1888. Situado num bairro tranquilo da cidade normanda, o edifício era de arquitetura conventual sóbria, sem pretensões monumentais: paredes espessas, jardim interior, coro elevado sobre a nave da capela pública, celas simples ao longo de corredores que eram frios no inverno e abafados no verão. Não havia aquecimento central; a iluminação era a velas ou a lamparina; a água vinha de um poço no pátio. As condições materiais eram austeras não por negligência, mas por opção — a pobreza concreta fazia parte da observância que as carmelitas haviam escolhido.
+
+    A comunidade contava, na época da entrada de Teresa, com cerca de **vinte e cinco religiosas** de diferentes idades e temperamentos — número que, dentro de uma clausura permanente, significa uma convivência de intensidade que nenhuma vida de família ou de trabalho externo produz de modo comparável. Vinte e cinco mulheres que nunca saem, que partilham o coro, o refeitório, a lavanderia, o jardim e o silêncio, ano após ano, sem a válvula de escape dos afazeres externos, das viagens, das mudanças de ambiente.
+
+    <Nota>O Carmelo Descalço foi reformado no século XVI por **Santa Teresa de Ávila** e **São João da Cruz**, que restabeleceram a observância primitiva da Ordem com suas exigências de clausura, silêncio, oração contemplativa e pobreza. O Carmelo de Lisieux seguia as **Constituições** derivadas dessa reforma, que prescreviam com precisão os horários, os ofícios, os trabalhos, os graus de formação e os costumes comunitários.</Nota>
+  </Bloco>
+
+  <Bloco titulo="Estrutura de governo da comunidade">
+    A vida institucional do Carmelo de Lisieux era organizada segundo uma hierarquia precisa, definida pelas Constituições e sujeita a supervisão eclesiástica periódica.
+
+    A **priora** era a superiora eleita pela comunidade professa a cada três anos, responsável pelo governo ordinário do mosteiro, pela admissão de candidatas, pela distribuição dos ofícios e pela direção espiritual geral da casa. A **subpriora** a assistia e a substituía nas ausências. A **mestra de noviças** respondia pela formação das candidatas em postulantado e noviciado — função distinta da prioria, embora pudesse ser acumulada pela mesma pessoa em comunidades menores. O **capítulo**, reunião semanal de todas as professas, era o fórum de decisão coletiva para assuntos da vida comum. A **visita canônica**, realizada periodicamente pelo bispo diocesano ou por seu delegado, fiscalizava a observância da Regra e ouvia individualmente todas as religiosas.
+
+    Durante os nove anos em que Teresa viveu no Carmelo de Lisieux, o governo da comunidade passou por duas transferências de prioria com datas precisas: **Madre Maria de Gonzaga** era priora na entrada de Teresa em 1888 e acumulava nesse período a função de mestra de noviças. Em **fevereiro de 1893**, **Madre Agnès de Jesus** — Pauline Martin — foi eleita priora, e Madre Gonzaga voltou à função de mestra de noviças. Em **março de 1896**, nova eleição restituiu a prioria a **Madre Gonzaga**, sob cuja autoridade Teresa exerceu o acompanhamento das noviças até a morte, sem título oficial de mestra.
+  </Bloco>
+</Section>
+
+<Separador />
+
+<Section numero="02" titulo="A jornada — horários, ofícios e observâncias">
+  <Bloco titulo="O horarium do Carmelo de Lisieux">
+    <Capitular>A</Capitular> rotina do Carmelo de Lisieux no fim do século XIX era rigorosa no que dizia respeito aos horários e às observâncias. O **Ofício Divino** cantado em coro era o eixo da jornada: as carmelitas reuniam-se várias vezes ao dia para rezar as Horas Litúrgicas, e as atividades manuais e os silêncios de oração particular distribuíam-se nos intervalos entre os Ofícios. Havia também variações segundo o calendário litúrgico — festas, jejuns, ofícios próprios da Ordem — que modificavam o horário base sem alterar a sua estrutura.
+
+    A tabela abaixo é uma reconstituição aproximada baseada nas Constituições Carmelitas e nos relatos das irmãs de Lisieux.
+  </Bloco>
+
+  <Tabela
+    cabecalho={['Horário', 'Atividade', 'Lugar']}
+    linhas={[
+      ['5h00', 'Despertar — sino da comunidade', '—'],
+      ['5h30', 'Oração mental — meditação em silêncio', 'Coro'],
+      ['6h00', 'Laudes e Prima cantadas', 'Coro'],
+      ['6h45', 'Missa conventual', 'Coro'],
+      ['7h30', 'Pequeno-almoço — em silêncio com leitura espiritual', 'Refeitório'],
+      ['8h00', 'Trabalho manual — cada irmã no ofício designado', 'Ofício'],
+      ['10h00', 'Tércia, Sexta e Nona cantadas', 'Coro'],
+      ['10h30', 'Trabalho manual — continuação', 'Ofício'],
+      ['12h00', 'Exame de consciência — pausa breve de oração', 'Cela / Coro'],
+      ['12h15', 'Almoço — em silêncio com leitura em voz alta', 'Refeitório'],
+      ['13h00', 'Recreação — conversa comunitária permitida', 'Jardim ou sala'],
+      ['14h00', 'Oração mental — meditação', 'Coro ou cela'],
+      ['15h00', 'Vésperas cantadas', 'Coro'],
+      ['15h30', 'Trabalho manual — tarde', 'Ofício'],
+      ['17h30', 'Completas e leitura espiritual coletiva', 'Coro'],
+      ['18h00', 'Jantar — com leitura em voz alta', 'Refeitório'],
+      ['19h00', 'Recreação noturna — breve', 'Sala'],
+      ['20h00', 'Grande silêncio — início até depois da Missa do dia seguinte', '—'],
+      ['21h00', 'Matinas e Laudes — em dias alternados de madrugada', 'Coro'],
+    ]}
+  />
+
+  <Nota>
+    O <strong>grande silêncio</strong>, observado da última recreação da noite até depois da Missa do dia seguinte, era uma das observâncias mais características da vida carmelita. O jejum rigoroso — refeição única ao meio-dia — era observado de <strong>outubro a Páscoa</strong>. O horário das Matinas variava segundo as casas e as épocas do ano; em Lisieux, eram rezadas frequentemente de madrugada, o que implicava levantar no meio da noite e voltar a dormir antes do despertar geral.
+  </Nota>
+
+  <Bloco titulo="O inverno normando — um dado material, não uma metáfora">
+    O **frio** era, nos relatos das próprias irmãs, uma das condições mais constantes e universalmente sentidas da vida no Carmelo de Lisieux. A Normandia tem invernos longos e úmidos; o edifício conventual, de paredes espessas mas sem aquecimento central, retinha a umidade e deixava passar o frio através dos corredores e do coro. As religiosas rezavam as Horas em hábito de lã, mas sem aquecimento de ambiente durante os meses de outubro a abril.
+
+    Teresa sofreu com o frio durante todos os anos de clausura. Não é um dado espiritual nem uma metáfora de provação interior: é um dado material documentado pelas irmãs que viveram ao seu lado. Ela não se queixava — esse é o dado espiritual —, mas o frio existia e era real. Nos invernos de 1896 e 1897, quando a tuberculose já estava instalada nos pulmões, o frio do Carmelo agravou o quadro de modo perceptível para as irmãs que a observavam.
+
+    O jejum de outubro a Páscoa, a abstinência de carne quase permanente e o dormitório sem aquecimento constituíam a austeridade estrutural da vida carmelita de Lisieux — não penitências escolhidas individualmente, mas condições de vida coletiva que todas partilhavam e das quais não havia dispensa sem motivo grave. Teresa observou essas condições até que a doença tornou impossível continuar.
+  </Bloco>
+</Section>
+
+<Separador />
+
+<Section numero="03" titulo="Os ofícios concretos de Teresa">
+  <Bloco titulo="Lavanderia, sacristia, refeitório">
+    <Capitular>T</Capitular>eresa exerceu, ao longo dos nove anos de vida religiosa, diferentes tarefas dentro do Carmelo. Essa rotação de ofícios era prevista pelas Constituições e servia tanto à necessidade prática da comunidade quanto à formação das religiosas: cada serviço impunha suas próprias exigências de paciência e seus próprios modos de encontrar Deus no trabalho ordinário.
+
+    Na **lavanderia**, Teresa trabalhou durante anos com as mãos na água fria, num espaço úmido, realizando um serviço que ninguém veria nem agradeceria de modo particular. Na **sacristia**, cuidava dos ornamentos litúrgicos, dos vasos sagrados e da preparação para as celebrações — um ofício que exigia atenção ao detalhe e que lhe permitia um contato prolongado com os objetos da liturgia. No **refeitório**, ajudou na distribuição das refeições e na leitura em voz alta durante o jantar — tarefa que requeria boa dicção e regularidade de presença.
+
+    Havia também atividades menos regulares que faziam parte do cotidiano do Carmelo: sessões de **pintura** de objetos devocionais — imagens, cartões, ornamentos —, nas quais Teresa participou com habilidade reconhecida pelas irmãs; e as **recreações**, momentos de conversa comunitária permitida em que a comunidade se reunia no jardim ou na sala e em que havia, em certas festas, **representações teatrais internas** — peças breves compostas pelas próprias religiosas para celebrar aniversários ou festas da Ordem. Teresa escreveu várias dessas peças e participou das encenações. Esse aspecto da vida comunitária — o teatro interno como forma de recreação cultural dentro da clausura — é um dado do cotidiano do Carmelo de Lisieux que a hagiografia tende a subestimar e que pertence à textura humana real da casa.
+  </Bloco>
+
+  <Bloco titulo="Auxiliar das noviças — função sem título">
+    O ofício que mais marcou a maturidade de Teresa foi o de **auxiliar informal das noviças**. A partir de **1893**, a Madre Gonzaga — que exercia a função de mestra de noviças — confiou a Teresa o acompanhamento prático das jovens em formação no cotidiano. Teresa não recebeu o título oficial de mestra; exercia a função por delegação e sob a autoridade da mestra titular. Sua autoridade dependia inteiramente da qualidade do que dizia e fazia, não de um cargo — condição que ela aceitou sem queixa registrada.
+
+    As noviças que estiveram sob sua orientação nos últimos anos deixaram depoimentos no processo canônico que permitem reconstituir o método de Teresa: ela era direta, firme e sem condescendência inútil, mas sem dureza. Exigia das noviças o que sabia ser possível; não suavizava as exigências da Regra para poupar-lhes o desconforto; e acompanhava cada uma segundo o temperamento específico que observava, sem aplicar o mesmo método a todas.
+  </Bloco>
+</Section>
+
+<Separador />
+
+<Section numero="04" titulo="As irmãs da comunidade — convivência concreta">
+  <Bloco titulo="Perfis de irmãs não-Martin que importam ao cotidiano">
+    <Capitular>A</Capitular> comunidade do Carmelo de Lisieux não era apenas o pano de fundo da vida de Teresa: era o material humano concreto com o qual ela praticava a caridade. Algumas irmãs deixaram marcas documentadas nos relatos e nos processos. Sem pretender uma lista exaustiva, vale registrar os perfis que aparecem com mais frequência nas fontes.
+
+    **Irmã Marie de Saint-Pierre** era uma carmelita idosa que sofria de reumatismo severo nas mãos e que tinha dificuldade de realizar sozinha os movimentos necessários para chegar ao coro e para cuidar dos seus utensílios pessoais. Teresa foi designada para auxiliá-la nessas tarefas — um serviço de paciência concreta, porque a Irmã Marie de Saint-Pierre era de temperamento exigente e pouco fácil de agradar. Teresa descreveu esse serviço nos manuscritos como um dos exercícios de caridade mais custosos e mais formativos da sua vida no Carmelo: não porque a irmã fosse má, mas porque a dificuldade de temperamento tornava o serviço diário uma prática real de amor que não dependia da simpatia.
+
+    **Irmã Marie de la Trinité** foi uma das noviças sob orientação de Teresa nos últimos anos. Era de temperamento vivo e de inteligência aguçada, e deixou no processo canônico depoimentos de detalhe sobre o modo como Teresa a orientava — com firmeza que não era rudeza e com uma clareza de julgamento que a noviça recordou como algo que não havia encontrado em nenhum outro acompanhamento espiritual. Irmã Marie de la Trinité sobreviveu longamente a Teresa e foi uma das testemunhas mais importantes do processo diocesano.
+
+    **Irmã Marthe de Jésus** era outra noviça acompanhada por Teresa, de temperamento mais ansioso e de necessidade de reasseguramento constante — um espelho, de certo modo, de algo que a própria Teresa havia superado nos anos de infância. Os relatos indicam que Teresa a tratava com paciência mas sem alimentar a dependência afetiva, orientando-a para a confiança em Deus antes de qualquer apoio humano.
+
+    **Irmã Marie des Anges** exerceu por um período a função de mestra de noviças oficial, a quem Teresa respondia formalmente no arranjo institucional que reservava a Teresa a função prática sem o título. Os documentos do processo indicam uma relação de colaboração sem atrito significativo registrado.
+
+    <Nota>Os depoimentos das irmãs não-Martin no processo canônico de 1910–1915 são fontes de primeira importância para o conhecimento do cotidiano de Teresa no Carmelo. Esses testemunhos têm valor histórico específico porque vêm de pessoas sem laço de sangue com Teresa e sem o interesse afetivo das irmãs Martin em apresentá-la de modo favorável. A convergência entre esses depoimentos e os das irmãs Martin aumenta a credibilidade histórica do conjunto.</Nota>
+  </Bloco>
+
+  <Bloco titulo="A irmã difícil — o laboratório da caridade real">
+    Teresa deixou nos manuscritos a descrição de pelo menos uma irmã da comunidade cujo temperamento lhe era particularmente difícil de amar — sem dar o nome, conforme a discrição que a vida comunitária exigia. Descrevia uma religiosa que tinha o dom de irritá-la em tudo: no modo de andar, no modo de falar, nos pequenos hábitos que se tornavam, pela repetição, uma forma de incomodação persistente. Teresa admitia que o sentimento que essa irmã lhe provocava era de antipatia — involuntária, sem fundamento moral sólido, do tipo que não se escolhe sentir, mas que se escolhe ou não alimentar.
+
+    A solução que Teresa encontrou foi característica do seu método: em vez de tentar eliminar o sentimento — o que havia tentado e sabia impossível pela força da vontade —, ela decidiu tratar aquela irmã com uma atenção especial que o sentimento não justificava, mas que o amor podia comandar. Buscava a irmã nas recreações; sorria-lhe quando sentia o impulso contrário; realizava pequenos serviços para ela sem que fossem esperados. O resultado foi que a irmã em questão, sem saber nada do esforço interior que havia custado, disse um dia a alguém que Teresa Martin era a religiosa que mais gostava dela. A caridade havia produzido um efeito real no exterior sem ter esperado correspondência afetiva no interior.
+  </Bloco>
+
+  <Bloco titulo="O ruído no coro — um exemplo de escala menor">
+    Há um episódio que os leitores costumam citar com frequência, não por ser espetacular — é o oposto de espetacular —, mas por ilustrar com precisão o método que Teresa havia desenvolvido para lidar com as tensões da vida comum. Durante o Ofício no coro, uma irmã que ficava próxima de Teresa tinha o hábito de fazer um ruído com o rosário ou com os dedos — um farfalhar discreto mas constante — que perturbava a concentração de Teresa na oração. Teresa sentia a irritação; reconhecia que era real; sabia que seria impossível não a sentir. E então escolhia tratá-la como se fosse música agradável em vez de perturbação insuportável.
+
+    Não era negação da realidade. Era uma decisão de não deixar que a irritação legítima ditasse a qualidade da sua oração e da sua relação com aquela irmã. Teresa levou esse exercício durante meses sem jamais mencionar o incômodo à irmã em questão, sem pedir para ser mudada de lugar, sem deixar transparecer nenhum sinal que pudesse fazer a outra sentir-se julgada.
+  </Bloco>
+</Section>
+
+<Separador />
+
+<Section numero="05" titulo="As quatro irmãs Martin no mesmo Carmelo">
+  <Bloco titulo="Uma situação sem precedente imediato na comunidade">
+    <Capitular>U</Capitular>m dos aspectos mais singulares da vida de Teresa no Carmelo de Lisieux foi partilhar a clausura com três irmãs de sangue: **Pauline** (Madre Agnès de Jesus, entrou em 1882), **Marie** (Irmã Maria do Sagrado Coração, entrou em 1886) e, a partir de **setembro de 1894**, **Céline** (Irmã Geneviève de la Sainte Face). A quinta irmã, **Léonie**, havia tentado a vida religiosa em diferentes institutos e firmou-se finalmente na Visitação de Caen em 1899. Dentro dos muros do Carmelo de Lisieux, a concentração de quatro filhas de Louis Martin na mesma comunidade era uma situação sem precedente imediato e que colocava desafios específicos tanto para as irmãs quanto para a comunidade ao redor.
+
+    Do ponto de vista institucional, as Constituições Carmelitas tratavam as relações de parentesco dentro da comunidade com uma regra clara: as irmãs de sangue não deviam ter tratamento preferencial, não deviam conversar entre si de modo exclusivo nas recreações, não deviam usar a consanguinidade como canal de influência ou de informação privilegiada. Essa regra, sensata do ponto de vista do governo comunitário, era exigente na prática: Teresa precisava tratar Pauline no coro e no refeitório com a mesma formalidade com que tratava qualquer outra irmã, e Pauline, quando priora, precisava tratar Teresa sem a indulgência que o afeto fraternal sugeria naturalmente.
+
+    <Nota>A entrada de Céline em setembro de 1894 foi possível depois da morte de Louis Martin em julho desse ano. Céline havia ficado em Les Buissonnets por anos cuidando do pai, que sofria de uma síndrome cerebrovascular progressiva e que passara os três anos finais da vida num asilo em Caen. Com a morte do pai, Céline ficou livre para responder à vocação que havia adiado. Teresa viveu a doença e a morte do pai de dentro do Carmelo, atrás da grade do parlatório, sem poder sair — um dos sofrimentos mais pesados que registrou nos manuscritos.</Nota>
+  </Bloco>
+
+  <Bloco titulo="Vantagem afetiva e risco comunitário">
+    A presença das irmãs no mesmo convento foi simultaneamente fonte de apoio e fonte de prova para Teresa. O apoio era real: havia pessoas que a conheciam desde o berço, que podiam testemunhar sua autenticidade sem o filtro da impressão construída, que a amavam com um afeto que não dependia de performance religiosa. Esse conhecimento mútuo profundo tinha um valor que Teresa apreciava — sobretudo nos momentos de crise interior.
+
+    Mas os riscos eram igualmente reais e Teresa os reconhecia. O risco de que a comunidade se dividisse em torno da família Martin, gerando ressentimentos nas outras irmãs que não tinham parentes ali. O risco de que as Martin criassem, involuntariamente, um microclima de comunicação e de afeto dentro do microclima conventual, com as outras religiosas posicionadas como externas a ele. O risco de que Teresa fosse tratada com indulgência por ser irmã da priora Pauline entre 1893 e 1896 — ou que fosse tratada com severidade compensatória pelas outras religiosas, para desfazer a aparência de favorecimento.
+
+    O processo canônico de 1910–1915 tratou explicitamente essa questão: os juízes instruíram com atenção especial os depoimentos das irmãs Martin, precisamente porque o laço de sangue podia gerar suspeita de parcialidade. A instrução considerou que os depoimentos das irmãs, cotejados com os das religiosas sem laço de sangue com Teresa, eram suficientemente convergentes para serem aceitos como válidos — mas o problema foi reconhecido e tratado, não ignorado.
+  </Bloco>
+</Section>
+
+<Separador />
+
+<Section numero="06" titulo="Postulantado, noviciado e profissão">
+  <Bloco titulo="As etapas da formação canônica">
+    <Capitular>T</Capitular>eresa entrou no Carmelo de Lisieux em **9 de abril de 1888**, Quinta-feira Santa, como **postulante** — candidata que vive a vida da comunidade antes de ser formalmente recebida como noviça. O postulantado durou cerca de nove meses. A cerimônia de imposição do **hábito carmelita** realizou-se em **10 de janeiro de 1889**: Teresa recebeu o hábito de lã marrom com escapulário e manto branco, e passou a ser chamada **Irmã Teresa do Menino Jesus**. Louis Martin esteve presente na cerimônia, vestido com cuidado especial para a ocasião — era já um homem que carregava os primeiros sinais da doença cerebrovascular que o afastaria do convívio familiar nos anos seguintes.
+
+    O **noviciado** durou os dois anos previstos pelas Constituições. Teresa fez a **profissão perpétua** em **8 de setembro de 1890**, Festa da Natividade de Maria. Na profissão, acrescentou ao seu nome religioso o segundo título: **"e da Sagrada Face"** — expressando por essa escolha a meditação sobre o rosto sofredor de Cristo tal como descrito por Isaías 53 e a espiritualidade do ocultamento que ia encontrando no seu caminho. Passou a chamar-se oficialmente **Irmã Teresa do Menino Jesus e da Sagrada Face**.
+
+    <Nota>A tomada de hábito de 10 de janeiro de 1889 é datada com precisão nos registros do Carmelo e nos depoimentos do processo. Louis Martin, presente na cerimônia, adoecia progressivamente: os primeiros episódios neurológicos significativos ocorreram em fevereiro de 1889, poucos dias após a cerimônia. Teresa viveu a deterioração do pai de dentro da clausura, sem poder visitá-lo livremente — apenas nos parlatórios regulamentados. Ele foi internado no asilo de Bon Sauveur, em Caen, em fevereiro de 1889, e faleceu em julho de 1894.</Nota>
+  </Bloco>
+
+  <Bloco titulo="As eleições de 1893 e 1896">
+    A vida institucional do Carmelo de Lisieux foi marcada, durante os anos de Teresa, por duas eleições de priora com consequências diretas sobre o seu cotidiano.
+
+    Em **fevereiro de 1893**, o capítulo eleitoral elegeu **Madre Agnès de Jesus** — Pauline Martin — como priora da comunidade. Madre Gonzaga, que havia governado a casa desde antes da entrada de Teresa, passou a exercer exclusivamente a função de mestra de noviças. Foi nesse período, sob o governo da irmã, que Teresa recebeu a incumbência de auxiliar as noviças e que a Madre Agnès a pediu que escrevesse suas memórias de infância — o que deu origem ao **Manuscrito A**, concluído em janeiro de 1896.
+
+    Em **março de 1896**, nova eleição restituiu a prioria a **Madre Gonzaga**. A Madre Agnès voltou à posição de religiosa sem cargo de governo. Teresa continuou a exercer o acompanhamento das noviças sob a nova prioria, mas agora sem o amparo institucional que a proximidade com a priora anterior proporcionava. Foi nesse novo contexto que a Madre Gonzaga pediu a Teresa que continuasse a escrever — o que deu origem ao **Manuscrito B** (setembro de 1896) e ao **Manuscrito C** (junho–setembro de 1897, escrito na enfermaria durante a doença final).
+  </Bloco>
+</Section>
+
+<Separador />
+
+<Section numero="07" titulo="O heroísmo sem espetáculo">
+  <Bloco titulo="Por que o ordinário é o lugar da santidade">
+    <Capitular>H</Capitular>á uma tentação recorrente na leitura da vida dos santos: procurar os momentos excepcionais — as visões, os êxtases, as penitências extremas — como se fossem esses os momentos que justificam a santidade e a distinguem da vida comum de um cristão sério. No caso de Teresa de Lisieux, essa tentação encontra uma resistência sistemática: não há, nos nove anos de Carmelo, nenhum fenômeno extraordinário documentado, nenhuma visão reconhecida, nenhuma penitência espetacular, nenhuma obra exterior de proporções notáveis.
+
+    O que há é algo diferente, e mais exigente: a prática contínua, invisível e sem testemunhas da caridade no detalhe ordinário. A irmã que Teresa amou sem sentir amor. O silêncio que guardou quando a injustiça a provocava a responder. O trabalho que realizou sem que ninguém percebesse que havia sido bem realizado. A oração que sustentou durante os anos de noite espiritual sem consolação sensível. A vida no Carmelo de Lisieux foi o laboratório onde esse heroísmo foi testado e confirmado — com o frio do inverno normando nos ossos, com a irritação real diante de temperamentos difíceis, com a saudade de Les Buissonnets, com a angústia da doença que avançava. Mas foi vivido com uma coerência que não admitia exceções e com uma confiança que não dependia de sentir que valia a pena.
+  </Bloco>
+</Section>

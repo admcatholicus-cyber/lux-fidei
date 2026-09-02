@@ -1,0 +1,33 @@
+export const meta = {
+  nome: 'Santa Afra de Augsburgo',
+  titulo: 'MÁRTIR · PENITENTE · TESTEMUNHA DA GRAÇA',
+  subtitulo:
+    'Uma das memórias mais antigas do cristianismo na Alemanha: convertida, provada e fiel até o fogo do martírio.',
+  categoria: 'martires',
+  slug: 'santa-afra-de-augsburgo',
+  abas: [
+    { slug: 'contexto-romano', label: 'Contexto' },
+    { slug: 'augsburgo-antiga', label: 'Augsburgo' },
+    { slug: 'vida-e-condicao', label: 'Vida' },
+    { slug: 'conversao', label: 'Conversão' },
+    { slug: 'martirio', label: 'Martírio' },
+    { slug: 'familia-e-companheiras', label: 'Companheiras' },
+    { slug: 'fontes-e-passio', label: 'Fontes' },
+    { slug: 'historicidade-e-critica', label: 'Historicidade' },
+    { slug: 'culto-e-expansao', label: 'Culto' },
+    { slug: 'liturgia', label: 'Liturgia' },
+    { slug: 'teologia-da-conversao', label: 'Graça' },
+    { slug: 'teologia-do-martirio', label: 'Teologia' },
+    { slug: 'espiritualidade-e-penitencia', label: 'Espiritualidade' },
+    { slug: 'devocoes-e-oracoes', label: 'Devoções' },
+    { slug: 'reliquias-e-traslacoes', label: 'Relíquias' },
+    { slug: 'basilica-e-lugares-de-memoria', label: 'Lugares' },
+    { slug: 'patronatos-e-intercessao', label: 'Patronatos' },
+    { slug: 'recepcao-cultural', label: 'Recepção' },
+    { slug: 'alem-de-augsburgo', label: 'Além de Augsburgo' },
+    { slug: 'linha-do-tempo', label: 'Linha do Tempo' },
+
+    { slug: 'iconografia', label: 'Iconografia' },
+    { slug: 'frases', label: 'Frases' },
+  ],
+} as const;

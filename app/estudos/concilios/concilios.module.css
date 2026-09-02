@@ -1,0 +1,1547 @@
+/* ============================================================
+   RESET GLOBAL (escopo desta página)
+   ============================================================ */
+
+:global(html),
+:global(body) {
+  margin: 0 !important;
+  padding: 0 !important;
+  min-height: 100%;
+  background: #ede4d0; /* mesma cor do pergaminho, para caso apareça */
+  overflow-x: hidden;
+}
+
+:global(*),
+:global(*::before),
+:global(*::after) {
+  box-sizing: border-box;
+}
+
+
+
+/* ============================================================
+   app/estudos/concilios/concilios.module.css
+   ============================================================ */
+
+.pageWrapper {
+  color-scheme: light only;
+
+  --parchment-1: #ede4d0;
+  --parchment-card: #f2ead6;
+  --parchment-card-hover: #f7f1e0;
+  --parchment-glow: #f5f0e3;
+
+  --ink: #2b1b0e;
+  --ink-soft: #4a3521;
+  --ink-faint: #6b5638;
+
+  --rubric: #8b2635;
+  --rubric-deep: #6d1c28;
+  --rubric-soft: rgba(168, 69, 84, 0.5);
+  --rubric-wax: #9c2a3a;
+
+  --gold: #a6832f;
+  --gold-deep: #7d611f;
+  --gold-glow: rgba(166, 131, 47, 0.15);
+
+  --line: #c3b28c;
+  --line-soft: rgba(195, 178, 140, 0.5);
+
+  --shadow-card:
+    0 1px 2px rgba(43, 27, 14, 0.08),
+    0 3px 8px rgba(43, 27, 14, 0.06);
+  --shadow-card-hover:
+    0 2px 4px rgba(43, 27, 14, 0.1),
+    0 12px 28px rgba(43, 27, 14, 0.18),
+    0 24px 48px rgba(43, 27, 14, 0.08);
+
+  --font-display: 'Cormorant', 'Cormorant Garamond', Georgia, serif;
+  --font-body:    'Crimson Text', 'Crimson Pro', Georgia, serif;
+  --font-data:    'JetBrains Mono', 'IBM Plex Mono', monospace;
+
+  font-family: var(--font-body);
+  color: var(--ink);
+  background: var(--parchment-1) !important;
+  line-height: 1.7;
+  min-height: 100vh;
+  position: relative;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+@font-face {
+  font-family: 'Cormorant';
+  src: local('Cormorant Garamond');
+}
+
+/* fibra de papel */
+.pageWrapper::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background-image:
+    repeating-linear-gradient(
+      93deg,
+      transparent,
+      transparent 3px,
+      rgba(43, 27, 14, 0.012) 3px,
+      rgba(43, 27, 14, 0.012) 4px
+    );
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* vinheta */
+.pageWrapper::after {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background: radial-gradient(
+    ellipse at center,
+    transparent 55%,
+    rgba(43, 27, 14, 0.06) 100%
+  );
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* ============================================================
+   IMAGEM DE CONSTANTINO — ancorada à esquerda
+   ============================================================ */
+
+.aquarela {
+  position: absolute;
+  top: -3rem;
+  left: -32vw;
+  width: 60vw;
+  max-width: 820px;
+  min-width: 450px;
+  height: 760px;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.aquarelaImg {
+  position: absolute;
+  inset: 0;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center center;
+
+  -webkit-mask-image: radial-gradient(
+    ellipse 58% 74% at 55% 50%,
+    #000 28%,
+    rgba(0,0,0,0.7) 55%,
+    rgba(0,0,0,0.2) 78%,
+    transparent 100%
+  );
+  mask-image: radial-gradient(
+    ellipse 58% 74% at 55% 50%,
+    #000 28%,
+    rgba(0,0,0,0.7) 55%,
+    rgba(0,0,0,0.2) 78%,
+    transparent 100%
+  );
+
+  filter: sepia(0.55) saturate(0.7) contrast(0.9) brightness(0.95);
+  opacity: 0.45;
+  mix-blend-mode: multiply;
+}
+
+/* ============================================================
+   FRASES CONDENADAS + CARIMBO ÚNICO
+   ============================================================ */
+
+.condenadasArea {
+  position: absolute;
+  /* Desceu para ficar na altura do card do Niceia I */
+  top: 14rem;
+  left: calc(50% + 3rem);
+  right: 2rem;
+  z-index: 2;
+  pointer-events: none;
+  padding: 1.2rem 0;
+}
+
+/* Container interno — permite posicionar o carimbo por cima */
+.condenadasBloco {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+}
+
+.condenadasLista {
+  list-style: none !important;
+  list-style-type: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
+
+  animation: entraFrases 0.7s ease both;
+}
+
+.condenadasLista > li::marker {
+  content: '' !important;
+}
+
+@keyframes entraFrases {
+  from { opacity: 0; transform: translateY(6px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.condenadaLinha {
+  list-style: none !important;
+  list-style-type: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+
+  display: block;
+
+  font-family: var(--font-display);
+  font-size: 1.05rem;
+  font-style: italic;
+  font-weight: 500;
+  line-height: 1.4;
+  color: var(--ink-soft);
+
+  /* Origem no centro para as rotações inline não empurrarem tudo */
+  transform-origin: center center;
+  /* Suaviza a transformação se necessário */
+  transition: transform 0.3s ease;
+}
+
+/* CARIMBO — grande, girado, cobrindo o meio das frases */
+/* CARIMBO — menor, mais transparente, ainda dominante */
+.carimboUnico {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(-12deg);
+  transform-origin: center center;
+
+  font-family: var(--font-display);
+  font-weight: 900;
+  font-style: italic;
+  /* Menor que antes */
+  font-size: 2.8rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+
+  /* Mais transparente */
+  color: rgba(150, 35, 30, 0.55);
+
+  padding: 0.12em 0.45em;
+  /* Borda também mais transparente */
+  border: 5px double rgba(150, 35, 30, 0.5);
+  border-radius: 6px;
+
+  text-shadow:
+    0 0 1px rgba(150, 35, 30, 0.2),
+    1px 1px 0 rgba(255, 240, 230, 0.12);
+
+  filter:
+    drop-shadow(0 1px 1px rgba(150, 35, 30, 0.2))
+    contrast(1.05);
+
+  /* Opacidade geral mais baixa */
+  opacity: 0.7;
+  pointer-events: none;
+  white-space: nowrap;
+
+  animation: estampar 0.5s cubic-bezier(0.34, 1.56, 0.64, 1) both;
+  animation-delay: 0.6s;
+}
+
+@keyframes estampar {
+  from {
+    opacity: 0;
+    transform: translate(-50%, -50%) rotate(-12deg) scale(1.8);
+  }
+  to {
+    opacity: 0.7;
+    transform: translate(-50%, -50%) rotate(-12deg) scale(1);
+  }
+}
+
+/* Esconde tudo em telas pequenas */
+@media (max-width: 1100px) {
+  .aquarela,
+  .condenadasArea {
+    display: none;
+  }
+}
+
+/* ============================================================
+   BOTÃO VOLTAR
+   ============================================================ */
+
+.btnVoltar {
+  position: fixed;
+  top: 22px;
+  left: 22px;
+  z-index: 500;
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  padding: 10px 20px;
+  background: var(--parchment-glow);
+  color: var(--ink-soft) !important;
+  border: 1px solid var(--line);
+  border-radius: 2px;
+  font-family: var(--font-data);
+  font-size: 0.68rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  text-decoration: none;
+  box-sizing: border-box;
+  box-shadow: 0 2px 10px rgba(43, 27, 14, 0.14);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.btnVoltar:hover {
+  background: var(--ink);
+  color: var(--parchment-1) !important;
+  border-color: var(--ink);
+  transform: translateX(-3px);
+}
+
+.btnVoltarSeta {
+  font-size: 1rem;
+  line-height: 1;
+  transition: transform 0.3s ease;
+}
+
+.btnVoltar:hover .btnVoltarSeta {
+  transform: translateX(-2px);
+}
+
+@media (max-width: 640px) {
+  .btnVoltarTexto { display: none; }
+  .btnVoltar { padding: 10px 13px; top: 14px; left: 14px; }
+}
+
+/* ============================================================
+   CONTAINER
+   ============================================================ */
+
+.pagina {
+  max-width: 820px;
+  margin: 0 auto;
+  padding: 0;
+  position: relative;
+  box-sizing: border-box;
+}
+
+/* ============================================================
+   HERO
+   ============================================================ */
+
+.hero {
+  position: relative;
+  padding: 7rem 2rem 5rem;
+  text-align: center;
+  border-bottom: 1px solid var(--line);
+  background: var(--parchment-1);
+  box-sizing: border-box;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 50%; left: 50%;
+  width: 520px; height: 520px;
+  transform: translate(-50%, -50%);
+  border: 1px solid var(--gold-glow);
+  border-radius: 50%;
+  opacity: 0.4;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.hero::after {
+  content: '';
+  position: absolute;
+  top: 50%; left: 50%;
+  width: 380px; height: 380px;
+  transform: translate(-50%, -50%) rotate(45deg);
+  border: 1px solid var(--gold-glow);
+  opacity: 0.25;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.hero > * { position: relative; z-index: 1; }
+
+.heroSelo {
+  width: 72px;
+  height: 72px;
+  margin: 0 auto 2.2rem;
+  border: 1.5px solid var(--gold);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  box-sizing: border-box;
+  animation: seloRotate 40s linear infinite;
+  background: var(--parchment-1);
+}
+
+@keyframes seloRotate {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+
+.heroSelo::before {
+  content: '';
+  position: absolute;
+  inset: 6px;
+  border: 1px solid var(--gold);
+  border-radius: 50%;
+  opacity: 0.5;
+}
+
+.heroSelo::after {
+  content: '';
+  position: absolute;
+  inset: -8px;
+  border: 1px dashed var(--gold-glow);
+  border-radius: 50%;
+  opacity: 0.3;
+}
+
+.heroSeloSimbolo {
+  font-family: var(--font-display);
+  font-size: 1.8rem;
+  color: var(--gold-deep) !important;
+  font-style: italic;
+  animation: seloRotate 40s linear infinite reverse;
+}
+
+.heroSupratitulo {
+  display: block;
+  font-family: var(--font-data);
+  font-size: 0.66rem;
+  text-transform: uppercase;
+  letter-spacing: 0.32em;
+  color: var(--rubric) !important;
+  margin-bottom: 1.6rem;
+}
+
+.heroTitulo {
+  font-family: var(--font-display);
+  font-size: clamp(2.6rem, 8vw, 4.6rem);
+  font-weight: 600;
+  font-style: italic;
+  color: var(--ink) !important;
+  -webkit-text-fill-color: var(--ink);
+  line-height: 1.05;
+  letter-spacing: -0.01em;
+  margin: 0 0 0.4rem;
+  background: none !important;
+  -webkit-background-clip: initial !important;
+  background-clip: initial !important;
+}
+
+.heroTituloLinha2 {
+  display: block;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 0.4em;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  color: var(--ink-soft) !important;
+  -webkit-text-fill-color: var(--ink-soft);
+  margin-top: 0.9rem;
+  background: none !important;
+  -webkit-background-clip: initial !important;
+  background-clip: initial !important;
+}
+
+.heroSpan {
+  display: block;
+  width: 44px;
+  height: 1px;
+  margin: 2rem auto 1.6rem;
+  position: relative;
+  background: transparent;
+}
+
+.heroSpan::before {
+  content: '';
+  position: absolute;
+  left: 0; top: 0;
+  width: 100%; height: 100%;
+  background: linear-gradient(90deg, transparent, var(--gold), transparent);
+}
+
+.heroSpan::after {
+  content: '✦';
+  position: absolute;
+  left: 50%; top: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 0.5rem;
+  color: var(--gold);
+  background: var(--parchment-1);
+  padding: 0 6px;
+}
+
+.heroSubtitulo {
+  font-family: var(--font-body);
+  font-size: 1.08rem;
+  font-style: italic;
+  color: var(--ink-faint) !important;
+  -webkit-text-fill-color: var(--ink-faint);
+  max-width: 440px;
+  margin: 0 auto;
+}
+
+.heroMeta {
+  display: flex;
+  justify-content: center;
+  gap: 2.4rem;
+  margin-top: 2.6rem;
+  font-family: var(--font-data);
+  font-size: 0.7rem;
+  letter-spacing: 0.06em;
+  color: var(--ink-faint) !important;
+  flex-wrap: wrap;
+}
+
+.heroMetaItem {
+  position: relative;
+  padding: 0.6rem 0;
+}
+
+.heroMetaItem strong {
+  display: block;
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  font-style: italic;
+  color: var(--ink) !important;
+  -webkit-text-fill-color: var(--ink);
+  font-weight: 600;
+}
+
+.heroMetaItem::after {
+  content: '';
+  position: absolute;
+  bottom: -2px; left: 50%;
+  transform: translateX(-50%);
+  width: 20px; height: 1px;
+  background: var(--gold-glow);
+}
+
+/* ============================================================
+   INTRO
+   ============================================================ */
+
+.introBox {
+  padding: 3.4rem 2rem 3.6rem;
+  border-bottom: 1px solid var(--line);
+  position: relative;
+  box-sizing: border-box;
+  background: var(--parchment-1);
+}
+
+.introTexto {
+  font-family: var(--font-body);
+  font-size: 1.06rem;
+  line-height: 1.85;
+  color: var(--ink-soft) !important;
+  max-width: 620px;
+  margin: 0 auto;
+  text-align: justify;
+  hyphens: auto;
+}
+
+.introBoxCapitular {
+  float: left;
+  font-family: var(--font-display);
+  font-size: 5rem;
+  line-height: 0.88;
+  font-weight: 700;
+  font-style: normal;
+  color: var(--rubric) !important;
+  padding: 0 0.08em 0 0;
+  margin: 0.08em 0.14em 0 0;
+}
+
+/* ============================================================
+   REGISTRO
+   ============================================================ */
+
+.registro {
+  position: relative;
+  padding: 4.5rem 2rem 2rem;
+  box-sizing: border-box;
+  overflow: visible;
+}
+
+.espinha {
+  position: absolute;
+  top: 4.5rem;
+  bottom: 2rem;
+  left: 2rem;
+  width: 1px;
+  background: linear-gradient(
+    180deg,
+    transparent,
+    var(--line) 3%,
+    var(--line) 97%,
+    transparent
+  );
+}
+
+.espinha::after {
+  content: '';
+  position: absolute;
+  top: 0; left: -2px;
+  width: 5px; height: 100%;
+  background: linear-gradient(
+    180deg,
+    transparent,
+    var(--gold-glow) 20%,
+    transparent 40%,
+    var(--gold-glow) 60%,
+    transparent 80%,
+    var(--gold-glow) 95%,
+    transparent
+  );
+  opacity: 0.4;
+}
+
+@media (min-width: 641px) {
+  .espinha { left: calc(50% - 1px); }
+}
+
+/* ============================================================
+   CADERNO DE ERA
+   ============================================================ */
+
+.caderno {
+  position: relative;
+  margin-bottom: 5.5rem;
+  box-sizing: border-box;
+}
+
+.caderno:last-child { margin-bottom: 0; }
+
+.cadernoRotulo {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 3.5rem;
+}
+
+.cadernoRotulo::before {
+  content: '';
+  position: absolute;
+  top: 50%; left: 0; right: 0;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    var(--line-soft) 20%,
+    var(--line-soft) 80%,
+    transparent
+  );
+}
+
+.cadernoRotuloInner {
+  background: var(--parchment-1);
+  padding: 0.5rem 1.8rem;
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  border: 1px solid var(--line-soft);
+  box-sizing: border-box;
+}
+
+.cadernoRotuloInner::before {
+  content: '';
+  position: absolute;
+  top: -3px; left: -3px; right: -3px; bottom: -3px;
+  border: 1px solid var(--gold-glow);
+  pointer-events: none;
+}
+
+.cadernoEra {
+  display: block;
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  font-style: italic;
+  font-weight: 600;
+  color: var(--ink) !important;
+  margin-bottom: 0.3rem;
+}
+
+.cadernoDescricao {
+  display: block;
+  font-family: var(--font-data);
+  font-size: 0.62rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--rubric) !important;
+}
+
+/* ============================================================
+   VERBETE
+   ============================================================ */
+
+.verbeteWrap {
+  position: relative;
+  padding-top: var(--gap-antes, 0px);
+  box-sizing: border-box;
+}
+
+.verbeteWrap:first-child { padding-top: 0; }
+
+/* Lacre de cera */
+.marco {
+  position: absolute;
+  left: 2rem;
+  top: 1.6rem;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  transform: translateX(-50%);
+  z-index: 4;
+  pointer-events: none;
+  background: radial-gradient(
+    circle at 35% 30%,
+    #c14352 0%,
+    var(--rubric-wax) 40%,
+    var(--rubric-deep) 100%
+  );
+  border: 1px solid var(--rubric-deep);
+  box-shadow:
+    inset -2px -2px 4px rgba(43, 27, 14, 0.35),
+    inset 2px 2px 3px rgba(255, 220, 220, 0.25),
+    0 2px 4px rgba(43, 27, 14, 0.3),
+    0 0 0 3px var(--parchment-1);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  box-sizing: border-box;
+}
+
+.marco::before {
+  content: '☩';
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px;
+  color: rgba(43, 27, 14, 0.55);
+  font-family: var(--font-display);
+}
+
+.marco::after {
+  content: '';
+  position: absolute;
+  inset: -8px;
+  border: 1px solid transparent;
+  border-radius: 50%;
+  transition: all 0.4s ease;
+}
+
+.verbeteWrap:hover .marco {
+  transform: translateX(-50%) scale(1.15) rotate(-8deg);
+  box-shadow:
+    inset -2px -2px 4px rgba(43, 27, 14, 0.35),
+    inset 2px 2px 3px rgba(255, 220, 220, 0.25),
+    0 4px 12px rgba(139, 38, 53, 0.4),
+    0 0 0 3px var(--parchment-1),
+    0 0 20px rgba(166, 131, 47, 0.3);
+}
+
+.verbeteWrap:hover .marco::after {
+  inset: -6px;
+  border-color: var(--gold-glow);
+}
+
+@media (min-width: 641px) {
+  .marco { left: 50%; }
+}
+
+/* Ficha */
+.verbete {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  position: relative;
+  padding: 1.4rem 1.6rem 1.3rem;
+  margin-left: 3.4rem;
+  background: var(--parchment-card);
+  border: 1px solid var(--line);
+  border-radius: 2px;
+  box-shadow: var(--shadow-card);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  box-sizing: border-box;
+  cursor: pointer;
+  background-image:
+    linear-gradient(135deg, rgba(255,255,255,0.25) 0%, transparent 40%),
+    linear-gradient(315deg, rgba(43,27,14,0.03) 0%, transparent 40%);
+}
+
+.verbete::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0;
+  width: 3px; height: 100%;
+  background: linear-gradient(180deg, var(--rubric) 0%, var(--rubric-deep) 100%);
+  transition: width 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.verbete::after {
+  content: '';
+  position: absolute;
+  top: 50%; left: 12px;
+  transform: translateY(-50%);
+  width: 3px; height: 3px;
+  border-radius: 50%;
+  background: var(--ink-faint);
+  opacity: 0.25;
+  box-shadow:
+    0 -14px 0 var(--ink-faint),
+    0  14px 0 var(--ink-faint);
+}
+
+.verbete:hover {
+  background-color: var(--parchment-card-hover);
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-card-hover);
+  border-color: var(--gold);
+}
+
+.verbete:hover::before { width: 5px; }
+
+.verbete:active {
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-card);
+  transition-duration: 0.1s;
+}
+
+@media (min-width: 641px) {
+  .verbete { width: calc(50% - 2.8rem); margin-left: 0; }
+
+  .verbeteEsquerda {
+    margin-right: calc(50% + 2.8rem);
+    text-align: right;
+  }
+
+  .verbeteDireita { margin-left: calc(50% + 2.8rem); }
+
+  .verbeteEsquerda::before {
+    left: auto; right: 0;
+    background: linear-gradient(180deg, var(--rubric) 0%, var(--rubric-deep) 100%);
+  }
+
+  .verbeteEsquerda::after { left: auto; right: 12px; }
+
+  .verbeteConector {
+    position: absolute;
+    top: 1.9rem;
+    height: 2px;
+    width: 2rem;
+    background: linear-gradient(90deg, var(--line), var(--rubric-soft));
+    z-index: 2;
+    transition: all 0.35s ease;
+  }
+
+  .verbeteEsquerda .verbeteConector {
+    right: -2rem;
+    background: linear-gradient(90deg, var(--rubric-soft), var(--line));
+  }
+
+  .verbeteDireita .verbeteConector { left: -2rem; }
+
+  .verbeteWrap:hover .verbeteConector {
+    height: 3px;
+    background: linear-gradient(90deg, var(--gold), var(--rubric));
+  }
+}
+
+.verbeteCabecalho {
+  display: flex;
+  align-items: baseline;
+  gap: 0.7rem;
+  margin-bottom: 0.5rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px dotted var(--line);
+}
+
+@media (min-width: 641px) {
+  .verbeteEsquerda .verbeteCabecalho {
+    justify-content: flex-end;
+    flex-direction: row-reverse;
+  }
+}
+
+.verbeteNumero {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-weight: 600;
+  font-size: 1.15rem;
+  color: var(--gold-deep) !important;
+  flex-shrink: 0;
+  letter-spacing: 0.02em;
+  transition: color 0.3s ease;
+}
+
+.verbete:hover .verbeteNumero { color: var(--rubric) !important; }
+
+.verbeteAno {
+  font-family: var(--font-data);
+  font-size: 0.72rem;
+  letter-spacing: 0.04em;
+  color: var(--rubric) !important;
+  padding: 2px 6px;
+  background: rgba(139, 38, 53, 0.06);
+  border-radius: 2px;
+}
+
+.verbeteNome {
+  display: block;
+  font-family: var(--font-display);
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: var(--ink) !important;
+  line-height: 1.2;
+  margin-bottom: 0.5rem;
+  transition: color 0.25s ease;
+}
+
+.verbete:hover .verbeteNome { color: var(--rubric) !important; }
+
+.verbeteContexto {
+  font-family: var(--font-body);
+  font-size: 0.96rem;
+  font-style: italic;
+  color: var(--ink-soft) !important;
+  line-height: 1.55;
+  display: block;
+}
+
+.verbeteRodape {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.7rem;
+  margin-top: 0.9rem;
+  padding-top: 0.7rem;
+  border-top: 1px dotted var(--line);
+  font-family: var(--font-data);
+  font-size: 0.62rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+@media (min-width: 641px) {
+  .verbeteEsquerda .verbeteRodape { flex-direction: row-reverse; }
+}
+
+.verbeteRodapeLabel { color: var(--ink-faint); opacity: 0.7; }
+
+.verbeteSeta {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--rubric) !important;
+  font-weight: 600;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.verbeteSetaIcone {
+  display: inline-block;
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.verbete:hover .verbeteSetaIcone { transform: translateX(4px); }
+
+@media (min-width: 641px) {
+  .verbeteEsquerda .verbeteSetaIcone { transform: scaleX(-1); }
+  .verbeteEsquerda:hover .verbeteSetaIcone { transform: scaleX(-1) translateX(4px); }
+}
+
+.intervalo {
+  position: absolute;
+  left: 2rem;
+  top: 0;
+  transform: translate(14px, -0.65rem);
+  font-family: var(--font-data);
+  font-size: 0.58rem;
+  letter-spacing: 0.02em;
+  color: var(--ink-faint) !important;
+  white-space: nowrap;
+  opacity: 0.75;
+  padding: 2px 8px;
+  background: var(--parchment-1);
+  border: 1px solid var(--line-soft);
+  border-radius: 2px;
+}
+
+@media (min-width: 641px) {
+  .intervalo { left: 50%; transform: translate(-50%, -0.7rem); }
+}
+
+@media (max-width: 640px) {
+  .verbete { width: auto; }
+  .verbeteEsquerda,
+  .verbeteDireita {
+    margin-left: 3.4rem;
+    margin-right: 0;
+    text-align: left;
+  }
+  .verbeteConector { display: none; }
+}
+
+/* ============================================================
+   RODAPÉ
+   ============================================================ */
+
+.footer {
+  margin-top: 2rem;
+  padding: 3.4rem 2rem 4rem;
+  text-align: center;
+  border-top: 1px solid var(--line);
+  position: relative;
+  box-sizing: border-box;
+}
+
+.footer::before {
+  content: '☩';
+  position: absolute;
+  top: -0.6em; left: 50%;
+  transform: translateX(-50%);
+  font-size: 0.9rem;
+  color: var(--gold);
+  background: var(--parchment-1);
+  padding: 0 12px;
+}
+
+.footerMarca {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-weight: 600;
+  font-size: 1.05rem;
+  color: var(--ink) !important;
+  margin: 0 0 0.3rem;
+}
+
+.footerAno {
+  font-family: var(--font-data);
+  font-size: 0.66rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--ink-faint) !important;
+  margin-bottom: 1.8rem;
+}
+
+.footerCitacao {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  font-style: italic;
+  color: var(--ink-soft) !important;
+  max-width: 420px;
+  margin: 0 auto;
+  line-height: 1.7;
+}
+
+.footerAutor {
+  display: block;
+  font-family: var(--font-data);
+  font-size: 0.64rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  font-style: normal;
+  color: var(--gold-deep) !important;
+  margin-top: 0.7rem;
+}
+
+/* ============================================================
+   ACESSIBILIDADE
+   ============================================================ */
+
+.verbete:focus-visible,
+.btnVoltar:focus-visible {
+  outline: 2px solid var(--rubric);
+  outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .btnVoltar, .btnVoltarSeta, .verbeteNome, .verbeteSeta,
+  .verbeteSetaIcone, .marco, .verbete, .heroSelo,
+  .heroSeloSimbolo, .condenadaLinha, .carimboUnico,
+  .condenadasLista {
+    animation: none !important;
+    transition: none !important;
+  }
+}
+/* ============================================================
+   RESPONSIVO — TABLET
+   ============================================================ */
+/* ============================================================
+   RESPONSIVO — TABLET
+   ============================================================ */
+
+@media (max-width: 900px) {
+  .pagina {
+    max-width: 100%;
+  }
+
+  .hero {
+    padding: 5rem 1.5rem 3.5rem;
+  }
+
+  .hero::before {
+    width: 380px;
+    height: 380px;
+  }
+
+  .hero::after {
+    width: 280px;
+    height: 280px;
+  }
+}
+
+/* ============================================================
+   RESPONSIVO — MOBILE (≤ 640px)
+   ============================================================ */
+
+@media (max-width: 640px) {
+  /* HERO */
+  .hero {
+    padding: 4rem 1rem 2.5rem;
+  }
+
+  .hero::before {
+    width: 260px;
+    height: 260px;
+  }
+
+  .hero::after {
+    width: 190px;
+    height: 190px;
+  }
+
+  .heroSelo {
+    width: 52px;
+    height: 52px;
+    margin: 0 auto 1.5rem;
+  }
+
+  .heroSeloSimbolo {
+    font-size: 1.3rem;
+  }
+
+  .heroSupratitulo {
+    font-size: 0.56rem;
+    letter-spacing: 0.24em;
+    margin-bottom: 1.1rem;
+  }
+
+  .heroTitulo {
+    font-size: clamp(1.6rem, 8vw, 2.4rem);
+    line-height: 1.1;
+  }
+
+  .heroTituloLinha2 {
+    font-size: 0.42em;
+    letter-spacing: 0.14em;
+    margin-top: 0.6rem;
+  }
+
+  .heroSpan {
+    width: 34px;
+    margin: 1.4rem auto 1.1rem;
+  }
+
+  .heroSubtitulo {
+    font-size: 0.85rem;
+    max-width: 320px;
+    line-height: 1.55;
+  }
+
+  .heroMeta {
+    gap: 1.4rem;
+    margin-top: 1.8rem;
+    font-size: 0.6rem;
+  }
+
+  .heroMetaItem {
+    padding: 0.4rem 0;
+  }
+
+  .heroMetaItem strong {
+    font-size: 1.1rem;
+  }
+
+  /* INTRO */
+  .introBox {
+    padding: 2.2rem 1.2rem 2.4rem;
+  }
+
+  .introTexto {
+    font-size: 0.85rem;
+    line-height: 1.7;
+    text-align: left;
+    hyphens: none;
+  }
+
+  .introBoxCapitular {
+    font-size: 3.2rem;
+    line-height: 0.9;
+    margin: 0.05em 0.1em 0 0;
+  }
+
+  /* REGISTRO */
+  .registro {
+    padding: 3rem 1rem 1rem;
+  }
+
+  .espinha {
+    top: 3rem;
+    bottom: 1rem;
+    left: 1rem;
+  }
+
+  /* CADERNO */
+  .caderno {
+    margin-bottom: 3.5rem;
+  }
+
+  .cadernoRotulo {
+    margin-bottom: 2.2rem;
+  }
+
+  .cadernoRotuloInner {
+    padding: 0.4rem 1.1rem;
+  }
+
+  .cadernoEra {
+    font-size: 1.05rem;
+  }
+
+  .cadernoDescricao {
+    font-size: 0.52rem;
+    letter-spacing: 0.12em;
+  }
+
+  /* MARCO (lacre) */
+  .marco {
+    left: 1rem;
+    top: 1.1rem;
+    width: 16px;
+    height: 16px;
+  }
+
+  .marco::before {
+    font-size: 8px;
+  }
+
+  /* VERBETE */
+  .verbete {
+    padding: 1rem 1.1rem 0.9rem;
+    margin-left: 2.2rem;
+    width: auto;
+  }
+
+  .verbeteEsquerda,
+  .verbeteDireita {
+    margin-left: 2.2rem;
+    margin-right: 0;
+    text-align: left;
+  }
+
+  .verbeteConector {
+    display: none;
+  }
+
+  .verbeteCabecalho {
+    gap: 0.5rem;
+    margin-bottom: 0.4rem;
+    padding-bottom: 0.4rem;
+  }
+
+  .verbeteNumero {
+    font-size: 0.95rem;
+  }
+
+  .verbeteAno {
+    font-size: 0.62rem;
+    padding: 1px 5px;
+  }
+
+  .verbeteNome {
+    font-size: 1.1rem;
+    line-height: 1.25;
+    margin-bottom: 0.35rem;
+  }
+
+  .verbeteContexto {
+    font-size: 0.8rem;
+    line-height: 1.5;
+  }
+
+  .verbeteRodape {
+    gap: 0.5rem;
+    margin-top: 0.65rem;
+    padding-top: 0.55rem;
+    font-size: 0.54rem;
+    letter-spacing: 0.08em;
+  }
+
+  .verbete::after {
+    left: 8px;
+    width: 2px;
+    height: 2px;
+    box-shadow:
+      0 -10px 0 var(--ink-faint),
+      0 10px 0 var(--ink-faint);
+  }
+
+  /* INTERVALO */
+  .intervalo {
+    left: 1rem;
+    transform: translate(10px, -0.6rem);
+    font-size: 0.5rem;
+    padding: 1px 6px;
+  }
+
+  /* FOOTER */
+  .footer {
+    padding: 2.4rem 1rem 3rem;
+    margin-top: 1rem;
+  }
+
+  .footerMarca {
+    font-size: 0.9rem;
+  }
+
+  .footerAno {
+    font-size: 0.58rem;
+    margin-bottom: 1.2rem;
+  }
+
+  .footerCitacao {
+    font-size: 0.82rem;
+    max-width: 300px;
+    line-height: 1.6;
+  }
+
+  .footerAutor {
+    font-size: 0.55rem;
+    margin-top: 0.5rem;
+  }
+}
+
+/* ============================================================
+   RESPONSIVO — MOBILE PEQUENO (≤ 420px)
+   ============================================================ */
+
+@media (max-width: 420px) {
+  .hero {
+    padding: 3.2rem 0.8rem 2rem;
+  }
+
+  .heroSelo {
+    width: 44px;
+    height: 44px;
+    margin-bottom: 1.1rem;
+  }
+
+  .heroSeloSimbolo {
+    font-size: 1.1rem;
+  }
+
+  .heroSupratitulo {
+    font-size: 0.5rem;
+    letter-spacing: 0.2em;
+  }
+
+  .heroTitulo {
+    font-size: clamp(1.35rem, 7vw, 1.9rem);
+  }
+
+  .heroSubtitulo {
+    font-size: 0.75rem;
+  }
+
+  .heroMeta {
+    gap: 1rem;
+    font-size: 0.54rem;
+  }
+
+  .heroMetaItem strong {
+    font-size: 0.95rem;
+  }
+
+  .introBox {
+    padding: 1.8rem 1rem 2rem;
+  }
+
+  .introTexto {
+    font-size: 0.78rem;
+    line-height: 1.65;
+  }
+
+  .introBoxCapitular {
+    font-size: 2.6rem;
+  }
+
+  .registro {
+    padding: 2.4rem 0.7rem 0.8rem;
+  }
+
+  .cadernoEra {
+    font-size: 0.95rem;
+  }
+
+  .cadernoDescricao {
+    font-size: 0.48rem;
+  }
+
+  .verbete {
+    padding: 0.85rem 0.95rem 0.75rem;
+    margin-left: 1.8rem;
+  }
+
+  .verbeteEsquerda,
+  .verbeteDireita {
+    margin-left: 1.8rem;
+  }
+
+  .verbeteNumero {
+    font-size: 0.88rem;
+  }
+
+  .verbeteAno {
+    font-size: 0.58rem;
+  }
+
+  .verbeteNome {
+    font-size: 0.98rem;
+  }
+
+  .verbeteContexto {
+    font-size: 0.74rem;
+    line-height: 1.45;
+  }
+
+  .verbeteRodape {
+    font-size: 0.5rem;
+  }
+
+  .marco {
+    left: 0.8rem;
+    width: 14px;
+    height: 14px;
+  }
+
+  .marco::before {
+    font-size: 7px;
+  }
+
+  .espinha {
+    left: 0.8rem;
+  }
+
+  .intervalo {
+    left: 0.8rem;
+    font-size: 0.46rem;
+  }
+
+  .footerMarca {
+    font-size: 0.82rem;
+  }
+
+  .footerCitacao {
+    font-size: 0.75rem;
+    max-width: 260px;
+  }
+
+  /* Botão voltar ainda menor */
+  .btnVoltar {
+    padding: 8px 11px;
+    top: 12px;
+    left: 12px;
+    font-size: 0.6rem;
+  }
+
+  .btnVoltarSeta {
+    font-size: 0.9rem;
+  }
+}
+
+/* ============================================================
+   RAIO DE LUZ DIAGONAL — Iluminação de Pergaminho
+   ============================================================ */
+
+.raioDeLuz {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 500px;
+  height: 100%;
+  z-index: 0;
+  pointer-events: none;
+  overflow: hidden;
+  transform: translateX(-30%);
+}
+
+.raioDeLuz::before {
+  content: '';
+  position: absolute;
+  top: -10%;
+  left: 50%;
+  width: 220px;
+  height: 140%;
+  transform: translateX(-50%) rotate(20deg);
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(255, 240, 200, 0.35) 30%,
+    rgba(255, 235, 180, 0.45) 50%,
+    rgba(255, 240, 200, 0.35) 70%,
+    transparent 100%
+  );
+  filter: blur(8px);
+  mix-blend-mode: soft-light;
+  animation: brilhoRaio 8s ease-in-out infinite;
+}
+
+.raioDeLuz::after {
+  content: '';
+  position: absolute;
+  top: -10%;
+  left: 50%;
+  width: 90px;
+  height: 140%;
+  transform: translateX(-50%) rotate(20deg);
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(255, 250, 220, 0.5) 50%,
+    transparent 100%
+  );
+  filter: blur(3px);
+  mix-blend-mode: overlay;
+  animation: brilhoRaio 8s ease-in-out infinite;
+}
+
+@keyframes brilhoRaio {
+  0%, 100% { opacity: 0.7; }
+  50%      { opacity: 1; }
+}
+
+/* Esconde em mobile pra não poluir */
+@media (max-width: 768px) {
+  .raioDeLuz {
+    display: none;
+  }
+}

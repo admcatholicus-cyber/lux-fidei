@@ -1,0 +1,327 @@
+/* C:\Users\kitten\Documents\lux-fidei\app\santos\_styles\especificos\doutores\santa-teresinha-do-menino-jesus\iconografia\TimelineEvolucao.module.css */
+
+.section {
+  padding: 6rem 0;
+  background: #1a1512;
+  color: #fff;
+}
+
+.sectionHeader {
+  text-align: center;
+  padding: 0 2rem;
+  margin-bottom: 4rem;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.headerVisible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.sectionNumber {
+  display: inline-block;
+  font-family: var(--font-heading, 'Georgia', serif);
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.3em;
+  color: #c4956a;
+  border: 1px solid rgba(196, 149, 106, 0.3);
+  padding: 0.35rem 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.sectionTitle {
+  font-family: var(--font-heading, 'Georgia', serif);
+  font-size: clamp(1.75rem, 3.5vw, 2.5rem);
+  font-weight: 700;
+  color: #fff;
+  margin: 0 0 1.25rem;
+  line-height: 1.2;
+}
+
+.sectionDivider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 1.25rem;
+}
+
+.dividerLine {
+  display: block;
+  width: 40px;
+  height: 1px;
+  background: rgba(196, 149, 106, 0.3);
+}
+
+.dividerIcon {
+  font-size: 1.1rem;
+  opacity: 0.7;
+}
+
+.sectionSubtitle {
+  font-family: var(--font-body, 'Georgia', serif);
+  font-size: clamp(0.9rem, 1.1vw, 1rem);
+  line-height: 1.8;
+  color: rgba(255, 255, 255, 0.5);
+  max-width: 550px;
+  margin: 0 auto;
+}
+
+/* Timeline */
+.timelineWrapper {
+  position: relative;
+  max-width: 900px;
+  margin: 0 auto 4rem;
+  padding: 0 2rem;
+}
+
+.timelineLine {
+  position: absolute;
+  top: 50%;
+  left: 2rem;
+  right: 2rem;
+  height: 1px;
+  background: rgba(196, 149, 106, 0.2);
+  transform: translateY(-50%);
+}
+
+.timelineNodes {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  z-index: 1;
+}
+
+.timelineNode {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem;
+  transition: all 0.3s ease;
+}
+
+.timelineNodeDot {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: #2a2420;
+  border: 2px solid rgba(196, 149, 106, 0.3);
+  transition: all 0.3s ease;
+}
+
+.timelineNodeActive .timelineNodeDot {
+  background: var(--accent, #c4956a);
+  border-color: var(--accent, #c4956a);
+  box-shadow: 0 0 15px rgba(196, 149, 106, 0.4);
+  transform: scale(1.3);
+}
+
+.timelineNodePeriodo {
+  font-size: 0.6rem;
+  letter-spacing: 0.15em;
+  color: rgba(255, 255, 255, 0.3);
+  font-weight: 600;
+  transition: color 0.3s;
+}
+
+.timelineNodeActive .timelineNodePeriodo {
+  color: var(--accent, #c4956a);
+}
+
+.timelineNodeTitulo {
+  font-family: var(--font-body, 'Georgia', serif);
+  font-size: 0.75rem;
+  color: rgba(255, 255, 255, 0.4);
+  transition: color 0.3s;
+  text-align: center;
+  max-width: 120px;
+}
+
+.timelineNodeActive .timelineNodeTitulo {
+  color: white;
+  font-weight: 600;
+}
+
+/* Display */
+/* C:\Users\kitten\Documents\lux-fidei\app\santos\_styles\especificos\doutores\santa-teresinha-do-menino-jesus\iconografia\TimelineEvolucao.module.css */
+
+/* ... (mantenha tudo antes igual) ... */
+
+/* Display */
+.epocaDisplay {
+  display: grid;
+  grid-template-columns: 450px 1fr;
+  gap: 4rem;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  align-items: start;
+}
+
+.epocaImageColumn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  position: sticky;
+  top: 100px;
+}
+
+.epocaImageWrapper {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 3/4;
+  border-radius: 4px;
+  overflow: hidden;
+  box-shadow: 0 15px 50px rgba(0, 0, 0, 0.4);
+}
+
+.epocaImage {
+  object-fit: cover;
+  object-position: center;
+  transition: transform 0.6s ease;
+}
+
+.epocaImageWrapper:hover .epocaImage {
+  transform: scale(1.03);
+}
+
+.epocaImageFrame {
+  position: absolute;
+  inset: 8px;
+  border: 1px solid rgba(196, 149, 106, 0.2);
+  pointer-events: none;
+  transition: border-color 0.3s;
+}
+
+.epocaPeriodoLabel {
+  font-size: 0.65rem;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.3);
+}
+
+/* ... (mantenha o resto igual) ... */
+
+@media (max-width: 968px) {
+  .epocaDisplay {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    max-width: 500px;
+  }
+
+  .epocaImageColumn {
+    position: static;
+    max-width: 400px;
+    margin: 0 auto;
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .timelineNodes {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  .timelineLine {
+    display: none;
+  }
+}
+
+/* Info */
+.epocaInfoColumn {
+  padding: 1rem 0;
+}
+
+.epocaSubtitulo {
+  display: block;
+  font-size: 0.7rem;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--accent, #c4956a);
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+.epocaTitulo {
+  font-family: var(--font-heading, 'Georgia', serif);
+  font-size: clamp(1.5rem, 2.5vw, 2rem);
+  font-weight: 700;
+  color: white;
+  margin: 0 0 1.25rem;
+  line-height: 1.2;
+}
+
+.epocaDescricao {
+  font-family: var(--font-body, 'Georgia', serif);
+  font-size: 0.95rem;
+  line-height: 1.8;
+  color: rgba(255, 255, 255, 0.6);
+  margin: 0 0 2rem;
+}
+
+.epocaCaracteristicas {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 6px;
+  padding: 1.5rem;
+}
+
+.caracteristicasLabel {
+  font-size: 0.65rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.3);
+  margin: 0 0 1rem;
+  font-weight: 700;
+}
+
+.caracteristicasList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.caracteristicaItem {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.caracteristicaBullet {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+@media (max-width: 768px) {
+  .timelineNodes {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  .timelineLine {
+    display: none;
+  }
+
+  .epocaDisplay {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+}

@@ -1,0 +1,267 @@
+/* ============================= */
+/* CONTEÚDO TEXTO */
+/* ============================= */
+.conteudoTexto {
+  max-width: var(--largura-texto);
+  margin: 0 auto;
+}
+
+.conteudoTexto h3 {
+  font-family: var(--font-titulo);
+  font-size: 1.55rem;
+  font-weight: 700;
+  margin-top: var(--espaco-xl);
+  margin-bottom: var(--espaco-md);
+  padding-bottom: 0.6rem;
+  border-bottom: 2px solid var(--cor-borda);
+}
+
+.conteudoTexto h3:first-child { margin-top: 0; }
+
+.subtituloGrande { font-size: 1.75rem !important; letter-spacing: 0.02em; }
+
+.conteudoTexto h4 {
+  font-family: var(--font-titulo);
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-top: var(--espaco-lg);
+  margin-bottom: var(--espaco-sm);
+}
+
+.conteudoTexto h5 {
+  font-family: var(--font-titulo);
+  font-size: 1.05rem;
+  font-weight: 600;
+  margin-bottom: 0.4rem;
+}
+
+.conteudoTexto p {
+  font-size: 1.05rem;
+  line-height: 1.9;
+  margin-bottom: var(--espaco-md);
+  text-align: justify;
+  hyphens: auto;
+}
+
+.conteudoTexto strong { font-weight: 700; }
+.conteudoTexto em { font-style: italic; }
+
+/* Estilos condicionais (aplicados via className composto) */
+:global(.secao-clara) .conteudoTexto h3 { color: var(--cor-primaria); }
+:global(.secao-escura) .conteudoTexto h3 { color: var(--cor-accent-clara); }
+:global(.secao-clara) .conteudoTexto h4 { color: var(--cor-secundaria); }
+:global(.secao-escura) .conteudoTexto h4 { color: var(--cor-accent); }
+:global(.secao-clara) .conteudoTexto strong { color: var(--cor-primaria); }
+:global(.secao-escura) .conteudoTexto strong { color: var(--cor-accent-clara); }
+
+/* ============================= */
+/* CITAÇÕES */
+/* ============================= */
+.citacaoBloco {
+  position: relative;
+  margin: var(--espaco-lg) 0;
+  padding: 1.8rem 2rem 1.8rem 2.5rem;
+  border-radius: var(--raio-md);
+  border-left: 4px solid var(--cor-accent);
+  background: var(--cor-fundo-creme);
+}
+
+.citacaoBlocoEscuro {
+  background: var(--cor-fundo-card-escuro);
+  border-left-color: var(--cor-accent);
+}
+
+.citacaoIcone {
+  position: absolute;
+  top: 1.2rem;
+  left: -0.7rem;
+  width: 1.4rem;
+  height: 1.4rem;
+  background: var(--cor-accent);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.citacaoIcone i { font-size: 0.55rem; color: var(--cor-primaria); }
+
+.citacaoBloco blockquote {
+  font-family: var(--font-classica);
+  font-size: 1.15rem;
+  font-style: italic;
+  line-height: 1.8;
+  margin-bottom: 0.8rem;
+  color:#c4c4cc;
+}
+
+.citacaoBlocoEscuro blockquote { color: var(--cor-texto-claro); }
+
+.citacaoBloco cite {
+  font-family: var(--font-ui);
+  font-size: 0.78rem;
+  font-style: normal;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--cor-accent);
+  display: block;
+}
+
+.citacaoFinal {
+  margin-top: var(--espaco-xl);
+  padding: 2.5rem;
+  border: 2px solid var(--cor-accent);
+  background: rgba(201, 168, 76, 0.04);
+}
+
+.citacaoFinal blockquote { font-size: 1.2rem; }
+
+/* ============================= */
+/* LISTAS */
+/* ============================= */
+.listaTeologica {
+  margin: var(--espaco-md) 0;
+  padding-left: 1.5rem;
+}
+
+.listaTeologica li {
+  font-size: 1.02rem;
+  line-height: 1.8;
+  margin-bottom: 0.65rem;
+  padding-left: 0.3rem;
+}
+
+.listaTeologica li::marker { color: var(--cor-accent); }
+
+.listaTeologica ul { margin-top: 0.4rem; padding-left: 1.2rem; }
+
+/* ============================= */
+/* ÍNDICE COMPLETO */
+/* ============================= */
+.indiceCompleto {
+  background: var(--cor-fundo-escuro);
+  color: var(--cor-texto-sobre-escuro);
+  padding: var(--espaco-2xl) 0;
+}
+
+.indiceGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2.5rem;
+}
+
+.indiceGrupoTitulo {
+  font-family: var(--font-titulo);
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--cor-accent);
+  margin-bottom: 1.2rem;
+  padding-bottom: 0.6rem;
+  border-bottom: 1px solid var(--cor-borda-escura);
+}
+
+.indiceLista { list-style: none; }
+
+.indiceLista > li {
+  font-family: var(--font-corpo);
+  font-size: 0.95rem;
+  margin-bottom: 0.5rem;
+  padding: 0.3rem 0;
+}
+
+.indiceLista > li > a {
+  color: var(--cor-texto-sobre-escuro);
+  text-decoration: none;
+  transition: var(--transicao);
+  border-bottom: 1px solid transparent;
+}
+
+.indiceLista > li > a:hover {
+  color: var(--cor-accent);
+  border-bottom-color: var(--cor-accent);
+}
+
+.indiceLista ul { list-style: none; margin-top: 0.3rem; padding-left: 1rem; }
+.indiceLista ul li { font-size: 0.85rem; margin-bottom: 0.25rem; }
+
+.indiceLista ul li a {
+  color: rgba(212, 207, 199, 0.65);
+  text-decoration: none;
+  transition: var(--transicao);
+}
+
+.indiceLista ul li a:hover { color: var(--cor-accent); }
+
+/* ============================= */
+/* TABELA ETIMOLOGIA */
+/* ============================= */
+.tabelaEtimologia {
+  overflow-x: auto;
+  margin: var(--espaco-lg) 0;
+  border-radius: var(--raio-md);
+  border: 1px solid var(--cor-borda-escura);
+}
+
+.tabelaEtimologia table { width: 100%; border-collapse: collapse; }
+
+.tabelaEtimologia th,
+.tabelaEtimologia td {
+  padding: 0.85rem 1rem;
+  font-size: 0.92rem;
+  text-align: left;
+  border-bottom: 1px solid var(--cor-borda-escura);
+}
+
+.tabelaEtimologia thead th {
+  font-family: var(--font-ui);
+  font-weight: 700;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--cor-accent);
+  background: rgba(201, 168, 76, 0.06);
+}
+
+.tabelaEtimologia td { font-family: var(--font-corpo); color: var(--cor-texto-sobre-escuro); }
+.tabelaEtimologia tr:hover td { background: rgba(201, 168, 76, 0.04); }
+.tabelaEtimologia td strong { color: var(--cor-accent-clara); }
+
+/* ============================= */
+/* BIBLIOGRAFIA */
+/* ============================= */
+.biblioLista { margin: var(--espaco-md) 0; }
+.biblioCategoria { margin-bottom: var(--espaco-md); }
+
+.biblioCategoria h4 {
+  font-family: var(--font-ui);
+  font-size: 0.82rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--cor-accent);
+  margin-bottom: 0.6rem;
+  padding-bottom: 0.4rem;
+  border-bottom: 1px solid var(--cor-borda);
+}
+
+.biblioLista ul { list-style: none; padding: 0; }
+
+.biblioLista ul li {
+  font-family: var(--font-corpo);
+  font-size: 0.92rem;
+  line-height: 1.7;
+  padding: 0.4rem 0 0.4rem 1.2rem;
+  position: relative;
+  color: var(--cor-texto-suave);
+}
+
+.biblioLista ul li::before {
+  content: '—';
+  position: absolute;
+  left: 0;
+  color: var(--cor-accent);
+  font-weight: 700;
+}
+
+.biblioLista ul li em { color: var(--cor-primaria); }

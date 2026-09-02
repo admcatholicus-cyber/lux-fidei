@@ -1,0 +1,1029 @@
+import GaleriaIconografia from '../../../_components/especificos/doutores/sao-tomas-de-aquino/iconografia/GaleriaIconografia';
+import PainelObra from '../../../_components/especificos/doutores/sao-tomas-de-aquino/iconografia/PainelObra';
+import FolioMestres from '../../../_components/especificos/doutores/sao-tomas-de-aquino/iconografia/FolioMestres';
+import VisorManuscrito from '../../../_components/especificos/doutores/sao-tomas-de-aquino/iconografia/VisorManuscrito';
+import CronologiaVisual from '../../../_components/especificos/doutores/sao-tomas-de-aquino/iconografia/CronologiaVisual';
+import GradeAtributos from '../../../_components/especificos/doutores/sao-tomas-de-aquino/iconografia/atributos/GradeAtributos';
+import FichaAtributo from '../../../_components/especificos/doutores/sao-tomas-de-aquino/iconografia/atributos/FichaAtributo';
+import ConstelacaoAtributos from '../../../_components/especificos/doutores/sao-tomas-de-aquino/iconografia/atributos/ConstelacaoAtributos';
+
+export const meta = {
+  numero: 'XXVI',
+  titulo: 'Iconografia',
+  subtitulo: 'Sete séculos de arte em louvor do Doutor Angélico',
+};
+
+<PageHeader
+  numero={meta.numero}
+  titulo={meta.titulo}
+  subtitulo={meta.subtitulo}
+/>
+
+{/* ══════════════════════════════════════════
+    HERO
+    ══════════════════════════════════════════ */}
+
+<div className="heroIconografia" style={{
+  position: 'relative',
+  width: '100%',
+  maxWidth: '1160px',
+  margin: '0 auto 72px',
+  borderRadius: '4px',
+  overflow: 'hidden',
+  background: '#0e0c08',
+}}>
+  <img
+    src="/santos/biografia/doutores/sao-tomas-de-aquino/iconografia/hero-retrato-principal.webp"
+    alt="São Tomás de Aquino — retrato representativo da tradição iconográfica dominicana"
+    style={{
+      display: 'block',
+      width: '100%',
+      height: '520px',
+      objectFit: 'cover',
+      objectPosition: 'center 20%',
+      opacity: 0.78,
+      filter: 'sepia(18%) contrast(1.05)',
+    }}
+  />
+  <div style={{
+    position: 'absolute',
+    inset: 0,
+    background: 'linear-gradient(to bottom, transparent 30%, rgba(14,12,8,0.55) 70%, rgba(14,12,8,0.92) 100%)',
+  }} />
+  <div style={{
+    position: 'absolute',
+    bottom: 0,
+    left: 0,
+    right: 0,
+    padding: '48px 52px',
+  }}>
+    <span style={{
+      display: 'block',
+      fontFamily: "'Inter', sans-serif",
+      fontSize: '0.7rem',
+      fontWeight: 600,
+      letterSpacing: '0.22em',
+      textTransform: 'uppercase',
+      color: '#b08a3c',
+      margin: '0 0 14px',
+    }}>Scriptorium Illuminado · Séculos XIII–XXI</span>
+    <h2 style={{
+      fontFamily: "'Libre Baskerville', Georgia, serif",
+      fontSize: 'clamp(2rem, 4vw, 3.2rem)',
+      fontWeight: 700,
+      color: '#f5f0e6',
+      margin: '0 0 16px',
+      lineHeight: 1.15,
+      maxWidth: '640px',
+    }}>A imagem do Doutor Angélico através dos séculos</h2>
+    <span style={{
+      display: 'block',
+      fontFamily: 'Georgia, serif',
+      fontSize: '1rem',
+      fontStyle: 'italic',
+      color: '#c8bfa8',
+      margin: 0,
+      lineHeight: 1.6,
+      maxWidth: '520px',
+    }}>Da iluminura medieval às grandes telas do Renascimento e do Barroco, Tomás foi pintado, esculpido e gravado como poucos santos da Igreja.</span>
+  </div>
+</div>
+
+{/* ══════════════════════════════════════════
+    INTRODUÇÃO
+    ══════════════════════════════════════════ */}
+
+<div style={{
+  maxWidth: '780px',
+  margin: '0 auto 72px',
+  padding: '48px 52px',
+  background: '#faf8f4',
+  border: '1px solid #e2dcd0',
+  borderTop: '3px solid #b08a3c',
+  position: 'relative',
+}}>
+  <span style={{
+    display: 'block',
+    fontFamily: "Georgia, 'Times New Roman', serif",
+    fontSize: '1.05rem',
+    lineHeight: 1.85,
+    color: '#3a3530',
+    textAlign: 'justify',
+    margin: 0,
+  }}>
+    Desde os anos imediatamente posteriores à sua morte em 1274, a figura de São Tomás de Aquino tornou-se objeto de representação artística sistemática. A Ordem dos Pregadores, consciente da grandeza do mestre, promoveu sua imagem tanto nos conventos quanto nas igrejas sob sua influência, estabelecendo cânones visuais que se transmitiram por gerações. O hábito branco e negro dos dominicanos, o <em>sol sobre o peito</em>, o <em>livro</em> da Summa, a <em>pena</em> de escritor e o <em>modelo de Igreja</em> nas mãos tornaram-se atributos reconhecíveis em qualquer canto do mundo católico.
+  </span>
+  <span style={{
+    display: 'block',
+    fontFamily: "Georgia, 'Times New Roman', serif",
+    fontSize: '1.05rem',
+    lineHeight: 1.85,
+    color: '#3a3530',
+    textAlign: 'justify',
+    margin: '20px 0 0',
+  }}>
+    A iconografia tomista atravessa os grandes períodos da arte ocidental: o <strong>Gótico</strong> dos altares italianos do Trecento, o <strong>Renascimento</strong> luminoso de Fra Bartolommeo e Benozzo Gozzoli, o <strong>Maneirismo</strong> das cenas de triunfo e apoteose, o <strong>Barroco</strong> de Zurbarán e Rubens, e a tradição devocional que continua viva nas igrejas e seminários do mundo inteiro. Cada período revelou uma faceta diferente do mesmo homem: ora o mestre em cátedra, ora o contemplativo em êxtase, ora o guerreiro da verdade esmagando a heresia, ora o santo recebendo a comunhão de mãos angélicas.
+  </span>
+</div>
+
+{/* ══════════════════════════════════════════
+    BLOCO I · MOSAICO PRINCIPAL (obras icônicas)
+    ══════════════════════════════════════════ */}
+
+<div style={{ maxWidth:'1160px', margin:'0 auto', textAlign:'center', marginBottom:'12px' }}>
+  <span style={{ display:'block', fontFamily:"'Inter',sans-serif", fontSize:'0.65rem', fontWeight:600, letterSpacing:'0.28em', textTransform:'uppercase', color:'#b08a3c', margin:'0 0 8px' }}>I · Obras Icônicas</span>
+  <h2 style={{ fontFamily:"'Libre Baskerville',Georgia,serif", fontSize:'clamp(1.45rem,2.5vw,2rem)', fontWeight:700, color:'#2a2520', margin:'0 auto 48px', lineHeight:1.25, maxWidth:'700px' }}>As representações que definiram a tradição</h2>
+</div>
+
+<GaleriaIconografia grupos={[
+  {
+    layout: 'gradeLayoutA',
+    obras: [
+      {
+        numero: 1,
+        arquivo: 'triunfo-tomas-lippo-memmi.webp',
+        alt: 'Triunfo de São Tomás de Aquino sobre os hereges, afresco de Lippo Memmi, Santa Caterina, Pisa',
+        nome: 'Triunfo de São Tomás sobre os Hereges',
+        artista: 'Lippo Memmi (atr.)',
+        epoca: 'c. 1340 · Pisa',
+        largura: 900,
+        altura: 1100,
+        tipoCelula: 'celulaPrincipal',
+      },
+      {
+        numero: 2,
+        arquivo: 'tomas-fra-bartolommeo-museu.webp',
+        alt: 'São Tomás de Aquino em contemplação, Fra Bartolommeo, Museu de San Marco, Florença',
+        nome: 'São Tomás em Contemplação',
+        artista: 'Fra Bartolommeo',
+        epoca: 'c. 1510 · Florença',
+        largura: 700,
+        altura: 540,
+        tipoCelula: 'celulaSecundaria',
+      },
+      {
+        numero: 3,
+        arquivo: 'tomas-zurbaran-sevilla.webp',
+        alt: 'São Tomás de Aquino com hábito dominicano e livro, Francisco de Zurbarán, Sevilha',
+        nome: 'São Tomás de Aquino',
+        artista: 'Francisco de Zurbarán',
+        epoca: 'c. 1631 · Sevilha',
+        largura: 700,
+        altura: 540,
+        tipoCelula: 'celulaSecundaria',
+      },
+    ],
+  },
+]} />
+
+<div style={{ height: '3px' }} />
+
+<GaleriaIconografia grupos={[
+  {
+    layout: 'gradeLayoutB',
+    obras: [
+      {
+        numero: 4,
+        arquivo: 'tomas-gozzoli-retrato.webp',
+        alt: 'Retrato de São Tomás de Aquino por Benozzo Gozzoli, Louvre, Paris',
+        nome: 'Retrato do Doutor Angélico',
+        artista: 'Benozzo Gozzoli',
+        epoca: 'c. 1471 · Paris, Louvre',
+        largura: 600,
+        altura: 750,
+        tipoCelula: 'celulaTerciaria',
+      },
+      {
+        numero: 5,
+        arquivo: 'apoteose-tomas-rubens.webp',
+        alt: 'Apoteose de São Tomás de Aquino, Peter Paul Rubens, Museu do Prado, Madrid',
+        nome: 'Apoteose de São Tomás',
+        artista: 'Peter Paul Rubens',
+        epoca: 'c. 1631 · Madrid, Prado',
+        largura: 600,
+        altura: 750,
+        tipoCelula: 'celulaTerciaria',
+      },
+      {
+        numero: 6,
+        arquivo: 'tomas-filippino-lippi-caraffa.webp',
+        alt: 'Triunfo de São Tomás de Aquino, Filippino Lippi, Capela Carafa, Santa Maria sopra Minerva, Roma',
+        nome: 'Triunfo de São Tomás — Capela Carafa',
+        artista: 'Filippino Lippi',
+        epoca: 'c. 1489–1493 · Roma',
+        largura: 600,
+        altura: 750,
+        tipoCelula: 'celulaTerciaria',
+      },
+    ],
+  },
+]} />
+
+<div style={{ height: '64px' }} />
+
+{/* ══════════════════════════════════════════
+    PAINEL I · Triunfo de São Tomás — análise expandida
+    ══════════════════════════════════════════ */}
+
+<PainelObra
+  numero={1}
+  arquivo="triunfo-tomas-lippo-memmi.webp"
+  alt="Triunfo de São Tomás de Aquino sobre os hereges, Lippo Memmi, Santa Caterina, Pisa, século XIV"
+  largura={900}
+  altura={1100}
+  nome="Triunfo de São Tomás sobre os Hereges"
+  artista="Lippo Memmi (atribuição tradicional)"
+  epoca="c. 1340"
+  local="Chiesa di Santa Caterina, Pisa"
+  tecnica="Têmpera sobre madeira"
+  descricao="Um dos primeiros e mais influentes ícones da tradição tomista. Tomás aparece entronizado ao centro, com os Evangelhos e as Epístolas de Paulo de um lado, Aristóteles e outros filósofos do outro. Aos seus pés, Averróis jaz prostrado: símbolo da vitória da síntese cristã sobre o averroísmo que ameaçava as universidades medievais. A composição estabeleceu o tipo iconográfico do 'triunfo' que seria repetido durante séculos."
+  atributos={[
+    { icone: '📖', label: 'Livro aberto' },
+    { icone: '☀️', label: 'Sol no peito' },
+    { icone: '🕊', label: 'Espírito Santo' },
+    { icone: '✝️', label: 'Crucifixo' },
+  ]}
+  invertido={false}
+/>
+
+{/* ══════════════════════════════════════════
+    BLOCO II · CENAS NARRATIVAS (vida de Tomás)
+    ══════════════════════════════════════════ */}
+
+<div style={{ maxWidth:'1160px', margin:'0 auto', textAlign:'center', marginBottom:'12px' }}>
+  <span style={{ display:'block', fontFamily:"'Inter',sans-serif", fontSize:'0.65rem', fontWeight:600, letterSpacing:'0.28em', textTransform:'uppercase', color:'#b08a3c', margin:'0 0 8px' }}>II · Cenas Narrativas</span>
+  <h2 style={{ fontFamily:"'Libre Baskerville',Georgia,serif", fontSize:'clamp(1.45rem,2.5vw,2rem)', fontWeight:700, color:'#2a2520', margin:'0 auto 48px', lineHeight:1.25, maxWidth:'700px' }}>A vida de Tomás contada pela pintura</h2>
+</div>
+
+<VisorManuscrito cenas={[
+  {
+    ordinal: 'I',
+    arquivo: 'tomas-vestido-habito-gioventu.webp',
+    alt: 'Tomás de Aquino recebendo o hábito dominicano, iluminura italiana, século XIV',
+    largura: 600,
+    altura: 750,
+    titulo: 'O Jovem Tomás Recebe o Hábito',
+    subtexto: 'Nápoles · c. 1244',
+    descricao: 'A cena do ingresso de Tomás na Ordem dos Pregadores, contra a vontade da família. O jovem nobre abandona herança e títulos pelo hábito branco e negro dos dominicanos.',
+    chip: 'Vocação',
+  },
+  {
+    ordinal: 'II',
+    arquivo: 'tomas-tentacao-cativeiro.webp',
+    alt: 'Tentação de São Tomás de Aquino durante o cativeiro familiar, pintura italiana',
+    largura: 600,
+    altura: 750,
+    titulo: 'A Tentação no Cativeiro',
+    subtexto: 'Roccasecca · c. 1244',
+    descricao: 'Episódio hagiográfico clássico: durante o cativeiro imposto pela família, Tomás afugenta a tentação com um tição aceso. A cena simboliza a pureza de coração como fundamento da inteligência contemplativa.',
+    chip: 'Castidade',
+  },
+  {
+    ordinal: 'III',
+    arquivo: 'tomas-estudo-alberto-magno-colonia.webp',
+    alt: 'Tomás de Aquino estudando com Alberto Magno em Colônia, afresco medieval',
+    largura: 600,
+    altura: 750,
+    titulo: 'Sob o Magistério de Alberto Magno',
+    subtexto: 'Colônia · c. 1248–1252',
+    descricao: 'A cena do "boi mudo" se torna imagem canônica: Alberto reconhece no silêncio de Tomás não lentidão, mas profundidade. O mestre anuncia ao mundo que esse mugido ecoará por toda a terra.',
+    chip: 'Formação',
+  },
+  {
+    ordinal: 'IV',
+    arquivo: 'tomas-crucifixo-napoles-voz.webp',
+    alt: 'São Tomás de Aquino em êxtase diante do crucifixo de Nápoles, séc. XVII',
+    largura: 600,
+    altura: 750,
+    titulo: 'A Voz do Crucificado',
+    subtexto: 'Nápoles · c. 1273',
+    descricao: 'A tradição relata que o Cristo do crucifixo de San Domenico Maggiore falou a Tomás: "Bem escreveste sobre Mim, Tomás. Que recompensa queres?" A resposta: "Nenhuma outra senão a Ti, Senhor."',
+    chip: 'Êxtase',
+  },
+  {
+    ordinal: 'V',
+    arquivo: 'tomas-missa-comunhao-anjos.webp',
+    alt: 'São Tomás de Aquino recebendo a comunhão de mãos angélicas, pintura barroca',
+    largura: 600,
+    altura: 750,
+    titulo: 'A Comunhão dos Anjos',
+    subtexto: 'Fossanova · 1274',
+    descricao: 'Nos últimos dias em Fossanova, segundo a tradição, Tomás teria recebido a Eucaristia em estado de êxtase. A cena foi pintada como coroamento espiritual de uma vida inteira dedicada ao mistério eucarístico.',
+    chip: 'Morte santa',
+  },
+  {
+    ordinal: 'VI',
+    arquivo: 'tomas-morte-fossanova-monges.webp',
+    alt: 'Morte de São Tomás de Aquino em Fossanova rodeado de monges cistercienses, pintura italiana',
+    largura: 600,
+    altura: 750,
+    titulo: 'A Morte em Fossanova',
+    subtexto: 'Fossanova · 7 de março de 1274',
+    descricao: 'A morte de Tomás na abadia cisterciense, rodeado de monges que testemunharam uma passagem serena. O mestre que havia escrito sobre a beatitude a alcançou completamente nos primeiros dias de março de 1274.',
+    chip: 'Partida',
+  },
+]} />
+
+<div style={{ height: '64px' }} />
+
+{/* ══════════════════════════════════════════
+    PAINEL II · Zurbarán — análise expandida
+    ══════════════════════════════════════════ */}
+
+<PainelObra
+  numero={7}
+  arquivo="tomas-zurbaran-sevilla.webp"
+  alt="São Tomás de Aquino com hábito dominicano, livro e pena, Francisco de Zurbarán, Sevilha, século XVII"
+  largura={700}
+  altura={900}
+  nome="São Tomás de Aquino"
+  artista="Francisco de Zurbarán"
+  epoca="c. 1631"
+  local="Sevilla, coleção conventual"
+  tecnica="Óleo sobre tela"
+  descricao="Zurbarán pinta Tomás com a austeridade que marca toda a sua obra hagiográfica. O hábito dominicano branco e negro é tratado com a intensidade escultórica característica do mestre sevilhano: as dobras pesadas do tecido evocam a solidez da doutrina. A mão que segura a pena e o livro aberto compõem uma síntese silenciosa de uma vida de escrita. O olhar ligeiramente elevado sugere a origem celeste de toda sabedoria."
+  atributos={[
+    { icone: '🖊', label: 'Pena de escrever' },
+    { icone: '📖', label: 'Summa aberta' },
+    { icone: '☀️', label: 'Sol radiante' },
+    { icone: '🕊', label: 'Inspiração divina' },
+  ]}
+  invertido={true}
+/>
+
+{/* ══════════════════════════════════════════
+    BLOCO III · GRADE DE RETRATOS HISTÓRICOS
+    ══════════════════════════════════════════ */}
+
+<div style={{ maxWidth:'1160px', margin:'0 auto', textAlign:'center', marginBottom:'12px' }}>
+  <span style={{ display:'block', fontFamily:"'Inter',sans-serif", fontSize:'0.65rem', fontWeight:600, letterSpacing:'0.28em', textTransform:'uppercase', color:'#b08a3c', margin:'0 0 8px' }}>III · Retratos Históricos</span>
+  <h2 style={{ fontFamily:"'Libre Baskerville',Georgia,serif", fontSize:'clamp(1.45rem,2.5vw,2rem)', fontWeight:700, color:'#2a2520', margin:'0 auto 48px', lineHeight:1.25, maxWidth:'700px' }}>Diferentes épocas, um único rosto</h2>
+</div>
+
+<GaleriaIconografia grupos={[
+  {
+    layout: 'gradeLayoutC',
+    obras: [
+      {
+        numero: 8,
+        arquivo: 'tomas-retrato-sena-quattrocento.webp',
+        alt: 'São Tomás de Aquino, retrato de escola sienesa, Quattrocento, tempera sobre madeira',
+        nome: 'Retrato — Escola Sienesa',
+        artista: 'Escola de Siena',
+        epoca: 'c. 1400 · Quattrocento',
+        largura: 500,
+        altura: 380,
+        tipoCelula: 'celulaSecundaria',
+      },
+      {
+        numero: 9,
+        arquivo: 'tomas-retrato-escola-flamenca.webp',
+        alt: 'São Tomás de Aquino, retrato de escola flamenga, século XVI',
+        nome: 'Retrato — Escola Flamenga',
+        artista: 'Escola Flamenga',
+        epoca: 'séc. XVI · Países Baixos',
+        largura: 500,
+        altura: 380,
+        tipoCelula: 'celulaSecundaria',
+      },
+      {
+        numero: 10,
+        arquivo: 'tomas-retrato-velasquez-attr.webp',
+        alt: 'São Tomás de Aquino atribuído a Velázquez ou escola madrilena, Museu do Prado',
+        nome: 'Retrato — Escola Madrilena',
+        artista: 'Atrib. escola de Velázquez',
+        epoca: 'c. 1640 · Madrid',
+        largura: 640,
+        altura: 780,
+        tipoCelula: 'celulaGrandeDireita',
+      },
+    ],
+  },
+]} />
+
+<div style={{ height: '64px' }} />
+
+{/* ══════════════════════════════════════════
+    BLOCO IV · CATÁLOGO DE MESTRES (FolioMestres)
+    ══════════════════════════════════════════ */}
+
+<FolioMestres
+  titulo="Os Grandes Mestres que Pintaram Tomás"
+  subtitulo="Da tradição gótica italiana ao Barroco espanhol e além"
+  cartoes={[
+    {
+      arquivo: 'folio-carlo-crivelli-tomas.webp',
+      alt: 'São Tomás de Aquino por Carlo Crivelli, National Gallery, Londres',
+      largura: 400,
+      altura: 533,
+      obra: 'São Tomás de Aquino',
+      artista: 'Carlo Crivelli',
+      data: 'c. 1476',
+      local: 'National Gallery, Londres',
+      descricao: 'Crivelli veste Tomás com ornamentos quasi-jóias, num hábito decorado com brocados que desafia a austeridade dominicana para exaltar a dignidade doutrinal do mestre.',
+    },
+    {
+      arquivo: 'folio-fra-angelico-tomas-detalhe.webp',
+      alt: 'Detalhe de São Tomás por Fra Angelico, Museu de San Marco, Florença',
+      largura: 400,
+      altura: 533,
+      obra: 'São Tomás — detalhe de políptico',
+      artista: 'Fra Angelico',
+      data: 'c. 1438',
+      local: 'Museo di San Marco, Florença',
+      descricao: 'O Beato Fra Angelico, ele próprio dominicano, pinta Tomás com a luminosidade suave de um companheiro de ordem cuja santidade ele conhecia desde dentro.',
+    },
+    {
+      arquivo: 'folio-velazquez-tomas-orihuela.webp',
+      alt: 'Tentação de São Tomás de Aquino por Diego Velázquez, Museo Diocesano de Orihuela',
+      largura: 400,
+      altura: 533,
+      obra: 'A Tentação de Santo Tomás',
+      artista: 'Diego Velázquez',
+      data: 'c. 1631–1632',
+      local: 'Museo Diocesano, Orihuela',
+      descricao: 'Uma das primeiras obras conhecidas do jovem Velázquez, mostra Tomás sendo consolado por anjos após a tentação. O tenebrismo dramático anuncia o mestre que Velázquez se tornaria em Sevilha e Madri.',
+    },
+    {
+      arquivo: 'folio-velasquez-escola-tomas.webp',
+      alt: 'São Tomás de Aquino pela escola espanhola do século XVII, estilo Velázquez',
+      largura: 400,
+      altura: 533,
+      obra: 'São Tomás — escola espanhola',
+      artista: 'Escola espanhola, séc. XVII',
+      data: 'séc. XVII',
+      local: 'Coleção conventual dominicana',
+      descricao: 'A escola espanhola do século XVII produziu dezenas de versões de Tomás para conventos, universidades e igrejas, estabelecendo o cânone devocional que chegou até o mundo ibero-americano.',
+    },
+  ]}
+/>
+
+{/* ══════════════════════════════════════════
+    PAINEL III · Rubens Apoteose
+    ══════════════════════════════════════════ */}
+
+<PainelObra
+  numero={11}
+  arquivo="apoteose-tomas-rubens.webp"
+  alt="Apoteose de São Tomás de Aquino, Peter Paul Rubens, Museu do Prado, Madrid, c. 1631"
+  largura={900}
+  altura={1100}
+  nome="Apoteose de São Tomás de Aquino"
+  artista="Peter Paul Rubens"
+  epoca="c. 1631"
+  local="Museo Nacional del Prado, Madrid"
+  tecnica="Óleo sobre tela"
+  descricao="Rubens compõe uma das mais monumentais glorificações de São Tomás. Num turbilhão de figuras barrocas, o Doutor Angélico aparece elevado entre anjos, doutores e santos, com o Espírito Santo descendo sobre ele. À sua volta, heresiarcas prostrados e a Igreja triunfante confirmam o papel de Tomás como coluna da ortodoxia. A diagonal de luz que cruza a composição é um recurso clássico de Rubens para indicar intervenção divina."
+  atributos={[
+    { icone: '🕊', label: 'Espírito Santo' },
+    { icone: '👼', label: 'Corte angélica' },
+    { icone: '📖', label: 'Summa Theologiae' },
+    { icone: '⚡', label: 'Heresias prostradas' },
+  ]}
+  invertido={false}
+/>
+
+{/* ══════════════════════════════════════════
+    PAINEL IV · A Tentação em Roccasecca
+    ══════════════════════════════════════════ */}
+
+<PainelObra
+  numero={12}
+  arquivo="tomas-expulsa-mulher-tocao.webp"
+  alt="São Tomás de Aquino expulsando a mulher com um tição aceso, cena da tentação em Roccasecca, pintura barroca"
+  largura={1000}
+  altura={750}
+  nome="A Tentação de Roccasecca"
+  artista="Escola barroca italiana"
+  epoca="séc. XVII"
+  local="Coleção conventual dominicana"
+  tecnica="Óleo sobre tela"
+  descricao="Uma das cenas mais dramáticas da hagiografia tomista. Durante o cativeiro imposto pela família em Roccasecca, os irmãos de Tomás enviaram uma cortesã ao seu quarto para forçá-lo a abandonar a vocação dominicana. O jovem frade, indignado, arrancou um tição ardente da lareira e expulsou a mulher, perseguindo-a para fora do quarto. Depois, com o mesmo tição queimado, desenhou uma cruz na parede e ajoelhou-se em oração — recebendo então, segundo a tradição, o cíngulo angélico da castidade perpétua. O episódio tornou-se símbolo iconográfico da pureza intelectual como fundamento da vida contemplativa."
+  atributos={[
+    { icone: '🔥', label: 'Tição aceso' },
+    { icone: '⛪', label: 'Torre de Roccasecca' },
+    { icone: '✝️', label: 'Cruz na parede' },
+    { icone: '👼', label: 'Cíngulo angélico' },
+  ]}
+  invertido={true}
+/>
+
+{/* ══════════════════════════════════════════
+    BLOCO V · PANORÂMICA + DUPLA
+    ══════════════════════════════════════════ */}
+
+<div style={{ maxWidth:'1160px', margin:'0 auto', textAlign:'center', marginBottom:'12px' }}>
+  <span style={{ display:'block', fontFamily:"'Inter',sans-serif", fontSize:'0.65rem', fontWeight:600, letterSpacing:'0.28em', textTransform:'uppercase', color:'#b08a3c', margin:'0 0 8px' }}>IV · Afrescos e Cenas Coletivas</span>
+  <h2 style={{ fontFamily:"'Libre Baskerville',Georgia,serif", fontSize:'clamp(1.45rem,2.5vw,2rem)', fontWeight:700, color:'#2a2520', margin:'0 auto 48px', lineHeight:1.25, maxWidth:'700px' }}>Tomás entre os grandes da Igreja e da filosofia</h2>
+</div>
+
+<GaleriaIconografia grupos={[
+  {
+    layout: 'gradeLayoutD',
+    obras: [
+      {
+        numero: 13,
+        arquivo: 'escola-atenas-rafael-detalhe-tomas.webp',
+        alt: 'Detalhe da Disputa do Sacramento de Rafael Sanzio, com São Tomás de Aquino, Vaticano',
+        nome: 'Disputa do Sacramento — detalhe com Tomás',
+        artista: 'Rafael Sanzio',
+        epoca: 'c. 1509–1510 · Vaticano',
+        largura: 1600,
+        altura: 700,
+        tipoCelula: 'celulaPanoramica',
+      },
+    ],
+  },
+  {
+    layout: 'gradeLayoutE',
+    obras: [
+      {
+        numero: 14,
+        arquivo: 'tomas-doctores-chiesa-afresco.webp',
+        alt: 'São Tomás de Aquino entre os doutores da Igreja, afresco medieval italiano',
+        nome: 'São Tomás entre os Doutores',
+        artista: 'Escola italiana',
+        epoca: 'séc. XIV · afresco conventual',
+        largura: 700,
+        altura: 520,
+        tipoCelula: 'celulaMedia',
+      },
+      {
+        numero: 15,
+        arquivo: 'cappella-spagnoli-tomas-andrea-bonaiuti.webp',
+        alt: 'Cappella degli Spagnoli, São Tomás de Aquino com hereges aos pés, Andrea Bonaiuti, Florença',
+        nome: 'Cappella degli Spagnoli — Tomás triunfante',
+        artista: 'Andrea Bonaiuti (di Firenze)',
+        epoca: 'c. 1366–1368 · Florença',
+        largura: 700,
+        altura: 520,
+        tipoCelula: 'celulaMedia',
+      },
+    ],
+  },
+]} />
+
+<div style={{ height: '64px' }} />
+
+{/* ══════════════════════════════════════════
+    BLOCO VI · LINHA DO TEMPO ICONOGRÁFICA
+    ══════════════════════════════════════════ */}
+
+<CronologiaVisual
+  titulo="Séculos de Arte em Louvor do Doutor Angélico"
+  intro="Como a imagem de Tomás evoluiu do Gótico ao Barroco, e como cada período encontrou um aspecto diferente do mesmo santo."
+  itens={[
+    {
+      arquivo: 'cronologia-trecento-pisa.webp',
+      alt: 'Iconografia de São Tomás no século XIV, estilo Trecento italiano, Pisa',
+      largura: 700,
+      altura: 525,
+      data: 'Século XIV · Trecento',
+      nome: 'O Doutor Triunfante',
+      info: 'Itália central — Pisa, Florença, Siena',
+      texto: 'Os primeiros grandes afrescos e retábulos estabelecem o tipo do "triunfo": Tomás entronizado, os Evangelhos e a filosofia a seus lados, e Averróis ou Ário prostrados aos pés. A função é claramente doutrinária e pedagógica.',
+    },
+    {
+      arquivo: 'cronologia-quattrocento-florenca.webp',
+      alt: 'Iconografia de São Tomás no século XV, Quattrocento florentino',
+      largura: 700,
+      altura: 525,
+      data: 'Século XV · Quattrocento',
+      nome: 'A Humanidade do Mestre',
+      info: 'Florença, Siena, Veneza',
+      texto: 'O Renascimento aproxima Tomás do humano: rostos individualizados, expressão intelectual intensa, mãos que escrevem e pensam. Fra Angelico, Gozzoli e Filippo Lippi pintam um Tomás que é homem e santo ao mesmo tempo.',
+    },
+    {
+      arquivo: 'cronologia-cinquecento-vaticano.webp',
+      alt: 'Iconografia de São Tomás no século XVI, Rafael Sanzio no Vaticano',
+      largura: 700,
+      altura: 525,
+      data: 'Século XVI · Cinquecento',
+      nome: 'Entre os Imortais',
+      info: 'Roma, Vaticano, Nápoles',
+      texto: 'Rafael insere Tomás nas grandes composições coletivas do humanismo cristão: na Disputa do Sacramento, ele está entre os maiores doutores da Igreja, num equilíbrio perfeito entre céu e terra.',
+    },
+    {
+      arquivo: 'cronologia-barroco-espanha.webp',
+      alt: 'Iconografia de São Tomás no século XVII, Barroco espanhol, Zurbarán e Ribera',
+      largura: 700,
+      altura: 525,
+      data: 'Século XVII · Barroco',
+      nome: 'A Gravidade da Contemplação',
+      info: 'Sevilha, Madrid, Nápoles',
+      texto: 'Zurbarán, Ribera e a escola espanhola reinventam Tomás como contemplativo austero. O tenebrismo dramático ilumina um rosto sereno, a pena imóvel, o olhar interior. O Barroco encontrou em Tomás o modelo perfeito da inteligência que adora.',
+    },
+  ]}
+/>
+
+{/* ══════════════════════════════════════════
+    BLOCO VII · GRADE FINAL — IMAGENS DEVOCIONAIS
+    ══════════════════════════════════════════ */}
+
+<div style={{ maxWidth:'1160px', margin:'0 auto', textAlign:'center', marginBottom:'12px' }}>
+  <span style={{ display:'block', fontFamily:"'Inter',sans-serif", fontSize:'0.65rem', fontWeight:600, letterSpacing:'0.28em', textTransform:'uppercase', color:'#b08a3c', margin:'0 0 8px' }}>V · Imagens Devocionais</span>
+  <h2 style={{ fontFamily:"'Libre Baskerville',Georgia,serif", fontSize:'clamp(1.45rem,2.5vw,2rem)', fontWeight:700, color:'#2a2520', margin:'0 auto 48px', lineHeight:1.25, maxWidth:'700px' }}>A tradição que chegou até o povo</h2>
+</div>
+
+<GaleriaIconografia grupos={[
+  {
+    layout: 'gradeLayoutF',
+    obras: [
+      {
+        numero: 16,
+        arquivo: 'tomas-devocional-lateral-esquerda.webp',
+        alt: 'Imagem devocional de São Tomás de Aquino, tradição conventual italiana, óleo sobre madeira',
+        nome: 'Imagem Devocional — tradição italiana',
+        artista: 'Escola conventual dominicana',
+        epoca: 'séc. XVIII',
+        largura: 480,
+        altura: 680,
+        tipoCelula: 'celulaLateral',
+      },
+      {
+        numero: 17,
+        arquivo: 'tomas-devocional-central-grande.webp',
+        alt: 'Grande imagem devocional de São Tomás de Aquino, hábito dominicano, sol e livro, tradição ibérica',
+        nome: 'São Tomás — imagem principal conventual',
+        artista: 'Escola ibérica, séc. XVIII',
+        epoca: 'séc. XVIII · Portugal / Espanha',
+        largura: 800,
+        altura: 1000,
+        tipoCelula: 'celulaPanoramica',
+      },
+      {
+        numero: 18,
+        arquivo: 'tomas-devocional-lateral-direita.webp',
+        alt: 'Imagem devocional de São Tomás de Aquino com pena e Summa, escola francesa, séc. XVIII',
+        nome: 'Imagem Devocional — escola francesa',
+        artista: 'Escola conventual francesa',
+        epoca: 'séc. XVIII · França',
+        largura: 480,
+        altura: 680,
+        tipoCelula: 'celulaLateral',
+      },
+    ],
+  },
+]} />
+
+<div style={{ height: '96px' }} />
+
+{/* ══════════════════════════════════════════
+    ═══════════════════════════════════════════
+    BLOCO VIII · A GRAMÁTICA VISUAL DO DOUTOR ANGÉLICO
+    (atributos iconográficos — nova seção)
+    ═══════════════════════════════════════════
+    ══════════════════════════════════════════ */}
+
+<div style={{ maxWidth:'1160px', margin:'0 auto', textAlign:'center', marginBottom:'12px' }}>
+  <span style={{ display:'block', fontFamily:"'Inter',sans-serif", fontSize:'0.65rem', fontWeight:600, letterSpacing:'0.28em', textTransform:'uppercase', color:'#b08a3c', margin:'0 0 8px' }}>VI · A Gramática Visual do Doutor Angélico</span>
+  <h2 style={{ fontFamily:"'Libre Baskerville',Georgia,serif", fontSize:'clamp(1.45rem,2.5vw,2rem)', fontWeight:700, color:'#2a2520', margin:'0 auto 24px', lineHeight:1.25, maxWidth:'760px' }}>Os símbolos que fazem Tomás ser reconhecível em qualquer época</h2>
+</div>
+
+<div style={{
+  maxWidth: '780px',
+  margin: '0 auto 56px',
+  padding: '32px 44px',
+  background: '#faf8f4',
+  border: '1px solid #e2dcd0',
+  borderLeft: '3px solid #b08a3c',
+}}>
+  <span style={{
+    display: 'block',
+    fontFamily: "Georgia, 'Times New Roman', serif",
+    fontSize: '1rem',
+    lineHeight: 1.8,
+    color: '#3a3530',
+    textAlign: 'justify',
+    margin: 0,
+  }}>
+    Toda iconografia tem sua gramática. Os pintores medievais e barrocos não retratavam santos por invenção livre: seguiam <em>protocolos visuais</em> transmitidos por conventos, tratados de iconografia e ordens religiosas. Cada símbolo colocado num quadro de São Tomás é uma <strong>palavra</strong> — e o conjunto forma uma <strong>frase teológica</strong> que o fiel medieval sabia ler com naturalidade, mas que o observador moderno frequentemente ignora. As páginas seguintes decodificam essa gramática, atributo por atributo.
+  </span>
+</div>
+
+{/* ── CONSTELAÇÃO: mapa iconográfico principal ── */}
+
+<ConstelacaoAtributos
+  suprat="Mapa iconográfico completo"
+  titulo="Os oito atributos clássicos de São Tomás"
+  intro="Um retrato de referência com todos os símbolos identificados. Cada número aponta para um atributo que o Doutor Angélico carrega em quase todas as suas representações canônicas — do Trecento italiano ao Barroco ibérico."
+  retratoArquivo="constelacao-retrato-referencia.webp"
+  retratoAlt="Retrato de São Tomás de Aquino usado como mapa iconográfico com marcações dos atributos"
+  retratoLargura={800}
+  retratoAltura={1067}
+  retratoTituloObra="São Tomás de Aquino"
+  retratoAutor="Escola dominicana ibérica · séc. XVIII"
+
+  marcacoesEsquerda={[
+
+    {
+      numero: 1,
+      nome: 'Sol radiante no peito',
+      nomeLatim: 'Sol super pectus',
+      significado: 'Símbolo da sabedoria divina que arde no coração. Muitas vezes contém o monograma IHS ou o Cordeiro eucarístico.',
+    },
+    {
+      numero: 2,
+      nome: 'Pomba do Espírito Santo ao ouvido',
+      nomeLatim: 'Columba Spiritus Sancti',
+      significado: 'A inspiração divina que dita ao mestre o que escrever. Simboliza a origem sobrenatural da doutrina.',
+    },
+    {
+      numero: 3,
+      nome: 'Livro aberto',
+      nomeLatim: 'Liber apertus',
+      significado: 'A Summa Theologiae ou a Escritura, muitas vezes com frases visíveis em latim. Marca do Doutor.',
+    },
+    {
+      numero: 4,
+      nome: 'Pena de escrever',
+      nomeLatim: 'Calamus',
+      significado: 'A autoria, o esforço da inteligência humana que serve à revelação. Fixa Tomás no ato de escrever a Summa.',
+    },
+  ]}
+  marcacoesDireita={[
+    {
+      numero: 5,
+      nome: 'Cíngulo angélico',
+      nomeLatim: 'Cingulum angelicum',
+      significado: 'O cordão branco recebido dos anjos após a tentação de Roccasecca. Símbolo da castidade perpétua.',
+    },
+    {
+      numero: 6,
+      nome: 'Maquete de igreja',
+      nomeLatim: 'Ecclesiae typus',
+      significado: 'Atributo dos Doutores da Igreja. Indica que Tomás sustenta e defende a Esposa de Cristo com sua doutrina.',
+    },
+    {
+      numero: 7,
+      nome: 'Hábito dominicano',
+      nomeLatim: 'Habitus praedicatorum',
+      significado: 'Túnica branca e capa negra da Ordem dos Pregadores. O branco simboliza a pureza; o negro, a penitência.',
+    },
+  ]}
+  
+  chaveTexto="Um retrato tomista canônico deve apresentar pelo menos quatro destes atributos para ser considerado completo dentro da tradição iconográfica dominicana. As grandes obras — Zurbarán, Rubens, Filippino Lippi — costumam apresentar todos os oito de modo integrado."
+/>
+
+{/* ── FICHA I: O SOL NO PEITO ── */}
+
+<FichaAtributo
+  ordinal="I"
+  simbolo="☀"
+  suprat="Atributo primário"
+  nomeLatim="Sol super pectus"
+  nome="O Sol Radiante sobre o Peito"
+  arquivo="atributo-sol-peito-detalhe.webp"
+  alt="Detalhe do sol radiante sobre o peito de São Tomás de Aquino em pintura conventual"
+  largura={800}
+  altura={1000}
+  obraReferencia="Detalhe · Zurbarán, séc. XVII"
+  descricao="O sol sobre o peito é o atributo iconográfico mais característico de São Tomás de Aquino, ausente em todos os outros doutores da Igreja. Representa a sabedoria divina que arde no coração do teólogo — uma luz que não é fabricada pelo intelecto humano, mas recebida como dom. No centro do sol frequentemente aparece o monograma IHS (Iesus Hominum Salvator), o Cordeiro eucarístico ou simplesmente o Sagrado Coração de Jesus, indicando que a fonte da sabedoria tomista é o próprio Cristo. A tradição dominicana associa este símbolo à visão eucarística de Tomás e ao ofício de Corpus Christi que ele compôs."
+  boxOrigem={{
+    label: 'Origem',
+    texto: 'Tradição dominicana medieval; consolidado a partir do Trecento italiano em altares e afrescos conventuais.',
+  }}
+  boxUso={{
+    label: 'Frequência',
+    texto: 'Presente em cerca de 90% das obras devocionais canônicas do Barroco espanhol e italiano.',
+  }}
+  referencia={{
+    texto: 'A vossa palavra é lâmpada para os meus passos, luz para o meu caminho.',
+    fonte: 'Salmo 118 (119), 105 — texto associado à liturgia dos Doutores da Igreja',
+  }}
+  invertida={false}
+/>
+
+{/* ── FICHA II: A POMBA AO OUVIDO ── */}
+
+<FichaAtributo
+  ordinal="II"
+  simbolo="🕊"
+  suprat="Atributo místico"
+  nomeLatim="Columba Spiritus Sancti"
+  nome="A Pomba do Espírito Santo ao Ouvido"
+  arquivo="atributo-pomba-ouvido-detalhe.webp"
+  alt="Detalhe da pomba do Espírito Santo sussurrando ao ouvido de São Tomás de Aquino"
+  largura={800}
+  altura={1000}
+  obraReferencia="Detalhe · Escola napolitana barroca"
+  descricao="A pomba do Espírito Santo, geralmente pousada sobre o ombro de Tomás ou pairando junto ao seu ouvido, é a expressão iconográfica da inspiração divina que assiste o teólogo no ato de escrever. A tradição, transmitida por Guilherme de Tocco, relata que os companheiros de cela viam Tomás em êxtase escrevendo enquanto uma pomba luminosa lhe sussurrava. O atributo não afirma que a Summa foi ditada palavra por palavra pelo Espírito Santo — nenhum teólogo católico defenderia isso —, mas simboliza que a origem última da verdadeira doutrina é sobrenatural, e que o mestre é apenas o instrumento humano de uma sabedoria que o ultrapassa."
+  boxOrigem={{
+    label: 'Origem',
+    texto: 'Vita Sancti Thomae de Guilherme de Tocco (1318–1323); relatos dos secretários Reginaldo de Piperno e Nicolau de Marsilac.',
+  }}
+  boxUso={{
+    label: 'Frequência',
+    texto: 'Aparece com maior frequência em cenas do gênero "Tomás escrevendo" — do Renascimento tardio ao Rococó.',
+  }}
+  referencia={{
+    texto: 'Quando vier o Espírito da verdade, Ele vos guiará em toda a verdade.',
+    fonte: 'Evangelho segundo São João 16, 13',
+  }}
+  invertida={true}
+/>
+
+{/* ── FICHA III: O CÍNGULO ANGÉLICO ── */}
+
+<FichaAtributo
+  ordinal="III"
+  simbolo="✞"
+  suprat="Atributo biográfico"
+  nomeLatim="Cingulum angelicum"
+  nome="O Cíngulo Angélico da Castidade"
+  arquivo="atributo-cingulo-angelico-detalhe.webp"
+  alt="Detalhe do cíngulo angélico entregue por dois anjos a São Tomás de Aquino após a tentação de Roccasecca"
+  largura={800}
+  altura={1000}
+  obraReferencia="Detalhe · Escola italiana, séc. XVII"
+  descricao="O cíngulo — cordão branco cingido à cintura sobre o hábito — comemora o episódio da tentação em Roccasecca. Segundo a tradição, após Tomás expulsar a cortesã enviada por sua família com um tição aceso, ele adormeceu exausto e foi visitado por dois anjos que o cingiram com um cordão branco, dizendo-lhe: 'Recebe este cíngulo da castidade da parte de Deus, e conserva-o para sempre — nenhuma tentação da carne te vencerá.' Tomás jamais teria conhecido outra moção da carne por toda a vida. O objeto tornou-se relíquia venerada e originou, no século XVII, a Confraria da Guerra Angélica, dedicada à castidade dos jovens estudantes."
+  boxOrigem={{
+    label: 'Origem',
+    texto: 'Guilherme de Tocco, Vita Sancti Thomae, cap. 6; consolidado pela iconografia barroca a partir do séc. XVII.',
+  }}
+  boxUso={{
+    label: 'Devoção',
+    texto: 'Confraria da Guerra Angélica (Milán, séc. XVII); ainda hoje distribui-se o cordão bento em festas dominicanas.',
+  }}
+  referencia={{
+    texto: 'Recebe este cíngulo da castidade da parte de Deus, e conserva-o para sempre — nenhuma tentação da carne te vencerá.',
+    fonte: 'Tradição hagiográfica — palavras atribuídas aos anjos em Roccasecca',
+  }}
+  invertida={false}
+/>
+
+{/* ── GRADE COMPLETA: TODOS OS ATRIBUTOS SECUNDÁRIOS ── */}
+
+<GradeAtributos
+  suprat="Chave iconográfica completa"
+  titulo="Todos os símbolos, um por um"
+  intro="Cada atributo abaixo tem sua origem, sua história e seu significado teológico. Juntos, formam o vocabulário visual pelo qual a tradição católica representou o Doutor Angélico por sete séculos."
+  cards={[
+    {
+      numero: 1,
+      arquivo: 'atributo-sol-peito.webp',
+      alt: 'Atributo iconográfico do sol radiante sobre o peito de São Tomás',
+      largura: 800,
+      altura: 600,
+      icone: '☀',
+      nomeLatim: 'Sol super pectus',
+      nome: 'Sol radiante no peito',
+      significado: 'A sabedoria divina que arde no coração do teólogo. Contém frequentemente o monograma IHS ou o Cordeiro eucarístico.',
+      origem: 'Tradição dominicana medieval',
+    },
+    {
+      numero: 2,
+      arquivo: 'atributo-pomba-ouvido.webp',
+      alt: 'Atributo iconográfico da pomba do Espírito Santo ao ouvido de São Tomás',
+      largura: 800,
+      altura: 600,
+      icone: '🕊',
+      nomeLatim: 'Columba Spiritus Sancti',
+      nome: 'Pomba ao ouvido',
+      significado: 'A inspiração divina que assiste o teólogo. Símbolo da origem sobrenatural da verdadeira doutrina.',
+      origem: 'Vita de Guilherme de Tocco',
+    },
+    {
+      numero: 3,
+      arquivo: 'atributo-livro-aberto.webp',
+      alt: 'Atributo iconográfico do livro aberto nas mãos de São Tomás',
+      largura: 800,
+      altura: 600,
+      icone: '📖',
+      nomeLatim: 'Liber apertus',
+      nome: 'Livro aberto',
+      significado: 'A Summa Theologiae ou a Escritura. Muitas vezes com frases visíveis: Veritas, Ego sum via, Deus est.',
+      origem: 'Iconografia dos Doutores',
+    },
+    {
+      numero: 4,
+      arquivo: 'atributo-pena.webp',
+      alt: 'Atributo iconográfico da pena de escrever nas mãos de São Tomás',
+      largura: 800,
+      altura: 600,
+      icone: '✒',
+      nomeLatim: 'Calamus scribae',
+      nome: 'Pena de escrever',
+      significado: 'A autoria, o trabalho da inteligência humana ao serviço da revelação. Fixa Tomás no ato de compor a Summa.',
+      origem: 'Barroco espanhol e italiano',
+    },
+    {
+      numero: 5,
+      arquivo: 'atributo-cingulo.webp',
+      alt: 'Atributo iconográfico do cíngulo angélico cingido a São Tomás',
+      largura: 800,
+      altura: 600,
+      icone: '✞',
+      nomeLatim: 'Cingulum angelicum',
+      nome: 'Cíngulo angélico',
+      significado: 'O cordão branco entregue pelos anjos após a tentação de Roccasecca. Símbolo da castidade perpétua.',
+      origem: 'Tradição hagiográfica',
+    },
+    {
+      numero: 6,
+      arquivo: 'atributo-maquete-igreja.webp',
+      alt: 'Atributo iconográfico da maquete de igreja nas mãos de São Tomás',
+      largura: 800,
+      altura: 600,
+      icone: '⛪',
+      nomeLatim: 'Ecclesiae typus',
+      nome: 'Maquete de igreja',
+      significado: 'Atributo dos Doutores da Igreja. Indica que Tomás sustenta e defende a Esposa de Cristo com sua doutrina.',
+      origem: 'Iconografia medieval dos Doutores',
+    },
+    {
+      numero: 7,
+      arquivo: 'atributo-lirio.webp',
+      alt: 'Atributo iconográfico do lírio branco de São Tomás',
+      largura: 800,
+      altura: 600,
+      icone: '⚜',
+      nomeLatim: 'Lilium candidum',
+      nome: 'Lírio branco',
+      significado: 'A pureza de vida, complementar ao cíngulo. Menos frequente, mas presente nas obras devocionais mais tardias.',
+      origem: 'Devoção barroca tardia',
+    },
+    {
+      numero: 8,
+      arquivo: 'atributo-habito-dominicano.webp',
+      alt: 'Atributo iconográfico do hábito dominicano branco e negro de São Tomás',
+      largura: 800,
+      altura: 600,
+      icone: '❖',
+      nomeLatim: 'Habitus praedicatorum',
+      nome: 'Hábito dominicano',
+      significado: 'Túnica branca (pureza) e capa negra (penitência) da Ordem dos Pregadores. Nunca falta em nenhuma representação canônica.',
+      origem: 'Ordem dos Pregadores',
+    },
+    {
+      numero: 9,
+      arquivo: 'atributo-crucifixo.webp',
+      alt: 'Atributo iconográfico do crucifixo diante de São Tomás',
+      largura: 800,
+      altura: 600,
+      icone: '✝',
+      nomeLatim: 'Crucifixus',
+      nome: 'Crucifixo',
+      significado: 'Alusão à visão de Nápoles ("Bem escreveste sobre mim, Tomás"). Marca da centralidade de Cristo em toda a sua teologia.',
+      origem: 'Vita de Guilherme de Tocco',
+    },
+    {
+      numero: 10,
+      arquivo: 'atributo-boi-mudo.webp',
+      alt: 'Atributo iconográfico do boi mudo aos pés de São Tomás',
+      largura: 800,
+      altura: 600,
+      icone: '⌘',
+      nomeLatim: 'Bos mutus',
+      nome: 'Boi mudo',
+      significado: 'Alusão à profecia de Santo Alberto Magno em Colônia. Raro, mas presente em obras eruditas do Barroco tardio.',
+      origem: 'Profecia de Alberto Magno',
+    },
+    {
+      numero: 11,
+      arquivo: 'atributo-heresiarcas-prostrados.webp',
+      alt: 'Atributo iconográfico dos heresiarcas prostrados aos pés de São Tomás',
+      largura: 800,
+      altura: 600,
+      icone: '⚔',
+      nomeLatim: 'Haeretici prostrati',
+      nome: 'Heresiarcas aos pés',
+      significado: 'Averróis, Ário, Sabélio ou outros hereges vencidos. Símbolo do "triunfo" doutrinal — típico do Trecento e do Barroco.',
+      origem: 'Iconografia do triunfo medieval',
+    },
+  ]}
+/>
+
+{/* ══════════════════════════════════════════
+    NOTA FINAL
+    ══════════════════════════════════════════ */}
+
+<div style={{
+  maxWidth: '780px',
+  margin: '0 auto 80px',
+  padding: '40px 52px',
+  background: '#faf8f4',
+  border: '1px solid #e2dcd0',
+  borderLeft: '3px solid #b08a3c',
+}}>
+  <span style={{
+    display: 'block',
+    fontFamily: "'Inter', sans-serif",
+    fontSize: '0.62rem',
+    fontWeight: 600,
+    letterSpacing: '0.22em',
+    textTransform: 'uppercase',
+    color: '#b08a3c',
+    margin: '0 0 16px',
+  }}>Nota sobre as imagens</span>
+  <span style={{
+    display: 'block',
+    fontFamily: "Georgia, 'Times New Roman', serif",
+    fontSize: '0.95rem',
+    lineHeight: 1.8,
+    color: '#4a4540',
+    margin: 0,
+  }}>
+    As obras reunidas nesta página pertencem ao domínio público ou à tradição iconográfica de reprodução ampla na Igreja Católica. As atribuições seguem o consenso da história da arte; onde há disputa de autoria, isso é indicado explicitamente. A iconografia de São Tomás de Aquino é um dos patrimônios mais ricos da arte cristã ocidental e merece ser contemplada com a mesma atenção que se dedica à leitura de suas obras.
+  </span>
+</div>

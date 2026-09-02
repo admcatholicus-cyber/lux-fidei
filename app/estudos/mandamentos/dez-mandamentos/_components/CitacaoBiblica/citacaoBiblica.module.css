@@ -1,0 +1,27 @@
+ .citacao {
+  border-left: 3px solid var(--cor-dourado);
+  background: var(--cor-fundo-destaque);
+  padding: var(--espaco-pequeno) var(--espaco-interno);
+  margin: var(--espaco-entre-itens) 0;
+  border-radius: 0 var(--borda-raio) var(--borda-raio) 0;
+}
+
+.texto {
+  font-family: var(--fonte-titulo);
+  font-style: italic;
+  font-size: var(--tamanho-citacao);
+  color: var(--cor-texto-principal);
+  line-height: 1.6;
+  margin: 0;
+}
+
+.referencia {
+  display: block;
+  text-align: right;
+  font-family: var(--fonte-texto);
+  font-size: var(--tamanho-pequeno);
+  color: var(--cor-texto-secundario);
+  margin-top: var(--espaco-minimo);
+  font-style: normal;
+}
+

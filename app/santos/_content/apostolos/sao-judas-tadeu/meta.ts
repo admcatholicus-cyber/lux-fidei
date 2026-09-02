@@ -1,0 +1,23 @@
+export const meta = {
+  nome: 'São Judas Tadeu',
+  titulo: 'APÓSTOLO · IRMÃO DO SENHOR · PATRONO DAS CAUSAS IMPOSSÍVEIS',
+  subtitulo: '"Judas, não o Iscariotes..." — João 14,22',
+  categoria: 'apostolos',
+  slug: 'sao-judas-tadeu',
+  abas: [
+    { slug: 'origens',        label: 'Origens' },
+    { slug: 'apostolado',     label: 'Apostolado' },
+    { slug: 'escrituras',     label: 'Escrituras' },
+    { slug: 'epistola',       label: 'Epístola' },
+    { slug: 'teologia',       label: 'Teologia' },
+    { slug: 'martiro',        label: 'Martírio' },
+    { slug: 'tradicao',       label: 'Tradição' },
+    { slug: 'doutores',       label: 'Doutores' },
+    { slug: 'devocao',        label: 'Devoção' },
+    { slug: 'causas',         label: 'Causas Impossíveis' },
+    { slug: 'liturgia',       label: 'Liturgia' },
+    { slug: 'iconografia',    label: 'Iconografia' },
+    { slug: 'reliquias',      label: 'Relíquias' },
+    { slug: 'frases',         label: 'Epístola Viva' },
+  ],
+};

@@ -1,0 +1,20 @@
+export const meta = {
+  nome: 'São Lucas Evangelista',
+  titulo: 'EVANGELISTA · MÉDICO AMADO · ESCRITOR DO ESPÍRITO SANTO',
+  subtitulo: '"Lucas, o médico amado, e Demas vos saúdam." — Colossenses 4,14',
+  categoria: 'apostolos',
+  slug: 'sao-lucas',
+  abas: [
+    { slug: 'historia',      label: 'História' },
+    { slug: 'escrituras',    label: 'Escrituras' },
+    { slug: 'teologia',      label: 'Teologia' },
+    { slug: 'maria',         label: 'Maria' },
+    { slug: 'gentios',       label: 'Gentios & Pobres' },
+    { slug: 'espirito',      label: 'Espírito Santo' },
+    { slug: 'medicina',      label: 'Medicina & Ciência' },
+    { slug: 'tradicao',      label: 'Tradição' },
+    { slug: 'liturgia',      label: 'Liturgia' },
+    { slug: 'iconografia',   label: 'Iconografia' },
+    { slug: 'frases',        label: 'Frases & Textos' },
+  ],
+};

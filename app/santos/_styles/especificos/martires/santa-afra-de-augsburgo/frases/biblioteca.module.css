@@ -1,0 +1,744 @@
+/* ═══════════════════════════════════════════════════════════════
+   FRASES — SANTA AFRA DE AUGSBURGO
+   Biblioteca de textos transmitidos pela tradição
+   ═══════════════════════════════════════════════════════════════ */
+
+.biblioteca {
+  --ba-dourado:        #b08a3c;
+  --ba-dourado-claro:  #d4b872;
+  --ba-dourado-palido: #f0e8d2;
+  --ba-texto:          #3a3530;
+  --ba-texto-leve:     #6f6758;
+  --ba-borda:          #e2dcd0;
+  --ba-borda-leve:     #ece8df;
+  --ba-fundo:          #faf8f4;
+  --ba-fundo-card:     #ffffff;
+  --ba-fundo-escuro:   #1a1712;
+  --ba-vermelho:       #8b3a3a;
+  --ba-vermelho-leve:  #f5eeee;
+  --ba-serif:          'Libre Baskerville', Georgia, 'Times New Roman', serif;
+  --ba-sans:           'Inter', system-ui, sans-serif;
+  --ba-radius:         5px;
+  --ba-sombra:         0 2px 10px rgba(0,0,0,.05), 0 1px 3px rgba(0,0,0,.03);
+  --ba-transicao:      .3s cubic-bezier(.4,0,.2,1);
+
+  max-width: 1220px;
+  margin: 0 auto;
+}
+
+/* ═══════════════════════════════════════
+   INTRODUÇÃO
+   ═══════════════════════════════════════ */
+
+.introducao {
+  max-width: 780px;
+  margin: 0 auto 56px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.introducaoOrnamento {
+  color: var(--ba-dourado-claro);
+  font-size: .9rem;
+  letter-spacing: .6em;
+  opacity: .6;
+}
+
+.introducaoTexto {
+  font-family: var(--ba-serif);
+  font-size: 1rem;
+  color: var(--ba-texto);
+  line-height: 1.9;
+  text-align: justify;
+}
+
+.introducaoTexto p {
+  margin: 0 0 14px;
+}
+
+.introducaoTexto p:last-child {
+  margin-bottom: 0;
+}
+
+/* ═══════════════════════════════════════
+   CORPO — nav + conteúdo
+   ═══════════════════════════════════════ */
+
+.corpo {
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  gap: 40px;
+  align-items: flex-start;
+}
+
+/* ═══════════════════════════════════════
+   NAVEGAÇÃO LATERAL
+   ═══════════════════════════════════════ */
+
+.nav {
+  position: sticky;
+  top: 100px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.navTitulo {
+  font-family: var(--ba-sans);
+  font-size: .65rem;
+  font-weight: 600;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  color: var(--ba-dourado);
+  margin-bottom: 10px;
+  padding-left: 12px;
+}
+
+.navLista {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.navItem {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  padding: 9px 12px;
+  background: none;
+  border: none;
+  border-radius: var(--ba-radius);
+  cursor: pointer;
+  text-align: left;
+  transition: background var(--ba-transicao), color var(--ba-transicao);
+}
+
+.navItem:hover {
+  background: var(--ba-dourado-palido);
+}
+
+.navItemAtivo {
+  background: var(--ba-dourado-palido);
+  border-left: 3px solid var(--ba-dourado);
+}
+
+.navIcone {
+  font-size: 1rem;
+  flex-shrink: 0;
+  width: 22px;
+  text-align: center;
+}
+
+.navLabel {
+  font-family: var(--ba-sans);
+  font-size: .78rem;
+  color: var(--ba-texto);
+  line-height: 1.35;
+}
+
+.navItemAtivo .navLabel {
+  color: var(--ba-dourado);
+  font-weight: 600;
+}
+
+/* ═══════════════════════════════════════
+   CAPÍTULO
+   ═══════════════════════════════════════ */
+
+.capitulo {
+  margin-bottom: 56px;
+  scroll-margin-top: 80px;
+}
+
+.capCabecalho {
+  display: flex;
+  align-items: flex-start;
+  gap: 18px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid var(--ba-borda);
+  margin-bottom: 28px;
+}
+
+.capIcone {
+  font-size: 1.6rem;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.capTitulos {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.capSupra {
+  font-family: var(--ba-sans);
+  font-size: .68rem;
+  font-weight: 600;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: var(--ba-dourado);
+}
+
+.capTitulo {
+  font-family: var(--ba-serif);
+  font-size: clamp(1.1rem, 2.2vw, 1.45rem);
+  font-weight: 400;
+  color: var(--ba-texto);
+  margin: 0;
+  line-height: 1.3;
+}
+
+.capContagem {
+  font-family: var(--ba-sans);
+  font-size: .72rem;
+  color: var(--ba-texto-leve);
+  letter-spacing: .04em;
+}
+
+.capCorpo {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* ═══════════════════════════════════════
+   SUBSEÇÃO
+   ═══════════════════════════════════════ */
+
+.subsecao {
+  margin-top: 12px;
+  margin-bottom: 8px;
+}
+
+.subsecaoTitulo {
+  font-family: var(--ba-serif);
+  font-size: .95rem;
+  font-weight: 400;
+  color: var(--ba-dourado);
+  margin: 0 0 16px;
+  padding-left: 14px;
+  border-left: 2px solid var(--ba-dourado-palido);
+  font-style: italic;
+}
+
+.subsecaoCorpo {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+/* ═══════════════════════════════════════
+   CONFISSÃO MARTIRIAL — diálogos da Passio
+   ═══════════════════════════════════════ */
+
+.confissao {
+  display: flex;
+  gap: 0;
+  border-radius: var(--ba-radius);
+  overflow: hidden;
+  box-shadow: var(--ba-sombra);
+  background: var(--ba-fundo-card);
+  transition: box-shadow var(--ba-transicao);
+}
+
+.confissao:hover {
+  box-shadow: 0 4px 18px rgba(0,0,0,.08);
+}
+
+.confissaoBarra {
+  width: 5px;
+  flex-shrink: 0;
+}
+
+.confissaoAfra .confissaoBarra {
+  background: var(--ba-dourado);
+}
+
+.confissaoJuiz .confissaoBarra {
+  background: var(--ba-vermelho);
+}
+
+.confissaoInterior {
+  padding: 22px 26px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  flex: 1;
+}
+
+.confissaoTopo {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.confissaoLocutor {
+  font-family: var(--ba-serif);
+  font-size: .95rem;
+  font-weight: 700;
+  letter-spacing: .02em;
+}
+
+.confissaoAfra .confissaoLocutor {
+  color: var(--ba-dourado);
+}
+
+.confissaoJuiz .confissaoLocutor {
+  color: var(--ba-vermelho);
+}
+
+.confissaoQualificacao {
+  font-family: var(--ba-sans);
+  font-size: .7rem;
+  color: var(--ba-texto-leve);
+  letter-spacing: .06em;
+  text-transform: uppercase;
+}
+
+.confissaoContexto {
+  font-family: var(--ba-serif);
+  font-size: .82rem;
+  color: var(--ba-texto-leve);
+  margin: 0;
+  line-height: 1.6;
+  padding: 8px 14px;
+  background: var(--ba-fundo);
+  border-radius: 3px;
+  border-left: 2px solid var(--ba-borda);
+}
+
+.confissaoTexto {
+  font-family: var(--ba-serif);
+  font-size: 1rem;
+  color: var(--ba-texto);
+  line-height: 1.85;
+}
+
+.confissaoTexto p {
+  display: inline;
+}
+
+.confissaoAspas {
+  font-size: 1.3rem;
+  line-height: 1;
+  vertical-align: text-top;
+}
+
+.confissaoAfra .confissaoAspas {
+  color: var(--ba-dourado-claro);
+}
+
+.confissaoJuiz .confissaoAspas {
+  color: rgba(139,58,58,.3);
+}
+
+/* ─── Texto original (expandível) ─── */
+
+.confissaoOriginal,
+.testemunhoOriginalDetalhe,
+.liturgicoOriginal,
+.narrativaOriginal {
+  margin-top: 8px;
+}
+
+.confissaoOriginalSumario,
+.testemunhoOriginalSumario,
+.liturgicoOriginalSumario,
+.narrativaOriginalSumario {
+  font-family: var(--ba-sans);
+  font-size: .7rem;
+  font-weight: 600;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: var(--ba-texto-leve);
+  cursor: pointer;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.confissaoOriginalSumario::before,
+.testemunhoOriginalSumario::before,
+.liturgicoOriginalSumario::before,
+.narrativaOriginalSumario::before {
+  content: '▸';
+  font-size: .6rem;
+  transition: transform .2s;
+}
+
+details[open] > .confissaoOriginalSumario::before,
+details[open] > .testemunhoOriginalSumario::before,
+details[open] > .liturgicoOriginalSumario::before,
+details[open] > .narrativaOriginalSumario::before {
+  transform: rotate(90deg);
+}
+
+.confissaoOriginalTexto,
+.testemunhoOriginalTexto,
+.liturgicoOriginalTexto,
+.narrativaOriginalTexto {
+  font-family: var(--ba-serif);
+  font-size: .85rem;
+  font-style: italic;
+  color: var(--ba-texto-leve);
+  line-height: 1.75;
+  margin: 8px 0 0;
+  padding: 12px 16px;
+  background: var(--ba-fundo);
+  border-radius: 3px;
+  border-left: 2px solid var(--ba-dourado-palido);
+}
+
+.confissaoFonte,
+.testemunhoFonte {
+  font-family: var(--ba-sans);
+  font-size: .68rem;
+  color: var(--ba-texto-leve);
+  letter-spacing: .04em;
+  margin-top: 4px;
+}
+
+/* ═══════════════════════════════════════
+   TEXTO LITÚRGICO
+   ═══════════════════════════════════════ */
+
+.liturgico {
+  margin: 8px 0;
+}
+
+.liturgicoMoldura {
+  background: var(--ba-fundo-card);
+  border: 1px solid var(--ba-borda);
+  border-radius: var(--ba-radius);
+  padding: 28px 30px;
+  position: relative;
+  box-shadow: var(--ba-sombra);
+}
+
+.liturgicoMoldura::before {
+  content: '';
+  position: absolute;
+  inset: 6px;
+  border: 1px solid var(--ba-dourado-palido);
+  border-radius: 3px;
+  pointer-events: none;
+}
+
+.liturgicoCabecalho {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 20px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid var(--ba-borda-leve);
+  flex-wrap: wrap;
+}
+
+.liturgicoSimbolo {
+  font-size: 1.2rem;
+  color: var(--ba-dourado);
+  flex-shrink: 0;
+}
+
+.liturgicoTipos {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  flex: 1;
+}
+
+.liturgicoTipo {
+  font-family: var(--ba-sans);
+  font-size: .72rem;
+  font-weight: 700;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: var(--ba-dourado);
+}
+
+.liturgicoRef {
+  font-family: var(--ba-sans);
+  font-size: .72rem;
+  color: var(--ba-texto-leve);
+}
+
+.liturgicoTempo {
+  font-family: var(--ba-sans);
+  font-size: .68rem;
+  color: var(--ba-texto-leve);
+  letter-spacing: .06em;
+}
+
+.liturgicoTexto {
+  font-family: var(--ba-serif);
+  font-size: 1.02rem;
+  color: var(--ba-texto);
+  line-height: 1.9;
+  text-align: center;
+}
+
+.liturgicoTexto p {
+  margin: 0 0 10px;
+}
+
+.liturgicoTexto p:last-child {
+  margin-bottom: 0;
+}
+
+/* ═══════════════════════════════════════
+   TESTEMUNHO ECLESIAL
+   ═══════════════════════════════════════ */
+
+.testemunho {
+  display: flex;
+  gap: 0;
+  background: var(--ba-fundo-card);
+  border: 1px solid var(--ba-borda-leve);
+  border-radius: var(--ba-radius);
+  overflow: hidden;
+  box-shadow: var(--ba-sombra);
+  transition: box-shadow var(--ba-transicao);
+}
+
+.testemunho:hover {
+  box-shadow: 0 4px 18px rgba(0,0,0,.08);
+}
+
+.testemunhoLateral {
+  width: 60px;
+  flex-shrink: 0;
+  background: linear-gradient(180deg, var(--ba-fundo-escuro) 0%, #2a241c 100%);
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding-top: 24px;
+}
+
+.testemunhoMonograma {
+  font-family: var(--ba-serif);
+  font-size: .9rem;
+  font-weight: 700;
+  color: var(--ba-dourado-claro);
+  letter-spacing: .06em;
+}
+
+.testemunhoCorpo {
+  padding: 22px 26px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.testemunhoCabecalho {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.testemunhoAutor {
+  font-family: var(--ba-serif);
+  font-size: .95rem;
+  font-weight: 700;
+  color: var(--ba-texto);
+}
+
+.testemunhoQualificacao {
+  font-family: var(--ba-sans);
+  font-size: .7rem;
+  color: var(--ba-dourado);
+  letter-spacing: .06em;
+  text-transform: uppercase;
+}
+
+.testemunhoMeta {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-top: 2px;
+}
+
+.testemunhoObra {
+  font-family: var(--ba-serif);
+  font-size: .8rem;
+  font-style: italic;
+  color: var(--ba-texto-leve);
+}
+
+.testemunhoData {
+  font-family: var(--ba-sans);
+  font-size: .72rem;
+  color: var(--ba-texto-leve);
+}
+
+.testemunhoTexto {
+  font-family: var(--ba-serif);
+  font-size: .98rem;
+  color: var(--ba-texto);
+  line-height: 1.85;
+}
+
+.testemunhoTexto p {
+  display: inline;
+}
+
+.testemunhoAspas {
+  font-size: 1.2rem;
+  color: var(--ba-dourado-claro);
+  line-height: 1;
+  vertical-align: text-top;
+}
+
+/* ═══════════════════════════════════════
+   NARRATIVA DA PASSIO
+   ═══════════════════════════════════════ */
+
+.narrativa {
+  display: flex;
+  gap: 0;
+  margin: 8px 0;
+}
+
+.narrativaFio {
+  width: 3px;
+  flex-shrink: 0;
+  background: linear-gradient(180deg, var(--ba-dourado-palido), var(--ba-borda-leve));
+  border-radius: 2px;
+}
+
+.narrativaInterior {
+  padding: 18px 24px;
+  background: var(--ba-fundo);
+  border: 1px solid var(--ba-borda-leve);
+  border-left: none;
+  border-radius: 0 var(--ba-radius) var(--ba-radius) 0;
+  flex: 1;
+}
+
+.narrativaCabecalho {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+.narrativaIcone {
+  font-size: 1rem;
+  flex-shrink: 0;
+}
+
+.narrativaTitulo {
+  font-family: var(--ba-serif);
+  font-size: .9rem;
+  font-weight: 700;
+  color: var(--ba-texto);
+  margin: 0;
+  line-height: 1.3;
+}
+
+.narrativaRef {
+  font-family: var(--ba-sans);
+  font-size: .7rem;
+  color: var(--ba-texto-leve);
+  display: block;
+  margin-top: 2px;
+}
+
+.narrativaTexto {
+  font-family: var(--ba-serif);
+  font-size: .95rem;
+  color: var(--ba-texto);
+  line-height: 1.85;
+  font-style: italic;
+}
+
+.narrativaTexto p {
+  margin: 0 0 10px;
+}
+
+.narrativaTexto p:last-child {
+  margin-bottom: 0;
+}
+
+/* ═══════════════════════════════════════
+   RESPONSIVIDADE
+   ═══════════════════════════════════════ */
+
+@media (max-width: 900px) {
+  .corpo {
+    grid-template-columns: 1fr;
+  }
+
+  .nav {
+    position: static;
+    flex-direction: row;
+    overflow-x: auto;
+    gap: 2px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid var(--ba-borda-leve);
+    margin-bottom: 24px;
+  }
+
+  .navTitulo {
+    display: none;
+  }
+
+  .navLista {
+    flex-direction: row;
+    gap: 2px;
+  }
+
+  .navItem {
+    white-space: nowrap;
+    padding: 8px 14px;
+  }
+
+  .navItemAtivo {
+    border-left: none;
+    border-bottom: 3px solid var(--ba-dourado);
+  }
+
+  .testemunhoLateral {
+    width: 44px;
+  }
+
+  .confissaoInterior {
+    padding: 18px 20px;
+  }
+
+  .liturgicoMoldura {
+    padding: 22px 20px;
+  }
+}
+
+@media (max-width: 600px) {
+  .testemunho {
+    flex-direction: column;
+  }
+
+  .testemunhoLateral {
+    width: 100%;
+    height: 36px;
+    padding: 8px 0;
+    flex-direction: row;
+  }
+
+  .confissaoTexto,
+  .testemunhoTexto {
+    font-size: .92rem;
+  }
+
+  .liturgicoMoldura::before {
+    display: none;
+  }
+}

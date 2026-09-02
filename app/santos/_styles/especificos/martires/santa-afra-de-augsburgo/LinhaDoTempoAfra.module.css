@@ -1,0 +1,236 @@
+/* C:\Users\kitten\Documents\lux-fidei\app\santos\_styles\especificos\martires\santa-afra-de-augsburgo\linha-do-tempo\LinhaDoTempoAfra.module.css */
+
+/* ─── Raiz ─────────────────────────────────────────────── */
+.raiz {
+  max-width: 860px;
+  margin: 0 auto 60px;
+  padding: 0 20px;
+  font-family: Georgia, 'Times New Roman', serif;
+  color: #3a3530;
+}
+
+/* ─── Trilho vertical ───────────────────────────────────── */
+.trilho {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+/* ─── Estação (linha inteira) ───────────────────────────── */
+.estacao {
+  display: grid;
+  grid-template-columns: 64px 1fr;
+  gap: 0 20px;
+  position: relative;
+}
+
+/* ─── Eixo esquerdo ─────────────────────────────────────── */
+.eixo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.bolha {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: #faf8f4;
+  border: 2px solid #d4b872;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  position: relative;
+  z-index: 2;
+  transition: background 0.25s, border-color 0.25s, box-shadow 0.25s;
+}
+
+/* Fio que liga as bolhas */
+.fio {
+  width: 2px;
+  flex: 1;
+  min-height: 24px;
+  background: linear-gradient(to bottom, #d4b872 0%, #e2dcd0 100%);
+  margin: 4px 0;
+}
+
+.objeto {
+  font-size: 1.45rem;
+  line-height: 1;
+  display: block;
+}
+
+/* ─── Estação aberta: bolha iluminada ───────────────────── */
+.aberta .bolha {
+  background: #b08a3c;
+  border-color: #b08a3c;
+  box-shadow: 0 0 0 5px rgba(176, 138, 60, 0.15);
+}
+
+.aberta .objeto {
+  filter: brightness(0) invert(1);
+}
+
+/* ─── Tipos de estação (cor do ano + borda esquerda) ──── */
+.martirio     .ano { color: #8b1a1a; }
+.culto        .ano { color: #5a7a3a; }
+.translacao   .ano { color: #4a6a8a; }
+.construcao   .ano { color: #7a5a2a; }
+.ruptura      .ano { color: #6a2a2a; }
+.restauracao  .ano { color: #2a6a5a; }
+.presente     .ano { color: #b08a3c; }
+
+.martirio     .bolha { border-color: #c0392b; }
+.culto        .bolha { border-color: #6aaa3a; }
+.translacao   .bolha { border-color: #4a8aaa; }
+.construcao   .bolha { border-color: #aa8a3a; }
+.ruptura      .bolha { border-color: #aa3a2a; }
+.restauracao  .bolha { border-color: #3aaa8a; }
+.presente     .bolha { border-color: #b08a3c; }
+
+/* ─── Conteúdo direito ──────────────────────────────────── */
+.conteudo {
+  padding-bottom: 8px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ─── Cabeçalho (botão clicável) ───────────────────────── */
+.cabecalho {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+  background: none;
+  border: none;
+  padding: 12px 14px 12px 0;
+  cursor: pointer;
+  text-align: left;
+  border-bottom: 1px solid #ece8df;
+  transition: border-color 0.2s;
+}
+
+.cabecalho:hover {
+  border-color: #d4b872;
+}
+
+.aberta .cabecalho {
+  border-color: #b08a3c;
+}
+
+.ano {
+  font-family: 'Libre Baskerville', Georgia, serif;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #b08a3c;          /* sobrescrito por tipo */
+  white-space: nowrap;
+  min-width: 80px;
+  line-height: 1.2;
+}
+
+.tituloEstacao {
+  font-family: 'Libre Baskerville', Georgia, serif;
+  font-size: 1.01rem;
+  font-weight: 700;
+  color: #3a3530;
+  line-height: 1.3;
+}
+
+.seta {
+  font-size: 0.65rem;
+  color: #b08a3c;
+  opacity: 0.7;
+  transition: opacity 0.2s;
+}
+
+.cabecalho:hover .seta {
+  opacity: 1;
+}
+
+/* ─── Corpo expandido ───────────────────────────────────── */
+.corpo {
+  padding: 16px 14px 20px 0;
+  border-left: 3px solid #ece8df;
+  margin-left: 0;
+  padding-left: 18px;
+  animation: abrir 0.2s ease;
+}
+
+.aberta .corpo {
+  border-left-color: #d4b872;
+}
+
+@keyframes abrir {
+  from { opacity: 0; transform: translateY(-6px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.objetoLegenda {
+  font-size: 0.78rem;
+  color: #6f6758;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  margin: 0 0 12px;
+  font-style: italic;
+  font-family: Georgia, serif;
+}
+
+.texto {
+  font-size: 0.97rem;
+  line-height: 1.82;
+  color: #3a3530;
+}
+
+.texto p {
+  margin: 0 0 0.9em;
+}
+
+.texto p:last-child {
+  margin-bottom: 0;
+}
+
+.texto strong {
+  color: #2a2520;
+  font-weight: 700;
+}
+
+.texto em {
+  font-style: italic;
+  color: #5a5048;
+}
+
+/* ─── Responsivo ────────────────────────────────────────── */
+@media (max-width: 580px) {
+  .estacao {
+    grid-template-columns: 48px 1fr;
+    gap: 0 12px;
+  }
+
+  .bolha {
+    width: 42px;
+    height: 42px;
+  }
+
+  .objeto {
+    font-size: 1.15rem;
+  }
+
+  .ano {
+    font-size: 0.72rem;
+    min-width: 64px;
+  }
+
+  .tituloEstacao {
+    font-size: 0.92rem;
+  }
+
+  .cabecalho {
+    grid-template-columns: auto 1fr auto;
+    gap: 8px;
+  }
+}

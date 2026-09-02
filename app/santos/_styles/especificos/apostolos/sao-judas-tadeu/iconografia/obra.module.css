@@ -1,0 +1,108 @@
+/* ============================================
+   OBRA DE ARTE — ICONOGRAFIA
+   ============================================ */
+
+.obra {
+  background: #ffffff;
+  border: 1px solid #e2dcd0;
+  border-radius: 6px;
+  overflow: hidden;
+  transition: box-shadow 0.25s ease;
+}
+
+.obra:hover {
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+}
+
+/* ---------- IMAGEM ---------- */
+
+.obraImagemContainer {
+  width: 100%;
+  background: #faf8f4;
+  display: block;
+  line-height: 0;
+  overflow: hidden;
+}
+
+.obraImagem {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+/* ---------- INFORMAÇÕES ---------- */
+
+.obraInfo {
+  padding: 28px 28px 32px;
+}
+
+.obraTitulo {
+  font-family: 'Libre Baskerville', Georgia, serif;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #3a3530;
+  margin: 0 0 16px;
+  line-height: 1.35;
+}
+
+/* ---------- METADADOS ---------- */
+
+.obraMetadados {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 4px 16px;
+  margin: 0 0 20px;
+  padding: 16px 0;
+  border-top: 1px solid #ece8df;
+  border-bottom: 1px solid #ece8df;
+}
+
+.obraLabel {
+  font-family: Georgia, 'Times New Roman', 'Noto Serif', serif;
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #b08a3c;
+}
+
+.obraValor {
+  font-family: Georgia, 'Times New Roman', 'Noto Serif', serif;
+  font-size: 0.9rem;
+  color: #3a3530;
+  margin: 0;
+}
+
+/* ---------- ANÁLISE ---------- */
+
+.obraAnalise {
+  font-family: Georgia, 'Times New Roman', 'Noto Serif', serif;
+  font-size: 0.98rem;
+  line-height: 1.8;
+  color: #3a3530;
+}
+
+.obraAnalise p {
+  margin: 0 0 12px;
+}
+
+.obraAnalise p:last-child {
+  margin-bottom: 0;
+}
+
+/* ---------- RESPONSIVO ---------- */
+
+@media (max-width: 768px) {
+  .obraInfo {
+    padding: 20px 18px 24px;
+  }
+
+  .obraTitulo {
+    font-size: 1.08rem;
+  }
+
+  .obraMetadados {
+    gap: 3px 12px;
+  }
+}

@@ -1,0 +1,712 @@
+import Dialogo from '../../../_components/especificos/arcanjos/sao-rafael-arcanjo/Dialogo';
+import Testemunho from '../../../_components/especificos/arcanjos/sao-rafael-arcanjo/Testemunho';
+import TextoOficial from '../../../_components/especificos/arcanjos/sao-rafael-arcanjo/TextoOficial';
+import {
+  BibliotecaRafael,
+  CapRafael,
+  SubsecaoRafael,
+} from '../../../_components/especificos/arcanjos/sao-rafael-arcanjo/BibliotecaRafael';
+
+export const meta = {
+  numero: 'Antologia',
+  titulo: 'Frases',
+  subtitulo: 'As Palavras Sobre e De São Rafael Arcanjo',
+};
+
+<PageHeader
+  numero={meta.numero}
+  titulo={meta.titulo}
+  subtitulo={meta.subtitulo}
+/>
+
+<BibliotecaRafael
+  introducao={
+    <>
+      <p>Ao contrário dos santos históricos, <strong>São Rafael Arcanjo</strong> não deixou escritos próprios. As palavras que a tradição conserva sob seu nome são, essencialmente, os <strong>discursos preservados no Livro de Tobias</strong> — sobretudo no discurso de despedida (Tobias 12,6-20), onde o arcanjo revela sua identidade e transmite ensinamentos sobre oração, jejum e esmola.</p>
+      <p>Esta antologia reúne, em seis seções, tanto <strong>as palavras do próprio Rafael</strong> nas Escrituras quanto <strong>o que a Tradição da Igreja disse sobre ele</strong> — dos Padres do séc. III aos Papas contemporâneos, passando pelos Doutores medievais, pelos místicos e pela liturgia oficial. Cada tipo de texto é apresentado no formato visual mais adequado à sua natureza.</p>
+    </>
+  }
+  capitulos={[
+    { id: 'palavras-rafael',    icone: '📖', label: 'Palavras de Rafael' },
+    { id: 'padres-igreja',      icone: '📜', label: 'Padres da Igreja' },
+    { id: 'doutores-medievais', icone: '🕮', label: 'Doutores Medievais' },
+    { id: 'santos-modernos',    icone: '✨', label: 'Santos e Papas Modernos' },
+    { id: 'documentos-igreja',  icone: '⛨',  label: 'Documentos da Igreja' },
+    { id: 'liturgia',           icone: '🕯️', label: 'Liturgia' },
+  ]}
+>
+
+{/* ═══════════════════════════════════════════════════════════ */}
+{/* CAPÍTULO I — PALAVRAS DE RAFAEL NO LIVRO DE TOBIAS         */}
+{/* ═══════════════════════════════════════════════════════════ */}
+
+<CapRafael
+  id="palavras-rafael"
+  icone="📖"
+  suprat="Livro de Tobias · séc. III–II a.C."
+  titulo="As Palavras do Arcanjo"
+  contagem="27 falas registradas"
+>
+
+<SubsecaoRafael titulo="A viagem com Tobias">
+
+<Dialogo
+  referencia="Tobias 5,13"
+  cena="Tobit envia o filho em busca do dinheiro depositado em Ragés da Média. O jovem Tobias sai à procura de um companheiro de viagem e encontra à porta um forasteiro de porte sereno."
+  locutor="Rafael (disfarçado como Azarias)"
+  original="Ego sum Azarias Ananiae magni filii, ex fratribus tuis."
+>
+  Sou Azarias, filho de Ananias, o grande, um de teus parentes.
+</Dialogo>
+
+<Dialogo
+  referencia="Tobias 5,16"
+  cena="Tobias volta para casa com o forasteiro. Tobit interroga o desconhecido sobre seu conhecimento do caminho até a Média."
+  locutor="Rafael (disfarçado como Azarias)"
+  original="Notam habeo viam, et apud Raguel fratrem nostrum saepe mansi."
+>
+  Conheço bem o caminho e já estive muitas vezes em casa de Raguel, nosso irmão. É um homem bom e muito sábio. Tem uma filha única chamada Sara.
+</Dialogo>
+
+<Dialogo
+  referencia="Tobias 5,22"
+  cena="Tobit tranquiliza sua esposa Ana, que chorava pela partida do filho único. O forasteiro promete traduzir o menino são e salvo."
+  locutor="Rafael (disfarçado como Azarias)"
+  original="Bono animo esto: paratus sum ire tecum, et per mediam regionem ibo tecum."
+>
+  Quando voltares são e salvo, e tua mulher igualmente, entregarei a ti a recompensa.
+</Dialogo>
+
+<Dialogo
+  referencia="Tobias 6,4"
+  cena="Chegando às margens do rio Tigre, um peixe enorme salta da água e ataca o pé de Tobias. O jovem grita de pavor. Rafael, calmo, dá a instrução."
+  locutor="Rafael a Tobias"
+  original="Apprehende branchiam piscis, et trahe eum ad te."
+>
+  Agarra o peixe! Não o largues!
+</Dialogo>
+
+<Dialogo
+  referencia="Tobias 6,8"
+  cena="Depois de capturar o peixe, Tobias pergunta a serventia das entranhas que Rafael lhe manda guardar."
+  locutor="Rafael a Tobias"
+  original="Cor et iecur si super carbones ponas, fumus eius extricat omne genus daemoniorum."
+>
+  O coração e o fígado do peixe, se forem queimados diante de um homem ou de uma mulher atormentada por um demônio, a fumaça os porá em fuga e afugentará o demônio para sempre.
+</Dialogo>
+
+<Dialogo
+  referencia="Tobias 6,9"
+  cena="Rafael continua a explicar as propriedades medicinais do peixe capturado."
+  locutor="Rafael a Tobias"
+  original="Fel vero ad oculos ungendum valet, in quibus fuerit albugo, et sanabuntur."
+>
+  Quanto à bile, serve para ungir os olhos de um homem que tem manchas brancas; sopra-se sobre elas e ficará curado.
+</Dialogo>
+
+<Dialogo
+  referencia="Tobias 6,11-12"
+  cena="A caravana se aproxima de Ecbátana. Rafael informa o companheiro sobre o destino da noite — a casa de Raguel, parente de Tobit."
+  locutor="Rafael a Tobias"
+  original="Hac nocte apud Raguel manebimus, et ipse dabit tibi eam in coniugem."
+>
+  Esta noite vamos hospedar-nos em casa de Raguel. Ele é teu parente e tem uma filha única chamada Sara. Vou pedir que ta dê por mulher.
+</Dialogo>
+
+<Dialogo
+  referencia="Tobias 6,18"
+  cena="Tobias hesita: sabe que Sara já teve sete maridos, todos mortos pelo demônio Asmodeu na noite de núpcias. Rafael o anima."
+  locutor="Rafael a Tobias"
+  original="Noli timere; ista enim tibi ab aeterno praeparata est, et ipsa salvabit te."
+>
+  Não temas. Ela te foi destinada desde a eternidade; és tu quem a salvará. Ela virá contigo, e creio que terás dela filhos que serão para ti como irmãos.
+</Dialogo>
+
+<Dialogo
+  referencia="Tobias 6,16-17"
+  cena="Instrução final antes do casamento — o rito que expulsará Asmodeu do quarto nupcial."
+  locutor="Rafael a Tobias"
+  original="Cum intraveris cubiculum, sume de incensio parum, et pone super carbones, et fumus eius extricat daemonium."
+>
+  Quando entrares no quarto nupcial, toma o fígado e o coração do peixe e coloca-os sobre os braseiros do incenso. O odor se espalhará, o demônio sentirá e fugirá, e nunca mais aparecerá junto a ela.
+</Dialogo>
+
+<Dialogo
+  referencia="Tobias 9,2"
+  cena="Durante os quatorze dias de festa nupcial em Ecbátana, Rafael se aparta para resgatar o dinheiro que Tobit havia deixado com Gabael, em Ragés da Média."
+  locutor="Rafael (disfarçado como Azarias)"
+  original="Ego vado ad Gabelum in Rages Mediae, et adducam ei chirographum eius."
+>
+  Eu irei a Gabael em Rages da Média e levarei o dinheiro; depois voltarei para a festa do casamento.
+</Dialogo>
+
+<Dialogo
+  referencia="Tobias 11,8"
+  cena="A caravana chega de volta a Nínive. Tobit, cego, corre ao encontro do filho. Rafael dá a última instrução — o remédio que curará os olhos do velho."
+  locutor="Rafael a Tobias"
+  original="Fel piscis habe paratum; unge inde oculos patris tui, et sanabuntur."
+>
+  Põe a bile nos olhos de teu pai; a medicina picará e ele esfregará os olhos, e as cataratas cairão, como películas, e teu pai recuperará a visão.
+</Dialogo>
+
+</SubsecaoRafael>
+
+<SubsecaoRafael titulo="A revelação da identidade">
+
+<Dialogo
+  referencia="Tobias 12,11"
+  cena="Depois de curado, Tobit chama o filho para lhe oferecer metade dos bens ao companheiro de viagem. Rafael toma os dois em particular e começa o discurso solene que mudará tudo."
+  locutor="Rafael"
+  original="Ego revelabo vobis veritatem, et non abscondam a vobis verbum occultum."
+>
+  Vou revelar-vos toda a verdade, sem nada vos ocultar.
+</Dialogo>
+
+<Dialogo
+  referencia="Tobias 12,12"
+  cena="Rafael começa a explicar o que realmente fez — não apenas acompanhou Tobias, mas apresentou as orações da família diante do trono divino."
+  locutor="Rafael"
+  original="Quando orabas cum lacrymis, et sepeliebas mortuos... ego obtuli orationem tuam Domino."
+>
+  Quando orastes tu e Sara, eu apresentei as vossas orações diante da majestade do Senhor.
+</Dialogo>
+
+<Dialogo
+  referencia="Tobias 12,14"
+  cena="A declaração da missão dupla que Deus lhe confiara."
+  locutor="Rafael"
+  original="Missus sum a Domino, ut sanarem te et Saram nurum tuam a daemonio liberarem."
+>
+  Fui enviado para te curar e para libertar Sara, tua nora, do demônio.
+</Dialogo>
+
+<Dialogo
+  referencia="Tobias 12,15"
+  cena="A frase mais citada de toda a tradição rafaelina — a única identificação nominal completa de Rafael em toda a Escritura canônica."
+  locutor="Rafael"
+  original="Ego sum Raphael angelus, unus ex septem, qui astamus ante Dominum."
+>
+  Eu sou Rafael, o anjo, um dos sete que assistimos diante do Senhor.
+</Dialogo>
+
+</SubsecaoRafael>
+
+<SubsecaoRafael titulo="O discurso de despedida">
+
+<Dialogo
+  referencia="Tobias 12,6"
+  cena="Abertura solene do discurso final — o mandamento fundamental de louvar a Deus por seus benefícios."
+  locutor="Rafael"
+  original="Benedicite Deum caeli et coram omnibus viventibus confitemini ei."
+>
+  Bendizei a Deus e glorificai-o diante de todos os viventes, pelos benefícios que vos concedeu; é bom bendizer e exaltar o seu nome, anunciando com honra as obras de Deus.
+</Dialogo>
+
+<Dialogo
+  referencia="Tobias 12,7"
+  cena="O princípio hermenêutico sobre revelar as obras de Deus — máxima que os Padres da Igreja citarão frequentemente."
+  locutor="Rafael"
+  original="Sacramentum regis abscondere bonum est: opera autem Dei revelare et confiteri honorificum est."
+>
+  O segredo do rei é bom guardar, mas é honroso anunciar e confessar as obras de Deus.
+</Dialogo>
+
+<Dialogo
+  referencia="Tobias 12,8"
+  cena="A tríade que estruturará toda a espiritualidade rafaelina — oração, jejum, esmola."
+  locutor="Rafael"
+  original="Bona est oratio cum ieiunio et eleemosyna magis quam thesauros auri recondere."
+>
+  A oração com jejum é boa, e a esmola com justiça é melhor do que entesourar ouro.
+</Dialogo>
+
+<Dialogo
+  referencia="Tobias 12,9"
+  cena="Uma das afirmações mais fortes da teologia soteriológica da esmola — citada por Santo Agostinho no Enchiridion."
+  locutor="Rafael"
+  original="Quoniam eleemosyna a morte liberat, et ipsa est quae purgat peccata."
+>
+  A esmola livra da morte e purifica de todo pecado; os que dão esmola e praticam a justiça serão saciados de vida.
+</Dialogo>
+
+<Dialogo
+  referencia="Tobias 12,10"
+  cena="A definição do pecado como autodestruição — inimizade da alma contra si mesma."
+  locutor="Rafael"
+  original="Qui autem faciunt peccatum et iniquitatem, hostes sunt animae suae."
+>
+  Os que pecam e praticam iniquidades são inimigos de si mesmos.
+</Dialogo>
+
+<Dialogo
+  referencia="Tobias 12,17"
+  cena="Depois de revelar sua identidade, Tobit e Tobias caem por terra assustados. Rafael os anima com a fórmula angélica clássica."
+  locutor="Rafael"
+  original="Nolite timere; pax vobis. Deum benedicite et ei confitemini."
+>
+  Não temais; a paz seja convosco. Bendizei a Deus em todo o tempo.
+</Dialogo>
+
+<Dialogo
+  referencia="Tobias 12,18"
+  cena="Rafael atribui tudo a Deus — não a si mesmo. É Deus quem cura, quem envia, quem se manifesta pelo ministério angélico."
+  locutor="Rafael"
+  original="Non enim gratia mea, sed voluntate Dei factum est."
+>
+  Não foi por minha graça que me mostrei a vós, mas pela vontade de Deus; bendizei-o, pois, todos os vossos dias e cantai-lhe hinos.
+</Dialogo>
+
+<Dialogo
+  referencia="Tobias 12,19"
+  cena="Passagem crucial para a doutrina sobre a incorporeidade dos anjos — citada por São João Damasceno na sua definição da natureza angélica."
+  locutor="Rafael"
+  original="Videbamini mihi manducare et bibere, sed ego cibo invisibili et potu, qui ab hominibus videri non potest, utor."
+>
+  Parecíeis que eu comia convosco, mas era uma visão; por isso, bendizei ao Senhor todos os dias e cantai-lhe louvores.
+</Dialogo>
+
+<Dialogo
+  referencia="Tobias 12,20"
+  cena="Última palavra de Rafael antes de ascender. Contém o mandato que resultará na redação do próprio Livro de Tobias."
+  locutor="Rafael"
+  original="Et nunc confitemini Deo, quoniam ascendo ad eum qui me misit: scribite in libro haec quae gesta sunt."
+>
+  Subi; bendizei ao Senhor na terra e agradecei a Deus; pois eu subo àquele que me enviou. Escrevei em um livro tudo o que se passou.
+</Dialogo>
+
+</SubsecaoRafael>
+
+</CapRafael>
+
+{/* ═══════════════════════════════════════════════════════════ */}
+{/* CAPÍTULO II — OS PADRES DA IGREJA SOBRE RAFAEL             */}
+{/* ═══════════════════════════════════════════════════════════ */}
+
+<CapRafael
+  id="padres-igreja"
+  icone="📜"
+  suprat="Séculos III–VIII"
+  titulo="Os Padres da Igreja"
+  contagem="17 testemunhos"
+>
+
+<Testemunho
+  autor="Orígenes de Alexandria"
+  qualificacao="Padre da Igreja · Teólogo alexandrino · c. 185–254"
+  obra="De Principiis, I, 8, 1"
+  fonte="GCS 22, p. 97. Ed. Koetschau, Leipzig, 1913"
+>
+  Cada alma tem um anjo que a guia como pedagogo e pastor; mas há também anjos de missão mais ampla, como Rafael, que foi enviado para curar não apenas um indivíduo, mas para restaurar a ordem perturbada pelo demônio.
+</Testemunho>
+
+<Testemunho
+  autor="Orígenes de Alexandria"
+  qualificacao="Padre da Igreja · c. 185–254"
+  obra="Homiliae in Numeros, Hom. 11, 4"
+  fonte="GCS 30, p. 81. Ed. Baehrens, Leipzig, 1921"
+>
+  Rafael significa "medicina de Deus" ou "Deus curou"; e com razão, pois foi enviado para curar Tobit de sua cegueira e para libertar Sara do demônio Asmodeu.
+</Testemunho>
+
+<Testemunho
+  autor="Orígenes de Alexandria"
+  qualificacao="Padre da Igreja · c. 185–254"
+  obra="Fragmentos das Homiliae in Tobiam"
+  fonte="PG 12, col. 993. Preservados nas catenae gregas"
+>
+  Assim como o Espírito Santo acompanha a alma em sua jornada para Deus, Rafael acompanhou Tobias em sua jornada à Média: os dois são figuras da mesma realidade espiritual, que é a condução divina da alma através dos mistérios.
+</Testemunho>
+
+<Testemunho
+  autor="Santo Ambrósio de Milão"
+  qualificacao="Bispo de Milão · Doutor da Igreja · c. 340–397"
+  obra="De Tobia, I, 1"
+  fonte="PL 14, col. 759. Ed. Schenkl, CSEL 32/2, Viena, 1897"
+>
+  Rafael significa "medicina de Deus". Bem-aventurado este nome, que traz em si a cura! Porque onde está Deus, ali está a saúde; onde está a saúde de Deus, não pode haver doença.
+</Testemunho>
+
+<Testemunho
+  autor="Santo Ambrósio de Milão"
+  qualificacao="Doutor da Igreja · c. 340–397"
+  obra="De Tobia, V, 17"
+  fonte="PL 14, col. 769"
+>
+  Tobit curou-se não por sua própria força, mas pela intervenção de Rafael; e Rafael curou não por sua própria virtude, mas pelo poder de Deus que o enviou. Assim toda cura procede de Deus, mas passa pelos instrumentos que Ele escolhe.
+</Testemunho>
+
+<Testemunho
+  autor="Santo Ambrósio de Milão"
+  qualificacao="Doutor da Igreja · c. 340–397"
+  obra="De Tobia, VIII, 28"
+  fonte="PL 14, col. 776"
+>
+  O peixe que Rafael mandou Tobias capturar é figura do Senhor Jesus Cristo: dentro do peixe está o remédio; dentro de Cristo está a salvação. Quem captura o peixe pelo fio da fé possui o remédio para todos os males.
+</Testemunho>
+
+<Testemunho
+  autor="Santo Ambrósio de Milão"
+  qualificacao="Doutor da Igreja · c. 340–397"
+  obra="De Tobia, XII, 42"
+  fonte="PL 14, col. 783"
+>
+  Rafael não revelou sua identidade antes de completar a missão; assim, os instrumentos da providência divina permanecem ocultos até que a obra esteja cumprida, para que não seja a nossa admiração pelo instrumento, mas a nossa gratidão a Deus, que ocupe o primeiro lugar.
+</Testemunho>
+
+<Testemunho
+  autor="São Jerônimo"
+  qualificacao="Padre da Igreja · Tradutor da Vulgata · c. 347–420"
+  obra="Liber Interpretationis Hebraicorum Nominum"
+  fonte="CCL 72, p. 138. Ed. de Lagarde, revisão Antin, Turnhout, 1959"
+  original="Raphael interpretatur medicina Dei sive medela Domini."
+>
+  Rafael interpreta-se como medicina de Deus, ou remédio de Deus; pois curou Tobias de sua cegueira e sua nora Sara do demônio, e isso é o que o nome significa em hebraico.
+</Testemunho>
+
+<Testemunho
+  autor="São Jerônimo"
+  qualificacao="Tradutor da Vulgata · c. 347–420"
+  obra="Prologus in Librum Tobiae"
+  fonte="PL 29, col. 23. O célebre relato da tradução do Livro de Tobias em um único dia"
+  original="Exigis, Chromati et Heliodore episcopi, ut librum Chaldaeo sermone conscriptum ad Latinum stilum traham... diem namque unum arripui."
+>
+  Exigis, bispos Cromácio e Heliodoro, que eu traga para o estilo latino um livro escrito em língua caldaica... pois tomei um único dia, e o que quer que o intérprete caldaico me explicou, isso eu expressei em língua latina.
+</Testemunho>
+
+<Testemunho
+  autor="São Jerônimo"
+  qualificacao="Padre da Igreja · c. 347–420"
+  obra="Commentarii in Danielem, X, 13"
+  fonte="CCL 75A, p. 881. Ed. Glorie, Turnhout, 1964"
+>
+  Os anjos que aparecem com nome nas Escrituras — Miguel, Gabriel, Rafael — revelam seu nome porque têm missão a cumprir que requer que sejam conhecidos; os outros anjos não revelam seus nomes porque suas missões são de natureza diferente.
+</Testemunho>
+
+<Testemunho
+  autor="São João Crisóstomo"
+  qualificacao="Patriarca de Constantinopla · Doutor da Igreja · c. 347–407"
+  obra="In Epistulam ad Colossenses, Hom. 12, 5"
+  fonte="PG 62, col. 390. O episódio de Tobias citado como modelo de conduta conjugal cristã"
+>
+  Vede como este jovem Tobias entrou no quarto nupcial: não como um animal irracional dominado pela paixão, mas como um homem racional e temente a Deus; antes de tudo, orou. Que façamos também nós assim em todas as nossas obras.
+</Testemunho>
+
+<Testemunho
+  autor="São João Crisóstomo"
+  qualificacao="Doutor da Igreja · c. 347–407"
+  obra="De Providentia Dei, VI"
+  fonte="PG 64, col. 553"
+>
+  Se Deus enviou Rafael — um dos arcanjos que assistem diante do seu trono — para acompanhar o jovem Tobias numa simples jornada comercial, quanto mais não enviará Ele seus anjos para nos guardar nas jornadas da alma?
+</Testemunho>
+
+<Testemunho
+  autor="São João Crisóstomo"
+  qualificacao="Doutor da Igreja · c. 347–407"
+  obra="De Providentia Dei, III"
+  fonte="PG 64, col. 516"
+>
+  Sara não sofria por seus pecados, mas para que a glória de Deus se manifestasse através de Rafael. Assim, nem todo sofrimento é castigo; às vezes é o campo onde Deus prepara sua intervenção mais gloriosa.
+</Testemunho>
+
+<Testemunho
+  autor="Santo Agostinho"
+  qualificacao="Bispo de Hipona · Doutor da Igreja · 354–430"
+  obra="De Civitate Dei, X, 26"
+  fonte="CCL 47, p. 304. Ed. Dombart-Kalb, Turnhout, 1955"
+>
+  Os anjos são os executores da providência divina; não agem por si mesmos, mas são enviados. Rafael não foi a Nínive por sua própria iniciativa: foi enviado. E ao partir, não foi em seu próprio nome: foi em nome de Deus.
+</Testemunho>
+
+<Testemunho
+  autor="Santo Agostinho"
+  qualificacao="Doutor da Igreja · 354–430"
+  obra="Enchiridion, 72"
+  fonte="CCL 46, p. 88. Ed. Evans, Turnhout, 1969. Comentando Tobias 12,9"
+>
+  A esmola livra da morte, diz o livro de Tobias pela boca do anjo Rafael. Não da morte temporal, à qual todos estamos sujeitos, mas da morte segunda, da qual somente a graça de Deus pode nos libertar — e a esmola é um dos canais desta graça.
+</Testemunho>
+
+<Testemunho
+  autor="Santo Agostinho"
+  qualificacao="Doutor da Igreja · 354–430"
+  obra="De Cura pro Mortuis Gerenda, XVI, 20"
+  fonte="CSEL 41, p. 658. Ed. Zycha, Viena, 1900. Comentando Tobias 12,12"
+>
+  Que os anjos nos vejam quando rezamos, saibam Deus tudo quanto pedimos, e apresentem a Ele nossas súplicas — isto nos ensina o exemplo de Rafael, que disse: "Quando oravas, eu apresentava tua oração diante do Senhor."
+</Testemunho>
+
+<Testemunho
+  autor="São Gregório Magno"
+  qualificacao="Papa · Doutor da Igreja · c. 540–604"
+  obra="In Evangelia, Homilia 34, 9"
+  fonte="PL 76, col. 1254. CCL 141, ed. Étaix, Turnhout, 1999. A formulação patrística mais citada sobre Rafael"
+>
+  Rafael, que se traduz como medicina de Deus ou saúde de Deus, curou Tobias; com este ato cumpriu o significado do seu nome. Afirma-se que Rafael é um dos sete anjos que assistem diante de Deus, conforme o próprio Rafael declarou.
+</Testemunho>
+
+<Testemunho
+  autor="São João Damasceno"
+  qualificacao="Monge · Doutor da Igreja · c. 675–749"
+  obra="De Fide Orthodoxa, II, 3"
+  fonte="PG 94, col. 868. Ed. Kotter, PTS 12, Berlim, 1973"
+>
+  Os anjos são naturezas intelectuais, sempre em movimento, dotadas de livre-arbítrio, incorpóreas, servidoras de Deus, tendo recebido por graça e não por natureza a imortalidade. São Rafael foi enviado para curar dois enfermos: Tobit dos olhos e Sara do demônio. O nome exprime a missão: medicina de Deus.
+</Testemunho>
+
+</CapRafael>
+
+{/* ═══════════════════════════════════════════════════════════ */}
+{/* CAPÍTULO III — OS DOUTORES MEDIEVAIS                       */}
+{/* ═══════════════════════════════════════════════════════════ */}
+
+<CapRafael
+  id="doutores-medievais"
+  icone="🕮"
+  suprat="Séculos XII–XIII"
+  titulo="Os Doutores Medievais"
+  contagem="5 testemunhos"
+>
+
+<Testemunho
+  autor="São Bernardo de Claraval"
+  qualificacao="Abade de Claraval · Doutor Melífluo · 1090–1153"
+  obra="Sermo 12 in Psalmum Qui Habitat"
+  fonte="PL 183, col. 229. Opera Omnia, vol. IV, ed. Leclercq-Rochais, Roma, 1966"
+>
+  Quanta reverência devemos aos anjos, que não se envergonharam de se dedicar tão grandemente à nossa honra e utilidade! Eles olham para a face do Pai; e ainda assim nos olham a nós. Assim foi Rafael com Tobias: olhava para o alto, mas caminhava com o homem.
+</Testemunho>
+
+<Testemunho
+  autor="São Bernardo de Claraval"
+  qualificacao="Doutor da Igreja · 1090–1153"
+  obra="Sermo de Angelis"
+  fonte="PL 183, col. 441. Opera Omnia, vol. VI/1, ed. Leclercq-Rochais, Roma, 1970"
+>
+  O anjo que acompanha tua alma na viagem desta vida não é menos real do que Rafael que acompanhou Tobias. A diferença é que Rafael se revelou no fim da jornada; o teu anjo só se revelará no fim da vida.
+</Testemunho>
+
+<Testemunho
+  autor="São Tomás de Aquino"
+  qualificacao="Doutor Angélico · Príncipe dos Escolásticos · 1225–1274"
+  obra="Summa Theologiae, I, q. 51, a. 2, ad 3"
+  fonte="Ed. Leonina, vol. V, Roma, 1889, p. 11"
+>
+  Sobre se os anjos assumem corpos verdadeiros: deve-se dizer que os anjos não têm corpos unidos a eles por natureza. Quando Tobias 12,19 diz "parecíeis ver-me comer e beber, mas era uma visão", o anjo indica que o corpo que assumiu não era um corpo real, mas um corpo aparente formado do ar condensado.
+</Testemunho>
+
+<Testemunho
+  autor="São Tomás de Aquino"
+  qualificacao="Doutor Angélico · 1225–1274"
+  obra="Summa Theologiae, I, q. 57, a. 4"
+  fonte="Ed. Leonina, vol. V, Roma, 1889, p. 66"
+>
+  Os anjos conhecem os pensamentos e afetos dos homens, não por si mesmos, mas na medida em que Deus lhes revela. Por isso Rafael conhecia as orações de Tobit e de Sara — porque Deus lhe havia revelado e enviou-o precisamente em resposta a estas orações.
+</Testemunho>
+
+<Testemunho
+  autor="São Tomás de Aquino"
+  qualificacao="Doutor Angélico · 1225–1274"
+  obra="Summa Theologiae, I, q. 113, a. 4"
+  fonte="Ed. Leonina, vol. V, Roma, 1889, p. 509. Citando Tobias 12,12"
+>
+  Os anjos bons apresentam as orações dos homens a Deus, não como se Deus não as conhecesse sem eles, mas para que as tornem eficazes pela sua intercessão, segundo o que Rafael disse a Tobit: "Quando oravas, eu apresentava tua oração diante do Senhor."
+</Testemunho>
+
+<Testemunho
+  autor="São Tomás de Aquino"
+  qualificacao="Doutor Angélico · 1225–1274"
+  obra="Summa Theologiae, I, q. 112, a. 3, ad 3"
+  fonte="Ed. Leonina, vol. V, Roma, 1889, p. 499. Comentando Tobias 12,14-15"
+>
+  Diz-se que Rafael foi enviado para curar a Tobit e para libertar Sara do demônio. Isto mostra que os arcanjos são enviados para missões de importância especial, enquanto os anjos simples são enviados para os fiéis individualmente como anjos da guarda.
+</Testemunho>
+
+</CapRafael>
+
+{/* ═══════════════════════════════════════════════════════════ */}
+{/* CAPÍTULO IV — SANTOS, MÍSTICOS E PAPAS MODERNOS            */}
+{/* ═══════════════════════════════════════════════════════════ */}
+
+<CapRafael
+  id="santos-modernos"
+  icone="✨"
+  suprat="Séculos XVII–XXI"
+  titulo="Santos, Místicos e Papas Modernos"
+  contagem="5 testemunhos"
+>
+
+<Testemunho
+  autor="São Francisco de Sales"
+  qualificacao="Bispo de Genebra · Doutor da Igreja · 1567–1622"
+  obra="Correspondência espiritual (contexto: cartas de direção)"
+  fonte="Œuvres de Saint François de Sales, vol. XIII, ed. Annecy, 1904"
+>
+  Francisco de Sales recomendava a seus dirigidos a invocação de São Rafael antes de toda viagem e no cuidado com os enfermos, apresentando o arcanjo como o ministro da providência divina nesses dois domínios — a estrada e a cama de dor. A doutrina se harmoniza plenamente com a *Introdução à Vida Devota* (II, 16), onde recomenda a devoção aos anjos como companheiros discretos da vida cristã cotidiana.
+</Testemunho>
+
+<Testemunho
+  autor="São Francisco de Sales"
+  qualificacao="Doutor da Igreja · 1567–1622"
+  obra="Introduction à la vie dévote, II, 16"
+  fonte="Œuvres, vol. III, ed. Annecy, 1893, p. 104"
+>
+  Entre os anjos, há os que têm missões gerais — como Rafael, que foi enviado a curar uma família inteira — e os que têm missão particular para cada alma, que são os Anjos da Guarda. Devemos honrar ambos, mas de formas diferentes: Rafael, por sua missão registrada nas Escrituras; o Anjo da Guarda, pela presença silenciosa ao nosso lado.
+</Testemunho>
+
+<Testemunho
+  autor="Venerável Maria de Ágreda"
+  qualificacao="Abadessa concepcionista · Mística · 1602–1665"
+  obra="Mística Ciudad de Dios (Parte I)"
+  fonte="Ed. Madrid, 1670. Revelação privada sem autoridade dogmática — obra retirada do Índex em 1704"
+>
+  Em suas visões, Maria de Ágreda descreve o arcanjo Rafael como um dos anjos que assistiram ao mistério da Encarnação, glorificando a Deus pelo "remédio" que se preparava para a humanidade enferma — leitura consonante com a etimologia rafaelina de *medicina Dei*.
+</Testemunho>
+
+<Testemunho
+  autor="Beata Anna Katharina Emmerick"
+  qualificacao="Religiosa agostiniana · Mística estigmatizada · 1774–1824"
+  obra="Visões relatadas a Clemens Brentano"
+  fonte="Coletâneas editadas por Brentano a partir de 1833. Revelações privadas. Beatificada por João Paulo II em 2004"
+>
+  Nas visões relatadas a Brentano, Emmerick descreve Rafael como uma figura luminosa que protege os viajantes por estradas perigosas, com um manto que se estende sobre eles como uma asa — imagem que ecoa a função protetora do arcanjo no Livro de Tobias.
+</Testemunho>
+
+<Testemunho
+  autor="São João Paulo II"
+  qualificacao="Papa · Sumo Pontífice · 1920–2005"
+  monograma="JP"
+  obra="Ciclo de catequeses sobre os anjos, audiências gerais de julho–agosto de 1986"
+  fonte="Insegnamenti di Giovanni Paolo II, vol. IX/2, 1986. Arquivo da Santa Sé: www.vatican.va"
+>
+  No ciclo de catequeses angelológicas de 1986, João Paulo II apresentou Rafael como sinal de que a cura do corpo é dimensão da cura da alma, e sublinhou que o arcanjo acompanhou Tobias não como espetáculo sobrenatural, mas como companheiro discreto — modelo de como os anjos agem também hoje na vida dos fiéis.
+</Testemunho>
+
+</CapRafael>
+
+{/* ═══════════════════════════════════════════════════════════ */}
+{/* CAPÍTULO V — DOCUMENTOS DA IGREJA                          */}
+{/* ═══════════════════════════════════════════════════════════ */}
+
+<CapRafael
+  id="documentos-igreja"
+  icone="⛨"
+  suprat="Concílios · Catecismo · Magistério"
+  titulo="Documentos da Igreja"
+  contagem="6 documentos"
+>
+
+<TextoOficial
+  documento="Concílio de Trento"
+  referencia="Sessão IV · Decreto De Canonicis Scripturis"
+  data="8 de abril de 1546"
+  brasao="⛨"
+  fontesRodape="Denzinger-Schönmetzer, Enchiridion Symbolorum, n. 1504. Confirmado pelo Concílio Vaticano I, Dei Filius, cap. 2 (DS 3006)"
+>
+  Se alguém não receber como sagrados e canônicos estes livros integrais, com todas as suas partes, como costumam ser lidos na Igreja Católica e como se encontram na antiga edição latina da Vulgata... seja anátema. A lista inclui explicitamente o Livro de Tobias.
+</TextoOficial>
+
+<TextoOficial
+  documento="Concílio de Aachen (Aix-la-Chapelle)"
+  referencia="Capitular de 789 · Cânon 16"
+  autoridade="Regulamentação carolíngia do culto angélico"
+  brasao="⛨"
+  fontesRodape="MGH Capitularia, vol. I, ed. Boretius, Hannover, 1883, p. 64"
+>
+  Que não se presuma dar nome próprio a qualquer anjo além daqueles três que são Miguel, Gabriel e Rafael.
+</TextoOficial>
+
+<TextoOficial
+  documento="Catecismo da Igreja Católica"
+  referencia="§ 328"
+  autoridade="Promulgado por São João Paulo II"
+  data="1992"
+  brasao="✠"
+  fontesRodape="Libreria Editrice Vaticana · Constituição Apostólica Fidei Depositum, 11 de outubro de 1992"
+>
+  A existência dos seres espirituais, não-corporais, que a Sagrada Escritura chama habitualmente anjos, é uma verdade de fé. O testemunho da Escritura é tão nítido quanto o ensinamento unânime da Tradição.
+</TextoOficial>
+
+<TextoOficial
+  documento="Catecismo da Igreja Católica"
+  referencia="§ 330"
+  autoridade="Magistério ordinário"
+  data="1992"
+  brasao="✠"
+  fontesRodape="Libreria Editrice Vaticana, 1992"
+>
+  Os anjos são seres pessoais e imortais que superam em perfeição todas as criaturas visíveis. O esplendor da sua glória testemunha a grandeza de Deus.
+</TextoOficial>
+
+<TextoOficial
+  documento="Catecismo da Igreja Católica"
+  referencia="§ 332"
+  autoridade="Magistério ordinário"
+  data="1992"
+  brasao="✠"
+  fontesRodape="Libreria Editrice Vaticana. Referência explícita a Dn 10,10-13; Lc 1,26; Tb 3,17"
+>
+  Os anjos têm estado presentes ao longo da história da salvação, anunciando a salvação ao longe e de perto e servindo ao cumprimento do desígnio divino. São Miguel, São Gabriel e São Rafael são os únicos anjos que a Igreja venera com culto próprio, porque são os únicos nomeados na Sagrada Escritura.
+</TextoOficial>
+
+<TextoOficial
+  documento="Diretório sobre Piedade Popular e Liturgia"
+  referencia="§ 213"
+  autoridade="Congregação para o Culto Divino e a Disciplina dos Sacramentos"
+  data="2001"
+  brasao="⛨"
+  fontesRodape="Aprovado por São João Paulo II"
+>
+  A devoção aos anjos, e em particular aos arcanjos Miguel, Gabriel e Rafael, faz parte integrante da piedade cristã. Ela deve, porém, estar sempre orientada para Deus, cujos ministros são os anjos, e não para os próprios anjos como se fossem fins em si mesmos.
+</TextoOficial>
+
+</CapRafael>
+
+{/* ═══════════════════════════════════════════════════════════ */}
+{/* CAPÍTULO VI — LITURGIA (3 CARTÕES-ASSINATURA)              */}
+{/* ═══════════════════════════════════════════════════════════ */}
+
+<CapRafael
+  id="liturgia"
+  icone="🕯️"
+  suprat="Missal · Ofício"
+  titulo="Liturgia"
+  contagem="3 cartões-assinatura"
+>
+
+<TextoOficial
+  documento="Oração Coleta da Missa de São Rafael"
+  referencia="24 de outubro · Forma Extraordinária"
+  autoridade="Missale Romanum"
+  data="Editio de 1962"
+  brasao="🕯️"
+  fontesRodape="Texto estabelecido na edição de 1570 e conservado até 1969. A única Coleta do Missal Romano que nomeia Tobias explicitamente"
+>
+  Ó Deus, que destes ao vosso servo Tobias o bem-aventurado Arcanjo Rafael como companheiro de jornada: concedei a nós, vossos servos, que sejamos sempre protegidos pela sua proteção e ajudados pelas suas súplicas.
+</TextoOficial>
+
+<TextoOficial
+  documento="Prefácio dos Anjos"
+  referencia="Missale Romanum · Praefatio de Angelis"
+  autoridade="Missal Romano"
+  data="Editio Typica Tertia, 2002"
+  brasao="🕯️"
+  fontesRodape="Versão portuguesa aprovada pela CNBB. Prefácio próprio das festas angélicas — inclui os fiéis no cântico dos coros celestes"
+>
+  Na verdade é justo e necessário, é nosso dever e fonte de salvação dar-vos graças em todo o tempo e lugar, Senhor, Pai santo, Deus todo-poderoso e eterno: por Cristo, Senhor nosso. A quem louvam os Anjos, adoram as Dominações, tremem as Potestades. Os Céus, as Virtudes dos céus e os bem-aventurados Serafins o celebram juntos com alegria.
+</TextoOficial>
+
+<TextoOficial
+  documento="Antífona do Benedictus"
+  referencia="Ofício de 29 de setembro · Laudes"
+  autoridade="Liturgia Horarum"
+  data="Editio Typica Altera, 1985"
+  brasao="🕯️"
+  fontesRodape="Typis Polyglottis Vaticanis, vol. IV. Cita diretamente Tobias 12,15 na oração matutina da festa dos Arcanjos"
+>
+  Anjo de Deus, que estás sempre pronto a receber as nossas orações, apresenta-as ao Senhor; pois no-lo revelou o arcanjo Rafael: "Eu sou Rafael, um dos sete anjos que estamos de pé diante do Senhor."
+</TextoOficial>
+
+</CapRafael>
+
+</BibliotecaRafael>

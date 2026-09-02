@@ -1,0 +1,291 @@
+/* C:\Users\kitten\Documents\lux-fidei\app\santos\_styles\especificos\doutores\santa-teresinha-do-menino-jesus\iconografia\GaleriaArte.module.css */
+
+.section {
+  padding: 6rem 0;
+  background: #0f0d0a;
+  color: #fff;
+}
+
+.sectionHeader {
+  text-align: center;
+  padding: 0 2rem;
+  margin-bottom: 4rem;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.headerVisible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.sectionNumber {
+  display: inline-block;
+  font-family: var(--font-heading, 'Georgia', serif);
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.3em;
+  color: #c4956a;
+  border: 1px solid rgba(196, 149, 106, 0.3);
+  padding: 0.35rem 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.sectionTitle {
+  font-family: var(--font-heading, 'Georgia', serif);
+  font-size: clamp(1.75rem, 3.5vw, 2.5rem);
+  font-weight: 700;
+  color: #fff;
+  margin: 0 0 1.25rem;
+  line-height: 1.2;
+}
+
+.sectionDivider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 1.25rem;
+}
+
+.dividerLine {
+  display: block;
+  width: 40px;
+  height: 1px;
+  background: rgba(196, 149, 106, 0.3);
+}
+
+.dividerIcon {
+  font-size: 1.1rem;
+  opacity: 0.7;
+}
+
+.sectionSubtitle {
+  font-family: var(--font-body, 'Georgia', serif);
+  font-size: clamp(0.9rem, 1.1vw, 1rem);
+  line-height: 1.8;
+  color: rgba(255, 255, 255, 0.45);
+  max-width: 550px;
+  margin: 0 auto;
+}
+
+/* Masonry */
+.masonryGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: 200px;
+  gap: 1rem;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.masonryItem {
+  position: relative;
+  border-radius: 4px;
+  overflow: hidden;
+  cursor: pointer;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.masonryItemVisible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.masonryTall {
+  grid-row: span 2;
+}
+
+.masonrySquare {
+  grid-row: span 2;
+}
+
+.masonryDestaque {
+  grid-row: span 2;
+}
+
+.masonryImageWrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.masonryImage {
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+.masonryItem:hover .masonryImage {
+  transform: scale(1.08);
+}
+
+.masonryOverlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.1) 50%, transparent 100%);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 1.5rem;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.masonryItem:hover .masonryOverlay {
+  opacity: 1;
+}
+
+.masonryOverlayContent {
+  transform: translateY(10px);
+  transition: transform 0.3s ease;
+}
+
+.masonryItem:hover .masonryOverlayContent {
+  transform: translateY(0);
+}
+
+.masonryTipo {
+  font-size: 0.6rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #c4956a;
+  font-weight: 600;
+}
+
+.masonryTitulo {
+  font-family: var(--font-heading, 'Georgia', serif);
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: white;
+  margin: 0.25rem 0 0.15rem;
+  line-height: 1.3;
+}
+
+.masonryPeriodo {
+  font-size: 0.75rem;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.masonryExpand {
+  display: inline-block;
+  font-size: 0.7rem;
+  color: #c4956a;
+  letter-spacing: 0.1em;
+  margin-top: 0.75rem;
+  font-weight: 600;
+}
+
+/* Modal */
+.modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.96);
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: fadeIn 0.3s ease;
+}
+
+.modalContent {
+  position: relative;
+  width: 90vw;
+  max-width: 900px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.modalClose {
+  position: absolute;
+  top: -2rem;
+  right: 0;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.5rem;
+  cursor: pointer;
+  opacity: 0.7;
+  transition: opacity 0.2s;
+  z-index: 10;
+}
+
+.modalClose:hover {
+  opacity: 1;
+}
+
+.modalImageWrapper {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 3/4;
+  max-height: 70vh;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.modalImage {
+  object-fit: contain;
+}
+
+.modalInfo {
+  text-align: center;
+  margin-top: 1.5rem;
+}
+
+.modalTipo {
+  font-size: 0.6rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #c4956a;
+  font-weight: 600;
+}
+
+.modalTitulo {
+  font-family: var(--font-heading, 'Georgia', serif);
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: white;
+  margin: 0.35rem 0 0.5rem;
+}
+
+.modalMeta {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.modalMetaDivider {
+  color: rgba(255, 255, 255, 0.2);
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@media (max-width: 768px) {
+  .masonryGrid {
+    grid-template-columns: 1fr 1fr;
+    grid-auto-rows: 180px;
+    gap: 0.75rem;
+    padding: 0 1rem;
+  }
+
+  .masonryDestaque {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (max-width: 480px) {
+  .masonryGrid {
+    grid-template-columns: 1fr;
+    grid-auto-rows: 250px;
+  }
+}

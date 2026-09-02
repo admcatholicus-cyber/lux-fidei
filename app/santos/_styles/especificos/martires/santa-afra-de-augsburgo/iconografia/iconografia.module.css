@@ -1,0 +1,537 @@
+/* ═══════════════════════════════════════════════════════════════
+   ICONOGRAFIA — SANTA AFRA DE AUGSBURGO
+   18 obras reais documentadas
+   ═══════════════════════════════════════════════════════════════ */
+
+.secao, .grid, .peca, .prosa, .atributosGrid, .nota, .card {
+  --ic-dourado:        #b08a3c;
+  --ic-dourado-claro:  #d4b872;
+  --ic-dourado-palido: #f0e8d2;
+  --ic-texto:          #3a3530;
+  --ic-texto-leve:     #6f6758;
+  --ic-borda:          #e2dcd0;
+  --ic-borda-leve:     #ece8df;
+  --ic-fundo:          #faf8f4;
+  --ic-fundo-card:     #ffffff;
+  --ic-serif:          'Libre Baskerville', Georgia, 'Times New Roman', serif;
+  --ic-sans:           'Inter', system-ui, sans-serif;
+  --ic-radius:         6px;
+  --ic-sombra:         0 2px 12px rgba(0,0,0,.05), 0 1px 3px rgba(0,0,0,.03);
+  --ic-sombra-forte:   0 8px 32px rgba(0,0,0,.10), 0 2px 8px rgba(0,0,0,.05);
+  --ic-transicao:      .3s cubic-bezier(.4,0,.2,1);
+}
+
+/* ═══════ SEÇÃO ═══════ */
+
+.secao {
+  max-width: 1220px;
+  margin: 0 auto 72px;
+}
+
+.secaoCabecalho {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  margin-bottom: 32px;
+  padding-bottom: 18px;
+  border-bottom: 1px solid var(--ic-borda);
+}
+
+.secaoNumero {
+  font-family: var(--ic-serif);
+  font-size: .82rem;
+  color: var(--ic-dourado);
+  letter-spacing: .18em;
+  flex-shrink: 0;
+}
+
+.secaoFio {
+  width: 36px;
+  height: 1px;
+  background: var(--ic-dourado-palido);
+  flex-shrink: 0;
+}
+
+.secaoTitulo {
+  font-family: var(--ic-serif);
+  font-size: clamp(1.1rem, 2.2vw, 1.5rem);
+  font-weight: 400;
+  color: var(--ic-texto);
+  margin: 0;
+  line-height: 1.3;
+}
+
+.secaoSubtitulo {
+  font-family: var(--ic-sans);
+  font-size: .78rem;
+  color: var(--ic-texto-leve);
+  margin: 5px 0 0;
+  letter-spacing: .04em;
+}
+
+.secaoCorpo {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+/* ═══════ PROSA ═══════ */
+
+.prosa {
+  max-width: 870px;
+  font-family: var(--ic-serif);
+  font-size: 1rem;
+  color: var(--ic-texto);
+  line-height: 1.9;
+  text-align: justify;
+}
+
+.prosa p            { margin: 0 0 18px; }
+.prosa p:last-child { margin-bottom: 0; }
+
+/* ═══════ GRID ═══════ */
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+}
+
+.card {
+  background: var(--ic-fundo-card);
+  border: 1px solid var(--ic-borda-leve);
+  border-radius: var(--ic-radius);
+  overflow: hidden;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  transition: transform var(--ic-transicao), box-shadow var(--ic-transicao);
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--ic-sombra-forte);
+}
+
+.card:focus-visible {
+  outline: 2px solid var(--ic-dourado);
+  outline-offset: 2px;
+}
+
+.card_hero  { grid-column: 1 / -1; }
+.card_largo { grid-column: span 2; }
+.card_alto  { grid-row: span 2;   }
+
+.cardImagemWrapper {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.card_retrato  .cardImagemWrapper { aspect-ratio: 3 / 4;  }
+.card_paisagem .cardImagemWrapper { aspect-ratio: 4 / 3;  }
+.card_quadrado .cardImagemWrapper { aspect-ratio: 1 / 1;  }
+.card_hero     .cardImagemWrapper { aspect-ratio: 21 / 9; }
+.card_largo    .cardImagemWrapper { aspect-ratio: 16 / 9; }
+.card_alto     .cardImagemWrapper { aspect-ratio: 2 / 3;  }
+
+.cardImagem {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform var(--ic-transicao);
+}
+
+.card:hover .cardImagem { transform: scale(1.045); }
+
+.cardOverlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(20,17,12,.55) 0%, transparent 50%);
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  padding: 14px 16px;
+  opacity: 0;
+  transition: opacity var(--ic-transicao);
+}
+
+.card:hover .cardOverlay { opacity: 1; }
+
+.cardLupa {
+  font-size: 1.4rem;
+  color: rgba(255,255,255,.85);
+  transform: translateY(6px);
+  transition: transform var(--ic-transicao);
+}
+
+.card:hover .cardLupa { transform: translateY(0); }
+
+.cardCorpo {
+  padding: 14px 16px 18px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.cardTitulo {
+  font-family: var(--ic-serif);
+  font-size: .88rem;
+  font-weight: 400;
+  color: var(--ic-texto);
+  margin: 0;
+  line-height: 1.4;
+}
+
+.cardAutor {
+  font-family: var(--ic-sans);
+  font-size: .75rem;
+  color: var(--ic-dourado);
+  margin: 0;
+}
+
+.cardData {
+  font-family: var(--ic-sans);
+  font-size: .70rem;
+  color: var(--ic-texto-leve);
+  margin: 0;
+}
+
+.cardLocal {
+  font-family: var(--ic-sans);
+  font-size: .68rem;
+  color: var(--ic-texto-leve);
+  margin: 0;
+  font-style: italic;
+}
+
+/* ═══════ PEÇA EM DESTAQUE ═══════ */
+
+.peca {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  align-items: start;
+}
+
+.pecaInvertida       { direction: rtl; }
+.pecaInvertida > *   { direction: ltr; }
+
+.pecaImagemLado {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.pecaMoldura {
+  position: relative;
+  border-radius: var(--ic-radius);
+  overflow: hidden;
+  box-shadow: var(--ic-sombra-forte);
+}
+
+.pecaMoldura::after {
+  content: '';
+  position: absolute;
+  inset: 8px;
+  border: 1px solid rgba(212,184,114,.18);
+  border-radius: 3px;
+  pointer-events: none;
+}
+
+.pecaImagem { width: 100%; height: auto; display: block; }
+
+.pecaCredito {
+  font-family: var(--ic-sans);
+  font-size: .65rem;
+  color: var(--ic-texto-leve);
+  letter-spacing: .06em;
+  margin: 0;
+  text-align: center;
+}
+
+.pecaTextoLado {
+  padding: 8px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.pecaFio {
+  display: block;
+  width: 44px;
+  height: 2px;
+  background: var(--ic-dourado-claro);
+  border-radius: 1px;
+}
+
+.pecaTitulo {
+  font-family: var(--ic-serif);
+  font-size: clamp(1.05rem, 2vw, 1.4rem);
+  font-weight: 400;
+  color: var(--ic-texto);
+  margin: 0;
+  line-height: 1.35;
+}
+
+.pecaFicha {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  justify-content: start;
+  gap: 10px 28px;
+}
+
+.pecaFichaItem {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  font-family: var(--ic-sans);
+  font-size: .82rem;
+  color: var(--ic-texto);
+}
+
+.pecaFichaLabel {
+  font-size: .63rem;
+  font-weight: 700;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: var(--ic-dourado);
+}
+
+.pecaDescricao {
+  font-family: var(--ic-serif);
+  font-size: .96rem;
+  color: var(--ic-texto);
+  line-height: 1.85;
+}
+
+.pecaDescricao p            { margin: 0 0 14px; }
+.pecaDescricao p:last-child { margin-bottom: 0; }
+
+/* ═══════ ATRIBUTOS ═══════ */
+
+.atributosGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+  gap: 14px;
+}
+
+.atributo {
+  display: flex;
+  gap: 14px;
+  padding: 18px 20px;
+  background: var(--ic-fundo-card);
+  border: 1px solid var(--ic-borda-leve);
+  border-radius: var(--ic-radius);
+  box-shadow: var(--ic-sombra);
+  align-items: flex-start;
+  transition: box-shadow var(--ic-transicao), transform var(--ic-transicao);
+}
+
+.atributo:hover {
+  box-shadow: 0 5px 18px rgba(0,0,0,.07);
+  transform: translateY(-2px);
+}
+
+.atributoSimbolo {
+  font-size: 1.5rem;
+  flex-shrink: 0;
+  width: 42px;
+  height: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--ic-dourado-palido);
+  border-radius: 50%;
+}
+
+.atributoTexto { display: flex; flex-direction: column; gap: 4px; flex: 1; }
+.atributoNome  { font-family: var(--ic-serif); font-size: .9rem; font-weight: 700; color: var(--ic-texto); }
+.atributoDesc  { font-family: var(--ic-serif); font-size: .83rem; color: var(--ic-texto-leve); line-height: 1.7; }
+
+/* ═══════ NOTA ═══════ */
+
+.nota {
+  display: flex;
+  gap: 12px;
+  padding: 16px 20px;
+  background: var(--ic-fundo);
+  border: 1px solid var(--ic-borda-leve);
+  border-radius: var(--ic-radius);
+  align-items: flex-start;
+  max-width: 870px;
+}
+
+.notaIcone { font-size: 1rem; color: var(--ic-dourado); flex-shrink: 0; margin-top: 2px; }
+
+.notaTexto {
+  font-family: var(--ic-serif);
+  font-size: .87rem;
+  color: var(--ic-texto-leve);
+  line-height: 1.75;
+}
+
+.notaTexto p            { margin: 0 0 6px; }
+.notaTexto p:last-child { margin-bottom: 0; }
+
+/* ═══════ LIGHTBOX ═══════ */
+
+.lbOverlay {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  background: rgba(10,8,5,.93);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 28px;
+  animation: lbFade .22s ease;
+}
+
+@keyframes lbFade { from { opacity: 0; } to { opacity: 1; } }
+
+.lbConteudo {
+  position: relative;
+  max-width: 1100px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 22px;
+}
+
+.lbFechar {
+  position: absolute;
+  top: -18px;
+  right: -10px;
+  background: none;
+  border: none;
+  color: rgba(255,255,255,.45);
+  font-size: 1.4rem;
+  cursor: pointer;
+  padding: 8px;
+  z-index: 10;
+  transition: color .2s;
+}
+
+.lbFechar:hover { color: #fff; }
+
+.lbSeta {
+  position: absolute;
+  top: 40%;
+  transform: translateY(-50%);
+  background: rgba(255,255,255,.06);
+  border: 1px solid rgba(255,255,255,.1);
+  color: rgba(255,255,255,.55);
+  font-size: 1.9rem;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+  transition: all .2s;
+}
+
+.lbSeta:hover {
+  background: rgba(176,138,60,.22);
+  border-color: rgba(176,138,60,.4);
+  color: #fff;
+}
+
+.lbSeta[data-dir="esq"] { left: -66px; }
+.lbSeta[data-dir="dir"] { right: -66px; }
+
+.lbImagemContainer {
+  max-height: 64vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.lbImagem {
+  max-width: 100%;
+  max-height: 64vh;
+  object-fit: contain;
+  border-radius: 4px;
+  box-shadow: 0 6px 48px rgba(0,0,0,.4);
+}
+
+.lbInfo { text-align: center; max-width: 720px; width: 100%; }
+
+.lbContador {
+  display: block;
+  font-family: var(--ic-sans);
+  font-size: .62rem;
+  color: rgba(255,255,255,.3);
+  letter-spacing: .22em;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+
+.lbTitulo {
+  font-family: var(--ic-serif);
+  font-size: 1.08rem;
+  font-weight: 400;
+  color: #fff;
+  margin: 0 0 7px;
+}
+
+.lbDescricao {
+  font-family: var(--ic-serif);
+  font-size: .84rem;
+  color: rgba(255,255,255,.55);
+  line-height: 1.7;
+  margin: 0 0 16px;
+}
+
+.lbMeta {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+
+.lbMetaItem {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  font-family: var(--ic-sans);
+  font-size: .76rem;
+  color: rgba(255,255,255,.48);
+}
+
+.lbMetaLabel {
+  font-size: .6rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .15em;
+  color: var(--ic-dourado-claro);
+}
+
+/* ═══════ RESPONSIVIDADE ═══════ */
+
+@media (max-width: 1000px) {
+  .grid { grid-template-columns: repeat(2, 1fr); gap: 16px; }
+  .card_hero  { grid-column: 1 / -1; }
+  .card_largo { grid-column: 1 / -1; }
+  .card_alto  { grid-row: span 1;   }
+  .peca { grid-template-columns: 1fr; gap: 28px; }
+  .pecaInvertida { direction: ltr; }
+  .lbSeta[data-dir="esq"] { left: 6px; }
+  .lbSeta[data-dir="dir"] { right: 6px; }
+}
+
+@media (max-width: 600px) {
+  .grid { grid-template-columns: 1fr; gap: 14px; }
+  .card_largo, .card_alto, .card_hero { grid-column: span 1; grid-row: span 1; }
+  .secaoCabecalho { flex-direction: column; align-items: flex-start; gap: 6px; }
+  .secaoFio { display: none; }
+  .atributosGrid { grid-template-columns: 1fr; }
+  .pecaFicha { grid-template-columns: 1fr; }
+  .lbSeta { width: 38px; height: 38px; font-size: 1.4rem; }
+}

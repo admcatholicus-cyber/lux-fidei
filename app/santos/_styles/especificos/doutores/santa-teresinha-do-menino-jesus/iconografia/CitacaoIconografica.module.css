@@ -1,0 +1,115 @@
+/* C:\Users\kitten\Documents\lux-fidei\app\santos\_styles\especificos\doutores\santa-teresinha-do-menino-jesus\iconografia\CitacaoIconografica.module.css */
+
+.citacao {
+  padding: 5rem 2rem;
+  background: #f5f2ed;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.citacaoVisible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.final {
+  background: #1a1512;
+}
+
+.citacaoInner {
+  max-width: 700px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.citacaoOrnamento {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.citacaoOrnamento:last-child {
+  margin-bottom: 0;
+  margin-top: 2rem;
+}
+
+.ornamentoLine {
+  display: block;
+  width: 60px;
+  height: 1px;
+  background: rgba(196, 149, 106, 0.3);
+}
+
+.ornamentoCross {
+  color: #c4956a;
+  font-size: 0.8rem;
+  opacity: 0.6;
+}
+
+.citacaoTexto {
+  font-family: var(--font-heading, 'Georgia', serif);
+  font-size: clamp(1.15rem, 2vw, 1.4rem);
+  font-weight: 400;
+  font-style: italic;
+  line-height: 1.9;
+  color: #3d342b;
+  margin: 0 0 1.5rem;
+  position: relative;
+}
+
+.final .citacaoTexto {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.aspasAbrir,
+.aspasFechar {
+  font-family: var(--font-heading, 'Georgia', serif);
+  font-size: 2rem;
+  color: #c4956a;
+  font-style: normal;
+  line-height: 0;
+  position: relative;
+  top: 0.15em;
+  opacity: 0.6;
+}
+
+.aspasAbrir {
+  margin-right: 0.15em;
+}
+
+.aspasFechar {
+  margin-left: 0.15em;
+}
+
+.citacaoAutor {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.autorNome {
+  font-family: var(--font-heading, 'Georgia', serif);
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #1a1512;
+  letter-spacing: 0.05em;
+}
+
+.final .autorNome {
+  color: #c4956a;
+}
+
+.autorFonte {
+  font-size: 0.7rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: #9e9189;
+}
+
+.final .autorFonte {
+  color: rgba(255, 255, 255, 0.3);
+}

@@ -1,0 +1,117 @@
+.ficha {
+  max-width: 840px;
+  margin: 32px auto;
+  background: linear-gradient(180deg, #ffffff 0%, #faf8f4 100%);
+  border: 1px solid #ece8df;
+  border-radius: 6px;
+  padding: 26px 30px;
+  box-shadow: 0 3px 14px rgba(90, 70, 40, 0.06);
+  font-family: Georgia, 'Times New Roman', serif;
+  color: #3a3530;
+  position: relative;
+  overflow: hidden;
+}
+
+.ficha::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #b08a3c 0%, #d4b872 50%, #b08a3c 100%);
+}
+
+.cabecalho {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  padding-bottom: 18px;
+  border-bottom: 1px solid #ece8df;
+  margin-bottom: 20px;
+}
+
+.bandeira {
+  font-size: 2.4rem;
+  line-height: 1;
+  flex-shrink: 0;
+}
+
+.identidade {
+  flex: 1;
+}
+
+.pais {
+  font-family: 'Libre Baskerville', Georgia, serif;
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #2e2a25;
+  letter-spacing: 0.4px;
+}
+
+.regiao {
+  margin-top: 4px;
+  font-size: 0.82rem;
+  color: #8b6f2f;
+  font-style: italic;
+  letter-spacing: 0.6px;
+}
+
+.corpo {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.linha {
+  display: grid;
+  grid-template-columns: 170px 1fr;
+  gap: 20px;
+  align-items: start;
+}
+
+.rotulo {
+  font-family: 'Libre Baskerville', Georgia, serif;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 1.8px;
+  text-transform: uppercase;
+  color: #8b6f2f;
+  padding-top: 3px;
+}
+
+.texto {
+  font-size: 0.94rem;
+  line-height: 1.65;
+  color: #4d463c;
+}
+
+.narrativa {
+  margin-top: 20px;
+  padding-top: 18px;
+  border-top: 1px dashed #d4c9a8;
+  font-size: 0.95rem;
+  line-height: 1.75;
+  color: #3a3530;
+}
+
+.narrativa p {
+  margin: 0 0 12px 0;
+}
+
+.narrativa p:last-child {
+  margin-bottom: 0;
+}
+
+@media (max-width: 640px) {
+  .ficha {
+    padding: 22px;
+  }
+  .linha {
+    grid-template-columns: 1fr;
+    gap: 4px;
+  }
+  .rotulo {
+    padding-top: 0;
+  }
+}

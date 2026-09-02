@@ -1,0 +1,102 @@
+.card {
+  margin: 2rem 0;
+  padding: 1.5rem;
+  border-radius: 0.75rem;
+  border: 1px solid #e7e5e4;
+  background-color: #fafaf9;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+}
+
+.cardAntes {
+  border-color: #e7e5e4;
+  background-color: #fafaf9;
+}
+
+.cardDepois {
+  border-color: #fde68a;
+  background-color: #fffdf5;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+  padding-bottom: 0.75rem;
+  margin-bottom: 1.25rem;
+}
+
+.title {
+  font-family: Georgia, Cambria, 'Times New Roman', Times, serif;
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+.titleAntes {
+  color: #44403c;
+}
+
+.titleDepois {
+  color: #78350f;
+}
+
+.badge {
+  display: inline-block;
+  padding: 0.25rem 0.85rem;
+  border-radius: 9999px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+}
+
+.badgeAntes {
+  background-color: #e7e5e4;
+  color: #57534e;
+}
+
+.badgeDepois {
+  background-color: #fef08a;
+  color: #854d0e;
+}
+
+.list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.75rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+@media (min-width: 640px) {
+  .list {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.item {
+  display: flex;
+  align-items: flex-start;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: #374151;
+}
+
+.dot {
+  display: inline-block;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  margin-right: 0.75rem;
+  margin-top: 0.5rem;
+  flex-shrink: 0;
+}
+
+.dotAntes {
+  background-color: #a8a29e;
+}
+
+.dotDepois {
+  background-color: #d97706;
+}

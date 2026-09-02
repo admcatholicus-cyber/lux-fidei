@@ -1,0 +1,166 @@
+/* ============================================================
+   FOLIO MESTRES — Grade de retratos dos grandes pintores
+   de Tomás (estilo fólio iluminado)
+   ============================================================ */
+
+.folioWrapper {
+  max-width: 1160px;
+  margin: 0 auto 80px;
+  padding: 56px 0 0;
+  border-top: 1px solid #e2dcd0;
+}
+
+.folioCabecalho {
+  text-align: center;
+  margin-bottom: 52px;
+}
+
+.folioLabel {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.65rem;
+  font-weight: 600;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: #b08a3c;
+  display: block;
+  margin-bottom: 12px;
+}
+
+.folioTitulo {
+  font-family: 'Libre Baskerville', Georgia, serif;
+  font-size: clamp(1.5rem, 2.5vw, 2.1rem);
+  font-weight: 700;
+  color: #2a2520;
+  margin: 0;
+  line-height: 1.2;
+}
+
+.folioSubtitulo {
+  font-family: Georgia, serif;
+  font-size: 0.95rem;
+  font-style: italic;
+  color: #6f6758;
+  margin: 12px 0 0;
+  line-height: 1.6;
+}
+
+/* Grade de fólios */
+.folioGrade {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+@media (max-width: 960px) {
+  .folioGrade {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 560px) {
+  .folioGrade {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Card individual do fólio */
+.folioCard {
+  background: #faf8f4;
+  border: 1px solid #e2dcd0;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.folioCard:hover {
+  border-color: #b08a3c;
+  box-shadow: 0 8px 32px rgba(176, 138, 60, 0.12);
+}
+
+.folioImagemWrapper {
+  position: relative;
+  overflow: hidden;
+  background: #0e0c08;
+  aspect-ratio: 3 / 4;
+}
+
+.folioImagemWrapper img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: sepia(15%) contrast(1.04);
+  transition: transform 0.5s ease, filter 0.4s ease;
+}
+
+.folioCard:hover .folioImagemWrapper img {
+  transform: scale(1.05);
+  filter: sepia(5%) contrast(1.02);
+}
+
+/* Moldura dourada (borda interna simulada) */
+.folioMoldura {
+  position: absolute;
+  inset: 8px;
+  border: 1px solid rgba(176, 138, 60, 0.25);
+  pointer-events: none;
+  z-index: 1;
+}
+
+.folioCorpo {
+  padding: 20px 20px 22px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.folioObra {
+  font-family: 'Libre Baskerville', Georgia, serif;
+  font-size: 0.92rem;
+  font-weight: 700;
+  color: #2a2520;
+  margin: 0 0 4px;
+  line-height: 1.25;
+}
+
+.folioArtista {
+  font-family: Georgia, serif;
+  font-size: 0.8rem;
+  font-style: italic;
+  color: #6f6758;
+  margin: 0 0 14px;
+}
+
+.folioDescricao {
+  font-family: Georgia, serif;
+  font-size: 0.82rem;
+  line-height: 1.65;
+  color: #4a4540;
+  margin: 0 0 16px;
+  flex: 1;
+}
+
+.folioRodape {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 14px;
+  border-top: 1px solid #e2dcd0;
+}
+
+.folioData {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.62rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #b08a3c;
+}
+
+.folioLocal {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.62rem;
+  color: #9a9080;
+  text-align: right;
+}

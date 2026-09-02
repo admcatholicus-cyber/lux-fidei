@@ -1,0 +1,281 @@
+/* ============================================================
+   FICHA ATRIBUTO — Análise expandida de um símbolo
+   ============================================================ */
+
+.fichaWrapper {
+  max-width: 1160px;
+  margin: 0 auto 72px;
+  background: #fff;
+  border: 1px solid #e2dcd0;
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+}
+
+.fichaWrapper.invertida {
+  grid-template-columns: 1fr 1.1fr;
+}
+
+/* ---------- COLUNA IMAGEM ---------- */
+.fichaImagem {
+  position: relative;
+  background: #0e0c08;
+  overflow: hidden;
+  min-height: 520px;
+  order: 1;
+}
+
+.fichaWrapper.invertida .fichaImagem {
+  order: 2;
+}
+
+.fichaImagem img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: sepia(10%) contrast(1.04);
+  transition: transform 0.5s ease;
+}
+
+.fichaImagem:hover img {
+  transform: scale(1.03);
+}
+
+/* Etiqueta sobre a imagem */
+.fichaEtiqueta {
+  position: absolute;
+  top: 24px;
+  left: 24px;
+  padding: 10px 16px;
+  background: rgba(14, 12, 8, 0.78);
+  border-left: 2px solid #b08a3c;
+  backdrop-filter: blur(6px);
+  z-index: 2;
+}
+
+.fichaEtiquetaLabel {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.6rem;
+  font-weight: 600;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: #d4b872;
+  display: block;
+  margin-bottom: 3px;
+}
+
+.fichaEtiquetaObra {
+  font-family: Georgia, serif;
+  font-size: 0.78rem;
+  font-style: italic;
+  color: rgba(245, 240, 230, 0.85);
+}
+
+/* Símbolo grande sobre a imagem */
+.fichaSimboloGrande {
+  position: absolute;
+  bottom: 30px;
+  right: 30px;
+  font-size: 3.5rem;
+  color: rgba(212, 184, 114, 0.85);
+  filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.5));
+  z-index: 2;
+  line-height: 1;
+}
+
+/* ---------- COLUNA TEXTO ---------- */
+.fichaTexto {
+  padding: 56px 52px 48px;
+  display: flex;
+  flex-direction: column;
+  order: 2;
+}
+
+.fichaWrapper.invertida .fichaTexto {
+  order: 1;
+  border-right: 1px solid #e2dcd0;
+}
+
+.fichaWrapper:not(.invertida) .fichaTexto {
+  border-left: 1px solid #e2dcd0;
+}
+
+/* Número romano decorativo */
+.fichaOrdinal {
+  font-family: 'Libre Baskerville', Georgia, serif;
+  font-size: 3rem;
+  font-weight: 700;
+  color: #e2dcd0;
+  line-height: 1;
+  margin: 0 0 20px;
+  user-select: none;
+}
+
+.fichaSuprat {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.62rem;
+  font-weight: 600;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  color: #b08a3c;
+  margin: 0 0 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.fichaSuprat::before {
+  content: '';
+  display: inline-block;
+  width: 22px;
+  height: 1px;
+  background: #b08a3c;
+}
+
+.fichaNomeLatim {
+  font-family: Georgia, serif;
+  font-size: 0.95rem;
+  font-style: italic;
+  color: #6f6758;
+  margin: 0 0 4px;
+}
+
+.fichaNome {
+  font-family: 'Libre Baskerville', Georgia, serif;
+  font-size: clamp(1.4rem, 2.2vw, 1.85rem);
+  font-weight: 700;
+  color: #2a2520;
+  margin: 0 0 24px;
+  line-height: 1.2;
+}
+
+/* Divisor ornamental */
+.fichaDivisor {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 0 0 24px;
+}
+
+.fichaDivisor::before,
+.fichaDivisor::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: #e2dcd0;
+}
+
+.fichaDivisorSimbolo {
+  font-size: 0.65rem;
+  color: #b08a3c;
+  letter-spacing: 0.2em;
+}
+
+/* Corpo descritivo */
+.fichaDescricao {
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 0.98rem;
+  line-height: 1.85;
+  color: #3a3530;
+  margin: 0 0 24px;
+  text-align: justify;
+}
+
+/* Boxes secundários */
+.fichaBoxes {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+  margin: 0 0 24px;
+}
+
+@media (max-width: 620px) {
+  .fichaBoxes {
+    grid-template-columns: 1fr;
+  }
+}
+
+.fichaBox {
+  padding: 14px 16px;
+  background: #faf8f4;
+  border-left: 2px solid #b08a3c;
+}
+
+.fichaBoxLabel {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.6rem;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #b08a3c;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.fichaBoxTexto {
+  font-family: Georgia, serif;
+  font-size: 0.82rem;
+  line-height: 1.55;
+  color: #4a4540;
+}
+
+/* Referência bíblica / textual */
+.fichaReferencia {
+  margin-top: auto;
+  padding: 16px 20px;
+  background: #f5f1e8;
+  border: 1px solid #d4c9a8;
+  font-family: Georgia, serif;
+  font-size: 0.85rem;
+  font-style: italic;
+  color: #4a4540;
+  line-height: 1.65;
+  position: relative;
+}
+
+.fichaReferencia::before {
+  content: '"';
+  position: absolute;
+  top: -10px;
+  left: 12px;
+  font-family: 'Libre Baskerville', Georgia, serif;
+  font-size: 2rem;
+  color: #b08a3c;
+  background: #fff;
+  padding: 0 6px;
+  line-height: 1;
+}
+
+.fichaReferenciaFonte {
+  display: block;
+  margin-top: 8px;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.62rem;
+  font-style: normal;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #b08a3c;
+}
+
+/* Responsivo */
+@media (max-width: 860px) {
+  .fichaWrapper,
+  .fichaWrapper.invertida {
+    grid-template-columns: 1fr;
+  }
+  .fichaImagem,
+  .fichaWrapper.invertida .fichaImagem {
+    order: 1;
+    min-height: 320px;
+  }
+  .fichaTexto,
+  .fichaWrapper.invertida .fichaTexto {
+    order: 2;
+    padding: 36px 28px;
+    border-left: none !important;
+    border-right: none !important;
+    border-top: 1px solid #e2dcd0;
+  }
+}

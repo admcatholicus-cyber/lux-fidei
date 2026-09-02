@@ -1,0 +1,86 @@
+/* ============================= */
+/* RESET E BASE (GLOBAL) */
+/* ============================= */
+
+/* Reset universal */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0 !important;
+  padding: 0 !important;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+body {
+  min-height: 100vh;
+}
+
+:root {
+  --cor-primaria: #1a1a2e;
+  --cor-primaria-clara: #16213e;
+  --cor-secundaria: #0f3460;
+  --cor-accent: #c9a84c;
+  --cor-accent-clara: #dfc06f;
+  --cor-accent-escura: #a8872e;
+  --cor-accent-suave: rgba(201, 168, 76, 0.12);
+
+  --cor-texto: #2c2c2c;
+  --cor-texto-claro: #f0e6d3;
+  --cor-texto-suave: #6b6b6b;
+  --cor-texto-sobre-escuro: #d4cfc7;
+
+  --cor-fundo-claro: #faf8f4;
+  --cor-fundo-creme: #f5f0e8;
+  --cor-fundo-escuro: #121220;
+  --cor-fundo-escuro-alt: #1a1a30;
+  --cor-fundo-card-escuro: rgba(255, 255, 255, 0.04);
+  --cor-fundo-card-claro: #ffffff;
+
+  --cor-borda: rgba(201, 168, 76, 0.2);
+  --cor-borda-clara: rgba(201, 168, 76, 0.35);
+  --cor-borda-escura: rgba(201, 168, 76, 0.12);
+
+  --cor-sombra: rgba(0, 0, 0, 0.08);
+  --cor-sombra-forte: rgba(0, 0, 0, 0.15);
+
+  --font-titulo: 'Playfair Display', Georgia, 'Times New Roman', serif;
+  --font-corpo: 'Crimson Text', Georgia, 'Times New Roman', serif;
+  --font-ui: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-classica: 'EB Garamond', 'Crimson Text', Georgia, serif;
+
+  --tamanho-base: 18px;
+  --linha-base: 1.85;
+
+  --espaco-xs: 0.35rem;
+  --espaco-sm: 0.75rem;
+  --espaco-md: 1.5rem;
+  --espaco-lg: 2.5rem;
+  --espaco-xl: 4rem;
+  --espaco-2xl: 6rem;
+  --espaco-3xl: 8rem;
+
+  --largura-max: 1200px;
+  --largura-texto: 820px;
+
+  --transicao: 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  --transicao-lenta: 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+
+  --raio-sm: 4px;
+  --raio-md: 8px;
+  --raio-lg: 12px;
+  --raio-xl: 16px;
+}
+
+/* Scrollbar personalizada global */
+::-webkit-scrollbar { width: 8px; }
+::-webkit-scrollbar-track { background: var(--cor-primaria); }
+::-webkit-scrollbar-thumb { background: var(--cor-accent-escura); border-radius: 4px; }
+::-webkit-scrollbar-thumb:hover { background: var(--cor-accent); }

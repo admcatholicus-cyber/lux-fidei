@@ -1,0 +1,247 @@
+.wrap {
+  --paper: #fbfaf5;
+  --ink: #1c2f4f;
+  --gold: #c9b876;
+  --gold-dark: #a89358;
+  --paper-old: #f5f2e8;
+  --border: #d8d0b8;
+
+  margin: 3.5rem 0;
+  background: var(--paper);
+  border: 1px solid var(--border);
+  border-top: 4px solid var(--ink);
+  border-radius: 2px;
+  padding: 2rem 2.25rem;
+  box-shadow: 0 4px 20px rgba(28, 47, 79, 0.08);
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 2rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px dashed var(--border);
+}
+
+.label {
+  display: inline-block;
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: var(--gold-dark);
+  margin-bottom: 0.5rem;
+}
+
+.titulo {
+  font-family: Georgia, serif;
+  font-size: 1.6rem;
+  color: var(--ink);
+  margin: 0 0 0.4rem;
+  font-weight: 400;
+  letter-spacing: 0.03em;
+}
+
+.sub {
+  font-size: 0.85rem;
+  color: #6a5a3a;
+  margin: 0 auto;
+  font-style: italic;
+  max-width: 640px;
+  line-height: 1.5;
+}
+
+/* Card principal contendo a Imagem, Texto e Miniaturas */
+.destaque {
+  display: grid;
+  grid-template-columns: 380px 1fr;
+  background: var(--paper-old);
+  border: 1px solid var(--border);
+  border-top: 3px solid var(--gold);
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.destaqueImg {
+  grid-column: 1;
+  grid-row: 1;
+  background: var(--ink);
+  padding: 1.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 480px;
+}
+
+.destaqueImg img {
+  max-width: 100%;
+  max-height: 480px;
+  object-fit: contain;
+  border: 1px solid var(--gold);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+}
+
+.destaqueInfo {
+  grid-column: 2;
+  grid-row: 1;
+  padding: 2rem 2.25rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.destaqueTradicao {
+  display: inline-block;
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: var(--gold-dark);
+  margin-bottom: 0.6rem;
+}
+
+.destaqueTitulo {
+  font-family: Georgia, serif;
+  font-size: 1.7rem;
+  color: var(--ink);
+  margin: 0 0 0.5rem;
+  font-weight: 400;
+  line-height: 1.2;
+}
+
+.destaqueMeta {
+  font-size: 0.9rem;
+  color: #4a3e28;
+  margin: 0 0 1.25rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px dashed var(--border);
+}
+
+.destaqueMeta em {
+  color: var(--gold-dark);
+  font-style: italic;
+}
+
+.destaqueDesc {
+  font-family: Georgia, serif;
+  font-size: 1rem;
+  line-height: 1.75;
+  color: #2a2418;
+  margin: 0;
+}
+
+/* Miniaturas em Desktop (Ocupam a largura total embaixo) */
+.miniaturas {
+  grid-column: 1 / -1;
+  grid-row: 2;
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  gap: 0.5rem;
+  padding: 1.25rem;
+  background: var(--paper);
+  border-top: 1px solid var(--border);
+}
+
+.miniBtn {
+  background: var(--paper);
+  border: 1px solid var(--border);
+  border-top: 2px solid var(--gold-dark);
+  border-radius: 2px;
+  padding: 0.35rem;
+  cursor: pointer;
+  transition: all 0.2s;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  font-family: inherit;
+}
+
+.miniBtn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(28, 47, 79, 0.15);
+}
+
+.miniAtiva {
+  border-top-color: var(--gold);
+  border-color: var(--ink);
+  background: var(--ink);
+  transform: translateY(-3px);
+  box-shadow: 0 5px 12px rgba(28, 47, 79, 0.25);
+}
+
+.miniImg {
+  aspect-ratio: 3 / 4;
+  overflow: hidden;
+  background: #0f1a2e;
+  border-radius: 1px;
+}
+
+.miniImg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.miniLabel {
+  font-size: 0.65rem;
+  color: var(--gold-dark);
+  font-style: italic;
+  text-align: center;
+  letter-spacing: 0.05em;
+}
+
+.miniAtiva .miniLabel {
+  color: var(--gold);
+}
+
+/* =========================================================
+   REORDENAÇÃO E DESIGN EXCLUSIVOS PARA MOBILE (CELULARES)
+   ========================================================= */
+@media (max-width: 900px) {
+  .destaque {
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* 1. Imagem no topo */
+  .destaqueImg {
+    order: 1;
+    min-height: auto;
+    padding: 1rem;
+  }
+
+  .destaqueImg img {
+    max-height: 52vh; /* Garante que a imagem e a barra de miniaturas caibam juntas na tela */
+  }
+
+  /* 2. Miniaturas no meio (logo abaixo da imagem) com scroll horizontal */
+  .miniaturas {
+    order: 2;
+    display: flex;
+    overflow-x: auto;
+    gap: 0.5rem;
+    padding: 0.75rem 0.85rem;
+    background: var(--paper);
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+    -webkit-overflow-scrolling: touch;
+    scroll-snap-type: x mandatory;
+  }
+
+  .miniBtn {
+    flex: 0 0 74px; /* Tamanho fixo perfeito para deslizamento */
+    scroll-snap-align: start;
+  }
+
+  /* 3. Texto por último */
+  .destaqueInfo {
+    order: 3;
+    padding: 1.5rem 1.25rem;
+  }
+}
+
+@media (max-width: 500px) {
+  .wrap {
+    padding: 1.25rem 0.75rem;
+  }
+}

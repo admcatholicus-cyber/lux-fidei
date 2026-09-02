@@ -1,0 +1,602 @@
+/* ============================================
+   LABORATÓRIO ARQUEOLÓGICO
+   A obra vira objeto de investigação
+   ============================================ */
+
+.laboratorio {
+  max-width: 1400px;
+  margin: 120px auto;
+  padding: 60px 40px;
+  background: linear-gradient(180deg, #0d0d0f 0%, #16161a 100%);
+  color: #f5f2ea;
+  opacity: 0;
+  transform: translateY(60px);
+  transition: opacity 1s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 1s cubic-bezier(0.16, 1, 0.3, 1);
+  font-family: Georgia, serif;
+  position: relative;
+  overflow: hidden;
+}
+
+.laboratorioVisivel {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Grade sutil de fundo — papel milimetrado */
+.laboratorio::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(201, 169, 97, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(201, 169, 97, 0.04) 1px, transparent 1px);
+  background-size: 40px 40px;
+  pointer-events: none;
+}
+
+/* ============ CABEÇALHO ============ */
+.cabecalho {
+  max-width: 1200px;
+  margin: 0 auto 50px;
+  position: relative;
+  z-index: 2;
+}
+
+.cabecalhoLinha {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 16px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid rgba(201, 169, 97, 0.3);
+  font-family: 'Courier New', monospace;
+  font-size: 0.72rem;
+  letter-spacing: 0.15em;
+}
+
+.badge {
+  background: #c9a961;
+  color: #0d0d0f;
+  padding: 4px 12px;
+  font-weight: 700;
+  letter-spacing: 0.24em;
+}
+
+.inventario {
+  color: #c9a961;
+  font-family: 'Courier New', monospace;
+}
+
+.titulo {
+  font-family: 'Libre Baskerville', Georgia, serif;
+  font-size: clamp(2.4rem, 4.5vw, 3.6rem);
+  font-weight: 400;
+  color: #f5f2ea;
+  line-height: 1.05;
+  margin: 0 0 12px;
+  letter-spacing: -0.02em;
+}
+
+.subtitulo {
+  color: #c9a961;
+  font-size: 1.02rem;
+  font-style: italic;
+}
+
+.data {
+  color: #8b7635;
+  font-family: 'Courier New', monospace;
+  font-style: normal;
+  font-size: 0.92rem;
+  padding-left: 8px;
+}
+
+/* ============ PALCO DE ANÁLISE ============ */
+.palco {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 50px;
+  align-items: start;
+  position: relative;
+  z-index: 2;
+}
+
+/* IMAGEM CONTAINER com réguas */
+.imagemContainer {
+  position: relative;
+  padding: 30px 20px 20px 30px;
+}
+
+/* Réguas de medição */
+.reguaHorizontal,
+.reguaVertical {
+  position: absolute;
+  display: flex;
+  color: rgba(201, 169, 97, 0.4);
+  font-family: 'Courier New', monospace;
+  font-size: 0.68rem;
+  letter-spacing: 0.05em;
+  pointer-events: none;
+}
+
+.reguaHorizontal {
+  top: 0;
+  left: 30px;
+  right: 20px;
+  justify-content: space-between;
+  border-bottom: 1px dashed rgba(201, 169, 97, 0.2);
+  padding-bottom: 4px;
+}
+
+.reguaVertical {
+  top: 30px;
+  bottom: 20px;
+  left: 0;
+  flex-direction: column;
+  justify-content: space-between;
+  border-right: 1px dashed rgba(201, 169, 97, 0.2);
+  padding-right: 6px;
+  text-align: right;
+}
+
+.reguaHorizontal span,
+.reguaVertical span {
+  display: block;
+}
+
+/* Palco onde vive a imagem */
+.imagemPalco {
+  position: relative;
+  aspect-ratio: 3 / 5;
+  cursor: crosshair;
+}
+
+.imagem {
+  position: absolute;
+  inset: 0;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  filter:
+    drop-shadow(0 30px 60px rgba(0, 0, 0, 0.7))
+    drop-shadow(0 0 40px rgba(201, 169, 97, 0.08));
+  animation: kenBurns 20s ease-in-out infinite alternate;
+}
+
+@keyframes kenBurns {
+  0% { transform: scale(1) translate(0, 0); }
+  100% { transform: scale(1.03) translate(-1%, 1%); }
+}
+
+/* INSCRIÇÃO — zona clicável no topo da imagem */
+.inscricaoZona {
+  position: absolute;
+  top: 3%;
+  left: 30%;
+  width: 40%;
+  height: 8%;
+  cursor: help;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 4;
+}
+
+.inscricaoIndicador {
+  color: #c9a961;
+  font-size: 0.9rem;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  text-shadow: 0 0 8px rgba(201, 169, 97, 0.8);
+  animation: piscar 2s ease-in-out infinite;
+}
+
+.inscricaoZona:hover .inscricaoIndicador {
+  opacity: 1;
+}
+
+@keyframes piscar {
+  0%, 100% { opacity: 0.3; }
+  50% { opacity: 0.8; }
+}
+
+.inscricaoTooltip {
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-bottom: 12px;
+  padding: 14px 18px;
+  background: rgba(13, 13, 15, 0.98);
+  border: 1px solid #c9a961;
+  backdrop-filter: blur(8px);
+  min-width: 280px;
+  text-align: center;
+  animation: tooltipFade 0.3s ease both;
+  z-index: 10;
+}
+
+@keyframes tooltipFade {
+  from { opacity: 0; transform: translateX(-50%) translateY(4px); }
+  to { opacity: 1; transform: translateX(-50%) translateY(0); }
+}
+
+.inscricaoLabel {
+  font-family: 'Courier New', monospace;
+  font-size: 0.65rem;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: #c9a961;
+  margin-bottom: 8px;
+}
+
+.inscricaoGrego {
+  font-family: 'Libre Baskerville', serif;
+  font-size: 1.05rem;
+  color: #f5f2ea;
+  margin-bottom: 8px;
+  letter-spacing: 0.04em;
+}
+
+.inscricaoTraducao {
+  font-family: Georgia, serif;
+  font-size: 0.85rem;
+  color: #d8d0bd;
+  font-style: italic;
+}
+
+/* PONTOS DE ANÁLISE — não é o "zoom" do Reni, é análise arqueológica */
+.pontoAnalise {
+  position: absolute;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: transparent;
+  border: 2px solid #c9a961;
+  color: #c9a961;
+  cursor: pointer;
+  font-family: 'Courier New', monospace;
+  font-weight: 700;
+  font-size: 0.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: translate(-50%, -50%);
+  z-index: 5;
+  transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+  padding: 0;
+}
+
+.pontoAnalise::before {
+  content: '';
+  position: absolute;
+  inset: -6px;
+  border: 1px dashed rgba(201, 169, 97, 0.4);
+  border-radius: 50%;
+  animation: girarPonto 8s linear infinite;
+}
+
+@keyframes girarPonto {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.pontoLinha {
+  position: absolute;
+  top: 50%;
+  left: 100%;
+  width: 40px;
+  height: 1px;
+  background: linear-gradient(90deg, #c9a961, transparent);
+  transform-origin: left center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+
+.pontoAnalise:hover,
+.pontoAtivo {
+  background: #c9a961;
+  color: #0d0d0f;
+  transform: translate(-50%, -50%) scale(1.25);
+  box-shadow: 0 0 20px rgba(201, 169, 97, 0.6);
+}
+
+.pontoAtivo .pontoLinha {
+  opacity: 1;
+}
+
+.pontoNumero {
+  position: relative;
+  z-index: 2;
+}
+
+/* ETIQUETA DE MUSEU */
+.etiquetaMuseu {
+  position: absolute;
+  bottom: 30px;
+  right: 30px;
+  padding: 10px 14px;
+  background: #f5f2ea;
+  color: #0d0d0f;
+  transform: rotate(-2deg);
+  box-shadow:
+    0 4px 12px rgba(0, 0, 0, 0.4),
+    inset 0 0 20px rgba(139, 118, 53, 0.15);
+  font-family: 'Courier New', monospace;
+  text-align: center;
+  border: 1px solid rgba(139, 118, 53, 0.3);
+  z-index: 3;
+  max-width: 200px;
+}
+
+.etiquetaLinha1 {
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  color: #0d0d0f;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  padding-bottom: 4px;
+  margin-bottom: 4px;
+}
+
+.etiquetaLinha2 {
+  font-size: 0.6rem;
+  color: #6b6b73;
+  font-style: italic;
+  margin-bottom: 6px;
+}
+
+.etiquetaLinha3 {
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: #7a1e1e;
+  letter-spacing: 0.1em;
+}
+
+/* ============ PAINEL DE ANÁLISE (LADO DIREITO) ============ */
+.painel {
+  padding: 20px 0;
+  position: sticky;
+  top: 30px;
+}
+
+/* Ficha técnica */
+.ficha {
+  background: rgba(201, 169, 97, 0.08);
+  border-left: 3px solid #c9a961;
+  padding: 20px 24px;
+  margin-bottom: 36px;
+}
+
+.fichaTitulo {
+  font-family: 'Libre Baskerville', serif;
+  font-size: 0.75rem;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  color: #c9a961;
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.fichaTitulo span {
+  color: #c9a961;
+}
+
+.fichaLista {
+  display: grid;
+  grid-template-columns: 110px 1fr;
+  gap: 10px 20px;
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+.fichaLista dt {
+  font-family: 'Courier New', monospace;
+  font-size: 0.7rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #8b7635;
+  padding-top: 2px;
+}
+
+.fichaLista dd {
+  margin: 0;
+  color: #f5f2ea;
+  font-family: Georgia, serif;
+  line-height: 1.5;
+}
+
+/* ANÁLISE */
+.analise {
+  min-height: 300px;
+}
+
+/* Análise geral (estado inicial) */
+.analiseGeral {
+  animation: fadeIn 0.5s ease;
+}
+
+.analiseGeralHeader {
+  margin-bottom: 24px;
+}
+
+.badgeAnalise {
+  display: inline-block;
+  padding: 4px 12px;
+  background: transparent;
+  border: 1px solid #c9a961;
+  color: #c9a961;
+  font-family: 'Courier New', monospace;
+  font-size: 0.68rem;
+  letter-spacing: 0.24em;
+  margin-bottom: 14px;
+}
+
+.instrucao {
+  color: #8b7635;
+  font-size: 0.82rem;
+  font-style: italic;
+  line-height: 1.5;
+}
+
+.analiseGeralTexto {
+  font-family: Georgia, serif;
+  font-size: 1.02rem;
+  line-height: 1.85;
+  color: #d8d0bd;
+}
+
+.analiseGeralTexto p {
+  margin: 0 0 16px;
+}
+
+.analiseGeralTexto p:first-child::first-letter {
+  font-family: 'Libre Baskerville', serif;
+  font-size: 3.6rem;
+  float: left;
+  line-height: 0.85;
+  padding: 6px 12px 0 0;
+  color: #c9a961;
+}
+
+.analiseGeralTexto strong {
+  color: #f5f2ea;
+  font-weight: 700;
+}
+
+.analiseGeralTexto em {
+  color: #c9a961;
+  font-style: italic;
+}
+
+/* Análise de um ponto específico */
+.analisePonto {
+  animation: slideIn 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@keyframes slideIn {
+  from { opacity: 0; transform: translateX(20px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.analiseHeader {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 20px;
+  padding-bottom: 18px;
+  border-bottom: 1px solid rgba(201, 169, 97, 0.3);
+}
+
+.analiseNumero {
+  flex-shrink: 0;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: #c9a961;
+  color: #0d0d0f;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Libre Baskerville', serif;
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+
+.analiseTitulo {
+  font-family: 'Libre Baskerville', serif;
+  font-size: 1.35rem;
+  color: #f5f2ea;
+  margin: 0;
+  line-height: 1.2;
+  font-weight: 400;
+  letter-spacing: -0.01em;
+}
+
+.analiseTexto {
+  font-family: Georgia, serif;
+  font-size: 1rem;
+  line-height: 1.85;
+  color: #d8d0bd;
+  margin-bottom: 24px;
+}
+
+.voltarBotao {
+  background: transparent;
+  border: 1px solid rgba(201, 169, 97, 0.5);
+  color: #c9a961;
+  padding: 8px 16px;
+  font-family: 'Courier New', monospace;
+  font-size: 0.75rem;
+  letter-spacing: 0.14em;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.voltarBotao:hover {
+  background: #c9a961;
+  color: #0d0d0f;
+}
+
+/* Contador */
+.contador {
+  margin-top: 30px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(201, 169, 97, 0.2);
+  font-family: 'Courier New', monospace;
+  font-size: 0.82rem;
+  color: #8b7635;
+  letter-spacing: 0.1em;
+}
+
+.contadorAtual {
+  color: #c9a961;
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+
+/* ============ RESPONSIVO ============ */
+@media (max-width: 1000px) {
+  .laboratorio {
+    padding: 40px 20px;
+  }
+  .palco {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  .painel {
+    position: static;
+  }
+  .etiquetaMuseu {
+    bottom: 20px;
+    right: 20px;
+    padding: 8px 12px;
+  }
+}
+
+@media (max-width: 560px) {
+  .cabecalhoLinha {
+    flex-direction: column;
+    gap: 8px;
+    align-items: flex-start;
+  }
+  .reguaHorizontal,
+  .reguaVertical {
+    display: none;
+  }
+  .etiquetaMuseu {
+    display: none;
+  }
+  .imagemContainer {
+    padding: 0;
+  }
+}

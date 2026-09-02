@@ -1,0 +1,106 @@
+.secao {
+  padding: var(--espaco-secao) 0;
+  background: var(--cor-fundo-pagina);
+}
+
+.container {
+  max-width: var(--largura-maxima);
+  margin: 0 auto;
+  padding: 0 var(--espaco-interno);
+}
+
+.titulo {
+  font-family: var(--fonte-titulo);
+  font-size: var(--tamanho-h2);
+  color: var(--cor-dourado-escuro);
+  text-align: center;
+  margin-bottom: var(--espaco-minimo);
+}
+
+.subtitulo {
+  font-family: var(--fonte-texto);
+  font-size: var(--tamanho-texto);
+  color: var(--cor-texto-secundario);
+  text-align: center;
+  font-style: italic;
+  margin-bottom: var(--espaco-interno);
+}
+
+.bloco {
+  margin-bottom: var(--espaco-interno);
+  padding-bottom: var(--espaco-interno);
+  border-bottom: 1px solid var(--cor-borda-leve);
+}
+
+.bloco:last-child {
+  border-bottom: none;
+}
+
+.subtitulo3 {
+  font-family: var(--fonte-titulo);
+  font-size: var(--tamanho-h3);
+  color: var(--cor-vinho);
+  margin-bottom: var(--espaco-pequeno);
+}
+
+.paragrafo {
+  font-family: var(--fonte-texto);
+  font-size: var(--tamanho-texto);
+  color: var(--cor-texto-principal);
+  line-height: 1.8;
+  margin-bottom: var(--espaco-pequeno);
+}
+
+.fraseCelebre {
+  background: var(--cor-fundo-tabua);
+  border-top: 3px solid var(--cor-dourado);
+  border-bottom: 3px solid var(--cor-dourado);
+  padding: var(--espaco-interno);
+  text-align: center;
+  margin: var(--espaco-pequeno) 0;
+}
+
+.fraseTexto {
+  font-family: var(--fonte-titulo);
+  font-size: 1.75rem;
+  font-style: italic;
+  color: var(--cor-vinho);
+  line-height: 1.4;
+  margin: 0 0 var(--espaco-minimo) 0;
+}
+
+.fraseAutor {
+  font-family: var(--fonte-texto);
+  font-size: var(--tamanho-pequeno);
+  color: var(--cor-texto-secundario);
+  font-style: normal;
+}
+
+.legadoLista {
+  display: flex;
+  flex-direction: column;
+  gap: var(--espaco-pequeno);
+}
+
+.legadoItem {
+  background: var(--cor-fundo-card);
+  border: 1px solid var(--cor-borda);
+  border-left: 4px solid var(--cor-dourado);
+  border-radius: var(--borda-raio);
+  padding: var(--espaco-pequeno) var(--espaco-interno);
+}
+
+.legadoTitulo {
+  font-family: var(--fonte-titulo);
+  font-size: var(--tamanho-h4);
+  color: var(--cor-dourado-escuro);
+  margin-bottom: var(--espaco-minimo);
+}
+
+.legadoTexto {
+  font-family: var(--fonte-texto);
+  font-size: var(--tamanho-texto);
+  color: var(--cor-texto-principal);
+  line-height: 1.7;
+  margin: 0;
+}

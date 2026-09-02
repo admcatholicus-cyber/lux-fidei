@@ -1,0 +1,131 @@
+.cartao {
+  max-width: 820px;
+  margin: 28px auto;
+  background: #ffffff;
+  border: 1px solid #ece8df;
+  border-left: 4px solid #b08a3c;
+  border-radius: 4px;
+  padding: 24px 28px;
+  box-shadow: 0 2px 12px rgba(90, 70, 40, 0.05);
+  font-family: Georgia, 'Times New Roman', serif;
+  color: #3a3530;
+}
+
+.cabecalho {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 16px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid #ece8df;
+  margin-bottom: 18px;
+}
+
+.identidade {
+  flex: 1;
+}
+
+.autor {
+  font-family: 'Libre Baskerville', Georgia, serif;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #2e2a25;
+  letter-spacing: 0.3px;
+}
+
+.obra {
+  font-family: 'Libre Baskerville', Georgia, serif;
+  font-style: italic;
+  font-size: 1rem;
+  color: #6f5a2f;
+  margin-top: 4px;
+}
+
+.meta {
+  margin-top: 8px;
+  font-size: 0.82rem;
+  color: #6f6758;
+  font-style: italic;
+  letter-spacing: 0.5px;
+}
+
+.sep {
+  margin: 0 8px;
+  color: #b08a3c;
+}
+
+.selo {
+  display: inline-block;
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.66rem;
+  font-weight: 600;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.documentada {
+  background: #d4e8d4;
+  color: #2d5a2d;
+  border: 1px solid #a8d0a8;
+}
+
+.provavel {
+  background: #e8dcc4;
+  color: #6f5a2f;
+  border: 1px solid #d4b872;
+}
+
+.possivel {
+  background: #f0e0d0;
+  color: #8b5a3f;
+  border: 1px solid #d4a880;
+}
+
+.corpo {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.linha {
+  display: grid;
+  grid-template-columns: 180px 1fr;
+  gap: 20px;
+  align-items: start;
+}
+
+.rotulo {
+  font-family: 'Libre Baskerville', Georgia, serif;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 1.8px;
+  text-transform: uppercase;
+  color: #8b6f2f;
+  padding-top: 2px;
+}
+
+.texto {
+  font-size: 0.95rem;
+  line-height: 1.65;
+  color: #4d463c;
+}
+
+@media (max-width: 640px) {
+  .cartao {
+    padding: 20px;
+  }
+  .cabecalho {
+    flex-direction: column;
+  }
+  .linha {
+    grid-template-columns: 1fr;
+    gap: 4px;
+  }
+  .rotulo {
+    padding-top: 0;
+  }
+}

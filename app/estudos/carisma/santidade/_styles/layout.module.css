@@ -1,0 +1,358 @@
+/* ============================= */
+/* CONTAINER */
+/* ============================= */
+.container {
+  max-width: var(--largura-max);
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+/* ============================= */
+/* HERO */
+/* ============================= */
+.hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background:
+    linear-gradient(180deg,
+      rgba(18, 18, 32, 0.92) 0%,
+      rgba(26, 26, 46, 0.88) 40%,
+      rgba(15, 52, 96, 0.85) 100%),
+    url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400"><defs><pattern id="p" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M20 0L40 20L20 40L0 20Z" fill="none" stroke="rgba(201,168,76,0.06)" stroke-width="0.5"/></pattern></defs><rect width="400" height="400" fill="url(%23p)"/></svg>');
+  background-size: cover;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(201, 168, 76, 0.06) 0%, transparent 70%);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.heroOverlay {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at center bottom, rgba(201, 168, 76, 0.05) 0%, transparent 60%);
+  pointer-events: none;
+}
+
+.heroContent {
+  position: relative;
+  z-index: 2;
+  max-width: 850px;
+  padding: 2rem;
+}
+
+.heroSupratitulo {
+  font-family: var(--font-ui);
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.35em;
+  color: var(--cor-accent);
+  margin-bottom: 1.5rem;
+  opacity: 0.9;
+}
+
+.heroTitulo {
+  font-family: var(--font-titulo);
+  font-size: clamp(3rem, 8vw, 5.5rem);
+  font-weight: 900;
+  color: var(--cor-texto-claro);
+  letter-spacing: 0.12em;
+  line-height: 1.05;
+  margin-bottom: 1.5rem;
+  text-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+}
+
+.heroSeparador {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.separadorLinha {
+  display: block;
+  width: 60px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--cor-accent), transparent);
+}
+
+.heroSeparador i {
+  color: var(--cor-accent);
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
+
+.heroSubtitulo {
+  font-family: var(--font-classica);
+  font-size: clamp(1.15rem, 2.5vw, 1.5rem);
+  font-style: italic;
+  color: var(--cor-texto-sobre-escuro);
+  line-height: 1.6;
+  margin-bottom: 0.5rem;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.heroReferencia {
+  font-family: var(--font-ui);
+  font-size: 0.78rem;
+  color: var(--cor-accent);
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  margin-bottom: 2rem;
+  font-weight: 500;
+}
+
+.heroDescricao {
+  font-family: var(--font-corpo);
+  font-size: 1rem;
+  color: var(--cor-texto-sobre-escuro);
+  line-height: 1.8;
+  max-width: 650px;
+  margin: 0 auto 2.5rem;
+  opacity: 0.85;
+}
+
+.heroAcoes {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.btnHeroPrimario,
+.btnHeroSecundario {
+  font-family: var(--font-ui);
+  font-size: 0.82rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  padding: 0.9rem 2.2rem;
+  border-radius: var(--raio-sm);
+  text-decoration: none;
+  transition: var(--transicao);
+  cursor: pointer;
+}
+
+.btnHeroPrimario {
+  background: var(--cor-accent);
+  color: var(--cor-primaria);
+  border: 2px solid var(--cor-accent);
+}
+
+.btnHeroPrimario:hover {
+  background: var(--cor-accent-clara);
+  border-color: var(--cor-accent-clara);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(201, 168, 76, 0.3);
+}
+
+.btnHeroSecundario {
+  background: transparent;
+  color: var(--cor-accent);
+  border: 2px solid rgba(201, 168, 76, 0.4);
+}
+
+.btnHeroSecundario:hover {
+  border-color: var(--cor-accent);
+  background: rgba(201, 168, 76, 0.08);
+  transform: translateY(-2px);
+}
+
+/* ============================= */
+/* SEÇÕES */
+/* ============================= */
+.secao { padding: var(--espaco-3xl) 0; }
+.secaoClara { background-color: var(--cor-fundo-claro); color: var(--cor-texto); }
+.secaoEscura { background-color: var(--cor-fundo-escuro); color: var(--cor-texto-sobre-escuro); }
+
+.secaoCabecalho { text-align: center; margin-bottom: var(--espaco-xl); }
+
+.secaoSupratitulo {
+  font-family: var(--font-ui);
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.4em;
+  color: var(--cor-accent);
+  margin-bottom: 0.8rem;
+}
+
+.secaoTitulo {
+  font-family: var(--font-titulo);
+  font-size: clamp(1.8rem, 4vw, 2.8rem);
+  font-weight: 800;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+}
+
+.secaoClara .secaoTitulo { color: var(--cor-primaria); }
+.secaoEscura .secaoTitulo { color: var(--cor-texto-claro); }
+
+.secaoSeparador {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.8rem;
+  margin-bottom: 1rem;
+}
+
+.secaoSeparador .separadorLinha { width: 50px; }
+
+.secaoSeparador i {
+  color: var(--cor-accent);
+  font-size: 0.85rem;
+  opacity: 0.7;
+}
+
+.secaoDescricao {
+  font-family: var(--font-corpo);
+  font-size: 1.05rem;
+  font-style: italic;
+  max-width: 600px;
+  margin: 0 auto;
+  opacity: 0.75;
+}
+
+/* ============================= */
+/* RODAPÉ */
+/* ============================= */
+.rodape {
+  background: var(--cor-primaria);
+  color: var(--cor-texto-sobre-escuro);
+  padding: var(--espaco-2xl) 0 var(--espaco-lg);
+  border-top: 3px solid var(--cor-accent);
+}
+
+.rodapeConteudo {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 3rem;
+  margin-bottom: var(--espaco-xl);
+  padding-bottom: var(--espaco-lg);
+  border-bottom: 1px solid rgba(201, 168, 76, 0.15);
+}
+
+.rodapeLogo {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-family: var(--font-titulo);
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--cor-accent);
+  margin-bottom: 1rem;
+}
+
+.rodapeLogo i { font-size: 1.1rem; }
+
+.rodapeDescricao { font-size: 0.9rem; line-height: 1.7; opacity: 0.7; }
+
+.rodapeColuna h4 {
+  font-family: var(--font-ui);
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: var(--cor-accent);
+  margin-bottom: 1rem;
+}
+
+.rodapeColuna ul { list-style: none; }
+.rodapeColuna ul li { margin-bottom: 0.4rem; }
+
+.rodapeColuna ul li a {
+  font-size: 0.88rem;
+  color: var(--cor-texto-sobre-escuro);
+  text-decoration: none;
+  opacity: 0.7;
+  transition: var(--transicao);
+}
+
+.rodapeColuna ul li a:hover { color: var(--cor-accent); opacity: 1; }
+
+.rodapeInferior { text-align: center; }
+.rodapeInferior p { font-size: 0.88rem; line-height: 1.8; opacity: 0.65; margin-bottom: 0.5rem; }
+.rodapeInferior em { font-family: var(--font-classica); font-size: 0.95rem; }
+
+.rodapeAviso {
+  font-family: var(--font-ui);
+  font-size: 0.72rem !important;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.rodapeInferior i { color: var(--cor-accent); margin-left: 0.3rem; font-size: 0.7rem; }
+
+/* ============================= */
+/* BOTÃO VOLTAR AO TOPO */
+/* ============================= */
+.btnTopo {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: var(--cor-accent);
+  color: var(--cor-primaria);
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(20px);
+  transition: var(--transicao);
+  box-shadow: 0 4px 15px rgba(201, 168, 76, 0.3);
+  z-index: 999;
+}
+
+.btnTopoVisivel { opacity: 1; visibility: visible; transform: translateY(0); }
+
+.btnTopo:hover {
+  background: var(--cor-accent-clara);
+  transform: translateY(-3px);
+  box-shadow: 0 6px 25px rgba(201, 168, 76, 0.4);
+}
+
+/* ============================= */
+/* BOTÃO VOLTAR */
+/* ============================= */
+.btnVoltar {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 14px;
+  background: transparent;
+  color: #c9a84c;
+  border: 1px solid #c9a84c;
+  border-radius: 6px;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.78em;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: background 0.2s, color 0.2s;
+}
+
+.btnVoltar:hover { background: #c9a84c; color: #1a1f35; }

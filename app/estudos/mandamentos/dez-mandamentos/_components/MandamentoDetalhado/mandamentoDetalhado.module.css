@@ -1,0 +1,295 @@
+/* CONTAINER */
+.detalhado {
+  display: flex;
+  flex-direction: column;
+  gap: var(--espaco-entre-itens);
+}
+
+.bloco {
+  /* container simples */
+}
+
+/* TÍTULO PADRÃO DE BLOCO */
+.blocoTitulo {
+  font-family: var(--fonte-titulo);
+  font-size: var(--tamanho-h4);
+  color: var(--cor-dourado-escuro);
+  margin-bottom: var(--espaco-minimo);
+}
+
+/* TEXTO BÍBLICO */
+.textoBiblico {
+  font-family: var(--fonte-titulo);
+  font-style: italic;
+  font-size: var(--tamanho-texto);
+  color: var(--cor-texto-principal);
+  border-left: 3px solid var(--cor-dourado);
+  padding-left: var(--espaco-pequeno);
+  line-height: 1.8;
+  margin: 0 0 var(--espaco-minimo) 0;
+}
+
+.referencia {
+  font-family: var(--fonte-texto);
+  font-size: var(--tamanho-pequeno);
+  color: var(--cor-texto-secundario);
+}
+
+/* CABEÇALHOS COM ÍCONE (ORDENA / PROÍBE) */
+.blocoTituloOrdena {
+  display: flex;
+  align-items: center;
+  gap: var(--espaco-minimo);
+  font-family: var(--fonte-titulo);
+  font-size: var(--tamanho-h4);
+  color: #2E7D32;
+  margin-bottom: var(--espaco-pequeno);
+}
+
+.blocoTituloProibe {
+  display: flex;
+  align-items: center;
+  gap: var(--espaco-minimo);
+  font-family: var(--fonte-titulo);
+  font-size: var(--tamanho-h4);
+  color: var(--cor-vinho);
+  margin-bottom: var(--espaco-pequeno);
+}
+
+.iconeOrdena {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  background: #2E7D32;
+  color: white;
+  border-radius: 50%;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.iconeProibe {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  background: var(--cor-vinho);
+  color: white;
+  border-radius: 50%;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+/* GRIDS DE CARDS */
+.gridOrdena,
+.gridProibe {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--espaco-minimo);
+}
+
+@media (max-width: 640px) {
+  .gridOrdena,
+  .gridProibe {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* CARDS DE ORDENA (verde) */
+.cardOrdena {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  background: rgba(46, 125, 50, 0.05);
+  border-left: 3px solid #2E7D32;
+  border-radius: 0 var(--borda-raio) var(--borda-raio) 0;
+  padding: var(--espaco-minimo) var(--espaco-pequeno);
+  transition: background var(--transicao), transform var(--transicao);
+}
+
+.cardOrdena:hover {
+  background: rgba(46, 125, 50, 0.1);
+  transform: translateX(2px);
+}
+
+/* CARDS DE PROÍBE (vinho) */
+.cardProibe {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  background: rgba(107, 44, 44, 0.05);
+  border-left: 3px solid var(--cor-vinho);
+  border-radius: 0 var(--borda-raio) var(--borda-raio) 0;
+  padding: var(--espaco-minimo) var(--espaco-pequeno);
+  transition: background var(--transicao), transform var(--transicao);
+}
+
+.cardProibe:hover {
+  background: rgba(107, 44, 44, 0.1);
+  transform: translateX(2px);
+}
+
+/* TÍTULO E DESCRIÇÃO DOS CARDS */
+.cardTitulo {
+  font-family: var(--fonte-titulo);
+  font-size: var(--tamanho-texto);
+  font-weight: bold;
+  color: var(--cor-texto-principal);
+  line-height: 1.3;
+}
+
+.cardDescricao {
+  font-family: var(--fonte-texto);
+  font-size: var(--tamanho-pequeno);
+  color: var(--cor-texto-secundario);
+  line-height: 1.5;
+}
+
+/* EXPLICAÇÃO E APLICAÇÃO */
+.explicacao,
+.aplicacao {
+  font-family: var(--fonte-texto);
+  font-size: var(--tamanho-texto);
+  color: var(--cor-texto-principal);
+  line-height: 1.8;
+  margin: 0;
+}
+
+/* CATECISMO */
+.catecismo {
+  font-family: var(--fonte-texto);
+  font-size: var(--tamanho-pequeno);
+  color: var(--cor-texto-secundario);
+  background: var(--cor-fundo-destaque);
+  padding: var(--espaco-minimo) var(--espaco-pequeno);
+  border-radius: var(--borda-raio);
+  margin: 0;
+}
+
+/* CONEXÃO COM CRISTO */
+.blocoCristo {
+  background: var(--cor-fundo-tabua);
+  border-left: 4px solid var(--cor-vinho);
+  border-radius: var(--borda-raio);
+  padding: var(--espaco-pequeno) var(--espaco-interno);
+  margin-top: var(--espaco-pequeno);
+}
+
+.blocoTituloCristo {
+  font-family: var(--fonte-titulo);
+  font-size: var(--tamanho-h4);
+  color: var(--cor-vinho);
+  margin-bottom: var(--espaco-minimo);
+}
+
+.textoCristo {
+  font-family: var(--fonte-texto);
+  font-size: var(--tamanho-texto);
+  color: var(--cor-texto-principal);
+  line-height: 1.8;
+  margin: 0;
+}
+
+/* BEM-AVENTURANÇA */
+.blocoBemAventuranca {
+  background: var(--cor-fundo-destaque);
+  border: 1px solid var(--cor-dourado);
+  border-radius: var(--borda-raio-grande);
+  padding: var(--espaco-interno);
+  margin-top: var(--espaco-pequeno);
+}
+
+.blocoTituloBemAventuranca {
+  font-family: var(--fonte-titulo);
+  font-size: var(--tamanho-h4);
+  color: var(--cor-dourado-escuro);
+  margin-bottom: var(--espaco-pequeno);
+  text-align: center;
+}
+
+.textoBemAventuranca {
+  font-family: var(--fonte-titulo);
+  font-style: italic;
+  font-size: var(--tamanho-citacao);
+  color: var(--cor-texto-principal);
+  line-height: 1.6;
+  text-align: center;
+  margin: 0 0 var(--espaco-pequeno) 0;
+  padding: var(--espaco-pequeno);
+  border-top: 1px solid var(--cor-borda-leve);
+  border-bottom: 1px solid var(--cor-borda-leve);
+}
+
+.referenciaBemAventuranca {
+  display: block;
+  font-family: var(--fonte-texto);
+  font-size: var(--tamanho-pequeno);
+  color: var(--cor-texto-secundario);
+  font-style: normal;
+  margin-top: var(--espaco-minimo);
+}
+
+.explicacaoBemAventuranca {
+  font-family: var(--fonte-texto);
+  font-size: var(--tamanho-texto);
+  color: var(--cor-texto-principal);
+  line-height: 1.7;
+  margin: 0;
+}
+
+/* SANTO RELACIONADO */
+.blocoSanto {
+  background: var(--cor-fundo-card);
+  border: 1px solid var(--cor-borda);
+  border-left: 4px solid var(--cor-dourado);
+  border-radius: var(--borda-raio);
+  padding: var(--espaco-interno);
+  margin-top: var(--espaco-pequeno);
+}
+
+.blocoTituloSanto {
+  font-family: var(--fonte-titulo);
+  font-size: var(--tamanho-h4);
+  color: var(--cor-dourado-escuro);
+  margin-bottom: var(--espaco-pequeno);
+}
+
+.santoInfo {
+  margin-bottom: var(--espaco-pequeno);
+}
+
+.santoNome {
+  font-family: var(--fonte-titulo);
+  font-size: var(--tamanho-h3);
+  color: var(--cor-vinho);
+  margin: 0 0 var(--espaco-minimo) 0;
+}
+
+.santoAnos {
+  font-family: var(--fonte-texto);
+  font-size: var(--tamanho-pequeno);
+  color: var(--cor-texto-secundario);
+}
+
+.santoFrase {
+  background: var(--cor-fundo-destaque);
+  border-left: 3px solid var(--cor-dourado);
+  padding: var(--espaco-pequeno) var(--espaco-interno);
+  margin: var(--espaco-pequeno) 0;
+  font-family: var(--fonte-titulo);
+  font-style: italic;
+  font-size: var(--tamanho-citacao);
+  color: var(--cor-texto-principal);
+  line-height: 1.5;
+  border-radius: 0 var(--borda-raio) var(--borda-raio) 0;
+}
+
+.santoHistoria {
+  font-family: var(--fonte-texto);
+  font-size: var(--tamanho-texto);
+  color: var(--cor-texto-principal);
+  line-height: 1.7;
+  margin: 0;
+}

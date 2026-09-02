@@ -1,0 +1,532 @@
+/* ═══════════════════════════════════════════════════════════════
+   ICONOGRAFIA — SANTA AFRA DE AUGSBURGO
+   Ensaio visual-textual sobre a representação artística
+   ═══════════════════════════════════════════════════════════════ */
+
+/* ─── variáveis ─── */
+
+.abertura,
+.secao,
+.prosa,
+.ficha,
+.atributosGrid,
+.comparacao,
+.fonteArtistica,
+.notaEnsaio {
+  --ei-dourado:        #b08a3c;
+  --ei-dourado-claro:  #d4b872;
+  --ei-dourado-palido: #f0e8d2;
+  --ei-texto:          #3a3530;
+  --ei-texto-leve:     #6f6758;
+  --ei-borda:          #e2dcd0;
+  --ei-borda-leve:     #ece8df;
+  --ei-fundo:          #faf8f4;
+  --ei-fundo-card:     #ffffff;
+  --ei-fundo-escuro:   #1a1712;
+  --ei-serif:          'Libre Baskerville', Georgia, 'Times New Roman', serif;
+  --ei-sans:           'Inter', system-ui, sans-serif;
+  --ei-radius:         5px;
+  --ei-sombra:         0 2px 10px rgba(0,0,0,.04), 0 1px 3px rgba(0,0,0,.03);
+  --ei-transicao:      .3s cubic-bezier(.4,0,.2,1);
+}
+
+/* ═══════════════════════════════════════
+   ABERTURA
+   ═══════════════════════════════════════ */
+
+.abertura {
+  max-width: 780px;
+  margin: 0 auto 64px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+  padding: 40px 20px 0;
+}
+
+.aberturaOrnamentoTopo,
+.aberturaOrnamentoBaixo {
+  color: var(--ei-dourado-claro);
+  font-size: .8rem;
+  letter-spacing: .6em;
+  opacity: .5;
+}
+
+.aberturaTitulo {
+  font-family: var(--ei-serif);
+  font-size: clamp(1.6rem, 3.5vw, 2.4rem);
+  font-weight: 400;
+  color: var(--ei-texto);
+  letter-spacing: .03em;
+  line-height: 1.25;
+  margin: 8px 0 0;
+}
+
+.aberturaSubtitulo {
+  font-family: var(--ei-sans);
+  font-size: clamp(.78rem, 1.2vw, .92rem);
+  font-weight: 300;
+  color: var(--ei-texto-leve);
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  margin: 0;
+  max-width: 600px;
+}
+
+.aberturaEpigrafe {
+  margin: 16px 0 0;
+  padding: 0;
+  max-width: 520px;
+}
+
+.aberturaEpigrafe p {
+  font-family: var(--ei-serif);
+  font-size: .95rem;
+  font-style: italic;
+  color: var(--ei-texto);
+  line-height: 1.75;
+  margin: 0;
+}
+
+.aberturaEpigrafe cite {
+  display: block;
+  font-family: var(--ei-sans);
+  font-size: .72rem;
+  font-style: normal;
+  color: var(--ei-dourado);
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  margin-top: 8px;
+}
+
+/* ═══════════════════════════════════════
+   SEÇÃO NUMERADA
+   ═══════════════════════════════════════ */
+
+.secao {
+  max-width: 870px;
+  margin: 0 auto 56px;
+}
+
+.secaoCabecalho {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  margin-bottom: 28px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--ei-borda);
+}
+
+.secaoNumero {
+  font-family: var(--ei-serif);
+  font-size: .82rem;
+  color: var(--ei-dourado);
+  letter-spacing: .15em;
+  flex-shrink: 0;
+}
+
+.secaoFio {
+  width: 36px;
+  height: 1px;
+  background: var(--ei-dourado-palido);
+  flex-shrink: 0;
+}
+
+.secaoTitulo {
+  font-family: var(--ei-serif);
+  font-size: clamp(1.1rem, 2vw, 1.45rem);
+  font-weight: 400;
+  color: var(--ei-texto);
+  letter-spacing: .02em;
+  margin: 0;
+}
+
+.secaoSubtitulo {
+  font-family: var(--ei-sans);
+  font-size: .78rem;
+  color: var(--ei-texto-leve);
+  margin: 4px 0 0;
+  letter-spacing: .04em;
+}
+
+.secaoCorpo {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+/* ═══════════════════════════════════════
+   PROSA — parágrafos narrativos
+   ═══════════════════════════════════════ */
+
+.prosa {
+  font-family: var(--ei-serif);
+  font-size: 1rem;
+  color: var(--ei-texto);
+  line-height: 1.9;
+  text-align: justify;
+}
+
+.prosa p {
+  margin: 0 0 18px;
+}
+
+.prosa p:last-child {
+  margin-bottom: 0;
+}
+
+.prosa em {
+  font-style: italic;
+  color: var(--ei-texto);
+}
+
+.prosa strong {
+  font-weight: 700;
+  color: var(--ei-texto);
+}
+
+/* ═══════════════════════════════════════
+   FICHA DE OBRA — descrição textual
+   ═══════════════════════════════════════ */
+
+.ficha {
+  display: flex;
+  gap: 0;
+  background: var(--ei-fundo-card);
+  border: 1px solid var(--ei-borda-leve);
+  border-radius: var(--ei-radius);
+  overflow: hidden;
+  box-shadow: var(--ei-sombra);
+  transition: box-shadow var(--ei-transicao);
+}
+
+.ficha:hover {
+  box-shadow: 0 4px 18px rgba(0,0,0,.07);
+}
+
+.fichaBorda {
+  width: 4px;
+  flex-shrink: 0;
+  background: linear-gradient(180deg, var(--ei-dourado) 0%, var(--ei-dourado-claro) 100%);
+}
+
+.fichaInterior {
+  padding: 24px 28px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.fichaTitulo {
+  font-family: var(--ei-serif);
+  font-size: 1.05rem;
+  font-weight: 400;
+  color: var(--ei-texto);
+  margin: 0;
+  line-height: 1.35;
+}
+
+.fichaDados {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px;
+}
+
+.fichaDado {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.fichaLabel {
+  font-family: var(--ei-sans);
+  font-size: .64rem;
+  font-weight: 700;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: var(--ei-dourado);
+}
+
+.fichaValor {
+  font-family: var(--ei-sans);
+  font-size: .82rem;
+  color: var(--ei-texto);
+}
+
+.fichaDescricao {
+  font-family: var(--ei-serif);
+  font-size: .94rem;
+  color: var(--ei-texto);
+  line-height: 1.85;
+  border-top: 1px solid var(--ei-borda-leve);
+  padding-top: 14px;
+}
+
+.fichaDescricao p {
+  margin: 0 0 12px;
+}
+
+.fichaDescricao p:last-child {
+  margin-bottom: 0;
+}
+
+/* ═══════════════════════════════════════
+   ATRIBUTOS ICONOGRÁFICOS
+   ═══════════════════════════════════════ */
+
+.atributosGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 16px;
+}
+
+.atributo {
+  display: flex;
+  gap: 16px;
+  padding: 20px 22px;
+  background: var(--ei-fundo-card);
+  border: 1px solid var(--ei-borda-leve);
+  border-radius: var(--ei-radius);
+  box-shadow: var(--ei-sombra);
+  align-items: flex-start;
+  transition: box-shadow var(--ei-transicao), transform var(--ei-transicao);
+}
+
+.atributo:hover {
+  box-shadow: 0 4px 16px rgba(0,0,0,.07);
+  transform: translateY(-2px);
+}
+
+.atributoSimbolo {
+  font-size: 1.8rem;
+  flex-shrink: 0;
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--ei-dourado-palido);
+  border-radius: 50%;
+}
+
+.atributoTexto {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  flex: 1;
+}
+
+.atributoNome {
+  font-family: var(--ei-serif);
+  font-size: .9rem;
+  font-weight: 700;
+  color: var(--ei-texto);
+}
+
+.atributoDesc {
+  font-family: var(--ei-serif);
+  font-size: .85rem;
+  color: var(--ei-texto-leve);
+  line-height: 1.7;
+}
+
+/* ═══════════════════════════════════════
+   COMPARAÇÃO ENTRE ÉPOCAS
+   ═══════════════════════════════════════ */
+
+.comparacao {
+  margin: 8px 0;
+}
+
+.comparacaoTitulo {
+  font-family: var(--ei-serif);
+  font-size: .95rem;
+  font-weight: 400;
+  color: var(--ei-dourado);
+  margin: 0 0 18px;
+  text-align: center;
+  letter-spacing: .04em;
+}
+
+.comparacaoGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
+}
+
+.comparacaoColuna {
+  background: var(--ei-fundo-card);
+  border: 1px solid var(--ei-borda-leve);
+  border-radius: var(--ei-radius);
+  padding: 22px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  box-shadow: var(--ei-sombra);
+  border-top: 3px solid var(--ei-dourado-palido);
+}
+
+.comparacaoEpoca {
+  font-family: var(--ei-sans);
+  font-size: .68rem;
+  font-weight: 700;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: var(--ei-dourado);
+}
+
+.comparacaoDesc {
+  font-family: var(--ei-serif);
+  font-size: .88rem;
+  color: var(--ei-texto);
+  line-height: 1.7;
+  margin: 0;
+}
+
+.comparacaoLista {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.comparacaoLista li {
+  font-family: var(--ei-sans);
+  font-size: .78rem;
+  color: var(--ei-texto-leve);
+  padding-left: 14px;
+  position: relative;
+}
+
+.comparacaoLista li::before {
+  content: '·';
+  position: absolute;
+  left: 0;
+  color: var(--ei-dourado-claro);
+  font-weight: 700;
+}
+
+/* ═══════════════════════════════════════
+   CITAÇÃO DE FONTE ARTÍSTICA
+   ═══════════════════════════════════════ */
+
+.fonteArtistica {
+  margin: 12px 0;
+  padding: 24px 28px;
+  background: var(--ei-fundo);
+  border-left: 3px solid var(--ei-dourado-claro);
+  border-radius: 0 var(--ei-radius) var(--ei-radius) 0;
+}
+
+.fonteTexto {
+  font-family: var(--ei-serif);
+  font-size: .95rem;
+  font-style: italic;
+  color: var(--ei-texto);
+  line-height: 1.8;
+}
+
+.fonteTexto p {
+  margin: 0 0 8px;
+}
+
+.fonteTexto p:last-child {
+  margin-bottom: 0;
+}
+
+.fonteRodape {
+  display: flex;
+  gap: 10px;
+  align-items: baseline;
+  margin-top: 12px;
+}
+
+.fonteAutor {
+  font-family: var(--ei-sans);
+  font-size: .75rem;
+  font-weight: 700;
+  font-style: normal;
+  color: var(--ei-dourado);
+  letter-spacing: .06em;
+  text-transform: uppercase;
+}
+
+.fonteObra {
+  font-family: var(--ei-serif);
+  font-size: .78rem;
+  font-style: italic;
+  color: var(--ei-texto-leve);
+}
+
+/* ═══════════════════════════════════════
+   NOTA DO ENSAIO
+   ═══════════════════════════════════════ */
+
+.notaEnsaio {
+  display: flex;
+  gap: 14px;
+  padding: 18px 22px;
+  background: var(--ei-fundo);
+  border: 1px solid var(--ei-borda-leve);
+  border-radius: var(--ei-radius);
+  align-items: flex-start;
+}
+
+.notaEnsaioIcone {
+  font-size: 1rem;
+  color: var(--ei-dourado);
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.notaEnsaioTexto {
+  font-family: var(--ei-serif);
+  font-size: .88rem;
+  color: var(--ei-texto-leve);
+  line-height: 1.75;
+}
+
+.notaEnsaioTexto p {
+  margin: 0 0 8px;
+}
+
+.notaEnsaioTexto p:last-child {
+  margin-bottom: 0;
+}
+
+/* ═══════════════════════════════════════
+   RESPONSIVIDADE
+   ═══════════════════════════════════════ */
+
+@media (max-width: 700px) {
+  .secaoCabecalho {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .secaoFio {
+    display: none;
+  }
+
+  .fichaDados {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .atributosGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .comparacaoGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .fichaInterior {
+    padding: 20px;
+  }
+}

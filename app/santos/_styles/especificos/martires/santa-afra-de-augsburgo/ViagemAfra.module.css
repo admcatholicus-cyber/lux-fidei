@@ -1,0 +1,194 @@
+/* C:\Users\kitten\Documents\lux-fidei\app\santos\_styles\especificos\martires\santa-afra-de-augsburgo\alem-de-augsburgo\ViagemAfra.module.css */
+
+/* ─── Viagem (card expandível) ──────────────────────────── */
+.viagem {
+  border: 1px solid #e2dcd0;
+  border-radius: 4px;
+  margin-bottom: 16px;
+  background: #ffffff;
+  overflow: hidden;
+  transition: box-shadow 0.2s;
+}
+
+.viagem:hover {
+  box-shadow: 0 2px 12px rgba(176, 138, 60, 0.10);
+}
+
+/* ─── Acentos de cor por viagem ─────────────────────────── */
+.dourado  { border-left: 4px solid #b08a3c; }
+.vermelho { border-left: 4px solid #8b2a2a; }
+.verde    { border-left: 4px solid #3a6a3a; }
+.azul     { border-left: 4px solid #2a4a7a; }
+
+/* ─── Cabeçalho (botão) ─────────────────────────────────── */
+.cabecalho {
+  display: grid;
+  grid-template-columns: 52px 40px 1fr 24px;
+  align-items: center;
+  gap: 0 12px;
+  width: 100%;
+  background: #faf8f4;
+  border: none;
+  padding: 18px 20px;
+  cursor: pointer;
+  text-align: left;
+  transition: background 0.2s;
+}
+
+.cabecalho:hover {
+  background: #f3efe6;
+}
+
+.icone {
+  font-size: 1.7rem;
+  line-height: 1;
+  text-align: center;
+}
+
+.numero {
+  font-family: 'Libre Baskerville', Georgia, serif;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  color: #b08a3c;
+  text-transform: uppercase;
+}
+
+.textos {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.destino {
+  font-family: 'Libre Baskerville', Georgia, serif;
+  font-size: 1.08rem;
+  font-weight: 700;
+  color: #2a2520;
+  line-height: 1.2;
+}
+
+.lema {
+  font-family: Georgia, serif;
+  font-size: 0.84rem;
+  color: #6f6758;
+  font-style: italic;
+  line-height: 1.3;
+}
+
+.seta {
+  font-size: 0.6rem;
+  color: #b08a3c;
+  justify-self: end;
+}
+
+/* ─── Corpo expandido ───────────────────────────────────── */
+.corpo {
+  padding: 8px 24px 28px 24px;
+  border-top: 1px solid #ece8df;
+  animation: abrir 0.2s ease;
+}
+
+@keyframes abrir {
+  from { opacity: 0; transform: translateY(-5px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ─── Escala individual ─────────────────────────────────── */
+.escala {
+  margin-top: 24px;
+  padding-left: 20px;
+  border-left: 2px solid #ece8df;
+  transition: border-color 0.2s;
+}
+
+.escala:first-child {
+  margin-top: 20px;
+}
+
+.escala:hover {
+  border-left-color: #d4b872;
+}
+
+.escalaCabecalho {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin-bottom: 8px;
+}
+
+.escalaPonto {
+  color: #b08a3c;
+  font-size: 0.55rem;
+  margin-top: 6px;
+  flex-shrink: 0;
+}
+
+.escalaTitulo {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 6px 10px;
+}
+
+.escalaLugar {
+  font-family: 'Libre Baskerville', Georgia, serif;
+  font-size: 0.98rem;
+  font-weight: 700;
+  color: #2a2520;
+}
+
+.escalaPais {
+  font-size: 0.75rem;
+  color: #9a8e80;
+  font-family: Georgia, serif;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.escalaCoordenada {
+  font-size: 0.78rem;
+  color: #b08a3c;
+  font-family: Georgia, serif;
+  font-style: italic;
+}
+
+.escalaEnredo {
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 0.96rem;
+  line-height: 1.82;
+  color: #3a3530;
+}
+
+.escalaEnredo p {
+  margin: 0 0 0.8em;
+}
+
+.escalaEnredo p:last-child {
+  margin-bottom: 0;
+}
+
+.escalaEnredo strong {
+  font-weight: 700;
+  color: #2a2520;
+}
+
+.escalaEnredo em {
+  font-style: italic;
+  color: #5a5048;
+}
+
+/* ─── Responsivo ────────────────────────────────────────── */
+@media (max-width: 560px) {
+  .cabecalho {
+    grid-template-columns: 40px 32px 1fr 20px;
+    gap: 0 8px;
+    padding: 14px 14px;
+  }
+
+  .icone { font-size: 1.35rem; }
+  .destino { font-size: 0.96rem; }
+  .lema { font-size: 0.78rem; }
+  .corpo { padding: 8px 14px 22px 14px; }
+  .escala { padding-left: 14px; }
+}

@@ -1,0 +1,571 @@
+/* ============================================
+   SÃO MIGUEL ARCANJO — Biblioteca de Frases
+   Paleta: aço, azul profundo, dourado antigo
+   ============================================ */
+
+.biblioteca {
+  --miguel-aco: #2b3441;
+  --miguel-aco-claro: #4a5568;
+  --miguel-azul: #1e3a5f;
+  --miguel-azul-claro: #3a5f8f;
+  --miguel-dourado: #b8944a;
+  --miguel-dourado-claro: #d4b872;
+  --miguel-dourado-escuro: #8b6f37;
+  --miguel-bege: #f5f1e8;
+  --miguel-bege-claro: #faf7f0;
+  --miguel-texto: #2b2a26;
+  --miguel-texto-leve: #6b6558;
+  --miguel-borda: #d8d0bd;
+  --miguel-borda-leve: #ebe5d5;
+  --miguel-vermelho: #8b1a1a;
+
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 20px 24px 80px;
+  font-family: Georgia, 'Times New Roman', 'Noto Serif', serif;
+  color: var(--miguel-texto);
+}
+
+/* ============ INTRODUÇÃO ============ */
+.introducao {
+  background: var(--miguel-bege-claro);
+  border-left: 4px solid var(--miguel-dourado);
+  padding: 28px 32px;
+  margin-bottom: 40px;
+  font-size: 1.02rem;
+  line-height: 1.75;
+  color: var(--miguel-texto);
+  border-radius: 2px;
+}
+
+.introducao p {
+  margin: 0 0 14px;
+}
+.introducao p:last-child {
+  margin-bottom: 0;
+}
+
+/* ============ TABS DE CAPÍTULOS ============ */
+.tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 40px;
+  padding: 8px;
+  background: var(--miguel-aco);
+  border-radius: 4px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+.tab {
+  flex: 1 1 auto;
+  min-width: 140px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  padding: 12px 16px;
+  background: transparent;
+  border: none;
+  color: #b8c1cf;
+  font-family: inherit;
+  font-size: 0.78rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  cursor: pointer;
+  border-radius: 3px;
+  transition: all 0.2s ease;
+}
+
+.tab:hover {
+  background: rgba(255, 255, 255, 0.05);
+  color: var(--miguel-dourado-claro);
+}
+
+.tabAtivo {
+  background: var(--miguel-azul);
+  color: var(--miguel-dourado-claro);
+  box-shadow: inset 0 -2px 0 var(--miguel-dourado);
+}
+
+.tabAtivo:hover {
+  background: var(--miguel-azul-claro);
+}
+
+.tabIcone {
+  font-size: 1.3rem;
+  line-height: 1;
+}
+
+.tabLabel {
+  font-weight: 600;
+  text-align: center;
+  line-height: 1.2;
+}
+
+/* ============ CAPÍTULO ============ */
+.capitulo {
+  animation: fadeIn 0.4s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.capituloHeader {
+  text-align: center;
+  padding: 24px 16px 36px;
+  border-bottom: 1px solid var(--miguel-borda);
+  margin-bottom: 40px;
+}
+
+.capituloSuprat {
+  font-size: 0.72rem;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  color: var(--miguel-dourado-escuro);
+  margin-bottom: 10px;
+}
+
+.capituloTitulo {
+  font-family: 'Libre Baskerville', Georgia, serif;
+  font-size: 2rem;
+  font-weight: 400;
+  color: var(--miguel-aco);
+  margin: 0 0 12px;
+  line-height: 1.2;
+}
+
+.capituloIcone {
+  display: inline-block;
+  margin-right: 12px;
+  font-size: 1.5rem;
+}
+
+.capituloContagem {
+  font-size: 0.82rem;
+  color: var(--miguel-texto-leve);
+  font-style: italic;
+}
+
+.capituloCorpo {
+  display: grid;
+  gap: 32px;
+}
+
+/* ============ SUBSEÇÃO ============ */
+.subsecao {
+  margin-bottom: 12px;
+}
+
+.subsecaoTitulo {
+  font-family: 'Libre Baskerville', Georgia, serif;
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--miguel-azul);
+  margin: 0 0 20px;
+  padding-bottom: 8px;
+  border-bottom: 1px dashed var(--miguel-borda-leve);
+}
+
+.subsecaoCorpo {
+  display: grid;
+  gap: 24px;
+}
+
+/* ============ DIÁLOGO (Escrituras) ============ */
+.dialogo {
+  position: relative;
+  background: #fff;
+  border: 1px solid var(--miguel-borda);
+  border-left: 4px solid var(--miguel-dourado);
+  padding: 32px 32px 24px;
+  border-radius: 3px;
+  box-shadow: 0 2px 12px rgba(43, 52, 65, 0.08);
+}
+
+.dialogoBadge {
+  position: absolute;
+  top: -10px;
+  left: 24px;
+  background: var(--miguel-dourado);
+  color: #fff;
+  font-size: 0.68rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  padding: 4px 12px;
+  border-radius: 2px;
+  font-weight: 600;
+}
+
+.dialogoReferencia {
+  font-size: 0.85rem;
+  color: var(--miguel-azul);
+  font-weight: 600;
+  margin-bottom: 14px;
+  letter-spacing: 0.02em;
+}
+
+.dialogoCena {
+  background: var(--miguel-bege-claro);
+  border-left: 3px solid var(--miguel-aco-claro);
+  padding: 12px 16px;
+  margin-bottom: 16px;
+  border-radius: 2px;
+}
+
+.dialogoCenaLabel {
+  display: inline-block;
+  font-size: 0.7rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--miguel-aco);
+  font-weight: 700;
+  margin-right: 10px;
+}
+
+.dialogoCenaTexto {
+  font-size: 0.92rem;
+  color: var(--miguel-texto-leve);
+  font-style: italic;
+}
+
+.dialogoLocutor {
+  font-family: 'Libre Baskerville', Georgia, serif;
+  font-size: 1.05rem;
+  color: var(--miguel-vermelho);
+  font-weight: 600;
+  margin-bottom: 10px;
+  letter-spacing: 0.01em;
+}
+
+.dialogoTexto {
+  font-size: 1.08rem;
+  line-height: 1.75;
+  color: var(--miguel-texto);
+  padding-left: 16px;
+  border-left: 2px solid var(--miguel-dourado-claro);
+}
+
+.dialogoTexto p {
+  margin: 0 0 10px;
+}
+.dialogoTexto p:last-child {
+  margin-bottom: 0;
+}
+
+.dialogoOriginal {
+  margin-top: 20px;
+  padding-top: 16px;
+  border-top: 1px dashed var(--miguel-borda);
+  font-size: 0.88rem;
+}
+
+.dialogoOriginal summary {
+  cursor: pointer;
+  color: var(--miguel-dourado-escuro);
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  font-size: 0.72rem;
+  margin-bottom: 10px;
+}
+
+.dialogoOriginal > div {
+  margin-top: 12px;
+  padding: 12px 14px;
+  background: var(--miguel-bege-claro);
+  font-style: italic;
+  color: var(--miguel-texto-leve);
+  border-radius: 2px;
+  line-height: 1.7;
+}
+
+/* ============ TESTEMUNHO (Padres, Santos) ============ */
+.testemunho {
+  background: linear-gradient(180deg, #fff 0%, var(--miguel-bege-claro) 100%);
+  border: 1px solid var(--miguel-borda);
+  padding: 28px 32px;
+  border-radius: 3px;
+  box-shadow: 0 2px 8px rgba(43, 52, 65, 0.06);
+  position: relative;
+}
+
+.testemunhoHeader {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding-bottom: 16px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid var(--miguel-borda-leve);
+}
+
+.testemunhoMonograma {
+  flex-shrink: 0;
+  width: 52px;
+  height: 52px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--miguel-azul);
+  color: var(--miguel-dourado-claro);
+  font-family: 'Libre Baskerville', serif;
+  font-size: 1.6rem;
+  font-weight: 700;
+  border-radius: 50%;
+  box-shadow: 0 2px 6px rgba(30, 58, 95, 0.3);
+}
+
+.testemunhoIdentificacao {
+  flex: 1;
+}
+
+.testemunhoAutor {
+  font-family: 'Libre Baskerville', Georgia, serif;
+  font-size: 1.2rem;
+  color: var(--miguel-aco);
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+.testemunhoQualificacao {
+  font-size: 0.82rem;
+  color: var(--miguel-texto-leve);
+  font-style: italic;
+  margin-top: 4px;
+  letter-spacing: 0.02em;
+}
+
+.testemunhoTexto {
+  font-size: 1.04rem;
+  line-height: 1.8;
+  color: var(--miguel-texto);
+  padding: 8px 0 12px;
+  position: relative;
+}
+
+.testemunhoTexto::before {
+  content: '❝';
+  display: block;
+  font-family: Georgia, serif;
+  font-size: 2.4rem;
+  color: var(--miguel-dourado);
+  line-height: 0.6;
+  margin-bottom: 6px;
+  opacity: 0.7;
+}
+
+.testemunhoTexto p {
+  margin: 0 0 12px;
+}
+.testemunhoTexto p:last-child {
+  margin-bottom: 0;
+}
+
+.testemunhoFooter {
+  padding-top: 14px;
+  border-top: 1px dashed var(--miguel-borda-leve);
+  font-size: 0.86rem;
+  color: var(--miguel-texto-leve);
+}
+
+.testemunhoObra {
+  font-style: italic;
+  color: var(--miguel-aco);
+  margin-bottom: 4px;
+}
+
+.testemunhoFonte {
+  font-size: 0.78rem;
+  color: var(--miguel-texto-leve);
+}
+
+.testemunhoOriginal {
+  margin-top: 16px;
+  padding-top: 14px;
+  border-top: 1px dashed var(--miguel-borda);
+  font-size: 0.88rem;
+}
+
+.testemunhoOriginal summary {
+  cursor: pointer;
+  color: var(--miguel-dourado-escuro);
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  font-size: 0.72rem;
+}
+
+.testemunhoOriginal > div {
+  margin-top: 10px;
+  padding: 12px 14px;
+  background: #fff;
+  font-style: italic;
+  color: var(--miguel-texto-leve);
+  border-radius: 2px;
+  line-height: 1.7;
+  border: 1px solid var(--miguel-borda-leve);
+}
+
+/* ============ TEXTO OFICIAL (Magistério, Orações) ============ */
+.textoOficial {
+  background: #fff;
+  border: 2px solid var(--miguel-aco);
+  padding: 40px 48px;
+  border-radius: 2px;
+  position: relative;
+  box-shadow:
+    0 0 0 1px #fff inset,
+    0 0 0 3px var(--miguel-dourado) inset,
+    0 4px 16px rgba(0, 0, 0, 0.1);
+}
+
+.textoOficial::before {
+  content: '';
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  right: 8px;
+  bottom: 8px;
+  border: 1px solid var(--miguel-dourado);
+  pointer-events: none;
+  border-radius: 1px;
+}
+
+.textoOficialHeader {
+  text-align: center;
+  padding-bottom: 20px;
+  margin-bottom: 24px;
+  border-bottom: 1px double var(--miguel-dourado);
+}
+
+.textoOficialBrasao {
+  font-size: 2rem;
+  color: var(--miguel-dourado);
+  margin-bottom: 10px;
+  line-height: 1;
+}
+
+.textoOficialDocumento {
+  font-family: 'Libre Baskerville', Georgia, serif;
+  font-size: 1.1rem;
+  color: var(--miguel-aco);
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  margin-bottom: 6px;
+}
+
+.textoOficialReferencia {
+  font-size: 0.86rem;
+  color: var(--miguel-dourado-escuro);
+  font-style: italic;
+  letter-spacing: 0.04em;
+}
+
+.textoOficialCorpo {
+  font-size: 1.05rem;
+  line-height: 1.85;
+  color: var(--miguel-texto);
+  text-align: justify;
+  hyphens: auto;
+}
+
+.textoOficialCorpo p {
+  margin: 0 0 14px;
+  text-indent: 1.5em;
+}
+.textoOficialCorpo p:first-child {
+  text-indent: 0;
+}
+.textoOficialCorpo p:last-child {
+  margin-bottom: 0;
+}
+
+.textoOficialCorpo em {
+  color: var(--miguel-azul);
+}
+
+.textoOficialFooter {
+  margin-top: 28px;
+  padding-top: 20px;
+  border-top: 1px double var(--miguel-dourado);
+  text-align: center;
+  font-size: 0.86rem;
+  color: var(--miguel-texto-leve);
+}
+
+.textoOficialAutoridade {
+  font-family: 'Libre Baskerville', serif;
+  color: var(--miguel-aco);
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.textoOficialData {
+  font-style: italic;
+  color: var(--miguel-dourado-escuro);
+  letter-spacing: 0.06em;
+}
+
+.textoOficialFontes {
+  margin-top: 12px;
+  font-size: 0.76rem;
+  color: var(--miguel-texto-leve);
+  font-style: italic;
+  line-height: 1.5;
+}
+
+/* ============ RESPONSIVO ============ */
+@media (max-width: 900px) {
+  .biblioteca {
+    padding: 16px 14px 60px;
+  }
+  .tabs {
+    padding: 6px;
+  }
+  .tab {
+    min-width: 100px;
+    padding: 10px 8px;
+    font-size: 0.72rem;
+  }
+  .tabLabel {
+    font-size: 0.7rem;
+  }
+  .capituloTitulo {
+    font-size: 1.5rem;
+  }
+  .dialogo, .testemunho {
+    padding: 22px 20px;
+  }
+  .textoOficial {
+    padding: 28px 24px;
+  }
+  .testemunhoHeader {
+    gap: 14px;
+  }
+  .testemunhoMonograma {
+    width: 44px;
+    height: 44px;
+    font-size: 1.3rem;
+  }
+}
+
+@media (max-width: 560px) {
+  .tabs {
+    flex-direction: column;
+  }
+  .tab {
+    flex-direction: row;
+    justify-content: flex-start;
+    text-align: left;
+    padding: 10px 14px;
+  }
+  .tabIcone {
+    font-size: 1.1rem;
+  }
+  .textoOficialCorpo p {
+    text-indent: 0;
+  }
+}

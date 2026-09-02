@@ -1,0 +1,87 @@
+/* ============================================
+   COMPARAÇÃO VISUAL — ICONOGRAFIA
+   ============================================ */
+
+.comparacao {
+  background: #faf8f4;
+  border: 1px solid #e2dcd0;
+  border-radius: 6px;
+  padding: 28px;
+}
+
+.comparacaoTitulo {
+  font-family: 'Libre Baskerville', Georgia, serif;
+  font-size: 1.08rem;
+  font-weight: 700;
+  color: #3a3530;
+  margin: 0 0 20px;
+  text-align: center;
+}
+
+/* ---------- GRID ---------- */
+
+.comparacaoGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+  margin-bottom: 24px;
+}
+
+.comparacaoItem {
+  margin: 0;
+  background: #ffffff;
+  border: 1px solid #e2dcd0;
+  border-radius: 4px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.comparacaoImagem {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+.comparacaoLegenda {
+  background: #ffffff;
+  padding: 10px 14px;
+  font-family: Georgia, 'Times New Roman', 'Noto Serif', serif;
+  font-size: 0.82rem;
+  color: #6f6758;
+  text-align: center;
+  line-height: 1.5;
+  border-top: 1px solid #e2dcd0;
+  margin-top: auto;
+}
+
+/* ---------- TEXTO ---------- */
+
+.comparacaoTexto {
+  font-family: Georgia, 'Times New Roman', 'Noto Serif', serif;
+  font-size: 0.95rem;
+  line-height: 1.8;
+  color: #3a3530;
+}
+
+.comparacaoTexto p {
+  margin: 0 0 12px;
+}
+
+.comparacaoTexto p:last-child {
+  margin-bottom: 0;
+}
+
+/* ---------- RESPONSIVO ---------- */
+
+@media (max-width: 600px) {
+  .comparacao {
+    padding: 18px;
+  }
+
+  .comparacaoGrid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+}

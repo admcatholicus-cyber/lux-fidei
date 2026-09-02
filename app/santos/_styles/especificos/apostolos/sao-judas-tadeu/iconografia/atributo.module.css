@@ -1,0 +1,111 @@
+/* ============================================
+   ATRIBUTO ICONOGRÁFICO — ICONOGRAFIA
+   ============================================ */
+
+.atributo {
+  background: #ffffff;
+  border: 1px solid #e2dcd0;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+/* ---------- HEADER ---------- */
+
+.atributoHeader {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 18px 24px;
+  background: linear-gradient(135deg, #faf8f4 0%, #f5f1e8 100%);
+  border-bottom: 1px solid #e2dcd0;
+}
+
+.atributoIcone {
+  font-size: 1.4rem;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #ffffff;
+  border: 1px solid #d4c9a8;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.atributoNome {
+  font-family: 'Libre Baskerville', Georgia, serif;
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #3a3530;
+  margin: 0;
+}
+
+/* ---------- CORPO ---------- */
+
+.atributoCorpo {
+  display: flex;
+  gap: 32px;
+  padding: 28px;
+  align-items: flex-start;
+}
+
+.atributoImagemWrap {
+  flex-shrink: 0;
+  width: 320px;
+  background: #faf8f4;
+  border: 1px solid #e2dcd0;
+  border-radius: 4px;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.atributoImagem {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+.atributoTexto {
+  flex: 1;
+  min-width: 0;
+  font-family: Georgia, 'Times New Roman', 'Noto Serif', serif;
+  font-size: 0.98rem;
+  line-height: 1.85;
+  color: #3a3530;
+}
+
+.atributoTexto p {
+  margin: 0 0 14px;
+}
+
+.atributoTexto p:last-child {
+  margin-bottom: 0;
+}
+
+/* ---------- RESPONSIVO ---------- */
+
+@media (max-width: 900px) {
+  .atributoImagemWrap {
+    width: 280px;
+  }
+}
+
+@media (max-width: 768px) {
+  .atributoCorpo {
+    flex-direction: column;
+    padding: 20px;
+    gap: 24px;
+  }
+
+  .atributoImagemWrap {
+    width: 100%;
+    max-width: 360px;
+    margin: 0 auto;
+  }
+
+  .atributoHeader {
+    padding: 14px 18px;
+  }
+}

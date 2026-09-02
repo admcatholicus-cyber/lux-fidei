@@ -1,0 +1,452 @@
+export const meta = {
+  numero: 'XIV',
+  titulo: 'Epístola Viva',
+  subtitulo: 'A carta, as palavras, os Padres e os santos — vinte séculos de voz apostólica',
+};
+
+<PageHeader numero={meta.numero} titulo={meta.titulo} subtitulo={meta.subtitulo} />
+
+<Antologia
+  introducao={<>
+    <p>São Judas Tadeu chegou até nós por duas vozes: a pergunta silenciada nos evangelhos e a carta que o silêncio não pôde calar. A pergunta — <em>"Senhor, por que razão te manifestas a nós e não ao mundo?"</em> — arrancou de Jesus a mais alta doutrina mística do Novo Testamento. A carta — vinte e cinco versículos de urgência apostólica, densidade bíblica e doxologia incomparável — é o monumento literário que garante sua presença permanente na Igreja até o fim dos tempos.</p>
+    <p>Esta antologia reúne as cinco camadas da voz de Judas Tadeu na tradição: a Epístola canônica versículo a versículo, as aparições evangélicas, os testemunhos dos Padres da Igreja, a voz do Magistério ao longo dos séculos, e as meditações dos santos sobre os temas que o apóstolo plantou na consciência cristã. Lida de corrido, é um retrato do apóstolo. Lida devagar, é um programa de vida espiritual.</p>
+  </>}
+  capitulos={[
+    { id: 'cap-epistola',  label: 'I · A Carta' },
+    { id: 'cap-cenáculo',  label: 'II · As Palavras no Cenáculo' },
+    { id: 'cap-padres',    label: 'III · Os Padres da Igreja' },
+    { id: 'cap-doutores',  label: 'IV · Os Doutores e os Papas' },
+    { id: 'cap-santos',    label: 'V · Os Santos e os Místicos' },
+  ]}
+>
+
+<Capitulo id="cap-epistola" numero="I" titulo="A Carta" contagem="25 versículos" aberto>
+
+  <Subtema titulo="Saudação" aberto primeiro>
+
+    <Frase numero={1}
+      original="Iudas Iesu Christi servus, frater autem Iacobi, his qui in Deo Patre dilecti sunt et Iesu Christo servati et vocati."
+      fonte="Epístola de Judas, v.1">
+      Judas, servo de Jesus Cristo e irmão de Tiago, àqueles que são amados em Deus Pai, guardados para Jesus Cristo e chamados.
+    </Frase>
+
+    <Frase numero={2}
+      original="Misericordia vobis et pax et caritas adimpleatur."
+      fonte="Epístola de Judas, v.2">
+      Misericórdia, paz e amor vos sejam concedidos em abundância.
+    </Frase>
+
+  </Subtema>
+
+  <Subtema titulo="O Motivo Urgente">
+
+    <Frase numero={3}
+      original="Carissimi, omnem sollicitudinem faciens scribendi vobis de communi vestra salute, necesse habui scribere vobis deprecans supercertare semel traditae sanctis fidei."
+      fonte="Epístola de Judas, v.3">
+      Amados, empenhava-me em escrever-vos sobre a salvação que nos é comum, quando me vi na necessidade de vos exortar a combater pela fé que foi transmitida de uma vez por todas aos santos.
+    </Frase>
+
+    <Frase numero={4}
+      original="Subintroierunt enim quidam homines, qui olim praescripti sunt in hoc iudicium, impii, Dei nostri gratiam transferentes in luxuriam et solum Dominatorem et Dominum nostrum Iesum Christum negantes."
+      fonte="Epístola de Judas, v.4">
+      Pois infiltraram-se sub-repticiamente alguns homens, desde há muito predestinados para esta condenação, ímpios que convertem a graça do nosso Deus em libertinagem e renegam o único Senhor e Soberano, Jesus Cristo, nosso Senhor.
+    </Frase>
+
+  </Subtema>
+
+  <Subtema titulo="As Lições do Passado">
+
+    <Frase numero={5}
+      original="Commonere autem vos volo, scientes semel omnia, quoniam Iesus populum de terra Aegypti salvans, secundo eos qui non crediderunt perdidit."
+      fonte="Epístola de Judas, v.5">
+      Quero lembrar-vos — embora vós saibais já todas as coisas — que o Senhor, tendo salvo o povo da terra do Egito, destruiu depois os que não creram.
+    </Frase>
+
+    <Frase numero={6}
+      original="Angelos vero qui non servaverunt suum principatum sed dereliquerunt suum domicilium, in iudicium magni diei vinculis aeternis sub caligine reservavit."
+      fonte="Epístola de Judas, v.6">
+      E os anjos que não guardaram sua posição original, mas abandonaram sua própria morada, guarda-os sob trevas, em cadeias eternas, para o julgamento do grande dia.
+    </Frase>
+
+    <Frase numero={7}
+      original="Sicut Sodoma et Gomorra et finitimae civitates simili modo exfornicatae et abeuntes post carnem alteram, propositae sunt exemplum, ignis aeterni poenam sustinentes."
+      fonte="Epístola de Judas, v.7">
+      Assim como Sodoma e Gomorra e as cidades vizinhas, que da mesma forma se entregaram à prostituição e foram atrás de uma carne diferente, estão postas como exemplo, sofrendo a pena do fogo eterno.
+    </Frase>
+
+  </Subtema>
+
+  <Subtema titulo="O Retrato dos Falsos Mestres">
+
+    <Frase numero={8}
+      original="Similiter tamen et hi somniantes carnem quidem maculant, dominationem autem spernunt, maiestatem autem blasphemant."
+      fonte="Epístola de Judas, v.8">
+      Da mesma forma, também esses sonhadores mancham a carne, rejeitam a autoridade e blasfemam das glórias celestes.
+    </Frase>
+
+    <Frase numero={9}
+      original="Cum Michael archangelus cum diabolo disputans altercaretur de Moysi corpore, non est ausus iudicium inferre blasphemiae, sed dixit: Imperet tibi Dominus."
+      fonte="Epístola de Judas, v.9">
+      Quando o arcanjo Miguel disputava com o diabo sobre o corpo de Moisés, não ousou lançar-lhe uma acusação blasfema, mas disse: "O Senhor te repreenda."
+    </Frase>
+
+    <Frase numero={10}
+      original="Hi autem quaecumque quidem ignorant blasphemant, quaecumque autem naturaliter tamquam muta animalia norunt, in his corrumpuntur."
+      fonte="Epístola de Judas, v.10">
+      Esses, ao contrário, blasfemam do que ignoram; e o que conhecem por instinto natural, como animais irracionais, é o que os corrompe.
+    </Frase>
+
+    <Frase numero={11}
+      original="Vae illis, quoniam in via Cain abierunt et errore Balaam mercede effusi sunt et in contradictione Core perierunt."
+      fonte="Epístola de Judas, v.11">
+      Ai deles! Seguiram o caminho de Caim, entregaram-se ao erro de Balaão por causa do salário, e pereceram na rebelião de Corá.
+    </Frase>
+
+    <Frase numero={12}
+      original="Hi sunt in agapis suis maculae convivantes sine timore, semetipsos pascentes, nubes sine aqua quae a ventis circumferuntur, arbores autumnales infructuosae bis mortuae, eradicatae."
+      fonte="Epístola de Judas, v.12">
+      São manchas nos vossos ágapes, comendo sem pudor convosco, apascentando a si mesmos; nuvens sem água, levadas de um lado para outro pelos ventos; árvores de outono sem fruto, duas vezes mortas, arrancadas pela raiz.
+    </Frase>
+
+    <Frase numero={13}
+      original="Fluctus feri maris despumantes suas confusiones, sidera errantia, quibus procella tenebrarum in aeternum servata est."
+      fonte="Epístola de Judas, v.13">
+      Ondas furiosas do mar, que escumam as suas próprias vergonhas; astros errantes, para os quais a escuridão das trevas está reservada para sempre.
+    </Frase>
+
+  </Subtema>
+
+  <Subtema titulo="A Profecia de Enoque">
+
+    <Frase numero={14}
+      original="His autem septimus ab Adam Enoch prophetavit dicens: Ecce venit Dominus in sanctis millibus suis."
+      fonte="Epístola de Judas, v.14">
+      Foi sobre esses que profetizou Enoque, o sétimo desde Adão, quando disse: "Eis que o Senhor vem com suas miríades de santos."
+    </Frase>
+
+    <Frase numero={15}
+      original="Facere iudicium contra omnes et arguere omnes impios de omnibus operibus impietatis eorum, quibus impie egerunt, et de omnibus duris, quae locuti sunt contra eum peccatores impii."
+      fonte="Epístola de Judas, v.15">
+      Para exercer o juízo sobre todos e para condenar todos os ímpios por todos os atos de impiedade que cometeram, e por todas as palavras insolentes que pecadores ímpios proferiram contra ele.
+    </Frase>
+
+    <Frase numero={16}
+      original="Hi sunt murmuratores querulosi secundum desideria sua ambulantes, et os eorum loquitur superba, mirantes personas quaestus causa."
+      fonte="Epístola de Judas, v.16">
+      São pessoas que murmuram e se queixam, que seguem seus próprios desejos, cuja boca profere palavras arrogantes, e que adulam os outros por interesse.
+    </Frase>
+
+  </Subtema>
+
+  <Subtema titulo="A Exortação aos Fiéis">
+
+    <Frase numero={17}
+      original="Vos autem, carissimi, memores estote verborum, quae praedicta sunt ab apostolis Domini nostri Iesu Christi."
+      fonte="Epístola de Judas, v.17">
+      Vós, porém, amados, lembrai-vos das palavras previamente anunciadas pelos apóstolos de nosso Senhor Jesus Cristo.
+    </Frase>
+
+    <Frase numero={18}
+      original="Quoniam dicebant vobis: In novissimo tempore erunt illusores secundum desideria sua ambulantes in impietatibus."
+      fonte="Epístola de Judas, v.18">
+      Eles vos diziam: "No fim dos tempos haverá zombadores que seguirão seus próprios desejos ímpios."
+    </Frase>
+
+    <Frase numero={19}
+      original="Hi sunt qui segregant semetipsos, animales, Spiritum non habentes."
+      fonte="Epístola de Judas, v.19">
+      São esses os que provocam divisões, seres puramente instintivos, que não têm o Espírito.
+    </Frase>
+
+    <Frase numero={20}
+      original="Vos autem, carissimi, superaedificantes vosmetipsos sanctissimae vestrae fidei, in Spiritu Sancto orantes."
+      fonte="Epístola de Judas, v.20">
+      Vós, porém, amados, edificai-vos sobre a vossa santíssima fé, orando no Espírito Santo.
+    </Frase>
+
+    <Frase numero={21}
+      original="Vosmetipsos in dilectione Dei servate, expectantes misericordiam Domini nostri Iesu Christi in vitam aeternam."
+      fonte="Epístola de Judas, v.21">
+      Conservai-vos no amor de Deus, aguardando a misericórdia de nosso Senhor Jesus Cristo para a vida eterna.
+    </Frase>
+
+    <Frase numero={22}
+      original="Et hos quidem arguete diiudicatos, salvate autem de igne rapientes."
+      fonte="Epístola de Judas, v.22">
+      A uns que vacilam, tende compaixão; a outros salvai, arrancando-os do fogo.
+    </Frase>
+
+    <Frase numero={23}
+      original="Aliis autem miseremini in timore, odientes et eam quae carnata est maculatam tunicam."
+      fonte="Epístola de Judas, v.23">
+      A outros ainda, tende misericórdia com temor, odiando até a túnica manchada pela carne.
+    </Frase>
+
+  </Subtema>
+
+  <Subtema titulo="A Doxologia Final">
+
+    <Frase numero={24}
+      original="Ei autem qui potens est servare vos sine peccato et constituere ante conspectum gloriae suae immaculatos in exultatione."
+      fonte="Epístola de Judas, v.24">
+      Àquele que é poderoso para vos guardar sem tropeço e para vos apresentar irrepreensíveis e exultantes diante da sua glória.
+    </Frase>
+
+    <Frase numero={25}
+      original="Soli Deo salvatori nostro per Iesum Christum Dominum nostrum gloria et magnificentia, imperium et potestas ante omne saeculum, et nunc et in omnia saecula saeculorum. Amen."
+      fonte="Epístola de Judas, v.25">
+      Ao único Deus, nosso Salvador, por Jesus Cristo, nosso Senhor, glória, majestade, poder e autoridade, antes de todo o século, agora e por todos os séculos. Amém.
+    </Frase>
+
+  </Subtema>
+
+</Capitulo>
+
+<Capitulo id="cap-cenáculo" numero="II" titulo="As Palavras no Cenáculo" contagem="3 passagens">
+
+  <Subtema titulo="As Palavras no Cenáculo" aberto primeiro>
+
+    <Frase numero={1}
+      original="λέγει αὐτῷ Ἰούδας, οὐχ ὁ Ἰσκαριώτης· Κύριε, τί γέγονεν ὅτι ἡμῖν μέλλεις ἐμφανίζειν σεαυτὸν καὶ οὐχὶ τῷ κόσμῳ;"
+      fonte="João 14,22 — A única fala de Judas Tadeu nos evangelhos">
+      Disse-lhe Judas — não o Iscariotes —: Senhor, por que razão vais manifestar-te a nós e não ao mundo?
+    </Frase>
+
+    <Frase numero={2}
+      original="Καὶ ὅτε ἐγένετο ἡμέρα, προσεφώνησεν τοὺς μαθητὰς αὐτοῦ, καὶ ἐκλεξάμενος ἀπ᾽ αὐτῶν δώδεκα, οὓς καὶ ἀποστόλους ὠνόμασεν... Ἰούδαν Ἰακώβου, καὶ Ἰούδαν Ἰσκαριώθ, ὃς ἐγένετο προδότης."
+      fonte="Lucas 6,13-16 — A eleição dos Doze">
+      Quando amanheceu, chamou seus discípulos e escolheu doze deles, a quem chamou também apóstolos... Judas, filho de Tiago, e Judas Iscariotes, que se tornou traidor.
+    </Frase>
+
+    <Frase numero={3}
+      original="Καὶ ὅτε εἰσῆλθον, εἰς τὸ ὑπερῷον ἀνέβησαν... Πέτρος καὶ Ἰωάννης καὶ Ἰάκωβος καὶ Ἀνδρέας, Φίλιππος καὶ Θωμᾶς, Βαρθολομαῖος καὶ Μαθθαῖος, Ἰάκωβος Ἁλφαίου καὶ Σίμων ὁ ζηλωτὴς καὶ Ἰούδας Ἰακώβου. Οὗτοι πάντες ἦσαν προσκαρτεροῦντες ὁμοθυμαδὸν τῇ προσευχῇ."
+      fonte="Atos 1,13-14 — Judas Tadeu no Cenáculo antes da Pentecostes">
+      Quando chegaram, subiram ao cenáculo... Pedro e João, Tiago e André, Filipe e Tomé, Bartolomeu e Mateus, Tiago filho de Alfeu, Simão Zealota e Judas filho de Tiago. Todos esses perseveravam unânimes na oração.
+    </Frase>
+
+  </Subtema>
+
+</Capitulo>
+
+<Capitulo id="cap-padres" numero="III" titulo="Os Padres da Igreja" contagem="9 testemunhos">
+
+  <Subtema titulo="Os Primeiros Séculos" aberto primeiro>
+
+    <Frase numero={1}
+      original="Iudas, qui Iacobi frater fuit, epistolam quidem scripsit paucorum versuum, sed plenam verborum caelestis gratiae."
+      fonte="Clemente de Alexandria — Hypotyposeis, citado por Eusébio, HE VI,14,1">
+      Judas, que foi irmão de Tiago, escreveu uma epístola de poucos versículos, mas cheia de palavras da graça celestial.
+    </Frase>
+
+    <Frase numero={2}
+      original="Iudas epistolam scripsit paucorum quidem versuum, sed plenam verborum caelestis gratiae virtutis, qui in principio ait: Iudas Iesu Christi servus, frater autem Iacobi."
+      fonte="Orígenes — In Matthaeum, Commentariorum Series, Lib. X">
+      Judas escreveu uma epístola de poucos versículos, mas plena de palavras de graça celestial e de virtude, que começa assim: "Judas, servo de Jesus Cristo e irmão de Tiago."
+    </Frase>
+
+    <Frase numero={3}
+      original="Iudas qui et Thaddaeus, frater Iacobi, de Iudaea, et Mesopotamiae, et Persidis praedicasse, et in Ararat ibi martyrio coronatum esse perhibetur."
+      fonte="Orígenes — Commentarium in Genesim, citado por tradição subsequente">
+      Judas, que também se chama Tadeu, irmão de Tiago — diz-se que pregou na Judeia, na Mesopotâmia e na Pérsia, e que ali, em Ararat, foi coroado com o martírio.
+    </Frase>
+
+  </Subtema>
+
+  <Subtema titulo="A Alta Patrística">
+
+    <Frase numero={4}
+      original="Iudas epistola, quae de septem catholicis una est, etsi a plerisque respuitur, auctoritate tamen antiqua et ab his qui Spiritum Sanctum sapiunt digna iudicatur lectione."
+      fonte="Eusébio de Cesareia — Historia Ecclesiastica, II,23,25">
+      A Epístola de Judas, uma das sete católicas, embora rejeitada por muitos, é considerada de autoridade antiga e digna de leitura por aqueles que têm o discernimento do Espírito Santo.
+    </Frase>
+
+    <Frase numero={5}
+      original="Inter has est et epistola Iudae, quae cum a nonnullis quasi spuria proiiciatur, propter locum de Enoch allegatum, tamen auctoritatem vetustam meruit et in canone ponitur."
+      fonte="São Jerônimo — De Viris Illustribus, cap. IV">
+      Entre estas encontra-se a Epístola de Judas, que, embora alguns a rejeitem como espúria por causa da passagem de Enoque citada, todavia goza de autoridade antiga e é colocada no cânone.
+    </Frase>
+
+    <Frase numero={6}
+      original="Hanc epistolam Iudas apostolus scripsit, qui et Thaddaeus cognominatus est, frater Iacobi minoris, filius Mariae sororis Matris Domini."
+      fonte="São Jerônimo — Commentarius in Epistolam ad Galatas, Praefatio">
+      Esta epístola foi escrita pelo apóstolo Judas, chamado também Tadeu, irmão de Tiago o Menor, filho de Maria, irmã da Mãe do Senhor.
+    </Frase>
+
+  </Subtema>
+
+  <Subtema titulo="A Tradição Medieval">
+
+    <Frase numero={7}
+      original="Iudas frater Iacobi, spiritu sancto plenus, edidit epistolam brevem, sed supra modum utilem omnibus Christianis, in qua apostolicae fidei custodiam diligentissime commendat."
+      fonte="São Beda — In Epistolam Iudae Expositio, Praefatio">
+      Judas, irmão de Tiago, cheio do Espírito Santo, compôs uma epístola breve, mas extraordinariamente útil a todos os cristãos, na qual recomenda com extremo cuidado a custódia da fé apostólica.
+    </Frase>
+
+    <Frase numero={8}
+      original="Beatus Iudas apostolus et martyr, cognomento Thaddaeus, patria Galilaeus, per Persas et Mesopotamiam praedicavit Evangelium Christi, ibique martyrio coronatus est."
+      fonte="São Beda — Martyrologium, 28 octobris">
+      O bem-aventurado apóstolo e mártir Judas, cognominado Tadeu, galileu de pátria, pregou o Evangelho de Cristo através da Pérsia e da Mesopotâmia, e ali foi coroado com o martírio.
+    </Frase>
+
+    <Frase numero={9}
+      original="Simon et Iudas apostoli in Perside praedicaverunt et ibi ab infidelibus occisi sunt. Iudas autem ante passionem suam epistolam scripsit ad omnes fideles, in qua eos de fide et moribus instruxit."
+      fonte="Jacopo de Varazze — Legenda Áurea, cap. CLI, De Simone et Iuda">
+      Os apóstolos Simão e Judas pregaram na Pérsia e ali foram mortos pelos infiéis. Judas, porém, antes de sua paixão, escreveu uma epístola a todos os fiéis, na qual os instruiu sobre a fé e os costumes.
+    </Frase>
+
+  </Subtema>
+
+</Capitulo>
+
+<Capitulo id="cap-doutores" numero="IV" titulo="Os Doutores e os Papas" contagem="8 testemunhos">
+
+  <Subtema titulo="A Voz do Magistério" aberto primeiro>
+
+    <Frase numero={1}
+      original="In epistola Iudae commendatur fides semel tradita sanctis, quam oportet nos defendere contra eos qui earn depravant. Fides autem est fundamentum totius vitae spiritualis."
+      fonte="São Tomás de Aquino — Expositio super Epistolas Catholicas, In Epistolam Iudae, Prooemium">
+      Na Epístola de Judas recomenda-se a fé transmitida de uma vez por todas aos santos, que devemos defender contra os que a corrompem. Pois a fé é o fundamento de toda a vida espiritual.
+    </Frase>
+
+    <Frase numero={2}
+      original="Apostolus Iudas ostendit quod fides non est privata opinio uniuscuiusque, sed est depositum publicum et commune omnium fidelium, quod oportet conservare integrum et illaesum."
+      fonte="São Tomás de Aquino — Summa Theologiae, II-II, q.5, a.3, ad 2">
+      O apóstolo Judas mostra que a fé não é opinião privada de cada um, mas depósito público e comum a todos os fiéis, que cumpre conservar íntegro e ileso.
+    </Frase>
+
+    <Frase numero={3}
+      original="Traditio Apostolica est velut fluvius perennis, qui ab ipsis Apostolis usque ad nos sine interruptione decurrit; et Epistola Iudae est unum ex clarissimis testimoniis huius traditionis inviolabilis."
+      fonte="São Roberto Belarmino — De Controversiis, Lib. III, De Verbo Dei, cap. IV">
+      A Tradição Apostólica é como um rio perene que flui dos próprios Apóstolos até nós sem interrupção; e a Epístola de Judas é um dos mais claros testemunhos desta tradição inviolável.
+    </Frase>
+
+    <Frase numero={4}
+      fonte="São João Paulo II — Audiência Geral, 10 de outubro de 2001">
+      Judas, chamado Tadeu, é o apóstolo do qual sabemos muito pouco. Mas o pouco que sabemos é suficiente para compreender que foi testemunha fiel do Senhor, disposto a seguir Cristo até o martírio. A sua única pergunta na Última Ceia revela um coração que desejava arder de amor por Deus.
+    </Frase>
+
+    <Frase numero={5}
+      fonte="São João Paulo II — Audiência Geral, 10 de outubro de 2001">
+      A Epístola de Judas é um apelo apaixonado à fidelidade. O apóstolo pede que os cristãos se edifiquem sobre a fé santíssima, orem no Espírito Santo e permaneçam no amor de Deus. São três pilares que sustentam toda a vida cristã autêntica: fé, oração e caridade.
+    </Frase>
+
+    <Frase numero={6}
+      fonte="Bento XVI — Audiência Geral, 11 de outubro de 2006">
+      Judas Tadeu nos transmitiu uma carta que é um pequeno testemunho de grande intensidade. Ele nos exorta a combater pela fé transmitida de uma vez por todas aos santos. Esta é a tarefa permanente da Igreja: guardar o depósito da fé e transmiti-lo íntegro às gerações futuras.
+    </Frase>
+
+    <Frase numero={7}
+      fonte="Bento XVI — Audiência Geral, 11 de outubro de 2006">
+      A doxologia final da Carta de Judas é uma das mais belas do Novo Testamento. Ela nos lembra que Deus é o único que pode guardar-nos sem tropeço e apresentar-nos irrepreensíveis diante da sua glória. Não é nossa virtude que nos salva — é a sua potência amorosa.
+    </Frase>
+
+    <Frase numero={8}
+      fonte="Papa Francisco — Homilia na Festa dos Santos Simão e Judas Tadeu, 28 de outubro de 2013">
+      São Judas Tadeu nos ensina que não há causa perdida para quem confia em Deus. Ele mesmo foi esquecido por séculos — e tornou-se o patrono dos esquecidos. A Igreja não descarta ninguém. Cristo não descarta ninguém. Este apóstolo silencioso nos diz com sua vida: a graça de Deus pode chegar onde nenhuma esperança humana chega.
+    </Frase>
+
+  </Subtema>
+
+</Capitulo>
+
+<Capitulo id="cap-santos" numero="V" titulo="Os Santos e os Místicos" contagem="15 citações">
+
+  <Subtema titulo="Sobre a Esperança" aberto primeiro>
+
+    <Frase numero={1}
+      original="Spes est certa expectatio futurae beatitudinis, proveniens ex gratia Dei et meritis praecedentibus."
+      fonte="Santo Tomás de Aquino — Summa Theologiae, II-II, q.17, a.1">
+      A esperança é a expectativa certa da bem-aventurança futura, proveniente da graça de Deus e dos méritos precedentes.
+    </Frase>
+
+    <Frase numero={2}
+      original="Spera in Domino et fac bonitatem, et inhabita terram et pasceris in divitiis eius."
+      fonte="Santo Agostinho — Enarrationes in Psalmos, Ps. 36,3 — meditação sobre a esperança apostólica">
+      Espera no Senhor e pratica o bem; habita na terra e apascenta-te na sua riqueza. Esta é a divisa do apóstolo que não viu os frutos imediatos de seu trabalho, mas confiou que a semente brotaria.
+    </Frase>
+
+    <Frase numero={3}
+      fonte="Santa Teresa de Ávila — Castelo Interior (Moradas Sétimas), cap. I">
+      Quando o Senhor disse que viria habitar na alma que o ama e guarda sua palavra, disse mais do que toda a teologia consegue explicar. É a morada que nenhum poder do mundo pode destruir — nem a perseguição, nem o martírio, nem o esquecimento dos homens.
+    </Frase>
+
+    <Frase numero={4}
+      fonte="São João da Cruz — Cântico Espiritual, estrofe XI, comentário">
+      A alma que espera em Deus não espera no vazio — espera Naquele que já veio morar nela. A pergunta do apóstolo na Última Ceia — "por que te manifesta a nós e não ao mundo?" — recebeu a resposta mais alta: porque a manifestação de Deus é habitação, não espetáculo.
+    </Frase>
+
+    <Frase numero={5}
+      original="Qui sperat in Domino non confundetur. Haec est spes quae non confundit, quia caritas Dei diffusa est in cordibus nostris per Spiritum Sanctum."
+      fonte="São Pedro Damião — Sermo XLVI, De Apostolis">
+      Quem espera no Senhor não será confundido. Esta é a esperança que não envergonha, porque o amor de Deus foi derramado em nossos corações pelo Espírito Santo — o mesmo Espírito que desceu sobre Judas Tadeu no Cenáculo.
+    </Frase>
+
+  </Subtema>
+
+  <Subtema titulo="Sobre o Martírio">
+
+    <Frase numero={6}
+      original="Martyrium est quoddam perfectissimum opus caritatis, secundum illud Ioannis: Maiorem hac dilectionem nemo habet, ut animam suam ponat quis pro amicis suis."
+      fonte="Santo Tomás de Aquino — Summa Theologiae, II-II, q.124, a.3">
+      O martírio é a obra mais perfeita da caridade, segundo aquilo de João: "Ninguém tem amor maior do que aquele que dá a própria vida pelos amigos."
+    </Frase>
+
+    <Frase numero={7}
+      original="Sanguis martyrum est semen Christianorum. Plures efficimur quotiens metimur a vobis: semen est sanguis Christianorum."
+      fonte="Tertuliano — Apologeticum, cap. L">
+      O sangue dos mártires é a semente dos cristãos. Tornamo-nos mais numerosos cada vez que somos ceifados por vós: o sangue dos cristãos é semente.
+    </Frase>
+
+    <Frase numero={8}
+      original="Martyres non solum testimonio sanguinis sui, sed etiam vitae integritate et verbis veritatis testantur Christum; ita ut mors eorum sit quasi consummatio et sigillum totius vitae."
+      fonte="São Cipriano de Cartago — De Exhortatione Martyrii, cap. III">
+      Os mártires testemunham Cristo não apenas pelo testemunho do seu sangue, mas também pela integridade de sua vida e pelas palavras da verdade; de modo que sua morte é como a consumação e o selo de toda a vida.
+    </Frase>
+
+    <Frase numero={9}
+      fonte="Santa Edith Stein (Teresa Benedita da Cruz) — A Ciência da Cruz, cap. IX">
+      Quem foi chamado a participar do martírio foi chamado à forma mais alta de configuração a Cristo. O apóstolo que derramou seu sangue na Pérsia ou na Armênia completou na carne o que faltava à paixão de Cristo — não porque esta fosse insuficiente, mas porque a Igreja é o Corpo que continua padecendo e glorificando.
+    </Frase>
+
+    <Frase numero={10}
+      original="Inter omnia opera bona praecipuum est martyrium, in quo homo Deo dat id quod habet pretiosissimum, scilicet vitam propriam, propter Christum."
+      fonte="São Boaventura — Collationes in Hexaëmeron, Collatio XXII">
+      Entre todas as boas obras, a principal é o martírio, no qual o homem dá a Deus o que tem de mais precioso, a saber, a própria vida, por causa de Cristo.
+    </Frase>
+
+  </Subtema>
+
+  <Subtema titulo="Sobre a Fé Inabalável">
+
+    <Frase numero={11}
+      original="Fides est substantia rerum sperandarum, argumentum non apparentium. In hac enim testimonium consecuti sunt seniores."
+      fonte="Santo Agostinho — De Fide et Symbolo, cap. I — comentando Hebreus 11,1">
+      A fé é a substância das coisas que se esperam, a prova das que não se veem. Nela os antigos receberam testemunho favorável. Foi nela que os apóstolos caminharam pelas estradas do mundo sem ver o fruto final de seu trabalho.
+    </Frase>
+
+    <Frase numero={12}
+      original="Qui tenet fidem, tenet omnia. Qui amittit fidem, nihil habet quod teneat. Propter hoc Iudas apostolus tanto ardore commendat nobis fidem semel sanctis traditam."
+      fonte="São Leão Magno — Sermo LXXVI, In Natali Apostolorum">
+      Quem guarda a fé, guarda tudo. Quem perde a fé, nada tem que guardar. Por isso o apóstolo Judas nos recomenda com tanto ardor a fé transmitida de uma vez por todas aos santos.
+    </Frase>
+
+    <Frase numero={13}
+      fonte="São Francisco de Sales — Introdução à Vida Devota, Parte I, cap. I">
+      A devoção verdadeira não consiste em sentimentos, mas em fidelidade. O apóstolo que perguntou na Última Ceia e depois foi para o Oriente pregar sem garantias humanas era devoto não pelos sentimentos que sentia, mas pela fidelidade que praticava — até a morte.
+    </Frase>
+
+    <Frase numero={14}
+      fonte="São Pio X — Encíclica Pascendi Dominici Gregis, §55 — sobre a custódia do depósito da fé">
+      A fé foi transmitida de uma vez por todas aos santos — são palavras do apóstolo Judas, e são palavras que a Igreja deve gravar em seu coração. O depósito não é argila que cada geração possa modelar segundo sua preferência; é ouro que cada geração recebe e transmite, polido pelo uso mas não transformado em outra coisa.
+    </Frase>
+
+    <Frase numero={15}
+      fonte="São João Henry Newman — Desenvolvimento da Doutrina Cristã, cap. I, §1">
+      Uma ideia que é viva cresce; uma ideia que não cresce está morta. Mas crescer não é mudar de substância — é o mesmo depósito apostólico que Judas Tadeu recomendou se desdobrando ao longo da história, revelando facetas que o primeiro século não teve tempo de explorar, sem jamais contradizer o que foi transmitido de uma vez por todas.
+    </Frase>
+
+  </Subtema>
+
+</Capitulo>
+
+</Antologia>

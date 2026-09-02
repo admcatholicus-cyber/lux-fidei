@@ -1,0 +1,307 @@
+/* ============================================================
+   MAPA DOS SANTUÁRIOS MIGUELINOS
+   Mapa mundi SVG com pontos interativos
+   ============================================================ */
+
+.container {
+  position: relative;
+  max-width: 1200px;
+  margin: 100px auto;
+  padding: 60px 40px;
+  background: linear-gradient(180deg, #0f1420 0%, #1a1f2e 100%);
+  color: #f4e7c8;
+  border: 1px solid rgba(201, 169, 97, 0.3);
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.5);
+
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 1.2s ease, transform 1.2s ease;
+}
+
+.container.visivel {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Header */
+.header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.suprat {
+  display: inline-block;
+  font-size: 0.7rem;
+  letter-spacing: 0.4em;
+  text-transform: uppercase;
+  color: #d4b872;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+.titulo {
+  font-family: Georgia, 'Libre Baskerville', serif;
+  font-size: clamp(2rem, 4vw, 2.8rem);
+  font-weight: 400;
+  margin: 0 0 14px;
+  letter-spacing: 0.02em;
+  color: #f4e7c8;
+}
+
+.subtitulo {
+  font-family: Georgia, serif;
+  font-style: italic;
+  font-size: 1rem;
+  color: #d4b872;
+  max-width: 700px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* Mapa */
+.mapaWrapper {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 100 / 60;
+  margin: 0 auto;
+  border: 1px solid rgba(201, 169, 97, 0.25);
+  overflow: hidden;
+  background: #0a1220;
+}
+
+.mapa {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+/* Pontos dos santuários */
+.ponto {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  width: 24px;
+  height: 24px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  padding: 0;
+  opacity: 0;
+  animation: pontoSurge 0.8s ease forwards;
+}
+
+@keyframes pontoSurge {
+  from { opacity: 0; transform: translate(-50%, -50%) scale(0); }
+  to { opacity: 1; transform: translate(-50%, -50%) scale(1); }
+}
+
+.pontoNucleo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 10px;
+  height: 10px;
+  background: radial-gradient(circle, #f4d98a 0%, #c9a961 70%);
+  border-radius: 50%;
+  box-shadow:
+    0 0 8px rgba(244, 217, 138, 0.9),
+    0 0 16px rgba(201, 169, 97, 0.5);
+  transition: all 0.3s ease;
+  z-index: 2;
+}
+
+.pontoPulso {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: rgba(201, 169, 97, 0.4);
+  animation: pulsoAnimado 2.5s ease-in-out infinite;
+  z-index: 1;
+}
+
+@keyframes pulsoAnimado {
+  0% { transform: translate(-50%, -50%) scale(0.5); opacity: 1; }
+  100% { transform: translate(-50%, -50%) scale(2.5); opacity: 0; }
+}
+
+.ponto:hover .pontoNucleo,
+.pontoAtivo .pontoNucleo {
+  width: 14px;
+  height: 14px;
+  background: radial-gradient(circle, #ffe89e 0%, #f4d98a 70%);
+  box-shadow:
+    0 0 16px rgba(255, 232, 158, 1),
+    0 0 32px rgba(244, 217, 138, 0.7);
+}
+
+/* Painel flutuante de detalhes */
+.painel {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  width: 320px;
+  max-width: calc(100% - 40px);
+  background: linear-gradient(180deg, rgba(15, 20, 32, 0.98), rgba(26, 31, 46, 0.98));
+  border: 1px solid rgba(201, 169, 97, 0.5);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(10px);
+  z-index: 10;
+  animation: painelSurge 0.4s ease;
+}
+
+@keyframes painelSurge {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.painelFechar {
+  position: absolute;
+  top: 8px;
+  right: 12px;
+  width: 28px;
+  height: 28px;
+  background: rgba(0, 0, 0, 0.5);
+  color: #d4b872;
+  border: 1px solid rgba(201, 169, 97, 0.4);
+  cursor: pointer;
+  font-size: 1.2rem;
+  line-height: 1;
+  z-index: 3;
+  transition: all 0.3s ease;
+}
+
+.painelFechar:hover {
+  background: #c9a961;
+  color: #0f1420;
+}
+
+.painelImagem {
+  width: 100%;
+  height: 160px;
+  background-size: cover;
+  background-position: center;
+  border-bottom: 1px solid rgba(201, 169, 97, 0.3);
+}
+
+.painelInfo {
+  padding: 20px;
+}
+
+.painelPais {
+  font-size: 0.7rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: #d4b872;
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+
+.painelNome {
+  font-family: Georgia, serif;
+  font-size: 1.25rem;
+  color: #f4e7c8;
+  margin: 0 0 12px;
+  line-height: 1.2;
+}
+
+.painelFundacao {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding: 10px 0;
+  border-top: 1px solid rgba(201, 169, 97, 0.2);
+  border-bottom: 1px solid rgba(201, 169, 97, 0.2);
+  margin-bottom: 14px;
+  color: #ede1c3;
+  font-size: 0.9rem;
+}
+
+.painelLabel {
+  font-size: 0.65rem;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: #d4b872;
+  font-weight: 600;
+}
+
+.painelDescricao {
+  font-family: Georgia, serif;
+  font-style: italic;
+  color: #d8ccae;
+  font-size: 0.9rem;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Legenda inferior */
+.legenda {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 8px;
+  margin-top: 40px;
+  padding-top: 30px;
+  border-top: 1px solid rgba(201, 169, 97, 0.2);
+}
+
+.legendaItem {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 14px;
+  background: transparent;
+  border: 1px solid transparent;
+  color: #d8ccae;
+  cursor: pointer;
+  text-align: left;
+  transition: all 0.3s ease;
+  font-family: Georgia, serif;
+}
+
+.legendaItem:hover,
+.legendaItemAtivo {
+  background: rgba(201, 169, 97, 0.1);
+  border-color: rgba(201, 169, 97, 0.3);
+}
+
+.legendaMarker {
+  color: #d4b872;
+  font-size: 0.8rem;
+}
+
+.legendaNome {
+  flex: 1;
+  font-size: 0.9rem;
+  color: #f4e7c8;
+}
+
+.legendaPais {
+  font-size: 0.75rem;
+  color: #a89b7f;
+  letter-spacing: 0.1em;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .container {
+    padding: 40px 20px;
+    margin: 60px 10px;
+  }
+
+  .painel {
+    position: relative;
+    bottom: auto;
+    right: auto;
+    width: 100%;
+    max-width: none;
+    margin-top: 20px;
+  }
+
+  .ponto {
+    width: 20px;
+    height: 20px;
+  }
+}

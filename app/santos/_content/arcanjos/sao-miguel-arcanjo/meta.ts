@@ -1,0 +1,22 @@
+export const meta = {
+  nome: 'São Miguel Arcanjo',
+  titulo: 'ARCANJO · PRÍNCIPE DOS EXÉRCITOS CELESTES · QUIS UT DEUS',
+  subtitulo: '"Quem é como Deus?" — o nome que é uma pergunta e uma proclamação',
+  categoria: 'arcanjos',
+  slug: 'sao-miguel-arcanjo',
+  abas: [
+    { slug: 'historia',        label: 'História'        },
+    { slug: 'escrituras',      label: 'Escrituras'      },
+    { slug: 'teologia',        label: 'Teologia'        },
+    { slug: 'tradicao',        label: 'Tradição'        },
+    { slug: 'aparicoes',       label: 'Aparições'       },
+    { slug: 'devocao',         label: 'Devoção'         },
+    { slug: 'liturgia',        label: 'Liturgia'        },
+    { slug: 'arte',            label: 'Arte'            },
+    { slug: 'frases',          label: 'Frases'          },
+    { slug: 'espiritualidade', label: 'Espiritualidade' },
+    { slug: 'presenca-mundial',label: 'Presença Mundial'},
+    { slug: 'reliquias',       label: 'Relíquias'       },
+    { slug: 'curiosidades',    label: 'Curiosidades'    },
+  ],
+};

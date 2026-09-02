@@ -1,0 +1,672 @@
+/* ============================================================
+   BIBLIOTECA LUCAS — Antologia de textos
+   Paleta: dourado #b08a3c · bege #faf8f4 · vermelho lucano #7a2320
+   ============================================================ */
+
+.biblioteca {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 20px 16px 80px;
+  font-family: Georgia, 'Times New Roman', 'Noto Serif', serif;
+  color: #3a3530;
+}
+
+/* ---------- Introdução ---------- */
+.introducao {
+  max-width: 780px;
+  margin: 0 auto 56px;
+  padding: 32px 28px;
+  background: #faf8f4;
+  border-left: 3px solid #b08a3c;
+  border-right: 3px solid #b08a3c;
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: #4a4238;
+  text-align: justify;
+}
+
+.introducao p {
+  margin: 0 0 14px;
+}
+
+.introducao p:last-child {
+  margin-bottom: 0;
+}
+
+/* ---------- Navegação ---------- */
+.navegacao {
+  max-width: 900px;
+  margin: 0 auto 72px;
+  padding: 28px 24px;
+  background: #fffdf8;
+  border: 1px solid #e2dcd0;
+  border-radius: 2px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.04);
+}
+
+.navTitulo {
+  text-align: center;
+  font-family: 'Libre Baskerville', Georgia, serif;
+  font-size: 0.78rem;
+  letter-spacing: 0.32em;
+  text-transform: uppercase;
+  color: #b08a3c;
+  margin-bottom: 22px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid #ece8df;
+}
+
+.navLista {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 12px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.navItem { margin: 0; }
+
+.navLink {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 16px;
+  background: #faf8f4;
+  border: 1px solid #ece8df;
+  border-radius: 2px;
+  color: #3a3530;
+  text-decoration: none;
+  font-size: 0.92rem;
+  transition: all 0.18s ease;
+}
+
+.navLink:hover {
+  background: #fff;
+  border-color: #b08a3c;
+  transform: translateY(-1px);
+  box-shadow: 0 3px 10px rgba(176, 138, 60, 0.15);
+}
+
+.navIcone {
+  font-size: 1.4rem;
+  line-height: 1;
+  flex-shrink: 0;
+  color: #b08a3c;
+}
+
+.navLabel {
+  font-family: 'Libre Baskerville', Georgia, serif;
+  font-weight: 400;
+}
+
+/* ---------- Capítulos ---------- */
+.capitulo {
+  margin-bottom: 80px;
+  scroll-margin-top: 80px;
+}
+
+.capHeader {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  padding: 28px 32px;
+  margin-bottom: 40px;
+  background: linear-gradient(135deg, #1a1614 0%, #2b2520 100%);
+  color: #f5efe0;
+  border-radius: 2px;
+  position: relative;
+}
+
+.capHeader::before {
+  content: '';
+  position: absolute;
+  left: 0; top: 0; bottom: 0;
+  width: 4px;
+  background: #b08a3c;
+}
+
+.capIcone {
+  font-size: 2.8rem;
+  line-height: 1;
+  color: #d4b872;
+  flex-shrink: 0;
+}
+
+.capTextos { flex: 1; }
+
+.capSuprat {
+  font-size: 0.72rem;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: #d4b872;
+  margin-bottom: 6px;
+}
+
+.capTitulo {
+  font-family: 'Libre Baskerville', Georgia, serif;
+  font-size: 1.85rem;
+  font-weight: 400;
+  margin: 0 0 4px;
+  color: #f5efe0;
+  line-height: 1.2;
+}
+
+.capContagem {
+  font-size: 0.82rem;
+  color: #a89e8a;
+  font-style: italic;
+}
+
+.capCorpo {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+/* ---------- Subseção ---------- */
+.subsecao {
+  padding: 0 4px;
+}
+
+.subTitulo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: 'Libre Baskerville', Georgia, serif;
+  font-size: 1.15rem;
+  font-weight: 400;
+  color: #7a2320;
+  margin: 0 0 24px;
+  padding-bottom: 10px;
+  border-bottom: 1px dotted #d4c9a8;
+}
+
+.subOrn {
+  color: #b08a3c;
+  font-size: 0.7rem;
+}
+
+.subCorpo {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+/* ============================================================
+   VOZ DE LUCAS — Prólogos e seções nós (Lucas em 1ª pessoa)
+   ============================================================ */
+.vozLucas {
+  position: relative;
+  padding: 32px 34px 26px;
+  background: #fdfaf3;
+  border: 1px solid #d4c9a8;
+  border-radius: 2px;
+  box-shadow: 0 2px 12px rgba(176, 138, 60, 0.08);
+}
+
+.vozLucas::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, #b08a3c, transparent);
+}
+
+.vozSelo {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 5px 12px;
+  background: #7a2320;
+  color: #fff5e0;
+  font-size: 0.7rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  border-radius: 2px;
+  margin-bottom: 18px;
+}
+
+.vozSeloPena {
+  font-size: 0.95rem;
+  color: #d4b872;
+}
+
+.vozContexto {
+  font-size: 0.88rem;
+  color: #6f6758;
+  font-style: italic;
+  margin-bottom: 18px;
+  padding-bottom: 14px;
+  border-bottom: 1px dotted #d4c9a8;
+  line-height: 1.6;
+}
+
+.vozTexto {
+  font-family: 'Libre Baskerville', Georgia, serif;
+  font-size: 1.15rem;
+  line-height: 1.85;
+  color: #2b2520;
+  padding: 8px 4px 18px;
+  font-weight: 400;
+}
+
+.vozTexto p {
+  margin: 0 0 14px;
+}
+.vozTexto p:last-child { margin-bottom: 0; }
+
+.vozOriginal {
+  margin: 8px 0 18px;
+  padding: 12px 16px;
+  background: #f5f1e8;
+  border-left: 2px solid #b08a3c;
+  border-radius: 2px;
+  font-size: 0.9rem;
+}
+
+.vozOriginalSummary {
+  cursor: pointer;
+  font-family: 'Libre Baskerville', Georgia, serif;
+  font-size: 0.78rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #b08a3c;
+  padding: 4px 0;
+  outline: none;
+}
+
+.vozOriginalTexto {
+  margin-top: 10px;
+  padding-top: 10px;
+  border-top: 1px dotted #d4c9a8;
+  font-style: italic;
+  color: #4a4238;
+  line-height: 1.7;
+}
+
+.vozReferencia {
+  text-align: right;
+  font-size: 0.85rem;
+  color: #7a2320;
+  font-style: italic;
+  padding-top: 10px;
+  border-top: 1px solid #ece8df;
+}
+
+.vozRefOrn {
+  color: #b08a3c;
+  margin-right: 6px;
+}
+
+/* ============================================================
+   PASSAGEM LUCANA — Textos exclusivos do Evangelho de Lucas
+   ============================================================ */
+.passagem {
+  position: relative;
+  padding: 30px 32px 24px;
+  background: #ffffff;
+  border: 1px solid #e2dcd0;
+  border-radius: 2px;
+  box-shadow: 0 1px 6px rgba(0,0,0,0.05);
+}
+
+.passHeader {
+  margin-bottom: 18px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid #ece8df;
+}
+
+.passSelo {
+  display: inline-block;
+  padding: 3px 10px;
+  background: #b08a3c;
+  color: #fff;
+  font-size: 0.66rem;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  border-radius: 2px;
+  margin-bottom: 12px;
+}
+
+.passTitulo {
+  font-family: 'Libre Baskerville', Georgia, serif;
+  font-size: 1.25rem;
+  font-weight: 400;
+  color: #2b2520;
+  margin: 0 0 6px;
+  line-height: 1.3;
+}
+
+.passContexto {
+  font-size: 0.88rem;
+  color: #6f6758;
+  font-style: italic;
+  line-height: 1.6;
+}
+
+.passLocutor {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 8px;
+  margin-bottom: 14px;
+  padding: 6px 12px;
+  background: #faf8f4;
+  border-left: 2px solid #7a2320;
+  border-radius: 0 2px 2px 0;
+}
+
+.passLocutorRotulo {
+  font-size: 0.72rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #7a2320;
+}
+
+.passLocutorNome {
+  font-family: 'Libre Baskerville', Georgia, serif;
+  font-size: 0.95rem;
+  color: #2b2520;
+  font-style: italic;
+}
+
+.passTexto {
+  font-family: 'Libre Baskerville', Georgia, serif;
+  font-size: 1.08rem;
+  line-height: 1.85;
+  color: #2b2520;
+  padding: 10px 16px 14px;
+  border-left: 3px solid #d4c9a8;
+  background: #fdfbf6;
+  border-radius: 0 2px 2px 0;
+  font-style: italic;
+}
+
+.passTexto p {
+  margin: 0 0 12px;
+}
+.passTexto p:last-child { margin-bottom: 0; }
+
+.passRodape {
+  margin-top: 16px;
+  padding-top: 12px;
+  border-top: 1px dotted #d4c9a8;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.passReferencia {
+  font-size: 0.88rem;
+  color: #7a2320;
+  font-weight: 500;
+}
+
+.passObservacao {
+  font-size: 0.82rem;
+  color: #6f6758;
+  font-style: italic;
+  line-height: 1.6;
+}
+
+/* ============================================================
+   TESTEMUNHO — Padres, Doutores, Santos sobre Lucas
+   ============================================================ */
+.testemunho {
+  position: relative;
+  padding: 32px 34px 26px;
+  background: linear-gradient(180deg, #fffdf8 0%, #faf8f4 100%);
+  border: 1px solid #e2dcd0;
+  border-radius: 2px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.testHeader {
+  display: flex;
+  align-items: flex-start;
+  gap: 18px;
+  margin-bottom: 20px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid #ece8df;
+}
+
+.testMonograma {
+  font-size: 1.9rem;
+  color: #b08a3c;
+  line-height: 1;
+  padding-top: 4px;
+}
+
+.testIdent { flex: 1; }
+
+.testAutor {
+  font-family: 'Libre Baskerville', Georgia, serif;
+  font-size: 1.15rem;
+  color: #2b2520;
+  font-weight: 400;
+  margin-bottom: 2px;
+}
+
+.testQualif {
+  font-size: 0.82rem;
+  color: #7a2320;
+  font-style: italic;
+  margin-bottom: 4px;
+}
+
+.testEpoca {
+  font-size: 0.74rem;
+  color: #a89e8a;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.testTexto {
+  position: relative;
+  font-family: 'Libre Baskerville', Georgia, serif;
+  font-size: 1.05rem;
+  line-height: 1.85;
+  color: #2b2520;
+  margin: 0;
+  padding: 8px 20px 12px;
+  font-style: italic;
+}
+
+.testTexto p {
+  display: inline;
+  margin: 0;
+}
+
+.testAspaAbre,
+.testAspaFecha {
+  font-size: 2rem;
+  color: #b08a3c;
+  font-family: Georgia, serif;
+  line-height: 0;
+  position: relative;
+  top: 8px;
+}
+
+.testAspaAbre { margin-right: 4px; }
+.testAspaFecha { margin-left: 4px; }
+
+.testOriginal {
+  margin: 12px 0;
+  padding: 10px 14px;
+  background: #f5f1e8;
+  border-left: 2px solid #b08a3c;
+  border-radius: 2px;
+}
+
+.testOriginalSummary {
+  cursor: pointer;
+  font-size: 0.76rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: #b08a3c;
+}
+
+.testOriginalTexto {
+  margin-top: 8px;
+  padding-top: 8px;
+  border-top: 1px dotted #d4c9a8;
+  font-style: italic;
+  color: #4a4238;
+  font-size: 0.92rem;
+  line-height: 1.7;
+}
+
+.testRodape {
+  margin-top: 16px;
+  padding-top: 12px;
+  border-top: 1px dotted #d4c9a8;
+  text-align: right;
+}
+
+.testObra {
+  font-family: 'Libre Baskerville', Georgia, serif;
+  font-size: 0.88rem;
+  color: #7a2320;
+  font-style: italic;
+}
+
+.testFonte {
+  font-size: 0.78rem;
+  color: #6f6758;
+  margin-top: 2px;
+}
+
+/* ============================================================
+   DOCUMENTO — Magistério da Igreja
+   ============================================================ */
+.documento {
+  position: relative;
+  background: #fffcf5;
+  border: 2px solid #b08a3c;
+  border-radius: 2px;
+  overflow: hidden;
+  box-shadow: 0 4px 16px rgba(176, 138, 60, 0.12);
+}
+
+.docFaixaTop {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+  padding: 10px;
+  background: linear-gradient(90deg, #b08a3c 0%, #d4b872 50%, #b08a3c 100%);
+  color: #fffcf5;
+}
+
+.docBrasao {
+  font-size: 1.1rem;
+}
+
+.docFaixaTexto {
+  font-family: 'Libre Baskerville', Georgia, serif;
+  font-size: 0.75rem;
+  letter-spacing: 0.32em;
+  text-transform: uppercase;
+}
+
+.docHeader {
+  text-align: center;
+  padding: 26px 30px 20px;
+  border-bottom: 1px double #d4c9a8;
+}
+
+.docTitulo {
+  font-family: 'Libre Baskerville', Georgia, serif;
+  font-size: 1.35rem;
+  font-weight: 400;
+  color: #2b2520;
+  margin: 0 0 10px;
+  line-height: 1.3;
+}
+
+.docAutoridade {
+  font-family: 'Libre Baskerville', Georgia, serif;
+  font-size: 0.95rem;
+  color: #7a2320;
+  font-style: italic;
+  margin-bottom: 4px;
+}
+
+.docData {
+  font-size: 0.8rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #b08a3c;
+  margin-bottom: 4px;
+}
+
+.docReferencia {
+  font-size: 0.85rem;
+  color: #6f6758;
+  font-style: italic;
+}
+
+.docTexto {
+  padding: 28px 34px;
+  font-family: 'Libre Baskerville', Georgia, serif;
+  font-size: 1.02rem;
+  line-height: 1.9;
+  color: #2b2520;
+  text-align: justify;
+}
+
+.docTexto p {
+  margin: 0 0 14px;
+}
+.docTexto p:last-child { margin-bottom: 0; }
+
+.docRodape {
+  padding: 16px 30px 24px;
+  border-top: 1px dotted #d4c9a8;
+  text-align: center;
+}
+
+.docRodapeOrn {
+  color: #b08a3c;
+  letter-spacing: 0.4em;
+  margin-bottom: 8px;
+}
+
+.docFontesRodape {
+  font-size: 0.78rem;
+  color: #6f6758;
+  font-style: italic;
+  line-height: 1.6;
+}
+
+/* ============================================================
+   RESPONSIVO
+   ============================================================ */
+@media (max-width: 720px) {
+  .capHeader {
+    flex-direction: column;
+    text-align: center;
+    gap: 12px;
+    padding: 22px 20px;
+  }
+
+  .capTitulo { font-size: 1.5rem; }
+
+  .vozLucas,
+  .passagem,
+  .testemunho {
+    padding: 24px 20px 20px;
+  }
+
+  .vozTexto { font-size: 1.02rem; }
+  .passTexto { font-size: 1rem; }
+  .testTexto { font-size: 0.98rem; padding: 8px 8px 12px; }
+
+  .docHeader { padding: 22px 20px 16px; }
+  .docTexto { padding: 22px 22px; font-size: 0.98rem; }
+  .docTitulo { font-size: 1.15rem; }
+
+  .navLista {
+    grid-template-columns: 1fr;
+  }
+}

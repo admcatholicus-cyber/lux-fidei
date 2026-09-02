@@ -1,0 +1,366 @@
+export const meta = {
+  numero: 'XII',
+  titulo: 'Iconografia',
+  subtitulo: 'Dois mil anos de imagem e devoção: como a arte consagrou o Apóstolo das causas impossíveis',
+};
+
+import ObraArte from '../../../_components/especificos/apostolos/sao-judas-tadeu/ObraArte';
+import ComparacaoVisual from '../../../_components/especificos/apostolos/sao-judas-tadeu/ComparacaoVisual';
+import AtributoIconografico from '../../../_components/especificos/apostolos/sao-judas-tadeu/AtributoIconografico';
+import FichaObra from '../../../_components/especificos/apostolos/sao-judas-tadeu/FichaObra';
+import { GaleriaIconografia, SecaoIconografia, SubsecaoIconografia } from '../../../_components/especificos/apostolos/sao-judas-tadeu/GaleriaIconografia';
+
+<PageHeader numero={meta.numero} titulo={meta.titulo} subtitulo={meta.subtitulo} />
+
+<GaleriaIconografia
+  introducao={<><p>A iconografia de São Judas Tadeu é, entre todos os apóstolos, uma das mais ricas em camadas de significado — e uma das mais tardias em consolidação. Durante séculos, a sombra do nome «Judas» impediu que os artistas o retratassem com a mesma frequência dedicada a Pedro, Paulo ou João. Quando a devoção popular finalmente explodiu nos séculos XIX e XX, a imagem do apóstolo já estava cristalizada em seus atributos definitivos: a alabarda do martírio, a chama pentecostal sobre a cabeça, e o medalhão com o rosto de Cristo — o <em>mandylion</em> de Edessa — pendurado ao peito. Esta aba percorre dois mil anos de representação visual, das catacumbas romanas aos murais contemporâneos da Cidade do México, analisando como cada época e cada cultura enxergou e consagrou o patrono das causas impossíveis.</p></>}
+  capitulos={[
+    { id: 'atributos',       icone: '⚜',  label: 'Os Atributos Iconográficos' },
+    { id: 'paleocristao',    icone: '🏛',  label: 'Arte Paleocristã e Bizantina' },
+    { id: 'medieval',        icone: '📜',  label: 'A Idade Média' },
+    { id: 'renascimento',    icone: '🎨',  label: 'Renascimento e Barroco' },
+    { id: 'devocional',      icone: '🕯',  label: 'A Imagem Devocional Moderna' },
+    { id: 'contemporaneo',   icone: '✦',   label: 'Iconografia Contemporânea' },
+  ]}
+>
+
+{/* ═══════════════════════════════════════════════
+    SEÇÃO 1 — ATRIBUTOS ICONOGRÁFICOS
+    ═══════════════════════════════════════════════ */}
+
+<SecaoIconografia
+  id="atributos"
+  icone="⚜"
+  supratitulo="Linguagem Visual"
+  titulo="Os Atributos Iconográficos"
+  subtitulo="Os sinais pelos quais se reconhece o Apóstolo na arte sacra"
+>
+
+<AtributoIconografico
+  icone="🪓"
+  nome="A Alabarda"
+  src="/santos/biografia/apostolos/sao-judas-tadeu/iconografia/atributo-alabarda.webp"
+  alt="Detalhe de alabarda na mão de São Judas Tadeu em pintura barroca"
+  largura={280}
+  altura={400}
+>
+
+A **alabarda** — arma de haste com lâmina combinando machado e ponta de lança — é o atributo mais constante na iconografia de São Judas Tadeu. Sua presença remonta às tradições do *Martírio de Simão e Judas*, que relatam a execução do apóstolo por soldados persas com golpe de arma cortante na cabeça. A presença da alabarda remonta às tradições do *Martírio de Simão e Judas*, que relatam a execução do apóstolo por soldados persas com golpe de arma cortante na cabeça. As variantes do instrumento nas representações medievais e renascentistas — clava, machado, lança — refletem como os artistas europeus adaptavam o relato às armas que conheciam em seus próprios exércitos. O simbolismo permanece constante em todas as variantes: o instrumento de morte torna-se insígnia de vitória. Assim como a cruz de Cristo deixou de ser instrumento de tortura romana para ser sinal de salvação, a alabarda é carregada nas mãos do apóstolo não como memória de derrota, mas como troféu do martírio consumado — prova de que ele amou a Cristo até o derramamento do próprio sangue.
+
+</AtributoIconografico>
+
+<AtributoIconografico
+  icone="🔥"
+  nome="A Chama sobre a Cabeça"
+  src="/santos/biografia/apostolos/sao-judas-tadeu/iconografia/atributo-chama.webp"
+  alt="Detalhe de língua de fogo sobre a cabeça de São Judas Tadeu em ícone"
+  largura={280}
+  altura={350}
+>
+
+A **língua de fogo** sobre a cabeça de São Judas Tadeu é o atributo que o distingue de qualquer outro apóstolo numa composição artística. Ela remete diretamente à efusão do Espírito Santo na Pentecostes: «Apareceram-lhes línguas como de fogo, que se repartiram e repousaram sobre cada um deles» (Atos 2,3). São Judas Tadeu estava presente no Cenáculo naquele dia — seu nome aparece na lista de Atos 1,13, imediatamente antes do relato pentecostal. A chama tornou-se seu selo pessoal na arte sacra. Em termos iconográficos, é um recurso genial: enquanto as auréolas (halos dourados) são comuns a todos os santos, a chama viva sobre a cabeça identifica Judas Tadeu instantaneamente, mesmo à distância, mesmo em retábulos com dezenas de figuras. Teologicamente, ela proclama que este apóstolo é homem do Espírito — aquele que recebeu a força do alto para levar o Evangelho aos confins da Pérsia, e que essa mesma força sustentou-o até o golpe final da alabarda.
+
+</AtributoIconografico>
+
+<AtributoIconografico
+  icone="🖼"
+  nome="O Medalhão com o Rosto de Cristo (Mandylion)"
+  src="/santos/biografia/apostolos/sao-judas-tadeu/iconografia/atributo-mandylion.webp"
+  alt="São Judas Tadeu segurando medalhão oval com o rosto de Jesus Cristo"
+  largura={280}
+  altura={380}
+>
+
+O **medalhão com o rosto de Cristo** — frequentemente oval, pendurado ao peito ou exibido na mão esquerda — é o atributo mais teologicamente denso de São Judas Tadeu.O **medalhão com o rosto de Cristo** liga-se à tradição do *Mandylion* de Edessa — a imagem de Cristo associada à missão de Tadeu/Addai junto ao rei Abgar, cuja narrativa remonta ao relato de Eusébio de Cesareia. Historicamente, o *Mandylion* é um dos protótipos mais antigos dos ícones cristãos, e sua associação com Judas Tadeu criou uma iconografia poderosa: o apóstolo que carrega consigo a Face de Deus. Em termos devocionais, o medalhão comunica que São Judas Tadeu é o apóstolo da presença de Cristo — aquele que traz a imagem do Salvador aos que estão longe, aos doentes, aos desesperados. É por isso que, nas estampas populares, o medalhão com o rosto de Jesus é muitas vezes o ponto focal da composição — maior e mais luminoso que a própria alabarda.
+
+</AtributoIconografico>
+
+<AtributoIconografico
+  icone="📗"
+  nome="O Livro ou Rolo"
+>
+
+O **livro** (ou rolo de pergaminho) que São Judas Tadeu carrega em algumas representações é sinal de sua autoria canônica: a Epístola de Judas, uma das sete epístolas católicas do Novo Testamento. Este atributo é comum a todos os apóstolos que escreveram textos canônicos — Pedro, Paulo, João, Tiago — mas no caso de Judas Tadeu tem um significado adicional: durante séculos em que seu nome foi evitado e sua pessoa quase esquecida, a Epístola continuou a ser lida nas igrejas de todo o mundo. O livro é a prova de que, mesmo silenciado pela confusão com Iscariotes, sua voz nunca deixou de soar na liturgia. Em composições artísticas onde o apóstolo segura simultaneamente a alabarda numa mão e o livro na outra, o artista comunica a totalidade de sua missão: pregou com a palavra (livro), selou com o sangue (alabarda).
+
+</AtributoIconografico>
+
+</SecaoIconografia>
+
+{/* ═══════════════════════════════════════════════
+    SEÇÃO 2 — ARTE PALEOCRISTÃ E BIZANTINA
+    ═══════════════════════════════════════════════ */}
+
+<SecaoIconografia
+  id="paleocristao"
+  icone="🏛"
+  supratitulo="Séculos I–X"
+  titulo="Arte Paleocristã e Bizantina"
+  subtitulo="Os primeiros rostos do Apóstolo — das catacumbas aos mosaicos imperiais"
+>
+
+<ObraArte
+  src="/santos/biografia/apostolos/sao-judas-tadeu/iconografia/colegio-apostolico-catacumba.webp"
+  alt="Pintura paleocristã mostrando Cristo e os Doze Apóstolos em semicírculo, catacumba de Domitila, Roma"
+  largura={800}
+  altura={500}
+  titulo="Cristo e os Doze Apóstolos — Catacumba de Domitila"
+  artista="Anônimo paleocristão"
+  data="Século IV (c. 350–380 d.C.)"
+  tecnica="Afresco sobre estuque"
+  localizacao="Catacumba de Domitila, Via Ardeatina, Roma"
+>
+
+Nas catacumbas romanas, as mais antigas representações dos apóstolos aparecem como colégios — grupos de doze figuras flanqueando Cristo, sem individualização. Nesta cena da **Catacumba de Domitila**, datada da segunda metade do século IV, os Doze aparecem como homens barbados em túnicas romanas, sem atributos pessoais, sem nomes inscritos. É impossível identificar qual deles seria Judas Tadeu — e isso é, em si, um dado iconográfico revelador. Nos primeiros séculos, a Igreja representava o colégio apostólico como corpo unificado, sem distinção hierárquica visual entre Pedro e os demais. A individualização só começa no século V, quando Pedro recebe as chaves e Paulo o livro e a espada. Judas Tadeu permanecerá anônimo nas composições artísticas por muito mais tempo — e quando finalmente emergir como figura identificável, sua iconografia já terá sido moldada pelas tradições orientais do *Mandylion*.
+
+</ObraArte>
+
+<ObraArte
+  src="/santos/biografia/apostolos/sao-judas-tadeu/iconografia/mosaico-bizantino-apostolos.webp"
+  alt="Mosaico bizantino com os Doze Apóstolos em procissão, com auréolas douradas e túnicas brancas"
+  largura={900}
+  altura={450}
+  titulo="Procissão dos Apóstolos — Mosaico Bizantino"
+  artista="Atelier imperial bizantino"
+  data="Século VI (c. 520–540 d.C.)"
+  tecnica="Mosaico de tesselas de vidro e ouro"
+  localizacao="Basílica de Sant'Apollinare Nuovo, Ravena, Itália"
+>
+
+Em **Ravena**, capital do Ocidente bizantino, os mosaicos do século VI de **Sant'Apollinare Nuovo** mostram os apóstolos em procissão solene sobre fundo dourado, caminhando em direção ao Cristo entronizado. Cada figura carrega uma coroa de martírio nas mãos veladas — gesto litúrgico de oferenda ao Rei. Embora as inscrições identifiquem cada apóstolo pelo nome, a individualização visual é mínima: rostos semelhantes, barbas semelhantes, túnicas brancas iguais. A arte bizantina não busca o retrato individual — busca o tipo: o apóstolo como *ícone* do enviado de Deus. Nesse contexto, São Judas Tadeu é idêntico aos demais, pois o que importa é a função, não a fisionomia. A distinção virá depois, no Ocidente medieval, quando a necessidade devocional de identificar cada santo exigirá atributos próprios.
+
+</ObraArte>
+
+</SecaoIconografia>
+
+{/* ═══════════════════════════════════════════════
+    SEÇÃO 3 — A IDADE MÉDIA
+    ═══════════════════════════════════════════════ */}
+
+<SecaoIconografia
+  id="medieval"
+  icone="📜"
+  supratitulo="Séculos XI–XV"
+  titulo="A Idade Média"
+  subtitulo="Retábulos, vitrais e iluminuras — a lenta emergência de Judas Tadeu na arte ocidental"
+>
+
+<FichaObra
+  src="/santos/biografia/apostolos/sao-judas-tadeu/iconografia/legenda-aurea-iluminura.webp"
+  alt="Iluminura medieval mostrando o martírio de São Simão e São Judas Tadeu na Pérsia, com soldados e magos ao redor"
+  largura={600}
+  altura={750}
+  titulo="O Martírio de São Simão e São Judas — Iluminura da Legenda Áurea"
+  artista="Mestre iluminador anônimo (escola francesa)"
+  data="c. 1280–1300"
+  tecnica="Iluminura sobre pergaminho com folha de ouro"
+  localizacao="Bibliothèque nationale de France, Paris (Ms. français 241)"
+  periodo="Gótico"
+  significado="Primeira onda de representações individualizadas do martírio de Judas Tadeu"
+>
+
+A **Legenda Áurea** de Jacopo de Varazze (c. 1260) transformou a iconografia de todos os santos, e São Judas Tadeu não foi exceção. Os manuscritos iluminados desta compilação hagiográfica — produzidos às centenas nos ateliers monásticos e seculares da França, Itália e Alemanha — incluíam cenas narrativas do martírio de cada santo. Nesta iluminura francesa do final do século XIII, Simão e Judas aparecem lado a lado, recebendo a morte dos soldados persas. Judas Tadeu é reconhecível pela arma erguida sobre sua cabeça — a forma primitiva daquilo que depois será a alabarda canônica. Os magos zoroastristas aparecem ao fundo, gesticulando com fúria. A cena é estilizada segundo as convenções góticas: fundo dourado, figuras planas, proporções hieráticas. Mas a intenção narrativa é clara: contar uma história, edificar o fiel, celebrar a glória do martírio.
+
+</FichaObra>
+
+<ObraArte
+  src="/santos/biografia/apostolos/sao-judas-tadeu/iconografia/vitral-gotico-judas-tadeu.webp"
+  alt="Vitral gótico de São Judas Tadeu segurando livro e alabarda, com fundo azul e vermelho em padrão geométrico"
+  largura={500}
+  altura={900}
+  titulo="São Judas Tadeu — Vitral Gótico"
+  artista="Atelier de vidraria anônimo"
+  data="c. 1220–1250"
+  tecnica="Vitral emplomado com vidro colorido e grisalha"
+  localizacao="Catedral de Chartres, nave sul, França"
+>
+
+A **Catedral de Chartres**, com seus 176 vitrais originais do século XIII, contém uma das maiores coleções de iconografia apostólica medieval do mundo. Na nave sul, São Judas Tadeu aparece em um lanceta vertical, de corpo inteiro, segurando um livro na mão esquerda e uma clava (precursora da alabarda) na direita. O fundo alterna painéis geométricos em azul cobalto e vermelho rubi — as cores dominantes do vitral chartresiano. A auréola dourada, feita com vidro tratado com prata, identifica-o como santo. Os vitrais góticos funcionavam como «Bíblia dos iletrados» — cada imagem era uma pregação silenciosa para o povo que não lia latim. São Judas Tadeu, nesta catedral, pregava pelo brilho da luz que atravessava seu corpo de vidro, transformando a luz solar em luz sagrada — metáfora perfeita do apóstolo que leva a Luz de Cristo aos que estão na escuridão.
+
+</ObraArte>
+
+<ObraArte
+  src="/santos/biografia/apostolos/sao-judas-tadeu/iconografia/retabulo-medieval-simao-judas.webp"
+  alt="Painel de retábulo medieval mostrando São Simão e São Judas Tadeu diante de ídolo pagão que se quebra, com demônios fugindo"
+  largura={700}
+  altura={550}
+  titulo="São Simão e São Judas derrubam o ídolo — Painel de Retábulo"
+  artista="Mestre anônimo da escola de Colônia"
+  data="c. 1420–1440"
+  tecnica="Têmpera e ouro sobre madeira"
+  localizacao="Wallraf-Richartz-Museum, Colônia, Alemanha"
+>
+
+Este painel de retábulo da escola de Colônia representa um dos episódios mais populares da hagiografia de Simão e Judas: diante de um templo pagão na Pérsia, os dois apóstolos comandam os demônios que habitavam os ídolos a saírem, e a estátua pagã se despedaça. Os demônios são representados como criaturas aladas e grotescas — convenção artística medieval para tornar visível o invisível. O momento capturado é teatral: Judas Tadeu estende a mão direita num gesto de autoridade espiritual, enquanto o ídolo racha ao meio. O significado é duplamente poderoso: a vitória do Evangelho sobre o paganismo, e a prova de que a autoridade apostólica vem de Deus, não da força humana. Este tipo de cena era especialmente popular no norte da Europa, onde os retábulos narrativos serviam como catequese visual para comunidades inteiras.
+
+</ObraArte>
+
+</SecaoIconografia>
+
+{/* ═══════════════════════════════════════════════
+    SEÇÃO 4 — RENASCIMENTO E BARROCO
+    ═══════════════════════════════════════════════ */}
+
+<SecaoIconografia
+  id="renascimento"
+  icone="🎨"
+  supratitulo="Séculos XV–XVIII"
+  titulo="Renascimento e Barroco"
+  subtitulo="Dos mestres italianos ao dramatismo tridentino — a apoteose do Apóstolo na pintura ocidental"
+>
+
+<FichaObra
+  src="/santos/biografia/apostolos/sao-judas-tadeu/iconografia/ultima-ceia-leonardo.webp"
+  alt="Detalhe de A Última Ceia de Leonardo da Vinci mostrando o grupo de apóstolos onde Judas Tadeu está posicionado"
+  largura={800}
+  altura={500}
+  titulo="A Última Ceia (detalhe — grupo de Judas Tadeu)"
+  artista="Leonardo da Vinci"
+  data="1495–1498"
+  tecnica="Têmpera e óleo sobre gesso seco"
+  localizacao="Refeitório de Santa Maria delle Grazie, Milão, Itália"
+  dimensoes="460 × 880 cm (obra completa)"
+  periodo="Alto Renascimento"
+  significado="Judas Tadeu individualizado pela primeira vez como personagem com psicologia própria"
+>
+
+Na obra mais célebre sobre a Última Ceia, **Leonardo da Vinci** organizou os Doze Apóstolos em quatro grupos de três, reagindo ao anúncio de Jesus: «Um de vós me trairá.» São Judas Tadeu aparece no grupo da extrema esquerda (do ponto de vista do espectador), junto com **Simão Zelote** e **Mateus**. Leonardo estudou cada rosto obsessivamente — seus cadernos registram dezenas de esboços para cada apóstolo. Judas Tadeu, neste grupo, volta-se para os companheiros com expressão de indignação e perplexidade, como se perguntasse: «Quem seria capaz de tal traição?» É a primeira vez na história da arte que Judas Tadeu recebe uma psicologia individual, uma reação emocional própria, uma expressão facial única — deixando de ser apenas um entre doze figuras idênticas.
+
+</FichaObra>
+
+<ObraArte
+  src="/santos/biografia/apostolos/sao-judas-tadeu/iconografia/el-greco-judas-tadeu.webp"
+  alt="Pintura de El Greco representando São Judas Tadeu de meio corpo, com túnica verde e alabarda, olhar intenso e fundo escuro"
+  largura={550}
+  altura={750}
+  titulo="São Judas Tadeu"
+  artista="El Greco (Doménikos Theotokópoulos)"
+  data="c. 1610–1614"
+  tecnica="Óleo sobre tela"
+  localizacao="Museo del Greco, Toledo, Espanha"
+>
+
+**El Greco** pintou séries completas dos apóstolos — os chamados *apostolados* — em que cada um dos Doze aparece individualmente, de meio corpo, sobre fundo escuro neutro. São Judas Tadeu aparece segurando a alabarda com firmeza, vestindo uma túnica em tons de verde — cor que a devoção posterior associará à esperança. O rosto é característico do estilo do mestre cretense-espanhol: alongado, de olhos imensos e luminosos que parecem ver além do mundo material, expressão que oscila entre a melancolia e a visão mística. A barba escura e o cabelo revolto dão-lhe um aspecto de profeta do deserto, condizente com sua missão nos confins da Pérsia. El Greco, ele próprio um grego ortodoxo que se tornara católico em Veneza e depois se radicara na Espanha, carregava em sua pintura a dupla herança do ícone bizantino e da pintura ocidental — e essa síntese é visível no tratamento quase irreal da luz, que não vem de nenhuma fonte visível, mas parece emanar de dentro do próprio apóstolo.
+
+</ObraArte>
+
+<ObraArte
+  src="/santos/biografia/apostolos/sao-judas-tadeu/iconografia/rubens-simao-judas.webp"
+  alt="Grande pintura barroca de Rubens mostrando o martírio violento de São Simão e São Judas Tadeu com soldados persas, composição diagonal e luz dramática"
+  largura={800}
+  altura={600}
+  titulo="O Martírio de São Simão e São Judas"
+  artista="Peter Paul Rubens"
+  data="c. 1615–1620"
+  tecnica="Óleo sobre tela"
+  localizacao="Städelsches Kunstinstitut, Frankfurt, Alemanha"
+>
+
+**Rubens**, o mestre supremo do Barroco flamengo, trouxe ao martírio de Simão e Judas toda a violência e dramatismo que seu pincel era capaz de produzir. A composição é construída em diagonal — os corpos dos apóstolos tombando sob os golpes dos soldados persas, músculos tensionados, tecidos voando, sangue brotando. A luz de Rubens é teatral, quase cinematográfica: um foco dourado cai sobre os corpos dos mártires enquanto os algozes permanecem em sombra parcial. O contraste é teológico: os que morrem estão na luz; os que matam, nas trevas. São Judas Tadeu recebe o golpe de uma arma na cabeça — fiel à tradição — enquanto Simão é serrado ao meio (instrumento visível na cena). A energia muscular e carnal da pintura de Rubens comunica algo que as placas iluminuras medievais não podiam: o martírio *doi*. O apóstolo é carne e osso, e seu sacrifício é real.
+
+</ObraArte>
+
+<ComparacaoVisual
+  titulo="A evolução do rosto de Judas Tadeu — do tipo ao retrato"
+  itens={[
+    {
+      src: '/santos/biografia/apostolos/sao-judas-tadeu/iconografia/comparacao-bizantino.webp',
+      alt: 'Rosto de São Judas Tadeu em mosaico bizantino, estilizado e frontal',
+      largura: 400,
+      altura: 500,
+      legenda: 'Bizantino (séc. VI) — tipo iconográfico, sem individualização'
+    },
+    {
+      src: '/santos/biografia/apostolos/sao-judas-tadeu/iconografia/comparacao-barroco.webp',
+      alt: 'Rosto de São Judas Tadeu em pintura barroca, expressivo e naturalista',
+      largura: 400,
+      altura: 500,
+      legenda: 'Barroco (séc. XVII) — retrato psicológico, dramático e carnal'
+    }
+  ]}
+>
+
+A comparação entre estas duas representações — separadas por mais de mil anos — revela a transformação radical que a arte sacra ocidental operou na imagem de São Judas Tadeu. O rosto bizantino é **frontal**, **simétrico**, de traços geometrizados: os olhos grandes e abertos contemplam o espectador como janelas para o divino; o rosto não expressa emoção individual, porque o ícone bizantino não representa a pessoa — representa o *protótipo celeste* da pessoa, seu estado glorificado no Céu. O rosto barroco, ao contrário, é **tridimensional**, assimétrico, marcado por rugas e luz lateral: expressa dor, determinação, humanidade concreta. Nenhuma das duas abordagens é «mais correta» — são duas teologias visuais complementares. O Oriente diz: «Judas Tadeu já está no Céu, e é de lá que olha para você.» O Ocidente diz: «Judas Tadeu foi um homem como você, e sofreu como você.» Ambas são verdadeiras.
+
+</ComparacaoVisual>
+
+</SecaoIconografia>
+
+{/* ═══════════════════════════════════════════════
+    SEÇÃO 5 — A IMAGEM DEVOCIONAL MODERNA
+    ═══════════════════════════════════════════════ */}
+
+<SecaoIconografia
+  id="devocional"
+  icone="🕯"
+  supratitulo="Séculos XIX–XX"
+  titulo="A Imagem Devocional Moderna"
+  subtitulo="Das estampas impressas às estátuas das paróquias — a iconografia que os fiéis conhecem"
+>
+
+<ObraArte
+  src="/santos/biografia/apostolos/sao-judas-tadeu/iconografia/estampa-devocional-classica.webp"
+  alt="Estampa devocional clássica de São Judas Tadeu com túnica verde, chama sobre a cabeça, medalhão com o rosto de Cristo e alabarda, fundo de nuvens douradas"
+  largura={500}
+  altura={700}
+  titulo="A Estampa Canônica — São Judas Tadeu"
+  artista="Cromolitografia devocional (escola italiana)"
+  data="c. 1880–1920"
+  tecnica="Cromolitografia sobre cartão"
+  localizacao="Acervos de estampas religiosas, diversas coleções"
+>
+
+Esta é a imagem que centenas de milhões de católicos reconhecem instantaneamente: São Judas Tadeu de corpo inteiro, em túnica **verde** (esperança), com um manto ocre ou dourado sobre os ombros; a **chama do Espírito Santo** ardendo sobre a cabeça; o **medalhão oval** com o rosto de Cristo (*mandylion*) pendurado ao peito por um cordão; a **alabarda** na mão direita, levantada como cetro e não como arma. O fundo é composto de nuvens luminosas — ambiente celestial que situa o apóstolo na glória. A expressão facial é serena, confiável, paterna — o rosto de alguém a quem se pode confiar uma causa impossível. Esta imagem padronizada surgiu nos ateliers de cromolitografia religiosa da Itália e da França no final do século XIX, e foi exportada para o mundo inteiro pelas editoras católicas (Bonella, Holy Cards, etc.). Sua força reside na clareza: todos os atributos estão presentes, a identificação é imediata, e a composição comunica acessibilidade — este santo está disponível para quem o invocar.
+
+</ObraArte>
+
+<ObraArte
+  src="/santos/biografia/apostolos/sao-judas-tadeu/iconografia/estatua-paroquial.webp"
+  alt="Estátua de gesso policromado de São Judas Tadeu em nicho de paróquia, com túnica verde, chama dourada e medalhão no peito"
+  largura={500}
+  altura={800}
+  titulo="Estátua Paroquial de São Judas Tadeu"
+  artista="Atelier de imaginária sacra (escola paulista/italiana)"
+  data="c. 1940–1960"
+  tecnica="Gesso policromado com douramento"
+  localizacao="Paróquias e santuários em todo o Brasil"
+>
+
+As estátuas paroquiais de São Judas Tadeu — em gesso policromado, resina ou fibra de vidro — são provavelmente as representações mais vistas do apóstolo na América Latina. Produzidas em série por ateliers de imaginária sacra (muitos de tradição italiana radicados em São Paulo, Buenos Aires e Cidade do México), seguem rigorosamente o modelo da estampa devocional: túnica verde, chama dourada, medalhão, alabarda. A padronização não é defeito — é virtude pastoral: em qualquer paróquia do mundo, de uma catedral europeia a uma capela na zona rural do Nordeste brasileiro, o fiel reconhece imediatamente o seu santo. O gesto das mãos é frequentemente adaptado para segurar velas ou flores oferecidas pelos devotos, transformando a estátua em ponto de encontro entre a súplica humana e a intercessão celeste. Ao redor destas estátuas, milhões de novenas foram rezadas, milhões de causas impossíveis foram confiadas, milhões de lágrimas foram derramadas — e nenhuma história da arte sacra está completa sem reconhecer o poder espiritual destas imagens que a academia frequentemente ignora.
+
+</ObraArte>
+
+</SecaoIconografia>
+
+{/* ═══════════════════════════════════════════════
+    SEÇÃO 6 — ICONOGRAFIA CONTEMPORÂNEA
+    ═══════════════════════════════════════════════ */}
+
+<SecaoIconografia
+  id="contemporaneo"
+  icone="✦"
+  supratitulo="Séculos XX–XXI"
+  titulo="Iconografia Contemporânea"
+  subtitulo="Murais, neoiconografia e a imagem viva do Apóstolo nos muros da periferia e nos ícones do terceiro milênio"
+>
+
+
+
+<ObraArte
+  src="/santos/biografia/apostolos/sao-judas-tadeu/iconografia/icone-contemporaneo-judas-tadeu.webp"
+  alt="Ícone contemporâneo de São Judas Tadeu em estilo neo-bizantino com folha de ouro, rosto frontal e atributos tradicionais"
+  largura={550}
+  altura={700}
+  titulo="Ícone de São Judas Tadeu"
+  artista="Iconógrafo contemporâneo (escola neo-bizantina)"
+  data="c. 2015–2023"
+  tecnica="Têmpera de ovo sobre madeira preparada com gesso, folha de ouro 23k"
+  localizacao="Ateliê de iconografia sacra"
+>
+
+O **renascimento da iconografia bizantina** no mundo católico contemporâneo — impulsionado por teólogos como **Pavel Florensky** e artistas como a comunidade de **Bose** na Itália — produziu uma nova geração de ícones de santos ocidentais pintados com a técnica e a teologia orientais. São Judas Tadeu recebe aqui o tratamento do ícone canônico: rosto frontal, olhos imensos, proporções estilizadas (cabeça grande, corpo esguio), fundo de ouro liso (simbolizando a luz divina não-criada). A inscrição no topo identifica-o em grego: **Ο ΑΓΙΟΣ ΙΟΥΔΑΣ ΘΑΔΔΑΙΟΣ** (*Ho Hagios Ioudas Thaddaios*). Os atributos são incorporados sem romper a linguagem icônica: a chama sobre a cabeça funde-se com a auréola; o medalhão torna-se um pequeno ícone-dentro-do-ícone. Este tipo de imagem reconecta o Ocidente católico com a raiz oriental da veneração de São Judas Tadeu — lembrando que, antes de ser o santo popular das novenas latino-americanas, ele foi o apóstolo do Oriente, venerado em Edessa, na Pérsia e na Armênia.
+
+</ObraArte>
+
+</SecaoIconografia>
+
+</GaleriaIconografia>

@@ -1,0 +1,172 @@
+
+.masonryGrid {
+  column-count: 1;
+  column-gap: 1.5rem;
+  margin-top: 2rem;
+  margin-bottom: 3rem;
+}
+
+@media (min-width: 640px) {
+  .masonryGrid {
+    column-count: 2;
+  }
+}
+
+@media (min-width: 1024px) {
+  .masonryGrid {
+    column-count: 3;
+  }
+}
+
+/* O cartão da imagem */
+.card {
+  break-inside: avoid;
+  margin-bottom: 1.5rem;
+  position: relative;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  cursor: zoom-in;
+  background-color: #1c1917; /* fundo escuro de carregamento */
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+.image {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.7s ease;
+}
+
+.card:hover .image {
+  transform: scale(1.03);
+}
+
+/* O gradiente escuro na base da imagem (exatamente como no seu print) */
+.overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 4rem 1.5rem 1.5rem 1.5rem;
+  background: linear-gradient(to top, rgba(15, 12, 10, 0.95) 0%, rgba(15, 12, 10, 0.7) 40%, transparent 100%);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  pointer-events: none;
+}
+
+.metaCategoria {
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: #fbbf24; /* O tom dourado/âmbar do print */
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: 0.25rem;
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.titulo {
+  font-family: Georgia, Cambria, 'Times New Roman', Times, serif;
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: #f8fafc;
+  line-height: 1.2;
+  margin: 0 0 0.25rem 0;
+}
+
+.descricaoCurta {
+  font-size: 0.85rem;
+  color: #d1d5db;
+  margin: 0;
+  display: -webkit-box;
+
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* ------------------------------------------- */
+/* LIGHTBOX (Tela Cheia)                       */
+/* ------------------------------------------- */
+.lightboxOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(10, 10, 10, 0.95);
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  cursor: zoom-out;
+  backdrop-filter: blur(5px);
+  animation: fadeIn 0.3s ease forwards;
+}
+
+.lightboxContent {
+  position: relative;
+  max-width: 90vw;
+  max-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: default;
+}
+
+.lightboxImage {
+  max-width: 100%;
+  max-height: 75vh;
+  object-fit: contain;
+  border-radius: 0.25rem;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.5);
+}
+
+.lightboxInfo {
+  margin-top: 1.5rem;
+  text-align: center;
+  color: #e2e8f0;
+  max-width: 800px;
+}
+
+.lightboxTitle {
+  font-family: Georgia, Cambria, serif;
+  font-size: 1.5rem;
+  color: #ffffff;
+  margin-bottom: 0.5rem;
+}
+
+.lightboxDetails {
+  font-size: 0.9rem;
+  color: #9ca3af;
+  line-height: 1.5;
+}
+
+.lightboxClose {
+  position: absolute;
+  top: -2.5rem;
+  right: -2.5rem;
+  background: none;
+  border: none;
+  color: #9ca3af;
+  font-size: 2rem;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.lightboxClose:hover {
+  color: #ffffff;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}

@@ -1,0 +1,286 @@
+.wrap {
+  --paper: #fbfaf5;
+  --ink: #1c2f4f;
+  --gold: #c9b876;
+  --gold-dark: #a89358;
+  --paper-old: #f5f2e8;
+  --border: #d8d0b8;
+  --oriente-bg: #2a1810;
+  --oriente-accent: #c9b876;
+  --ocidente-bg: #1c2f4f;
+  --ocidente-accent: #8ba0c0;
+
+  margin: 3.5rem 0;
+  background: var(--paper);
+  border: 1px solid var(--border);
+  border-top: 4px solid var(--ink);
+  border-radius: 2px;
+  padding: 2rem 2.25rem;
+  box-shadow: 0 4px 20px rgba(28, 47, 79, 0.08);
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 2rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px dashed var(--border);
+}
+
+.label {
+  display: inline-block;
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: var(--gold-dark);
+  margin-bottom: 0.5rem;
+}
+
+.titulo {
+  font-family: Georgia, serif;
+  font-size: 1.6rem;
+  color: var(--ink);
+  margin: 0 0 0.4rem;
+  font-weight: 400;
+  letter-spacing: 0.03em;
+}
+
+.sub {
+  font-size: 0.85rem;
+  color: #6a5a3a;
+  margin: 0;
+  font-style: italic;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.paralelo {
+  display: grid;
+  grid-template-columns: 1fr 100px 1fr;
+  gap: 0;
+  margin-bottom: 2rem;
+  align-items: stretch;
+}
+
+.figOriente,
+.figOcidente {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.figOriente .figImgWrap {
+  background: var(--oriente-bg);
+  border: 2px solid var(--oriente-accent);
+}
+
+.figOcidente .figImgWrap {
+  background: var(--ocidente-bg);
+  border: 2px solid var(--ocidente-accent);
+}
+
+.figImgWrap {
+  aspect-ratio: 4 / 5;
+  overflow: hidden;
+  border-radius: 2px;
+  padding: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.figImgWrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.figOriente figcaption,
+.figOcidente figcaption {
+  padding: 1rem 0.5rem 0;
+  text-align: center;
+}
+
+.figBadge {
+  display: inline-block;
+  padding: 0.35rem 0.85rem;
+  font-family: Georgia, serif;
+  font-size: 0.8rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  color: white;
+  border-radius: 2px;
+  margin-bottom: 0.5rem;
+}
+
+.figOriente .figBadge {
+  background: var(--oriente-bg);
+}
+
+.figOcidente .figBadge {
+  background: var(--ocidente-bg);
+}
+
+.figNome {
+  font-family: Georgia, serif;
+  font-size: 1rem;
+  color: var(--ink);
+  margin: 0 0 0.2rem;
+  font-weight: 500;
+}
+
+.figCredito {
+  font-size: 0.72rem;
+  color: #6a5a3a;
+  font-style: italic;
+  margin: 0;
+  letter-spacing: 0.03em;
+}
+
+.versus {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: Georgia, serif;
+  font-size: 1.5rem;
+  color: var(--gold-dark);
+  font-style: italic;
+}
+
+.versus span {
+  padding: 0.5rem 1rem;
+  background: var(--paper-old);
+  border-top: 2px solid var(--gold);
+  border-bottom: 2px solid var(--gold);
+  border-radius: 2px;
+}
+
+.tabela {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid var(--border);
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.linha {
+  display: grid;
+  grid-template-columns: 1fr 120px 1fr;
+  gap: 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.linha:last-child {
+  border-bottom: none;
+}
+
+.celulaOriente,
+.celulaOcidente {
+  padding: 1.35rem 1.5rem;
+  display: flex;
+  align-items: center;
+  min-height: 80px;
+}
+
+.celulaOriente {
+  background: #f9f5ee;
+  border-right: 2px solid var(--gold);
+}
+
+.celulaOcidente {
+  background: #f5f6fa;
+  border-left: 2px solid var(--gold);
+}
+
+.celulaTexto {
+  font-family: Georgia, serif;
+  font-size: 0.95rem;
+  line-height: 1.55;
+  color: #2a2418;
+  margin: 0;
+}
+
+.celulaAspecto {
+  background: var(--paper-old);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem 0.5rem;
+  text-align: center;
+  gap: 0.3rem;
+}
+
+.aspectoNumero {
+  font-family: Georgia, serif;
+  font-size: 0.7rem;
+  color: var(--gold-dark);
+  font-style: italic;
+  letter-spacing: 0.15em;
+}
+
+.aspectoNome {
+  font-family: Georgia, serif;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--ink);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  line-height: 1.2;
+}
+
+.sintese {
+  margin-top: 2rem;
+  padding: 1.75rem 2rem;
+  background: var(--paper-old);
+  border-left: 4px solid var(--gold);
+  border-radius: 2px;
+}
+
+.sinteseLabel {
+  display: inline-block;
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: var(--gold-dark);
+  margin-bottom: 0.75rem;
+}
+
+.sinteseTexto {
+  font-family: Georgia, serif;
+  font-size: 1.05rem;
+  line-height: 1.75;
+  color: #2a2418;
+  margin: 0;
+}
+
+.sinteseTexto strong {
+  color: var(--ink);
+}
+
+.sinteseTexto em {
+  color: #4a3e28;
+}
+
+@media (max-width: 900px) {
+  .paralelo,
+  .linha {
+    grid-template-columns: 1fr;
+  }
+  .versus {
+    padding: 0.5rem 0;
+  }
+  .celulaAspecto {
+    padding: 0.75rem;
+    border-top: 2px solid var(--gold);
+    border-bottom: 2px solid var(--gold);
+  }
+  .celulaOriente,
+  .celulaOcidente {
+    border-left: none;
+    border-right: none;
+    border-bottom: 1px solid var(--border);
+  }
+}

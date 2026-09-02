@@ -1,0 +1,117 @@
+.matrizWrap {
+  max-width: 900px;
+  margin: 32px auto;
+  overflow-x: auto;
+  border: 1px solid #ece8df;
+  border-radius: 6px;
+  background: #ffffff;
+  box-shadow: 0 2px 12px rgba(90, 70, 40, 0.05);
+}
+
+.matriz {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 0.88rem;
+}
+
+.matriz thead {
+  background: linear-gradient(135deg, #f7f0dc 0%, #ebe0c0 100%);
+}
+
+.matriz th {
+  padding: 14px 16px;
+  text-align: left;
+  font-family: 'Libre Baskerville', Georgia, serif;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #8b6f2f;
+  border-bottom: 2px solid #d4b872;
+}
+
+.matriz tbody tr {
+  transition: background 0.2s ease;
+}
+
+.matriz tbody tr:hover {
+  background: #faf8f4;
+}
+
+.matriz tbody tr:nth-child(even) {
+  background: #fbf9f4;
+}
+
+.matriz td {
+  padding: 14px 16px;
+  border-bottom: 1px solid #ece8df;
+  vertical-align: top;
+  color: #4d463c;
+  line-height: 1.6;
+}
+
+.tema strong {
+  color: #2e2a25;
+  font-weight: 700;
+  font-family: 'Libre Baskerville', Georgia, serif;
+  font-size: 0.95rem;
+}
+
+.obs {
+  font-size: 0.78rem;
+  color: #6f6758;
+  font-style: italic;
+  margin-top: 4px;
+}
+
+.pill {
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.documentado {
+  background: #d4e8d4;
+  color: #2d5a2d;
+  border: 1px solid #a8d0a8;
+}
+
+.provavel {
+  background: #e8dcc4;
+  color: #6f5a2f;
+  border: 1px solid #d4b872;
+}
+
+.possivel {
+  background: #f0e0d0;
+  color: #8b5a3f;
+  border: 1px solid #d4a880;
+}
+
+.posterior {
+  background: #e0dce8;
+  color: #4d3f6f;
+  border: 1px solid #b0a8c8;
+}
+
+.desconhecido {
+  background: #ece8df;
+  color: #6f6758;
+  border: 1px solid #c8c0b0;
+}
+
+@media (max-width: 700px) {
+  .matriz {
+    font-size: 0.82rem;
+  }
+  .matriz th, .matriz td {
+    padding: 10px 12px;
+  }
+}

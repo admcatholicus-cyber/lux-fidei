@@ -1,0 +1,50 @@
+:root {
+  /* CORES */
+  --cor-fundo-pagina: #FAF7F2;
+  --cor-fundo-card: #FFFFFF;
+  --cor-fundo-destaque: #F5F0E8;
+  --cor-fundo-tabua: #F0EAD6;
+  --cor-texto-principal: #2C1810;
+  --cor-texto-secundario: #5C4A3A;
+  --cor-dourado: #B8860B;
+  --cor-dourado-escuro: #8B6914;
+  --cor-dourado-claro: #D4A843;
+  --cor-vinho: #6B2C2C;
+  --cor-borda: #D4C4A8;
+  --cor-borda-leve: #E8DFD0;
+  --cor-branco: #FFFFFF;
+
+  /* FONTES */
+  --fonte-titulo: 'Playfair Display', Georgia, serif;
+  --fonte-texto: 'Inter', Arial, sans-serif;
+
+  /* TAMANHOS DE FONTE */
+  --tamanho-h1: 2.5rem;
+  --tamanho-h2: 2rem;
+  --tamanho-h3: 1.5rem;
+  --tamanho-h4: 1.25rem;
+  --tamanho-texto: 1rem;
+  --tamanho-pequeno: 0.875rem;
+  --tamanho-citacao: 1.125rem;
+
+  /* ESPAÇAMENTOS */
+  --espaco-secao: 4rem;
+  --espaco-interno: 2rem;
+  --espaco-entre-itens: 1.5rem;
+  --espaco-pequeno: 1rem;
+  --espaco-minimo: 0.5rem;
+
+  /* LARGURA */
+  --largura-maxima: 900px;
+
+  /* BORDAS */
+  --borda-raio: 8px;
+  --borda-raio-grande: 12px;
+
+  /* SOMBRAS */
+  --sombra-card: 0 2px 8px rgba(44, 24, 16, 0.08);
+  --sombra-hover: 0 4px 16px rgba(44, 24, 16, 0.12);
+
+  /* TRANSIÇÕES */
+  --transicao: 0.3s ease;
+}

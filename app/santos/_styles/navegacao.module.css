@@ -1,0 +1,273 @@
+/* ============================================================
+   NAVEGAÇÃO — Botão voltar (topo) + Navegação de abas (rodapé)
+   ============================================================ */
+
+/* ═══════════════════════════════════════════════════════════
+   BOTÃO VOLTAR — estilo editorial minimalista
+   ═══════════════════════════════════════════════════════════ */
+
+.botaoVoltar {
+  position: absolute;
+  top: 28px;
+  left: 28px;
+  z-index: 100;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 4px;
+  background: transparent;
+  border: none;
+  color: var(--ink-muted, #8a8578);
+  text-decoration: none;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 11px;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  transition: color 0.3s ease;
+  box-sizing: border-box;
+}
+
+/* Linha dourada no hover */
+.botaoVoltar::after {
+  content: '';
+  position: absolute;
+  left: 20px;
+  right: 4px;
+  bottom: 2px;
+  height: 1px;
+  background: var(--gold-dark, #b08a3c);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.4s ease;
+}
+
+.botaoVoltar:hover {
+  color: var(--ink, #2f2a22);
+}
+
+.botaoVoltar:hover::after {
+  transform: scaleX(1);
+}
+
+.botaoVoltar svg {
+  width: 13px;
+  height: 13px;
+  flex-shrink: 0;
+  color: var(--gold-dark, #b08a3c);
+  stroke-width: 1.5;
+  transition: transform 0.3s ease;
+}
+
+.botaoVoltar:hover svg {
+  transform: translateX(-3px);
+}
+
+.botaoVoltarLabel {
+  display: inline-block;
+  font-weight: 400;
+}
+
+
+/* ═══════════════════════════════════════════════════════════
+   NAVEGAÇÃO ENTRE ABAS — rodapé de cada aba
+   ═══════════════════════════════════════════════════════════ */
+
+.navegacaoAbas {
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 1100px;
+  margin: 60px auto 40px;
+  padding: 0 20px;
+  min-width: 0;
+}
+
+.navegacaoContainer {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  gap: 24px;
+  padding: 32px 20px;
+  border-top: 1px solid var(--border, #d8d1c2);
+  border-bottom: 1px solid var(--border, #d8d1c2);
+  background: var(--bg-elevated, #faf8f3);
+  box-sizing: border-box;
+  min-width: 0;
+  transition: background 0.3s ease, border-color 0.3s ease;
+}
+
+/* Botões de anterior e próxima */
+.navBotao {
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+  padding: 12px 16px;
+  color: var(--ink-soft, #6e6a60);
+  text-decoration: none;
+  border: 1px solid transparent;
+  background: transparent;
+  transition: all 0.3s ease;
+  font-family: Georgia, 'Times New Roman', serif;
+  box-sizing: border-box;
+  min-width: 0;
+  border-radius: 4px;
+}
+
+.navBotao:hover {
+  background: var(--bg-card, #f3eee3);
+  border-color: var(--border, #d8d1c2);
+  color: var(--ink, #2f2a22);
+}
+
+.navAnterior {
+  justify-self: end;
+  text-align: right;
+}
+
+.navProxima {
+  justify-self: start;
+  text-align: left;
+}
+
+.navBotao svg {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+  color: var(--gold-dark, #b08a3c);
+  transition: transform 0.3s ease;
+}
+
+.navAnterior:hover svg {
+  transform: translateX(-4px);
+}
+
+.navProxima:hover svg {
+  transform: translateX(4px);
+}
+
+.navTexto {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  min-width: 0;
+  overflow: hidden;
+}
+
+.navPrefixo {
+  font-size: 9.5px;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  color: var(--gold-dark, #b08a3c);
+  font-weight: 600;
+}
+
+.navNome {
+  font-size: 14px;
+  color: var(--ink, #2f2a22);
+  font-weight: 400;
+  letter-spacing: 0.4px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Espaço vazio quando não há aba anterior ou próxima */
+.navVazio {
+  min-height: 48px;
+}
+
+/* Ornamento central */
+.navOrnamento {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--gold-dark, #b08a3c);
+}
+
+.navLinha {
+  display: inline-block;
+  width: 24px;
+  height: 1px;
+  background: var(--gold-dark, #b08a3c);
+  opacity: 0.4;
+}
+
+.navEstrela {
+  font-size: 11px;
+  opacity: 0.75;
+}
+
+
+/* ═══════════════════════════════════════════════════════════
+   RESPONSIVIDADE COMPACTA (~20% REDUÇÃO MOBILE)
+   ═══════════════════════════════════════════════════════════ */
+
+@media (max-width: 700px) {
+  .botaoVoltar {
+    top: 15px;
+    left: 12px;
+    gap: 5px;
+    font-size: 9.5px;
+    letter-spacing: 1.8px;
+  }
+
+  .botaoVoltar svg {
+    width: 11px;
+    height: 11px;
+  }
+
+  .navegacaoAbas {
+    margin: 32px auto 24px;
+    padding: 0 10px;
+  }
+
+  /* DUAS COLUNAS — botões na mesma linha */
+  .navegacaoContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+    padding: 14px 10px;
+    align-items: stretch;
+  }
+
+  .navOrnamento,
+  .navVazio {
+    display: none;
+  }
+
+  .navAnterior,
+  .navProxima {
+    justify-self: stretch;
+    width: 100%;
+    max-width: 100%;
+    padding: 10px 10px;
+    gap: 8px;
+    box-sizing: border-box;
+  }
+
+  /* Esquerda = anterior | Direita = próxima */
+  .navAnterior {
+    order: 1;
+    justify-content: flex-start;
+    text-align: left;
+  }
+
+  .navProxima {
+    order: 2;
+    justify-content: flex-end;
+    text-align: right;
+  }
+
+  .navPrefixo {
+    font-size: 8px;
+    letter-spacing: 1.5px;
+  }
+
+  .navNome {
+    font-size: 12px;
+  }
+
+  .navBotao svg {
+    width: 15px;
+    height: 15px;
+  }
+}

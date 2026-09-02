@@ -1,0 +1,245 @@
+/* C:\Users\kitten\Documents\lux-fidei\app\santos\_styles\especificos\doutores\santa-teresinha-do-menino-jesus\iconografia\HeroIconografia.module.css */
+
+.hero {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  min-height: 600px;
+  max-height: 1000px;
+  overflow: hidden;
+  background: #0a0705;
+}
+
+.heroImageWrapper {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 120%;
+  top: -10%;
+}
+
+.heroImage {
+  object-fit: cover;
+  object-position: center 30%;
+  filter: saturate(0.85) contrast(1.05);
+  transition: transform 0.1s linear;
+}
+
+.heroOverlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(10, 7, 5, 0.2) 0%,
+    rgba(10, 7, 5, 0.4) 30%,
+    rgba(10, 7, 5, 0.7) 60%,
+    rgba(10, 7, 5, 0.95) 100%
+  );
+  z-index: 1;
+}
+
+.heroVignette {
+  position: absolute;
+  inset: 0;
+  box-shadow: inset 0 0 200px 60px rgba(0, 0, 0, 0.5);
+  z-index: 2;
+}
+
+.heroContent {
+  position: relative;
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  height: 100%;
+  padding: 0 2rem 5rem;
+  text-align: center;
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 1.2s ease, transform 1.2s ease;
+}
+
+.heroContentVisible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.heroEpigrafe {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.heroCross {
+  color: #c4956a;
+  font-size: 0.75rem;
+  opacity: 0.8;
+}
+
+.heroSubtitle {
+  font-family: var(--font-body, 'Georgia', serif);
+  font-size: 0.8rem;
+  letter-spacing: 0.35em;
+  text-transform: uppercase;
+  color: #c4956a;
+  font-weight: 400;
+}
+
+.heroTitle {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.25rem;
+  margin: 0 0 1.5rem;
+}
+
+.heroTitleLine1 {
+  font-family: var(--font-body, 'Georgia', serif);
+  font-size: clamp(1rem, 2vw, 1.25rem);
+  font-weight: 300;
+  color: rgba(255, 255, 255, 0.7);
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+
+.heroTitleLine2 {
+  font-family: var(--font-heading, 'Georgia', serif);
+  font-size: clamp(2.5rem, 6vw, 4.5rem);
+  font-weight: 700;
+  color: #fff;
+  line-height: 1.1;
+  letter-spacing: -0.01em;
+}
+
+.heroTitleLine3 {
+  font-family: var(--font-body, 'Georgia', serif);
+  font-size: clamp(0.9rem, 1.8vw, 1.15rem);
+  font-weight: 300;
+  font-style: italic;
+  color: rgba(255, 255, 255, 0.6);
+  letter-spacing: 0.08em;
+}
+
+.heroDescription {
+  font-family: var(--font-body, 'Georgia', serif);
+  font-size: clamp(0.9rem, 1.2vw, 1.05rem);
+  line-height: 1.8;
+  color: rgba(255, 255, 255, 0.6);
+  max-width: 600px;
+  margin-bottom: 2.5rem;
+}
+
+.heroMeta {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.heroMetaItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.heroMetaLabel {
+  font-size: 0.65rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.4);
+  font-family: var(--font-body, sans-serif);
+}
+
+.heroMetaValue {
+  font-family: var(--font-heading, 'Georgia', serif);
+  font-size: 1rem;
+  font-weight: 600;
+  color: #c4956a;
+}
+
+.heroMetaDivider {
+  width: 1px;
+  height: 2.5rem;
+  background: rgba(196, 149, 106, 0.2);
+}
+
+.heroScrollIndicator {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+  animation: float 3s ease-in-out infinite;
+}
+
+.heroScrollText {
+  font-size: 0.65rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.heroScrollLine {
+  width: 1px;
+  height: 40px;
+  background: rgba(196, 149, 106, 0.15);
+  position: relative;
+  overflow: hidden;
+}
+
+.heroScrollDot {
+  width: 3px;
+  height: 3px;
+  background: #c4956a;
+  border-radius: 50%;
+  position: absolute;
+  left: -1px;
+  animation: scrollDot 2s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+
+@keyframes scrollDot {
+  0% { top: 0; opacity: 0; }
+  30% { opacity: 1; }
+  100% { top: 100%; opacity: 0; }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    min-height: 500px;
+    height: 85vh;
+  }
+
+  .heroContent {
+    padding: 0 1.5rem 3.5rem;
+  }
+
+  .heroMeta {
+    gap: 1rem;
+  }
+
+  .heroMetaDivider {
+    height: 2rem;
+  }
+
+  .heroMetaValue {
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .heroMeta {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .heroDescription br {
+    display: none;
+  }
+}

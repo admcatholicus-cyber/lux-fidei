@@ -1,0 +1,215 @@
+/* ============================================================
+   GRADE ATRIBUTOS — Cards enciclopédicos de símbolos
+   ============================================================ */
+
+.gradeWrapper {
+  max-width: 1160px;
+  margin: 0 auto 80px;
+}
+
+/* ---------- CABEÇALHO DA SEÇÃO ---------- */
+.cabecalho {
+  max-width: 780px;
+  margin: 0 auto 56px;
+  text-align: center;
+}
+
+.cabecalhoSuprat {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.65rem;
+  font-weight: 600;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: #b08a3c;
+  display: block;
+  margin-bottom: 12px;
+}
+
+.cabecalhoTitulo {
+  font-family: 'Libre Baskerville', Georgia, serif;
+  font-size: clamp(1.5rem, 2.5vw, 2.1rem);
+  font-weight: 700;
+  color: #2a2520;
+  margin: 0 0 14px;
+  line-height: 1.2;
+}
+
+.cabecalhoIntro {
+  font-family: Georgia, serif;
+  font-size: 1rem;
+  font-style: italic;
+  color: #6f6758;
+  line-height: 1.75;
+  margin: 0;
+}
+
+/* ---------- GRADE ---------- */
+.grade {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1px;
+  background: #e2dcd0;
+  border: 1px solid #e2dcd0;
+}
+
+@media (max-width: 900px) {
+  .grade {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 560px) {
+  .grade {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ---------- CARD DE ATRIBUTO ---------- */
+.card {
+  background: #faf8f4;
+  display: flex;
+  flex-direction: column;
+  transition: background 0.3s ease, transform 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.card:hover {
+  background: #fff;
+}
+
+.card:hover .cardImagem img {
+  transform: scale(1.06);
+  filter: sepia(4%) contrast(1.02);
+}
+
+/* Faixa lateral dourada */
+.card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 3px;
+  height: 100%;
+  background: linear-gradient(to bottom, transparent, #b08a3c 30%, #b08a3c 70%, transparent);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.card:hover::before {
+  opacity: 1;
+}
+
+/* Imagem do atributo (detalhe visual) */
+.cardImagem {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  background: #0e0c08;
+}
+
+.cardImagem img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: sepia(10%) contrast(1.03);
+  transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+              filter 0.4s ease;
+}
+
+/* Overlay superior com número/símbolo */
+.cardBadge {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 5px 12px 5px 8px;
+  background: rgba(14, 12, 8, 0.72);
+  border: 1px solid rgba(176, 138, 60, 0.45);
+  backdrop-filter: blur(6px);
+  z-index: 2;
+  border-radius: 2px;
+}
+
+.cardBadgeIcone {
+  font-size: 0.9rem;
+  color: #d4b872;
+}
+
+.cardBadgeNumero {
+  font-family: 'Libre Baskerville', Georgia, serif;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  color: #d4b872;
+}
+
+/* Corpo do card (texto) */
+.cardCorpo {
+  padding: 24px 24px 26px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.cardNomeLatim {
+  font-family: Georgia, serif;
+  font-size: 0.72rem;
+  font-style: italic;
+  color: #b08a3c;
+  margin: 0 0 4px;
+  letter-spacing: 0.02em;
+}
+
+.cardNome {
+  font-family: 'Libre Baskerville', Georgia, serif;
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #2a2520;
+  margin: 0 0 10px;
+  line-height: 1.25;
+}
+
+.cardDivisor {
+  width: 32px;
+  height: 1px;
+  background: #b08a3c;
+  opacity: 0.5;
+  margin: 0 0 12px;
+}
+
+.cardSignificado {
+  font-family: Georgia, serif;
+  font-size: 0.88rem;
+  line-height: 1.7;
+  color: #4a4540;
+  margin: 0 0 14px;
+  flex: 1;
+}
+
+/* Rodapé com origem/fonte */
+.cardRodape {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding-top: 12px;
+  border-top: 1px solid #e2dcd0;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.62rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #9a9080;
+}
+
+.cardRodapeIcone {
+  display: inline-block;
+  width: 4px;
+  height: 4px;
+  background: #b08a3c;
+  border-radius: 50%;
+  flex-shrink: 0;
+}

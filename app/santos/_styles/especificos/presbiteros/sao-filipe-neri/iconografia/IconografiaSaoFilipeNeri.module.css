@@ -1,0 +1,439 @@
+/* Oratório em Camadas: CSS Module isolado, marfim de pergaminho, rubrica vermelha e contraste sacristia. */
+.page {
+  --ink:#201914;
+  --muted:#66574a;
+  --paper:#f5eee2;
+  --paperDeep:#e9dac1;
+  --red:#9b302f;
+  --redDeep:#6a1d1f;
+  --gold:#c69a58;
+  color:var(--ink);
+  background:var(--paper);
+  font-family:var(--font-body, Georgia, serif);
+  overflow:hidden;
+}
+.page * { box-sizing:border-box; }
+
+/* ============ HERO ============ */
+.hero {
+  min-height:720px;
+  position:relative;
+  isolation:isolate;
+  color:#fff8eb;
+  background:#16100d;
+  overflow:hidden;
+}
+.heroImage {
+  position:absolute; inset:0; z-index:-2;
+  background:
+    linear-gradient(90deg,rgba(14,8,7,.36),rgba(14,8,7,.06) 38%,rgba(14,8,7,.72) 68%,rgba(14,8,7,.94)),
+    url("/santos/biografia/presbiteros/sao-filipe-neri/iconografia/hero-oratorio.jpg") center/cover no-repeat;
+}
+.heroGrain {
+  position:absolute; inset:0; z-index:-1;
+  opacity:.18; mix-blend-mode:soft-light;
+  background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='4'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+.heroContent { width:min(670px,47vw); margin-left:auto; margin-right:7.5%; padding:145px 0 115px; }
+.kicker,.eyebrow {
+  margin:0; color:var(--red);
+  font-family:var(--font-sans, Arial, sans-serif);
+  font-size:.68rem; font-weight:700; letter-spacing:.15em; text-transform:uppercase;
+}
+.kicker { color:#edc47f; }
+.roman { margin:33px 0 12px; color:rgba(247,216,165,.43); font-size:clamp(3rem,6vw,5rem); line-height:.7; }
+.hero h1,.attributes h2,.timeline h2,.gallery h2,.closing h2 {
+  margin:0;
+  font-family:var(--font-display,"Cormorant Garamond",Georgia,serif);
+  font-weight:500; letter-spacing:-.052em; line-height:.9; text-wrap:balance;
+}
+.hero h1 { font-size:clamp(3.6rem,6.4vw,6.7rem); }
+.heroLead {
+  max-width:520px; margin:27px 0 31px;
+  color:rgba(255,248,235,.82);
+  font-family:var(--font-sans,Arial,sans-serif);
+  font-size:1.08rem; line-height:1.58;
+}
+.heroLead strong,.heroNote strong { color:#f1cc8e; }
+.primaryAction {
+  display:inline-flex; gap:12px; align-items:center;
+  padding:14px 19px; border:1px solid #d3a25a;
+  color:#fff8ee; background:var(--red);
+  font-family:var(--font-sans,Arial,sans-serif);
+  font-size:.72rem; font-weight:700; letter-spacing:.12em;
+  text-decoration:none; text-transform:uppercase;
+  transition:transform .18s ease,background .18s ease;
+}
+.primaryAction:hover { background:#bd4641; transform:translateY(-2px); }
+.heroNote {
+  position:absolute; bottom:39px;
+  left:max(32px,calc((100vw - 1280px)/2));
+  width:min(325px,29vw);
+  padding:18px 0 0 18px; border-left:1px solid #e8b870;
+}
+.heroNote span {
+  color:#eabd75; font-family:var(--font-sans,Arial,sans-serif);
+  font-size:.64rem; font-weight:700; letter-spacing:.14em; text-transform:uppercase;
+}
+.heroNote p {
+  margin:8px 0 0; color:rgba(255,247,233,.8);
+  font-family:var(--font-sans,Arial,sans-serif);
+  font-size:.86rem; line-height:1.48;
+}
+
+/* ============ SEÇÕES CLARAS ============ */
+.attributes,.gallery { padding:128px max(28px,calc((100vw - 1180px)/2)); }
+.attributes { background:linear-gradient(145deg,#f8f1e5,#eee0ca); }
+
+/* Header padrão (Atributos) */
+.sectionHead {
+  display:flex; gap:60px; align-items:end; justify-content:space-between;
+}
+.sectionHead h2 { margin-top:10px; font-size:clamp(3rem,5.1vw,5rem); }
+.sectionHead > p {
+  max-width:350px; margin:0 0 4px;
+  color:var(--muted);
+  font-family:var(--font-sans,Arial,sans-serif);
+  font-size:1rem; line-height:1.58;
+}
+
+/* Header da galeria — sem coluna estreita, sem título gigante em pé */
+.galleryHead {
+  display:grid;
+  grid-template-columns: 1fr;
+  gap:18px;
+  align-items:start;
+  margin-bottom:8px;
+}
+.galleryHead h2 {
+  margin-top:10px;
+  font-size: clamp(2.6rem, 4.4vw, 4rem);
+  max-width: 22ch;   /* impede quebra vertical feia */
+  line-height: 1.02;
+}
+.galleryHead > p {
+  max-width: 62ch;
+  margin:0;
+  color:var(--muted);
+  font-family:var(--font-sans,Arial,sans-serif);
+  font-size:1rem; line-height:1.6;
+}
+
+.attributeGrid {
+  display:grid; grid-template-columns:repeat(6,1fr);
+  margin-top:67px;
+  border-top:1px solid rgba(70,50,35,.23);
+  border-left:1px solid rgba(70,50,35,.23);
+}
+.attributeCard {
+  min-height:274px; padding:26px 20px;
+  border-right:1px solid rgba(70,50,35,.23);
+  border-bottom:1px solid rgba(70,50,35,.23);
+  transition:background .22s ease,color .22s ease,transform .22s ease;
+}
+.attributeCard:hover { color:#fff8eb; background:var(--red); transform:translateY(-5px); }
+.attributeCard > span {
+  color:var(--gold);
+  font-family:var(--font-sans,Arial,sans-serif);
+  font-size:.66rem; font-weight:700; letter-spacing:.1em;
+}
+.attributeCard > i {
+  display:block; margin:39px 0 17px;
+  color:var(--red); font-style:normal;
+  transition:color .22s ease;
+}
+.attributeCard:hover i { color:#f4cd91; }
+.attributeCard h3 {
+  margin:0;
+  font-family:var(--font-display,"Cormorant Garamond",Georgia,serif);
+  font-size:1.52rem; line-height:1;
+}
+.attributeCard p {
+  margin:12px 0 0;
+  color:var(--muted);
+  font-family:var(--font-sans,Arial,sans-serif);
+  font-size:.87rem; line-height:1.52;
+}
+.attributeCard:hover p,
+.attributeCard:hover > span { color:rgba(255,248,235,.82); }
+
+/* ============ TIMELINE (reconstruída) ============ */
+.timeline {
+  position:relative;
+  display:grid;
+  grid-template-columns: 42% 58%;
+  min-height:820px;
+  color:#fff8ec;
+  background:#281e1a;
+  overflow:hidden;
+}
+.timelineImage {
+  position:relative;
+  min-height:100%;
+  background:
+    linear-gradient(90deg, rgba(29,20,16,.15), rgba(40,30,26,.0)),
+    url("/santos/biografia/presbiteros/sao-filipe-neri/iconografia/oratorio-roma.jpg") center/cover no-repeat;
+}
+.timelineImage::after {
+  content:"";
+  position:absolute; top:0; right:-1px; bottom:0; width:120px;
+  background: linear-gradient(90deg, rgba(40,30,26,0), rgba(40,30,26,.95));
+  pointer-events:none;
+}
+.timelineContent {
+  position:relative;
+  padding:96px max(28px, 6vw) 96px 56px;
+  max-width: 720px;
+  background: rgba(40,30,26,.92);
+  backdrop-filter: blur(2px);
+}
+.timeline .eyebrow { color:#edba72; }
+.timeline h2 { margin-top:10px; color:#fff8ec; font-size:clamp(2.8rem,4.6vw,4.6rem); }
+.timelineLead {
+  margin:22px 0 40px;
+  color:rgba(255,248,235,.82);
+  font-family:var(--font-sans,Arial,sans-serif);
+  line-height:1.65;
+  max-width: 58ch;
+}
+.timeline ol {
+  margin:0; padding:0; list-style:none;
+  border-top:1px solid rgba(255,238,205,.22);
+}
+.timeline li {
+  display:grid;
+  grid-template-columns:150px 1fr;
+  gap:24px;
+  padding:22px 0;
+  border-bottom:1px solid rgba(255,238,205,.22);
+}
+.timeline li > span {
+  color:#efbf79;
+  font-family:var(--font-sans,Arial,sans-serif);
+  font-size:.72rem; font-weight:700; letter-spacing:.1em; text-transform:uppercase;
+  padding-top:4px;
+}
+.timeline h3 {
+  margin:0;
+  font-family:var(--font-display,"Cormorant Garamond",Georgia,serif);
+  font-size:1.42rem; line-height:1.1;
+}
+.timeline li p {
+  margin:8px 0 0;
+  color:rgba(255,248,235,.78);
+  font-family:var(--font-sans,Arial,sans-serif);
+  font-size:.92rem; line-height:1.55;
+}
+
+/* ============ GALERIA — FULL BLEED + CARDS MAIORES ============ */
+.gallery {
+  padding:120px 0;                 /* zera padding horizontal */
+  background:var(--paper);
+}
+.galleryInner {
+  padding: 0 max(28px, calc((100vw - 1440px)/2));
+}
+.galleryControls {
+  display:flex; justify-content:space-between; align-items:center;
+  gap:18px; margin:44px 0 30px; padding:12px 0;
+  border-top:1px solid #ceb99b; border-bottom:1px solid #ceb99b;
+}
+.galleryControls > div { display:flex; flex-wrap:wrap; gap:5px; }
+.galleryControls button {
+  border:0; background:transparent; color:var(--muted);
+  padding:8px 10px;
+  font-family:var(--font-sans,Arial,sans-serif);
+  font-size:.68rem; font-weight:700; letter-spacing:.07em; text-transform:uppercase;
+  cursor:pointer;
+  transition:background .17s ease,color .17s ease;
+}
+.galleryControls button:hover,
+.galleryControls button.isActive { color:#fff8ed; background:var(--red); }
+.galleryControls > span {
+  color:var(--muted);
+  font-family:var(--font-sans,Arial,sans-serif);
+  font-size:.76rem; white-space:nowrap;
+}
+
+/* mural em largura cheia + colunas ~30% maiores */
+.wall {
+  columns: 3 320px;         /* antes: 4 220px */
+  column-gap: 20px;
+  padding: 0 max(20px, calc((100vw - 1560px)/2));
+}
+.artCard {
+  position:relative; display:block; width:100%;
+  margin:0 0 20px; padding:0; border:0;
+  break-inside:avoid; overflow:hidden;
+  background:#251b17; color:#fff9ed; text-align:left; cursor:zoom-in;
+}
+.artCard img {
+  display:block; width:100%;
+  aspect-ratio:3/4; object-fit:cover;
+  filter:saturate(.84) contrast(1.03) sepia(.08);
+  transition:transform .48s cubic-bezier(.23,1,.32,1),filter .32s ease;
+}
+.artCard.horizontal img { aspect-ratio:4/3; }
+.cardShade {
+  position:absolute; inset:0;
+  background:linear-gradient(to top,rgba(22,12,8,.94),rgba(22,12,8,.15) 58%,transparent 78%);
+}
+.cardInfo {
+  position:absolute; inset:auto 18px 16px;
+  display:grid; gap:3px;
+  transition:transform .25s ease;
+}
+.cardInfo small {
+  color:#edbf80;
+  font-family:var(--font-sans,Arial,sans-serif);
+  font-size:.6rem; font-weight:700; letter-spacing:.1em; text-transform:uppercase;
+}
+.cardInfo strong {
+  font-family:var(--font-display,"Cormorant Garamond",Georgia,serif);
+  font-size:1.65rem; font-weight:600; line-height:1.05; letter-spacing:-.02em;
+}
+.cardInfo em {
+  color:rgba(255,249,238,.78);
+  font-family:var(--font-sans,Arial,sans-serif);
+  font-size:.78rem; font-style:normal; line-height:1.3;
+}
+.openMark {
+  position:absolute; top:14px; right:14px;
+  display:grid; width:35px; height:35px; place-items:center;
+  border:1px solid rgba(255,248,235,.7); border-radius:50%;
+  opacity:0; transform:translateY(5px);
+  transition:opacity .2s ease,transform .2s ease,background .2s ease;
+}
+.artCard:hover img { transform:scale(1.045); filter:saturate(1) contrast(1.06) sepia(0); }
+.artCard:hover .cardInfo { transform:translateY(-4px); }
+.artCard:hover .openMark { opacity:1; transform:translateY(0); background:var(--red); border-color:var(--red); }
+
+/* ============ DIALOG (LIGHTBOX) ============ */
+.dialogLayer {
+  position:fixed; z-index:50; inset:0;
+  display:grid; place-items:center; padding:18px;
+  background:rgba(25,15,11,.78); backdrop-filter:blur(6px);
+}
+.dialog {
+  position:relative;
+  display:grid; grid-template-columns:minmax(230px,.8fr) minmax(270px,1fr);
+  width:min(960px,100%); max-height:calc(100vh - 36px);
+  overflow:auto; background:#f5eada; color:var(--ink);
+  box-shadow:0 30px 90px rgba(0,0,0,.4);
+}
+.dialog > img {
+  display:block; width:100%; height:100%; max-height:680px;
+  object-fit:cover; background:#261c18;
+}
+.dialog > div { align-self:center; padding:43px 41px; }
+.close {
+  position:absolute; z-index:1; top:12px; right:12px;
+  width:34px; height:34px; border:0; border-radius:50%;
+  background:rgba(35,24,18,.64); color:#fff8eb;
+  font-size:1.5rem; line-height:1; cursor:pointer;
+}
+.dialog h3 {
+  margin:11px 0 0;
+  font-family:var(--font-display,"Cormorant Garamond",Georgia,serif);
+  font-size:clamp(2.1rem,4vw,3.2rem); font-weight:600; line-height:.93; letter-spacing:-.04em;
+}
+.dialogSubtitle { margin:10px 0 0; color:var(--redDeep); font-family:var(--font-sans,Arial,sans-serif); font-size:.88rem; }
+.dialogText { margin:24px 0; color:var(--muted); font-family:var(--font-sans,Arial,sans-serif); font-size:.97rem; line-height:1.6; }
+.dialog dl { margin:0; padding:15px 0; border-top:1px solid #cdb692; border-bottom:1px solid #cdb692; }
+.dialog dl div { display:grid; grid-template-columns:82px 1fr; gap:12px; padding:4px 0; }
+.dialog dt { color:var(--red); font-family:var(--font-sans,Arial,sans-serif); font-size:.64rem; font-weight:700; letter-spacing:.1em; text-transform:uppercase; }
+.dialog dd { margin:0; color:var(--muted); font-family:var(--font-sans,Arial,sans-serif); font-size:.82rem; }
+.dialog a {
+  display:inline-flex; margin-top:22px;
+  border-bottom:1px solid currentColor;
+  color:var(--redDeep);
+  font-family:var(--font-sans,Arial,sans-serif);
+  font-size:.74rem; font-weight:700; letter-spacing:.08em;
+  text-decoration:none; text-transform:uppercase;
+}
+
+/* ============ CLOSING ============ */
+.closing {
+  position:relative; min-height:610px;
+  display:grid; place-items:center; overflow:hidden;
+  color:#fff8eb; background:#6f2726; isolation:isolate;
+}
+.closingImage {
+  position:absolute; inset:0; z-index:-1; opacity:.96;
+  background:
+    linear-gradient(90deg,rgba(68,21,20,.8),rgba(96,30,28,.21)),
+    url("/santos/biografia/presbiteros/sao-filipe-neri/iconografia/painel-fogo.jpg") right center/auto 110% no-repeat;
+}
+.closingContent { width:min(700px,100%); margin-left:min(13vw,175px); padding:115px 28px; }
+.closing .eyebrow { color:#f3c77f; }
+.quoteMark {
+  margin:24px 0 8px; color:rgba(249,209,141,.72);
+  font-family:var(--font-display,"Cormorant Garamond",Georgia,serif);
+  font-size:4rem; line-height:.5;
+}
+.closing h2 { color:#fff8eb; font-size:clamp(3rem,5.5vw,5.5rem); }
+.closingContent > p:last-of-type {
+  max-width:540px; margin:26px 0;
+  color:rgba(255,248,235,.8);
+  font-family:var(--font-sans,Arial,sans-serif);
+  font-size:1.04rem; line-height:1.58;
+}
+.closing a {
+  display:inline-flex; gap:7px;
+  border-bottom:1px solid #e9b46b;
+  color:#fff7e8;
+  font-family:var(--font-sans,Arial,sans-serif);
+  font-size:.75rem; font-weight:700; letter-spacing:.1em;
+  text-decoration:none; text-transform:uppercase;
+}
+
+/* ============ RESPONSIVO ============ */
+@media (max-width:1200px) {
+  .attributeGrid { grid-template-columns:repeat(3,1fr); }
+  .wall { columns: 3 280px; }
+  .timeline { grid-template-columns: 38% 62%; }
+}
+@media (max-width:900px) {
+  .timeline { grid-template-columns: 1fr; min-height:0; }
+  .timelineImage { min-height: 260px; }
+  .timelineImage::after { display:none; }
+  .timelineContent { padding: 60px 24px; background: #281e1a; }
+  .wall { columns: 2 260px; }
+}
+@media (max-width:720px) {
+  .hero { min-height:700px; }
+  .heroImage {
+    background-image:
+      linear-gradient(90deg,rgba(14,8,7,.78),rgba(14,8,7,.48) 68%,rgba(14,8,7,.8)),
+      url("/santos/biografia/presbiteros/sao-filipe-neri/iconografia/hero-oratorio.jpg");
+    background-position:35% center;
+  }
+  .heroContent { width:auto; margin:0; padding:108px 24px 148px; }
+  .hero h1 { font-size:clamp(3.4rem,16.7vw,4.7rem); }
+  .heroNote { left:24px; bottom:24px; width:calc(100% - 48px); }
+  .attributes { padding:83px 22px; }
+  .sectionHead { flex-direction:column; align-items:flex-start; gap:19px; }
+  .sectionHead h2 { font-size:clamp(3rem,14.6vw,4.45rem); }
+  .attributeGrid { grid-template-columns:repeat(2,1fr); margin-top:41px; }
+  .attributeCard { min-height:235px; padding:19px 14px; }
+  .attributeCard > i { margin:29px 0 15px; }
+  .gallery { padding: 72px 0; }
+  .galleryInner { padding: 0 22px; }
+  .wall { columns: 2 160px; column-gap:12px; padding: 0 12px; }
+  .cardInfo { inset:auto 12px 10px; }
+  .cardInfo strong { font-size:1.15rem; }
+  .cardInfo small, .cardInfo em { font-size:.6rem; }
+  .openMark { display:none; }
+  .galleryControls { margin:32px 0 20px; padding:12px 0; }
+  .galleryControls > span { display:none; }
+  .dialog { grid-template-columns:1fr; max-height:calc(100vh - 20px); }
+  .dialog > img { height:37vh; min-height:220px; }
+  .dialog > div { padding:30px 24px 35px; }
+  .closing { display:block; min-height:620px; }
+  .closingImage { background-size:auto 83%; background-position:90% 100%; }
+  .closingContent { width:auto; margin:0; padding:87px 24px 120px; }
+  .closing h2 { font-size:clamp(3rem,14.5vw,4.6rem); }
+}
+@media (prefers-reduced-motion:reduce) {
+  .page * { scroll-behavior:auto!important; transition-duration:.01ms!important; animation-duration:.01ms!important; }
+}

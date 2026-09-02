@@ -1,0 +1,479 @@
+/* ============================================================
+   PERGAMINHO DO ARCANJO — CÓDICE MIGUELINO (versão estática)
+   Manuscrito medieval iluminado. Fosco, texturizado, terracota.
+   SEM animações, SEM transições — 100% estático e performático.
+   ============================================================ */
+
+.pergaminho {
+  position: relative;
+  max-width: 980px;
+  margin: 100px auto;
+  padding: 90px 80px 80px;
+
+  /* Fundo terracota fosco com manchas orgânicas de pigmento */
+  background-color: #9a3830;
+  background-image:
+    radial-gradient(ellipse 60% 40% at 20% 30%, rgba(120, 40, 30, 0.4), transparent),
+    radial-gradient(ellipse 50% 50% at 80% 70%, rgba(140, 55, 40, 0.35), transparent),
+    radial-gradient(ellipse 40% 30% at 60% 20%, rgba(90, 30, 25, 0.3), transparent),
+    linear-gradient(180deg, #a63d3d 0%, #8b3229 100%);
+
+  color: #f0e5c8;
+  font-family: Georgia, 'Libre Baskerville', serif;
+
+  /* Moldura dupla estilo códice */
+  border: 3px solid #a88a4a;
+  outline: 1px solid #6b5530;
+  outline-offset: -14px;
+
+  /* Sombra sutil de "papel apoiado" */
+  box-shadow:
+    0 8px 24px rgba(80, 30, 20, 0.25),
+    inset 0 0 0 1px rgba(168, 138, 74, 0.3);
+
+  /* Isola como camada própria para não afetar o resto da página ao rolar */
+  contain: layout style paint;
+}
+
+/* Classe .visivel mantida por compatibilidade — sem efeito visual */
+.pergaminho.visivel {
+  /* nada — o pergaminho já está visível por padrão */
+}
+
+/* ═══════════════════════════════════════════════════════════
+   TEXTURA DE PAPEL — ruído SVG estático
+   ═══════════════════════════════════════════════════════════ */
+.pergaminho::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='paper'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='4' seed='7' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0.2 0 0 0 0 0.1 0 0 0 0 0.05 0 0 0 0.9 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23paper)' opacity='0.5'/%3E%3C/svg%3E");
+  background-size: 400px 400px;
+  mix-blend-mode: multiply;
+  opacity: 0.55;
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Manchas de envelhecimento (foxing) */
+.pergaminho::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image:
+    radial-gradient(circle 3px at 15% 25%, rgba(60, 30, 20, 0.3), transparent),
+    radial-gradient(circle 2px at 85% 15%, rgba(60, 30, 20, 0.25), transparent),
+    radial-gradient(circle 4px at 45% 75%, rgba(60, 30, 20, 0.2), transparent),
+    radial-gradient(circle 2px at 25% 60%, rgba(60, 30, 20, 0.28), transparent),
+    radial-gradient(circle 3px at 75% 90%, rgba(60, 30, 20, 0.22), transparent),
+    radial-gradient(circle 2px at 90% 45%, rgba(60, 30, 20, 0.3), transparent),
+    radial-gradient(circle 3px at 10% 85%, rgba(60, 30, 20, 0.25), transparent),
+    radial-gradient(circle 2px at 55% 10%, rgba(60, 30, 20, 0.2), transparent);
+  pointer-events: none;
+  z-index: 2;
+}
+
+/* ═══════════════════════════════════════════════════════════
+   BRASÃO HERÁLDICO — visível imediatamente, sem fade-in
+   ═══════════════════════════════════════════════════════════ */
+.brasao {
+  position: absolute;
+  top: -5px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 120px;
+  color: #a88a4a;
+  z-index: 10;
+  filter: drop-shadow(0 2px 3px rgba(60, 30, 20, 0.3));
+}
+
+.brasao svg {
+  width: 100%;
+  height: 100%;
+}
+
+/* Todos os componentes do brasão visíveis por padrão — sem animação */
+.brasaoCoroa,
+.brasaoEspada,
+.brasaoBalanca,
+.brasaoAsas {
+  opacity: 1;
+}
+
+/* Fundo do brasão removido */
+.brasao::before {
+  display: none;
+}
+
+/* ═══════════════════════════════════════════════════════════
+   CANTOS DECORATIVOS — florituras góticas
+   ═══════════════════════════════════════════════════════════ */
+.canto {
+  position: absolute;
+  width: 45px;
+  height: 45px;
+  color: #a88a4a;
+  z-index: 3;
+  pointer-events: none;
+  opacity: 0.85;
+}
+
+.canto svg {
+  width: 100%;
+  height: 100%;
+}
+
+.cantoTL { top: 22px; left: 22px; }
+.cantoTR { top: 22px; right: 22px; }
+.cantoBL { bottom: 22px; left: 22px; }
+.cantoBR { bottom: 22px; right: 22px; }
+
+/* ═══════════════════════════════════════════════════════════
+   MARCA D'ÁGUA CENTRAL — cruz templária sutil
+   ═══════════════════════════════════════════════════════════ */
+.marcaDagua {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 380px;
+  height: 380px;
+  color: #a88a4a;
+  opacity: 0.08;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.marcaDagua svg {
+  width: 100%;
+  height: 100%;
+}
+
+/* ═══════════════════════════════════════════════════════════
+   CABEÇALHO — título estilo iluminura
+   ═══════════════════════════════════════════════════════════ */
+.cabecalho {
+  position: relative;
+  z-index: 5;
+  text-align: center;
+  margin-bottom: 50px;
+  padding-top: 20px;
+}
+
+.suprat {
+  display: inline-block;
+  font-size: 0.7rem;
+  letter-spacing: 0.4em;
+  text-transform: uppercase;
+  color: #d4bc85;
+  margin-bottom: 24px;
+  font-weight: 600;
+}
+
+.titulo {
+  font-family: Georgia, 'Libre Baskerville', serif;
+  font-size: clamp(2rem, 4vw, 2.8rem);
+  font-weight: 400;
+  color: #f5e8c9;
+  letter-spacing: 0.02em;
+  margin: 0 0 16px;
+  line-height: 1.2;
+  text-shadow: 0 1px 0 rgba(60, 25, 20, 0.4);
+}
+
+.subtitulo {
+  font-family: Georgia, serif;
+  font-style: italic;
+  font-size: 1.05rem;
+  color: #e8d4a8;
+  margin: 0;
+  letter-spacing: 0.02em;
+}
+
+.divisorOrnamental {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  margin-top: 28px;
+}
+
+.divisorLinha {
+  display: inline-block;
+  width: 70px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, #a88a4a, transparent);
+}
+
+.divisorEstrela {
+  color: #d4bc85;
+  font-size: 0.9rem;
+  opacity: 0.85;
+}
+
+/* Selo inferior removido */
+.selo {
+  display: none;
+}
+
+/* ═══════════════════════════════════════════════════════════
+   CORPO — conteúdo do card
+   ═══════════════════════════════════════════════════════════ */
+.corpo {
+  position: relative;
+  z-index: 5;
+  color: #f0e5c8;
+  font-size: 1.02rem;
+  line-height: 1.85;
+}
+
+.corpo :global(h4),
+.corpo :global(h3) {
+  color: #f5e8c9 !important;
+  font-family: Georgia, 'Libre Baskerville', serif;
+  border-bottom: 1px solid rgba(168, 138, 74, 0.4);
+  padding-bottom: 12px;
+  margin-top: 40px;
+}
+
+.corpo :global(p) {
+  color: #ede2c5 !important;
+  text-align: justify;
+  hyphens: auto;
+}
+
+.corpo :global(strong) {
+  color: #f5d98a !important;
+  font-weight: 600;
+}
+
+.corpo :global(em) {
+  color: #e8d4a8 !important;
+}
+
+.corpo :global([class*="capitular"]) {
+  color: #d4bc85 !important;
+  text-shadow: 0 1px 0 rgba(60, 25, 20, 0.5) !important;
+  font-family: Georgia, 'Libre Baskerville', serif;
+}
+
+.corpo :global(a) {
+  color: #f5d98a;
+  border-bottom: 1px solid rgba(245, 217, 138, 0.4);
+  text-decoration: none;
+}
+
+.corpo :global(a:hover) {
+  color: #ffe89e;
+  border-bottom-color: #ffe89e;
+}
+
+/* ═══════════════════════════════════════════════════════════
+   OVERRIDE — Blocos internos respeitam o pergaminho
+   ═══════════════════════════════════════════════════════════ */
+.corpo :global([class*="bloco"]) {
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  padding: 0 !important;
+  margin-bottom: 40px !important;
+}
+
+.corpo :global([class*="blocoTitulo"]),
+.corpo :global([class*="bloco"] h3),
+.corpo :global([class*="bloco"] h4) {
+  color: #f5d98a !important;
+  background: transparent !important;
+  border-bottom: 1px solid rgba(168, 138, 74, 0.5) !important;
+  padding-bottom: 10px !important;
+  margin-bottom: 20px !important;
+  font-family: Georgia, 'Libre Baskerville', serif !important;
+}
+
+.corpo :global([class*="bloco"] p),
+.corpo :global(p) {
+  color: #ede2c5 !important;
+  background: transparent !important;
+}
+
+.corpo :global([class*="bloco"] strong),
+.corpo :global(strong) {
+  color: #f5d98a !important;
+}
+
+.corpo :global([class*="bloco"] em),
+.corpo :global(em) {
+  color: #e8d4a8 !important;
+}
+
+.corpo :global([class*="capitular"]) {
+  color: #f5d98a !important;
+  text-shadow: 0 1px 0 rgba(60, 25, 20, 0.5) !important;
+}
+
+/* FICHA */
+.corpo :global([class*="ficha"]) {
+  background: rgba(245, 232, 201, 0.08) !important;
+  border: 1px solid rgba(168, 138, 74, 0.5) !important;
+  color: #f0e5c8 !important;
+  padding: 24px !important;
+  margin-top: 30px !important;
+}
+
+.corpo :global([class*="ficha"] dt),
+.corpo :global([class*="ficha"] [class*="rotulo"]) {
+  color: #d4bc85 !important;
+  font-weight: 600 !important;
+}
+
+.corpo :global([class*="ficha"] dd),
+.corpo :global([class*="ficha"] [class*="valor"]) {
+  color: #f0e5c8 !important;
+}
+
+.corpo :global([class*="ficha"] h4),
+.corpo :global([class*="ficha"] h3),
+.corpo :global([class*="fichaTitulo"]) {
+  color: #f5d98a !important;
+  border-bottom: 1px solid rgba(168, 138, 74, 0.4) !important;
+}
+
+/* ═══════════════════════════════════════════════════════════
+   RESPONSIVO
+   ═══════════════════════════════════════════════════════════ */
+@media (max-width: 900px) {
+  .pergaminho {
+    padding: 70px 40px 60px;
+    margin: 80px 15px;
+  }
+
+  .brasao {
+    width: 85px;
+    height: 100px;
+  }
+
+  .cabecalho {
+    margin-bottom: 36px;
+  }
+
+  .marcaDagua {
+    width: 280px;
+    height: 280px;
+  }
+}
+
+@media (max-width: 600px) {
+  .pergaminho {
+    padding: 60px 24px 50px;
+    margin: 60px 10px;
+    outline-offset: -10px;
+  }
+
+  .brasao {
+    width: 70px;
+    height: 82px;
+  }
+
+  .canto {
+    width: 32px;
+    height: 32px;
+  }
+
+  .cantoTL,
+  .cantoTR {
+    top: 14px;
+  }
+
+  .cantoBL,
+  .cantoBR {
+    bottom: 14px;
+  }
+
+  .cantoTL,
+  .cantoBL {
+    left: 14px;
+  }
+
+  .cantoTR,
+  .cantoBR {
+    right: 14px;
+  }
+
+  .titulo {
+    font-size: 1.6rem;
+  }
+
+  .subtitulo {
+    font-size: 0.95rem;
+  }
+
+  .suprat {
+    font-size: 0.6rem;
+    letter-spacing: 0.3em;
+  }
+
+  .corpo {
+    font-size: 0.95rem;
+  }
+
+  .marcaDagua {
+    width: 200px;
+    height: 200px;
+    opacity: 0.05;
+  }
+}
+/* ═══════════════════════════════════════════════════════════
+   ALERTA — harmoniza com o pergaminho vermelho
+   Sobrescreve qualquer fundo/cor do componente Alerta
+   ═══════════════════════════════════════════════════════════ */
+
+.corpo :global([class*="alerta"]) {
+  background: rgba(60, 25, 20, 0.4) !important;
+  border: 1px solid rgba(168, 138, 74, 0.5) !important;
+  border-left: 3px solid #a88a4a !important;
+  color: #f0e5c8 !important;
+  padding: 20px 24px !important;
+  margin: 30px 0 !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+}
+
+/* Texto interno do alerta */
+.corpo :global([class*="alerta"] p),
+.corpo :global([class*="alerta"] div),
+.corpo :global([class*="alerta"] span) {
+  color: #f0e5c8 !important;
+  background: transparent !important;
+  font-style: italic;
+  line-height: 1.7;
+}
+
+/* Negrito dentro do alerta em ouro */
+.corpo :global([class*="alerta"] strong),
+.corpo :global([class*="alerta"] b) {
+  color: #f5d98a !important;
+  font-style: normal;
+  font-weight: 600;
+}
+
+/* Itálico dentro do alerta em creme */
+.corpo :global([class*="alerta"] em),
+.corpo :global([class*="alerta"] i) {
+  color: #e8d4a8 !important;
+}
+
+/* Título/ícone do alerta (se existir) */
+.corpo :global([class*="alertaTitulo"]),
+.corpo :global([class*="alertaIcone"]),
+.corpo :global([class*="alerta"] h4),
+.corpo :global([class*="alerta"] h5) {
+  color: #f5d98a !important;
+  background: transparent !important;
+}
+
+/* Remove qualquer ícone colorido (info azul, aviso amarelo, perigo vermelho) */
+.corpo :global([class*="alerta"] svg) {
+  color: #d4bc85 !important;
+  fill: #d4bc85 !important;
+}

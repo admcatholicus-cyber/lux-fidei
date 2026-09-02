@@ -1,0 +1,267 @@
+/* ============================================================
+   CARD PEREGRINAÇÃO
+   Card imersivo de santuário: imagem + dados + fatos curiosos
+   ============================================================ */
+
+.card {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  max-width: 1200px;
+  margin: 100px auto;
+  min-height: 560px;
+  border: 1px solid rgba(201, 169, 97, 0.3);
+  box-shadow: 0 25px 70px rgba(0, 0, 0, 0.35);
+  overflow: hidden;
+
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 1s ease, transform 1s ease;
+}
+
+.card.visivel {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Variantes */
+.claro {
+  background: #f8f4ea;
+  color: #2f2a22;
+}
+
+.escuro {
+  background: linear-gradient(180deg, #1a1a1e 0%, #0d0d0f 100%);
+  color: #f4e7c8;
+}
+
+/* Área da imagem */
+.imagemArea {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  min-height: 400px;
+}
+
+.imagemOverlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    135deg,
+    transparent 30%,
+    rgba(0, 0, 0, 0.4) 100%
+  );
+}
+
+.numero {
+  position: absolute;
+  bottom: 30px;
+  left: 30px;
+  font-family: Georgia, 'Libre Baskerville', serif;
+  font-size: 5rem;
+  font-weight: 400;
+  color: #f4d98a;
+  text-shadow: 0 4px 20px rgba(0, 0, 0, 0.7);
+  line-height: 1;
+  letter-spacing: 0.05em;
+}
+
+/* Área de conteúdo */
+.conteudo {
+  padding: 50px 45px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.suprat {
+  font-size: 0.7rem;
+  letter-spacing: 0.35em;
+  text-transform: uppercase;
+  color: #b08a3c;
+  font-weight: 600;
+  margin-bottom: 18px;
+}
+
+.escuro .suprat {
+  color: #d4b872;
+}
+
+.nome {
+  font-family: Georgia, 'Libre Baskerville', serif;
+  font-size: clamp(1.8rem, 3vw, 2.4rem);
+  font-weight: 400;
+  margin: 0 0 10px;
+  line-height: 1.15;
+  color: #2f2a22;
+  letter-spacing: 0.01em;
+}
+
+.escuro .nome {
+  color: #f4e7c8;
+}
+
+.localizacao {
+  font-family: Georgia, serif;
+  font-style: italic;
+  font-size: 0.95rem;
+  color: #6f6758;
+  margin-bottom: 24px;
+}
+
+.escuro .localizacao {
+  color: #a89b7f;
+}
+
+/* Divisor ornamental */
+.divisor {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin: 8px 0 24px;
+}
+
+.divisorLinha {
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, #b08a3c, transparent);
+  max-width: 80px;
+}
+
+.escuro .divisorLinha {
+  background: linear-gradient(90deg, transparent, #c9a961, transparent);
+}
+
+.divisorEstrela {
+  color: #b08a3c;
+  font-size: 0.8rem;
+}
+
+.escuro .divisorEstrela {
+  color: #d4b872;
+}
+
+/* Caixa de fundação */
+.fundacaoBox {
+  display: inline-block;
+  padding: 12px 20px;
+  background: rgba(176, 138, 60, 0.08);
+  border-left: 3px solid #b08a3c;
+  margin-bottom: 24px;
+}
+
+.escuro .fundacaoBox {
+  background: rgba(201, 169, 97, 0.1);
+  border-left-color: #c9a961;
+}
+
+.fundacaoLabel {
+  display: block;
+  font-size: 0.65rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: #b08a3c;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.escuro .fundacaoLabel {
+  color: #d4b872;
+}
+
+.fundacaoValor {
+  font-family: Georgia, serif;
+  font-size: 1rem;
+  color: #2f2a22;
+  font-weight: 600;
+}
+
+.escuro .fundacaoValor {
+  color: #f4e7c8;
+}
+
+/* Descrição */
+.descricao {
+  font-family: Georgia, serif;
+  font-size: 0.95rem;
+  line-height: 1.75;
+  color: #4a4238;
+  margin-bottom: 28px;
+}
+
+.escuro .descricao {
+  color: #d8ccae;
+}
+
+.descricao :global(strong) {
+  color: #2f2a22;
+  font-weight: 600;
+}
+
+.escuro .descricao :global(strong) {
+  color: #f4d98a;
+}
+
+/* Fatos curiosos */
+.fatos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 20px;
+  padding-top: 24px;
+  border-top: 1px solid rgba(176, 138, 60, 0.25);
+}
+
+.escuro .fatos {
+  border-top-color: rgba(201, 169, 97, 0.25);
+}
+
+.fatoItem {
+  text-align: center;
+}
+
+.fatoNumero {
+  font-family: Georgia, 'Libre Baskerville', serif;
+  font-size: 1.8rem;
+  font-weight: 400;
+  color: #b08a3c;
+  line-height: 1;
+  margin-bottom: 6px;
+}
+
+.escuro .fatoNumero {
+  color: #f4d98a;
+}
+
+.fatoLabel {
+  font-size: 0.7rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #6f6758;
+  line-height: 1.4;
+}
+
+.escuro .fatoLabel {
+  color: #a89b7f;
+}
+
+/* Responsivo */
+@media (max-width: 900px) {
+  .card {
+    grid-template-columns: 1fr;
+    margin: 60px 15px;
+  }
+
+  .imagemArea {
+    min-height: 300px;
+    aspect-ratio: 16 / 9;
+  }
+
+  .conteudo {
+    padding: 35px 25px;
+  }
+
+  .numero {
+    font-size: 4rem;
+    bottom: 20px;
+    left: 20px;
+  }
+}

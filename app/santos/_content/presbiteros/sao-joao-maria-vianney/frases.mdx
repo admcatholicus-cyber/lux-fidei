@@ -1,0 +1,2654 @@
+export const meta = {
+  numero: 'Antologia',
+  titulo: 'Frases',
+  subtitulo: 'As Palavras do Cura d\'Ars, Organizadas por Tema',
+};
+
+<PageHeader
+  numero={meta.numero}
+  titulo={meta.titulo}
+  subtitulo={meta.subtitulo}
+/>
+
+<Antologia
+  introducao={
+    <>
+      <p>São João Maria Vianney **não escreveu livros**. As suas palavras foram preservadas pelos ouvintes — sobretudo pelo Padre Alfred Monnin e pela Irmã Marie Lazare, que anotavam as catequeses diárias, os sermões da manhã e as conversas no confessionário —, e pelos centenas de testemunhos colhidos sob juramento no *Processo de Beatificação* entre 1862 e 1864.</p>
+      <p>Esta antologia reúne as frases mais conhecidas e documentadas do Cura d'Ars, organizadas em **dez grandes capítulos temáticos**. Clique nos capítulos para expandi-los; clique nas bolinhas coloridas ao lado de cada frase para ver o original francês ou a fonte documental.</p>
+    </>
+  }
+  capitulos={[
+    { id: 'cap-1', label: 'I · Deus' },
+    { id: 'cap-2', label: 'II · Jesus' },
+    { id: 'cap-3', label: 'III · Eucaristia' },
+    { id: 'cap-4', label: 'IV · Espírito Santo' },
+    { id: 'cap-5', label: 'V · Nossa Senhora' },
+    { id: 'cap-6', label: 'VI · Oração' },
+    { id: 'cap-7', label: 'VII · Pecado' },
+    { id: 'cap-8', label: 'VIII · Virtudes' },
+    { id: 'cap-9', label: 'IX · Sacerdócio' },
+    { id: 'cap-10', label: 'X · Coisas Últimas' },
+  ]}
+>
+
+<Capitulo id="cap-1" numero="I" titulo="Deus" contagem="48 frases" aberto>
+
+<Subtema titulo="A bondade e o amor de Deus" aberto primeiro>
+
+<Frase
+  numero={1}
+  original="Pour être sauvé, il faut connaître, aimer et servir Dieu. Oh ! la belle vie ! Que c'est beau, grand et bon de connaître, d'aimer et de servir le bon Dieu ! Nous n'avons pas autre chose à faire en ce monde. Tout ce que nous faisons en dehors de cela est du temps perdu !"
+  fonte="Catecismo de Ars — frase fundamental que sintetiza toda a doutrina espiritual do Cura d'Ars. A. Monnin, Esprit du Curé d'Ars, 1864; B. Nodet, Le Curé d'Ars: Sa pensée, son cœur, 1958."
+>
+  Para sermos salvos, devemos conhecer, amar e servir a Deus. Oh, que vida bela! Que coisa boa e grande é conhecer, amar e servir a Deus! Não temos mais nada a fazer neste mundo. Tudo o que fazemos fora disso é tempo perdido!
+</Frase>
+
+<Frase
+  numero={2}
+  original="L'homme a été créé par amour : c'est pour cela qu'il est si porté à aimer. Il n'est heureux que lorsqu'il se tourne vers Dieu. Ôtez un poisson de l'eau, et il ne vivra plus : ainsi est l'homme sans Dieu."
+  fonte="Célebre metáfora do peixe — uma das imagens mais clássicas do Cura d'Ars. Catechismo sobre o amor de Deus — A. Monnin, Esprit du Curé d'Ars, 1864; B. Nodet, 1958."
+>
+  O homem foi criado por amor: é por isso que é tão inclinado a amar. Ele não é feliz a não ser quando se volta para Deus. Tirai um peixe da água, e ele não viverá: assim é o homem sem Deus.
+</Frase>
+
+<Frase
+  numero={3}
+  original="Le bon Dieu est aussi bon que le diable est méchant. C'est Lui qui me garde. Et celui que Dieu garde est bien gardé."
+  fonte="Atribuído ao Cura d'Ars em testemunhos sobre o seu combate espiritual contra o demônio — recolhido em A. Monnin, Le Curé d'Ars, vol. II, 1865; F. Trochu, 1925."
+>
+  O bom Deus é tão bom quanto o diabo é mau. É Ele quem me guarda. E quem Deus guarda está bem guardado.
+</Frase>
+
+<Frase numero={4}>
+  Deus nos ama mais do que o melhor dos pais ama seus filhos, mais do que o mais terno dos esposos ama sua esposa.
+</Frase>
+
+<Frase
+  numero={5}
+  original="Si nous comprenions l'amour que Jésus a pour nous, nous en mourrions."
+  fonte="Catechismo sobre o Amor de Deus — registrado em A. Monnin, Esprit du Curé d'Ars, 1864."
+>
+  Se compreendêssemos o amor que Jesus tem por nós, morreríamos disso.
+</Frase>
+
+<Frase numero={6}>
+  Deus é uma fonte de bondade, e nós somos como pequenos vasos que vamos a Ele para nos encher.
+</Frase>
+
+<Frase
+  numero={7}
+  fonte="Atribuído ao Cura d'Ars na tradição oral de Ars; recolhido em depoimentos do Processo de Beatificação (1862–1864)."
+>
+  O bom Deus tem mais pressa de nos perdoar do que uma mãe de tirar o filho do fogo.
+</Frase>
+
+<Frase
+  numero={8}
+  original="Si nous savions combien le bon Dieu nous aime, nous mourrions de bonheur ; si nous savions combien il est offensé, nous mourrions de douleur."
+  fonte="A. Monnin, Esprit du Curé d'Ars (1864); compilação de Bernard Nodet, Le Curé d'Ars : Sa pensée, son cœur, 1958."
+>
+  Se soubéssemos quanto Deus nos ama, morreríamos de felicidade; se soubéssemos quanto Ele é ofendido, morreríamos de dor.
+</Frase>
+
+<Frase numero={9}>
+  Não é o pecador que volta a Deus para pedir perdão — é Deus que corre atrás do pecador e o faz voltar a Si.
+</Frase>
+
+<Frase
+  numero={10}
+  fonte="Imagem recorrente nas catequeses do Cura d'Ars sobre a Providência, registrada em vários depoimentos do Processo de Beatificação."
+>
+  O bom Deus é como uma mãe que carrega seu filho nos braços ao longo de um caminho difícil.
+</Frase>
+
+<Frase numero={11}>
+  Quando se ama a Deus, as coisas da terra se tornam insípidas.
+</Frase>
+
+<Frase numero={12}>
+  Deus nos cumula de graças, e nós, ingratos, voltamos as costas a Ele.
+</Frase>
+
+<Frase
+  numero={13}
+  fonte="Catechismo sobre a oração — referido em A. Monnin, Le Curé d'Ars, vol. II, 1865."
+>
+  O bom Deus é um pai bom demais para deixar morrer de fome quem se aproxima d'Ele com amor.
+</Frase>
+
+<Frase numero={14}>
+  Toda a nossa religião é uma religião de amor: Deus nos amou primeiro, e nós devemos amá-Lo em retorno.
+</Frase>
+
+<Frase numero={15}>
+  Há muitas pessoas que dizem amar a Deus; mas é o demônio que ama assim — sem fazer nada.
+</Frase>
+
+</Subtema>
+
+<Subtema titulo="A beleza de Deus">
+
+<Frase
+  numero={16}
+  original="Si l'on connaissait la beauté d'une âme en état de grâce, on en serait tellement ébloui qu'on en tomberait par terre."
+  fonte="Catechismo sobre o estado do cristão — A. Monnin, Esprit du Curé d'Ars, 1864; Nodet, 1958."
+>
+  Se conhecêssemos a beleza de uma alma em estado de graça, ficaríamos tão deslumbrados que cairíamos por terra.
+</Frase>
+
+<Frase numero={17}>
+  O bom Deus é mais belo do que tudo o que se possa imaginar; mesmo as mais belas obras da criação não passam de sombras da Sua beleza.
+</Frase>
+
+<Frase numero={18}>
+  A beleza de Deus é tal que basta um pequeno raio dela para tornar suportáveis todos os sofrimentos da terra.
+</Frase>
+
+<Frase numero={19}>
+  Tudo o que há de belo nas criaturas vem de Deus; e tudo o que há de belo em Deus reflete-se nas almas que O amam.
+</Frase>
+
+<Frase
+  numero={20}
+  fonte="Pensamento recorrente nas catequeses sobre a santidade — recolhido em F. Trochu, Le Curé d'Ars, Saint Jean-Marie-Baptiste Vianney, 1925."
+>
+  Os santos viram tanta beleza em Deus que esqueceram tudo o que não fosse Ele.
+</Frase>
+
+<Frase numero={21}>
+  A beleza do céu não consiste nas pedras preciosas nem nos cantos dos anjos — consiste em ver a Deus.
+</Frase>
+
+<Frase numero={22}>
+  A alma é a obra-prima de Deus: nada há de mais belo no universo do que uma alma em graça.
+</Frase>
+
+</Subtema>
+
+<Subtema titulo="A presença de Deus">
+
+<Frase numero={23}>
+  Deus está em toda parte: não há lugar onde Ele não esteja, nem instante em que Ele não nos veja.
+</Frase>
+
+<Frase
+  numero={24}
+  fonte="Recolhido nos catecismos da tarde por A. Monnin, Esprit du Curé d'Ars, 1864."
+>
+  Andar na presença de Deus é andar como anjos sobre a terra.
+</Frase>
+
+<Frase numero={25}>
+  Aquele que vive na presença de Deus já vive um pouco do céu enquanto ainda está na terra.
+</Frase>
+
+<Frase numero={26}>
+  Se nos lembrássemos a cada instante de que Deus nos vê, jamais cometeríamos pecado.
+</Frase>
+
+<Frase numero={27}>
+  Deus está mais próximo de nós do que o ar que respiramos.
+</Frase>
+
+<Frase numero={28}>
+  A presença de Deus é a doce companhia das almas que O amam.
+</Frase>
+
+<Frase numero={29}>
+  Os santos não estavam nunca sós, porque tinham Deus sempre diante dos olhos.
+</Frase>
+
+<Frase numero={30}>
+  Quem trabalha na presença de Deus, mesmo a tarefa mais humilde se torna oração.
+</Frase>
+
+<Frase numero={31}>
+  Deus nos cerca por todos os lados, e nós quase nunca pensamos n'Ele.
+</Frase>
+
+<Frase numero={32}>
+  Não há solidão para o cristão: Deus está sempre com ele, mesmo quando ninguém mais está.
+</Frase>
+
+</Subtema>
+
+<Subtema titulo="A Santíssima Trindade">
+
+<Frase numero={33}>
+  A Santíssima Trindade é o grande mistério: três pessoas distintas e um só Deus, que se ama eternamente.
+</Frase>
+
+<Frase numero={34}>
+  O Pai nos criou, o Filho nos resgatou, o Espírito Santo nos santifica — toda a Trindade trabalha pela nossa salvação.
+</Frase>
+
+<Frase numero={35}>
+  Quando rezamos, é o Pai que nos ouve, o Filho que intercede, o Espírito Santo que nos inspira as palavras.
+</Frase>
+
+<Frase numero={36}>
+  A glória do Pai, o amor do Filho, a luz do Espírito Santo — eis o que esperamos no céu.
+</Frase>
+
+<Frase
+  numero={37}
+  fonte="Catechismo sobre a graça santificante — recolhido em A. Monnin, Esprit du Curé d'Ars, 1864."
+>
+  As três Pessoas divinas vêm habitar a alma do justo como em um pequeno céu.
+</Frase>
+
+<Frase numero={38}>
+  A Trindade é um mistério que adoramos sem compreender, e que compreenderemos no céu sem cessar de adorar.
+</Frase>
+
+<Frase numero={39}>
+  Cada cristão é templo da Santíssima Trindade — e que pouco pensamos nisso!
+</Frase>
+
+<Frase numero={40}>
+  Tudo o que Deus faz fora de Si é obra das três Pessoas, embora as atribuamos por conveniência ora a uma, ora a outra.
+</Frase>
+
+<Frase numero={41}>
+  A felicidade dos eleitos consiste em ver, amar e possuir a Santíssima Trindade.
+</Frase>
+
+<Frase numero={42}>
+  O sinal da cruz é a profissão mais simples e mais profunda da nossa fé na Trindade.
+</Frase>
+
+<Frase numero={43}>
+  Adoremos as três Pessoas divinas, e peçamos-Lhes que venham reinar em nossas almas.
+</Frase>
+
+<Frase numero={44}>
+  A alma cristã é uma morada onde a Trindade vem residir, se nada Lhe estorva a entrada.
+</Frase>
+
+<Frase numero={45}>
+  No céu, contemplaremos a Trindade face a face, e isso bastará para nossa felicidade por toda a eternidade.
+</Frase>
+
+<Frase numero={46}>
+  A Trindade é o oceano sem fundo e sem margens em que a alma se mergulha eternamente sem nunca se esgotar.
+</Frase>
+
+<Frase numero={47}>
+  Quem ama uma das três Pessoas divinas ama as três, porque elas são um só Deus.
+</Frase>
+
+<Frase numero={48}>
+  Glória ao Pai, e ao Filho, e ao Espírito Santo: eis o cântico que se canta sem cessar no céu.
+</Frase>
+
+</Subtema>
+
+</Capitulo>
+
+<Capitulo id="cap-2" numero="II" titulo="Jesus Cristo" contagem="48 frases">
+
+<Subtema titulo="O amor de Jesus" aberto primeiro>
+
+<Frase numero={49}>
+  Nosso Senhor amou tanto os homens, que veio à terra para morrer por eles.
+</Frase>
+
+<Frase
+  numero={50}
+  fonte="Catechismo sobre a Santíssima Eucaristia — recolhido em A. Monnin, Esprit du Curé d'Ars, 1864."
+>
+  Jesus Cristo, depois de nos ter dado tudo o que podia dar, quis ainda nos deixar o que tinha de mais precioso: o próprio Corpo.
+</Frase>
+
+<Frase
+  numero={51}
+  original="L'amour de Notre-Seigneur pour nous est si grand que, si nous le connaissions, nous en mourrions d'amour."
+  fonte="A. Monnin, Esprit du Curé d'Ars, 1864; B. Nodet, Le Curé d'Ars : Sa pensée, son cœur, 1958."
+>
+  O amor de Nosso Senhor por nós é tão grande, que se O conhecêssemos, morreríamos de amor por Ele.
+</Frase>
+
+<Frase numero={52}>
+  Jesus está sempre conosco: na missa, na comunhão, no tabernáculo, na cruz que nos visita.
+</Frase>
+
+<Frase numero={53}>
+  Não há amor verdadeiro fora do amor de Jesus Cristo.
+</Frase>
+
+<Frase numero={54}>
+  Amar a Jesus é a única coisa necessária: tudo o mais é vaidade.
+</Frase>
+
+<Frase numero={55}>
+  Quando se ama a Nosso Senhor, faz-se tudo por Ele e nada custa.
+</Frase>
+
+<Frase numero={56}>
+  Jesus quer toda a nossa alma — não Lhe basta uma parte: ou tudo, ou nada.
+</Frase>
+
+<Frase numero={57}>
+  Quanto mais conhecemos a Jesus Cristo, menos falamos d'Ele — porque o amor verdadeiro é silencioso.
+</Frase>
+
+<Frase numero={58}>
+  Não se pode amar a Nosso Senhor sem amar também aquilo que Ele amou: a cruz, os pobres, os pecadores.
+</Frase>
+
+<Frase numero={59}>
+  Jesus Cristo é o único amigo que nunca nos abandona, mesmo quando nós O abandonamos.
+</Frase>
+
+<Frase numero={60}>
+  Tudo o que fazemos por amor a Jesus tem um valor infinito aos olhos do Pai.
+</Frase>
+
+</Subtema>
+
+<Subtema titulo="A Paixão e a Cruz">
+
+<Frase
+  numero={61}
+  fonte="Catechismo sobre o sofrimento — recolhido em A. Monnin, Esprit du Curé d'Ars, 1864."
+>
+  A cruz é o livro mais belo que se pode meditar: nela está toda a sabedoria do céu.
+</Frase>
+
+<Frase numero={62}>
+  Para compreender quanto Deus nos ama, basta olhar para um crucifixo.
+</Frase>
+
+<Frase
+  numero={63}
+  original="La croix est le chemin du ciel : qui ne la porte ici-bas n'y entrera point."
+  fonte="Catechismo sobre o sofrimento — A. Monnin, Esprit du Curé d'Ars, 1864; Nodet, 1958."
+>
+  A cruz é o caminho do céu: quem não a carrega aqui embaixo, não entrará lá em cima.
+</Frase>
+
+<Frase numero={64}>
+  Não é a cruz que pesa: é a nossa falta de amor que a torna pesada.
+</Frase>
+
+<Frase numero={65}>
+  Quem foge da cruz, encontra outra mais pesada no caminho.
+</Frase>
+
+<Frase numero={66}>
+  A Paixão de Nosso Senhor é o tesouro inesgotável das almas que sofrem.
+</Frase>
+
+<Frase numero={67}>
+  Cada gota do Sangue de Nosso Senhor é capaz de salvar mil mundos.
+</Frase>
+
+<Frase
+  numero={68}
+  fonte="Catechismo sobre o sofrimento — Monnin, Esprit du Curé d'Ars, 1864; F. Trochu, 1925."
+>
+  Os sofrimentos suportados com Jesus são doces; os prazeres saboreados sem Ele são amargos.
+</Frase>
+
+<Frase numero={69}>
+  A cruz é o trono do amor: foi nela que Nosso Senhor reinou sobre os corações.
+</Frase>
+
+<Frase numero={70}>
+  Beijar o crucifixo é beijar a nossa salvação.
+</Frase>
+
+<Frase numero={71}>
+  Sem a cruz, nada se faz pelo céu; com a cruz, tudo se faz.
+</Frase>
+
+<Frase numero={72}>
+  A Paixão é uma fonte que nunca se esgota — bebemos dela toda a vida sem nunca a esvaziarmos.
+</Frase>
+
+<Frase numero={73}>
+  Quando se sofre com Jesus, sofre-se com doçura; quando se sofre sem Ele, sofre-se em desespero.
+</Frase>
+
+</Subtema>
+
+<Subtema titulo="O Sagrado Coração">
+
+<Frase
+  numero={74}
+  fonte="Catechismo sobre o Sagrado Coração — recolhido por A. Monnin, Esprit du Curé d'Ars, 1864."
+>
+  O Sagrado Coração de Jesus é o forno onde se queimam todos os nossos pecados, se nele nos lançarmos com confiança.
+</Frase>
+
+<Frase numero={75}>
+  No Coração de Jesus encontramos tudo o que nos falta: força na fraqueza, luz nas trevas, consolo no sofrimento.
+</Frase>
+
+<Frase numero={76}>
+  O Coração de Nosso Senhor é uma fornalha de amor — quem se aproxima d'Ele sai ardente.
+</Frase>
+
+<Frase numero={77}>
+  Aquele que se refugia no Coração de Jesus está mais seguro do que numa fortaleza.
+</Frase>
+
+<Frase numero={78}>
+  O Coração de Jesus está sempre aberto: ninguém Lhe bate em vão.
+</Frase>
+
+<Frase numero={79}>
+  No Coração de Nosso Senhor há lugar para todas as misérias humanas, por maiores que sejam.
+</Frase>
+
+<Frase numero={80}>
+  Aproximai-vos do Coração de Jesus: Ele só pede que vos deixeis amar.
+</Frase>
+
+<Frase numero={81}>
+  O Coração de Jesus é o refúgio dos pecadores arrependidos e o paraíso dos santos.
+</Frase>
+
+<Frase numero={82}>
+  Devemos viver no Coração de Jesus como o peixe vive na água.
+</Frase>
+
+<Frase numero={83}>
+  O Coração de Nosso Senhor sangra ainda hoje, quando vê os pecados dos homens.
+</Frase>
+
+<Frase numero={84}>
+  Que consolo, meus irmãos, ter um amigo como o Coração de Jesus, sempre pronto a nos receber!
+</Frase>
+
+</Subtema>
+
+<Subtema titulo="Cristo nos pobres">
+
+<Frase numero={85}>
+  Quando dais aos pobres, é a Jesus Cristo que dais — Ele recebe o que ofereceis em nome d'Ele.
+</Frase>
+
+<Frase
+  numero={86}
+  fonte="Catechismo sobre a esmola — recolhido em A. Monnin, Esprit du Curé d'Ars, 1864."
+>
+  Nos pobres está escondido Nosso Senhor: feliz de quem O reconhece sob esses farrapos.
+</Frase>
+
+<Frase numero={87}>
+  A esmola dada aos pobres é como uma carta de crédito que Deus paga com juros no céu.
+</Frase>
+
+<Frase numero={88}>
+  Os pobres são os nossos melhores amigos: eles nos levam ao céu pela mão.
+</Frase>
+
+<Frase numero={89}>
+  Quem despreza o pobre, despreza a Jesus Cristo, que se fez pobre por nós.
+</Frase>
+
+<Frase numero={90}>
+  Não há melhor maneira de honrar a Nosso Senhor do que socorrer aqueles que Ele chamou de seus irmãos.
+</Frase>
+
+<Frase numero={91}>
+  A porta do céu é estreita para os ricos egoístas e larga para os pobres pacientes.
+</Frase>
+
+<Frase numero={92}>
+  O que se dá aos pobres não se perde — guarda-se no banco do céu, onde a ferrugem não consome.
+</Frase>
+
+<Frase numero={93}>
+  Nosso Senhor nasceu pobre, viveu pobre e morreu pobre: como pode um cristão desprezar a pobreza?
+</Frase>
+
+<Frase
+  numero={94}
+  fonte="Atribuído ao Cura d'Ars em depoimentos sobre a sua prática diária de caridade — recolhido em F. Trochu, Le Curé d'Ars, Saint Jean-Marie-Baptiste Vianney, 1925."
+>
+  Quando vejo um pobre, vejo Jesus Cristo a pedir-me esmola; e que poderia eu Lhe recusar?
+</Frase>
+
+<Frase numero={95}>
+  O pobre que bate à nossa porta é Jesus Cristo que nos visita disfarçado.
+</Frase>
+
+<Frase numero={96}>
+  A caridade para com os pobres é o termômetro do nosso amor a Deus.
+</Frase>
+
+</Subtema>
+
+</Capitulo>
+<Capitulo id="cap-3" numero="III" titulo="A Santíssima Eucaristia" contagem="56 frases">
+
+<Subtema titulo="A Presença Real" aberto primeiro>
+
+<Frase
+  numero={97}
+  original="Si nous avions la foi, nous verrions Dieu caché dans le prêtre comme une lumière derrière un verre, comme du vin mêlé avec de l'eau."
+  fonte="Catechismo sobre o sacerdócio — A. Monnin, Esprit du Curé d'Ars, 1864; Nodet, 1958."
+>
+  Se tivéssemos fé, veríamos a Deus escondido no sacerdote como uma luz atrás de um vidro, como um vinho misturado com água.
+</Frase>
+
+<Frase
+  numero={98}
+  original="Si nous comprenions ce qu'est la sainte Messe, nous mourrions d'amour."
+  fonte="Catechismo sobre a Santa Missa — A. Monnin, Esprit du Curé d'Ars, 1864; Nodet, 1958."
+>
+  Se compreendêssemos o que é a Santa Missa, morreríamos de amor.
+</Frase>
+
+<Frase numero={99}>
+  Na Sagrada Hóstia está realmente o mesmo Jesus que está no céu.
+</Frase>
+
+<Frase
+  numero={100}
+  fonte="Catechismo sobre a Sagrada Eucaristia — recolhido em A. Monnin, Esprit du Curé d'Ars, 1864."
+>
+  Não é preciso muita ciência para crer na Santíssima Eucaristia — basta um pouco de fé.
+</Frase>
+
+<Frase numero={101}>
+  A Eucaristia é o maior milagre do amor de Deus: nela Ele se entrega totalmente a cada um de nós.
+</Frase>
+
+<Frase numero={102}>
+  A Hóstia é pequena, mas dentro dela está Aquele que enche o céu e a terra.
+</Frase>
+
+<Frase numero={103}>
+  Os anjos contemplam a Eucaristia com inveja: eles não podem recebê-la como nós.
+</Frase>
+
+<Frase
+  numero={104}
+  fonte="Catechismo sobre o sacerdócio — A. Monnin, Esprit du Curé d'Ars, 1864."
+>
+  Quando o sacerdote pronuncia as palavras da consagração, ele tem nas mãos o Criador do universo.
+</Frase>
+
+<Frase numero={105}>
+  Quem não crê na Eucaristia, não crê no amor de Deus.
+</Frase>
+
+<Frase numero={106}>
+  A Eucaristia é o céu antecipado sobre a terra.
+</Frase>
+
+</Subtema>
+
+<Subtema titulo="A Santa Missa">
+
+<Frase
+  numero={107}
+  original="Toutes les bonnes œuvres réunies ne valent pas le Sacrifice de la Messe, parce qu'elles sont les œuvres des hommes, et la Messe est l'œuvre de Dieu."
+  fonte="Catechismo sobre a Santa Missa — A. Monnin, Esprit du Curé d'Ars, 1864."
+>
+  Todas as boas obras reunidas não valem o Sacrifício da Missa, porque são obras dos homens, e a Missa é obra de Deus.
+</Frase>
+
+<Frase
+  numero={108}
+  original="Le martyre n'est rien en comparaison de la sainte Messe : le martyre est le sacrifice de l'homme offert à Dieu ; la sainte Messe est le sacrifice de Dieu pour l'homme."
+  fonte="Catechismo sobre a Santa Missa — A. Monnin, Esprit du Curé d'Ars, 1864; Nodet, 1958."
+>
+  O martírio não é nada em comparação com a Santa Missa: o martírio é o sacrifício do homem oferecido a Deus; a Santa Missa é o sacrifício de Deus oferecido pelo homem.
+</Frase>
+
+<Frase numero={109}>
+  Sem a Santa Missa, o mundo já teria sucumbido sob o peso dos pecados.
+</Frase>
+
+<Frase
+  numero={110}
+  fonte="Recolhido nas catequeses sobre a Missa — Monnin, Esprit du Curé d'Ars, 1864; Trochu, 1925."
+>
+  Se conhecêssemos o valor de uma Missa, não andaríamos como andamos para assisti-la.
+</Frase>
+
+<Frase numero={111}>
+  A Missa é o sol das nossas almas: sem ela, as almas vivem nas trevas.
+</Frase>
+
+<Frase numero={112}>
+  Uma única Missa bem ouvida vale mais do que todos os tesouros da terra.
+</Frase>
+
+<Frase numero={113}>
+  Na Missa, é o próprio Jesus Cristo que oferece ao Pai todas as nossas misérias e todas as nossas necessidades.
+</Frase>
+
+<Frase
+  numero={114}
+  fonte="Catechismo sobre a Santa Missa — A. Monnin, Esprit du Curé d'Ars, 1864."
+>
+  Quando o sacerdote celebra a Santa Missa, os anjos descem do céu para acompanhá-lo no altar.
+</Frase>
+
+<Frase numero={115}>
+  Cada gota do sangue derramado no Calvário se renova sobre o altar a cada Missa.
+</Frase>
+
+<Frase numero={116}>
+  Vinde à Santa Missa não por costume, mas porque ali está o vosso Salvador esperando-vos.
+</Frase>
+
+<Frase numero={117}>
+  Assistir à Missa com fé é receber em si o céu inteiro.
+</Frase>
+
+<Frase numero={118}>
+  A Missa é o Calvário renovado, mas sem o derramamento de sangue.
+</Frase>
+
+<Frase numero={119}>
+  Se compreendêssemos quem vem até nós na Comunhão, prepararíamos a nossa alma como se preparasse um trono.
+</Frase>
+
+</Subtema>
+
+<Subtema titulo="A Comunhão">
+
+<Frase
+  numero={120}
+  original="Toute la vie d'un chrétien devrait être une préparation à la sainte Communion."
+  fonte="Catechismo sobre a Sagrada Comunhão — A. Monnin, Esprit du Curé d'Ars, 1864."
+>
+  Toda a vida de um cristão deveria ser uma preparação para a santa Comunhão.
+</Frase>
+
+<Frase
+  numero={121}
+  original="Recevoir la sainte Communion, c'est comme faire fondre dans sa bouche un petit bonbon : on Lui en donne le goût en se recueillant."
+  fonte="Catechismo sobre a Sagrada Comunhão — A. Monnin, Esprit du Curé d'Ars, 1864; Nodet, 1958."
+>
+  Receber a Sagrada Comunhão é como deixar derreter na boca um pequeno bombom: damos-Lhe o gosto pelo recolhimento.
+</Frase>
+
+<Frase numero={122}>
+  Na Comunhão recebemos não uma graça, nem dez, nem cem: recebemos o próprio autor da graça.
+</Frase>
+
+<Frase
+  numero={123}
+  fonte="Catechismo sobre a Comunhão — recolhido em A. Monnin, Esprit du Curé d'Ars, 1864."
+>
+  Quando a alma comunga, sente-se como mergulhada num oceano de doçura.
+</Frase>
+
+<Frase numero={124}>
+  Depois da Comunhão, deveríamos ficar como Maria aos pés de Jesus, sem dizer nada, apenas escutando.
+</Frase>
+
+<Frase numero={125}>
+  Quem comunga indignamente come a sua própria condenação.
+</Frase>
+
+<Frase numero={126}>
+  A Comunhão freqüente é o segredo dos santos: eles encontravam ali força para tudo o que faziam.
+</Frase>
+
+<Frase
+  numero={127}
+  fonte="Catechismo sobre a Sagrada Eucaristia — Monnin, Esprit du Curé d'Ars, 1864; Trochu, 1925."
+>
+  Não há nada tão grande quanto a Eucaristia: se Deus tivesse algo mais precioso, Ele no-lo teria dado.
+</Frase>
+
+<Frase numero={128}>
+  Quem se nutre da Eucaristia carrega em si um fogo que nada do mundo pode apagar.
+</Frase>
+
+<Frase numero={129}>
+  Ao comungar, a alma e o corpo do cristão se tornam o sacrário do Deus vivo.
+</Frase>
+
+<Frase numero={130}>
+  Os minutos depois da Comunhão são os mais preciosos da nossa vida: não os desperdicemos com distrações.
+</Frase>
+
+<Frase numero={131}>
+  Vede como os pequeninos correm para a Comunhão e como vós, adultos, vos afastais dela!
+</Frase>
+
+<Frase numero={132}>
+  A Comunhão é o pão dos fortes; mas é também o remédio dos fracos.
+</Frase>
+
+<Frase
+  numero={133}
+  fonte="Catechismo sobre a Eucaristia — A. Monnin, Esprit du Curé d'Ars, 1864."
+>
+  Sem a Eucaristia, não haveria felicidade neste mundo: a vida seria insuportável.
+</Frase>
+
+<Frase numero={134}>
+  Quem comunga com amor leva o céu em si por todo o resto do dia.
+</Frase>
+
+</Subtema>
+
+<Subtema titulo="O Tabernáculo e a Adoração">
+
+<Frase
+  numero={135}
+  original="Je L'avise, et Il m'avise."
+  fonte="Resposta do camponês de Ars ao Cura sobre o que fazia diante do tabernáculo. Citada pelo próprio Vianney como exemplo de oração contemplativa — recolhida em A. Monnin, Esprit du Curé d'Ars, 1864; Nodet, 1958. Tornou-se uma das frases mais célebres da espiritualidade católica moderna."
+>
+  Eu O olho, e Ele me olha.
+</Frase>
+
+<Frase
+  numero={136}
+  original="Il n'est pas nécessaire de beaucoup parler pour bien prier : on sait que le bon Dieu est là, dans le saint tabernacle ; on Lui ouvre son cœur ; on se complaît de sa sainte présence. C'est la meilleure prière."
+  fonte="Catechismo sobre a oração — A. Monnin, Esprit du Curé d'Ars, 1864; Nodet, 1958."
+>
+  Não é necessário falar muito para bem rezar: sabe-se que o bom Deus está aqui, no santo tabernáculo; abre-se-Lhe o coração; alegra-se com a sua santa presença. Esta é a melhor oração.
+</Frase>
+
+<Frase numero={137}>
+  Jesus está no tabernáculo como um prisioneiro de amor, esperando que venhamos visitá-Lo.
+</Frase>
+
+<Frase
+  numero={138}
+  fonte="Recolhido nos catecismos da tarde — Monnin, Esprit du Curé d'Ars, 1864."
+>
+  Quando passais diante de uma igreja, entrai um instante para adorar o bom Deus que ali está.
+</Frase>
+
+<Frase numero={139}>
+  Uma visita ao Santíssimo Sacramento atrai mais graças sobre nós do que muitas obras feitas sem união com Deus.
+</Frase>
+
+<Frase numero={140}>
+  O tabernáculo é o íman que atrai as almas; quem dele se afasta perde a luz do caminho.
+</Frase>
+
+<Frase numero={141}>
+  Diante do Santíssimo Sacramento, basta ficar como uma criança nos braços da mãe.
+</Frase>
+
+<Frase numero={142}>
+  Jesus está sozinho no tabernáculo na maior parte do tempo — vamos consolá-Lo com a nossa presença.
+</Frase>
+
+<Frase numero={143}>
+  A lâmpada que arde diante do tabernáculo é o símbolo das almas que se consomem por amor ao Senhor escondido.
+</Frase>
+
+<Frase numero={144}>
+  A adoração eucarística é o paraíso dos santos sobre a terra.
+</Frase>
+
+<Frase
+  numero={145}
+  fonte="Catechismo sobre a Sagrada Eucaristia — A. Monnin, Esprit du Curé d'Ars, 1864."
+>
+  Quem visita Jesus no Santíssimo Sacramento ganha mais do que quem percorre o mundo em peregrinação.
+</Frase>
+
+<Frase numero={146}>
+  Se os anjos pudessem invejar, invejariam aqueles que adoram Jesus na terra como Ele está no céu.
+</Frase>
+
+<Frase numero={147}>
+  Aquele que reza diante do tabernáculo nunca sai dali do mesmo modo como entrou.
+</Frase>
+
+<Frase numero={148}>
+  Quanto mais permanecemos diante do Santíssimo, mais Deus nos transforma em Si mesmo.
+</Frase>
+
+<Frase numero={149}>
+  O tabernáculo é a tenda que Deus armou no meio dos homens para não se separar de nós nunca mais.
+</Frase>
+
+<Frase numero={150}>
+  A adoração é a oração mais simples e mais sublime: é o silêncio do amor diante do Amor.
+</Frase>
+
+<Frase numero={151}>
+  Se tivéssemos olhos para ver, contemplaríamos legiões de anjos prostrados ao redor de cada tabernáculo do mundo.
+</Frase>
+
+<Frase
+  numero={152}
+  fonte="Recolhido nas catequeses sobre a Eucaristia — Monnin, Esprit du Curé d'Ars, 1864; Trochu, 1925."
+>
+  Aquele que vive da Eucaristia carrega o céu dentro de si por onde passa.
+</Frase>
+
+</Subtema>
+
+</Capitulo>
+<Capitulo id="cap-4" numero="IV" titulo="O Espírito Santo" contagem="18 frases">
+
+<Subtema titulo="A ação do Espírito na alma" aberto primeiro>
+
+<Frase
+  numero={153}
+  original="Les âmes qui se laissent conduire par l'Esprit-Saint sont comme des roues qui tournent doucement au moindre souffle du vent."
+  fonte="Catechismo sobre o Espírito Santo — A. Monnin, Esprit du Curé d'Ars, 1864; Nodet, 1958."
+>
+  As almas que se deixam conduzir pelo Espírito Santo são como rodas que giram suavemente ao menor sopro do vento.
+</Frase>
+
+<Frase
+  numero={154}
+  original="Sans le Saint-Esprit, nous sommes comme les pierres du chemin ; avec le Saint-Esprit, nous sommes comme la rosée qui fait tout germer."
+  fonte="Catechismo sobre o Espírito Santo — A. Monnin, Esprit du Curé d'Ars, 1864."
+>
+  Sem o Espírito Santo, somos como pedras no caminho; com o Espírito Santo, somos como o orvalho que faz brotar tudo.
+</Frase>
+
+<Frase
+  numero={155}
+  fonte="Catechismo sobre o Espírito Santo — A. Monnin, Esprit du Curé d'Ars, 1864."
+>
+  O Espírito Santo é a luz e a força da alma: sem Ele, nada de bom podemos fazer.
+</Frase>
+
+<Frase numero={156}>
+  As pessoas que são guiadas pelo Espírito Santo têm pensamentos retos: por isso erram tão pouco.
+</Frase>
+
+<Frase
+  numero={157}
+  fonte="Catechismo sobre o Espírito Santo — Monnin, Esprit du Curé d'Ars, 1864; Nodet, 1958."
+>
+  Quando se possui o Espírito Santo, o coração se dilata e se nada nos prazeres do amor divino.
+</Frase>
+
+<Frase numero={158}>
+  O Espírito Santo descansa sobre as almas humildes como uma pomba pousa sobre as flores.
+</Frase>
+
+<Frase numero={159}>
+  Quem resiste ao Espírito Santo, resiste à própria felicidade.
+</Frase>
+
+<Frase numero={160}>
+  O Espírito Santo fala sempre, mas em voz baixa: é preciso silenciar o mundo para ouvi-Lo.
+</Frase>
+
+<Frase
+  numero={161}
+  original="Quand on est conduit par le bon Dieu, par le Saint-Esprit, il n'y a pas de faux pas à craindre."
+  fonte="Catechismo sobre o Espírito Santo — A. Monnin, Esprit du Curé d'Ars, 1864; Nodet, 1958."
+>
+  Quando se é guiado pelo bom Deus, pelo Espírito Santo, não há nenhum passo em falso a temer.
+</Frase>
+
+<Frase numero={162}>
+  O Espírito Santo é como um bom jardineiro que cultiva a alma e a faz produzir flores e frutos.
+</Frase>
+
+</Subtema>
+
+<Subtema titulo="Os dons do Espírito">
+
+<Frase
+  numero={163}
+  fonte="Catechismo sobre a Confirmação — A. Monnin, Esprit du Curé d'Ars, 1864."
+>
+  Os sete dons do Espírito Santo são como sete velas que iluminam a alma cristã do batismo até o céu.
+</Frase>
+
+<Frase numero={164}>
+  O dom da sabedoria nos faz saborear as coisas de Deus como se já estivéssemos no céu.
+</Frase>
+
+<Frase numero={165}>
+  O dom do entendimento nos abre os olhos sobre as verdades da fé, como o sol revela as cores das flores.
+</Frase>
+
+<Frase numero={166}>
+  O dom do conselho é o que nos guia nas dúvidas e nos faz escolher sempre o caminho certo.
+</Frase>
+
+<Frase numero={167}>
+  O dom da fortaleza nos torna firmes nas tentações e generosos nos sacrifícios.
+</Frase>
+
+<Frase numero={168}>
+  A piedade é o dom que nos faz tratar Deus como Pai e os irmãos como verdadeiros irmãos.
+</Frase>
+
+<Frase numero={169}>
+  O temor de Deus não é o temor que afasta, mas o temor que nos faz odiar tudo aquilo que possa desagradá-Lo.
+</Frase>
+
+<Frase numero={170}>
+  Os dons do Espírito Santo crescem na alma como árvores plantadas junto a um rio: nada as faz murchar.
+</Frase>
+
+</Subtema>
+
+</Capitulo>
+<Capitulo id="cap-5" numero="V" titulo="Nossa Senhora" contagem="37 frases">
+
+<Subtema titulo="A maternidade de Maria" aberto primeiro>
+
+<Frase
+  numero={171}
+  original="J'ai aimé la Sainte Vierge avant même de la connaître ; c'est ma plus ancienne affection."
+  fonte="Confissão pessoal autobiográfica do Cura d'Ars sobre a sua devoção mariana de infância — recolhida em A. Monnin, Esprit du Curé d'Ars, 1864; F. Trochu, Le Curé d'Ars, 1925."
+>
+  Amei Nossa Senhora antes mesmo de conhecê-la; ela é a minha mais antiga afeição.
+</Frase>
+
+<Frase
+  numero={172}
+  original="Les tentations n'ont aucun pouvoir sur un chrétien dont le cœur est véritablement dévoué à la Sainte Vierge."
+  fonte="Catechismo sobre a Santíssima Virgem — A. Monnin, Esprit du Curé d'Ars, 1864; B. Nodet, 1958."
+>
+  As tentações não têm nenhum poder sobre um cristão cujo coração é verdadeiramente dedicado à Virgem Maria.
+</Frase>
+
+<Frase
+  numero={173}
+  original="Le Cœur de cette bonne Mère n'est qu'amour et miséricorde : elle ne désire que de nous voir heureux."
+  fonte="Catechismo sobre a Santíssima Virgem — A. Monnin, Esprit du Curé d'Ars, 1864; Nodet, 1958."
+>
+  O Coração desta boa Mãe é todo amor e misericórdia: ela só deseja ver-nos felizes.
+</Frase>
+
+<Frase
+  numero={174}
+  original="La Sainte Vierge est la seule créature qui ait aimé le bon Dieu autant qu'Il mérite d'être aimé."
+  fonte="Catechismo sobre a Santíssima Virgem — A. Monnin, Esprit du Curé d'Ars, 1864."
+>
+  A Santíssima Virgem é a única criatura que amou a Deus quanto Ele merece ser amado.
+</Frase>
+
+<Frase numero={175}>
+  Maria é a Mãe de Deus, e por isso é também nossa Mãe — Jesus no-La deu do alto da cruz.
+</Frase>
+
+<Frase
+  numero={176}
+  fonte="Catechismo sobre a Santíssima Virgem — A. Monnin, Esprit du Curé d'Ars, 1864; Trochu, 1925."
+>
+  Bastaria que a Santíssima Virgem abrisse a mão para encher o mundo de graças.
+</Frase>
+
+<Frase numero={177}>
+  O Coração de Maria é tão terno por nós, que os corações de todas as mães do mundo juntos não passam de gelo perto do dela.
+</Frase>
+
+<Frase numero={178}>
+  Maria não desce nunca à terra sem trazer graças nas mãos, como uma mãe que vem ver seus filhos enfermos.
+</Frase>
+
+<Frase numero={179}>
+  Deus quis dar-nos uma Mãe para que tivéssemos coragem de nos aproximar d'Ele.
+</Frase>
+
+<Frase numero={180}>
+  Maria é a mais bela das criaturas — mais bela do que todos os anjos juntos.
+</Frase>
+
+<Frase
+  numero={181}
+  fonte="Recolhido nas catequeses sobre a oração — A. Monnin, Esprit du Curé d'Ars, 1864."
+>
+  Falai com a Santíssima Virgem como uma criança fala com a sua mãe: ela vos compreenderá sempre.
+</Frase>
+
+<Frase numero={182}>
+  Maria é o caminho mais curto e mais seguro para chegar a Jesus.
+</Frase>
+
+<Frase numero={183}>
+  Honrar Maria é honrar a Jesus, que escolheu fazer-se filho dela.
+</Frase>
+
+</Subtema>
+
+<Subtema titulo="A confiança em Maria">
+
+<Frase
+  numero={184}
+  original="Il suffit de se tourner vers la Sainte Vierge pour être exaucé."
+  fonte="Catechismo sobre a Santíssima Virgem — A. Monnin, Esprit du Curé d'Ars, 1864; Nodet, 1958."
+>
+  Basta voltar-se para a Santíssima Virgem para ser exaudido.
+</Frase>
+
+<Frase numero={185}>
+  A oração feita por Maria chega ao Coração de Jesus como uma carta entregue por uma mão amiga.
+</Frase>
+
+<Frase numero={186}>
+  Quem se refugia em Maria nunca é abandonado: ela é o porto seguro dos pecadores.
+</Frase>
+
+<Frase
+  numero={187}
+  fonte="Catechismo sobre a Santíssima Virgem — Monnin, Esprit du Curé d'Ars, 1864."
+>
+  A Santíssima Virgem é como uma mãe que tem o filho doente: faz mais por ele do que pelos sãos.
+</Frase>
+
+<Frase numero={188}>
+  Nunca se ouviu dizer que algum daqueles que recorreram à Santíssima Virgem tenha sido abandonado por ela.
+</Frase>
+
+<Frase numero={189}>
+  Confiai sempre em Maria: ela não pode ver vossas lágrimas sem se comover.
+</Frase>
+
+<Frase numero={190}>
+  Maria intercede por nós com tal poder que nem o próprio Jesus Lhe pode recusar nada.
+</Frase>
+
+<Frase
+  numero={191}
+  fonte="Recolhido nos catecismos sobre a oração mariana — A. Monnin, Esprit du Curé d'Ars, 1864."
+>
+  Vede que ternura tem por nós a Santíssima Virgem: corre atrás de nós para nos salvar.
+</Frase>
+
+<Frase numero={192}>
+  Tudo o que pedimos a Maria com fé, ela já o pediu antes a Jesus por nós.
+</Frase>
+
+<Frase numero={193}>
+  A Santíssima Virgem é a esperança dos desesperados, o consolo dos aflitos, a luz dos perdidos.
+</Frase>
+
+<Frase numero={194}>
+  Os filhos de Maria não se perdem: ela os carrega no colo até as portas do Paraíso.
+</Frase>
+
+<Frase numero={195}>
+  Não há tentação tão forte que a invocação do nome de Maria não possa vencer.
+</Frase>
+
+</Subtema>
+
+<Subtema titulo="O Rosário">
+
+<Frase
+  numero={196}
+  fonte="Catequeses do Cura d'Ars sobre o Rosário — recolhidas em A. Monnin, Esprit du Curé d'Ars, 1864."
+>
+  O Rosário é a oração das almas simples e dos grandes santos: nada agrada mais à Mãe de Deus.
+</Frase>
+
+<Frase numero={197}>
+  Cada Ave-Maria é como uma rosa que oferecemos à nossa Mãe do céu.
+</Frase>
+
+<Frase numero={198}>
+  Quem reza o Rosário todos os dias, dificilmente se perde — Maria o levará pelo caminho seguro.
+</Frase>
+
+<Frase numero={199}>
+  Recitar o Rosário com atenção é fazer uma visita aos mistérios da vida de Nosso Senhor.
+</Frase>
+
+<Frase
+  numero={200}
+  fonte="Catechismo sobre a Santíssima Virgem — A. Monnin, Esprit du Curé d'Ars, 1864."
+>
+  A Ave-Maria é uma oração que nunca cansa: quanto mais a rezamos, mais a queremos rezar.
+</Frase>
+
+<Frase numero={201}>
+  Em uma família onde se reza o Rosário em comum, há sempre a paz de Deus.
+</Frase>
+
+<Frase numero={202}>
+  O Rosário na mão de um cristão é como uma espada que afasta todos os inimigos da alma.
+</Frase>
+
+<Frase numero={203}>
+  Não há pecador, por mais endurecido, que resista por muito tempo ao Rosário rezado por ele.
+</Frase>
+
+<Frase numero={204}>
+  As contas do Rosário são uma corrente de ouro que liga a terra ao céu.
+</Frase>
+
+<Frase numero={205}>
+  Aquele que reza o Rosário com fé tem em si a melhor das proteções contra os perigos da vida.
+</Frase>
+
+<Frase numero={206}>
+  Maria espera as nossas Ave-Marias como o pobre espera a esmola do passante.
+</Frase>
+
+<Frase numero={207}>
+  No dia da nossa morte, cada Ave-Maria que dissemos com amor será uma lâmpada que iluminará a nossa passagem.
+</Frase>
+
+</Subtema>
+
+</Capitulo>
+
+<Capitulo id="cap-6" numero="VI" titulo="A Oração" contagem="55 frases">
+
+<Subtema titulo="O que é orar" aberto primeiro>
+
+<Frase
+  numero={208}
+  original="La prière n'est autre chose qu'une union avec Dieu."
+  fonte="Catechismo sobre a oração — A. Monnin, Esprit du Curé d'Ars, 1864. Citada pelo Catecismo da Igreja Católica, § 2658 (versão estendida)."
+>
+  A oração não é outra coisa senão a união com Deus.
+</Frase>
+
+<Frase
+  numero={209}
+  original="Quand on a le cœur pur et uni à Dieu, on sent en soi-même comme une suavité qui enivre, une lumière qui éblouit."
+  fonte="Catechismo sobre a oração — A. Monnin, Esprit du Curé d'Ars, 1864; Nodet, 1958."
+>
+  Quando se tem o coração puro e unido a Deus, sente-se em si mesmo uma espécie de doçura que embriaga, uma luz que deslumbra.
+</Frase>
+
+<Frase
+  numero={210}
+  original="La prière est au monde ce que l'âme est au corps."
+  fonte="Catechismo sobre a oração — A. Monnin, Esprit du Curé d'Ars, 1864; Nodet, 1958."
+>
+  A oração é ao mundo o que a alma é ao corpo.
+</Frase>
+
+<Frase
+  numero={211}
+  original="La prière, c'est un doux entretien avec le bon Dieu."
+  fonte="Catechismo sobre a oração — A. Monnin, Esprit du Curé d'Ars, 1864; Nodet, 1958."
+>
+  A oração é uma conversa amigável com Deus.
+</Frase>
+
+<Frase
+  numero={212}
+  fonte="Catechismo sobre a oração — Monnin, Esprit du Curé d'Ars, 1864."
+>
+  A oração é o orvalho da alma: sem ela, a alma seca como uma planta sem água.
+</Frase>
+
+<Frase numero={213}>
+  Orar é abrir o coração a Deus como uma flor se abre ao sol.
+</Frase>
+
+<Frase numero={214}>
+  Quem reza muito, peca pouco; quem não reza, não tarda a cair.
+</Frase>
+
+<Frase numero={215}>
+  A oração não exige sábias palavras: basta o coração que ama.
+</Frase>
+
+<Frase
+  numero={216}
+  original="La prière nous dilate le cœur à mesure qu'elle nous unit à Dieu."
+  fonte="Catechismo sobre a oração — A. Monnin, Esprit du Curé d'Ars, 1864."
+>
+  A oração nos dilata o coração à medida que nos une a Deus.
+</Frase>
+
+<Frase numero={217}>
+  A oração é a respiração da alma: sem ela, a vida espiritual sufoca.
+</Frase>
+
+<Frase numero={218}>
+  Não há vida cristã verdadeira sem oração — é nela que tudo nasce e cresce.
+</Frase>
+
+<Frase numero={219}>
+  A oração feita com fé obtém de Deus mais do que pedimos e até o que ainda não sabemos pedir.
+</Frase>
+
+</Subtema>
+
+<Subtema titulo="Como orar">
+
+<Frase
+  numero={220}
+  fonte="Catechismo sobre a oração — A. Monnin, Esprit du Curé d'Ars, 1864."
+>
+  Não é preciso falar muito para rezar bem — basta saber que se está diante de Deus.
+</Frase>
+
+<Frase numero={221}>
+  Rezai com simplicidade, como uma criança que pede ao pai sem se preocupar com as palavras.
+</Frase>
+
+<Frase numero={222}>
+  A melhor oração não é sempre a mais longa, mas a mais fervorosa.
+</Frase>
+
+<Frase numero={223}>
+  As distrações na oração são uma cruz; mas se as combatemos com paciência, Deus nos recompensa como se as tivéssemos vencido.
+</Frase>
+
+<Frase
+  numero={224}
+  fonte="Recolhido nos catecismos da tarde — Monnin, Esprit du Curé d'Ars, 1864."
+>
+  Quando se reza bem pela manhã, todo o dia caminha sob a bênção de Deus.
+</Frase>
+
+<Frase numero={225}>
+  Toda oração deve nascer da humildade: o orgulhoso não sabe rezar, porque não sabe reconhecer-se pequeno diante de Deus.
+</Frase>
+
+<Frase numero={226}>
+  É preciso rezar como se tudo dependesse de Deus, e trabalhar como se tudo dependesse de nós.
+</Frase>
+
+<Frase numero={227}>
+  Quando a oração se torna difícil, é justamente então que ela é mais agradável a Deus.
+</Frase>
+
+<Frase numero={228}>
+  Rezar mal por amor é melhor do que rezar bem por costume.
+</Frase>
+
+<Frase numero={229}>
+  Quem reza fielmente todos os dias, terá no fim da vida uma morte fiel.
+</Frase>
+
+<Frase numero={230}>
+  A oração em comum tem uma força particular: onde dois ou três se reúnem em nome de Jesus, Ele está no meio deles.
+</Frase>
+
+<Frase numero={231}>
+  Rezai sempre, mesmo quando vos parecer que rezais mal: Deus vê o coração antes de ouvir as palavras.
+</Frase>
+
+<Frase
+  numero={232}
+  fonte="Catechismo sobre a oração — A. Monnin, Esprit du Curé d'Ars, 1864."
+>
+  A oração curta e fervorosa, repetida muitas vezes no dia, vale mais do que uma longa oração feita sem atenção.
+</Frase>
+
+<Frase numero={233}>
+  Tomai por hábito enviar a Deus, de hora em hora, uma pequena flecha do coração: isso é orar sem cessar.
+</Frase>
+
+</Subtema>
+
+<Subtema titulo="A oração contemplativa">
+
+<Frase
+  numero={234}
+  original="La contemplation, c'est le regard de la foi fixé sur Jésus."
+  fonte="Atribuído ao Cura d'Ars — citado no Catecismo da Igreja Católica, § 2715, e mencionado por Bento XVI na Carta aos sacerdotes (Ano Sacerdotal, 2009)."
+>
+  A contemplação é o olhar da fé fixo em Jesus.
+</Frase>
+
+<Frase numero={235}>
+  Contemplar é olhar para Deus sem dizer nada — e deixar que Ele nos olhe.
+</Frase>
+
+<Frase numero={236}>
+  Na contemplação, o silêncio fala mais do que todas as palavras.
+</Frase>
+
+<Frase
+  numero={237}
+  fonte="Catechismo sobre a oração mental — A. Monnin, Esprit du Curé d'Ars, 1864."
+>
+  As almas contemplativas são para o mundo o que as estrelas são para a noite: iluminam sem fazer ruído.
+</Frase>
+
+<Frase numero={238}>
+  A alma contemplativa, mesmo no meio do mundo, está sempre em recolhimento com Deus.
+</Frase>
+
+<Frase numero={239}>
+  Contemplar é deixar-se invadir por Deus como o ferro se deixa penetrar pelo fogo.
+</Frase>
+
+<Frase numero={240}>
+  Quem aprendeu a contemplar, aprendeu a viver no céu antes mesmo de morrer.
+</Frase>
+
+<Frase numero={241}>
+  Os santos foram grandes não porque fizeram muitas coisas, mas porque contemplaram muito a Deus.
+</Frase>
+
+<Frase numero={242}>
+  A contemplação não exige ciência: exige amor e silêncio.
+</Frase>
+
+<Frase numero={243}>
+  Uma única visita a Jesus em silêncio basta para transformar uma alma fria em alma fervorosa.
+</Frase>
+
+</Subtema>
+
+<Subtema titulo="A oração do camponês de Ars">
+
+<Frase
+  numero={244}
+  original="Il y avait un paysan dans ma paroisse qui passait de longues heures devant le tabernacle, sans remuer les lèvres. Je lui ai demandé ce qu'il disait au bon Dieu ; il m'a répondu : « Rien — je L'avise, et Il m'avise. »"
+  fonte="Episódio narrado pelo próprio Cura d'Ars em diversas catequeses — recolhido em A. Monnin, Esprit du Curé d'Ars, 1864; F. Trochu, Le Curé d'Ars, 1925; B. Nodet, 1958. Citado pelo Catecismo da Igreja Católica, § 2715, como exemplo perfeito de oração contemplativa."
+>
+  Havia um camponês em minha paróquia que passava longas horas diante do tabernáculo, sem mexer os lábios. Perguntei-lhe o que dizia ao bom Deus; ele me respondeu: "Nada — eu O olho, e Ele me olha."
+</Frase>
+
+<Frase numero={245}>
+  Esse camponês simples sabia mais de oração do que muitos doutores de teologia.
+</Frase>
+
+<Frase numero={246}>
+  Olhar a Deus e deixar-se olhar por Ele — eis toda a ciência dos santos.
+</Frase>
+
+<Frase numero={247}>
+  As almas mais simples são frequentemente as que rezam melhor, porque não confundem o coração com a inteligência.
+</Frase>
+
+<Frase numero={248}>
+  Aquele que sabe estar diante de Deus em silêncio, sabe tudo o que é preciso saber para chegar ao céu.
+</Frase>
+
+<Frase numero={249}>
+  Deus não exige palavras eloquentes: pede apenas um olhar de amor.
+</Frase>
+
+<Frase numero={250}>
+  A oração mais bela é aquela em que dois corações se entendem sem precisar dizer nada.
+</Frase>
+
+<Frase numero={251}>
+  Quando duas pessoas se amam, basta-lhes a presença uma da outra para serem felizes — assim é a alma com Deus na oração.
+</Frase>
+
+<Frase numero={252}>
+  A oração simples do pobre vale aos olhos de Deus mais do que todos os tratados dos sábios.
+</Frase>
+
+<Frase numero={253}>
+  Aprendamos com aquele camponês a olhar Jesus, e a deixar que Ele nos olhe — todo o resto vem por acréscimo.
+</Frase>
+
+<Frase numero={254}>
+  Que importam as palavras, se o coração está cheio? Que importam os longos discursos, se a alma está com Deus?
+</Frase>
+
+<Frase numero={255}>
+  O olhar de Deus sobre a alma silenciosa é uma chuva mansa que faz brotar todas as virtudes.
+</Frase>
+
+<Frase numero={256}>
+  Felizes os que aprendem, ainda nesta vida, a fazer da oração um simples olhar de amor.
+</Frase>
+
+<Frase numero={257}>
+  Toda a oração se resume neste duplo movimento: nós olhamos para Deus, e Deus olha para nós.
+</Frase>
+
+<Frase numero={258}>
+  Diante do tabernáculo, sejamos como esse pobre camponês: pequenos, silenciosos, mas inteiramente entregues ao olhar de Deus.
+</Frase>
+
+<Frase numero={259}>
+  Aqueles que sabem viver desse olhar mútuo já experimentam o céu antes de morrer.
+</Frase>
+
+<Frase numero={260}>
+  Toda a santidade está aí — em aprender a olhar para Deus como Ele nos olha desde sempre.
+</Frase>
+
+<Frase numero={261}>
+  A oração contemplativa é a recompensa daqueles que perseveraram fielmente nas orações mais simples.
+</Frase>
+
+<Frase numero={262}>
+  Que felicidade — pensar que podemos olhar para Deus a qualquer hora, em qualquer lugar, e Ele sempre nos olha de volta!
+</Frase>
+
+</Subtema>
+
+</Capitulo>
+<Capitulo id="cap-7" numero="VII" titulo="O Pecado e a Conversão" contagem="59 frases">
+
+<Subtema titulo="A malícia do pecado" aberto primeiro>
+
+<Frase
+  numero={263}
+  original="Le péché est le bourreau du bon Dieu et l'assassin de l'âme."
+  fonte="Catechismo sobre o pecado — A. Monnin, Esprit du Curé d'Ars, 1864; Nodet, 1958."
+>
+  O pecado é o carrasco do bom Deus e o assassino da alma.
+</Frase>
+
+<Frase
+  numero={264}
+  original="Le péché nous fait tomber de la dignité d'enfants de Dieu à la condition des bêtes."
+  fonte="Catechismo sobre o pecado — A. Monnin, Esprit du Curé d'Ars, 1864."
+>
+  O pecado nos faz cair da dignidade de filhos de Deus à condição dos animais.
+</Frase>
+
+<Frase
+  numero={265}
+  fonte="Catechismo sobre o pecado mortal — A. Monnin, Esprit du Curé d'Ars, 1864; Trochu, 1925."
+>
+  Se conhecêssemos o horror de um único pecado mortal, morreríamos de espanto.
+</Frase>
+
+<Frase numero={266}>
+  O pecado é uma cadeia que prende a alma e a arrasta para o abismo.
+</Frase>
+
+<Frase numero={267}>
+  Um só pecado mortal é um mal maior do que todas as guerras e pestes do mundo juntas.
+</Frase>
+
+<Frase numero={268}>
+  O pecado é uma traição: damos as costas a Aquele que nos cobre de bens para abraçarmos o nada.
+</Frase>
+
+<Frase
+  numero={269}
+  fonte="Catechismo sobre o pecado — recolhido em A. Monnin, Esprit du Curé d'Ars, 1864."
+>
+  Quando se peca, é como se desse uma bofetada em Nosso Senhor — ainda hoje, depois de tudo o que Ele sofreu por nós.
+</Frase>
+
+<Frase numero={270}>
+  Quem peca habitualmente acaba por não sentir mais o peso do pecado: é o pior dos males.
+</Frase>
+
+<Frase numero={271}>
+  O pecado é doce no momento em que se comete, mas amargo durante toda a eternidade.
+</Frase>
+
+<Frase numero={272}>
+  Os pecados pequenos preparam o caminho para os grandes, como pedrinhas que rolam antes da avalanche.
+</Frase>
+
+<Frase numero={273}>
+  Aquele que perde o horror ao pecado já está meio caminho perdido.
+</Frase>
+
+<Frase numero={274}>
+  O pecado mancha a alma como o lodo mancha as roupas brancas — só a graça pode lavar.
+</Frase>
+
+<Frase numero={275}>
+  Pequemos menos pelo pensamento, e teremos menos a confessar pelas obras.
+</Frase>
+
+<Frase numero={276}>
+  O hábito do pecado é uma corrente que se forja com mil pequenos consentimentos.
+</Frase>
+
+<Frase numero={277}>
+  Não há nada mais terrível neste mundo do que ver uma alma em estado de pecado mortal.
+</Frase>
+
+<Frase
+  numero={278}
+  original="Il viendra un temps où les hommes seront si las des hommes qu'on ne pourra plus leur parler de Dieu sans les faire pleurer."
+  fonte="Profecia atribuída ao Cura d'Ars — recolhida em A. Monnin, Esprit du Curé d'Ars, 1864. Uma das frases mais célebres e proféticas do Vianney, citada frequentemente em homilias e estudos sobre a crise espiritual do mundo moderno."
+>
+  Virá o tempo em que os homens estarão tão cansados dos homens que não se poderá mais falar-lhes de Deus sem fazê-los chorar.
+</Frase>
+
+</Subtema>
+
+<Subtema titulo="A confissão">
+
+<Frase
+  numero={279}
+  original="Notre-Seigneur, dans le sacrement de Pénitence, oublie l'avenir pour pardonner le passé."
+  fonte="Catechismo sobre a confissão — A. Monnin, Esprit du Curé d'Ars, 1864; Nodet, 1958."
+>
+  Nosso Senhor, no sacramento da Penitência, esquece o futuro para perdoar o passado.
+</Frase>
+
+<Frase
+  numero={280}
+  original="Le bon Dieu sait tout. Avant même que vous vous confessiez, Il sait que vous pécherez encore, et cependant Il vous pardonne."
+  fonte="Catechismo sobre a confissão — A. Monnin, Esprit du Curé d'Ars, 1864."
+>
+  O bom Deus sabe tudo. Antes mesmo de vos confessardes, já sabe que pecareis novamente, e, no entanto, vos perdoa.
+</Frase>
+
+<Frase
+  numero={281}
+  fonte="Catechismo sobre a penitência — A. Monnin, Esprit du Curé d'Ars, 1864."
+>
+  A confissão é uma segunda graça, depois do batismo: por ela a alma renasce.
+</Frase>
+
+<Frase numero={282}>
+  O confessionário é um tribunal de misericórdia, não de condenação.
+</Frase>
+
+<Frase
+  numero={283}
+  fonte="Convite habitual do Cura d'Ars aos peregrinos — recolhido em depoimentos do Processo de Beatificação (1862–1864)."
+>
+  Vinde à confissão, meus filhos, vinde — Jesus vos espera ali com os braços abertos.
+</Frase>
+
+<Frase numero={284}>
+  Quando o confessor levanta a mão para a absolvição, é Deus mesmo que perdoa.
+</Frase>
+
+<Frase numero={285}>
+  Confessar-se bem é viver bem; confessar-se mal é preparar uma vida ruim.
+</Frase>
+
+<Frase numero={286}>
+  O que entra no confessionário sai outro homem, se vai com o coração contrito.
+</Frase>
+
+<Frase numero={287}>
+  Não esconda nada na confissão — o pecado escondido é o que mais pesa na consciência.
+</Frase>
+
+<Frase numero={288}>
+  A confissão frequente é o segredo das almas que perseveram na graça.
+</Frase>
+
+<Frase
+  numero={289}
+  fonte="Catechismo sobre o sacramento da penitência — A. Monnin, Esprit du Curé d'Ars, 1864."
+>
+  No confessionário, o sacerdote não é um juiz que condena, mas um pai que perdoa.
+</Frase>
+
+<Frase numero={290}>
+  Adiar a confissão é deixar a alma exposta às tempestades sem abrigo.
+</Frase>
+
+<Frase numero={291}>
+  Cada confissão bem feita é um passo a mais em direção ao céu.
+</Frase>
+
+<Frase numero={292}>
+  A vergonha de confessar um pecado já é o começo do perdão dele.
+</Frase>
+
+</Subtema>
+
+<Subtema titulo="A misericórdia divina">
+
+<Frase
+  numero={293}
+  original="Nos péchés sont des grains de sable à côté de la grande montagne des miséricordes du bon Dieu."
+  fonte="Catechismo sobre a misericórdia — A. Monnin, Esprit du Curé d'Ars, 1864; Nodet, 1958."
+>
+  Nossos pecados são como grãos de areia ao lado da grande montanha das misericórdias de Deus.
+</Frase>
+
+<Frase
+  numero={294}
+  original="La miséricorde du bon Dieu est comme un torrent débordé : elle entraîne les cœurs sur son passage."
+  fonte="Catechismo sobre a misericórdia — A. Monnin, Esprit du Curé d'Ars, 1864."
+>
+  A misericórdia do bom Deus é como uma torrente transbordante: ela arrasta os corações no seu curso.
+</Frase>
+
+<Frase
+  numero={295}
+  fonte="Recolhido nas catequeses sobre a misericórdia — A. Monnin, Esprit du Curé d'Ars, 1864."
+>
+  A misericórdia de Deus é como o oceano: por mais que dela se tire, nunca se esgota.
+</Frase>
+
+<Frase numero={296}>
+  Por maior que seja a vossa miséria, a misericórdia de Deus é sempre infinitamente maior.
+</Frase>
+
+<Frase numero={297}>
+  O bom Deus prefere mil vezes perdoar a punir — basta que voltemos a Ele com sinceridade.
+</Frase>
+
+<Frase numero={298}>
+  Deus é mais pai que juiz; tem mais alegria em perdoar do que em condenar.
+</Frase>
+
+<Frase
+  numero={299}
+  fonte="Catechismo sobre a misericórdia — Monnin, Esprit du Curé d'Ars, 1864."
+>
+  Por mais negros que sejam os pecados de um homem, a misericórdia de Deus pode torná-lo branco como a neve.
+</Frase>
+
+<Frase numero={300}>
+  O maior pecador que se converte dá mais alegria ao céu do que noventa e nove justos que perseveram.
+</Frase>
+
+<Frase numero={301}>
+  Deus está sempre pronto a perdoar — somos nós que tardamos em pedir.
+</Frase>
+
+<Frase numero={302}>
+  Há mais misericórdia no Coração de Deus do que malícia em todos os pecadores juntos.
+</Frase>
+
+<Frase numero={303}>
+  A misericórdia de Deus é mais rápida que o nosso arrependimento — Ele já nos espera antes que dêmos o primeiro passo.
+</Frase>
+
+<Frase numero={304}>
+  Desesperar da misericórdia divina é o pior dos pecados, porque é negar o próprio amor de Deus.
+</Frase>
+
+<Frase numero={305}>
+  Onde abunda o pecado, superabunda a graça: tal é a lei do amor divino.
+</Frase>
+
+<Frase numero={306}>
+  Por mais que pequemos, jamais cansaremos a misericórdia de Deus antes de cansarmos a nossa.
+</Frase>
+
+</Subtema>
+
+<Subtema titulo="O arrependimento">
+
+<Frase
+  numero={307}
+  original="Les larmes d'un pécheur repentant sont le vin des anges."
+  fonte="Catechismo sobre a contrição — A. Monnin, Esprit du Curé d'Ars, 1864; Nodet, 1958."
+>
+  As lágrimas de um pecador arrependido são o vinho dos anjos.
+</Frase>
+
+<Frase
+  numero={308}
+  fonte="Catechismo sobre a contrição — A. Monnin, Esprit du Curé d'Ars, 1864."
+>
+  Uma só lágrima de arrependimento sincero apaga mais pecados do que rios de água comum.
+</Frase>
+
+<Frase numero={309}>
+  O verdadeiro arrependimento não consiste em chorar muito, mas em odiar o pecado e amar a Deus.
+</Frase>
+
+<Frase numero={310}>
+  A conversão começa pelo coração, não pelos lábios.
+</Frase>
+
+<Frase numero={311}>
+  Quem se arrepende sinceramente, já tem a metade do perdão antes mesmo de pronunciar a confissão.
+</Frase>
+
+<Frase numero={312}>
+  A conversão não é obra de um dia, mas de toda a vida.
+</Frase>
+
+<Frase
+  numero={313}
+  fonte="Catechismo sobre a humildade — A. Monnin, Esprit du Curé d'Ars, 1864."
+>
+  O coração contrito e humilhado, Deus não o despreza: é nele que Ele faz a Sua morada.
+</Frase>
+
+<Frase numero={314}>
+  Não basta detestar o pecado — é preciso também fugir das ocasiões que conduzem a ele.
+</Frase>
+
+<Frase numero={315}>
+  Quem volta a Deus depois de um pecado e quer firmemente não recair, dá-Lhe maior alegria do que se nunca tivesse caído.
+</Frase>
+
+<Frase numero={316}>
+  Nunca é tarde para se converter — enquanto há vida, há tempo para a misericórdia.
+</Frase>
+
+<Frase numero={317}>
+  A penitência aceita por amor é mais doce do que o pecado cometido por prazer.
+</Frase>
+
+<Frase numero={318}>
+  O pecador arrependido é mais agradável a Deus do que aquele que jamais se examina.
+</Frase>
+
+<Frase numero={319}>
+  A conversão verdadeira deixa marcas: muda a vida toda, não apenas alguns hábitos.
+</Frase>
+
+<Frase numero={320}>
+  As lágrimas que correm pelos pecados são as pérolas que enfeitarão a coroa dos santos no céu.
+</Frase>
+
+<Frase numero={321}>
+  Cada dia traz nova oportunidade de conversão: não percamos as ocasiões que Deus nos oferece.
+</Frase>
+
+</Subtema>
+
+</Capitulo>
+<Capitulo id="cap-8" numero="VIII" titulo="As Virtudes e a Vida Cristã" contagem="76 frases">
+
+<Subtema titulo="A humildade" aberto primeiro>
+
+<Frase
+  numero={322}
+  original="Je crois que, si nous avions la foi, nous serions les maîtres de la volonté de Dieu ; nous la tiendrions enchaînée, et rien ne nous serait refusé par Lui."
+  fonte="Catechismo sobre o poder da fé — A. Monnin, Esprit du Curé d'Ars, 1864; B. Nodet, 1958."
+>
+  Eu acredito que, se tivéssemos fé, seríamos senhores da vontade de Deus; nós a manteríamos acorrentada, e nada nos seria negado por Ele.
+</Frase>
+
+<Frase
+  numero={323}
+  original="Voici une bonne règle de conduite : ne rien faire que nous ne puissions offrir au bon Dieu. Or, nous ne pouvons Lui offrir des médisances, des injustices, de la colère, des blasphèmes, des impuretés... et c'est pourtant tout ce qu'on fait dans le monde !"
+  fonte="Catecismo de Ars — recolhido em A. Monnin, Esprit du Curé d'Ars, 1864; B. Nodet, 1958."
+>
+  Esta é uma boa regra de conduta: não fazer nada que não possamos oferecer ao bom Deus. Ora, não podemos oferecer-Lhe calúnias, injustiças, raiva, blasfêmia, impureza... no entanto, é tudo o que as pessoas fazem no mundo!
+</Frase>
+
+<Frase
+  numero={324}
+  original="Si l'on faisait pour Dieu ce qu'on fait pour le monde, combien seraient sauvés !"
+  fonte="Catechismo sobre o cuidado da salvação — A. Monnin, Esprit du Curé d'Ars, 1864; B. Nodet, 1958."
+>
+  Se as pessoas fizessem por Deus o que fazem pelo mundo, quantas seriam salvas!
+</Frase>
+
+<Frase
+  numero={325}
+  fonte="Atribuída ao Cura d'Ars em coletâneas espirituais modernas. Não há original francês literal confirmado nos catecismos de Monnin, mas o conteúdo é coerente com seu ensino habitual sobre a humildade e o desapego da opinião humana."
+>
+  Não tente agradar a todos. Tente agradar a Deus, aos anjos e aos santos — eles são o seu público.
+</Frase>
+
+<Frase
+  numero={326}
+  original="L'humilité est aux vertus ce que la chaîne est aux perles : on ôte la chaîne, et les perles se dispersent ; on ôte l'humilité, et toutes les vertus disparaissent."
+  fonte="Catechismo sobre a humildade — A. Monnin, Esprit du Curé d'Ars, 1864; Nodet, 1958."
+>
+  A humildade é à virtude o que a corrente é às pérolas: tira-se a corrente, e as pérolas se dispersam; tira-se a humildade, e todas as virtudes desaparecem.
+</Frase>
+
+<Frase
+  numero={327}
+  fonte="Catechismo sobre a humildade — A. Monnin, Esprit du Curé d'Ars, 1864."
+>
+  A humildade é a verdade — nada mais e nada menos.
+</Frase>
+
+<Frase numero={328}>
+  O orgulho é o pecado que mais desagrada a Deus, porque é o pecado dos demônios.
+</Frase>
+
+<Frase numero={329}>
+  Reconhecer-se nada diante de Deus é o começo de toda a sabedoria.
+</Frase>
+
+<Frase numero={330}>
+  Os humildes herdarão a terra — e também o céu.
+</Frase>
+
+<Frase numero={331}>
+  Aquele que se humilha diante dos homens, Deus o exalta diante dos anjos.
+</Frase>
+
+<Frase
+  numero={332}
+  fonte="Catechismo sobre o orgulho — A. Monnin, Esprit du Curé d'Ars, 1864."
+>
+  O orgulho fez dos anjos demônios; a humildade faz dos homens anjos.
+</Frase>
+
+<Frase numero={333}>
+  Quanto mais nos esvaziamos de nós mesmos, mais Deus se derrama em nós.
+</Frase>
+
+<Frase numero={334}>
+  A humildade não consiste em desprezar-se, mas em conhecer-se tal como Deus nos vê.
+</Frase>
+
+<Frase numero={335}>
+  Aceitar uma humilhação com paciência é fazer um ato heroico de virtude.
+</Frase>
+
+<Frase numero={336}>
+  As almas humildes recebem grandes graças, porque sabem que nada merecem.
+</Frase>
+
+<Frase numero={337}>
+  A soberba é como o vento: vai mais alto, mas cai com maior estrondo.
+</Frase>
+
+</Subtema>
+
+<Subtema titulo="A caridade e o amor ao próximo">
+
+<Frase
+  numero={338}
+  original="Notre prochain est la corde sensible de nos cœurs : il suffit de la toucher pour en sentir la vibration."
+  fonte="Catechismo sobre a caridade fraterna — A. Monnin, Esprit du Curé d'Ars, 1864; Nodet, 1958."
+>
+  Nosso próximo é a corda sensível dos nossos corações: basta tocá-la para sentirmos a vibração.
+</Frase>
+
+<Frase
+  numero={339}
+  fonte="Catechismo sobre a caridade — A. Monnin, Esprit du Curé d'Ars, 1864."
+>
+  Não se pode amar a Deus sem amar o próximo, nem amar o próximo sem amar a Deus.
+</Frase>
+
+<Frase numero={340}>
+  A caridade é a chave do céu: sem ela, nenhuma outra virtude abre a porta.
+</Frase>
+
+<Frase numero={341}>
+  Falar mal do próximo é arrancar-lhe do coração as flores que Deus ali plantou.
+</Frase>
+
+<Frase numero={342}>
+  Quem não ama o irmão que vê, não pode amar a Deus que não vê.
+</Frase>
+
+<Frase numero={343}>
+  Uma palavra dura faz mais mal do que uma facada: a facada cura, a palavra fica.
+</Frase>
+
+<Frase numero={344}>
+  Perdoai sempre, e Deus vos perdoará na medida em que perdoardes.
+</Frase>
+
+<Frase
+  numero={345}
+  fonte="Catechismo sobre o amor ao próximo — A. Monnin, Esprit du Curé d'Ars, 1864."
+>
+  A caridade verdadeira não conhece amigos nem inimigos: ama a todos no mesmo Coração de Jesus.
+</Frase>
+
+<Frase numero={346}>
+  A maledicência é como o veneno: mata sem fazer barulho.
+</Frase>
+
+<Frase numero={347}>
+  Tratai a todos como gostaríeis de ser tratados — eis toda a lei da caridade.
+</Frase>
+
+<Frase numero={348}>
+  A pior pobreza não é a falta de pão, mas a falta de amor.
+</Frase>
+
+<Frase numero={349}>
+  Quem ama, não conta nem mede: dá com as duas mãos, como Deus.
+</Frase>
+
+<Frase numero={350}>
+  Quem julga o próximo, julga-se a si mesmo, e Deus o julgará pelo mesmo critério.
+</Frase>
+
+</Subtema>
+
+<Subtema titulo="A pureza">
+
+<Frase
+  numero={351}
+  original="La pureté vient du ciel : il faut la demander à Dieu, et Il la donnera."
+  fonte="Catechismo sobre a pureza — A. Monnin, Esprit du Curé d'Ars, 1864."
+>
+  A pureza nasce do céu: é preciso pedi-la a Deus, e Ele a dará.
+</Frase>
+
+<Frase
+  numero={352}
+  fonte="Catechismo sobre a pureza — A. Monnin, Esprit du Curé d'Ars, 1864."
+>
+  As almas puras veem a Deus mesmo nesta vida; os impuros não O veem nem no céu.
+</Frase>
+
+<Frase numero={353}>
+  A pureza é a virtude dos anjos — quem a guarda na terra já vive entre eles.
+</Frase>
+
+<Frase numero={354}>
+  Uma alma pura é como um espelho: nele se reflete a beleza de Deus.
+</Frase>
+
+<Frase numero={355}>
+  A castidade se conserva pela oração, pela mortificação e pela fuga das ocasiões.
+</Frase>
+
+<Frase numero={356}>
+  A pureza é uma flor frágil que se quebra ao menor sopro impuro: é preciso guardá-la com zelo.
+</Frase>
+
+<Frase numero={357}>
+  Quem perde a pureza perde tudo; quem a conserva, conserva o céu na alma.
+</Frase>
+
+<Frase numero={358}>
+  As almas puras serão as primeiras a contemplar a face de Deus na eternidade.
+</Frase>
+
+<Frase numero={359}>
+  O corpo é o templo do Espírito Santo: profaná-lo é o maior dos sacrilégios.
+</Frase>
+
+<Frase numero={360}>
+  A modéstia nos olhos é a primeira guarda da pureza.
+</Frase>
+
+</Subtema>
+
+<Subtema titulo="A pobreza e o desapego">
+
+<Frase
+  numero={361}
+  fonte="Catechismo sobre as Bem-aventuranças — A. Monnin, Esprit du Curé d'Ars, 1864."
+>
+  Os pobres de espírito serão os primeiros a entrar no Reino do céu.
+</Frase>
+
+<Frase numero={362}>
+  Os bens deste mundo são como nuvens — passam, e nada deixam.
+</Frase>
+
+<Frase numero={363}>
+  Quem ama o dinheiro acabará servindo ao dinheiro; quem ama a Deus, possuirá todas as coisas.
+</Frase>
+
+<Frase numero={364}>
+  Não é a pobreza que torna infeliz, mas o apego às coisas que se possui ou se quer possuir.
+</Frase>
+
+<Frase numero={365}>
+  Levamos para o céu apenas o que demos pelo amor de Deus.
+</Frase>
+
+<Frase numero={366}>
+  O coração que se apega à terra perde as asas para voar ao céu.
+</Frase>
+
+<Frase
+  numero={367}
+  fonte="Catechismo sobre a pobreza evangélica — A. Monnin, Esprit du Curé d'Ars, 1864."
+>
+  Nosso Senhor escolheu a pobreza como manto: por que nós correríamos atrás da riqueza?
+</Frase>
+
+<Frase numero={368}>
+  Quem nada tem na terra terá tudo no céu, se a sua pobreza for aceita com amor.
+</Frase>
+
+<Frase numero={369}>
+  As riquezas são como espinhos: ferem aqueles que delas se aproximam sem cuidado.
+</Frase>
+
+<Frase numero={370}>
+  O verdadeiro tesouro do cristão é o seu coração unido a Deus — todos os outros tesouros são roubados pela morte.
+</Frase>
+
+<Frase numero={371}>
+  O desapego é a porta estreita pela qual passam as almas que querem chegar ao céu.
+</Frase>
+
+</Subtema>
+
+<Subtema titulo="A paciência e o sofrimento">
+
+<Frase
+  numero={372}
+  original="La souffrance est comme une échelle : celui qui la monte arrive à Dieu ; celui qui la descend arrive au désespoir."
+  fonte="Catechismo sobre o sofrimento — A. Monnin, Esprit du Curé d'Ars, 1864; Nodet, 1958."
+>
+  O sofrimento é como uma escada: quem o sobe, chega a Deus; quem o desce, chega ao desespero.
+</Frase>
+
+<Frase
+  numero={373}
+  original="Si nous savions ce que vaut la souffrance, nous la demanderions comme une faveur."
+  fonte="Catechismo sobre o sofrimento — A. Monnin, Esprit du Curé d'Ars, 1864; Nodet, 1958."
+>
+  Se soubéssemos o valor do sofrimento, nós o pediríamos como um favor.
+</Frase>
+
+<Frase
+  numero={374}
+  fonte="Catechismo sobre o sofrimento — A. Monnin, Esprit du Curé d'Ars, 1864."
+>
+  As provações são as joias com as quais Deus enriquece as Suas almas prediletas.
+</Frase>
+
+<Frase numero={375}>
+  A cruz aceita por amor de Deus se transforma em flores; recusada, em espinhos.
+</Frase>
+
+<Frase numero={376}>
+  Aqueles a quem Deus ama mais, são também aqueles a quem Ele mais faz sofrer.
+</Frase>
+
+<Frase numero={377}>
+  As contrariedades do dia, suportadas em silêncio, valem mais do que muitas penitências escolhidas por nós mesmos.
+</Frase>
+
+<Frase numero={378}>
+  A paciência é o sal que dá sabor a todas as virtudes.
+</Frase>
+
+<Frase numero={379}>
+  Nada se faz sem sofrer; e nada de grande se faz sem sofrer muito.
+</Frase>
+
+<Frase numero={380}>
+  O sofrimento passa, o fruto do sofrimento permanece para a eternidade.
+</Frase>
+
+<Frase numero={381}>
+  Se aceitamos as nossas dores como Jesus aceitou as Suas, elas se tornam preciosas aos olhos de Deus.
+</Frase>
+
+<Frase numero={382}>
+  Quem suporta a doença com paciência merece mais do que quem faz longos jejuns.
+</Frase>
+
+<Frase numero={383}>
+  As contrariedades dos dias passam; só o modo como as recebemos permanece escrito no céu.
+</Frase>
+
+<Frase numero={384}>
+  As lágrimas regam o jardim da alma e fazem dele um paraíso.
+</Frase>
+
+</Subtema>
+
+<Subtema titulo="A esperança e a confiança">
+
+<Frase
+  numero={385}
+  fonte="Catechismo sobre a esperança — A. Monnin, Esprit du Curé d'Ars, 1864."
+>
+  A confiança em Deus deve ser ilimitada como a Sua misericórdia.
+</Frase>
+
+<Frase numero={386}>
+  Quem confia em Deus nunca é confundido — esta é a promessa que jamais falhou.
+</Frase>
+
+<Frase numero={387}>
+  A esperança é a âncora da alma no meio das tempestades da vida.
+</Frase>
+
+<Frase numero={388}>
+  Não há situação tão desesperada que a confiança em Deus não possa transformar.
+</Frase>
+
+<Frase numero={389}>
+  Esperar em Deus é descansar na Sua Providência como uma criança nos braços do pai.
+</Frase>
+
+<Frase
+  numero={390}
+  fonte="Catechismo sobre a Providência — A. Monnin, Esprit du Curé d'Ars, 1864."
+>
+  Quanto mais se confia em Deus, mais Ele se compraz em fazer milagres na alma.
+</Frase>
+
+<Frase numero={391}>
+  A confiança alcança de Deus o que a presunção jamais conseguirá.
+</Frase>
+
+<Frase numero={392}>
+  Onde a razão diz "impossível", a fé diz "Deus pode" — e Deus faz.
+</Frase>
+
+<Frase numero={393}>
+  A Providência divina nunca atrasa nem se engana: chega sempre na hora exata.
+</Frase>
+
+<Frase numero={394}>
+  Deus nunca abandona quem n'Ele confia — Ele pode adiar, mas nunca recusar.
+</Frase>
+
+<Frase numero={395}>
+  A esperança cristã não é uma esperança qualquer: é a certeza fundada nas promessas de Deus.
+</Frase>
+
+<Frase numero={396}>
+  Tudo passa, tudo cansa, tudo desilude — só Deus permanece e nunca decepciona.
+</Frase>
+
+<Frase numero={397}>
+  Aquele que tem a esperança no coração caminha como num jardim, mesmo quando atravessa o deserto.
+</Frase>
+
+</Subtema>
+
+</Capitulo>
+<Capitulo id="cap-9" numero="IX" titulo="O Sacerdócio" contagem="48 frases">
+
+<Subtema titulo="A dignidade do padre" aberto primeiro>
+
+<Frase
+  numero={398}
+  original="Le sacerdoce, c'est l'amour du Cœur de Jésus."
+  fonte="Catechismo sobre o sacerdócio — A. Monnin, Esprit du Curé d'Ars, 1864; B. Nodet, Le Curé d'Ars: Sa pensée, son cœur, 1958. Citada por João XXIII na encíclica Sacerdotii Nostri Primordia (1959), por João Paulo II em Pastores Dabo Vobis (1992) e por Bento XVI na Carta aos Sacerdotes (Ano Sacerdotal, 2009). Considerada a frase-síntese de toda a teologia sacerdotal do Cura d'Ars."
+>
+  O sacerdócio é o amor do Coração de Jesus.
+</Frase>
+
+<Frase
+  numero={399}
+  original="Si l'on comprenait bien ce que c'est qu'un prêtre sur la terre, on en mourrait : non de frayeur, mais d'amour."
+  fonte="Catechismo sobre o sacerdócio — A. Monnin, Esprit du Curé d'Ars, 1864; Nodet, 1958. Citada por João Paulo II em Pastores Dabo Vobis, n. 22, e por Bento XVI no Ano Sacerdotal (2009)."
+>
+  Se compreendêssemos bem o que é um sacerdote na terra, morreríamos — não de medo, mas de amor.
+</Frase>
+
+<Frase
+  numero={400}
+  original="Le prêtre n'est pas prêtre pour lui ; il l'est pour vous."
+  fonte="Catechismo sobre o sacerdócio — A. Monnin, Esprit du Curé d'Ars, 1864; Nodet, 1958."
+>
+  O sacerdote não é sacerdote para si mesmo, mas para vós.
+</Frase>
+
+<Frase
+  numero={401}
+  original="Après Dieu, le prêtre, c'est tout ! Lui-même ne se comprendra bien que dans le ciel."
+  fonte="Catechismo sobre o sacerdócio — A. Monnin, Esprit du Curé d'Ars, 1864; Nodet, 1958. Citada no Catecismo da Igreja Católica, § 1589."
+>
+  Depois de Deus, o sacerdote é tudo. Ele só se compreenderá bem a si mesmo no céu.
+</Frase>
+
+<Frase
+  numero={402}
+  original="Laissez une paroisse vingt ans sans prêtre, on y adorera les bêtes."
+  fonte="Catechismo sobre o sacerdócio — A. Monnin, Esprit du Curé d'Ars, 1864; Nodet, 1958. Uma das mais célebres frases do Cura d'Ars sobre a necessidade do sacerdócio."
+>
+  Deixai uma paróquia vinte anos sem padre, e adorar-se-ão os animais.
+</Frase>
+
+<Frase
+  numero={403}
+  original="Sans le prêtre, la Passion et la Mort de Notre-Seigneur ne nous serviraient de rien."
+  fonte="Catechismo sobre o sacerdócio — A. Monnin, Esprit du Curé d'Ars, 1864; Nodet, 1958."
+>
+  Sem o sacerdote, a Paixão e a Morte de Nosso Senhor não nos serviriam de nada.
+</Frase>
+
+<Frase
+  numero={404}
+  fonte="Catechismo sobre o sacerdócio — A. Monnin, Esprit du Curé d'Ars, 1864; recolhido em F. Trochu, 1925."
+>
+  Que é o sacerdote? Um homem que ocupa o lugar de Deus, um homem revestido de todos os poderes de Deus.
+</Frase>
+
+<Frase
+  numero={405}
+  original="Il faut regarder le prêtre, quand il est à l'autel, comme si c'était le bon Dieu Lui-même."
+  fonte="Catechismo sobre o sacerdócio — A. Monnin, Esprit du Curé d'Ars, 1864; B. Nodet, 1958."
+>
+  Deve-se olhar o sacerdote, quando está no altar, como se fosse o próprio Deus.
+</Frase>
+
+<Frase
+  numero={406}
+  original="Le prêtre est quelqu'un de bien grand ! Le bon Dieu Lui obéit : il dit deux mots, et Notre-Seigneur descend du ciel à sa voix, et se renferme dans une petite hostie."
+  fonte="Catechismo sobre o sacerdócio — A. Monnin, Esprit du Curé d'Ars, 1864; B. Nodet, 1958."
+>
+  O sacerdote é alguém muito grande! Deus obedece-lhe: ele diz duas palavras, e Nosso Senhor desce do céu à sua voz, e se encerra numa pequena hóstia.
+</Frase>
+
+<Frase
+  numero={407}
+  original="Si je rencontrais un prêtre et un ange, je saluerais le prêtre avant de saluer l'ange. Celui-ci est l'ami du bon Dieu ; mais le prêtre en tient la place."
+  fonte="Catechismo sobre o sacerdócio — A. Monnin, Esprit du Curé d'Ars, 1864; B. Nodet, 1958. Uma das frases mais célebres do Cura d'Ars sobre a dignidade sacerdotal."
+>
+  Se eu encontrasse um sacerdote e um anjo, saudaria o sacerdote antes de saudar o anjo. Este é o amigo de Deus; mas o sacerdote ocupa o Seu lugar.
+</Frase>
+
+<Frase
+  numero={408}
+  original="Voyez la puissance du prêtre ! La langue du prêtre fait, d'un morceau de pain, le bon Dieu ! C'est plus que de créer le monde."
+  fonte="Catechismo sobre o sacerdócio — A. Monnin, Esprit du Curé d'Ars, 1864; B. Nodet, 1958. Frase frequentemente citada como expressão suprema da teologia sacerdotal do Cura d'Ars sobre a consagração eucarística."
+>
+  Vede o poder do sacerdote! A língua do sacerdote faz, de um pedaço de pão, Deus! É algo mais do que criar o mundo.
+</Frase>
+
+<Frase
+  numero={409}
+  original="Quand vous voyez un prêtre, pensez à Notre-Seigneur Jésus-Christ."
+  fonte="Catechismo sobre o sacerdócio — A. Monnin, Esprit du Curé d'Ars, 1864."
+>
+  Quando vedes um sacerdote, pensai em Nosso Senhor Jesus Cristo.
+</Frase>
+
+<Frase numero={410}>
+  Diante do sacerdote, os anjos se prostram, pois reconhecem em suas mãos o poder do próprio Deus.
+</Frase>
+
+<Frase numero={411}>
+  Honrai o sacerdote, e honrais a Jesus Cristo que o enviou.
+</Frase>
+
+<Frase numero={412}>
+  O sacerdócio é um dom tão grande que apenas no céu compreenderemos verdadeiramente o seu valor.
+</Frase>
+
+<Frase numero={413}>
+  A Igreja sem sacerdotes seria como um corpo sem alma — viva apenas em aparência.
+</Frase>
+
+<Frase numero={414}>
+  O padre não vive para si, nem para os seus: vive para as almas que lhe foram confiadas.
+</Frase>
+
+</Subtema>
+
+<Subtema titulo="A missão do sacerdote">
+
+<Frase
+  numero={415}
+  original="Le bon Dieu fait pour moi un petit miracle toutes les nuits. Avant de me coucher, je n'en peux plus ; et le matin, je suis tout dispos."
+  fonte="Confissão pessoal do Cura d'Ars sobre a sua rotina exaustiva no confessionário (até 16 horas por dia) — recolhida em A. Monnin, Esprit du Curé d'Ars, 1864; F. Trochu, Le Curé d'Ars, 1925."
+>
+  O bom Deus faz por mim um pequeno milagre toda noite. Antes de dormir, não aguento mais; e de manhã já estou em forma.
+</Frase>
+
+<Frase
+  numero={416}
+  original="Le prêtre devra rendre compte à Dieu, au jour du Jugement, de chacune des âmes qui lui ont été confiées."
+  fonte="Catechismo sobre os deveres do sacerdote — A. Monnin, Esprit du Curé d'Ars, 1864."
+>
+  O sacerdote terá de dar conta a Deus, no dia do Juízo, de cada uma das almas que lhe foram confiadas.
+</Frase>
+
+<Frase
+  numero={417}
+  fonte="Catechismo sobre a vida sacerdotal — Monnin, Esprit du Curé d'Ars, 1864; Trochu, 1925."
+>
+  O sacerdote deve ser um homem de oração antes de ser um homem de ação.
+</Frase>
+
+<Frase
+  numero={418}
+  original="Le prêtre doit être aussi constamment revêtu du Saint-Esprit qu'il l'est de sa soutane."
+  fonte="Catechismo sobre o sacerdócio — A. Monnin, Esprit du Curé d'Ars, 1864; B. Nodet, 1958."
+>
+  O sacerdote deve estar tão constantemente envolvido pelo Espírito Santo como está pela sua batina.
+</Frase>
+
+<Frase
+  numero={419}
+  original="Quand on veut détruire la religion, on commence par attaquer le prêtre — parce que, là où il n'y a plus de prêtre, il n'y a plus de sacrifice ; et là où il n'y a plus de sacrifice, il n'y a plus de religion."
+  fonte="Catechismo sobre o sacerdócio — A. Monnin, Esprit du Curé d'Ars, 1864; B. Nodet, 1958."
+>
+  Quando se quer destruir a religião, começa-se por atacar o sacerdote — porque, onde já não há sacerdote, não há mais sacrifício; e onde não há mais sacrifício, não há mais religião.
+</Frase>
+
+<Frase numero={420}>
+  A missão do sacerdote é levar Deus às almas e as almas a Deus.
+</Frase>
+
+<Frase numero={421}>
+  O bom pastor dá a vida pelas suas ovelhas; o mau pastor foge ao primeiro perigo.
+</Frase>
+
+<Frase numero={422}>
+  Quem entra no sacerdócio para si mesmo, sai dele perdido; quem entra para Deus, sai santo.
+</Frase>
+
+<Frase
+  numero={423}
+  fonte="Catechismo sobre o sacerdócio — recolhido em A. Monnin, Esprit du Curé d'Ars, 1864."
+>
+  Um sacerdote santo faz um povo santo; um sacerdote tíbio faz um povo mau; um sacerdote mau faz um povo perdido.
+</Frase>
+
+<Frase numero={424}>
+  A santidade do padre é o melhor sermão que ele pode pregar ao seu povo.
+</Frase>
+
+<Frase numero={425}>
+  O sacerdote celebra a Missa, distribui os sacramentos, prega a Palavra — mas, antes de tudo, vive aquilo que ensina.
+</Frase>
+
+<Frase numero={426}>
+  A oração e a penitência são os instrumentos com os quais o sacerdote salva as almas.
+</Frase>
+
+<Frase numero={427}>
+  Rezai por vossos sacerdotes — eles carregam um peso que ninguém imagina.
+</Frase>
+
+<Frase numero={428}>
+  O padre que se descuida da sua alma logo descuidará das almas dos outros.
+</Frase>
+
+<Frase numero={429}>
+  Salvar uma só alma é uma obra maior do que construir mil catedrais.
+</Frase>
+
+</Subtema>
+
+<Subtema titulo="O confessor">
+
+<Frase
+  numero={430}
+  original="Allez vous confesser à la Sainte Vierge ou à un ange. Pourront-ils vous absoudre ? Vous donneront-ils le Corps et le Sang de Notre-Seigneur ? Non. La Sainte Vierge ne peut pas faire descendre son divin Fils dans l'hostie. Deux cents anges ne pourraient pas vous absoudre. Un prêtre, si simple soit-il, le peut — il peut vous dire : « Va en paix, je te pardonne. »"
+  fonte="Catechismo sobre o sacerdócio e a confissão — A. Monnin, Esprit du Curé d'Ars, 1864; B. Nodet, 1958."
+>
+  Ides confessar-vos à Santíssima Virgem ou a um anjo. Poderão eles absolver-vos? Dar-vos-ão o Corpo e o Sangue de Nosso Senhor? Não. A Santíssima Virgem não pode fazer descer o seu divino Filho na hóstia. Duzentos anjos não poderiam absolver-vos. Um sacerdote, por mais simples que seja, pode fazê-lo — pode dizer-vos: "Vai em paz, eu te perdoo".
+</Frase>
+
+<Frase
+  numero={431}
+  original="À quoi vous servirait une maison remplie d'or, si vous n'aviez personne pour vous en ouvrir la porte ? Le prêtre a la clef des trésors célestes : c'est lui qui ouvre la porte."
+  fonte="Catechismo sobre o sacerdócio — A. Monnin, Esprit du Curé d'Ars, 1864; B. Nodet, 1958."
+>
+  De que vos serviria uma casa cheia de ouro, se não tivésseis ninguém para vos abrir a porta? O sacerdote tem a chave dos tesouros celestiais: é ele que abre a porta.
+</Frase>
+
+<Frase
+  numero={432}
+  fonte="Práxis pastoral do Cura d'Ars — recolhida em testemunhos do Processo de Beatificação (1862–1864) e em F. Trochu, 1925."
+>
+  O confessor é o pai do pródigo: deve esperar o filho com os braços abertos, não com a vara na mão.
+</Frase>
+
+<Frase
+  numero={433}
+  fonte="Catechismo sobre a penitência — A. Monnin, Esprit du Curé d'Ars, 1864."
+>
+  No confessionário, o sacerdote é a voz da misericórdia divina: deve falar como Jesus falaria.
+</Frase>
+
+<Frase numero={434}>
+  O confessor deve ser firme contra o pecado e doce com o pecador.
+</Frase>
+
+<Frase numero={435}>
+  Quando um confessor chora pelas almas que confessa, Deus opera maravilhas pelas suas mãos.
+</Frase>
+
+<Frase numero={436}>
+  No confessionário, mais vale uma palavra dita com amor do que mil ditas com dureza.
+</Frase>
+
+<Frase numero={437}>
+  O bom confessor sabe reconhecer no pecador o filho que volta — e o trata como tal.
+</Frase>
+
+<Frase numero={438}>
+  A paciência do confessor é mãe de muitas conversões.
+</Frase>
+
+<Frase numero={439}>
+  No confessionário, o sacerdote deve esquecer-se de si mesmo: existe ali apenas para servir as almas.
+</Frase>
+
+<Frase numero={440}>
+  Quem se senta no confessionário senta-se no tribunal mais doce que existe sobre a terra.
+</Frase>
+
+<Frase numero={441}>
+  O confessor que ama as almas não sente o cansaço das longas horas: o amor a tudo faz suportar.
+</Frase>
+
+<Frase numero={442}>
+  As lágrimas do confessor são preces sem palavras que sobem ao céu pelas almas confiadas.
+</Frase>
+
+<Frase numero={443}>
+  No dia do Juízo, o sacerdote será coroado por cada alma que reconduziu a Deus pela confissão.
+</Frase>
+
+<Frase numero={444}>
+  O confessionário é o trono escondido onde, todos os dias, Deus exerce a Sua misericórdia sobre o mundo.
+</Frase>
+
+<Frase numero={445}>
+  Não há prazer maior para um sacerdote do que ouvir uma boa confissão, e ver uma alma reconciliada com Deus.
+</Frase>
+
+</Subtema>
+
+</Capitulo>
+<Capitulo id="cap-10" numero="X" titulo="As Coisas Últimas" contagem="44 frases">
+
+<Subtema titulo="A morte" aberto primeiro>
+
+<Frase
+  numero={446}
+  original="Quand la mort viendra sur nous, à quoi nous auront servi les trois quarts de notre vie ? À quoi sommes-nous occupés la plupart du temps ? Pensons-nous au bon Dieu, à notre salut, à notre âme ?"
+  fonte="Catecismo de Ars sobre a brevidade da vida — A. Monnin, Esprit du Curé d'Ars, 1864; B. Nodet, 1958."
+>
+  Quando a morte vier sobre nós, de que utilidade terão sido três quartos de nossa vida? Com o que estamos ocupados na maior parte do tempo? Estamos pensando no bom Deus, na nossa salvação, na nossa alma?
+</Frase>
+
+<Frase
+  numero={447}
+  original="La mort du juste est une porte qui s'ouvre sur le ciel ; la mort du pécheur est un abîme qui s'entrouvre."
+  fonte="Catechismo sobre a morte — A. Monnin, Esprit du Curé d'Ars, 1864; Nodet, 1958."
+>
+  A morte do justo é uma porta que se abre para o céu; a morte do pecador é um abismo que se entreabre.
+</Frase>
+
+<Frase
+  numero={448}
+  fonte="Catechismo sobre a morte — A. Monnin, Esprit du Curé d'Ars, 1864."
+>
+  Morre-se como se viveu: a hora da morte é o eco fiel de toda a vida.
+</Frase>
+
+<Frase numero={449}>
+  A morte é o último degrau da vida — quem o sobe bem, entra no céu; quem o sobe mal, cai no abismo.
+</Frase>
+
+<Frase numero={450}>
+  Para o cristão fiel, a morte não é um adeus, mas um até logo.
+</Frase>
+
+<Frase numero={451}>
+  Quem pensa muitas vezes na morte, raramente comete pecado.
+</Frase>
+
+<Frase numero={452}>
+  A boa morte é a recompensa de uma vida bem vivida.
+</Frase>
+
+<Frase numero={453}>
+  Não temais a morte — temei apenas chegar a ela sem estar preparados.
+</Frase>
+
+<Frase numero={454}>
+  Cada dia que passa é um passo a mais em direção à eternidade.
+</Frase>
+
+</Subtema>
+
+<Subtema titulo="O Juízo">
+
+<Frase
+  numero={455}
+  fonte="Catechismo sobre o Juízo — A. Monnin, Esprit du Curé d'Ars, 1864."
+>
+  No dia do Juízo, daremos conta a Deus até de uma palavra ociosa.
+</Frase>
+
+<Frase numero={456}>
+  No instante da morte, toda a vida nos aparecerá num só relance — e nada poderemos mudar.
+</Frase>
+
+<Frase numero={457}>
+  O Juízo será severo para os que viveram sem temor, e doce para os que viveram no amor.
+</Frase>
+
+<Frase numero={458}>
+  Deus nos julgará pelo amor — não pelo que fizemos, mas pelo amor com que o fizemos.
+</Frase>
+
+<Frase numero={459}>
+  Bem-aventurados os que se julgam a si mesmos nesta vida: estes nada terão a temer no Juízo.
+</Frase>
+
+<Frase numero={460}>
+  No tribunal de Deus, não haverá advogados que enganem nem testemunhas falsas — só o coração nu diante d'Ele.
+</Frase>
+
+</Subtema>
+
+<Subtema titulo="O Céu">
+
+<Frase
+  numero={461}
+  original="Au ciel, nous verrons Dieu face à face. Quel bonheur ! Comme nous contemplerons sa beauté pendant toute l'éternité !"
+  fonte="Catechismo sobre o céu — A. Monnin, Esprit du Curé d'Ars, 1864; Nodet, 1958."
+>
+  No céu, veremos a Deus face a face. Que felicidade! Como contemplaremos a Sua beleza por toda a eternidade!
+</Frase>
+
+<Frase
+  numero={462}
+  fonte="Catechismo sobre o céu — A. Monnin, Esprit du Curé d'Ars, 1864."
+>
+  Se conhecêssemos os tesouros que nos esperam no céu, desprezaríamos como nada todos os bens da terra.
+</Frase>
+
+<Frase numero={463}>
+  No céu, todos os sofrimentos desta vida nos parecerão pequenos diante da imensidão da glória.
+</Frase>
+
+<Frase numero={464}>
+  O céu é o nosso verdadeiro lar — esta terra é apenas uma hospedagem de passagem.
+</Frase>
+
+<Frase numero={465}>
+  Os bem-aventurados vivem unicamente do amor — não há fome nem sede, apenas o gozo de Deus.
+</Frase>
+
+<Frase numero={466}>
+  No céu reencontraremos todos aqueles que amamos em Deus, e estaremos com eles eternamente.
+</Frase>
+
+<Frase numero={467}>
+  Que belo será o céu, quando todos os santos cantarão eternamente as misericórdias de Deus!
+</Frase>
+
+<Frase numero={468}>
+  Trabalhar pelo céu é o único trabalho cujo fruto não nos será arrebatado pela morte.
+</Frase>
+
+</Subtema>
+
+<Subtema titulo="O Inferno e o Purgatório">
+
+<Frase
+  numero={469}
+  original="En enfer, le plus grand tourment des damnés, c'est de ne plus jamais pouvoir aimer Dieu, et de savoir qu'ils auraient pu L'aimer."
+  fonte="Catechismo sobre o inferno — A. Monnin, Esprit du Curé d'Ars, 1864; Nodet, 1958."
+>
+  No inferno, o maior tormento dos condenados é nunca mais poder amar a Deus, e saber que poderiam tê-Lo amado.
+</Frase>
+
+<Frase
+  numero={470}
+  fonte="Catechismo sobre as verdades últimas — A. Monnin, Esprit du Curé d'Ars, 1864."
+>
+  O inferno existe — é uma verdade tão certa quanto o céu; e nele estão aqueles que escolheram livremente recusar a Deus.
+</Frase>
+
+<Frase numero={471}>
+  Ninguém vai ao inferno por surpresa — só vai quem persistentemente escolhe ir.
+</Frase>
+
+<Frase numero={472}>
+  O pensamento do inferno deve nos fazer evitar o pecado; o pensamento do céu deve nos fazer praticar o bem.
+</Frase>
+
+<Frase
+  numero={473}
+  fonte="Catechismo sobre o purgatório — A. Monnin, Esprit du Curé d'Ars, 1864."
+>
+  As almas do purgatório sofrem muito, mas estão certas da sua salvação: este pensamento as consola no meio das chamas.
+</Frase>
+
+<Frase numero={474}>
+  Rezai pelas almas do purgatório — elas vos retribuirão mil vezes mais quando estiverem no céu.
+</Frase>
+
+<Frase numero={475}>
+  As almas do purgatório não podem fazer nada por si mesmas; mas nós, vivos, podemos abreviar os seus sofrimentos pela oração e pelos sacrifícios.
+</Frase>
+
+<Frase numero={476}>
+  Uma só Missa oferecida pelas almas do purgatório vale mais do que todas as orações que pudéssemos fazer durante a vida inteira.
+</Frase>
+
+<Frase numero={477}>
+  As almas do purgatório nos amam — não esqueçamos delas, pois um dia poderemos precisar das suas orações.
+</Frase>
+
+<Frase numero={478}>
+  Se pensássemos mais nas penas do purgatório, sofreríamos com paciência todas as cruzes desta vida.
+</Frase>
+
+</Subtema>
+
+<Subtema titulo="Os Anjos e os Santos">
+
+<Frase
+  numero={479}
+  fonte="Catechismo sobre os Anjos — A. Monnin, Esprit du Curé d'Ars, 1864."
+>
+  O nosso Anjo da Guarda é o nosso melhor amigo: nunca nos deixa, nem mesmo no momento da morte.
+</Frase>
+
+<Frase numero={480}>
+  Saudai vosso Anjo da Guarda todas as manhãs e pedi-lhe que vos acompanhe ao longo do dia.
+</Frase>
+
+<Frase numero={481}>
+  Os anjos nos veem, nos protegem, e levam ao trono de Deus cada uma das nossas boas obras.
+</Frase>
+
+<Frase numero={482}>
+  Se víssemos o nosso Anjo da Guarda na sua beleza, ficaríamos como mortos de espanto e de alegria.
+</Frase>
+
+<Frase
+  numero={483}
+  fonte="Catechismo sobre os Santos — A. Monnin, Esprit du Curé d'Ars, 1864."
+>
+  Os santos não nasceram santos: tornaram-se santos porque o quiseram, com a graça de Deus.
+</Frase>
+
+<Frase numero={484}>
+  Os santos são os nossos modelos no caminho do céu: imitemo-los, e chegaremos onde eles chegaram.
+</Frase>
+
+<Frase numero={485}>
+  O que os santos fizeram, podemos fazer também — porque o mesmo Deus que os ajudou nos ajudará.
+</Frase>
+
+<Frase numero={486}>
+  A comunhão dos santos é o tesouro escondido da Igreja: nela, todos os fiéis estão unidos no mesmo Coração de Cristo.
+</Frase>
+
+<Frase numero={487}>
+  Os santos do céu rezam por nós — não os esqueçamos, e eles não nos esquecerão.
+</Frase>
+
+<Frase numero={488}>
+  Há um lugar no céu reservado para cada um de nós; mas é preciso conquistá-lo nesta vida.
+</Frase>
+
+<Frase numero={489}>
+  Caminhemos com fé, com esperança e com amor — e um dia entraremos no céu, para nunca mais sair dele.
+</Frase>
+
+</Subtema>
+
+</Capitulo>
+</Antologia>

@@ -1,0 +1,439 @@
+/* ═══════════════════════════════════════════════
+   DEVOCIONÁRIO DE SÃO GABRIEL ARCANJO
+   Estética de missal: moldura azul-marinho + papel
+   ═══════════════════════════════════════════════ */
+
+/* 
+   PALETA:
+   #1c2f4f  — azul-noite (moldura, títulos)
+   #2f4a75  — azul-índigo
+   #4a6590  — azul-lápis
+   #5a7ba8  — azul-mariano
+   #8ba0c0  — azul-poeira
+   #c9b876  — dourado envelhecido (ornamento)
+   #a89358  — dourado escuro
+   #fbfaf5  — papel creme (fundo da oração)
+   #f5f2e8  — papel envelhecido
+   #e8e1cc  — bege ornamental
+   #2a2418  — texto sobre papel
+*/
+
+/* ─── BLOCO DE ORAÇÃO — página de missal ─── */
+
+.oracao {
+  margin: 3.5rem 0;
+  padding: 1.25rem;
+  background: #1c2f4f;
+  border-radius: 2px;
+  scroll-margin-top: 2rem;
+  box-shadow: 
+    0 1px 3px rgba(28, 47, 79, 0.2),
+    0 8px 24px rgba(28, 47, 79, 0.1);
+  position: relative;
+}
+
+/* Moldura interna (linha dupla dourada) */
+.oracao::before {
+  content: '';
+  position: absolute;
+  inset: 8px;
+  border: 1px solid #c9b876;
+  border-radius: 1px;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.oracao::after {
+  content: '';
+  position: absolute;
+  inset: 12px;
+  border: 1px solid rgba(201, 184, 118, 0.35);
+  border-radius: 1px;
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Header sobre o fundo azul-marinho */
+.oracaoHeader {
+  position: relative;
+  z-index: 2;
+  padding: 1.5rem 1.5rem 1.25rem;
+  text-align: center;
+  border-bottom: none;
+}
+
+.oracaoCruz {
+  font-size: 1.5rem;
+  color: #c9b876;
+  line-height: 1;
+  margin-bottom: 0.75rem;
+  letter-spacing: 0.5rem;
+}
+
+.oracaoCruz::before {
+  content: '❦ ';
+  opacity: 0.6;
+}
+
+.oracaoCruz::after {
+  content: ' ❦';
+  opacity: 0.6;
+}
+
+.oracaoTitulo {
+  font-family: var(--font-serif, Georgia, serif);
+  font-size: 1.75rem;
+  font-weight: 400;
+  color: #fbfaf5;
+  margin: 0 0 0.4rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.oracaoSubtitulo {
+  font-size: 0.85rem;
+  color: #c9b876;
+  margin: 0;
+  font-style: italic;
+  letter-spacing: 0.02em;
+}
+
+/* Papel interno onde a oração vive */
+.oracaoCorpoWrap {
+  position: relative;
+  z-index: 2;
+  margin: 0;
+  background: #fbfaf5;
+  border-radius: 1px;
+  padding: 2rem 2.25rem 1.75rem;
+  border-top: 3px double #c9b876;
+}
+
+/* ─── Instrução (como rezar) — no papel ─── */
+
+.oracaoInstrucao {
+  margin: -0.5rem 0 2rem;
+  padding: 1rem 1.25rem;
+  background: #f5f2e8;
+  border-left: 3px solid #a89358;
+  border-radius: 1px;
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: #4a3e28;
+}
+
+.oracaoInstrucao p {
+  margin: 0;
+}
+
+.instrucaoLabel {
+  display: block;
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: #a89358;
+  margin-bottom: 0.5rem;
+}
+
+/* ─── Texto da oração — no papel ─── */
+
+.oracaoTexto {
+  font-family: var(--font-serif, Georgia, 'Times New Roman', serif);
+  font-size: 1.15rem;
+  line-height: 1.95;
+  color: #2a2418;
+  padding: 0.5rem 0;
+}
+
+.oracaoTexto p {
+  margin: 0 0 1.25rem;
+}
+
+.oracaoTexto p:last-child {
+  margin-bottom: 0;
+}
+
+.oracaoTexto em {
+  font-style: italic;
+  color: #4a3e28;
+}
+
+.oracaoTexto strong {
+  font-weight: 600;
+  color: #1c2f4f;
+}
+
+/* ─── Footer da oração — no papel ─── */
+
+.oracaoFooter {
+  margin-top: 2rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid #e8e1cc;
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+}
+
+.btnCopiar {
+  align-self: flex-start;
+  padding: 0.55rem 1.35rem;
+  font-family: var(--font-sans, system-ui, sans-serif);
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #1c2f4f;
+  background: transparent;
+  border: 1px solid #1c2f4f;
+  border-radius: 2px;
+  cursor: pointer;
+  transition: all 0.2s;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.btnCopiar:hover {
+  background: #1c2f4f;
+  color: #fbfaf5;
+}
+
+.btnCopiado {
+  color: #fbfaf5;
+  border-color: #2e7a5a;
+  background: #2e7a5a;
+}
+
+.oracaoLatim {
+  margin: 0;
+}
+
+.oracaoLatim summary {
+  cursor: pointer;
+  font-size: 0.8rem;
+  color: #4a6590;
+  list-style: none;
+  user-select: none;
+  padding: 0.25rem 0;
+  font-style: italic;
+}
+
+.oracaoLatim summary::before {
+  content: '▸ ';
+  display: inline-block;
+}
+
+.oracaoLatim[open] summary::before {
+  content: '▾ ';
+}
+
+.oracaoLatim p {
+  font-size: 0.95rem;
+  line-height: 1.8;
+  color: #2f4a75;
+  font-style: italic;
+  margin: 0.75rem 0 0;
+  padding: 1rem 1.25rem;
+  background: #f5f2e8;
+  border-left: 2px solid #a89358;
+  border-radius: 1px;
+}
+
+.oracaoFonte {
+  font-size: 0.75rem;
+  color: #8a7a58;
+  font-style: italic;
+  margin: 0;
+  padding-top: 0.5rem;
+  border-top: 1px dashed #e8e1cc;
+}
+
+/* ─── Contexto histórico (colapsável) ─── */
+
+.contexto {
+  margin: 1.75rem 0;
+}
+
+.contextoSummary {
+  cursor: pointer;
+  display: flex;
+  align-items: baseline;
+  gap: 0.75rem;
+  padding: 0.85rem 1.15rem;
+  background: #fbfaf5;
+  border: 1px solid #d8d0b8;
+  border-left: 3px solid #4a6590;
+  border-radius: 2px;
+  list-style: none;
+  user-select: none;
+  transition: background 0.15s;
+}
+
+.contextoSummary:hover {
+  background: #f5f2e8;
+}
+
+.contextoSummary::before {
+  content: '▸';
+  color: #4a6590;
+  font-size: 0.85rem;
+  transition: transform 0.2s;
+}
+
+.contexto[open] .contextoSummary::before {
+  content: '▾';
+}
+
+.contextoLabel {
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: #4a6590;
+}
+
+.contextoTituloInner {
+  font-size: 0.9rem;
+  color: #2a2418;
+  font-style: italic;
+}
+
+.contextoCorpo {
+  padding: 1.5rem 1.75rem;
+  font-size: 0.95rem;
+  line-height: 1.75;
+  color: #3a3220;
+  background: #fbfaf5;
+  border: 1px solid #e8e1cc;
+  border-top: none;
+  border-radius: 0 0 2px 2px;
+  margin-top: -1px;
+}
+
+.contextoCorpo p {
+  margin: 0 0 1rem;
+}
+
+.contextoCorpo p:last-child {
+  margin-bottom: 0;
+}
+
+/* ─── Alerta devocional ─── */
+
+.alerta {
+  display: flex;
+  gap: 1.15rem;
+  margin: 3rem 0;
+  padding: 1.75rem 2rem;
+  background: #fbfaf5;
+  border: 1px solid #d8d0b8;
+  border-left: 4px solid #a89358;
+  border-radius: 2px;
+}
+
+.alertaIcone {
+  font-size: 1.5rem;
+  line-height: 1;
+  flex-shrink: 0;
+  color: #a89358;
+}
+
+.alertaTitulo {
+  font-family: var(--font-sans, system-ui, sans-serif);
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #6a4a10;
+  margin: 0 0 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+}
+
+.alertaCorpo {
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: #3a3220;
+}
+
+.alertaCorpo p {
+  margin: 0 0 0.75rem;
+}
+
+.alertaCorpo p:last-child {
+  margin-bottom: 0;
+}
+
+.alertaCorpo strong {
+  color: #1c2f4f;
+}
+
+/* ─── Como Rezar (componente separado, se usado) ─── */
+
+.comoRezar {
+  margin: 2rem 0;
+  padding: 1.5rem 1.75rem;
+  background: #f5f2e8;
+  border: 1px dashed #a89358;
+  border-radius: 2px;
+}
+
+.comoRezarTitulo {
+  font-family: var(--font-sans, system-ui, sans-serif);
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: #a89358;
+  margin: 0 0 1rem;
+}
+
+.comoRezarCorpo {
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: #3a3220;
+}
+
+.comoRezarCorpo ol {
+  padding-left: 1.5rem;
+  margin: 0;
+}
+
+.comoRezarCorpo li {
+  margin-bottom: 0.5rem;
+}
+
+/* ─── Responsivo ─── */
+
+@media (max-width: 640px) {
+  .oracao {
+    padding: 0.75rem;
+  }
+
+  .oracao::before {
+    inset: 5px;
+  }
+
+  .oracao::after {
+    inset: 8px;
+  }
+
+  .oracaoHeader {
+    padding: 1.25rem 0.75rem 1rem;
+  }
+
+  .oracaoTitulo {
+    font-size: 1.35rem;
+    letter-spacing: 0.04em;
+  }
+
+  .oracaoCorpoWrap {
+    margin: 0;
+    padding: 1.5rem;
+  }
+
+  .oracaoTexto {
+    font-size: 1.05rem;
+  }
+
+  .alerta {
+    flex-direction: column;
+    padding: 1.5rem;
+  }
+}
