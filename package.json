@@ -7,11 +7,9 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-
     "index-estudos": "node scripts/index-estudos.mjs",
     "generate:santos": "tsx scripts/generate-santos-manifest.mts",
     "generate:all": "npm run index-estudos && npm run generate:santos",
-
     "predev": "npm run generate:all",
     "prebuild": "npm run generate:all"
   },
