@@ -21,7 +21,7 @@ export default function RegistrarHistorico({
       url: '/biblioteca/cirilo-jerusalem',
       ultimoCapitulo,
       categoria: 'Patrística Grega',
-      corTema: '#5b2c83',
+      corTema: 'roxo',
       progresso,
     });
   }, [ultimoCapitulo, progresso]);

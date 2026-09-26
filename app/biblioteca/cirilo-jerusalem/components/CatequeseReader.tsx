@@ -50,7 +50,7 @@ const BOOK_META = {
   autor: 'São Cirilo de Jerusalém',
   capa: '/biblioteca/cirilo-jerusalem/capa.webp',
   categoria: 'Patrística Grega',
-  corTema: '#5b2c83' as const,
+  corTema: 'roxo' as const,
 };
 
 const tipoBadgeStyle: Record<TipoCatequese, React.CSSProperties> = {

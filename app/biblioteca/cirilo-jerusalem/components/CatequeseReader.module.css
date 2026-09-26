@@ -265,79 +265,224 @@
   line-height: 1.5;
 }
 
-.landingTocList {
-  list-style: none;
-  padding: 0;
-  margin: 0;
+/* ---------- Landing / Dossiê horizontal ---------- */
+
+.landingContainer {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 40px 24px 80px;
 }
 
-.landingTocList li {
-  border-bottom: 1px solid var(--line-soft);
-}
-.landingTocList li:last-child {
-  border-bottom: none;
+.topNav {
+  margin-bottom: 40px;
 }
 
-.landingTocList a {
-  display: grid;
-  grid-template-columns: 44px 1fr;
-  gap: 16px;
-  align-items: baseline;
-  padding: 20px 4px;
+.backButton {
+  color: #666;
   text-decoration: none;
-  color: inherit;
-  transition: padding 0.25s ease, color 0.25s ease;
-  position: relative;
-}
-.landingTocList a::before {
-  content: '';
-  position: absolute;
-  left: 0;
-  top: 50%;
-  width: 0;
-  height: 1px;
-  background: var(--purple);
-  transition: width 0.3s ease;
-  transform: translateY(-50%);
-}
-.landingTocList a:hover {
-  padding-left: 16px;
-  outline: none;
-}
-.landingTocList a:hover::before {
-  width: 8px;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.9rem;
+  transition: color 0.2s ease;
 }
 
-.landingTocNumber {
-  font-family: var(--font-display);
-  font-size: 0.85rem;
-  color: var(--ink-4);
-  letter-spacing: 0.14em;
-  text-align: left;
-  font-weight: 400;
+.backButton:hover {
+  color: #5b2c83;
 }
 
-.landingTocTitle {
-  display: block;
-  font-family: var(--font-serif);
-  font-size: 1.15rem;
-  color: var(--ink);
-  font-weight: 500;
-  line-height: 1.3;
-  transition: color 0.25s ease;
-}
-.landingTocList a:hover .landingTocTitle {
-  color: var(--purple);
+.headerObra {
+  text-align: center;
+  margin-bottom: 60px;
 }
 
-.landingTocSubtitle {
-  display: block;
-  font-family: var(--font-italic);
+.badgeObra {
+  display: inline-block;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: #8b6508;
+  margin-bottom: 16px;
+}
+
+.tituloObra {
+  font-family: 'Cinzel', Georgia, serif;
+  font-size: 2.5rem;
+  color: #2c2c2c;
+  margin: 0 0 12px;
+  line-height: 1.2;
+}
+
+.autorObra {
+  font-family: Georgia, serif;
+  font-size: 1.2rem;
+  color: #555;
   font-style: italic;
-  font-size: 0.88rem;
-  color: var(--ink-3);
-  line-height: 1.5;
-  margin-top: 4px;
+  margin-bottom: 24px;
+}
+
+.descricaoObra {
+  font-family: Georgia, serif;
+  font-size: 1.05rem;
+  color: #38302c;
+  line-height: 1.6;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.secaoObras {
+  max-width: 900px;
+  margin: 0 auto 40px;
+}
+
+.secaoTitulo {
+  font-family: 'Cinzel', Georgia, serif;
+  font-size: 1.3rem;
+  color: #5b2c83;
+  margin: 0 0 20px;
+  padding-bottom: 8px;
+  border-bottom: 2px solid #e2d9ec;
+}
+
+.obrasGrid {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  margin-top: 32px;
+}
+
+.cardObra {
+  display: flex;
+  flex-direction: row;
+  background-color: #faf8f4;
+  border: 1px solid #e2d9ec;
+  border-radius: 8px;
+  overflow: hidden;
+  text-decoration: none;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+}
+
+.cardObra:hover {
+  transform: translateX(4px);
+  box-shadow: 0 10px 24px rgba(91, 44, 131, 0.12);
+  border-color: #c5a059;
+}
+
+.capaContainer {
+  flex: 0 0 210px;
+  position: relative;
+  background: linear-gradient(135deg, #f4effa, #e6dfed);
+  border-right: 1px solid #e6dfed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.imagemCapaHorizontal {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.5s ease;
+}
+
+.cardObra:hover .imagemCapaHorizontal {
+  transform: scale(1.04);
+}
+
+.cardObraConteudo {
+  flex: 1;
+  padding: 28px 32px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.cardHeaderArea {
+  margin-bottom: 12px;
+}
+
+.cardObraTitulo {
+  font-family: 'Cinzel', Georgia, serif;
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #4a2269;
+  margin: 0 0 4px 0;
+  line-height: 1.3;
+}
+
+.tituloLatim {
+  font-family: Georgia, serif;
+  font-size: 0.9rem;
+  font-style: italic;
+  color: #8b6508;
+  display: block;
+}
+
+.cardObraDescricao {
+  font-family: Georgia, serif;
+  font-size: 0.98rem;
+  color: #444444;
+  line-height: 1.65;
+  margin: 12px 0 20px 0;
+}
+
+.cardObraFooter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid #e6dfed;
+  padding-top: 16px;
+}
+
+.capitulosBadge {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.82rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #666666;
+  background: #f0e9f5;
+  padding: 4px 12px;
+  border-radius: 4px;
+}
+
+.lerAgoraBtn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: 'Cinzel', Georgia, serif;
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #8b6508;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.lerAgoraBtn span {
+  transition: transform 0.3s ease;
+}
+
+.cardObra:hover .lerAgoraBtn {
+  color: #5b2c83;
+}
+
+.cardObra:hover .lerAgoraBtn span {
+  transform: translateX(5px);
+}
+
+@media (max-width: 680px) {
+  .cardObra {
+    flex-direction: column;
+  }
+  .capaContainer {
+    flex: none;
+    width: 100%;
+    height: 220px;
+    border-right: none;
+    border-bottom: 1px solid #e6dfed;
+  }
 }
 
 /* =============================================================

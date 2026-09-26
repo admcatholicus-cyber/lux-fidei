@@ -85,7 +85,30 @@ export const bookMeta = {
   yearWritten: 'c. 348–350 d.C.',
   category: 'Patrística Grega — Catequese Batismal',
   translationNote: 'Tradução em domínio público, baseada na edição NPNF vol. VII (Philip Schaff) e conferida com PG 33.',
-  description: 'Ciclo completo de 24 catequeses proferidas por São Cirilo aos catecúmenos de Jerusalém: 18 pré-batismais (durante a Quaresma) e 6 mistagógicas (na semana pós-Páscoa), que explicam os sacramentos da iniciação cristã.',
+  description: 'Ciclo completo de 24 catequeses proferidas por São Cirilo aos catecúmenos de Jerusalém: a procatequese e 18 catequeses pré-batismais (durante a Quaresma) e 5 mistagógicas (na semana pós-Páscoa), que explicam os sacramentos da iniciação cristã.',
   capa: '/biblioteca/cirilo-jerusalem/capa.webp',
   corTema: '#5b2c83',
 } as const;
+
+export const colecoesCirilo = [
+  {
+    slug: 'pre-batismais',
+    titulo: 'Catequeses Pré-Batismais',
+    tituloLatim: 'Catecheses Illuminandorum',
+    descricao:
+      'A procatequese e as 18 catequeses proferidas durante a Quaresma aos catecúmenos (os iluminandos) que se preparavam para receber o Batismo na Vigília Pascal, explicando o Credo e a fé nicena.',
+    capa: '/biblioteca/cards/sao-cirilo-jerusalem/capa-catequeses-pre-batismais.webp',
+    capitulosCount: 19, // Procatequese + 18
+    rota: `/biblioteca/cirilo-jerusalem/${catequese01.slug}`,
+  },
+  {
+    slug: 'mistagogicas',
+    titulo: 'Catequeses Mistagógicas',
+    tituloLatim: 'Catecheses Mystagogicae',
+    descricao:
+      'As 5 catequeses proferidas na semana da oitava de Páscoa aos recém-batizados (neófitos), explicando os mistérios sagrados do Batismo, da Crisma e da Eucaristia.',
+    capa: '/biblioteca/cards/sao-cirilo-jerusalem/capa-catequeses-mistagogicas.webp',
+    capitulosCount: 5,
+    rota: `/biblioteca/cirilo-jerusalem/${catequese20.slug}`,
+  },
+];

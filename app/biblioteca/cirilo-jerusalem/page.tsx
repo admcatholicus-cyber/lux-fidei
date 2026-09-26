@@ -1,7 +1,8 @@
-import Link from "next/link";
 import type { Metadata } from "next";
-import { catequeses, bookMeta } from "./data/catequeses";
-import styles from "./cirilo-landing.module.css";
+import Image from "next/image";
+import Link from "next/link";
+import { bookMeta, colecoesCirilo } from "./data/catequeses";
+import styles from "./components/CatequeseReader.module.css";
 
 export const metadata: Metadata = {
   title: `${bookMeta.title} | ${bookMeta.authorShort}`,
@@ -9,9 +10,6 @@ export const metadata: Metadata = {
 };
 
 export default function CiriloJerusalemPage() {
-  const preBatismais = catequeses.filter((c) => c.tipo === "pre-batismal");
-  const mistagogicas = catequeses.filter((c) => c.tipo === "mistagogica");
-
   return (
     <main className={styles.landingContainer}>
       <nav className={styles.topNav}>
@@ -24,61 +22,49 @@ export default function CiriloJerusalemPage() {
         <span className={styles.badgeObra}>
           Biblioteca Patrística · Século IV
         </span>
-        <h1 className={styles.tituloObra}>{bookMeta.title}</h1>
-        <p className={styles.autorObra}>{bookMeta.author}</p>
+        <h1 className={styles.tituloObra}>{bookMeta.author}</h1>
+        <p className={styles.autorObra}>{bookMeta.title}</p>
         <p className={styles.descricaoObra}>{bookMeta.description}</p>
       </header>
 
-      <section className={styles.secaoCatequeses}>
-        <div className={styles.secaoHeader}>
-          <h2>Catequeses Pré-Batismais</h2>
-          <p>
-            Proferidas durante a Quaresma aos catecúmenos que se preparavam para
-            receber o Batismo na Vigília Pascal.
-          </p>
-        </div>
-        <div className={styles.gridCapitulos}>
-          {preBatismais.map((c) => (
-            <Link
-              key={c.slug}
-              href={`/biblioteca/cirilo-jerusalem/${c.slug}`}
-              className={styles.cardCapitulo}
-            >
-              <span className={styles.numeroCapitulo}>
-                Catequese {c.number}
-              </span>
-              <h3 className={styles.tituloCapitulo}>{c.titulo}</h3>
-              {c.subtitulo && (
-                <p className={styles.subtituloCapitulo}>{c.subtitulo}</p>
-              )}
-            </Link>
-          ))}
-        </div>
-      </section>
-
-      <section className={styles.secaoCatequeses}>
-        <div className={styles.secaoHeader}>
-          <h2>Catequeses Mistagógicas</h2>
-          <p>
-            Proferidas na semana da oitava de Páscoa aos neófitos, explicando os
-            mistérios do Batismo, Crisma e Eucaristia.
-          </p>
-        </div>
-        <div className={styles.gridCapitulos}>
-          {mistagogicas.map((c) => (
-            <Link
-              key={c.slug}
-              href={`/biblioteca/cirilo-jerusalem/${c.slug}`}
-              className={styles.cardCapitulo}
-            >
-              <span className={styles.numeroCapitulo}>
-                Mistagógica {c.number}
-              </span>
-              <h3 className={styles.tituloCapitulo}>{c.titulo}</h3>
-              {c.subtitulo && (
-                <p className={styles.subtituloCapitulo}>{c.subtitulo}</p>
-              )}
-            </Link>
+      <section className={styles.secaoObras}>
+        <h2 className={styles.secaoTitulo}>Obras disponíveis</h2>
+        <div className={styles.obrasGrid}>
+          {colecoesCirilo.map((colecao) => (
+            <div key={colecao.slug} className={styles.cardObra}>
+              <div className={styles.capaContainer}>
+                <Image
+                  src={colecao.capa}
+                  alt={`Capa de ${colecao.titulo}`}
+                  width={300}
+                  height={420}
+                  className={styles.imagemCapaHorizontal}
+                />
+              </div>
+              <div className={styles.cardObraConteudo}>
+                <div>
+                  <div className={styles.cardHeaderArea}>
+                    <h3 className={styles.cardObraTitulo}>{colecao.titulo}</h3>
+                    {colecao.tituloLatim && (
+                      <span className={styles.tituloLatim}>
+                        {colecao.tituloLatim}
+                      </span>
+                    )}
+                  </div>
+                  <p className={styles.cardObraDescricao}>
+                    {colecao.descricao}
+                  </p>
+                </div>
+                <div className={styles.cardObraFooter}>
+                  <span className={styles.capitulosBadge}>
+                    {colecao.capitulosCount} catequeses
+                  </span>
+                  <Link href={colecao.rota} className={styles.lerAgoraBtn}>
+                    Acessar Obra <span>&rarr;</span>
+                  </Link>
+                </div>
+              </div>
+            </div>
           ))}
         </div>
       </section>
