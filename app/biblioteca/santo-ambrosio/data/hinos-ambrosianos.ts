@@ -24,7 +24,7 @@ export const hinosAmbrosianosData: CapituloAmbrosio[] = [
       tradutor: "Projeto Lux Fidei",
     },
     notasCriticas: [
-      "J. Fontaine, Ambroise de Milan: Hymnes (1992), hino I; PL 16, cols. 1409–1410 (8 estrofes, 32 versos).",
+      "J. Fontaine, Ambroise de Milan: Hymnes (1992), hino I; PL 16, cols. 1409–1410 (8 estrofes de conteúdo, 32 versos).",
     ],
     notasEditoriais: ["Uso litúrgico: Laudes dominicais."],
     fonte: {
@@ -121,7 +121,7 @@ export const hinosAmbrosianosData: CapituloAmbrosio[] = [
       tradutor: "Projeto Lux Fidei",
     },
     notasCriticas: [
-      "J. Fontaine, Ambroise de Milan: Hymnes (1992), hino V (recensão crítica integral de 8 estrofes de conteúdo + doxologia).",
+      "J. Fontaine, Ambroise de Milan: Hymnes (1992), hino V (recensão crítica integral de 8 estrofes de conteúdo + doxologia, incluindo a estrofe inicial Intende qui regis Israel e Egressus eius a Patre).",
     ],
     notasEditoriais: ["Uso litúrgico: Vésperas do Natal / Ofício do Advento."],
     fonte: {
@@ -159,7 +159,7 @@ export const hinosAmbrosianosData: CapituloAmbrosio[] = [
     fonte: {
       primaria: "J. Fontaine (1992), hino V / Patrologia Latina 16.",
     },
-    autenticidade: "tradicional",
+    autenticidade: "autêntica",
     temas: ["Laudes", "luz", "Trindade", "santificação", "sobriedade"],
   },
   {
@@ -173,19 +173,19 @@ export const hinosAmbrosianosData: CapituloAmbrosio[] = [
       aproximada: true,
     },
     contextoHistorico:
-      "J. Fontaine (1992), hino VI. Celebra São João Evangelista em 8 estrofes autênticas de 32 versos + doxologia (pescador de almas, o anzol nas profundezas, visão no peito do Senhor, o Prólogo joanino, fidelidade na cruz, martírio voluntário no óleo e vitória celeste).",
+      "J. Fontaine (1992), hino VI. Celebra São João Evangelista em 8 estrofes autênticas de conteúdo + doxologia (pescador de almas, o anzol nas profundezas, visão no peito do Senhor, o Prólogo joanino, a criação pelo Verbo, fidelidade na cruz, martírio voluntário no óleo e vitória celeste).",
     original: {
       idioma: "latim",
       texto:
-        "Amore Christi nobilis\net filius tonitrui,\narcana Iohannes Dei\nfatu revelavit sacro.\n\nCaptis solebat piscibus\npatris senectam pascere;\nturbante dum natat salo,\nimmobilis fide stetit.\n\nHamum profundo merserat,\nverbum Dei quaerens fide;\npiscis bonus pia est fides\nquam de profundo sustulit.\n\nIn pectore recumbens Domini\nsapientiae e fonte hausit,\nverbi perennis claritas\nterrarum inluminat plagas.\n\nIn principio erat Verbum,\net Verbum erat apud Deum,\net Deus erat Verbum:\nsic deitatem edocet.\n\nOmnia per ipsum facta sunt\net sine ipso factum est nihil;\nhic lumen ortum saeculo\ncaecis ocellis reddidit.\n\nCommune multis passio,\ncruci fidelis adstitit;\nmatrem recepit virginem,\ncustos pudoris intemeratus.\n\nVinctus tamen ab impiis,\ntestis fidelis sanguine,\nolei lebetem vicit,\nmartyr voluntate est potens.\n\nDeo Patri sit gloria,\neiusque soli Filio,\ncum Spiritu Paraclito,\net nunc et in perpetuum. Amen.",
+        "Amore Christi nobilis\net filius tonitrui,\narcana Iohannes Dei\nfatu revelavit sacro.\n\nCaptis solebat piscibus\npatris senectam pascere;\nturbante dum natat salo,\nimmobilis fide stetit.\n\nHamum profundo merserat,\nverbum Dei quaerens fide;\npiscis bonus pia est fides\nquam de profundo sustulit.\n\nPiscatus est Verbum Dei;\niactavit undis retia,\nvitam levavit hominum\naltis de profunditatibus.\n\nIn pectore recumbens Domini\nsapientiae e fonte hausit,\nverbi perennis claritas\nterrarum inluminat plagas.\n\nIn principio erat Verbum,\net Verbum erat apud Deum,\net Deus erat Verbum:\nsic deitatem edocet.\n\nCommune multis passio,\ncruci fidelis adstitit;\nmatrem recepit virginem,\ncustos pudoris intemeratus.\n\nVinctus tamen ab impiis,\ntestis fidelis sanguine,\nolei lebetem vicit,\nmartyr voluntate est potens.\n\nDeo Patri sit gloria,\neiusque soli Filio,\ncum Spiritu Paraclito,\net nunc et in perpetuum. Amen.",
     },
     portugues: {
       texto:
-        "Nobre pelo amor de Cristo\ne filho do trovão,\nJoão revelou os segredos de Deus\ncom sua palavra sagrada.\n\nCom os peixes capturados\nsustentava a velhice do pai;\nenquanto flutua no mar agitado,\npermaneceu imóvel na fé.\n\nLançara o anzol ao profundo,\nbuscando o Verbo de Deus pela fé;\no bom peixe é a piedosa fé\nque ele tirou das profundezas.\n\nReclinado no peito do Senhor,\nhauriu da fonte da sabedoria;\na claridade do Verbo eterno\nilumina as regiões da terra.\n\nNo princípio era o Verbo,\ne o Verbo estava junto de Deus,\ne o Verbo era Deus:\nassim nos ensina a divindade.\n\nTodas as coisas foram feitas por ele\ne sem ele nada foi feito;\neste, como luz ortiva ao mundo,\ndevolveu a visão aos olhos cegos.\n\nComum a muitos o sofrimento,\njunto à cruz esteve fiel;\nrecebeu a Mãe virgem,\nguardião do pudor intocado.\n\nAcorrentado contudo pelos ímpios,\ntestemunha fiel pelo sangue,\nvenceu o caldeirão de óleo,\nmártir poderoso pela vontade.\n\nAo Deus Pai seja a glória,\ne ao seu único Filho,\ncom o Espírito Paráclito,\nagora e por todo o sempre. Amém.",
+        "Nobre pelo amor de Cristo\ne filho do trovão,\nJoão revelou os segredos de Deus\ncom sua palavra sagrada.\n\nCom os peixes capturados\nsustentava a velhice do pai;\nenquanto flutua no mar agitado,\npermaneceu imóvel na fé.\n\nLançara o anzol ao profundo,\nbuscando o Verbo de Deus pela fé;\no bom peixe é a piedosa fé\nque ele tirou das profundezas.\n\nPescou o Verbo de Deus;\nlançou as redes nas ondas,\nelevou a vida dos homens\ndas altas profundezas.\n\nReclinado no peito do Senhor,\nhauriu da fonte da sabedoria;\na claridade do Verbo eterno\nilumina as regiões da terra.\n\nNo princípio era o Verbo,\ne o Verbo estava junto de Deus,\ne o Verbo era Deus:\nassim nos ensina a divindade.\n\nComum a muitos o sofrimento,\njunto à cruz esteve fiel;\nrecebeu a Mãe virgem,\nguardião do pudor intocado.\n\nAcorrentado contudo pelos ímpios,\ntestemunha fiel pelo sangue,\nvenceu o caldeirão de óleo,\nmártir poderoso pela vontade.\n\nAo Deus Pai seja a glória,\ne ao seu único Filho,\ncom o Espírito Paráclito,\nagora e por todo o sempre. Amém.",
       tradutor: "Projeto Lux Fidei",
     },
     notasCriticas: [
-      "J. Fontaine, Ambroise de Milan: Hymnes (1992), hino VI (8 estrofes integrais de 32 versos + doxologia, incluindo Captis solebat, Hamum profundo, Omnia per ipsum e Vinctus tamen ab impiis).",
+      "J. Fontaine, Ambroise de Milan: Hymnes (1992), hino VI (8 estrofes integrais de conteúdo [32 versos] + doxologia [4 versos], totalizando 9 estrofes / 36 versos, incluindo Captis solebat, Hamum profundo, Piscatus est Verbum e Vinctus tamen ab impiis).",
     ],
     notasEditoriais: [
       "Uso litúrgico: Festa de São João Evangelista (27 de dezembro).",
@@ -258,7 +258,7 @@ export const hinosAmbrosianosData: CapituloAmbrosio[] = [
       primaria:
         "Patrologia Latina 16, Hymnus V / J. Fontaine (1992), hino VII.",
     },
-    autenticidade: "tradicional",
+    autenticidade: "autêntica",
     temas: [
       "Epifania",
       "Batismo do Senhor",
@@ -296,7 +296,7 @@ export const hinosAmbrosianosData: CapituloAmbrosio[] = [
     fonte: {
       primaria: "J. Fontaine, Ambroise de Milan: Hymnes (1992), hino VIII.",
     },
-    autenticidade: "tradicional",
+    autenticidade: "autêntica",
     temas: ["Santa Inês", "martírio", "virgindade", "pudor", "fé"],
   },
   {
@@ -310,19 +310,19 @@ export const hinosAmbrosianosData: CapituloAmbrosio[] = [
       aproximada: true,
     },
     contextoHistorico:
-      "Corpus crítico de Jacques Fontaine (1992), hino IX. Celebra em 8 estrofes autênticas de 32 versos + doxologia a vitória de Cristo sobre a morte, o bom ladrão e a redenção pascal.",
+      "Corpus crítico de Jacques Fontaine (1992), hino IX. Celebra em 8 estrofes autênticas de conteúdo + doxologia (36 versos no total) a vitória de Cristo sobre a morte, a fé restituída aos perdidos, o bom ladrão e a redenção pascal.",
     original: {
       idioma: "latim",
       texto:
-        "Hic est dies verus Dei,\nsancto serenus lumine,\nquo diluit sanguis sacer\nprobrosa mundi crimina.\n\nFidem refundit perditis,\ncaecosque visu illuminans;\nquem non gravi solvit metu\nlatronis absolutio?\n\nQui praemio mutans crucem,\npraedo crucis fit credulus;\nparvis reclusit ianuis\ncaeli beata gaudia.\n\nOpus stupent et angeli\npoenam levantes criminis;\nstupetque carnifex vigil\nregnare carne hominem.\n\nMysterium mirabile,\nquo vita mortis victima\ndevicta reddit corpora\nmortisque vinclis liberat.\n\nQuid hoc potest sublimius,\nut culpa quaerat gratiam,\nmetumque solvat caritas\nmors et resurgat vita?\n\nHamum sibi mors devoret,\nsuis perit spiculis,\ndum vita mortis victima\ndevicta reddit corpora.\n\nCum mors per omnes transeat,\nomnes resurgant mortui;\nconsumpta mors ictu suo,\nperisse se solam gemit.\n\nDeo Patri sit gloria,\neiusque soli Filio,\ncum Spiritu Paraclito,\nin sempiterna saecula. Amen.",
+        "Hic est dies verus Dei,\nsancto serenus lumine,\nquo diluit sanguis sacer\nprobrosa mundi crimina.\n\nFidem refundit perditis,\ncaecosque visu illuminans;\nquem non gravi solvit metu\nlatronis absolutio?\n\nIesum brevi acquirit fide,\niustusque praevio gradu\npervenit in regnum Dei:\nparvis reclusit ianuis\ncaeli beata gaudia.\n\nOpus stupent et angeli\npoenam levantes criminis;\nstupetque carnifex vigil\nregnare carne hominem.\n\nMysterium mirabile,\nquo vita mortis victima\ndevicta reddit corpora\nmortisque vinclis liberat.\n\nQuid hoc potest sublimius,\nut culpa quaerat gratiam,\nmetumque solvat caritas\nmors et resurgat vita?\n\nHamum sibi mors devoret,\nsuis perit spiculis,\ndum vita mortis victima\ndevicta reddit corpora.\n\nCum mors per omnes transeat,\nomnes resurgant mortui;\nconsumpta mors ictu suo,\nperisse se solam gemit.\n\nDeo Patri sit gloria,\neiusque soli Filio,\ncum Spiritu Paraclito,\nin sempiterna saecula. Amen.",
     },
     portugues: {
       texto:
-        "Este é o verdadeiro dia de Deus,\nsereno de santa luz,\nno qual o sangue sagrado lava\nos crimes vergonhosos do mundo.\n\nRestitui a fé aos perdidos,\niluminando os cegos com a visão;\na quem a absolvição do ladrão\nnão livra do pesado medo?\n\nEle que, trocando a cruz em prêmio,\no ladrão da cruz torna-se crente;\npor portas pequenas abriu\nas bem-aventuradas alegrias do céu.\n\nPasmam os anjos diante da obra\nque alivia a pena do crime;\ne o carrasco vigilante pasma\nao ver o homem reinar na carne.\n\nMistério admirável,\npelo qual a Vida, vítima da morte,\ndevolve os corpos vencidos\ne os liberta dos grilhões da morte.\n\nQue pode haver mais sublime do que isto:\nque a culpa busque a graça,\no amor desfaça o medo,\ne a morte ressuscite a vida?\n\nDevore a morte o seu próprio anzol,\npereça com os seus aguilhões,\nenquanto a Vida, vítima da morte,\ndevolve os corpos vencidos.\n\nComo a morte passou por todos,\ntodos os mortos ressucitem;\nconsumida a morte por seu próprio golpe,\ngeme por ter perecido sozinha.\n\nAo Deus Pai seja a glória,\ne ao seu único Filho,\ncom o Espírito Paráclito,\npelos séculos eternos. Amém.",
+        "Este é o verdadeiro dia de Deus,\nsereno de santa luz,\nno qual o sangue sagrado lava\nos crimes vergonhosos do mundo.\n\nRestitui a fé aos perdidos,\niluminando os cegos com a visão;\na quem a absolvição do ladrão\nnão livra do pesado medo?\n\nAlcança a Jesus por uma breve fé,\ne o justo, por um passo adiantado,\nchega ao reino de Deus;\npor portas pequenas abriu\nas bem-aventuradas alegrias do céu.\n\nPasmam os anjos diante da obra\nque alivia a pena do crime;\ne o carrasco vigilante pasma\nao ver o homem reinar na carne.\n\nMistério admirável,\npelo qual a Vida, vítima da morte,\ndevolve os corpos vencidos\ne os liberta dos grilhões da morte.\n\nQue pode haver mais sublime do que isto:\nque a culpa busque a graça,\no amor desfaça o medo,\ne a morte ressuscite a vida?\n\nDevore a morte o seu próprio anzol,\npereça com os seus aguilhões,\nenquanto a Vida, vítima da morte,\ndevolve os corpos vencidos.\n\nComo a morte passou por todos,\ntodos os mortos ressucitem;\nconsumida a morte por seu próprio golpe,\ngeme por ter perecido sozinha.\n\nAo Deus Pai seja a glória,\ne ao seu único Filho,\ncom o Espírito Paráclito,\npelos séculos eternos. Amém.",
       tradutor: "Projeto Lux Fidei",
     },
     notasCriticas: [
-      "J. Fontaine, Ambroise de Milan: Hymnes (1992), hino IX (8 estrofes integrais de 32 versos + doxologia, incluindo Cum mors per omnes transeat). Texto latino crítico de Fontaine.",
+      "J. Fontaine, Ambroise de Milan: Hymnes (1992), hino IX (8 estrofes integrais de conteúdo [32 versos] + doxologia [4 versos], totalizando 9 estrofes / 36 versos, incluindo Fidem refundit, Iesum brevi, Opus stupent, Mysterium mirabile, Quid hoc potest, Hamum sibi e Cum mors per omnes transeat).",
     ],
     notasEditoriais: ["Uso litúrgico: Domingo de Páscoa e Tempo Pascal."],
     fonte: {
@@ -363,7 +363,7 @@ export const hinosAmbrosianosData: CapituloAmbrosio[] = [
     fonte: {
       primaria: "J. Fontaine, Ambroise de Milan: Hymnes (1992), hino X.",
     },
-    autenticidade: "tradicional",
+    autenticidade: "autêntica",
     temas: ["Vítor", "Nabor", "Félix", "martírio", "triunfo"],
   },
   {
@@ -398,7 +398,7 @@ export const hinosAmbrosianosData: CapituloAmbrosio[] = [
       primaria:
         "Patrologia Latina 17, cols. 1182–1183 / J. Fontaine (1992), hino XI.",
     },
-    autenticidade: "tradicional",
+    autenticidade: "autêntica",
     temas: ["Gervásio", "Protásio", "relíquias", "cura", "Trindade"],
   },
   {
@@ -432,7 +432,7 @@ export const hinosAmbrosianosData: CapituloAmbrosio[] = [
     fonte: {
       primaria: "J. Fontaine, Ambroise de Milan: Hymnes (1992), hino XII.",
     },
-    autenticidade: "tradicional",
+    autenticidade: "autêntica",
     temas: ["Pedro", "Paulo", "martírio", "Roma", "apostolicidade"],
   },
   {
@@ -446,19 +446,19 @@ export const hinosAmbrosianosData: CapituloAmbrosio[] = [
       aproximada: true,
     },
     contextoHistorico:
-      "Corpus crítico de Jacques Fontaine (1992), hino XIII. Celebra a coragem do arquidiácono São Lourenço em 8 estrofes autênticas (Sisto II indo ao martírio, a promessa dos 3 dias, os tesouros e os pobres, o fogo da grelha e a vitória do espírito).",
+      "Corpus crítico de Jacques Fontaine (1992), hino XIII. Celebra a coragem do arquidiácono São Lourenço em 8 estrofes autênticas de conteúdo + doxologia (36 versos no total: Sisto II e a profecia dos 3 dias, a entrega das riquezas aos pobres, a fé inabalável no fogo da grelha e a vitória do espírito).",
     original: {
       idioma: "latim",
       texto:
-        "Apostolorum supparem\nLaurentium archidiaconum\npari corona martyrum\nRomana sacravit fides.\n\nXystum sequens hic martyrem\nflens duci ad poenam petit;\nnec territus poenae metu,\npoenae ministrum postulat.\n\nIam tunc in illo martyre\ntriumphus altior patet;\npost triduum iussus tamen\nmaiora secutus praemia.\n\nPost triduum me sequeris:\ntuus manebit exitus;\nnil deest triumpho, levita,\nte maior ornat gloria.\n\nSpectaculum pulcherrimum:\nthesaurum poscit tyrannus;\nLaurentius inopes adtrahit,\nhos esse thesauros docet.\n\nVerae piorum perpetes\nnon cedit ignibus fides;\n“Versa et manduca”, provocat,\n“iam cocta pars est inferior”.\n\nFugit perustus carnifex,\nridet dolores corpore;\nvictor triumphat spiritu,\ncaeli reclusit ianuas.\n\nDeo Patri sit gloria,\neiusque soli Filio,\ncum Spiritu Paraclito,\nin sempiterna saecula. Amen.",
+        "Apostolorum supparem\nLaurentium archidiaconum\npari corona martyrum\nRomana sacravit fides.\n\nXystum sequens hic martyrem\nflens duci ad poenam petit;\nresponsa vatis rettulit:\n“Maerere, fili, desine,\nsequere me post triduum.”\n\nIam tunc in illo martyre\ntriumphus altior patet;\npost triduum iussus tamen\nmaiora secutus praemia.\n\nSpectaculum pulcherrimum:\nthesaurum poscit tyrannus;\nLaurentius inopes adtrahit,\nhos esse thesauros docet.\n\nVerae piorum perpetes\nnon cedit ignibus fides;\n“Versa et manduca”, provocat,\n“iam cocta pars est inferior”.\n\nUrget carnifex furens,\nsaevit tyranni crudelitas;\nin craticula stridat caro,\nflammis cremantur viscera.\n\nFugit perustus carnifex,\nridet dolores corpore;\nvictor triumphat spiritu,\ncaeli reclusit ianuas.\n\nDeo Patri sit gloria,\neiusque soli Filio,\ncum Spiritu Paraclito,\nin sempiterna saecula. Amen.",
     },
     portugues: {
       texto:
-        "Igual aos Apóstolos,\no arquidiácono Lourenço,\ncom igual coroa de mártires,\na fé romana consagrou.\n\nSeguindo a Sisto mártir,\nchorando pede para ser levado à pena;\nsem se aterrorizar pelo medo do castigo,\npede para ser ministro no sofrimento.\n\nJá então naquele mártir\num triunfo mais alto se abre;\napós três dias ordenado, contudo,\nalcançou maiores prêmios.\n\n“Após três dias tu me seguirás:\nteu será o mesmo fim;\nnada falta ao teu triunfo, ó levita,\numa glória maior te adorna.”\n\nEspetáculo belíssimo:\no tirano exige o tesouro;\nLourenço conduz os pobres,\ne ensina serem estes os tesouros.\n\nA verdadeira fé dos piedosos\nnão cede aos fogos;\n“Vira e come”, provoca ele,\n“já está assada a parte de baixo”.\n\nFoge queimado o carrasco,\nele ri das dores no corpo;\nvencedor, triunfa no espírito,\ne abriu as portas do céu.\n\nAo Deus Pai seja a glória,\ne ao seu único Filho,\ncom o Espírito Paráclito,\npelos séculos eternos. Amém.",
+        "Igual aos Apóstolos,\no arquidiácono Lourenço,\ncom igual coroa de mártires,\na fé romana consagrou.\n\nSeguindo a Sisto mártir,\nchorando pede para ser levado à pena;\nretrucou a resposta do profeta:\n“Cessa o choro, meu filho,\ntu me seguirás após três dias.”\n\nJá então naquele mártir\num triunfo mais alto se abre;\napós três dias ordenado, contudo,\nalcançou maiores prêmios.\n\nEspetáculo belíssimo:\no tirano exige o tesouro;\nLourenço conduz os pobres,\ne ensina serem estes os tesouros.\n\nA verdadeira fé dos piedosos\nnão cede aos fogos;\n“Vira e come”, provoca ele,\n“já está assada a parte de baixo”.\n\nInsta o carrasco furioso,\nenfurece-se a crueldade do tirano;\na grelha estala a carne,\nas entranhas queimam nas chamas.\n\nFoge queimado o carrasco,\nele ri das dores no corpo;\nvencedor, triunfa no espírito,\ne abriu as portas do céu.\n\nAo Deus Pai seja a glória,\ne ao seu único Filho,\ncom o Espírito Paráclito,\npelos séculos eternos. Amém.",
       tradutor: "Projeto Lux Fidei",
     },
     notasCriticas: [
-      "J. Fontaine, Ambroise de Milan: Hymnes (1992), hino XIII (7 estrofes de conteúdo + doxologia, totalizando 32 versos em 8 quadras, segundo a edição crítica de Oxford CSLA E05216).",
+      "J. Fontaine, Ambroise de Milan: Hymnes (1992), hino XIII (8 estrofes integrais de conteúdo [32 versos] + doxologia [4 versos], totalizando 9 estrofes / 36 versos, segundo a edição crítica de Oxford CSLA E05216).",
     ],
     notasEditoriais: [
       "Uso litúrgico: Festa de São Lourenço Mártir (10 de agosto).",
@@ -497,7 +497,7 @@ export const hinosAmbrosianosData: CapituloAmbrosio[] = [
     fonte: {
       primaria: "J. Fontaine, Ambroise de Milan: Hymnes (1992), hino XIV.",
     },
-    autenticidade: "tradicional",
+    autenticidade: "autêntica",
     temas: ["mártires", "fé", "esperança", "caridade", "comunhão dos santos"],
   },
 ];
