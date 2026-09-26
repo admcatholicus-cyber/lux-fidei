@@ -1,0 +1,115 @@
+.landingContainer {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 40px 24px 80px;
+}
+.topNav {
+  margin-bottom: 40px;
+}
+.backButton {
+  color: #666;
+  text-decoration: none;
+  font-family: "Inter", sans-serif;
+  font-size: 0.9rem;
+  transition: color 0.2s ease;
+}
+.backButton:hover {
+  color: #5b2c83;
+}
+.headerObra {
+  text-align: center;
+  margin-bottom: 60px;
+}
+.badgeObra {
+  display: inline-block;
+  font-family: "Inter", sans-serif;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: #8b6508;
+  margin-bottom: 16px;
+}
+.tituloObra {
+  font-family: "Cinzel", Georgia, serif;
+  font-size: 2.5rem;
+  color: #2c2c2c;
+  margin: 0 0 12px;
+  line-height: 1.2;
+}
+.autorObra {
+  font-family: Georgia, serif;
+  font-size: 1.2rem;
+  color: #555;
+  font-style: italic;
+  margin-bottom: 24px;
+}
+.descricaoObra {
+  font-family: Georgia, serif;
+  font-size: 1.05rem;
+  color: #38302c;
+  line-height: 1.6;
+  max-width: 700px;
+  margin: 0 auto;
+}
+.secaoCatequeses {
+  margin-bottom: 60px;
+}
+.secaoHeader {
+  text-align: center;
+  margin-bottom: 32px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid #e6dfed;
+}
+.secaoHeader h2 {
+  font-family: "Cinzel", Georgia, serif;
+  font-size: 1.8rem;
+  color: #5b2c83;
+  margin: 0 0 12px;
+}
+.secaoHeader p {
+  font-family: Georgia, serif;
+  color: #666;
+  font-size: 1rem;
+}
+.gridCapitulos {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 20px;
+}
+.cardCapitulo {
+  display: flex;
+  flex-direction: column;
+  padding: 24px;
+  background-color: #faf8f4;
+  border: 1px solid #e6dfed;
+  border-radius: 12px;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+.cardCapitulo:hover {
+  border-color: #d4af37;
+  background-color: #fdf8e8;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+.numeroCapitulo {
+  font-family: "Inter", sans-serif;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #8b6508;
+  margin-bottom: 8px;
+}
+.tituloCapitulo {
+  font-family: Georgia, serif;
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: #2c2c2c;
+  margin: 0 0 8px;
+  line-height: 1.4;
+}
+.subtituloCapitulo {
+  font-family: Georgia, serif;
+  font-size: 0.95rem;
+  color: #666;
+  line-height: 1.5;
+}

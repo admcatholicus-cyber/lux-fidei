@@ -833,3 +833,519 @@ html, body {
   .pagina-lux main > h2 { font-size: 1.2rem; }
   .pagina-lux main > p { font-size: 0.93rem; }
 }
+/* =========================================
+   NOVO BOTÃO DE TAREFAS (DIREITA)
+   ========================================= */
+.tarefas-btn {
+  position: absolute;
+  top: 70px; /* Fica logo abaixo do botão info-btn */
+  right: 20px;
+  background: transparent;
+  border: 1px solid #d4b872;
+  color: #d4b872;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s ease;
+  z-index: 100;
+}
+
+.tarefas-btn:hover {
+  background: #d4b872;
+  color: #1a1714;
+}
+
+.tarefas-btn svg {
+  width: 20px;
+  height: 20px;
+}
+
+/* =========================================
+   MODAL DE TAREFAS (Estilo idêntico ao Info)
+   ========================================= */
+.tarefas-content {
+  padding: 30px;
+}
+
+.tarefas-intro {
+  text-align: center;
+  font-family: 'Cinzel', serif;
+  color: #b08a3c;
+  margin-bottom: 25px;
+}
+
+.tarefas-lista {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.tarefas-lista a {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  background: #faf8f4;
+  border: 1px solid #ece8df;
+  padding: 15px;
+  border-radius: 4px;
+  text-decoration: none;
+  color: #3a3530;
+  transition: all 0.2s ease;
+}
+
+.tarefas-lista a:hover {
+  background: #f5f1e8;
+  border-color: #d4c9a8;
+  transform: translateY(-2px);
+}
+
+.tarefa-icone {
+  font-size: 24px;
+}
+
+.tarefa-texto {
+  display: flex;
+  flex-direction: column;
+}
+
+.tarefa-texto strong {
+  font-family: 'Libre Baskerville', Georgia, serif;
+  font-size: 15px;
+  margin-bottom: 3px;
+}
+
+.tarefa-texto span {
+  font-size: 13px;
+  color: #6f6758;
+}
+
+/* =========================================
+   FEED DE ATUALIZAÇÕES — EDITORIAL PREMIUM
+   ========================================= */
+.feed-atualizacoes {
+  max-width: 1050px;
+  margin: 80px auto;
+  padding: 0 30px;
+}
+
+/* CABEÇALHO DA SEÇÃO */
+.feed-heading {
+  text-align: center;
+  margin-bottom: 60px;
+  padding-bottom: 40px;
+  position: relative;
+}
+
+.feed-ornamento {
+  display: block;
+  font-size: 24px;
+  color: #b08a3c;
+  margin-bottom: 15px;
+  opacity: 0.7;
+}
+
+.feed-titulo-principal {
+  font-family: 'Cinzel', 'Libre Baskerville', Georgia, serif;
+  font-size: 32px;
+  font-weight: 500;
+  color: #3a3530;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  margin: 0 0 12px 0;
+}
+
+.feed-subtitulo-principal {
+  font-family: 'EB Garamond', Georgia, serif;
+  font-style: italic;
+  font-size: 17px;
+  color: #6f6758;
+  margin: 0 0 25px 0;
+  font-weight: 400;
+}
+
+.feed-linha-dourada {
+  display: block;
+  width: 80px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, #b08a3c, transparent);
+  margin: 0 auto;
+}
+
+/* GRID */
+.feed-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+/* CARD PRINCIPAL */
+.feed-card {
+  display: grid;
+  grid-template-columns: 90px 1fr 200px;
+  gap: 35px;
+  background: #ffffff;
+  border: 1px solid #e2dcd0;
+  padding: 35px 40px;
+  position: relative;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  overflow: hidden;
+}
+
+.feed-card::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 3px;
+  background: linear-gradient(180deg, #d4b872, #b08a3c, #d4b872);
+  transform: scaleY(0);
+  transform-origin: top;
+  transition: transform 0.4s ease;
+}
+
+.feed-card:hover {
+  border-color: #d4c9a8;
+  box-shadow: 0 12px 30px rgba(176, 138, 60, 0.08);
+  transform: translateY(-3px);
+}
+
+.feed-card:hover::before {
+  transform: scaleY(1);
+}
+
+/* CARD SEM IMAGEM */
+.feed-card.sem-imagem {
+  grid-template-columns: 90px 1fr;
+}
+
+/* CARD DESTAQUE */
+.feed-card.destaque {
+  border: 1px solid #d4b872;
+  background: linear-gradient(135deg, #ffffff 0%, #faf8f4 100%);
+  box-shadow: 0 4px 15px rgba(176, 138, 60, 0.05);
+}
+
+.feed-card.destaque::after {
+  content: '\2731 DESTAQUE';
+  position: absolute;
+  top: 15px;
+  right: -35px;
+  background: #b08a3c;
+  color: #fff;
+  font-family: 'Cinzel', serif;
+  font-size: 10px;
+  letter-spacing: 2px;
+  padding: 4px 40px;
+  transform: rotate(45deg);
+  z-index: 2;
+}
+
+/* COLUNA DA DATA (ESTILO CALENDÁRIO LITÚRGICO) */
+.feed-data-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 15px 5px;
+  background: #faf8f4;
+  border: 1px solid #ece8df;
+  border-radius: 2px;
+  text-align: center;
+  height: fit-content;
+  position: relative;
+}
+
+.feed-data-box::before,
+.feed-data-box::after {
+  content: '';
+  position: absolute;
+  left: 15%;
+  right: 15%;
+  height: 1px;
+  background: #d4c9a8;
+  opacity: 0.5;
+}
+
+.feed-data-box::before { top: 8px; }
+.feed-data-box::after { bottom: 8px; }
+
+.feed-data-dia {
+  font-family: 'Libre Baskerville', Georgia, serif;
+  font-size: 32px;
+  font-weight: 400;
+  color: #3a3530;
+  line-height: 1;
+  margin-bottom: 4px;
+}
+
+.feed-data-mes {
+  font-family: 'Cinzel', serif;
+  font-size: 11px;
+  color: #b08a3c;
+  letter-spacing: 2px;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.feed-data-ano {
+  font-family: 'EB Garamond', Georgia, serif;
+  font-size: 12px;
+  color: #999;
+  letter-spacing: 1px;
+}
+
+/* CONTEÚDO CENTRAL */
+.feed-conteudo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.feed-meta {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 12px;
+  font-family: 'Cinzel', serif;
+  font-size: 10px;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+}
+
+.feed-categoria {
+  color: #6f6758;
+  font-weight: 500;
+}
+
+.feed-separador {
+  color: #d4b872;
+  font-size: 14px;
+}
+
+.feed-tag {
+  color: #b08a3c;
+  font-weight: 600;
+  background: transparent;
+  padding: 0;
+}
+
+.feed-titulo-artigo {
+  font-family: 'Libre Baskerville', Georgia, serif;
+  font-size: 26px;
+  font-weight: 700;
+  color: #2a2520;
+  margin: 0 0 6px 0;
+  line-height: 1.25;
+}
+
+.feed-subtitulo-artigo {
+  font-family: 'EB Garamond', Georgia, serif;
+  font-style: italic;
+  font-size: 16px;
+  color: #6f6758;
+  margin: 0 0 18px 0;
+  font-weight: 400;
+  line-height: 1.4;
+}
+
+.feed-corpo {
+  border-left: 2px solid #ece8df;
+  padding-left: 18px;
+  margin-bottom: 22px;
+}
+
+.feed-corpo p {
+  font-family: 'EB Garamond', Georgia, serif;
+  font-size: 16px;
+  line-height: 1.7;
+  color: #4a4540;
+  margin: 0;
+}
+
+.feed-ler-mais {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: 'Cinzel', serif;
+  font-size: 12px;
+  letter-spacing: 2px;
+  color: #b08a3c;
+  text-decoration: none;
+  text-transform: uppercase;
+  padding-bottom: 3px;
+  border-bottom: 1px solid transparent;
+  transition: all 0.3s ease;
+  width: fit-content;
+  font-weight: 600;
+}
+
+.feed-ler-mais:hover {
+  color: #8c6a28;
+  border-bottom-color: #b08a3c;
+}
+
+.feed-ler-mais .feed-seta {
+  transition: transform 0.3s ease;
+}
+
+.feed-ler-mais:hover .feed-seta {
+  transform: translateX(6px);
+}
+
+/* IMAGEM */
+.feed-imagem-box {
+  width: 100%;
+  height: 100%;
+  min-height: 180px;
+  overflow: hidden;
+  border-radius: 2px;
+  position: relative;
+}
+
+.feed-imagem-box::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border: 1px solid rgba(176, 138, 60, 0.15);
+  pointer-events: none;
+}
+
+.feed-imagem-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+  display: block;
+}
+
+.feed-card:hover .feed-imagem-box img {
+  transform: scale(1.05);
+}
+
+/* RODAPÉ */
+.feed-rodape {
+  text-align: center;
+  margin-top: 60px;
+  padding-top: 40px;
+  border-top: 1px solid #e2dcd0;
+}
+
+.feed-rodape-ornamento {
+  display: block;
+  color: #b08a3c;
+  font-size: 12px;
+  letter-spacing: 4px;
+  margin-bottom: 12px;
+  opacity: 0.6;
+}
+
+.feed-rodape p {
+  font-family: 'EB Garamond', Georgia, serif;
+  font-style: italic;
+  color: #999;
+  font-size: 14px;
+  margin: 0;
+}
+
+/* RESPONSIVO */
+/* =========================================
+   RESPONSIVO (CELULAR)
+   ========================================= */
+@media (max-width: 860px) {
+  .feed-atualizacoes {
+    padding: 0 20px;
+    margin: 60px auto;
+  }
+  
+  .feed-titulo-principal {
+    font-size: 24px;
+    letter-spacing: 2px;
+  }
+  
+  /* 1. Transforma o grid em uma única coluna vertical */
+  .feed-card, 
+  .feed-card.sem-imagem {
+    display: flex;
+    flex-direction: column;
+    padding: 0; /* Remove padding para a imagem encostar nas bordas */
+    gap: 0;
+  }
+  
+  /* 2. Faz a imagem aparecer e joga ela pro TOPO do card */
+  .feed-imagem-box {
+    display: block; 
+    order: -1; /* Força a imagem a ser o primeiro elemento */
+    width: 100%;
+    height: 220px;
+    min-height: 220px;
+    border-radius: 2px 2px 0 0;
+  }
+  
+  .feed-imagem-box::after {
+    display: none; /* Remove borda interna na imagem no mobile */
+  }
+  
+  /* 3. Transforma o calendário em uma etiqueta horizontal */
+  .feed-data-box {
+    flex-direction: row;
+    align-items: baseline;
+    gap: 6px;
+    width: fit-content;
+    padding: 6px 12px;
+    margin: 20px 20px 15px 20px;
+  }
+  
+  .feed-data-box::before, 
+  .feed-data-box::after {
+    display: none; /* Remove as linhas decorativas horizontais do calendário */
+  }
+  
+  .feed-data-dia {
+    font-size: 20px;
+    margin: 0;
+  }
+  
+  .feed-data-mes, 
+  .feed-data-ano {
+    font-size: 12px;
+    margin: 0;
+  }
+  
+  /* 4. Devolve o padding apenas para a área de texto */
+  .feed-conteudo {
+    padding: 0 20px 30px 20px;
+  }
+  
+  .feed-meta {
+    flex-wrap: wrap; /* Evita que a tag quebre o layout */
+    margin-bottom: 10px;
+  }
+  
+  .feed-titulo-artigo {
+    font-size: 22px;
+  }
+  
+  .feed-subtitulo-artigo {
+    font-size: 15px;
+  }
+  
+  .feed-corpo p {
+    font-size: 15px;
+  }
+  
+  /* Ajusta a fita de destaque */
+  .feed-card.destaque::after {
+    top: 15px;
+    right: -35px;
+    font-size: 9px;
+    padding: 4px 35px;
+  }
+}

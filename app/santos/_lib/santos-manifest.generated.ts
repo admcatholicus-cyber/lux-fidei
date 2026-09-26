@@ -1,5 +1,5 @@
 // ⚠️ GERADO AUTOMATICAMENTE — NÃO EDITAR
-// 2026-09-02T14:26:40.559Z
+// 2026-09-24T16:41:06.859Z
 // npm run generate:santos
 
 export type SantoManifestEntry = {
@@ -58,6 +58,12 @@ export const SANTOS_MANIFEST = {
     nome: "São Domingos Sávio",
     primeiraAba: "historia",
   },
+  "leigos/sao-isidoro-lavrador": {
+    categoria: "leigos",
+    slug: "sao-isidoro-lavrador",
+    nome: "Santo Isidoro Lavrador",
+    primeiraAba: "historia",
+  },
   "martires/santa-afra-de-augsburgo": {
     categoria: "martires",
     slug: "santa-afra-de-augsburgo",
@@ -80,7 +86,7 @@ export const SANTOS_MANIFEST = {
 
 export type SantoManifestKey = keyof typeof SANTOS_MANIFEST;
 
-export const MANIFEST_GENERATED_AT = "2026-09-02T14:26:40.559Z" as const;
+export const MANIFEST_GENERATED_AT = "2026-09-24T16:41:06.859Z" as const;
 
 export function getPrimeiraAba(categoria: string, slug: string): string | null {
   const key = `${categoria}/${slug}`;

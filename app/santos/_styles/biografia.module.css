@@ -836,6 +836,12 @@
 /* ============================================================
    TABELA
    ============================================================ */
+.tabelaWrapper {
+  width: 100%;
+  overflow-x: auto;
+  margin: 14px 0;
+}
+
 .tabela {
   width: 100%;
   border-collapse: collapse;
@@ -1941,24 +1947,76 @@
   padding-top: 8px;
 }
 
-.obraFicha {
-  background: linear-gradient(135deg, #fdfaf3, #f8f3e8);
-  border: 1px solid #e2dcd0;
-  border-left: 4px solid #b08a3c;
-  border-radius: 4px;
-  padding: 20px 22px;
-  margin-bottom: 20px;
+/* ==========================================================================
+   FICHA TÉCNICA / RESUMO BIOGRÁFICO
+   ========================================================================== */
+
+/* Container geral da Ficha - Grade de 2 Colunas */
+.ficha {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 colunas perfeitamente distribuídas */
+  gap: 14px 18px; /* Espaçamento entre os cards */
+  margin: 32px 0;
+  width: 100%;
 }
 
-.obraFichaLabel {
+/* Card individual da Ficha (FichaItem) */
+.fichaItem {
+  background: linear-gradient(135deg, #f8f7f6 0%, #f8f3e8 100%);
+  border: 1px solid #f8f6f3;
+  border-left: 4px solid #b08a3c; /* Borda dourada marcante na esquerda */
+  border-radius: 6px;
+  padding: 14px 18px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.02);
+  transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.fichaItem:hover {
+  transform: translateY(-2px);
+  border-color: #d4b872;
+  border-left-color: #926f2d;
+  box-shadow: 0 4px 12px rgba(176, 138, 60, 0.12);
+}
+
+/* Rótulo / Título do item (LABEL) */
+.fichaLabel,
+.fichaItemLabel {
   display: block;
-  font-family: Georgia, 'Times New Roman', 'Noto Serif', serif;
-  font-size: 10px;
+  font-family: 'Libre Baskerville', Georgia, 'Times New Roman', serif;
+  font-size: 10.5px;
   color: #b08a3c;
-  letter-spacing: 2px;
+  letter-spacing: 1.8px;
   text-transform: uppercase;
   font-weight: 700;
-  margin-bottom: 8px;
+  margin-bottom: 5px;
+  line-height: 1.2;
+}
+
+/* Valor / Conteúdo do item (VALUE) */
+.fichaValue,
+.fichaItemValue,
+.fichaItem p {
+  font-family: Georgia, 'Times New Roman', 'Noto Serif', serif;
+  font-size: 14.5px;
+  color: #2c2825; /* Texto escuro e legível */
+  line-height: 1.45;
+  font-weight: 400;
+  margin: 0;
+}
+
+/* Ajuste para telas pequenas (Celulares) */
+@media (max-width: 680px) {
+  .ficha {
+    grid-template-columns: 1fr; /* Em celulares vira 1 coluna */
+    gap: 12px;
+  }
+
+  .fichaItem {
+    padding: 12px 16px;
+  }
 }
 
 .obraTitulo {

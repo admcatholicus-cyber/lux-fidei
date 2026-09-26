@@ -29,14 +29,35 @@ import Alerta from '../../../_components/biografia/Alerta';
 import { Ficha, FichaItem } from '../../../_components/biografia/Ficha';
 import { Metricas, Metrica } from '../../../_components/biografia/Metricas';
 import { LinhaTempo, Passo } from '../../../_components/biografia/LinhaTempo';
-import Tabela from '../../../_components/biografia/Tabela';
+import { Tabela } from '../../../_components/biografia/Tabela';
 import Indice from '../../../_components/biografia/Indice';
 
 import Antologia from '../../../_components/biografia/Antologia';
 import Capitulo from '../../../_components/biografia/Capitulo';
 import Subtema from '../../../_components/biografia/Subtema';
 import Frase from '../../../_components/biografia/Frase';
+import type { Metadata } from 'next';
+import { gerarMetadataAba } from '../../../_lib/gerarMetadata';
 
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ categoria: string; slug: string; aba: string }>;
+}): Promise<Metadata> {
+  const { categoria, slug, aba } = await params;
+  try {
+    const { meta } = await import(
+      `../../../_content/${categoria}/${slug}/meta`
+    );
+    return gerarMetadataAba(meta, aba);
+  } catch {
+    return {
+      title: 'Lux Fidei — Santos da Igreja Católica',
+      description:
+        'Enciclopédia católica dos santos, doutores, apóstolos, mártires e arcanjos.',
+    };
+  }
+}
 export default async function AbaPage({
   params,
 }: {

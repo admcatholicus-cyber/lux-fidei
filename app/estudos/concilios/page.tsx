@@ -1,4 +1,3 @@
-// app/estudos/concilios/page.tsx
 'use client'
 
 import Link from 'next/link'
@@ -78,22 +77,57 @@ const cadernos: Caderno[] = [
 
 // ============================================================
 // FRASES ARIANAS CONDENADAS
-// Cada frase tem sua própria rotação e deslocamento
-// horizontal — para parecer escrita à mão, "bagunçada".
 // ============================================================
 
 interface FraseCondenada {
   texto: string
-  rot: number      // rotação em graus
-  offset: number   // deslocamento horizontal em px
+  rot: number      
+  offset: number   
 }
 
+// Frases condenadas em Niceia I (325)
 const FRASES_CONDENADAS: FraseCondenada[] = [
   { texto: 'Houve um tempo em que Ele não existia.',    rot: -3, offset: 12  },
   { texto: 'Antes de ser gerado, Ele não existia.',     rot: 2,  offset: -18 },
   { texto: 'O Filho de Deus foi feito do nada.',        rot: -4, offset: 28  },
   { texto: 'O Filho é de substância diferente do Pai.', rot: 1,  offset: -8  },
   { texto: 'O Filho é criatura passível de mudança.',   rot: -2, offset: 20  },
+]
+
+// Frases condenadas em Constantinopla I (381)
+const FRASES_CONSTANTINOPLA: FraseCondenada[] = [
+  { texto: 'O Espírito Santo não é Deus, mas criatura.',          rot: -2, offset: 10  },
+  { texto: 'O Espírito Santo é apenas um ministro do Filho.',     rot: 3,  offset: -14 },
+  { texto: 'Cristo não possui mente humana racional.',            rot: -3, offset: 22  },
+  { texto: 'O Filho é essencialmente diferente do Pai.',          rot: 1,  offset: -6  },
+  { texto: 'O reino do Filho terá fim.',                          rot: -2, offset: 16  },
+]
+
+// Frases condenadas em Éfeso (431)
+// Frases condenadas em Éfeso (431) - Versão em linha única
+const FRASES_EFESO: FraseCondenada[] = [
+  { texto: 'Maria não deve ser chamada Theotókos.',       rot: -2, offset: 8   },
+  { texto: 'Maria é mãe apenas do homem, não de Deus.',   rot: 3,  offset: -12 },
+  { texto: 'Em Cristo há duas pessoas e dois sujeitos.',  rot: -3, offset: 14  },
+  { texto: 'A divindade não nasceu de uma mulher.',       rot: 1,  offset: -6  },
+  { texto: 'Cristo é um homem portador de Deus.',         rot: -2, offset: 10  },
+]
+
+// Frases condenadas em Calcedônia (451) - Monofisismo
+const FRASES_CALCEDONIA: FraseCondenada[] = [
+  { texto: 'Há apenas uma natureza após a união.',      rot: -2, offset: 6  },
+  { texto: 'A humanidade foi absorvida por Deus.',      rot: 2,  offset: -10 },
+  { texto: 'O corpo de Cristo não é como o nosso.',     rot: -3, offset: 14  },
+  { texto: 'Cristo não subsiste em duas naturezas.',    rot: 1,  offset: -4  },
+  { texto: 'Houve mistura entre as duas naturezas.',    rot: -2, offset: 10  },
+]
+// Frases condenadas em Constantinopla II (553)
+const FRASES_CONSTANTINOPLA_2: FraseCondenada[] = [
+  { texto: 'As almas humanas preexistiam ao corpo.',         rot: -2, offset: 6  },
+  { texto: 'O apocatástase salvará todos os demônios.',     rot: 2,  offset: -10 },
+  { texto: 'Os escritos nestorianos são ortodoxos.',         rot: -3, offset: 14  },
+  { texto: 'A pessoa de Cristo pode ser dividida.',          rot: 1,  offset: -4  },
+  { texto: 'O sofrimento na cruz não toca a divindade.',     rot: -2, offset: 10  },
 ]
 
 const todosOrdenados = cadernos.flatMap((c) => c.concilios)
@@ -131,35 +165,43 @@ function intervaloAnos(slug: string): number | null {
 
 export default function ConciliosPage() {
   const [niceiaVisto, setNiceiaVisto] = useState(false)
+  const [constantinoplaVisto, setConstantinoplaVisto] = useState(false)
+  const [efesoVisto, setEfesoVisto] = useState(false)
   const [montado, setMontado] = useState(false)
+  const [calcedoniaVisto, setCalcedoniaVisto] = useState(false) 
+const [constantinopla2Visto, setConstantinopla2Visto] = useState(false) // 👈 ADICIONE ESTA LINHA
 
   useEffect(() => {
     try {
-      const visto = localStorage.getItem('visitado:niceia-1') === '1'
-      setNiceiaVisto(visto)
+      setNiceiaVisto(localStorage.getItem('visitado:niceia-1') === '1')
+      setConstantinoplaVisto(localStorage.getItem('visitado:constantinopla-1') === '1')
+      setEfesoVisto(localStorage.getItem('visitado:efeso') === '1')
+      setCalcedoniaVisto(localStorage.getItem('visitado:calcedonia') === '1')
+      setConstantinopla2Visto(localStorage.getItem('visitado:constantinopla-2') === '1')
     } catch { /* ignore */ }
     setMontado(true)
   }, [])
 
-  const marcarNiceiaVisto = () => {
+  const marcarVisto = (slug: string) => {
     try {
-      localStorage.setItem('visitado:niceia-1', '1')
+      localStorage.setItem(`visitado:${slug}`, '1')
     } catch { /* ignore */ }
   }
 
   return (
     <div className={styles.pageWrapper}>
-<div className={styles.ornamentoEsquerdo} aria-hidden="true" />
-  <div className={styles.ornamentoDireito} aria-hidden="true" />
-  <div className={styles.cruzDecorativa} aria-hidden="true" />
-  <div className={styles.cruzDecorativaSecundaria} aria-hidden="true" />
-  <div className={styles.manchaTinta1} aria-hidden="true" />
-  <div className={styles.manchaTinta2} aria-hidden="true" />
-  <div className={styles.manchaTinta3} aria-hidden="true" />
-  <div className={`${styles.cantoOrnamental} ${styles.cantoSuperiorEsquerdo}`} aria-hidden="true" />
-  <div className={`${styles.cantoOrnamental} ${styles.cantoSuperiorDireito}`} aria-hidden="true" />
-  <div className={`${styles.cantoOrnamental} ${styles.cantoInferiorEsquerdo}`} aria-hidden="true" />
-  <div className={`${styles.cantoOrnamental} ${styles.cantoInferiorDireito}`} aria-hidden="true" />
+      <div className={styles.ornamentoEsquerdo} aria-hidden="true" />
+      <div className={styles.ornamentoDireito} aria-hidden="true" />
+      <div className={styles.cruzDecorativa} aria-hidden="true" />
+      <div className={styles.cruzDecorativaSecundaria} aria-hidden="true" />
+      <div className={styles.manchaTinta1} aria-hidden="true" />
+      <div className={styles.manchaTinta2} aria-hidden="true" />
+      <div className={styles.manchaTinta3} aria-hidden="true" />
+      <div className={`${styles.cantoOrnamental} ${styles.cantoSuperiorEsquerdo}`} aria-hidden="true" />
+      <div className={`${styles.cantoOrnamental} ${styles.cantoSuperiorDireito}`} aria-hidden="true" />
+      <div className={`${styles.cantoOrnamental} ${styles.cantoInferiorEsquerdo}`} aria-hidden="true" />
+      <div className={`${styles.cantoOrnamental} ${styles.cantoInferiorDireito}`} aria-hidden="true" />
+
       <Link href="/estudos" className={styles.btnVoltar}>
         <span className={styles.btnVoltarSeta}>←</span>
         <span className={styles.btnVoltarTexto}>Voltar</span>
@@ -197,7 +239,7 @@ export default function ConciliosPage() {
               <strong>4</strong>eras históricas
             </div>
           </div>
-            <div className={styles.raioDeLuz} aria-hidden="true" />
+          <div className={styles.raioDeLuz} aria-hidden="true" />
         </header>
 
         {/* ========================================
@@ -210,12 +252,7 @@ export default function ConciliosPage() {
             mundo, convocadas pelo papa ou confirmadas por ele, cujas
             definições doutrinárias e disciplinares obrigam a Igreja inteira.
             Não são episódios isolados: são elos de uma única corrente, cada
-            um respondendo a uma questão concreta do seu tempo — uma heresia
-            a refutar, um cisma a sarar, uma prática a esclarecer. O espaço
-            entre eles, abaixo, é proporcional ao tempo real que separou uma
-            geração de bispos da seguinte: alguns concílios se sucederam em
-            poucos anos; entre outros, a Igreja atravessou séculos inteiros
-            de silêncio conciliar antes de voltar a reunir-se.
+            um respondendo a uma questão concreta do seu tempo.
           </p>
         </div>
 
@@ -226,14 +263,10 @@ export default function ConciliosPage() {
           <div className={styles.espinha} aria-hidden="true" />
 
           {/* ============================================
-              CAMADA DECORATIVA (só após visitar Niceia I)
-              — imagem de Constantino à esquerda
-              — frases condenadas bagunçadas à direita
-              — carimbo grande e transparente por cima
+              DECORAÇÃO NICEIA I (Constantino + Frases)
               ============================================ */}
           {montado && niceiaVisto && (
             <>
-              {/* Imagem de Constantino */}
               <div className={styles.aquarela} aria-hidden="true">
                 <div
                   className={styles.aquarelaImg}
@@ -244,7 +277,6 @@ export default function ConciliosPage() {
                 />
               </div>
 
-              {/* Bloco de frases condenadas + carimbo único */}
               <div className={styles.condenadasArea} aria-hidden="true">
                 <div className={styles.condenadasBloco}>
                   <ul className={styles.condenadasLista}>
@@ -260,8 +292,6 @@ export default function ConciliosPage() {
                       </li>
                     ))}
                   </ul>
-
-                  {/* Carimbo GRANDE único cobrindo todas as frases */}
                   <span className={styles.carimboUnico}>CONDENADO</span>
                 </div>
               </div>
@@ -297,6 +327,201 @@ export default function ConciliosPage() {
                     className={styles.verbeteWrap}
                     style={{ '--gap-antes': `${gap}px` } as React.CSSProperties}
                   >
+                    {/* ============================================
+                        DECORAÇÃO CONSTANTINOPLA I (São Gregório + Frases)
+                        ============================================ */}
+                    {c.slug === 'constantinopla-1' && montado && constantinoplaVisto && (
+                      <>
+                        <div className={styles.aquarelaConstantinopla} aria-hidden="true">
+                          <div
+                            className={styles.aquarelaImgConstantinopla}
+                            style={{
+                              backgroundImage:
+                                "url('/estudos/concilios/niceia-1/sao-gregorio.png')",
+                            }}
+                          />
+                        </div>
+
+                        {/* Bloco CONDENADO — lado esquerdo (espelho de Niceia) */}
+                        <div className={styles.condenadasAreaConstantinopla} aria-hidden="true">
+                          <div className={styles.condenadasBlocoConstantinopla}>
+                            <ul className={styles.condenadasLista}>
+                              {FRASES_CONSTANTINOPLA.map((frase, i) => (
+                                <li
+                                  key={i}
+                                  className={styles.condenadaLinha}
+                                  style={{
+                                    transform: `rotate(${frase.rot}deg) translateX(${frase.offset}px)`,
+                                  }}
+                                >
+                                  &ldquo;{frase.texto}&rdquo;
+                                </li>
+                              ))}
+                            </ul>
+                            <span className={styles.carimboUnicoConstantinopla}>CONDENADO</span>
+                          </div>
+                        </div>
+                      </>
+                    )}
+
+                    {/* ============================================
+                        DECORAÇÃO ÉFESO (São Cirilo + Frases)
+                        ============================================ */}
+                    {c.slug === 'efeso' && montado && efesoVisto && (
+                      <>
+                        <div className={styles.aquarela} style={{ left: '-35rem', right: 'auto', top: '-110px',height: '580px', }} aria-hidden="true">
+                          <div
+                            className={styles.aquarelaImg}
+                            style={{
+                              backgroundImage:
+                                "url('/estudos/concilios/niceia-1/sao-cirilo.png')",
+                            }}
+                          />
+                        </div>
+
+                        {/* Bloco CONDENADO — lado esquerdo (em cima da aquarela) */}
+                        <div className={styles.condenadasArea} style={{ left: '25rem', right: 'auto',top: '40px', }} aria-hidden="true">
+                          <div className={styles.condenadasBloco}>
+                            <ul className={styles.condenadasLista} style={{
+        display: 'flex',
+        flexDirection: 'column',
+        gap: '9px',           // 🤏 Distância bem pequena entre cada frase
+        padding: 0,
+        margin: 0,
+      }}>
+                              {FRASES_EFESO.map((frase, i) => (
+                                <li
+                                  key={i}
+                                  className={styles.condenadaLinha}
+                                  style={{
+                                    transform: `rotate(${frase.rot}deg) translateX(${frase.offset}px)`,
+                                  }}
+                                >
+                                  &ldquo;{frase.texto}&rdquo;
+                                </li>
+                              ))}
+                            </ul>
+                            <span className={styles.carimboUnico}>CONDENADO</span>
+                          </div>
+                        </div>
+                      </>
+                    )}
+{/* ============================================
+    DECORAÇÃO CALCEDÔNIA (São Leão Magno + Frases)
+    ============================================ */}
+{c.slug === 'calcedonia' && montado && calcedoniaVisto && (
+  <>
+  <div
+  className={styles.aquarelaConstantinopla}
+  style={{
+    height: '550px',              // Aumenta a altura da área da imagem (ajuste se precisar)
+    top: '-150px',                 // Sobe a imagem para encaixar no topo
+   transform: 'scale(1.2) translateX(80px)',    // 👈 AUMENTA O TAMANHO GERAL DA IMAGEM (1.2 = 20% maior)
+    transformOrigin: 'top right', // Mantém o ponto de fixação no canto superior direito
+  }}
+  aria-hidden="true"
+>
+  <div
+    className={styles.aquarelaImgConstantinopla}
+    style={{
+      backgroundImage:
+        "url('/estudos/concilios/niceia-1/papa-leao-primerio.png')",
+    }}
+  />
+</div>
+
+    {/* Bloco CONDENADO — lado esquerdo */}
+    <div className={styles.condenadasAreaConstantinopla} aria-hidden="true"  style={{ top: '92px' }}>
+
+      <div className={styles.condenadasBlocoConstantinopla}>
+        <ul
+          className={styles.condenadasLista}
+          style={{
+            display: 'flex',
+            flexDirection: 'column',
+            gap: '8px',
+            padding: 0,
+            margin: 0,
+          }}
+        >
+          {FRASES_CALCEDONIA.map((frase, i) => (
+            <li
+              key={i}
+              className={styles.condenadaLinha}
+              style={{
+                transform: `rotate(${frase.rot}deg) translateX(${frase.offset}px)`,
+                whiteSpace: 'nowrap',
+              }}
+            >
+              &ldquo;{frase.texto}&rdquo;
+            </li>
+          ))}
+        </ul>
+        <span className={styles.carimboUnicoConstantinopla}>CONDENADO</span>
+      </div>
+    </div>
+  </>
+)}
+              {/* ============================================
+    DECORAÇÃO CONSTANTINOPLA II (Justiniano I + Frases)
+    ============================================ */}
+{c.slug === 'constantinopla-2' && montado && constantinopla2Visto && (
+  <>
+    <div
+      className={styles.aquarela}
+      style={{
+        left: '-35rem',
+        right: 'auto',
+        top: '-100px',
+        height: '600px',
+        transform: 'scale(1.1)',
+      }}
+      aria-hidden="true"
+    >
+      <div
+        className={styles.aquarelaImg}
+        style={{
+          backgroundImage:
+            "url('/estudos/concilios/niceia-1/Justiniano-1.png')",
+        }}
+      />
+    </div>
+
+    {/* Bloco CONDENADO */}
+    <div
+      className={styles.condenadasArea}
+      style={{ left: '25rem', right: 'auto', top: '92px' }}
+      aria-hidden="true"
+    >
+      <div className={styles.condenadasBloco}>
+        <ul
+          className={styles.condenadasLista}
+          style={{
+            display: 'flex',
+            flexDirection: 'column',
+            gap: '8px',
+            padding: 0,
+            margin: 0,
+          }}
+        >
+          {FRASES_CONSTANTINOPLA_2.map((frase, i) => (
+            <li
+              key={i}
+              className={styles.condenadaLinha}
+              style={{
+                transform: `rotate(${frase.rot}deg) translateX(${frase.offset}px)`,
+                whiteSpace: 'nowrap',
+              }}
+            >
+              &ldquo;{frase.texto}&rdquo;
+            </li>
+          ))}
+        </ul>
+        <span className={styles.carimboUnico}>CONDENADO</span>
+      </div>
+    </div>
+  </>
+)}
                     {mostrarIntervalo && (
                       <span className={styles.intervalo}>
                         + {intervalo} {intervalo === 1 ? 'ano' : 'anos'}
@@ -308,9 +533,7 @@ export default function ConciliosPage() {
                     <Link
                       href={`/estudos/concilios/${c.slug}`}
                       className={`${styles.verbete} ${lado}`}
-                      onClick={
-                        c.slug === 'niceia-1' ? marcarNiceiaVisto : undefined
-                      }
+                      onClick={() => marcarVisto(c.slug)}
                     >
                       <div className={styles.verbeteCabecalho}>
                         <span className={styles.verbeteNumero}>{c.num}</span>

@@ -1,44 +1,38 @@
 import styles from '../../_styles/biografia.module.css';
-import React from 'react';
 
-type TabelaProps =
-  | {
-      colunas: string[];
-      linhas: (string | React.ReactNode)[][];
-      children?: never;
-    }
-  | {
-      colunas?: never;
-      linhas?: never;
-      children: React.ReactNode;
-    };
+interface TabelaProps {
+  headers?: string[];
+  linhas?: (string | React.ReactNode)[][];
+  children?: React.ReactNode;
+}
 
-export default function Tabela(props: TabelaProps) {
-  // Uso via props (colunas + linhas)
-  if ('colunas' in props && props.colunas) {
-    const { colunas, linhas } = props;
-    return (
+export function Tabela({ headers, linhas, children }: TabelaProps) {
+  return (
+    <div className={styles.tabelaWrapper}>
       <table className={styles.tabela}>
-        <thead>
-          <tr>
-            {colunas.map((col, i) => (
-              <th key={i}>{col}</th>
-            ))}
-          </tr>
-        </thead>
-        <tbody>
-          {linhas.map((linha, i) => (
-            <tr key={i}>
-              {linha.map((cel, j) => (
-                <td key={j}>{cel}</td>
+        {headers && headers.length > 0 && (
+          <thead>
+            <tr>
+              {headers.map((h, i) => (
+                <th key={i}>{h}</th>
               ))}
             </tr>
-          ))}
-        </tbody>
+          </thead>
+        )}
+        {linhas ? (
+          <tbody>
+            {linhas.map((row, i) => (
+              <tr key={i}>
+                {row.map((cell, j) => (
+                  <td key={j}>{cell}</td>
+                ))}
+              </tr>
+            ))}
+          </tbody>
+        ) : (
+          children
+        )}
       </table>
-    );
-  }
-
-  // Uso via children (JSX de tabela)
-  return <table className={styles.tabela}>{props.children}</table>;
+    </div>
+  );
 }

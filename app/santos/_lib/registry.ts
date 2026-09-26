@@ -365,7 +365,6 @@ const DADOS_BRUTOS: EntradaBruta[] = [
   { nome: 'São Domingos Sávio', categorias: ['Justo'],pasta: 'leigos', img: 'S' },
   { nome: 'São Giuseppe Moscati', categorias: ['Médico', 'Justo'], imagemPasta: 'leigos', img: '' },
   { nome: 'Santa Gianna Beretta Molla', categorias: ['Médica', 'Justa'], imagemPasta: 'leigos', img: '' },
-  { nome: 'São Isidoro Lavrador', categorias: ['Justo'], imagemPasta: 'leigos', img: '' },
   { nome: 'Santa Zita', categorias: ['Justa'], imagemPasta: 'leigos', img: '' },
   { nome: 'São Roque', categorias: ['Justo'], imagemPasta: 'leigos', img: '' },
   { nome: 'Santa Kateri Tekakwitha', categorias: ['Justa'], imagemPasta: 'leigos', img: '' },
@@ -375,6 +374,7 @@ const DADOS_BRUTOS: EntradaBruta[] = [
   { nome: 'São Homobono', categorias: ['Justo'], imagemPasta: 'leigos', img: '' },
   { nome: 'São Gonçalo de Amarante', categorias: ['Justo'], imagemPasta: 'leigos', img: '' },
   { nome: 'Santa Brígida de Kildare', categorias: ['Abadessa'], imagemPasta: 'leigos', img: '' },
+  { nome: 'São Isidoro Lavrador', categorias: ['Justo'], pasta: 'leigos', img: 'S' },
 ];
 
 /* ============================================================
@@ -392,7 +392,7 @@ export const SANTOS: SantoRegistry[] = DADOS_BRUTOS
       slug,
       categorias: s.categorias,
       pasta: s.pasta,
-      temBiografia: !!s.pasta,
+      temBiografia: temImg,
       imagemCard: (temImg && pastaImg)
         ? `/santos/cards/${pastaImg}/${slug}.png`
         : undefined,
@@ -427,13 +427,13 @@ export function getSantosPorCategoria(categoria: Categoria): SantoRegistry[] {
 
 export function getTodasCategorias(): Categoria[] {
   const set = new Set<Categoria>();
-  SANTOS.forEach((s) => s.categorias.forEach((c) => set.add(c)));
+  SANTOS.filter((s) => s.temBiografia).forEach((s) => s.categorias.forEach((c) => set.add(c)));
   return Array.from(set);
 }
 
 export function getContagemPorCategoria(): Record<string, number> {
   const contagem: Record<string, number> = {};
-  SANTOS.forEach((s) => {
+  SANTOS.filter((s) => s.temBiografia).forEach((s) => {
     s.categorias.forEach((c) => {
       contagem[c] = (contagem[c] ?? 0) + 1;
     });

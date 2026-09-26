@@ -1,0 +1,155 @@
+.wrapper {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  z-index: 999999;
+  animation: deslizarParaCima 0.5s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+}
+
+.caixa {
+  width: 340px;
+  background-color: #FAF8F5; /* Cor de pergaminho/marfim */
+  border: 1px solid #D4AF37; /* Borda ouro */
+  border-radius: 4px;
+  box-shadow: 0 10px 30px rgba(44, 36, 26, 0.15), 
+              0 0 15px rgba(212, 175, 55, 0.1);
+  padding: 16px 16px 12px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  overflow: hidden;
+  position: relative;
+}
+
+.conteudo {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.icone {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  background-color: #F4EFE6;
+  border: 1px solid rgba(212, 175, 55, 0.4);
+  border-radius: 50%;
+  color: #c5a059;
+  flex-shrink: 0;
+}
+
+.textos {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.titulo {
+  font-family: 'Cinzel', serif;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  color: #9e782f;
+  text-transform: uppercase;
+}
+
+.mensagem {
+  font-family: 'Georgia', serif;
+  font-size: 0.875rem;
+  line-height: 1.4;
+  color: #3e3222;
+  margin: 0;
+}
+
+.botoes {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  border-top: 1px solid rgba(212, 175, 55, 0.2);
+  padding-top: 10px;
+}
+
+.btnNao {
+  background: transparent;
+  border: none;
+  font-family: 'Cinzel', serif;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #8c7b65;
+  cursor: pointer;
+  padding: 6px 12px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.btnNao:hover {
+  color: #3e3222;
+}
+
+.btnSim {
+  background-color: #c5a059;
+  border: 1px solid #b89327;
+  border-radius: 2px;
+  font-family: 'Cinzel', serif;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #FAF8F5;
+  cursor: pointer;
+  padding: 6px 16px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  transition: background-color 0.2s;
+}
+
+.btnSim:hover {
+  background-color: #9e782f;
+}
+
+/* Barra de Progresso Dourada (6 Segundos) */
+.barraProgressoTrack {
+  width: calc(100% + 32px);
+  margin-left: -16px;
+  margin-bottom: -12px;
+  height: 3px;
+  background-color: rgba(212, 175, 55, 0.15);
+}
+
+.barraProgresso {
+  height: 100%;
+  background: linear-gradient(90deg, #c5a059, #e6c875);
+  width: 100%;
+  animation: contagemRegressiva 6s linear forwards;
+}
+
+@keyframes contagemRegressiva {
+  from {
+    width: 100%;
+  }
+  to {
+    width: 0%;
+  }
+}
+
+@keyframes deslizarParaCima {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 480px) {
+  .wrapper {
+    bottom: 16px;
+    right: 16px;
+    left: 16px;
+  }
+  .caixa {
+    width: auto;
+  }
+}

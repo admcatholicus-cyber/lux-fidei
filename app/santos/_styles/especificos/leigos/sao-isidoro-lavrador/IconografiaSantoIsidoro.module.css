@@ -1,0 +1,503 @@
+/* =======================================
+   ESTILOS GERAIS
+   ======================================= */
+.page {
+  width: 100%;
+  max-width: 1160px;
+  margin: 0 auto;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 64px;
+}
+
+.eyebrow {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.65rem;
+  font-weight: 600;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: #b08a3c;
+  margin: 0 0 12px;
+}
+
+/* =======================================
+   HERO 
+   ======================================= */
+.hero {
+  position: relative;
+  width: 100%;
+  height: 540px;
+  border-radius: 6px;
+  overflow: hidden;
+  display: flex;
+  align-items: flex-end;
+  padding: 56px;
+  background-color: #3d3d2e;
+}
+
+.heroImage {
+  position: absolute;
+  inset: 0;
+  background-image: url('/santos/biografia/leigos/sao-isidoro-lavrador/iconografia/5-sao-isidoro-oracao.webp');
+  background-size: cover;
+  background-position: center 30%;
+  opacity: 0.7;
+}
+
+.heroOverlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, transparent 20%, rgba(42, 37, 32, 0.6) 60%, rgba(20, 18, 15, 0.95) 100%);
+}
+
+.heroContent {
+  position: relative;
+  z-handle: 2;
+  max-width: 640px;
+}
+
+.kicker {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #d4b872;
+  margin-bottom: 16px;
+}
+
+.heroContent h1 {
+  font-family: 'Libre Baskerville', Georgia, serif;
+  font-size: clamp(2rem, 4vw, 3.2rem);
+  font-weight: 700;
+  color: #faf8f4;
+  margin: 0 0 16px;
+  line-height: 1.15;
+}
+
+.heroLead {
+  font-family: Georgia, serif;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #c8bfa8;
+  margin: 0;
+}
+
+/* =======================================
+   ATRIBUTOS (GRAMÁTICA VISUAL)
+   ======================================= */
+.sectionHead {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.sectionHead h2 {
+  font-family: 'Libre Baskerville', Georgia, serif;
+  font-size: clamp(1.4rem, 2.5vw, 1.8rem);
+  color: #2a2520;
+  margin: 0;
+}
+
+.attributeGrid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  justify-content: center;
+}
+
+.attributeCard {
+  background: #ffffff;
+  border: 1px solid #e2dcd0;
+  border-radius: 6px;
+  padding: 24px;
+  width: calc(33.333% - 11px);
+  min-width: 240px;
+  text-align: center;
+}
+
+.attrNum {
+  display: block;
+  font-family: 'Libre Baskerville', Georgia, serif;
+  font-size: 1.6rem;
+  color: #b08a3c;
+  margin-bottom: 12px;
+}
+
+.attributeCard h3 {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #3a3530;
+  margin: 0 0 8px;
+}
+
+.attributeCard p {
+  font-family: Georgia, serif;
+  font-size: 0.9rem;
+  color: #6f6758;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* =======================================
+   INTRODUÇÃO
+   ======================================= */
+.introBloco {
+  max-width: 780px;
+  margin: 0 auto;
+  padding: 32px 48px;
+  background: #faf8f4;
+  border: 1px solid #e2dcd0;
+  border-left: 3px solid #b08a3c;
+}
+
+.introBloco p {
+  font-family: Georgia, serif;
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: #3a3530;
+  margin: 0;
+  text-align: justify;
+}
+
+/* =======================================
+   GALERIA E MURO ASSIMÉTRICO
+   ======================================= */
+.galleryHead {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  border-bottom: 1px solid #e2dcd0;
+  padding-bottom: 24px;
+  margin-bottom: 24px;
+}
+
+.galleryHead h2 {
+  font-family: 'Libre Baskerville', Georgia, serif;
+  font-size: 1.8rem;
+  color: #2a2520;
+  margin: 0;
+}
+
+.galleryHead p {
+  font-family: Georgia, serif;
+  font-style: italic;
+  color: #6f6758;
+  max-width: 400px;
+  text-align: right;
+  margin: 0;
+}
+
+.galleryControls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 32px;
+}
+
+.galleryControls div {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.galleryControls button {
+  background: transparent;
+  border: 1px solid #e2dcd0;
+  border-radius: 20px;
+  padding: 6px 16px;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #6f6758;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.galleryControls button:hover,
+.galleryControls button.isActive {
+  background: #b08a3c;
+  color: #ffffff;
+  border-color: #b08a3c;
+}
+
+.galleryControls span {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.75rem;
+  color: #6f6758;
+}
+
+/* O Muro (Grid Inteligente) */
+.wall {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: 220px;
+  gap: 16px;
+  grid-auto-flow: dense;
+}
+
+.artCard {
+  position: relative;
+  border: none;
+  background: #e2dcd0;
+  border-radius: 6px;
+  overflow: hidden;
+  cursor: pointer;
+  padding: 0;
+  transition: transform 0.2s;
+}
+
+.artCard:hover {
+  transform: translateY(-3px);
+}
+
+.artCard img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s;
+}
+
+.artCard:hover img {
+  transform: scale(1.04);
+}
+
+/* Regras de Proporção (O Segredo da Assimetria) */
+.vertical {
+  grid-column: span 1;
+  grid-row: span 2;
+}
+
+.horizontal {
+  grid-column: span 2;
+  grid-row: span 1;
+}
+
+.cardShade {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.85) 0%, transparent 60%);
+  opacity: 0.9;
+}
+
+.cardInfo {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  right: 20px;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.cardInfo small {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.6rem;
+  text-transform: uppercase;
+  color: #d4b872;
+  margin-bottom: 6px;
+}
+
+.cardInfo strong {
+  font-family: 'Libre Baskerville', Georgia, serif;
+  font-size: 1.1rem;
+  color: #ffffff;
+  margin-bottom: 4px;
+  line-height: 1.2;
+}
+
+.cardInfo em {
+  font-family: Georgia, serif;
+  font-size: 0.85rem;
+  color: #ece8df;
+  font-style: normal;
+}
+
+.openMark {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  background: rgba(176, 138, 60, 0.9);
+  color: white;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8rem;
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+
+.artCard:hover .openMark {
+  opacity: 1;
+}
+
+/* =======================================
+   MODAL (DIALOG)
+   ======================================= */
+.dialogLayer {
+  position: fixed;
+  inset: 0;
+  background: rgba(20, 18, 15, 0.85);
+  backdrop-filter: blur(4px);
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+}
+
+.dialog {
+  background: #faf8f4;
+  border-radius: 8px;
+  display: flex;
+  width: 100%;
+  max-width: 960px;
+  max-height: 85vh;
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+}
+
+.close {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  background: #e2dcd0;
+  border: none;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  font-size: 1.2rem;
+  color: #3a3530;
+  cursor: pointer;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.close:hover {
+  background: #b08a3c;
+  color: white;
+}
+
+.dialogImgBox {
+  flex: 1.2;
+  background: #0e0c08;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+}
+
+.dialogImgBox img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+}
+
+.dialogContent {
+  flex: 1;
+  padding: 48px 40px;
+  overflow-y: auto;
+}
+
+.dialogContent h3 {
+  font-family: 'Libre Baskerville', Georgia, serif;
+  font-size: 1.8rem;
+  color: #2a2520;
+  margin: 0 0 8px;
+  line-height: 1.2;
+}
+
+.dialogSubtitle {
+  font-family: Georgia, serif;
+  font-size: 1rem;
+  color: #b08a3c;
+  font-style: italic;
+  margin: 0 0 24px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid #e2dcd0;
+}
+
+.dialogText {
+  font-family: Georgia, serif;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #4a4540;
+  margin: 0 0 32px;
+}
+
+.dialogContent dl {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin: 0;
+}
+
+.dialogContent div {
+  display: flex;
+  flex-direction: column;
+}
+
+.dialogContent dt {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.65rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: #b08a3c;
+  margin-bottom: 2px;
+}
+
+.dialogContent dd {
+  margin: 0;
+  font-family: Georgia, serif;
+  font-size: 0.95rem;
+  color: #2a2520;
+}
+
+/* =======================================
+   NOTA FINAL
+   ======================================= */
+.notaFinal {
+  max-width: 780px;
+  margin: 0 auto 32px;
+  padding: 24px 32px;
+  border-left: 3px solid #e2dcd0;
+}
+
+.notaFinal p:last-child {
+  font-family: Georgia, serif;
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: #6f6758;
+  margin: 0;
+}
+
+/* =======================================
+   RESPONSIVO
+   ======================================= */
+@media (max-width: 900px) {
+  .hero { padding: 40px 24px; height: 460px; }
+  .attributeCard { width: calc(50% - 8px); }
+  .wall { grid-template-columns: repeat(2, 1fr); }
+  .horizontal, .vertical { grid-column: span 1; grid-row: span 1; aspect-ratio: 1; }
+  .dialog { flex-direction: column; max-height: 90vh; }
+  .dialogImgBox { flex: none; height: 40vh; padding: 16px; }
+  .dialogContent { padding: 24px; }
+  .galleryHead { flex-direction: column; align-items: flex-start; gap: 16px; }
+  .galleryHead p { text-align: left; }
+}
+
+@media (max-width: 600px) {
+  .attributeCard { width: 100%; }
+  .wall { grid-template-columns: 1fr; }
+  .galleryControls { flex-direction: column; align-items: flex-start; gap: 16px; }
+}

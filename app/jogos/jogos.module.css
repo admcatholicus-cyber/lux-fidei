@@ -1,0 +1,600 @@
+/* =========================================
+   JOGOS — LUX FIDEI
+   Design editorial premium católico
+   ========================================= */
+
+.jogosMain {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 60px 30px;
+}
+
+/* =========================================
+   HERO
+   ========================================= */
+.hero {
+  text-align: center;
+  padding: 40px 20px 60px;
+  border-bottom: 1px solid #e2dcd0;
+  margin-bottom: 50px;
+}
+
+.heroOrnamento {
+  display: block;
+  color: #b08a3c;
+  font-size: 18px;
+  letter-spacing: 4px;
+  margin-bottom: 20px;
+  opacity: 0.7;
+}
+
+.heroTitulo {
+  font-family: 'Cinzel', 'Libre Baskerville', Georgia, serif;
+  font-size: 42px;
+  font-weight: 500;
+  color: #3a3530;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  margin: 0 0 15px 0;
+  line-height: 1.2;
+}
+
+.heroSubtitulo {
+  font-family: 'EB Garamond', Georgia, serif;
+  font-style: italic;
+  font-size: 20px;
+  color: #6f6758;
+  margin: 0 0 25px 0;
+}
+
+.heroLinha {
+  width: 100px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, #b08a3c, transparent);
+  margin: 0 auto 30px;
+}
+
+.heroTexto {
+  font-family: 'EB Garamond', Georgia, serif;
+  font-style: italic;
+  font-size: 18px;
+  color: #4a4540;
+  max-width: 600px;
+  margin: 0 auto 15px;
+  line-height: 1.7;
+}
+
+.heroTextoAutor {
+  display: inline-block;
+  margin-top: 8px;
+  font-family: 'Cinzel', serif;
+  font-style: normal;
+  font-size: 13px;
+  color: #b08a3c;
+  letter-spacing: 2px;
+}
+
+.heroDescricao {
+  font-family: 'EB Garamond', Georgia, serif;
+  font-size: 15px;
+  color: #6f6758;
+  max-width: 650px;
+  margin: 30px auto 0;
+  line-height: 1.7;
+}
+
+/* =========================================
+   ESTATÍSTICAS
+   ========================================= */
+.stats {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  padding: 30px;
+  background: linear-gradient(135deg, #faf8f4, #ffffff);
+  border: 1px solid #e2dcd0;
+  border-radius: 2px;
+  margin-bottom: 40px;
+  position: relative;
+}
+
+.stats::before,
+.stats::after {
+  content: '';
+  position: absolute;
+  left: 20px;
+  right: 20px;
+  height: 1px;
+  background: #d4c9a8;
+  opacity: 0.4;
+}
+
+.stats::before { top: 10px; }
+.stats::after { bottom: 10px; }
+
+.statBox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+}
+
+.statNumero {
+  font-family: 'Libre Baskerville', Georgia, serif;
+  font-size: 36px;
+  color: #b08a3c;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.statLabel {
+  font-family: 'Cinzel', serif;
+  font-size: 11px;
+  color: #6f6758;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.statDivisor {
+  color: #d4b872;
+  font-size: 12px;
+  opacity: 0.5;
+}
+
+/* =========================================
+   FILTROS
+   ========================================= */
+.filtros {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 50px;
+  flex-wrap: wrap;
+}
+
+.filtroBtn {
+  background: transparent;
+  border: 1px solid #d4c9a8;
+  color: #6f6758;
+  padding: 10px 25px;
+  font-family: 'Cinzel', serif;
+  font-size: 12px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border-radius: 2px;
+}
+
+.filtroBtn:hover {
+  border-color: #b08a3c;
+  color: #b08a3c;
+}
+
+.filtroBtn.ativo {
+  background: #b08a3c;
+  border-color: #b08a3c;
+  color: #fff;
+}
+
+/* =========================================
+   GRID DE JOGOS
+   ========================================= */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+  gap: 30px;
+  margin-bottom: 60px;
+}
+
+/* =========================================
+   CARD DE JOGO
+   ========================================= */
+.card {
+  background: #ffffff;
+  border: 1px solid #e2dcd0;
+  border-radius: 3px;
+  overflow: hidden;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.card::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 3px;
+  background: linear-gradient(180deg, #d4b872, #b08a3c, #d4b872);
+  transform: scaleY(0);
+  transform-origin: top;
+  transition: transform 0.4s ease;
+  z-index: 3;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 40px rgba(176, 138, 60, 0.12);
+  border-color: #d4c9a8;
+}
+
+.card:hover::before {
+  transform: scaleY(1);
+}
+
+/* CARD DESTAQUE */
+.card.destaque {
+  border: 1px solid #d4b872;
+  background: linear-gradient(135deg, #ffffff 0%, #faf8f4 100%);
+}
+
+.destaqueBadge {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: rgba(176, 138, 60, 0.95);
+  color: #fff;
+  padding: 6px 14px;
+  border-radius: 2px;
+  font-family: 'Cinzel', serif;
+  font-size: 10px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-weight: 600;
+  z-index: 5;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+.destaqueBadge span {
+  font-size: 12px;
+}
+
+/* CARD EM BREVE */
+.card.emBreve {
+  opacity: 0.85;
+}
+
+.card.emBreve:hover {
+  opacity: 1;
+}
+
+/* =========================================
+   IMAGEM DO CARD
+   ========================================= */
+.cardImagem {
+  position: relative;
+  height: 340px; /* Aumentado de 220px para 340px para revelar a arte completa */
+  overflow: hidden;
+  background: #faf8f4;
+}
+
+.cardImagem img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 25%; /* Centraliza o foco na Teresinha e no monstro */
+  transition: transform 0.6s ease;
+}
+
+.card:hover .cardImagem img {
+  transform: scale(1.08);
+}
+
+.cardImagemPlaceholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  background: linear-gradient(135deg, #faf8f4 0%, #ece8df 100%);
+  border-bottom: 1px solid #e2dcd0;
+}
+
+.placeholderCruz {
+  font-size: 48px;
+  color: #d4b872;
+  opacity: 0.6;
+}
+
+.placeholderTexto {
+  font-family: 'Cinzel', serif;
+  font-size: 12px;
+  color: #999;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.cardOverlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 15px;
+  background: linear-gradient(to top, rgba(0,0,0,0.7), transparent);
+}
+
+.cardCategoria {
+  color: #fff;
+  font-family: 'Cinzel', serif;
+  font-size: 11px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+.card.emBreve .cardOverlay {
+  background: linear-gradient(to top, rgba(58, 53, 48, 0.4), transparent);
+}
+
+.card.emBreve .cardCategoria {
+  color: #6f6758;
+}
+
+/* =========================================
+   CONTEÚDO DO CARD
+   ========================================= */
+.cardConteudo {
+  padding: 25px 25px 30px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.cardSanto {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: 'Cinzel', serif;
+  font-size: 10px;
+  color: #b08a3c;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+  font-weight: 600;
+}
+
+.cardSantoIcone {
+  font-size: 12px;
+  opacity: 0.7;
+}
+
+.cardTitulo {
+  font-family: 'Libre Baskerville', Georgia, serif;
+  font-size: 24px;
+  font-weight: 700;
+  color: #2a2520;
+  margin: 0 0 6px 0;
+  line-height: 1.3;
+}
+
+.cardSubtitulo {
+  font-family: 'EB Garamond', Georgia, serif;
+  font-style: italic;
+  font-size: 15px;
+  color: #6f6758;
+  margin: 0 0 20px 0;
+  line-height: 1.4;
+}
+
+.cardCorpo {
+  border-left: 2px solid #ece8df;
+  padding-left: 15px;
+  margin-bottom: 25px;
+  flex: 1;
+}
+
+.cardCorpo p {
+  font-family: 'EB Garamond', Georgia, serif;
+  font-size: 15px;
+  line-height: 1.6;
+  color: #4a4540;
+  margin: 0;
+}
+
+/* META (DIFICULDADE / DURAÇÃO) */
+.cardMeta {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 15px 0;
+  border-top: 1px solid #ece8df;
+  border-bottom: 1px solid #ece8df;
+  margin-bottom: 25px;
+}
+
+.cardMetaItem {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  flex: 1;
+}
+
+.metaLabel {
+  font-family: 'Cinzel', serif;
+  font-size: 9px;
+  color: #999;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.metaValor {
+  font-family: 'EB Garamond', Georgia, serif;
+  font-size: 14px;
+  color: #3a3530;
+  font-weight: 500;
+}
+
+.cardMetaDivisor {
+  width: 1px;
+  height: 30px;
+  background: #ece8df;
+}
+
+/* =========================================
+   BOTÃO DO CARD
+   ========================================= */
+.cardBotao {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background: linear-gradient(135deg, #b08a3c, #8c6a28);
+  color: #fff;
+  text-decoration: none;
+  padding: 14px 20px;
+  font-family: 'Cinzel', serif;
+  font-size: 12px;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  font-weight: 600;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+  border: none;
+  cursor: pointer;
+}
+
+.cardBotao:hover {
+  background: linear-gradient(135deg, #8c6a28, #6d5220);
+  box-shadow: 0 6px 15px rgba(176, 138, 60, 0.35);
+}
+
+.botaoSeta {
+  transition: transform 0.3s ease;
+  font-size: 14px;
+}
+
+.cardBotao:hover .botaoSeta {
+  transform: translateX(6px);
+}
+
+.cardBotaoDisabled {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  color: #999;
+  border: 1px dashed #d4c9a8;
+  padding: 14px 20px;
+  font-family: 'Cinzel', serif;
+  font-size: 12px;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  font-weight: 600;
+  border-radius: 2px;
+  cursor: not-allowed;
+}
+
+/* =========================================
+   CITAÇÃO FINAL
+   ========================================= */
+.citacao {
+  text-align: center;
+  padding: 60px 30px;
+  margin-top: 40px;
+  border-top: 1px solid #e2dcd0;
+}
+
+.citacaoOrnamento {
+  display: block;
+  color: #b08a3c;
+  font-size: 20px;
+  margin-bottom: 20px;
+  opacity: 0.6;
+}
+
+.citacao blockquote {
+  font-family: 'EB Garamond', Georgia, serif;
+  font-style: italic;
+  font-size: 20px;
+  color: #3a3530;
+  line-height: 1.6;
+  max-width: 700px;
+  margin: 0 auto 15px;
+  quotes: '\201C' '\201D';
+}
+
+.citacao blockquote::before { content: open-quote; }
+.citacao blockquote::after { content: close-quote; }
+
+.citacao cite {
+  font-family: 'Cinzel', serif;
+  font-style: normal;
+  font-size: 12px;
+  color: #b08a3c;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+
+/* =========================================
+   RESPONSIVO
+   ========================================= */
+@media (max-width: 860px) {
+  .jogosMain {
+    padding: 40px 20px;
+  }
+
+  .heroTitulo {
+    font-size: 28px;
+    letter-spacing: 2px;
+  }
+
+  .heroSubtitulo {
+    font-size: 16px;
+  }
+
+  .heroTexto {
+    font-size: 16px;
+  }
+
+  .heroDescricao {
+    font-size: 14px;
+  }
+
+  .stats {
+    gap: 20px;
+    padding: 20px 15px;
+  }
+
+  .statNumero {
+    font-size: 28px;
+  }
+
+  .statLabel {
+    font-size: 10px;
+    letter-spacing: 1.5px;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+
+  .cardImagem {
+    height: 180px;
+  }
+
+  .cardTitulo {
+    font-size: 20px;
+  }
+
+  .cardConteudo {
+    padding: 20px;
+  }
+
+  .citacao {
+    padding: 40px 20px;
+  }
+
+  .citacao blockquote {
+    font-size: 16px;
+  }
+}

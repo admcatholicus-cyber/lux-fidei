@@ -1,0 +1,683 @@
+/* estudos/concilios/calcedonia/calcedonia.module.css */
+
+/* =============================================
+   VARIÁVEIS E TOKENS DE COR (Calcedônia)
+   Paleta: dourado imperial + púrpura + vermelho
+   ============================================= */
+
+:root {
+  --calc-gold: #8b6508;
+  --calc-gold-light: #c4a96a;
+  --calc-gold-bg: #f7f1e5;
+  --calc-gold-border: #e4dac8;
+  --calc-purple: #3a1f5c;
+  --calc-purple-mid: #5b2c83;
+  --calc-red: #bd3a29;
+  --calc-red-light: #fde8e8;
+  --calc-text: #3e3328;
+  --calc-text-muted: #6b5839;
+  --calc-text-faint: #8a7e74;
+  --calc-bg-card: #fdfbf7;
+  --calc-bg-highlight: #f8f4ec;
+  --calc-bg-quote: #f5ece1;
+  --calc-border: #e0d7c6;
+  --calc-border-dashed: #e2d9cb;
+}
+
+/* =============================================
+   DIVISOR ENTRE SEÇÕES
+   ============================================= */
+.divisor {
+  border: none;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    var(--calc-gold-light) 30%,
+    var(--calc-gold) 50%,
+    var(--calc-gold-light) 70%,
+    transparent 100%
+  );
+  margin: 3rem 0;
+}
+
+/* =============================================
+   FICHA RÁPIDA (CARDS SUPERIORES)
+   ============================================= */
+.fichaRapida {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  margin: 1.5rem 0 2rem;
+}
+
+.fichaCard {
+  background: var(--calc-bg-card);
+  border: 1px solid var(--calc-gold-border);
+  border-radius: 12px;
+  padding: 1.15rem 1.25rem;
+  box-shadow: 0 2px 8px rgba(139, 101, 8, 0.06);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.fichaCard:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(139, 101, 8, 0.1);
+}
+
+.fichaLabel {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--calc-gold);
+  margin-bottom: 0.4rem;
+}
+
+.fichaValor {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--calc-purple);
+  line-height: 1.45;
+}
+
+.fichaValor small {
+  font-weight: 400;
+  font-size: 0.82rem;
+  color: var(--calc-text-muted);
+}
+
+/* =============================================
+   SEÇÕES PRINCIPAIS
+   ============================================= */
+.secao {
+  margin-bottom: 2.5rem;
+}
+
+.secaoTitulo {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(1.35rem, 2.5vw, 1.7rem);
+  font-weight: 700;
+  color: var(--calc-purple);
+  letter-spacing: -0.015em;
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid var(--calc-gold-border);
+}
+
+.secaoIcone {
+  font-size: 1.3rem;
+  line-height: 1;
+}
+
+.secaoIconeImg {
+  width: 28px;
+  height: 28px;
+  object-fit: contain;
+  opacity: 0.85;
+}
+
+.secaoTexto {
+  font-size: 1.02rem;
+  line-height: 1.75;
+  color: var(--calc-text);
+  margin-bottom: 0.85rem;
+}
+
+/* =============================================
+   DESTAQUE (CAIXAS DE CITAÇÃO / ALERTA)
+   ============================================= */
+.destaque {
+  background: var(--calc-bg-highlight);
+  border-left: 4px solid var(--calc-gold);
+  border-radius: 0 10px 10px 0;
+  padding: 1.25rem 1.5rem;
+  margin: 1.5rem 0;
+  font-size: 1.02rem;
+  line-height: 1.7;
+  color: var(--calc-text);
+  text-align: center;
+  font-style: italic;
+  font-family: Georgia, "Times New Roman", serif;
+}
+
+.destaque strong {
+  color: var(--calc-gold);
+  font-style: normal;
+}
+
+/* =============================================
+   GRID DE CARDS (HERESIAS, PARTIDOS, FONTES, ETC.)
+   ============================================= */
+.heresiasGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.15rem;
+}
+
+.heresiaCard {
+  background: #fff;
+  border: 1px solid var(--calc-gold-border);
+  border-radius: 12px;
+  padding: 1.25rem 1.35rem;
+  box-shadow: 0 2px 8px rgba(43, 17, 48, 0.04);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.heresiaCard:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(43, 17, 48, 0.08);
+}
+
+.heresiaNome {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--calc-purple);
+  margin-bottom: 0.35rem;
+  line-height: 1.35;
+}
+
+.heresiaLider {
+  font-size: 0.88rem;
+  color: var(--calc-text-muted);
+  margin-bottom: 0.4rem;
+  line-height: 1.5;
+}
+
+.heresiaErro {
+  font-size: 0.95rem;
+  line-height: 1.65;
+  color: var(--calc-text);
+}
+
+/* =============================================
+   LISTA DE RESULTADOS / BULLETS DOURADOS
+   ============================================= */
+.resultadosLista {
+  list-style: none;
+  padding: 0;
+  margin: 0.75rem 0;
+}
+
+.resultadosLista li {
+  position: relative;
+  padding-left: 1.5rem;
+  margin-bottom: 0.65rem;
+  font-size: 0.98rem;
+  line-height: 1.65;
+  color: var(--calc-text);
+}
+
+.resultadosLista li::before {
+  content: "✦";
+  position: absolute;
+  left: 0;
+  top: 0.1rem;
+  color: var(--calc-gold);
+  font-size: 0.75rem;
+}
+
+/* =============================================
+   LINHA DO TEMPO / PRESIDENTES / SESSÕES
+   ============================================= */
+.presidentesLista {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.presidenteItem {
+  display: flex;
+  gap: 1.25rem;
+  padding: 1.15rem 0;
+  border-bottom: 1px solid var(--calc-border);
+  align-items: flex-start;
+}
+
+.presidenteItem:last-child {
+  border-bottom: none;
+}
+
+.presidenteFase {
+  flex-shrink: 0;
+  min-width: 100px;
+  max-width: 130px;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--calc-gold);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  padding-top: 0.15rem;
+  text-align: right;
+}
+
+.presidenteInfo {
+  flex: 1;
+}
+
+.presidenteInfo h4 {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--calc-purple);
+  margin: 0 0 0.3rem;
+  line-height: 1.35;
+}
+
+.presidenteInfo p {
+  font-size: 0.95rem;
+  line-height: 1.65;
+  color: var(--calc-text);
+  margin: 0;
+}
+
+/* =============================================
+   NAVEGAÇÃO INFERIOR (LINK PARA DOCUMENTOS)
+   ============================================= */
+.navLinks {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin: 3rem 0 1rem;
+  flex-wrap: wrap;
+}
+
+.navLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: linear-gradient(135deg, var(--calc-purple) 0%, var(--calc-purple-mid) 100%);
+  color: #fff;
+  text-decoration: none;
+  padding: 0.9rem 1.8rem;
+  border-radius: 999px;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1rem;
+  font-weight: 700;
+  box-shadow: 0 6px 20px rgba(91, 44, 131, 0.25);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.navLink:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 28px rgba(91, 44, 131, 0.32);
+}
+
+/* =============================================
+   BADGE DE GRAVIDADE (MITOS)
+   ============================================= */
+.badgeAlta {
+  background: var(--calc-red-light);
+  color: var(--calc-red);
+}
+
+.badgeMedia {
+  background: #fff4e0;
+  color: var(--calc-gold);
+}
+
+.badgeBaixa {
+  background: #eef6ee;
+  color: #2d6a4f;
+}
+
+/* =============================================
+   TABELA COMPARATIVA (CREDOS / NATUREZAS)
+   ============================================= */
+.tabelaComparativa {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.25rem 0;
+  font-size: 0.92rem;
+}
+
+.tabelaComparativa th {
+  background: var(--calc-purple);
+  color: #fff;
+  font-family: Georgia, "Times New Roman", serif;
+  font-weight: 700;
+  padding: 0.75rem 1rem;
+  text-align: left;
+  font-size: 0.88rem;
+}
+
+.tabelaComparativa td {
+  padding: 0.7rem 1rem;
+  border-bottom: 1px solid var(--calc-border);
+  color: var(--calc-text);
+  line-height: 1.55;
+  vertical-align: top;
+}
+
+.tabelaComparativa tr:nth-child(even) td {
+  background: var(--calc-bg-card);
+}
+
+.tabelaComparativa tr:hover td {
+  background: var(--calc-bg-highlight);
+}
+
+/* =============================================
+   BLOCO DE TEXTO LITÚRGICO / CREDO / DEFINIÇÃO
+   ============================================= */
+.blocoDefinicao {
+  background: var(--calc-bg-card);
+  border: 2px solid var(--calc-gold-light);
+  border-radius: 14px;
+  padding: 2rem 2.25rem;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.1rem;
+  line-height: 1.85;
+  color: var(--calc-text);
+  box-shadow: 0 4px 16px rgba(139, 101, 8, 0.08);
+  position: relative;
+  overflow: hidden;
+}
+
+.blocoDefinicao::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(
+    90deg,
+    var(--calc-purple) 0%,
+    var(--calc-gold) 50%,
+    var(--calc-purple) 100%
+  );
+}
+
+.blocoDefinicao p {
+  margin-bottom: 0.85rem;
+}
+
+.blocoDefinicao p:last-child {
+  margin-bottom: 0;
+}
+
+/* =============================================
+   CARD DE PERSONAGEM (PROSOPOGRAFIA)
+   ============================================= */
+.personagemCard {
+  background: #fff;
+  border: 1px solid var(--calc-gold-border);
+  border-radius: 12px;
+  padding: 1.5rem 1.5rem 1.25rem;
+  box-shadow: 0 2px 8px rgba(43, 17, 48, 0.04);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.personagemCard:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 24px rgba(43, 17, 48, 0.09);
+}
+
+.personagemNome {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--calc-purple);
+  margin-bottom: 0.15rem;
+}
+
+.personagemGrego {
+  font-size: 0.85rem;
+  color: var(--calc-gold);
+  font-style: italic;
+  margin-bottom: 0.5rem;
+}
+
+.personagemMeta {
+  font-size: 0.88rem;
+  color: var(--calc-text-muted);
+  margin-bottom: 0.65rem;
+  line-height: 1.5;
+}
+
+.personagemBio {
+  font-size: 0.95rem;
+  line-height: 1.65;
+  color: var(--calc-text);
+  margin-bottom: 0.75rem;
+}
+
+.personagemPapel {
+  background: var(--calc-bg-highlight);
+  padding: 0.65rem 0.85rem;
+  border-radius: 6px;
+  border-left: 3px solid var(--calc-gold);
+  font-size: 0.9rem;
+  margin-bottom: 0.75rem;
+  line-height: 1.55;
+}
+
+.personagemCuriosidade {
+  margin-top: 0.75rem;
+  padding-top: 0.5rem;
+  border-top: 1px dashed var(--calc-border-dashed);
+  font-style: italic;
+  font-size: 0.85rem;
+  color: var(--calc-red);
+}
+
+/* =============================================
+   GLOSSÁRIO TEOLÓGICO
+   ============================================= */
+.glossarioTermo {
+  font-family: Georgia, "Times New Roman", serif;
+  font-weight: 700;
+  color: var(--calc-purple);
+}
+
+.glossarioGrego {
+  font-size: 0.88rem;
+  color: var(--calc-gold);
+  font-style: italic;
+}
+
+/* =============================================
+   CTA DOSSIÊ DOCUMENTAL
+   ============================================= */
+.dossieCTA {
+  position: relative;
+  background: linear-gradient(180deg, #ffffff 0%, #faf7f1 100%);
+  border: 1px solid var(--calc-gold-border);
+  border-radius: 16px;
+  padding: 2.75rem 2.25rem 2.5rem;
+  margin: 2rem 0 3.5rem;
+  box-shadow: 0 12px 40px rgba(43, 17, 48, 0.08);
+  overflow: hidden;
+  text-align: center;
+}
+
+.dossieBarra {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(
+    90deg,
+    var(--calc-purple) 0%,
+    var(--calc-gold) 50%,
+    var(--calc-purple) 100%
+  );
+}
+
+.dossieGlow {
+  position: absolute;
+  top: -40%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 420px;
+  height: 420px;
+  background: radial-gradient(
+    circle,
+    rgba(197, 160, 89, 0.12) 0%,
+    transparent 70%
+  );
+  pointer-events: none;
+}
+
+.dossieBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--calc-gold-bg);
+  border: 1px solid var(--calc-gold-border);
+  color: var(--calc-gold);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 6px 14px;
+  border-radius: 999px;
+  margin-bottom: 1.35rem;
+}
+
+.dossieBadgeDot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--calc-gold-light);
+}
+
+.dossieTitulo {
+  margin: 0 0 0.85rem;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(1.45rem, 2.5vw, 1.85rem);
+  font-weight: 700;
+  color: var(--calc-purple);
+  letter-spacing: -0.02em;
+  line-height: 1.25;
+}
+
+.dossieDescricao {
+  margin: 0 auto 1.75rem;
+  max-width: 640px;
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: #4a403c;
+}
+
+.dossieTags {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 2rem;
+}
+
+.dossieTag {
+  background: #fff;
+  border: 1px solid var(--calc-gold-border);
+  color: var(--calc-purple-mid);
+  font-size: 0.78rem;
+  font-weight: 600;
+  padding: 6px 12px;
+  border-radius: 999px;
+  font-family: Georgia, serif;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.dossieTag:hover {
+  background: var(--calc-purple-mid);
+  color: #fff;
+  border-color: var(--calc-purple-mid);
+}
+
+.dossieBotao {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  background: linear-gradient(
+    135deg,
+    var(--calc-purple) 0%,
+    var(--calc-purple-mid) 100%
+  );
+  color: #ffffff;
+  text-decoration: none;
+  padding: 1rem 2.1rem;
+  border-radius: 999px;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.05rem;
+  font-weight: 700;
+  box-shadow: 0 8px 24px rgba(91, 44, 131, 0.28);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.dossieBotao:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 14px 32px rgba(91, 44, 131, 0.35);
+}
+
+.dossieNota {
+  margin: 1.1rem 0 0;
+  font-size: 0.82rem;
+  color: var(--calc-text-faint);
+  font-style: italic;
+}
+
+/* =============================================
+   RESPONSIVIDADE
+   ============================================= */
+@media (max-width: 768px) {
+  .fichaRapida {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .heresiasGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .presidenteItem {
+    flex-direction: column;
+    gap: 0.35rem;
+  }
+
+  .presidenteFase {
+    text-align: left;
+    min-width: auto;
+    max-width: none;
+  }
+
+  .blocoDefinicao {
+    padding: 1.5rem 1.25rem;
+    font-size: 1rem;
+  }
+
+  .dossieCTA {
+    padding: 2rem 1.25rem 1.75rem;
+  }
+
+  .tabelaComparativa {
+    font-size: 0.82rem;
+  }
+
+  .tabelaComparativa th,
+  .tabelaComparativa td {
+    padding: 0.5rem 0.6rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .fichaRapida {
+    grid-template-columns: 1fr;
+  }
+
+  .secaoTitulo {
+    font-size: 1.2rem;
+  }
+}

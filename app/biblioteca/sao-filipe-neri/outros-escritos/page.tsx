@@ -35,7 +35,7 @@ export default function PaginaOutrosEscritos() {
           <div key={item.id} className={styles.cardCarta} style={{ cursor: "default" }}>
             <div className={styles.cardCartaTop}>
               <span className={styles.cardCartaNumero}>{item.categoria.toUpperCase()}</span>
-              <EtiquetaStatus status="catalogo" />
+              <EtiquetaStatus status={item.status as any} />
             </div>
 
             <h2 className={styles.cardCartaDestinatario}>{item.titulo}</h2>
@@ -43,7 +43,11 @@ export default function PaginaOutrosEscritos() {
               📅 {item.data ?? "Data catalogada na edição crítica"}
             </p>
 
-            <p className={styles.cardCartaContexto}>{item.status}</p>
+            {item.texto && (
+              <div className={styles.cardCartaContexto} style={{ whiteSpace: "pre-line", fontStyle: "italic", margin: "8px 0" }}>
+                {item.texto}
+              </div>
+            )}
 
             <div className={styles.caixaNotas} style={{ marginTop: "auto", paddingTop: "12px" }}>
               <p style={{ fontSize: "11px", margin: 0 }}>

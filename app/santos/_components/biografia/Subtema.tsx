@@ -39,7 +39,7 @@ export default function Subtema({
           ▾
         </span>
       </button>
-      {aberto2 && <div className={styles.antFrasesLista}>{children}</div>}
+      <div className={styles.antFrasesLista} style={{ display: aberto2 ? 'block' : 'none' }}>{children}</div>
     </section>
   );
 }

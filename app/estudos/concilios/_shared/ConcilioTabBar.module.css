@@ -1,0 +1,146 @@
+/* ============================================================
+   BARRA DE ABAS PRINCIPAL (GLOBAL)
+   ============================================================ */
+
+.tabbar {
+  position: sticky;
+  top: 0;
+  z-index: 900;
+  display: flex;
+  background: #faf5eb;
+  border-bottom: 2px solid #e0d4c0;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  transition: transform 0.3s ease-in-out;
+  will-change: transform;
+}
+
+.tabbarHidden {
+  transform: translateY(-100%);
+  pointer-events: none;
+}
+
+.tabbar::-webkit-scrollbar {
+  display: none;
+}
+
+.tab {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 14px 20px;
+  border: none;
+  background: none;
+  font-family: Georgia, serif;
+  font-size: 0.95rem;
+  color: #6b5839;
+  cursor: pointer;
+  border-bottom: 3px solid transparent;
+  transition: all 0.2s;
+  white-space: nowrap;
+  position: relative;
+}
+
+.tab:hover {
+  background: #f5edd8;
+  color: #2c1f17;
+}
+
+.tabAtiva {
+  color: #5b2c83;
+  border-bottom-color: #5b2c83;
+  font-weight: 700;
+  background: #f0ebff;
+}
+
+/* ============================================================
+   PAINEL DE CONTEÚDO
+   ============================================================ */
+
+.tabPainel {
+  min-height: 50vh;
+}
+
+/* ============================================================
+   SUB-NAVEGAÇÃO (SUBNAV COMPARTILHADO)
+   ============================================================ */
+
+.subnav {
+  display: flex;
+  gap: 2px;
+  padding: 0;
+  margin-bottom: 8px;
+  border-bottom: 1px solid #e0d4c0;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+}
+
+.subnav::-webkit-scrollbar {
+  display: none;
+}
+
+.pill {
+  display: inline-flex;
+  align-items: center;
+  padding: 10px 16px;
+  border: none;
+  border-bottom: 2px solid transparent;
+  border-radius: 0;
+  background: transparent;
+  color: #888;
+  font-family: Georgia, serif;
+  font-size: 0.78rem;
+  cursor: pointer;
+  transition: all 0.2s;
+  white-space: nowrap;
+}
+
+.pill:hover {
+  background: #f5edd8;
+  color: #2c1f17;
+}
+
+.pillAtiva {
+  color: #5b2c83;
+  border-bottom-color: #5b2c83;
+  font-weight: 700;
+  background: transparent;
+}
+
+/* ============================================================
+   RESPONSIVIDADE
+   ============================================================ */
+
+@media (max-width: 700px) {
+  .tab {
+    padding: 10px 12px;
+    font-size: 0.82rem;
+    gap: 6px;
+  }
+
+  .pill {
+    padding: 8px 12px;
+    font-size: 0.7rem;
+  }
+
+  .subnav {
+    padding: 0;
+    gap: 0;
+  }
+}
+
+@media (max-width: 400px) {
+  .tab {
+    padding: 8px 10px;
+    font-size: 0.75rem;
+  }
+
+  .pill {
+    padding: 7px 10px;
+    font-size: 0.65rem;
+  }
+}

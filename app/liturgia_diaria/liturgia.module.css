@@ -166,6 +166,7 @@
   max-width: 100%; margin: 0; background: var(--marfim);
   padding: 0; position: relative;
   transition: max-width 0.4s ease;
+  overflow-x: hidden;
 }
 
 /* BOTÃO MODO LEITURA — só desktop (renderização condicional via JS) */
@@ -222,6 +223,7 @@
   max-width: 1140px; margin: 0 auto;
   padding: 0 60px; position: relative;
   transition: all 0.4s ease;
+  box-sizing: border-box;
 }
 
 .liturgia-layout-grid::before {
@@ -254,10 +256,10 @@
 }
 
 /* COLUNA PRINCIPAL */
-.liturgia-principal { width: 100%; padding: 100px 0 140px 80px; box-sizing: border-box; }
+.liturgia-principal { width: 100%; padding: 100px 0 140px 80px; box-sizing: border-box; max-width: 100%; }
 
 /* CARDS */
-.liturgia-card { position: relative; }
+.liturgia-card { position: relative; max-width: 100%; box-sizing: border-box; }
 .liturgia-card + .liturgia-card { margin-top: 110px; }
 
 .liturgia-card + .liturgia-card::before {
@@ -290,6 +292,9 @@
   color: var(--grafite); margin-bottom: 28px; display: block;
   font-size: 1.15rem; font-weight: 400; line-height: 1.5;
   letter-spacing: 0.8px; position: relative; padding-bottom: 22px;
+  max-width: 100%;
+  overflow-wrap: anywhere;
+  word-break: break-word;
 }
 
 .referencia::after {
@@ -321,6 +326,9 @@
   line-height: 1.5;
   max-width: 600px;
   position: relative;
+  overflow-wrap: anywhere;
+  word-break: break-word;
+  hyphens: auto;
 }
 
 .leitura-intro span::before,
@@ -377,6 +385,8 @@
   max-width: 620px;
   margin: 0 auto;
   position: relative;
+  overflow-wrap: anywhere;
+  word-break: break-word;
 }
 
 .texto-liturgico::first-letter {
@@ -470,6 +480,9 @@
   border-bottom: 1px solid rgba(184,155,94,0.35);
   font-style: normal; max-width: 600px;
   transition: color 1.2s ease;
+  overflow-wrap: anywhere;
+  word-break: break-word;
+  hyphens: auto;
 }
 
 /* EVANGELHO */
@@ -569,15 +582,24 @@
   .liturgia-sidebar { display: none; }
 
   .liturgia-principal {
-    padding: 60px 20px 80px;
+    padding: 60px 16px 80px;
   }
 
-  /* HERO 10% MENOR */
+  /* HERO PREENCHENDO A TELA TODA (FULL BLEED) */
   .liturgia-super-header {
+    width: 100vw !important;
+    position: relative !important;
+    left: 50% !important;
+    right: 50% !important;
+    margin-left: -50vw !important;
+    margin-right: -50vw !important;
+    border-radius: 0 !important;
+
     min-height: 90vh;
     min-height: 90svh;
     padding: 50px 24px 60px;
   }
+  
   .liturgia-super-header h1 {
     font-size: clamp(1.4rem, 6vw, 2rem);
     letter-spacing: 1px;
@@ -600,8 +622,10 @@
   .liturgia-card + .liturgia-card { margin-top: 80px; }
 
   .liturgia-card.salmo {
-    margin: 80px -20px 0;
-    padding: 50px 24px;
+    margin: 80px 0 0;
+    padding: 50px 16px;
+    width: 100%;
+    box-sizing: border-box;
   }
 
   .leitura-intro span {
@@ -617,12 +641,21 @@
    Texto significativamente menor
 ============================================================ */
 @media (max-width: 600px) {
-  /* HERO ainda menor */
+  /* HERO PREENCHENDO A TELA TODA NO CELULAR (FULL BLEED) */
   .liturgia-super-header {
+    width: 100vw !important;
+    position: relative !important;
+    left: 50% !important;
+    right: 50% !important;
+    margin-left: -50vw !important;
+    margin-right: -50vw !important;
+    border-radius: 0 !important;
+
     min-height: 85vh;
     min-height: 85svh;
     padding: 40px 20px 50px;
   }
+  
   .liturgia-super-header h1 {
     font-size: 1.4rem;
     letter-spacing: 0.5px;
@@ -640,7 +673,7 @@
   .badge-liturgico::after { width: 160px; }
 
   .liturgia-principal {
-    padding: 50px 18px 70px;
+    padding: 50px 14px 70px;
   }
 
   /* Rótulos */
@@ -708,8 +741,8 @@
 
   /* Salmo mobile */
   .liturgia-card.salmo {
-    margin: 70px -18px 0;
-    padding: 44px 22px;
+    margin: 70px 0 0;
+    padding: 44px 14px;
   }
   .liturgia-card.salmo .texto-liturgico {
     font-size: 0.92rem;
@@ -778,7 +811,7 @@
   .badge-liturgico::after { width: 130px; }
 
   .liturgia-principal {
-    padding: 40px 14px 60px;
+    padding: 40px 12px 60px;
   }
 
   .texto-liturgico {
@@ -796,8 +829,8 @@
   }
 
   .liturgia-card.salmo {
-    margin: 60px -14px 0;
-    padding: 36px 18px;
+    margin: 60px 0 0;
+    padding: 36px 12px;
   }
 
   .liturgia-card.salmo .texto-liturgico {

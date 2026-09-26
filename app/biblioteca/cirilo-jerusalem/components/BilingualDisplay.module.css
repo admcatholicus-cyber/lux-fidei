@@ -1,0 +1,65 @@
+.toggleGroup {
+  display: inline-flex;
+  gap: 4px;
+  padding: 4px;
+  margin: 24px 0 32px;
+  background: #f5edd8;
+  border: 1px solid #d4c5a9;
+  border-radius: 8px;
+  font-family: 'Inter', sans-serif;
+}
+
+.toggleGroup button {
+  padding: 6px 14px;
+  font-size: 0.82rem;
+  font-weight: 500;
+  color: #8b6508;
+  background: transparent;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.toggleGroup button.active {
+  background: #5b2c83;
+  color: #faf5eb;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
+}
+
+.singleColumn p {
+  margin-bottom: 1.2em;
+  line-height: 1.7;
+}
+
+.parallelGrid {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.parallelRow {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #e6dfed;
+}
+
+.parallelPt {
+  font-family: Georgia, serif;
+  color: #2c2c2c;
+}
+
+.parallelOriginal {
+  font-family: Georgia, serif;
+  color: #555;
+  font-style: italic;
+}
+
+@media (max-width: 720px) {
+  .parallelRow {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+}

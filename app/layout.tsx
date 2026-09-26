@@ -1,4 +1,7 @@
 import type { Metadata } from 'next'
+import Script from 'next/script'
+import PwaInstallToast from './_components/PwaInstallToast'
+import CookieBanner from './_components/layout/CookieBanner'
 
 export const metadata: Metadata = {
   title: 'Lux Fidei – Luz da Fé Católica',
@@ -27,7 +30,42 @@ export default function RootLayout({
         />
       </head>
 
-      <body>{children}</body>
+      <body>
+        {children}
+
+        {/* Aviso de Instalação do Aplicativo (Tema Sacro / Pergaminho & Ouro) */}
+        <PwaInstallToast />
+
+        {/* Banner de Consentimento de Cookies (LGPD / Google AdSense) */}
+        <CookieBanner />
+
+        {/* Script para Registrar o Service Worker (Ativa o PWA de 1 clique) */}
+        <Script id="register-sw" strategy="afterInteractive">
+          {`
+            if ('serviceWorker' in navigator) {
+              window.addEventListener('load', function() {
+                navigator.serviceWorker.register('/sw.js');
+              });
+            }
+          `}
+        </Script>
+
+        {/* Google Analytics 4 */}
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-QKZMHVKNGL"
+          strategy="afterInteractive"
+        />
+
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){window.dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'G-QKZMHVKNGL');
+          `}
+        </Script>
+      </body>
     </html>
   )
 }

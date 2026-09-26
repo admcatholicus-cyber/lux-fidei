@@ -1,0 +1,70 @@
+export const meta = {
+  numero: 'XII',
+  titulo: 'Antologia',
+  subtitulo: 'As palavras do lavrador e a voz da Igreja',
+};
+
+<PageHeader numero={meta.numero} titulo={meta.titulo} subtitulo={meta.subtitulo} />
+
+<Antologia
+  introducao={
+    <>
+      <p>Santo Isidoro era um camponês iletrado do século XI. Ele não escreveu tratados, não deixou diários, nem redigiu cartas. As palavras que a Igreja conserva como suas não foram registradas por sua própria pena, mas guardadas no coração dos pobres de Madri e transcritas quase um século e meio depois pelo clérigo Juan Diácono, no primeiro documento histórico oficial sobre o santo (o Códice de c. 1275).</p>
+      <p>Nesta antologia, reunimos as poucas e preciosas falas canônicas atribuídas a Isidoro nas fontes documentais mais antigas, somadas às declarações oficiais do Magistério da Igreja e dos Papas que, ao longo dos séculos, interpretaram a profundidade de sua vida simples.</p>
+    </>
+  }
+  capitulos={[
+    { id: 'palavras-lavrador', label: 'I · As Palavras do Lavrador' },
+    { id: 'voz-igreja',        label: 'II · A Voz da Igreja' },
+  ]}
+>
+
+  <Capitulo id="palavras-lavrador" numero="I" titulo="As Palavras do Lavrador" contagem="4 registros históricos" aberto>
+    
+    <Subtema titulo="A caridade e os pobres" aberto primeiro>
+      <Frase numero={1} fonte="Códice de Juan Diácono, séc. XIII (Episódio do trigo na neve)">
+        Tomai, amigos; porque quando Deus amanhece, amanhece para todos.
+      </Frase>
+      
+      <Frase numero={2} fonte="Códice de Juan Diácono, séc. XIII (Episódio da panela multiplicada)">
+        Maria, volta a olhar na panela, pois Deus não nos deixará faltar o alimento para os Seus pobres.
+      </Frase>
+    </Subtema>
+
+    <Subtema titulo="A primazia de Deus no trabalho">
+      <Frase numero={3} fonte="Códice de Juan Diácono (Resposta às queixas de Juan de Vargas)">
+        Senhor, não sei por que vos queixais. Se achais que as safras minguam por causa do tempo que dedico a Deus, vamos medir a colheita. Se houver falta, eu pagarei o prejuízo descontando do meu salário.
+      </Frase>
+      
+      <Frase numero={4} fonte="Máxima Tradicional Isidoriana">
+        Orai e trabalhai — e os anjos lavrarão convosco.
+      </Frase>
+    </Subtema>
+
+  </Capitulo>
+
+  <Capitulo id="voz-igreja" numero="II" titulo="A Voz da Igreja" contagem="4 declarações do Magistério">
+    
+    <Subtema titulo="Documentos de Canonização e Liturgia" primeiro>
+      <Frase numero={5} fonte="Papa Gregório XV, Bula de Canonização Rationi Congruit (1622)">
+        Ele nunca saía de casa ao amanhecer para cultivar as terras alheias sem antes venerar devotamente a Cristo e à Virgem Maria.
+      </Frase>
+      
+      <Frase numero={6} fonte="Missal Romano, Oração Coleta da Festa de Santo Isidoro">
+        Ó Deus, que em Santo Isidoro Lavrador nos deixastes um exemplo de humildade e de trabalho, concedei-nos, por suas preces, que as nossas fadigas diárias nos sirvam de santificação e nos aproximem do vosso Reino.
+      </Frase>
+    </Subtema>
+
+    <Subtema titulo="Os Papas modernos sobre o Santo">
+      <Frase numero={7} fonte="Papa João XXIII, Discurso (1960)">
+        Em Santo Isidoro, a Igreja nos ensina que a perfeição cristã não exige talentos excepcionais nem ofícios de grande prestígio, mas a fidelidade extraordinária nas coisas comuns da vida cotidiana.
+      </Frase>
+      
+      <Frase numero={8} fonte="Papa João Paulo II, Homilia aos trabalhadores rurais (1982)">
+        Santo Isidoro é o exemplo perene do trabalhador que compreendeu que o suor do seu rosto, unido ao suor de Cristo, é semente de redenção para o mundo inteiro.
+      </Frase>
+    </Subtema>
+
+  </Capitulo>
+
+</Antologia>

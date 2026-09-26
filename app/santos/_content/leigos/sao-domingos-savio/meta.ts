@@ -23,7 +23,6 @@
     { slug: 'teologia',            label: 'Teologia' },
     { slug: 'canonizacao',         label: 'Canonização' },
     { slug: 'culto',               label: 'Culto' },
-    { slug: 'iconografia',         label: 'Iconografia' },
     { slug: 'legado',              label: 'Legado' },
   ],
 };

@@ -59,14 +59,12 @@ export function LinhaDoTempoAfra({ estacoes }: LinhaDoTempoAfraProps) {
                   </span>
                 </button>
 
-                {aberta && (
-                  <div className={styles.corpo}>
-                    <p className={styles.objetoLegenda}>
-                      <em>{est.objetoDescricao}</em>
-                    </p>
-                    <div className={styles.texto}>{est.corpo}</div>
-                  </div>
-                )}
+                <div className={`${styles.corpo} ${aberta ? styles.corpoAberto : styles.corpoFechado}`}>
+                  <p className={styles.objetoLegenda}>
+                    <em>{est.objetoDescricao}</em>
+                  </p>
+                  <div className={styles.texto}>{est.corpo}</div>
+                </div>
               </div>
             </article>
           );

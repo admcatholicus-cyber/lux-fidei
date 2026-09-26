@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
+import Footer from '../_components/layout/Footer';
 import styles from './liturgia.module.css';
 import '../home.css';
 
@@ -16,19 +17,56 @@ export interface LiturgiaData {
 }
 
 /* ============================================================
-   UTIL: extrai string
+   UTIL: FAXINA PESADA DE API (Remove lixo de WordPress e áudio)
+============================================================ */
+function limparSujeiraAPI(texto: string): string {
+  if (!texto) return '';
+  let t = texto;
+
+  // 1. Remove qualquer coisa entre colchetes [ ... ]
+  // Isso mata o [ cn-embed ...] ou [audio ...] independente de espaços ou atributos
+  t = t.replace(/\[[\s\S]*?\]/g, '');
+
+  // 2. Remove nomes de arquivos gerados por sistema (ex: 2026_09_09_portal_liturgia_audio...)
+  // Procura por 4 dígitos, _, 2 dígitos, _, 2 dígitos e remove até o próximo espaço
+  t = t.replace(/\d{4}_\d{2}_\d{2}[^\s]*/g, '');
+
+  // 3. Remove shortcodes residuais soltos (caso venham sem colchetes por erro da API)
+  t = t.replace(/cn-embed/gi, '');
+  t = t.replace(/\/cn-embed/gi, '');
+
+  // 4. Limpa espaços duplos e quebras de linha estranhas que sobraram da faxina
+  t = t.replace(/\s+/g, ' ').trim();
+
+  return t;
+}
+
+/* ============================================================
+   UTIL: EXTRAI A STRING E JÁ APLICA A FAXINA
 ============================================================ */
 function extrairTexto(input: any): string {
   if (!input) return '';
-  if (typeof input === 'string') return input;
-  if (Array.isArray(input)) return input.map(extrairTexto).filter(Boolean).join(' ');
-  if (typeof input === 'object') {
+  let res = '';
+  
+  if (typeof input === 'string') {
+    res = input;
+  } else if (Array.isArray(input)) {
+    res = input.map(extrairTexto).filter(Boolean).join(' ');
+  } else if (typeof input === 'object') {
     const direto = input.texto || input.text || input.content || input.body || input.conteudo;
-    if (typeof direto === 'string') return direto;
-    if (direto) return extrairTexto(direto);
-    return Object.values(input).filter((v) => typeof v === 'string').join(' ');
+    if (typeof direto === 'string') {
+      res = direto;
+    } else if (direto) {
+      res = extrairTexto(direto);
+    } else {
+      res = Object.values(input).filter((v) => typeof v === 'string').join(' ');
+    }
+  } else {
+    res = String(input);
   }
-  return String(input);
+  
+  // A mágica acontece aqui: limpa toda a sujeira técnica antes de interpretar o texto litúrgico
+  return limparSujeiraAPI(res);
 }
 
 function extrairReferencia(input: any): string {
@@ -135,7 +173,11 @@ function limparLeitura(texto: string): {
   fechamento: string;
 } {
   if (!texto) return { introducao: '', corpo: '', fechamento: '' };
+  
+  // Agora a string chega limpa. Ex: "Primeira Leitura ( 1Cor 7,25-31) Leitura da..."
   let t = texto.replace(/\s+/g, ' ').trim();
+  
+  // Remove título redundante (Primeira Leitura (Referência))
   t = t.replace(/^(?:Primeira|Segunda|Terceira)\s+Leitura\s*\([^)]*\)\s*[-—]?\s*/i, '');
 
   let introducao = '';
@@ -168,7 +210,11 @@ function limparEvangelho(texto: string): {
 } {
   if (!texto) return { introducao: '', corpo: '', fechamento: '' };
   let t = texto.replace(/\s+/g, ' ').trim();
+  
+  // Remove título redundante do evangelho
   t = t.replace(/^Evangelho\s*\([^)]*\)\s*[-—]?\s*/i, '');
+  
+  // Remove aleluias iniciais antes da proclamação
   t = t.replace(/^(?:Aleluia[,.\s]*)+[-—]?\s*[^.]*\.\s*(?:Convertei[^.]*\.\s*)?(?:Crede[^.!]*[.!]\s*)?/i, '');
 
   let introducao = '';
@@ -459,7 +505,7 @@ export default function LiturgiaClient({ initialData }: { initialData: LiturgiaD
         </section>
       </main>
 
-      <footer>&copy; 2026 &ndash; Lux Fidei &nbsp;&middot;&nbsp; Omnia ad maiorem Dei gloriam</footer>
+      <Footer />
     </div>
   );
 }

@@ -48,6 +48,10 @@ const CHAVES_POR_LIVRO: Record<string, string[]> = {
   'sao-joao-maria-vianney': [
     'lux_fidei_vianney_progresso', // Chave adicionada para gerenciar o histórico do Cura d'Ars
   ],
+  'santo-ambrosio': [
+    'lf-ambrosio-progresso',
+    'lf-ambrosio-ultima-pagina',
+  ],
 };
 
 export function registrarHistorico(

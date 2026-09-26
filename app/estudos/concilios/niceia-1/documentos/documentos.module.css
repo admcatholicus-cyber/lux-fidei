@@ -1,0 +1,339 @@
+/* ─────────────────────────────────────────────────────────────
+   DOSSIÊ DOCUMENTAL DE NICEIA I - ESTILOS PREMIUM / ACADÊMICO
+───────────────────────────────────────────────────────────── */
+
+/* Layout Base da Página - Garante cobertura total sem bordas brancas no body */
+.pageWrapper {
+  min-height: 100vh;
+  width: 100%;
+  margin: 0;
+  background-color: #f4efe6; /* Pergaminho nobre e contínuo */
+  color: #2c2523;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  padding: 2.5rem 1.25rem 6rem;
+  box-sizing: border-box;
+}
+
+.pagina {
+  max-width: 1140px;
+  margin: 0 auto;
+}
+
+/* Botão de Voltar - Estilo Editorial / Biblioteca */
+.btnVoltar {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.65rem;
+  background-color: #fcfaf5;
+  border: 1px solid #e2d7c3;
+  border-left: 3px solid #c5a059; /* Acento discreto em Ouro Velho na esquerda */
+  padding: 0.6rem 1.25rem;
+  border-radius: 6px; /* Cantos suavemente retangulares (muito mais nobre que pílula) */
+  color: #3a1f5c;
+  font-family: 'Georgia', serif;
+  font-size: 0.875rem;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  cursor: pointer;
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 2px 8px rgba(44, 31, 23, 0.04);
+}
+
+.btnVoltar:hover {
+  background-color: #3a1f5c;
+  color: #f7f4ee;
+  border-color: #3a1f5c;
+  border-left-color: #d4af37; /* Ouro vivo no hover */
+  transform: translateX(-4px); /* Efeito de deslizar suavemente para a esquerda */
+  box-shadow: 0 4px 16px rgba(58, 31, 92, 0.2);
+}
+
+/* Seta animada dentro do botão */
+.btnVoltarSeta {
+  font-size: 1.05rem;
+  color: #c5a059;
+  transition: transform 0.25s ease, color 0.25s ease;
+  line-height: 1;
+}
+
+.btnVoltar:hover .btnVoltarSeta {
+  color: #d4af37;
+  transform: translateX(-3px);
+}
+
+/* Cabeçalho Principal */
+.header {
+  text-align: center;
+  margin: 1rem 0 3rem;
+  padding-bottom: 2rem;
+  position: relative;
+}
+
+.header::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 120px;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, #c5a059, transparent); /* Detalhe em ouro velho */
+}
+
+.headerH1 {
+  font-family: 'Georgia', 'Times New Roman', serif;
+  font-size: 2.6rem;
+  font-weight: 700;
+  color: #2b1130;
+  letter-spacing: -0.02em;
+  margin-bottom: 0.75rem;
+  line-height: 1.2;
+}
+
+.headerSubtitulo {
+  font-family: 'Georgia', serif;
+  font-style: italic;
+  font-size: 1.15rem;
+  color: #6b5873;
+  max-width: 680px;
+  margin: 0 auto;
+}
+
+/* ─────────────────────────────────────────────────────────────
+   NAVEGAÇÃO DAS ABAS (Toolbar Deslizante em Marfim)
+───────────────────────────────────────────────────────────── */
+.navDossies {
+  display: flex;
+  gap: 0.5rem;
+  overflow-x: auto;
+  padding: 0.6rem;
+  background: #fcfaf5;
+  border: 1px solid #e2d7c3;
+  border-radius: 14px;
+  margin-bottom: 2.5rem;
+  box-shadow: 0 4px 16px rgba(44, 31, 23, 0.05);
+  scrollbar-width: thin;
+  scrollbar-color: #c5a059 transparent;
+}
+
+.navDossies::-webkit-scrollbar {
+  height: 4px;
+}
+
+.navDossies::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.navDossies::-webkit-scrollbar-thumb {
+  background: #c5a059;
+  border-radius: 4px;
+}
+
+.btnDossieTab {
+  flex: 0 0 auto;
+  white-space: nowrap;
+  padding: 0.65rem 1.15rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #5c5261;
+  background: transparent;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.btnDossieTab:hover {
+  color: #4a154b;
+  background-color: #f1e9db;
+}
+
+.btnDossieTab.ativa {
+  background-color: #4a154b;
+  color: #ffffff;
+  box-shadow: 0 3px 10px rgba(74, 21, 75, 0.25);
+}
+
+/* ─────────────────────────────────────────────────────────────
+   SEÇÕES DE CONTEÚDO (Cards do Dossiê em Tom Marfim Warm)
+───────────────────────────────────────────────────────────── */
+.secaoDossie {
+  background: #fdfcf9; /* Marfim suave em vez de branco puro */
+  border-radius: 18px;
+  padding: 3rem 2.5rem;
+  border: 1px solid #e4dac8;
+  box-shadow: 0 8px 30px rgba(44, 31, 23, 0.04);
+  animation: fadeIn 0.35s ease-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.secaoDossieH2 {
+  font-family: 'Georgia', serif;
+  font-size: 1.85rem;
+  color: #31133a;
+  border-bottom: 2px solid #eae2d3;
+  padding-bottom: 1rem;
+  margin-bottom: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.secaoDossie h3 {
+  font-family: 'Georgia', serif;
+  font-size: 1.35rem;
+  color: #2b1130;
+  margin: 2.2rem 0 1rem;
+}
+
+/* ─────────────────────────────────────────────────────────────
+   CAIXAS DE TEXTO ORIGINAL (Grego, Latim e Português)
+───────────────────────────────────────────────────────────── */
+.caixaTextoOriginal {
+  background-color: #f7f2e7;
+  border: 1px solid #e2d5bf;
+  border-left: 4px solid #c5a059;
+  border-radius: 10px;
+  padding: 1.6rem 1.8rem;
+  margin: 1.5rem 0;
+  font-family: 'Georgia', 'Times New Roman', serif;
+  font-size: 1.05rem;
+  line-height: 1.85;
+  color: #2a221f;
+  white-space: pre-line;
+}
+
+.labelLingua {
+  display: block;
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: #8c6d31;
+  margin-bottom: 0.75rem;
+}
+
+.caixaAlerta {
+  background-color: #faf2e6;
+  border: 1px solid #ebd4b2;
+  border-left: 4px solid #d97706;
+  border-radius: 10px;
+  padding: 1.25rem 1.5rem;
+  margin: 1.5rem 0;
+  color: #78350f;
+  font-size: 0.95rem;
+  line-height: 1.65;
+}
+
+/* ─────────────────────────────────────────────────────────────
+   TABELAS DOCUMENTAIS E CRÍTICAS
+───────────────────────────────────────────────────────────── */
+.tabelaDocumental {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  margin: 2rem 0;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid #e2d7c3;
+}
+
+.tabelaDocumental th {
+  background-color: #2b1130;
+  color: #f7f1ea;
+  font-size: 0.825rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  padding: 1rem 1.2rem;
+  text-align: left;
+}
+
+.tabelaDocumental td {
+  padding: 1.1rem 1.2rem;
+  border-bottom: 1px solid #ebdcc8;
+  font-size: 0.935rem;
+  line-height: 1.6;
+  color: #38302c;
+  background-color: #fdfcfa;
+}
+
+.tabelaDocumental tr:last-child td {
+  border-bottom: none;
+}
+
+.tabelaDocumental tr:nth-child(even) td {
+  background-color: #f7f1e5;
+}
+
+.tabelaDocumental tr:hover td {
+  background-color: #f0e6d5;
+}
+
+/* ─────────────────────────────────────────────────────────────
+   BADGES E ELEMENTOS AUXILIARES
+───────────────────────────────────────────────────────────── */
+.badgeUrk {
+  display: inline-block;
+  background: linear-gradient(135deg, #5b2c83, #3b1747);
+  color: #ffffff;
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 0.3rem 0.75rem;
+  border-radius: 20px;
+  margin-left: 0.6rem;
+  vertical-align: middle;
+}
+
+.secaoDossie ul {
+  padding-left: 1.5rem;
+  margin: 1rem 0;
+}
+
+.secaoDossie li {
+  margin-bottom: 0.6rem;
+  line-height: 1.65;
+  color: #423835;
+}
+
+/* ─────────────────────────────────────────────────────────────
+   RESPONSIVIDADE (MOBILE)
+───────────────────────────────────────────────────────────── */
+@media (max-width: 768px) {
+  .pageWrapper {
+    padding: 1.25rem 0.5rem 3rem;
+  }
+  
+  .secaoDossie {
+    padding: 1.5rem 1rem;
+    border-radius: 12px;
+  }
+
+  .headerH1 {
+    font-size: 1.85rem;
+  }
+
+  .tabelaDocumental {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+  
+  .btnVoltar {
+    font-size: 0.8rem;
+    padding: 0.5rem 1rem;
+  }
+}
+html, body {
+  margin: 0;
+  padding: 0;
+  background-color: #f4efe6;
+}

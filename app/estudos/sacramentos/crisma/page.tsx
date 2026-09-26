@@ -638,23 +638,7 @@ export default function CrismaPage() {
       {/* ===================== MAIN ===================== */}
       <main>
 
-        {/* ── Banner nota ── */}
-        <div className={styles.container}>
-          <div className={styles.diferencaBatismoBanner}>
-            <span className={styles.bannerIcon}>ℹ️</span>
-            <div>
-              <h3>📌 Nota sobre os Sacramentos de Iniciação</h3>
-              <p>
-                Esta página aborda exclusivamente o Sacramento da{' '}
-                <strong>Crisma (Confirmação)</strong>. Os temas de{' '}
-                <strong>Batismo</strong> são tratados integralmente na{' '}
-                <Link href="/estudos/batismo">página do Batismo ↗</Link>.
-                Aqui, a Crisma é apresentada como o segundo sacramento de iniciação, que{' '}
-                <em>pressupõe e completa</em> o Batismo, mas não o repete nem substitui.
-              </p>
-            </div>
-          </div>
-        </div>
+
 
         {/* ====================================================
             SEÇÃO 1 — O QUE É
@@ -1817,7 +1801,7 @@ export default function CrismaPage() {
               {l.label}
             </a>
           ))}
-          <Link href="/estudos/batismo">→ Página do Batismo</Link>
+          <Link href="/estudos/sacramentos/batismo">→ Página do Batismo</Link>
         </div>
 
         <div className={styles.footerBottom}>

@@ -41,7 +41,7 @@ export default function Capitulo({
             ▾
           </span>
         </button>
-        {aberto2 && <div className={styles.antCapituloBody}>{children}</div>}
+        <div className={styles.antCapituloBody} style={{ display: aberto2 ? 'block' : 'none' }}>{children}</div>
       </section>
       <div className={styles.antSepCap}>· · ·</div>
     </>

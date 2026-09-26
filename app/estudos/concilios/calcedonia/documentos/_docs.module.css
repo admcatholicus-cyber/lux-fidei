@@ -1,0 +1,109 @@
+/* estudos/concilios/calcedonia/documentos/_docs.module.css */
+
+/* Estilos adicionais para as páginas do dossiê documental */
+
+.blocoOriginal {
+  background: var(--calc-bg-card);
+  border: 2px solid var(--calc-gold-light);
+  border-radius: 14px;
+  padding: 2rem 2.25rem;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 1.05rem;
+  line-height: 1.85;
+  color: var(--calc-text);
+  box-shadow: 0 4px 16px rgba(139, 101, 8, 0.08);
+  margin: 1.5rem 0;
+}
+
+.blocoOriginal p {
+  margin-bottom: 0.85rem;
+}
+
+.blocoOriginal p:last-child {
+  margin-bottom: 0;
+}
+
+.notaVocabulario {
+  background: var(--calc-bg-highlight);
+  border-left: 3px solid var(--calc-gold);
+  border-radius: 0 8px 8px 0;
+  padding: 0.85rem 1.1rem;
+  margin: 1rem 0;
+  font-size: 0.92rem;
+  line-height: 1.6;
+}
+
+.notaVocabulario strong {
+  color: var(--calc-purple);
+}
+
+.tabelaRecepcao {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.25rem 0;
+  font-size: 0.88rem;
+}
+
+.tabelaRecepcao th {
+  background: var(--calc-purple);
+  color: #fff;
+  font-family: Georgia, serif;
+  font-weight: 700;
+  padding: 0.6rem 0.8rem;
+  text-align: left;
+  font-size: 0.82rem;
+}
+
+.tabelaRecepcao td {
+  padding: 0.55rem 0.8rem;
+  border-bottom: 1px solid var(--calc-border);
+  color: var(--calc-text);
+  line-height: 1.5;
+}
+
+.tabelaRecepcao tr:nth-child(even) td {
+  background: var(--calc-bg-card);
+}
+
+.fichaSessao {
+  display: grid;
+  grid-template-columns: 140px 1fr;
+  gap: 0;
+  margin: 1.5rem 0;
+  border: 1px solid var(--calc-gold-border);
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.fichaSessao dt {
+  background: var(--calc-bg-highlight);
+  padding: 0.65rem 1rem;
+  font-weight: 700;
+  font-size: 0.85rem;
+  color: var(--calc-gold);
+  border-bottom: 1px solid var(--calc-border);
+}
+
+.fichaSessao dd {
+  padding: 0.65rem 1rem;
+  font-size: 0.92rem;
+  color: var(--calc-text);
+  border-bottom: 1px solid var(--calc-border);
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .blocoOriginal {
+    padding: 1.25rem 1rem;
+    font-size: 0.95rem;
+  }
+
+  .fichaSessao {
+    grid-template-columns: 1fr;
+  }
+
+  .fichaSessao dt {
+    border-bottom: none;
+    padding-bottom: 0.2rem;
+  }
+}

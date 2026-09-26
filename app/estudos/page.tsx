@@ -3,9 +3,10 @@
 
 import React, { useState, useEffect, useRef, useCallback, useMemo } from 'react';
 import Link from 'next/link';
+import Footer from '../_components/layout/Footer';
 import styles from './estudos.module.css';
 import searchIndex from './search-index.json';
-import '../home.css'; 
+import '../home.css';
 
 /* ================================================================
    TYPES
@@ -340,8 +341,9 @@ export default function EstudosPage() {
                   <p>O <em>Lux Fidei</em> respeita a privacidade de seus visitantes. Esta página descreve o tratamento de dados neste site.</p>
                   <p><strong>Análise de tráfego:</strong> Podem ser utilizadas ferramentas de análise anônima (como o Google Analytics), sem identificação individual dos visitantes.</p>
                   <p><strong>Publicidade:</strong> Este site utiliza o Google AdSense, que pode exibir anúncios com base em interesses do visitante. As preferências podem ser gerenciadas nas configurações do Google.</p>
-                  <p><strong>Dados pessoais:</strong> Nenhum dado pessoal identificável é coletado, vendido ou compartilhado. Mensagens enviadas por e-mail são usadas exclusivamente para responder ao remetente.</p>
+                  <p><strong>Tratamento de Dados:</strong> O site não exige cadastro nem coleta dados pessoais identificáveis. Dados anônimos de navegação são processados por serviços parceiros (Google Analytics e Google AdSense) para estatísticas e veiculação de anúncios. Mensagens enviadas por e-mail são usadas exclusivamente para responder ao remetente.</p>
                   <p><strong>Links externos:</strong> Este site pode conter links para terceiros. Não nos responsabilizamos pelas políticas de privacidade dessas páginas.</p>
+                  <p>Consulte a <a href="/privacidade" style="color:#8c6d3b">Política de Privacidade completa</a> para mais detalhes.</p>
                   <p>Dúvidas: <a href="mailto:comosercatolico@gmail.com">comosercatolico@gmail.com</a></p>`
   };
 
@@ -352,13 +354,16 @@ export default function EstudosPage() {
     } catch { setHistory([]); }
   }, []);
 
-  const addToHistory = (id: string) => {
-    if (!history.includes(id)) {
-      const newHistory = [...history, id];
-      setHistory(newHistory);
-      localStorage.setItem('historico', JSON.stringify(newHistory));
-    }
-  };
+  const addToHistory = useCallback((id: string) => {
+    setHistory((prev) => {
+      if (prev.includes(id)) return prev;
+      const newHistory = [...prev, id];
+      try {
+        localStorage.setItem('historico', JSON.stringify(newHistory));
+      } catch {}
+      return newHistory;
+    });
+  }, []);
 
   const searchResults = useMemo(() => {
     if (!debouncedQuery.trim()) return [];
@@ -382,13 +387,14 @@ export default function EstudosPage() {
 
   useEffect(() => setActiveIdx(-1), [debouncedQuery]);
 
+  // Navegação por teclado (Enter no input de busca)
   const navigateToStudy = useCallback((study: Study, useHighlight = false) => {
     addToHistory(study.id);
     setSearchQuery('');
     setIsFocused(false);
     const url = useHighlight ? buildLinkWithHighlight(study, debouncedQuery) : study.link;
     if (url) window.location.href = url;
-  }, [history, debouncedQuery]);
+  }, [addToHistory, debouncedQuery]);
 
   const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
     if (!showDropdown || searchResults.length === 0) {
@@ -501,16 +507,19 @@ export default function EstudosPage() {
       </nav>
 
       <section className={styles.estudosHeader}>
-        <button className={styles.btnHistorico} onClick={() => setIsHistoryOpen(true)}>
-          📜 Histórico
-        </button>
+      
         <h2>Centro de Estudos da Fé Católica</h2>
         <p>Aqui estão organizados ensinamentos fundamentais da fé católica, desde a catequese básica até temas profundos de teologia.</p>
       </section>
 
       <div className={styles.searchContainer}>
         <div className={styles.searchWrapper}>
-          <span className={styles.searchIcon}>🔍</span>
+         <span className={styles.searchIcon}>
+  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+    <circle cx="11" cy="11" r="8"></circle>
+    <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+  </svg>
+</span>
           <input
             ref={inputRef}
             type="text"
@@ -533,36 +542,46 @@ export default function EstudosPage() {
                   Nenhum resultado para <strong>&quot;{searchQuery}&quot;</strong>
                 </div>
               ) : (
-                searchResults.map(({ study, matchInfo }, index) => (
-                  <div
-                    key={study.id}
-                    className={`${styles.dropdownItem} ${index === activeIdx ? styles.dropdownItemActive : ''}`}
-                    onClick={() => navigateToStudy(study, true)}
-                    onMouseEnter={() => setActiveIdx(index)}
-                  >
-                    {study.icon ? (
-                      <img src={study.icon.trim()} alt="" className={styles.dropdownIcon} />
-                    ) : (
-                      <div className={styles.dropdownIconFallback}>📖</div>
-                    )}
-                    <div className={styles.dropdownInfo}>
-                      <div className={styles.dropdownTitle}>
-                        {highlightText(study.title, searchQuery, styles.searchMatch)}
+                searchResults.map(({ study, matchInfo }, index) => {
+                  const href = buildLinkWithHighlight(study, searchQuery);
+                  return (
+                    <Link
+                      key={study.id}
+                      href={href}
+                      className={`${styles.dropdownItem} ${index === activeIdx ? styles.dropdownItemActive : ''}`}
+                      onClick={() => {
+                        addToHistory(study.id);
+                        setSearchQuery('');
+                        setIsFocused(false);
+                      }}
+                      onMouseEnter={() => setActiveIdx(index)}
+                      role="option"
+                      prefetch={false}
+                    >
+                      {study.icon ? (
+                        <img src={study.icon.trim()} alt="" className={styles.dropdownIcon} />
+                      ) : (
+                        <div className={styles.dropdownIconFallback}>📖</div>
+                      )}
+                      <div className={styles.dropdownInfo}>
+                        <div className={styles.dropdownTitle}>
+                          {highlightText(study.title, searchQuery, styles.searchMatch)}
+                        </div>
+                        <div className={styles.dropdownDesc}>
+                          {matchInfo ? (
+                            <>
+                              <em style={{ color: '#c9a84c', fontWeight: 600 }}>↳ </em>
+                              {highlightText(matchInfo.snippet, searchQuery, styles.searchMatch)}
+                            </>
+                          ) : (
+                            highlightText(study.description, searchQuery, styles.searchMatch)
+                          )}
+                        </div>
                       </div>
-                      <div className={styles.dropdownDesc}>
-                        {matchInfo ? (
-                          <>
-                            <em style={{ color: '#c9a84c', fontWeight: 600 }}>↳ </em>
-                            {highlightText(matchInfo.snippet, searchQuery, styles.searchMatch)}
-                          </>
-                        ) : (
-                          highlightText(study.description, searchQuery, styles.searchMatch)
-                        )}
-                      </div>
-                    </div>
-                    <span className={styles.dropdownCategory}>{study.category}</span>
-                  </div>
-                ))
+                      <span className={styles.dropdownCategory}>{study.category}</span>
+                    </Link>
+                  );
+                })
               )}
             </div>
           )}
@@ -593,19 +612,25 @@ export default function EstudosPage() {
         </div>
       )}
 
+      {/* ================================================================
+          GRID DE ESTUDOS — Agora com <Link> (SEO-friendly)
+          Cada card é um link HTML real que o Google consegue rastrear.
+          ================================================================ */}
       <section className={styles.estudosGrid}>
         {filteredStudies.map((estudo) => {
           const matchInfo = isSearchActive ? getMatchInfo(estudo, searchQuery) : null;
+          const href = isSearchActive
+            ? buildLinkWithHighlight(estudo, searchQuery)
+            : estudo.link;
 
           return (
-            <div
+            <Link
               key={estudo.id}
+              href={href}
               className={styles.estudoCard}
-              onClick={() => {
-                addToHistory(estudo.id);
-                const url = isSearchActive ? buildLinkWithHighlight(estudo, searchQuery) : estudo.link;
-                if (url) window.location.href = url;
-              }}
+              onClick={() => addToHistory(estudo.id)}
+              prefetch={false}
+              aria-label={`Estudo: ${estudo.title}`}
             >
               <h3>
                 {estudo.icon && <img src={estudo.icon.trim()} alt="" className={styles.cardIcone} />}
@@ -630,15 +655,9 @@ export default function EstudosPage() {
                   {isSearchActive ? highlightText(estudo.highlight, searchQuery, styles.searchMatch) : estudo.highlight}
                 </span>
               )}
-            </div>
+            </Link>
           );
         })}
-
-        {filteredStudies.length === 0 && !isSearchActive && (
-          <p style={{ color: '#777', textAlign: 'center', gridColumn: '1/-1', padding: '60px 20px' }}>
-            Em breve novos estudos serão adicionados aqui. 🕯️
-          </p>
-        )}
 
         {filteredStudies.length === 0 && isSearchActive && (
           <div className={styles.noResults}>
@@ -648,27 +667,23 @@ export default function EstudosPage() {
         )}
       </section>
 
-      <div className={`${styles.historico} ${isHistoryOpen ? styles.historicoAtivo : ''}`}>
-        <div className={styles.fecharHistorico} onClick={() => setIsHistoryOpen(false)}>❯</div>
-        <h3>📖 Histórico</h3>
-        <div>
-          {history.length === 0 ? (
-            <p style={{ color: '#777' }}>Nenhum estudo visto ainda.</p>
-          ) : (
-            [...history].reverse().map((id) => {
-              const estudo = STUDIES_DATA.find((s) => s.id === id);
-              return (
-                <div key={id} className={styles.historicoItem}
-                  onClick={() => { if (estudo?.link) window.location.href = estudo.link; }}>
-                  {estudo?.title || id} ⏳
-                </div>
-              );
-            })
-          )}
-        </div>
-      </div>
+      {/* ================================================================
+          BLOCO DE LINKS SEO — Invisível ao usuário, mas visível ao Google
+          Reforça a hierarquia interna: todas as URLs de estudos aparecem
+          como links reais na página /estudos.
+          ================================================================ */}
+      <nav aria-label="Todos os estudos" className={styles.seoLinks}>
+        <h2 className={styles.seoLinksTitle}>Todos os Estudos</h2>
+        <ul>
+          {STUDIES_DATA.map((estudo) => (
+            <li key={`seo-${estudo.id}`}>
+              <Link href={estudo.link}>{estudo.title}</Link>
+            </li>
+          ))}
+        </ul>
+      </nav>
 
-      <footer>&copy; 2026 &ndash; Lux Fidei &nbsp;&middot;&nbsp; Omnia ad maiorem Dei gloriam</footer>
+      <Footer />
     </div>
   );
 }

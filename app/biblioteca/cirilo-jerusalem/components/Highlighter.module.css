@@ -1,0 +1,48 @@
+.toolbar {
+  position: absolute;
+  z-index: 90;
+  animation: fadeUp 0.15s ease-out;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translate(-50%, -90%);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, -100%);
+  }
+}
+
+.highlightBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 14px;
+  background: #1f1a14;
+  color: #f7f2e7;
+  border: none;
+  border-radius: 4px;
+  font-family: 'Cinzel', 'Georgia', serif;
+  font-size: 0.72rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  font-weight: 500;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+  transition: background-color 0.15s ease, transform 0.15s ease;
+}
+
+.highlightBtn:hover {
+  background: #5b2c83;
+  transform: translateY(-1px);
+}
+
+.highlightBtn:active {
+  transform: translateY(0);
+}
+
+.highlightBtn svg {
+  flex-shrink: 0;
+}

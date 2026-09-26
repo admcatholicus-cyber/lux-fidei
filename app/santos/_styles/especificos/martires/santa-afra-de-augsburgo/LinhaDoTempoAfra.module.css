@@ -152,17 +152,21 @@
   opacity: 1;
 }
 
-/* ─── Corpo expandido ───────────────────────────────────── */
+/* ─── Corpo (sempre no DOM, oculto via CSS quando fechado) ── */
 .corpo {
   padding: 16px 14px 20px 0;
   border-left: 3px solid #ece8df;
   margin-left: 0;
   padding-left: 18px;
-  animation: abrir 0.2s ease;
 }
 
-.aberta .corpo {
+.corpoAberto {
+  animation: abrir 0.2s ease;
   border-left-color: #d4b872;
+}
+
+.corpoFechado {
+  display: none;
 }
 
 @keyframes abrir {

@@ -1,0 +1,346 @@
+/* ============================================
+   CONSTANTINOPLA II (553) — CSS Module
+   Base: constantinopla-1.module.css
+   ============================================ */
+
+/* --- FICHA RÁPIDA --- */
+.fichaRapida {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1rem;
+  margin: 2rem 0 2.5rem;
+}
+
+.fichaCard {
+  background: linear-gradient(135deg, #fdfbf7 0%, #f7f1e5 100%);
+  border: 1px solid #e4dac8;
+  border-radius: 12px;
+  padding: 1.25rem 1rem;
+  text-align: center;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.fichaCard:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(43, 17, 48, 0.08);
+}
+
+.fichaLabel {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #8b6508;
+  margin-bottom: 0.5rem;
+}
+
+.fichaValor {
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #2b1130;
+  line-height: 1.4;
+}
+
+.fichaValor small {
+  font-size: 0.8rem;
+  font-weight: 400;
+  color: #6b5839;
+}
+
+/* --- SEÇÕES --- */
+.secao {
+  margin: 3rem 0;
+}
+
+.secaoTitulo {
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: clamp(1.35rem, 2.5vw, 1.75rem);
+  font-weight: 700;
+  color: #2b1130;
+  letter-spacing: -0.02em;
+  margin-bottom: 1.25rem;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  line-height: 1.3;
+}
+
+.secaoIcone {
+  font-size: 1.4rem;
+  line-height: 1;
+}
+
+.secaoIconeImg {
+  width: 28px;
+  height: 28px;
+  object-fit: contain;
+}
+
+.secaoTexto {
+  font-size: 1.02rem;
+  line-height: 1.75;
+  color: #3e3328;
+  margin-bottom: 0.75rem;
+}
+
+/* --- DESTAQUE --- */
+.destaque {
+  background: linear-gradient(135deg, #fdfbf7 0%, #f9f3e8 100%);
+  border: 1px solid #e4dac8;
+  border-left: 4px solid #c4a96a;
+  border-radius: 8px;
+  padding: 1.25rem 1.5rem;
+  margin: 1.5rem 0;
+  font-size: 1rem;
+  line-height: 1.7;
+  color: #3e3328;
+  text-align: center;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-style: italic;
+}
+
+/* --- GRID DE CARDS (HERESIAS / TÓPICOS) --- */
+.heresiasGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1rem;
+}
+
+.heresiaCard {
+  background: #ffffff;
+  border: 1px solid #e4dac8;
+  border-radius: 10px;
+  padding: 1.25rem;
+  transition: box-shadow 0.2s ease;
+}
+
+.heresiaCard:hover {
+  box-shadow: 0 4px 16px rgba(43, 17, 48, 0.06);
+}
+
+.heresiaNome {
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #2b1130;
+  margin-bottom: 0.35rem;
+}
+
+.heresiaLider {
+  font-size: 0.88rem;
+  color: #6b5839;
+  margin-bottom: 0.4rem;
+}
+
+.heresiaErro {
+  font-size: 0.95rem;
+  line-height: 1.65;
+  color: #3e3328;
+}
+
+/* --- LISTA DE PRESIDENTES / LINHA DO TEMPO --- */
+.presidentesLista {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.presidenteItem {
+  display: flex;
+  gap: 1.25rem;
+  padding: 1rem 0;
+  border-bottom: 1px solid #ede6d8;
+  align-items: flex-start;
+}
+
+.presidenteItem:last-child {
+  border-bottom: none;
+}
+
+.presidenteFase {
+  flex-shrink: 0;
+  min-width: 90px;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: #8b6508;
+  background: #f7f1e5;
+  border: 1px solid #e4dac8;
+  border-radius: 6px;
+  padding: 0.35rem 0.6rem;
+  text-align: center;
+  line-height: 1.3;
+}
+
+.presidenteInfo h4 {
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 1.02rem;
+  font-weight: 600;
+  color: #2b1130;
+  margin: 0 0 0.3rem;
+}
+
+.presidenteInfo p {
+  font-size: 0.95rem;
+  line-height: 1.65;
+  color: #3e3328;
+  margin: 0;
+}
+
+/* --- LISTA DE RESULTADOS --- */
+.resultadosLista {
+  list-style: none;
+  padding: 0;
+  margin: 0.75rem 0;
+}
+
+.resultadosLista li {
+  position: relative;
+  padding-left: 1.5rem;
+  margin-bottom: 0.6rem;
+  font-size: 0.98rem;
+  line-height: 1.65;
+  color: #3e3328;
+}
+
+.resultadosLista li::before {
+  content: '✦';
+  position: absolute;
+  left: 0;
+  color: #c4a96a;
+  font-size: 0.85rem;
+  top: 0.15rem;
+}
+
+/* --- ANÁTEMAS (ESPECÍFICO DE CONST. II) --- */
+.anatemaCard {
+  background: #fdfbf7;
+  border: 1px solid #c4a96a;
+  border-left: 4px solid #bd3a29;
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  transition: box-shadow 0.2s ease;
+}
+
+.anatemaCard:hover {
+  box-shadow: 0 6px 24px rgba(189, 58, 41, 0.08);
+}
+
+.anatemaNumero {
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #bd3a29;
+  line-height: 1;
+}
+
+.anatemaGrego {
+  font-style: italic;
+  font-size: 0.92rem;
+  background: #f5ece1;
+  padding: 0.75rem;
+  border-radius: 4px;
+  color: #665;
+  margin-bottom: 0.75rem;
+  line-height: 1.6;
+}
+
+.anatemaLatim {
+  font-style: italic;
+  font-size: 0.9rem;
+  background: #f5ece1;
+  padding: 0.75rem;
+  border-radius: 4px;
+  color: #665;
+  margin-bottom: 0.75rem;
+  line-height: 1.6;
+}
+
+/* --- VIGÍLIO TIMELINE (ESPECÍFICO) --- */
+.vigilioTimeline {
+  position: relative;
+  padding-left: 2rem;
+}
+
+.vigilioTimeline::before {
+  content: '';
+  position: absolute;
+  left: 0.5rem;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: linear-gradient(180deg, #bd3a29 0%, #c4a96a 50%, #5b2c83 100%);
+}
+
+/* --- ORIGENISMO (ESPECÍFICO) --- */
+.origenismoCard {
+  background: #faf7f5;
+  border: 1px solid #d4c5e2;
+  border-left: 4px solid #5b2c83;
+  border-radius: 8px;
+  padding: 1.25rem;
+  margin-bottom: 1.5rem;
+}
+
+/* --- DIVISOR --- */
+.divisor {
+  border: none;
+  height: 1px;
+  background: linear-gradient(90deg, transparent 0%, #e0d7c6 20%, #c4a96a 50%, #e0d7c6 80%, transparent 100%);
+  margin: 3rem 0;
+}
+
+/* --- NAVEGAÇÃO --- */
+.navLinks {
+  display: flex;
+  justify-content: center;
+  margin: 3rem 0 2rem;
+}
+
+.navLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: linear-gradient(135deg, #3a1f5c 0%, #5b2c83 100%);
+  color: #ffffff;
+  text-decoration: none;
+  padding: 0.9rem 1.8rem;
+  border-radius: 999px;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 1rem;
+  font-weight: 600;
+  box-shadow: 0 6px 20px rgba(91, 44, 131, 0.25);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.navLink:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 28px rgba(91, 44, 131, 0.32);
+}
+
+/* --- RESPONSIVO --- */
+@media (max-width: 640px) {
+  .fichaRapida {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .heresiasGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .presidenteItem {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .presidenteFase {
+    min-width: auto;
+    align-self: flex-start;
+  }
+
+  .anatemaNumero {
+    font-size: 1.5rem;
+  }
+}

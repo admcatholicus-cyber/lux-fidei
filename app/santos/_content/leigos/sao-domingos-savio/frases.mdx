@@ -1,7 +1,173 @@
-﻿export const meta = {
+﻿import HeroDomingosSavio from '../../../_components/especificos/leigos/sao-domingos-savio/hero';
+
+<HeroDomingosSavio />
+
+export const meta = {
   numero: 'IX',
   titulo: 'Frases',
-  subtitulo: 'Antologia de ditos, escritos e testemunhos',
+  subtitulo: 'Antologia exaustiva de ditos, propósitos, visões e diálogos do adolescente santo.',
 };
 
 <PageHeader numero={meta.numero} titulo={meta.titulo} subtitulo={meta.subtitulo} />
+
+<Antologia
+  introducao={
+    <>
+      <p>As palavras de São Domingos Sávio chegaram até nós quase inteiramente pelo testemunho ocular de seu diretor espiritual e pai, <strong>São João Bosco</strong>, que registrou minuciosamente os diálogos, avisos e exortações do menino em sua obra <em>Vita del giovanetto Savio Domenico</em> (1859), bem como nos depoimentos dos Processos Informativos e Apostólicos de Canonização.</p>
+      <p>Como Domingos faleceu aos 14 anos, seu corpus de palavras registradas é conciso, porém de uma densidade espiritual impressionante. Esta antologia reúne a <strong>totalidade histórica</strong> de suas sentenças conhecidas: desde os propósitos da infância e o combate à vaidade até suas visões proféticas sobre a Inglaterra, seus avisos de modéstia e seus últimos suspiros no leito de morte.</p>
+    </>
+  }
+  capitulos={[
+    { id: 'propositos', label: 'I · Os Propósitos e o Chamado' },
+    { id: 'alegria', label: 'II · A Escola de Valdocco' },
+    { id: 'apostolado', label: 'III · Zelo, Pureza e Fortaleza' },
+    { id: 'visoes', label: 'IV · As Visões Proféticas e o Fim' },
+  ]}
+>
+
+  <Capitulo id="propositos" numero="I" titulo="Os Propósitos e o Chamado" contagem="6 registros" aberto>
+    <Subtema titulo="Na Primeira Comunhão (aos 7 anos)" aberto primeiro>
+      <Frase numero={1} original="La morte, ma non peccati." fonte="Propósitos escritos no pequeno caderno de lembranças, em 8 de abril de 1849">
+        Lembranças da minha Primeira Comunhão:
+        <br/><br/>
+        1. Confessar-me-ei muito frequentemente e farei a comunhão sempre que o confessor me permitir.
+        <br/>
+        2. Quero santificar os dias festivos.
+        <br/>
+        3. Meus amigos serão Jesus e Maria.
+        <br/>
+        4. <strong>Antes morrer que pecar.</strong>
+      </Frase>
+    </Subtema>
+
+    <Subtema titulo="O Encontro com Dom Bosco (aos 12 anos)">
+      <Frase numero={2} original="Io sono la stoffa, ella ne sia il sarto." fonte="Diálogo nos Becchi, 2 de outubro de 1854">
+        — Vejo que há em ti um bom tecido — disse Dom Bosco.
+        <br/><br/>
+        — E para que pode servir este tecido? — perguntou Domingos.
+        <br/><br/>
+        — Para fazer uma bela veste para presentear ao Senhor.
+        <br/><br/>
+        — Pois bem! <strong>Eu sou o tecido, o senhor seja o alfaiate.</strong> Leve-me consigo e faça de mim essa bela veste para o Senhor!
+      </Frase>
+      <Frase numero={3} fonte="A Brígida, sua mãe, ao se despedir para ir a Turim">
+        Mãe, reze a Nossa Senhora para que me ajude a ser um santo. Prometo-lhe que, se eu não for para ficar santo, não voltarei mais.
+      </Frase>
+      <Frase numero={4} fonte="Ao ver a inscrição 'Da mihi animas, caetera tolle' no escritório de Dom Bosco">
+        — Padre, eu já entendi o que se faz aqui: o senhor não quer dinheiro, quer almas para Deus. Espero que a minha seja uma dessas almas!
+      </Frase>
+    </Subtema>
+  </Capitulo>
+
+
+  <Capitulo id="alegria" numero="II" titulo="A Escola de Valdocco" contagem="6 diálogos">
+    <Subtema titulo="O Desejo de Santidade" aberto primeiro>
+      <Frase numero={5} fonte="Após um sermão de Dom Bosco sobre a facilidade de ser santo">
+        Padre, sinto um desejo e uma necessidade absoluta de me fazer santo. Nunca imaginei que pudesse sê-lo com tanta facilidade. Mas agora que vi que se pode ser santo estando alegre, eu quero sê-lo de qualquer maneira. Diga-me o que devo fazer!
+      </Frase>
+      <Frase numero={6} fonte="Resposta de Dom Bosco ao pedido exagerado de penitências corporais">
+        — Padre, deixe-me ao menos colocar pedaços de madeira na cama ou jejuar a pão e água! O que farei se não posso fazer penitência?
+        <br/><br/>
+        — A penitência que Deus pede de ti é a obediência e suportar com paciência as pequenas cruzes, o calor, o frio, o vento, a chuva, o cansaço e as contrariedades de cada dia. Esta é a penitência dos meninos.
+      </Frase>
+      <Frase numero={7} fonte="Ao ser pego por Dom Bosco dormindo apenas com um lençol no rigoroso inverno piemontês">
+        — Domingos, queres morrer de frio no teu quarto?
+        <br/><br/>
+        — Não, Padre, não vou morrer de frio. Nosso Senhor no presépio e na cruz estava muito mais despido do que eu.
+      </Frase>
+    </Subtema>
+
+    <Subtema titulo="A Pedagogia da Alegria">
+      <Frase numero={8} original="Noi facciamo consistere la santità nello stare molto allegri." fonte="A um menino recém-chegado ao Oratório que estava triste">
+        Fica sabendo que aqui nós fazemos a santidade consistir em <strong>estarmos sempre muito alegres</strong>. Apenas procuramos evitar o pecado como um grande inimigo que nos rouba a graça de Deus e a paz do coração, e cumprimos com exatidão os nossos deveres.
+      </Frase>
+      <Frase numero={9} fonte="A um companheiro que sofria de escrúpulos e medos">
+        O demônio é como um cão acorrentado: pode latir muito, mas não morde se não nos aproximarmos dele. Fica tranquilo, reza à Imaculada e deixa ele latir.
+      </Frase>
+      <Frase numero={10} original="Maria, vi dono il mio cuore." fonte="Consagração pessoal feita diante do altar da Imaculada">
+        Maria, eu Vos dou o meu coração; fazei que seja sempre Vosso. Jesus e Maria, sede sempre os meus amigos! Mas, por piedade, fazei-me morrer antes que me aconteça a desgraça de cometer um só pecado mortal.
+      </Frase>
+    </Subtema>
+  </Capitulo>
+
+
+  <Capitulo id="apostolado" numero="III" titulo="Zelo, Pureza e Fortaleza" contagem="6 diálogos">
+    <Subtema titulo="A Defesa da Pureza" aberto primeiro>
+      <Frase numero={11} fonte="Ao ver um colega trazendo um livro com ilustrações indecentes para o pátio">
+        <em>(Domingos pegou o livro das mãos do colega e o rasgou em pedaços na hora:)</em>
+        <br/><br/>
+        — Infeliz! Querias perder a tua alma e a dos teus companheiros? Deus nos deu os olhos para ver as belezas da Sua criação e não para olhar coisas imundas!
+      </Frase>
+      <Frase numero={12} fonte="Conselho dado a um jovem sobre a modéstia dos olhos">
+        Os olhos são as janelas da alma. É pela janela que o ladrão entra para roubar a casa. Se não fechamos as janelas, o demônio entra e rouba o tesouro da graça.
+      </Frase>
+    </Subtema>
+
+    <Subtema titulo="A Coragem do Apostolado">
+      <Frase numero={13} fonte="Diálogo do Crucifixo, interceptando dois colegas que iam brigar a pedradas">
+        <em>(Domingos coloca-se entre os dois enfurecidos, tira um pequeno crucifixo do bolso e o ergue:)</em>
+        <br/><br/>
+        — Antes de começarem, olhem para Ele e digam: "Jesus Cristo, que era inocente, morreu perdoando os seus algozes; e eu, que sou pecador, quero ofendê-lo e não perdoar o meu irmão!" 
+        <br/><br/>
+        <em>(E dirigindo-se ao mais irritado:)</em>
+        <br/><br/>
+        — Agora, se tens coragem, atira a primeira pedra em mim!
+      </Frase>
+      <Frase numero={14} fonte="A um trabalhador adulto que blasphemava na rua">
+        Senhor, far-me-ia um grande favor? Poderia me indicar onde fica o Oratório de São Francisco de Sales? 
+        <br/><br/>
+        <em>(E quando o homem, surpreso pela educação do menino, indicou o caminho amavelmente, Domingos completou:)</em>
+        <br/><br/>
+        — E me faria um favor ainda maior se dissesse palavras mais bonitas do que as que estava dizendo contra o Senhor. O Seu nome é santo.
+      </Frase>
+      <Frase numero={15} fonte="Ao professor, após descobrir-se que Domingos havia assumido a culpa pela quebra da estufa no lugar dos colegas culpados">
+        — Mas por que não te defendeste, Domingos? Por que ficaste calado e sofreste o castigo na frente de todos?
+        <br/><br/>
+        — Eu sabia que aquele menino, por ter faltas anteriores, seria expulso da escola. Eu pensei no que Nosso Senhor Jesus Cristo sofreu injustamente e fiquei calado.
+      </Frase>
+      <Frase numero={16} fonte="Para Miguel Rua e os primeiros companheiros da Companhia da Imaculada">
+        Nós, sozinhos, não conseguiremos manter muitos no bom caminho. Mas unidos sob o manto da Imaculada, o que um não pode fazer só, faremos juntos.
+      </Frase>
+    </Subtema>
+  </Capitulo>
+
+
+  <Capitulo id="visoes" numero="IV" titulo="As Visões Proféticas e o Fim" contagem="6 registros">
+    <Subtema titulo="Dons Sobrenaturais e Visões" aberto primeiro>
+      <Frase numero={17} fonte="A Dom Bosco, ao puxá-lo pela batina urgindo para ir a um prédio distante em Turim">
+        — Venha rápido, Dom Bosco! Venha comigo, há uma grande obra a fazer!
+        <br/><br/>
+        <em>(Domingos o guiou até o terceiro andar de um cortiço, bateu na porta de um desconhecido e disse a Dom Bosco:)</em>
+        <br/><br/>
+        — É aqui!
+        <br/><br/>
+        <em>(Dentro da casa, havia um homem protestante moribundo que desejava ardentemente converter-se e confessar-se antes de morrer).</em>
+      </Frase>
+      <Frase numero={18} fonte="A visão profética sobre a Inglaterra, contada a Dom Bosco em 1856">
+        Padre, vi uma grande planície coberta por uma névoa escuríssima, que era a Inglaterra. De repente, vi o Santo Padre, o Papa, trazendo na mão uma tocha gloriosa que iluminou toda aquela terra. Deus prepara grandes coisas para a Igreja naquele país!
+      </Frase>
+      <Frase numero={19} fonte="A Dom Bosco, que o encontrou imóvel diante do sacrário por horas a fio">
+        Fiquei rezando tanto tempo assim? Eu achei que fosse apenas um instante, a missa acabou de terminar! Padre, perdoe-me, esqueci das regras... É que sinto a alma subir tão alto, que parece separar-se do corpo.
+      </Frase>
+    </Subtema>
+
+    <Subtema titulo="A Despedida de Valdocco e a Morte (1857)">
+      <Frase numero={20} fonte="A Dom Bosco, no momento em que subia na carruagem para voltar moribundo a Mondonio">
+        — Adeus, Dom Bosco! Os meus ossos vão para Mondonio, mas o meu coração fica aqui com o senhor. Reze por mim... Nós nos veremos no Paraíso!
+      </Frase>
+      <Frase numero={21} fonte="Ao médico dr. Ceriana, que dizia que a doença estava curada graças às sangrias">
+        O doutor diz que o doente está curado, mas o mundo diz que o doente vai embora. Eu sei para onde vou.
+      </Frase>
+      <Frase numero={22} fonte="Testemunho do pai, Carlos Sávio, na noite de 9 de março de 1857">
+        <em>(Estando no leito, pouco antes de expirar, abriu os olhos e chamou o pai:)</em>
+        <br/><br/>
+        — Papai, é hora. Pegue o livro das orações e leia-me as preces da boa morte. 
+        <br/><br/>
+        <em>(E quando o pai leu a jaculatória 'Doce coração de Maria, sede a minha salvação', Domingos sorriu, ergueu-se um pouco do travesseiro e disse as suas últimas palavras:)</em>
+        <br/><br/>
+        — Adeus, papai querido... <strong>Oh! Que coisa bela eu estou vendo!</strong>
+      </Frase>
+    </Subtema>
+  </Capitulo>
+
+</Antologia>

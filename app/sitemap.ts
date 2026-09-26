@@ -1,6 +1,11 @@
 ﻿import fs from 'fs'
 import path from 'path'
 import { MetadataRoute } from 'next'
+import { SANTOS } from './santos/_lib/registry'
+
+const santosComBiografia = new Map(
+  SANTOS.filter((s) => s.temBiografia).map((s) => [s.slug, s])
+)
 
 const baseUrl = 'https://lux-fidei.vercel.app'
 
@@ -44,6 +49,8 @@ function getSantosRoutes(): MetadataRoute.Sitemap {
       .filter((item) => item.isDirectory())
 
     for (const santo of santos) {
+      if (!santosComBiografia.has(santo.name)) continue
+
       const santoPath = path.join(
         categoriaPath,
         santo.name

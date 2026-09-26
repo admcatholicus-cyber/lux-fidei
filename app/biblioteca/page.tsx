@@ -3,6 +3,7 @@
 
 import React, { useState, useEffect, useRef, useCallback } from 'react';
 import Link from 'next/link';
+import Footer from '../_components/layout/Footer';
 import styles from './biblioteca.module.css';
 import '../home.css';
 import {
@@ -102,8 +103,9 @@ export default function BibliotecaPage() {
                   <p>O <em>Lux Fidei</em> respeita a privacidade de seus visitantes. Esta página descreve o tratamento de dados neste site.</p>
                   <p><strong>Análise de tráfego:</strong> Podem ser utilizadas ferramentas de análise anônima (como o Google Analytics), sem identificação individual dos visitantes.</p>
                   <p><strong>Publicidade:</strong> Este site utiliza o Google AdSense, que pode exibir anúncios com base em interesses do visitante. As preferências podem ser gerenciadas nas configurações do Google.</p>
-                  <p><strong>Dados pessoais:</strong> Nenhum dado pessoal identificável é coletado, vendido ou compartilhado. Mensagens enviadas por e-mail são usadas exclusivamente para responder ao remetente.</p>
+                  <p><strong>Tratamento de Dados:</strong> O site não exige cadastro nem coleta dados pessoais identificáveis. Dados anônimos de navegação são processados por serviços parceiros (Google Analytics e Google AdSense) para estatísticas e veiculação de anúncios. Mensagens enviadas por e-mail são usadas exclusivamente para responder ao remetente.</p>
                   <p><strong>Links externos:</strong> Este site pode conter links para terceiros. Não nos responsabilizamos pelas políticas de privacidade dessas páginas.</p>
+                  <p>Consulte a <a href="/privacidade" style="color:#8c6d3b">Política de Privacidade completa</a> para mais detalhes.</p>
                   <p>Dúvidas: <a href="mailto:comosercatolico@gmail.com">comosercatolico@gmail.com</a></p>`,
   };
 
@@ -748,7 +750,6 @@ export default function BibliotecaPage() {
                 </div>
                 <h4>{livro.titulo}</h4>
                 <p>{livro.desc}</p>
-                <span className={styles.tagBreve}>Em breve</span>
               </div>
             ))}
           </div>
@@ -761,9 +762,7 @@ export default function BibliotecaPage() {
         </div>
       </main>
 
-      <footer>
-        &copy; 2026 &ndash; Lux Fidei &nbsp;&middot;&nbsp; Omnia ao maiorem Dei gloriam
-      </footer>
+      <Footer />
     </div>
   );
 }
