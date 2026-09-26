@@ -10,7 +10,7 @@ import BarraSecoes from "../components/BarraSecoes";
 export const metadata: Metadata = {
   title: "Hinos Ambrosianos — Santo Ambrósio | Lux Fidei",
   description:
-    "Coleção canônica de 12 hinos litúrgicos em Latim e Português, atribuídos a Santo Ambrósio.",
+    "Coleção canônica de 15 hinos litúrgicos em Latim e Português, atribuídos a Santo Ambrósio.",
 };
 
 export default function PaginaHinosAmbrosianos() {
@@ -31,7 +31,7 @@ export default function PaginaHinosAmbrosianos() {
         <div className={styles.cabecalhoSecaoIcone}>🎵</div>
         <h1 className={styles.cabecalhoSecaoTitulo}>Hinos Ambrosianos</h1>
         <p className={styles.cabecalhoSecaoDescricao}>
-          Coleção canônica de 12 hinos litúrgicos latinos compostos para as
+          Coleção canônica de 15 hinos litúrgicos latinos compostos para as
           Horas e Festas, fundamentais para a hinodia ocidental. Tradução
           bilíngue latim/português brasileiro.
         </p>

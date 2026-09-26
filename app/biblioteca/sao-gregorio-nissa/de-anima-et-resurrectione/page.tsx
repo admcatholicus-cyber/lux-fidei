@@ -46,7 +46,8 @@ export default function PaginaDeAnimaEtResurrectione() {
             <strong>{stats.total}</strong> parte{stats.total !== 1 ? "s" : ""}
           </span>
           <span className={styles.estatisticaItem}>
-            <strong>{stats.autenticas}</strong> autêntico{stats.autenticas !== 1 ? "s" : ""}
+            <strong>{stats.autenticas}</strong> autêntico
+            {stats.autenticas !== 1 ? "s" : ""}
           </span>
         </div>
       </header>

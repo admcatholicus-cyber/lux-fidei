@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { gregorioMetadata } from "./data/metadata";
 import styles from "./biblioteca-gregorio.module.css";
@@ -17,7 +18,9 @@ export default function PaginaGregorioNissa() {
         <Link href="/biblioteca" className={styles.linkVoltar}>
           ← Voltar à Biblioteca
         </Link>
-        <span className={styles.migalhas}>Biblioteca / São Gregório de Nissa</span>
+        <span className={styles.migalhas}>
+          Biblioteca / São Gregório de Nissa
+        </span>
       </nav>
 
       <div className={styles.capaContainer}>
@@ -29,15 +32,44 @@ export default function PaginaGregorioNissa() {
 
       <section className={styles.secoes}>
         <h2 className={styles.secoesTitulo}>Obras disponíveis</h2>
-        <div className={styles.secoesGrid}>
+        <div className={styles.obrasGrid}>
           {obras.map((obra) => (
-            <Link key={obra.slug} href={obra.rota} className={styles.cardSecao}>
-              <div className={styles.cardSecaoIcone}>{obra.icone}</div>
-              <h3 className={styles.cardSecaoTitulo}>{obra.titulo}</h3>
-              <p className={styles.cardSecaoDescricao}>{obra.descricao}</p>
-              <p className={styles.cardSecaoContagem}>
-                {obra.capitulosCount} capítulo{obra.capitulosCount !== 1 ? "s" : ""}
-              </p>
+            <Link href={obra.rota} key={obra.slug} className={styles.cardObra}>
+              <div className={styles.capaObraContainer}>
+                {obra.capa ? (
+                  <Image
+                    src={obra.capa}
+                    alt={`Capa da obra ${obra.titulo}`}
+                    width={300}
+                    height={420}
+                    className={styles.imagemCapaHorizontal}
+                  />
+                ) : (
+                  <div className={styles.capaFallback}>{obra.icone}</div>
+                )}
+              </div>
+              <div className={styles.cardObraConteudo}>
+                <div>
+                  <div className={styles.cardHeaderArea}>
+                    <h3 className={styles.cardObraTitulo}>{obra.titulo}</h3>
+                    {obra.tituloLatim && (
+                      <span className={styles.tituloLatim}>
+                        {obra.tituloLatim}
+                      </span>
+                    )}
+                  </div>
+                  <p className={styles.cardObraDescricao}>{obra.descricao}</p>
+                </div>
+                <div className={styles.cardObraFooter}>
+                  <span className={styles.capitulosBadge}>
+                    {obra.capitulosCount} capítulo
+                    {obra.capitulosCount !== 1 ? "s" : ""}
+                  </span>
+                  <span className={styles.lerAgoraBtn}>
+                    Acessar Obra <span>&rarr;</span>
+                  </span>
+                </div>
+              </div>
             </Link>
           ))}
         </div>

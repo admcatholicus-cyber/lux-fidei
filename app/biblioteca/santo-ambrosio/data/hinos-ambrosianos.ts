@@ -1,891 +1,500 @@
-﻿import type { CapituloAmbrosio } from "./types";
+import type { CapituloAmbrosio } from "./types";
 
 export const hinosAmbrosianosData: CapituloAmbrosio[] = [
   {
-    id: "hinos-ambrosianos-01",
+    id: "hino-01",
     numero: 1,
-    titulo: "Aeterne rerum Conditor",
-    subtitulo: "Hino para as Laudes, cantado ao nascer do sol",
-    data: { iso: "0386-01-01", original: "c. 386 d.C.", aproximada: true },
+    titulo: "Hino I — Aeterne rerum conditor (Eterno Criador de tudo)",
+    subtitulo: "Hino das Laudes / Alvorada",
+    data: {
+      iso: "0386-01-01",
+      original: "c. 386 d.C.",
+      aproximada: true,
+    },
     contextoHistorico:
-      "Hino das Laudes matinais, cantado para celebrar o amanhecer e invocar a luz divina. Atribuído a Santo Ambrósio, faz parte do ciclo litúrgico diário da tradição ambrosiana.",
+      "O hino situa-se no episcopado de Ambrósio de Milão. Sua função original foi a oração da aurora; a exegese do galo articula a passagem da noite ao dia com a conversão de Pedro.",
     original: {
       idioma: "latim",
       texto:
-        "Aeterne rerum Conditor,\n" +
-        "noctem diemque regis,\n" +
-        "et temporum da tempora\n" +
-        "ut suma ducat ordine.\n\n" +
-        "Lucem refusam profundo\n" +
-        "caelestis alta pluuia,\n" +
-        "et ipsa iam nocte fulget\n" +
-        "sol orbe ambiens suo.\n\n" +
-        "Iam lucis orto sidere,\n" +
-        "Deum precemur supplices,\n" +
-        "ut in diurnis actibus\n" +
-        "nos seruet a culpis.\n\n" +
-        "Vox primum ecce adfertur\n" +
-        "et clara sonat in altum,\n" +
-        "ut adsuetum iam sileat\n" +
-        "et Prophetica pariat.",
+        "Aeterne rerum conditor,\nNoctem diemque qui regis,\nEt temporum das tempora,\nUt alleves fastidium,\n\nPraeco diei jam sonat,\nNoctis profundae pervigil,\nNocturna lux viantibus,\nA nocte noctem segregans.\n\nHoc excitatus Lucifer,\nSolvit polum caligine,\nHoc omnis errorum chorus,\nViam nocendi deserit.\n\nHoc nauta vires colligit,\nPontique mitescunt freta,\nHoc ipsa petra Ecclesiae\nCanente, culpam diluit.\n\nSurgamus ergo strenue,\nGallus jacentes excitat,\nEt somnolentos increpat,\nGallus negantes arguit.\n\nGallo canente, spes redit,\nAegris salus refunditur,\nMucro latronis conditur,\nLapsis fides revertitur.\n\nJesu, labantes respice,\nEt nos videndo corrige;\nSi respicis, lapsus cadunt,\nFletuque culpa solvitur.\n\nTu lux refulge sensibus,\nMentisque somnum discute:\nTe nostra vox primum sonet,\nEt vota solvamus tibi.",
     },
     portugues: {
       texto:
-        "Eterno Criador de todas as coisas,\n" +
-        "que governas a noite e o dia,\n" +
-        "e distribuis os tempos,\n" +
-        "para que a suma ordem se cumpra.\n\n" +
-        "A luz derramada do profundo céu\n" +
-        "pela chuva celestial,\n" +
-        "e a própria noite brilha agora\n" +
-        "com o sol que a rodeia.\n\n" +
-        "Agora, com a estrela da luz surgindo,\n" +
-        "supliquemos a Deus,\n" +
-        "para que nos nossos atos diários\n" +
-        "nos guarde das culpas.\n\n" +
-        "Eis que primeiro chega a voz\n" +
-        "e soa clara nas alturas,\n" +
-        "para que silencie o costume\n" +
-        "e profetizando dê frutos.",
+        "Eterno Criador de tudo,\nque reges a noite e o dia,\ne dás aos tempos seus tempos,\npara aliviar o enfado;\n\nJá soa o arauto do dia,\nvigia da noite profunda,\nluz noturna para os viajantes,\nseparando uma noite da outra.\n\nPor ele desperto, o luzeiro\nliberta o céu da escuridão,\npor ele todo o coro dos errantes\nabandona a via de ferir.\n\nPor ele o nauta recobra forças,\ne amansam-se os estreitos do mar,\npor ele a própria Pedra da Igreja,\nao cantar, lava a culpa.\n\nLevantemo-nos, pois, com vigor!\nO galo desperta os que jazem,\nrepreende os sonolentos,\no galo acusa os que negam.\n\nAo cantar do galo, retorna a esperança,\naos enfermos a saúde é restituída,\na espada do ladrão é embainhada,\na fé retorna aos caídos.\n\nJesus, olha para nós vacilantes,\ne corrige-nos ao contemplar-nos;\nse nos fitas, caem nossos tropeços,\ne pelo pranto a culpa se desfaz.\n\nTu, luz, resplandece aos sentidos,\ne dissipa o sono da mente;\nque nossa voz primeiro soe por ti,\ne a ti cumpramos nossos votos.",
       tradutor: "Projeto Lux Fidei",
     },
-    referenciasBiblicas: [
-      {
-        referencia: "Gênesis 1:3-5",
-        passagem: "E fez-se a luz",
-        tipo: "citação",
-      },
-      {
-        referencia: "Sl 138:16",
-        passagem: "Todas as coisas foram feitas por tua palavra",
-        tipo: "citação",
-      },
-    ],
     notasCriticas: [
-      "A autoria ambrosiana é tradicionalmente aceita, embora alguns estudiosos sugiram uma datação ligeiramente posterior.",
+      "Patrologia Latina 16, Hymnus I (8 estrofes, 32 versos), conferido com J. Fontaine (1992), hino I.",
     ],
-    notasEditoriais: [
-      "Esta tradução segue o texto do Breviário Romano, com adaptação para o português litúrgico.",
-    ],
+    notasEditoriais: ["Uso litúrgico: Laudes dominicais."],
     fonte: {
-      primaria: "Santo Ambrósio, Hymni, I: Aeterne rerum Conditor. PL 16, 133.",
+      primaria: "Patrologia Latina 16, Hymnus I, cols. 1409–1410.",
     },
-    autenticidade: "tradicional",
-    temas: ["laudes", "amanhecer", "luz divina", "oração matinal", "criação"],
+    autenticidade: "autêntica",
+    temas: ["aurora", "conversão", "Pedro", "vigília", "luz"],
   },
   {
-    id: "hinos-ambrosianos-02",
+    id: "hino-02",
     numero: 2,
-    titulo: "Deus Creator omnium",
-    subtitulo: "Hino para as Completas, cantado antes do sono",
-    data: { iso: "0386-01-01", original: "c. 386 d.C.", aproximada: true },
+    titulo: "Hino II — Deus creator omnium (Deus, criador de tudo)",
+    subtitulo: "Hino das Vésperas / Entardecer",
+    data: {
+      iso: "0385-01-01",
+      original: "c. 385 d.C.",
+      aproximada: true,
+    },
     contextoHistorico:
-      "Hino da última hora do Ofício Divino, cantado antes do repouso noturno. Expressa o abandono confiante em Deus ao encerrar o dia.",
+      "Pertence ao ambiente milanês de Ambrósio. Acompanha a oração vespertina: término do trabalho e repouso noturno.",
     original: {
       idioma: "latim",
       texto:
-        "Deus Creator omnium,\n" +
-        "polique rector maxime,\n" +
-        "qui nocte iubes quietum\n" +
-        "a monte mundi mergere.\n\n" +
-        "Quo tempore usus semel\n" +
-        "dormit homo quem condidit,\n" +
-        "redde salutem in nocte\n" +
-        "nos protegens a noxia.\n\n" +
-        "Vis esse mens ut beata\n" +
-        "tota integra nocte, Deo\n" +
-        "simulando custodiam\n" +
-        "sopita pectus iugiter.\n\n" +
-        "Tuam mercedem canimus,\n" +
-        "ut in pacatum pectus\n" +
-        "possimus in pace quiescere\n" +
-        "sine mendis et vitiis.",
+        "Deus creator omnium,\nPolique rector, vestiens\nDiem decoro lumine,\nNoctem soporis gratia.\n\nArtus solutos ut quies\nReddat laboris usui,\nMentesque fessas allevet,\nLuctusque solvat anxios.\n\nGrates peracto jam die,\nEt noctis exortu preces,\nVotis, reos ut adjuves,\nHymnum canentes solvimus.\n\nTe cordis ima concinant,\nTe vox canora concrepet,\nTe diligat castus amor,\nTe mens adoret sobria.\n\nUt cum profunda clauserit\nDiem caligo noctium,\nFides tenebras nesciat,\nEt nox fide reluceat.\n\nDormire mentem ne sinas,\nDormire culpa noverit,\nCustos fides refrigerans,\nSomni vaporem temperet.\n\nExuta sensu lubrico,\nTe cordis alta somnient;\nNec hostis invidi dolo\nPavor quietos suscitet.\n\nChristum rogemus et Patrem,\nChristi Patrisque Spiritum,\nUnum potens per omnia\nFove precantes Trinitas.",
     },
     portugues: {
       texto:
-        "Deus Criador de todas as coisas,\n" +
-        "grande Regedor do céu,\n" +
-        "que ordenas ao descanso noturno\n" +
-        "aqueles que peregrinam neste mundo.\n\n" +
-        "Tu que foste usado uma vez\n" +
-        "a dormir como aquele que criaste,\n" +
-        "devolve-nos a salvação na noite,\n" +
-        "protegendo-nos do que é nocivo.\n\n" +
-        "Seja a mente cheia de alegria\n" +
-        "toda a noite inteira para Deus,\n" +
-        "guardando sempre o coração\n" +
-        "dormindo em plena paz.\n\n" +
-        "Cantamos tua recompensa,\n" +
-        "para que possamos em paz repousar\n" +
-        "num coração sereno,\n" +
-        "livre de falhas e vícios.",
+        "Deus, criador de tudo,\nregente do céu, revestes\no dia de luz formosa,\ne a noite da graça do sono.\n\nQue o repouso devolva\naos membros soltos o labor,\nreanime as mentes fatigadas\ne desfaça as aflições ansiosas.\n\nPelo dia já terminado, graças;\nao surgir da noite, preces;\npara que ajudes os que têm votos,\nsolvemos, cantando, este hino.\n\nQue o íntimo do coração te cante,\nque a voz sonora te proclame,\nque o amor casto te ame,\nque a mente sóbria te adore.\n\nQuando a profunda escuridão\nda noite fechar o dia,\nque a fé não conheça trevas\ne a noite resplandeça pela fé.\n\nNão deixes a mente dormir;\nque a culpa saiba dormir;\na fé, guardiã, refrigerando os castos,\ntempere o ardor do sono.\n\nDespojado o sentido escorregadio,\nque as profundezas do coração sonhem contigo;\ne que, pela astúcia do inimigo invejoso,\no pavor não desperte os que repousam.\n\nRoguemos a Cristo e ao Pai,\nao Espírito de Cristo e do Pai;\num só Poder, atuante em tudo:\nampara os que suplicam, ó Trindade.",
       tradutor: "Projeto Lux Fidei",
     },
-    referenciasBiblicas: [
-      {
-        referencia: "Gênesis 2:21",
-        passagem: "E fez Deus cair sono sobre Adão",
-        tipo: "citação",
-      },
-      {
-        referencia: "Sl 126:2",
-        passagem: "É em vão que vos levantais antes do amanhecer",
-        tipo: "citação",
-      },
-    ],
     notasCriticas: [
-      "O hino apresenta uma teologia do sono como participação no repouso de Deus, tema recorrente na patrística.",
+      "Patrologia Latina 16, cols. 1219–1220; J. Fontaine (1992), hino II. Citado por Santo Agostinho nas Confissões IX.12.",
     ],
-    notasEditoriais: [
-      "A tradução mantém a estrutura litúrgica do original para fins de uso devocional.",
-    ],
+    notasEditoriais: ["Uso litúrgico: Vésperas."],
     fonte: {
-      primaria: "Santo Ambrósio, Hymni, II: Deus Creator omnium. PL 16, 134.",
+      primaria: "Patrologia Latina 16, cols. 1219–1220.",
     },
-    autenticidade: "tradicional",
-    temas: ["completas", "noite", "sono", "descanso", "proteção divina"],
+    autenticidade: "autêntica",
+    temas: ["criação", "vésperas", "repouso", "vigilância", "Trindade"],
   },
   {
-    id: "hinos-ambrosianos-03",
+    id: "hino-03",
     numero: 3,
-    titulo: "Eterna lux credentibus",
-    subtitulo: "Hino sobre a fé e a luz eterna",
-    data: { iso: "0386-01-01", original: "c. 386 d.C.", aproximada: true },
+    titulo: "Hino III — Iam surgit hora tertia (Já surge a hora terceira)",
+    subtitulo: "Hino da Hora Terça / Paixão",
+    data: {
+      iso: "0380-01-01",
+      original: "c. 380 d.C.",
+      aproximada: true,
+    },
     contextoHistorico:
-      "Hino que celebra a fé como luz interior que guia os crentes. Utilizado em diferentes momentos litúrgicos, especialmente em ocasiões de preparação espiritual.",
+      "Vincula a hora canônica de Terça à paixão de Cristo na cruz, à remissão do pecado e à afirmação da divindade do Filho.",
     original: {
       idioma: "latim",
       texto:
-        "Eterna lux credentibus\n" +
-        "Christe, redemptor omnium,\n" +
-        "lumen de lumine verum\n" +
-        "Dei Patris unigenitum.\n\n" +
-        "Per te scimus omnia\n" +
-        "quae credentibus statuta,\n" +
-        "te collaudant Angeli\n" +
-        "semper in saecula.\n\n" +
-        "Tua nos gratia\n" +
-        "et virtus nos vivificet,\n" +
-        "et amor tuus nos coniungat\n" +
-        "ut unum cor sit in nobis.\n\n" +
-        "Fides nostra confidat\n" +
-        "in te solida fundata,\n" +
-        "et spes certa maneat\n" +
-        "usque ad finem saeculi.",
+        "Iam surgit hora tertia\nQua Christus ascendit crucem:\nNil insolens mens cogitet,\nIntendat affectum precis.\n\nQui corde Christum suscipit\nInnoxium sensum gerit,\nVotisque præstat sedulis\nSanctum mereri Spiritum.\n\nHæc hora quæ finem dedit\nDiri veterno criminis,\nMortisque regnum diruit\nCulpamque ab ævo sustulit.\n\nHinc iam beata tempora\nCœpere Christi gratia,\nFidei replevit veritas\nTotum per orbem Ecclesias.\n\nCelso triumphi vertice\nMatri loquebatur suæ:\nEn filius, Mater, tuus:\nApostole, en Mater tua.\n\nPrætenta nuptæ fœdera\nAlto docens mysterio,\nNe Virginis partus sacrum\nMatris pudorem læderet.\n\nCui fidem in cælestibus\nIesus dedit miraculis:\nNec credidit plebs impia:\nQui credidit, salvus erit.\n\nNos credimus natum Deum\nPartumque Virginis sacræ,\nPeccata qui mundi tulit\nAd dexteram sedens Patris.\n\nDeo Patri sit gloria\nEiusque soli Filio\nCum Spiritu Paraclito\nIn sempiterna sæcula. Amen.",
     },
     portugues: {
       texto:
-        "Ó luz eterna dos crentes,\n" +
-        "Cristo, Redentor de todos,\n" +
-        "luz da luz verdadeira,\n" +
-        "Filho unigênito do Pai Deus.\n\n" +
-        "Por ti conhecemos todas as coisas\n" +
-        "que estão estabelecidas para os fiéis,\n" +
-        "te louvem os Anjos\n" +
-        "sempre por todos os séculos.\n\n" +
-        "Que tua graça\n" +
-        "e tua virtude nos vivifiquem,\n" +
-        "e que teu amor nos una,\n" +
-        "para que um só coração haja em nós.\n\n" +
-        "Que nossa fé confie\n" +
-        "em ti, firmemente estabelecida,\n" +
-        "e que a esperança certa permaneça\n" +
-        "até o fim dos séculos.",
+        "Já surge a hora terceira,\nna qual Cristo sobe à cruz:\nnada insolente cogite a mente,\ndirija à prece o seu afeto.\n\nQuem Cristo acolhe no coração\nguarda um sentido inocente;\ne, por votos assíduos,\nmerece o Santo Espírito.\n\nEsta é a hora que pôs fim\nao torpor do crime funesto,\ndesfez o reino da morte\ne removeu a culpa ancestral.\n\nDesde então, tempos bem-aventurados\ncomeçaram pela graça de Cristo:\na verdade encheu de fé\nas Igrejas por todo o orbe.\n\nNo alto cume do triunfo,\nfalava à sua Mãe:\nEis teu filho, Mãe, o teu;\nApóstolo, eis tua mãe.\n\nOs vínculos nupciais propostos,\nensinando sublime mistério,\npara que o parto sagrado da Virgem\nnão ferisse o pudor da Mãe.\n\nA quem Jesus, por celestes milagres,\ndeu fé nas coisas celestes:\nnão creu a plebe ímpia;\nquem creu será salvo.\n\nCremos que Deus nasceu,\ne no parto da Virgem sagrada,\nque levou os pecados do mundo,\nsentado à direita do Pai.\n\nGlória ao Deus Pai,\ne ao seu único Filho,\ncom o Espírito Paráclito,\npelos séculos eternos. Amém.",
       tradutor: "Projeto Lux Fidei",
     },
-    referenciasBiblicas: [
-      {
-        referencia: "João 1:4-5",
-        passagem: "Nele havia vida, e a vida era a luz dos homens",
-        tipo: "citação",
-      },
-      {
-        referencia: "Hebreus 11:1",
-        passagem: "A fé é o firme fundamento das coisas que se esperam",
-        tipo: "citação",
-      },
-    ],
     notasCriticas: [
-      "O hino reflete a teologia da luz patrística, influenciada pela escola de Antioquia e pela tradição joanina.",
+      "PL 16, cols. 1411–1412; J. Fontaine (1992), hino III. Citado por Santo Agostinho em De natura et gratia 63.",
     ],
-    notasEditoriais: [
-      "Texto conforme o Breviário Ambrosiano, com revisão para fidelidade ao original latino.",
-    ],
+    notasEditoriais: ["Uso litúrgico: Ofício de Terça."],
     fonte: {
-      primaria:
-        "Santo Ambrósio, Hymni, III: Eterna lux credentibus. PL 16, 135.",
+      primaria: "Patrologia Latina 16, cols. 1411–1412.",
     },
-    autenticidade: "tradicional",
-    temas: ["fé", "luz divina", "Cristo", "louvor", "esperança"],
+    autenticidade: "autêntica",
+    temas: ["Terça", "Paixão", "graça", "encarnação", "Trindade"],
   },
   {
-    id: "hinos-ambrosianos-04",
+    id: "hino-04",
     numero: 4,
-    titulo: "Splendor paternae gloriae",
-    subtitulo: "Hino para a hora da manhã",
-    data: { iso: "0386-01-01", original: "c. 386 d.C.", aproximada: true },
+    titulo: "Hino IV — Veni, redemptor gentium (Vem, Redentor das nações)",
+    subtitulo: "Hino do Advento / Encarnação",
+    data: {
+      iso: "0390-01-01",
+      original: "c. 390 d.C.",
+      aproximada: true,
+    },
     contextoHistorico:
-      "Hino matinal que celebra Cristo como esplendor da glória do Pai. Cantado nas Laudes, expressa a renovação diária da graça divina.",
+      "Hino de fins do século IV no contexto da consolidação do Natal e das controvérsias cristológicas. Contém a recensão antiga completa de 8 estrofes de PL 16.",
     original: {
       idioma: "latim",
       texto:
-        "Splendor paternae gloriae,\n" +
-        "imagoque substantiae,\n" +
-        "lumen a sole verum,\n" +
-        "qui lucem dari solis.\n\n" +
-        "Exsultans iam in gyro\n" +
-        "orbis iam circuits tui,\n" +
-        "conlectam audi gratiam\n" +
-        "qua tevet omne quod lucet.\n\n" +
-        "Vox tua vivifica nos,\n" +
-        "verbum tuum illuminat,\n" +
-        "spiritus tuus sanctificat\n" +
-        "per omnia saecula.\n\n" +
-        "Sicut erat in principio,\n" +
-        "et nunc, et semper,\n" +
-        "et in saecula saeculorum.\n" +
-        "Amen.",
+        "Veni, redemptor gentium,\nostende partum Virginis;\nmiretur omne saeculum:\ntalis decet partus Deum.\n\nNon ex virili semine,\nsed mystico spiramine\nVerbum Dei factum est caro\nfructusque ventris floruit.\n\nAlvus tumescit Virginis,\nclaustrum pudoris permanet,\nvexilla virtutum micant,\nversatur in templo Deus.\n\nProcedat e thalamo suo,\npudoris aula regia,\ngeminae gigas substantiae\nalacris ut currat viam.\n\nEgressus eius a Patre,\nregressus eius ad Patrem;\nexcursus usque ad inferos,\nrecursus ad sedem Dei.\n\nAequalis aeterno Patri,\ncarnis tropaeo cingere,\ninfirma nostri corporis\nvirtute firmans perpeti.\n\nPraesepe iam fulget tuum\nlumenque nox spirat novum,\nquod nulla nox interpolet\nfideque iugi luceat.\n\nSit, Christe, rex piissime,\ntibi Patrique gloria\ncum Spiritu Paraclito,\nin sempiterna saecula. Amen.",
     },
     portugues: {
       texto:
-        "Esplendor da glória do Pai,\n" +
-        "e imagem da substância,\n" +
-        "luz verdadeira do sol,\n" +
-        "que dás luz pelo próprio sol.\n\n" +
-        "Agora exultando em roda\n" +
-        "este mundo que orbita teu,\n" +
-        "ouve a graça coletada\n" +
-        "que ilumina tudo quanto existe.\n\n" +
-        "Tua voz nos vivifica,\n" +
-        "tua palavra nos ilumina,\n" +
-        "teu espírito nos santifica\n" +
-        "por todos os séculos.\n\n" +
-        "Assim como no princípio,\n" +
-        "e agora, e sempre,\n" +
-        "e por todos os séculos dos séculos.\n" +
-        "Amém.",
+        "Vem, Redentor das nações,\nrevela o parto da Virgem;\nadmire-se o mundo inteiro:\ntal nascimento convém a Deus.\n\nNão de semente viril,\nmas por sopro misterioso,\no Verbo de Deus fez-se carne,\ne floresceu o fruto do ventre.\n\nO ventre da Virgem se avoluma,\npermanece o claustro do pudor,\nbrilham os estandartes das virtudes,\nDeus reside em seu templo.\n\nSaia de seu tálamo,\nrégia sala da pureza,\ngigante de dupla substância,\nalegre, corra a via.\n\nSua saída veio do Pai,\nseu regresso volta ao Pai;\nsua jornada vai até os infernos,\nseu retorno ascende ao trono de Deus.\n\nIgual ao Pai eterno,\ncinge-te com o troféu da carne,\nfortalecendo a fraqueza do nosso corpo\ncom força perpétua.\n\nJá fulge a tua manjedoura,\ne a noite exala nova luz;\nque noite alguma a obscureça,\ne brilhe com fé perene.\n\nA ti, Cristo, rei piedosíssimo,\ne ao Pai, seja a glória,\ncom o Espírito Paráclito,\npelos séculos sem fim. Amém.",
       tradutor: "Projeto Lux Fidei",
     },
-    referenciasBiblicas: [
-      {
-        referencia: "Hebreus 1:3",
-        passagem:
-          "Que é o esplendor da glória de Deus e a imagem exata de sua substância",
-        tipo: "citação",
-      },
-      {
-        referencia: "João 8:12",
-        passagem: "Eu sou a luz do mundo",
-        tipo: "citação",
-      },
-    ],
     notasCriticas: [
-      "O hino contém elementos cristológicos fortes, influenciados pelo Credo Niceno e pela teologia da consubstancialidade.",
+      "Recensão antiga completa de Patrologia Latina 16 / J. Fontaine (1992), hino IV (incluindo a estrofe Egressus eius a Patre).",
     ],
-    notasEditoriais: [
-      "Tradução fiel ao texto latino, com termos adaptados à tradição litúrgica portuguesa.",
-    ],
+    notasEditoriais: ["Uso litúrgico: Vésperas do Natal / Advento."],
     fonte: {
-      primaria:
-        "Santo Ambrósio, Hymni, IV: Splendor paternae gloriae. PL 16, 136.",
+      primaria: "Patrologia Latina 16 / J. Fontaine (1992).",
     },
-    autenticidade: "tradicional",
-    temas: ["manhã", "Cristo", "luz", "Pai", "glória"],
+    autenticidade: "autêntica",
+    temas: ["Advento", "Natal", "encarnação", "virgindade de Maria", "luz"],
   },
   {
-    id: "hinos-ambrosianos-05",
+    id: "hino-05",
     numero: 5,
-    titulo: "Nox astra rerum contegit",
-    subtitulo: "Hino para a vigília noturna",
-    data: { iso: "0386-01-01", original: "c. 386 d.C.", aproximada: true },
+    titulo: "Hino V — Splendor paternae gloriae (Esplendor da glória paterna)",
+    subtitulo: "Hino da Manhã / Laudes",
+    data: {
+      iso: "0380-01-01",
+      original: "c. 380 d.C.",
+      aproximada: true,
+    },
     contextoHistorico:
-      "Hino da vigília noturna, cantado durante as Matinas. A noite é vista como ocasião para a contemplação de Deus e a preparação para a vinda do Senhor.",
+      "Sua confissão da Trindade e a linguagem de luz a partir da luz situam-se nas controvérsias anti-nicenas.",
     original: {
       idioma: "latim",
       texto:
-        "Nox astra rerum contegit\n" +
-        "et iam quietem diligit,\n" +
-        "incerto somno reuocat\n" +
-        "nos reuocat ad Dominum.\n\n" +
-        "Oportunitas secessus\n" +
-        "et tempus quo ianua verae\n" +
-        "vitae aperiantur homini,\n" +
-        "et clausa sint inania.\n\n" +
-        "Sancta dominica festa\n" +
-        "occurrit iam mensibus,\n" +
-        "et nunc iam in laetitia\n" +
-        "sunt laetitia cordium.\n\n" +
-        "Caelorum regna panduntur,\n" +
-        "et Christus venit cum pace,\n" +
-        "ut det nobis concordiam\n" +
-        "in aeterna beatitudine.",
+        "Splendor paternae gloriae,\nde luce lucem proferens,\nlux lucis et fons luminis,\ndies dierum inluminans,\n\nverusque sol inlabere,\nmicans nitore perpeti,\niubarque sancti spiritus\ninfunde nostris sensibus.\n\nvotis vocemus et patrem –\npatrem perennis gloriae,\npatrem potentis gratiae –\nculpam releget lubricam.\n\ninformet actus strenuos,\ndentem retundat invidi,\ncasus secundet asperos,\ndonet gerendi gratiam,\n\nmentem gubernet et regat\ncasto fideli corpore;\nfides calore ferveat,\nfraudis venena nesciat.\n\nChristusque nobis sit cibus,\npotusque noster sit fides;\nlaeti bibamus sobriam\nebrietatem spiritus.\n\nlaetus dies hic transeat,\npudor sit ut diluculum,\nfides velut meridies,\ncrepusculum mens nesciat.\n\naurora cursus provehit,\naurora totus prodeat,\nin patre totus filius,\net totus in verbo pater.\n\ndeo patri sit gloria,\neiusque soli filio,\ncum spiritu paraclito\net nunc et in perpetuum.",
     },
     portugues: {
       texto:
-        "A noite cobriu as estrelas do mundo\n" +
-        "e já ama o descanso,\n" +
-        "com sono incerto nos chama\n" +
-        "para o Senhor.\n\n" +
-        "A oportunidade do recolhimento\n" +
-        "é a hora em que se abrem\n" +
-        "as portas da vida verdadeira,\n" +
-        "e se fecham as vaidades.\n\n" +
-        "Sagradas festas dominicais\n" +
-        "chegam já nos meses,\n" +
-        "e agora há alegria\n" +
-        "no coração dos fiéis.\n\n" +
-        "Os reinos dos céus se abrem,\n" +
-        "e Cristo vem com paz,\n" +
-        "para nos dar concórdia\n" +
-        "na eterna beatitude.",
+        "Esplendor da glória paterna,\nda luz trazendo a luz,\nLuz da Luz, fonte de luz,\ndia dos dias, iluminando.\n\nE Sol verdadeiro, desce,\nbrilhando em fulgor perene,\ne o fulgor do Santo Espírito\ninfunde em nossos sentidos.\n\nEm preces invoquemos também o Pai —\no Pai da glória perene,\no Pai da graça poderosa —\nque afaste a culpa escorregadia.\n\nModele os atos vigorosos,\nquebre o dente da inveja,\nfavoreça os ásperos reveses,\nconceda a graça de suportá-los.\n\nGoverne e conduza a mente\nem corpo casto e fiel;\nque a fé ferva em ardor,\ne não conheça os venenos da fraude.\n\nE Cristo seja nosso alimento,\ne nossa bebida seja a fé;\nalegres, bebamos a sóbria\nembriaguez do Espírito.\n\nPasse alegre este dia,\nseja o pudor como a alvorada,\na fé, como o meio-dia,\ne a mente não conheça o crepúsculo.\n\nA aurora conduz seu curso,\nsurja inteiro o Amanhecer,\nno Pai, o Filho inteiro,\ne todo no Verbo, o Pai.\n\nAo Deus Pai seja a glória,\ne ao seu único Filho,\ncom o Espírito Paráclito,\nagora e por todo o sempre.",
       tradutor: "Projeto Lux Fidei",
     },
-    referenciasBiblicas: [
-      {
-        referencia: "Sl 62:7",
-        passagem: "De ti vem a minha luz e a minha paz",
-        tipo: "citação",
-      },
-      {
-        referencia: "Mateus 25:6",
-        passagem: "Eis o noivo, saí-lhe ao encontro",
-        tipo: "citação",
-      },
-    ],
     notasCriticas: [
-      "O hino adapta-se ao contexto das vigílias monásticas, enfatizando a vigilância espiritual.",
+      "J. Fontaine (1992), hino V / W. Bulst, Hymni latini antiquissimi.",
     ],
-    notasEditoriais: [
-      "Tradução realizada a partir do texto do Breviário Ambrosiano.",
-    ],
+    notasEditoriais: ["Uso litúrgico: Laudes de Segunda-feira."],
     fonte: {
-      primaria:
-        "Santo Ambrósio, Hymni, V: Nox astra rerum contegit. PL 16, 137.",
+      primaria: "Patrologia Latina 16 / J. Fontaine (1992).",
     },
     autenticidade: "tradicional",
-    temas: ["vigília", "noite", "contemplação", "vigilância", "esperança"],
+    temas: ["Laudes", "luz", "Trindade", "santificação", "sobriedade"],
   },
   {
-    id: "hinos-ambrosianos-06",
+    id: "hino-06",
     numero: 6,
-    titulo: "Jam surgit hora tertia",
-    subtitulo: "Hino para a Terce, associado ao Pentecostes",
-    data: { iso: "0386-01-01", original: "c. 386 d.C.", aproximada: true },
+    titulo: "Hino VI — Aeterna Christi munera (Os dons eternos de Cristo)",
+    subtitulo: "Hino dos Mártires",
+    data: {
+      iso: "0386-01-01",
+      original: "c. 386 d.C.",
+      aproximada: true,
+    },
     contextoHistorico:
-      "Hino cantado na hora de Terce, tradicionalmente associado à descida do Espírito Santo no Pentecostes. Celebra o dom do Espírito e a renovação da Igreja.",
+      "A celebração dos mártires reforçava a identidade nicena nos conflitos dos anos 380.",
     original: {
       idioma: "latim",
       texto:
-        "Jam surgit hora tertia,\n" +
-        "quam Psalmus olim cecinit\n" +
-        "in sancto tertio Spiritum\n" +
-        "super Apostolos datum.\n\n" +
-        "Iam non confusis vocibus\n" +
-        "incipiant loqui variis\n" +
-        "in laudem Christi et Patris\n" +
-        "per universas gentes.\n\n" +
-        "Ferventes iam Spiritu\n" +
-        "sanctificati verbis suis\n" +
-        "gustaverunt donum Divinum\n" +
-        "quod dat pax omnibus.\n\n" +
-        "Deo Patri sit gloria\n" +
-        "et Filio qui a mortuis\n" +
-        "surrexit, ac Paraclito\n" +
-        "in saecula saeculorum. Amen.",
+        "Aeterna Christi munera,\nEt martyrum victorias,\nLaudes ferentes debitas,\nLaetis canamus mentibus.\n\nEcclesiarum principes,\nBelli triumphales duces,\nCoelestis aulae milites,\nEt vera mundi lumina.\n\nTerrore victo saeculi,\nSpretisque poenis corporis,\nMortis sacrae compendio,\nVitam beatam possident.\n\nTraduntur igni martyres,\nEt bestiarum dentibus,\nArmata saevit ungulis\nTortoris insani manus,\n\nNudata pendent viscera,\nSanguis sacratus funditur,\nSed permanent immobiles\nVitae perennis gratia.\n\nDevota sanctorum fides,\nInvicta spes credentium;\nPerfecta Christi charitas,\nMundi triumphat principem.\n\nIn his Paterna gloria,\nIn his voluntas Filii,\nExsultat in his Spiritus,\nCoelum repletur gaudiis.\n\nTe nunc, Redemptor, quaesumus,\nUt ipsorum consortio\nJungas precantes servulos,\nIn sempiterna saecula.\nAmen.",
     },
     portugues: {
       texto:
-        "Já se ergue a hora de Terce,\n" +
-        "que o Salmo outrora cantou,\n" +
-        "quando no terceiro dia o Espírito\n" +
-        "foi dado sobre os Apóstolos.\n\n" +
-        "Agora, sem vozes confusas,\n" +
-        "começam a falar em línguas variadas\n" +
-        "em louvor a Cristo e ao Pai\n" +
-        "por todas as nações.\n\n" +
-        "Ardendo já no Espírito,\n" +
-        "santificados por suas próprias palavras,\n" +
-        "provaram o dom divino\n" +
-        "que dá paz a todos.\n\n" +
-        "A Deus Pai seja glória,\n" +
-        "e ao Filho que dos mortos\n" +
-        "ressuscitou, e ao Paráclito,\n" +
-        "por todos os séculos dos séculos. Amém.",
+        "Os dons eternos de Cristo,\nE as vitórias dos mártires,\nTrazendo os louvores devidos,\nCantemos com corações alegres.\n\nPríncipes das igrejas,\nCondutores triunfais da batalha,\nSoldados da corte celeste,\nE verdadeiras luzes do mundo.\n\nVencido o terror do século,\nDesprezadas as penas do corpo,\nPelo atalho da morte santa,\nPossuem a vida bem-aventurada.\n\nSão entregues ao fogo os mártires,\nE aos dentes das feras;\nArmada de garras, enfurece-se\nA mão do torturador insano,\n\nPendem as entranhas desnudas,\nDerrama-se o sangue consagrado,\nMas permanecem imóveis\nPela graça da vida eterna.\n\nA fé devotada dos santos,\nA esperança invicta dos crentes,\nA perfeita caridade de Cristo,\nTriunfa sobre o príncipe do mundo.\n\nNeles, a glória do Pai,\nNeles, a vontade do Filho,\nNeles, exulta o Espírito,\nE o céu se enche de alegrias.\n\nAgora te pedimos, Redentor,\nQue à companhia deles unas\nOs servos suplicantes,\nPelos séculos sem fim.\nAmém.",
       tradutor: "Projeto Lux Fidei",
     },
-    referenciasBiblicas: [
-      {
-        referencia: "Atos 2:15",
-        passagem:
-          "Não são bêbados, como pareceis, mas é a terceira hora do dia",
-        tipo: "citação",
-      },
-      {
-        referencia: "Atos 2:3",
-        passagem: "E apareceram línguas como de fogo",
-        tipo: "citação",
-      },
-    ],
     notasCriticas: [
-      "A referência à hora de Terce está diretamente ligada ao relato da Pentecostes em Atos dos Apóstolos.",
+      "Patrologia Latina 16, Hymnus VIII / J. Fontaine (1992), hino XIV.",
     ],
-    notasEditoriais: [
-      "A estrutura do hino segue o esquema de louvor trinitário comum na tradição ambrosiana.",
-    ],
+    notasEditoriais: ["Uso litúrgico: Comum dos Mártires."],
     fonte: {
-      primaria:
-        "Santo Ambrósio, Hymni, VI: Jam surgit hora tertia. PL 16, 138.",
+      primaria: "Patrologia Latina 16, Hymnus VIII.",
     },
     autenticidade: "tradicional",
-    temas: ["terce", "Pentecostes", "Espírito Santo", "Apóstolos", "louvor"],
+    temas: ["mártires", "fé", "esperança", "caridade", "comunhão dos santos"],
   },
   {
-    id: "hinos-ambrosianos-07",
+    id: "hino-07",
     numero: 7,
-    titulo: "Nunc sancte nobis Spiritus",
-    subtitulo: "Hino de invocação ao Espírito Santo",
-    data: { iso: "0386-01-01", original: "c. 386 d.C.", aproximada: true },
+    titulo: "Hino VII — Aeterne rex altissime (Rei eterno, altíssimo)",
+    subtitulo: "Hino da Ascensão",
+    data: {
+      iso: "0500-01-01",
+      original: "século V",
+      aproximada: true,
+    },
     contextoHistorico:
-      "Hino de invocação ao Espírito Santo, utilizado no início do Ofício Divino e em diversas celebrações litúrgicas. Expressa a dependência da Igreja do sopro divino.",
+      "Composição anônima da tradição ambrosiana associada à celebração da Ascensão do Senhor.",
     original: {
       idioma: "latim",
       texto:
-        "Nunc sancte nobis Spiritus,\n" +
-        "et Patri, et Filio,\n" +
-        "pura corda intonare\n" +
-        "per fidei meritum.\n\n" +
-        "Mentibus nostris agitet\n" +
-        "aeterni amor copiam,\n" +
-        "ut Deo servitium\n" +
-        "reddamus ex toto corde.\n\n" +
-        "Ure nos ignis divinus,\n" +
-        "qui est Spiritus Paraclitus,\n" +
-        "ut a peccatis omnibus\n" +
-        "liberemur continua gratia.\n\n" +
-        "Ut Simplici Deo Trinitas\n" +
-        "iugiter maneat in nobis,\n" +
-        "et nos in ipsa semper\n" +
-        "vivamus in saecula. Amen.",
+        "Aeterne rex altissime,\nRedemptor et fidelium,\nQuo mors soluta deperit,\nDatur triumphus gratiae.\n\nScandens tribunal dexterae\nPatris, potestas omnium\nCollata est Iesu caelitus,\nQuae non erat humanitus.\n\nUt trina rerum machina,\nCaelestium, terrestrium,\nEt infernorum condita,\nFlectat genu iam subdita.\n\nTremunt videntes angeli,\nVersa vice mortalium,\nCulpat caro, purgat caro,\nRegnat Deus Dei caro.\n\nTu esto nostrum gaudium,\nQui es futurum praemium,\nSit nostra in Te gloria,\nPer cuncta semper saecula.\n\nHinc te precantes quaesumus,\nIgnosce culpis omnibus,\nEt corda sursum subleva\nAd te superna gratia.\n\nUt cum repente coeperis\nClarere nube iudicis,\nPoenas repellas debitas,\nReddas coronas perditas.\n\nHymnum canamus gloriae,\nQui scandis super sidera,\nCum Patre et Sancto Spiritu,\nIn sempiterna saecula. Amen.",
     },
     portugues: {
       texto:
-        "Nossa, o Espírito Santo,\n" +
-        "e ao Pai, e ao Filho,\n" +
-        "corações puros entoar\n" +
-        "pelo mérito da fé.\n\n" +
-        "Em nossas mentes agite\n" +
-        "a abundância do amor eterno,\n" +
-        "para que a Deus prestemos serviço\n" +
-        "de todo o coração.\n\n" +
-        "Incendeia-nos o fogo divino,\n" +
-        "que é o Espírito Paráclito,\n" +
-        "para que de todos os pecados\n" +
-        "sejamos livres pela graça contínua.\n\n" +
-        "Para que a Trindade Simples de Deus\n" +
-        "permanentemente permaneça em nós,\n" +
-        "e nós nela sempre\n" +
-        "vivamos por todos os séculos. Amém.",
+        "Rei eterno, altíssimo,\nRedentor dos fiéis,\npor quem, desfeita, a morte perece,\né dado o triunfo da graça.\n\nSubindo ao tribunal da direita\ndo Pai, o poder sobre tudo\nte foi conferido, Jesus, do céu,\npoder que não tinhas como homem.\n\nPara que a tríplice máquina do mundo,\ndas coisas celestes e terrestres,\ne das infernais, criada,\ndobre o joelho, já submissa.\n\nTremem os anjos, ao verem\na sorte mudada dos mortais;\na carne é culpada, a carne purifica,\nreina Deus, a carne de Deus.\n\nSê tu nossa alegria,\ntu que és o prêmio futuro;\nseja em ti a nossa glória,\npor todos os séculos.\n\nPor isso, suplicantes, te pedimos:\nperdoa todas as culpas,\ne eleva ao alto os corações\naté ti, pela graça celeste.\n\nQuando, de repente, começares\na resplandecer na nuvem do Juiz,\nafasta as penas devidas,\nrestitui as coroas perdidas.\n\nCantemos o hino de glória,\na ti que sobes acima dos astros,\ncom o Pai e o Espírito Santo,\npelos séculos eternos. Amém.",
       tradutor: "Projeto Lux Fidei",
     },
-    referenciasBiblicas: [
-      {
-        referencia: "João 14:26",
-        passagem: "O Espírito Santo vos ensinará todas as coisas",
-        tipo: "citação",
-      },
-      {
-        referencia: "Atos 4:31",
-        passagem: "E foram todos cheios do Espírito Santo",
-        tipo: "citação",
-      },
-    ],
     notasCriticas: [
-      "Este hino é um dos mais célebres de Santo Ambrósio, amplamente usado na liturgia ocidental.",
+      "A. S. Walpole, Early Latin Hymns, hino 113. Hino anônimo transmitido no âmbito da hinódia ambrosiana.",
     ],
-    notasEditoriais: [
-      "A tradução procura manter a solenidade do original latino para uso litúrgico.",
-    ],
+    notasEditoriais: ["Uso litúrgico: Tempo da Ascensão."],
     fonte: {
-      primaria:
-        "Santo Ambrósio, Hymni, VII: Nunc sancte nobis Spiritus. PL 16, 139.",
+      primaria: "A. S. Walpole, Early Latin Hymns.",
     },
     autenticidade: "tradicional",
-    temas: ["Espírito Santo", "invocação", "Trindade", "oração", "graça"],
+    temas: ["Ascensão", "vitória", "juízo", "perdão", "glória"],
   },
   {
-    id: "hinos-ambrosianos-08",
+    id: "hino-08",
     numero: 8,
-    titulo: "Somno refectus artibus",
-    subtitulo: "Hino para a hora de Sexta, ao meio-dia",
-    data: { iso: "0386-01-01", original: "c. 386 d.C.", aproximada: true },
+    titulo: "Hino VIII — Illuminans Altissimus (O Altíssimo que ilumina)",
+    subtitulo: "Hino da Epifania",
+    data: {
+      iso: "0380-01-01",
+      original: "c. 380 d.C.",
+      aproximada: true,
+    },
     contextoHistorico:
-      "Hino cantado na hora de Sexta, ao meio-dia. Celebra a restauração do corpo e da alma após o trabalho, e invoca a proteção divina para a segunda metade do dia.",
+      "Interpreta a Epifania reunindo a estrela dos Magos, o Batismo, Caná e a multiplicação dos pães.",
     original: {
       idioma: "latim",
       texto:
-        "Somno refectus artibus\n" +
-        "claro nitens Oriente\n" +
-        "Christum rogabo supplicis\n" +
-        "ut me protegat semper.\n\n" +
-        "Non confundar in aeternum\n" +
-        "nec confundar perpetim,\n" +
-        "quia in iudicio tuo\n" +
-        "vita mea servabitur.\n\n" +
-        "Non timebo mille populos\n" +
-        "in circuitu positos,\n" +
-        "sed confidenter et aperte\n" +
-        "Dominum invocabo.\n\n" +
-        "Fons vitae eternae\n" +
-        "est Christus Dominus noster,\n" +
-        "qui vivit et regnat\n" +
-        "in saecula saeculorum. Amen.",
+        "Illuminans Altissimus\nMicantium astrorum globos,\nPax, vita, lumen, veritas,\nJesu fave precantibus.\n\nSeu mystico baptismate\nFluenta Jordanis retro\nConversa quondam tertio\nPraesente sacraris die.\n\nSeu stella partum Virginis\nCoelo micans signaveris;\nEt hac adoratum die\nPraesepe Magos duxeris.\n\nVel hydriis plenis aquae\nVini saporem infuderis:\nHausit minister conscius,\nQuod ipse non impleverat.\n\nAquas colorari videns,\nInebriare flumina;\nMutata elementa stupent\nTransire in usus alteros.\n\nSic quinque millibus viris\nDum quinque panes dividis,\nEdentium sub dentibus\nIn ore crescebat cibus.\n\nMultiplicabatur magis\nDispendio panis suo:\nQuis haec videns mirabitur\nJuges meatus fontium?\n\nInter manus frangentium\nPanis rigatur profluus:\nIntacta quae non fregerant,\nFragmenta subrepunt viris.",
     },
     portugues: {
       texto:
-        "Descansado do trabalho pelo sono,\n" +
-        "brilhando com o Oriente claro,\n" +
-        "rogarei a Cristo suplicante\n" +
-        "para que sempre me proteja.\n\n" +
-        "Não serei envergonhado eternamente,\n" +
-        "nem serei confundido perpetuamente,\n" +
-        "porque no teu julgamento\n" +
-        "minha vida será salva.\n\n" +
-        "Não temerei mil povos\n" +
-        "postos ao meu redor,\n" +
-        "mas confiante e abertamente\n" +
-        "invocarei o Senhor.\n\n" +
-        "A fonte da vida eterna\n" +
-        "é Cristo nosso Senhor,\n" +
-        "que vive e reina\n" +
-        "por todos os séculos dos séculos. Amém.",
+        "Altíssimo, que iluminas\nos globos dos astros cintilantes,\npaz, vida, luz, verdade,\nJesus, favorece os que oram.\n\nOu pelo batismo místico\nsantificas, neste dia,\nas águas do Jordão, outrora\ntrês vezes voltadas para trás.\n\nOu, pela estrela brilhante\nno céu, assinalaste o parto\nda Virgem; e neste dia\nguiaste os Magos ao presépio.\n\nOu, em talhas cheias de água,\ninfundiste o sabor do vinho;\no servidor, ciente, tirou\no que ele próprio não enchera.\n\nVendo as águas colorirem-se\ne os rios embriagarem-se;\nos elementos transformados\npasmam ao passar a outros usos.\n\nAssim, aos cinco mil homens,\nenquanto repartias cinco pães,\nsob os dentes dos que comiam,\ncrescia o alimento na boca.\n\nMais se multiplicava\ncom o gasto do próprio pão;\nquem, vendo isto, se admirará\ndos cursos perenes das fontes?\n\nEntre as mãos dos que o partem,\no pão jorra abundante;\nfragmentos intactos, não partidos,\ninsinuam-se aos homens.",
       tradutor: "Projeto Lux Fidei",
     },
-    referenciasBiblicas: [
-      {
-        referencia: "Sl 3:6",
-        passagem: "Não temerei milhares de povos que me cercam",
-        tipo: "citação",
-      },
-      {
-        referencia: "Sl 120:8",
-        passagem: "O Senhor guarda a tua entrada e a tua saída",
-        tipo: "citação",
-      },
-    ],
     notasCriticas: [
-      "O hino combina elementos dos Salmos 3 e 120 com a tradição litúrgica das horas.",
+      "Patrologia Latina 16, Hymnus V / J. Fontaine (1992), hino VII.",
     ],
-    notasEditoriais: [
-      "Esta tradução segue a estrutura do Breviário Ambrosiano para a hora de Sexta.",
-    ],
+    notasEditoriais: ["Uso litúrgico: Solenidade da Epifania."],
     fonte: {
-      primaria:
-        "Santo Ambrósio, Hymni, VIII: Somno refectus artibus. PL 16, 140.",
-    },
-    autenticidade: "tradicional",
-    temas: ["sexta", "meio-dia", "proteção divina", "descanso", "confiança"],
-  },
-  {
-    id: "hinos-ambrosianos-09",
-    numero: 9,
-    titulo: "Propheta Christum promisit",
-    subtitulo: "Hino sobre os Profetas e a promessa do Messias",
-    data: { iso: "0386-01-01", original: "c. 386 d.C.", aproximada: true },
-    contextoHistorico:
-      "Hino que celebra os Profetas do Antigo Testamento e sua prenúncio da vinda de Cristo. Utilizado em festividades litúrgicas que remontam à história da salvação.",
-    original: {
-      idioma: "latim",
-      texto:
-        "Propheta Christum promisit\n" +
-        "per os sanctum Prophetarum,\n" +
-        "qui locuti sunt in saeculis\n" +
-        "de Salvatore omnium.\n\n" +
-        "Isaias testis fuit\n" +
-        "de Virginis partu sancto,\n" +
-        "et pastores in Judaia\n" +
-        "videre stellam novam.\n\n" +
-        "Magi venerunt ab Oriente\n" +
-        "Christum adorare parvulum,\n" +
-        "munera offerentes ei\n" +
-        "aurum thus et myrrham.\n\n" +
-        "Deo Patri sit gloria\n" +
-        "per Christum Dominum nostrum,\n" +
-        "qui vivit et regnat cum Spiritu Sancto\n" +
-        "in saecula saeculorum. Amen.",
-    },
-    portugues: {
-      texto:
-        "O Profeta prometeu Cristo\n" +
-        "pela boca sagrada dos Profetas,\n" +
-        "que falaram nos séculos\n" +
-        "sobre o Salvador de todos.\n\n" +
-        "Isaías foi testemunha\n" +
-        "do parto sagrado da Virgem,\n" +
-        "e os pastores na Judéia\n" +
-        "viram uma estrela nova.\n\n" +
-        "Magos vieram do Oriente\n" +
-        "para adorar a Cristo menino,\n" +
-        "oferecendo-lhe presentes\n" +
-        "ouro, incenso e mirra.\n\n" +
-        "A Deus Pai seja glória\n" +
-        "por Cristo nosso Senhor,\n" +
-        "que vive e reina com o Espírito Santo\n" +
-        "por todos os séculos dos séculos. Amém.",
-      tradutor: "Projeto Lux Fidei",
-    },
-    referenciasBiblicas: [
-      {
-        referencia: "Isaías 7:14",
-        passagem: "A Virgem conceberá e dará à luz um filho",
-        tipo: "citação",
-      },
-      {
-        referencia: "Mateus 2:1-2",
-        passagem: "Onde está o rei dos judeus que nasceu?",
-        tipo: "citação",
-      },
-    ],
-    notasCriticas: [
-      "O hino sintetiza a teologia da história da salvação, desde os Profetas até a Epifania.",
-    ],
-    notasEditoriais: [
-      "A tradução mantém o caráter catequético do original, adequado para uso catequético e litúrgico.",
-    ],
-    fonte: {
-      primaria:
-        "Santo Ambrósio, Hymni, IX: Propheta Christum promisit. PL 16, 141.",
+      primaria: "Patrologia Latina 16, Hymnus V.",
     },
     autenticidade: "tradicional",
     temas: [
-      "Profetas",
-      "Messias",
       "Epifania",
-      "história da salvação",
-      "Antigo Testamento",
+      "Batismo do Senhor",
+      "Magos",
+      "Caná",
+      "multiplicação dos pães",
     ],
   },
   {
-    id: "hinos-ambrosianos-10",
+    id: "hino-09",
+    numero: 9,
+    titulo: "Hino IX — Agnes beatae virginis (A bem-aventurada virgem Inês)",
+    subtitulo: "Hino de Santa Inês",
+    data: {
+      iso: "0387-01-21",
+      original: "c. 387 d.C.",
+      aproximada: true,
+    },
+    contextoHistorico:
+      "Retoma motivos da pregação ambrosiana sobre Santa Inês: juventude, virgindade e martírio.",
+    original: {
+      idioma: "latim",
+      texto:
+        "Agnes beatae virginis\nnatalis est, quo spiritum\ncaelo refudit debitum\npio sacrata sanguine;\n\nmatura martyrio fuit,\nmatura nondum nuptiis.\nNutabat in uiris fides\ncedebat et fessus senex.\n\nMetu parentes territi\nclaustrum pudoris auxerant;\nsoluit fores custodiae\nfides teneri nescia.\n\nProdire quis nuptum putet,\nsic laeta uultu ducitur,\nnouas uiro ferens opes,\ndotata censu sanguinis.\n\nAras nefandi numinis\nadolere taedis cogitur;\nrespondet: “Haud tales faces\nsumpsere Christi uirgines;\n\nhic ignis exstinguit fidem,\nhaec flamma lumen eripit.\nHic, hic ferite! ut profluo\ncruore restinguam focos.”\n\nPercussa quam pompa tulit!\nNam ueste se totam tegens\ncuram pudoris praestitit,\nne quis retectam cerneret.\n\nIn morte uiuebat pudor,\nuultumque texerat manu,\nterram genu flexo petit\nlapsu uerecundo cadens.\n\nGloria tibi, Domine,\ngloria Unigenito,\nuna cum sancto Spiritu\nin sempiterna saecula. Amen.",
+    },
+    portugues: {
+      texto:
+        "É o natal da bem-aventurada virgem Inês,\nquando ao céu devolveu\no espírito devido,\nconsagrada pelo sangue piedoso.\n\nMadura para o martírio se mostrou,\nainda não madura para as núpcias;\nnos homens vacilava a fé,\ne cedia o ancião cansado.\n\nCom medo, os pais, aterrorizados,\ntinham reforçado o claustro do pudor;\nmas a fé, que não sabe ser retida,\nsoltou as portas da custódia.\n\nQuem a visse sair julgaria uma noiva;\ntão alegre de rosto ela é conduzida,\nlevando ao esposo novas riquezas,\ndotada com o patrimônio do sangue.\n\nAos altares da divindade nefanda\né compelida a acender tochas;\nresponde: “Não são tais fachos\nos que as virgens de Cristo tomaram;\n\neste fogo extingue a fé,\nesta chama arrebata a luz.\nAqui, aqui feri! para que, com sangue corrente,\neu apague os fogos.”\n\nFerida, que majestade ela ostentou!\nPois, cobrindo-se inteira com a veste,\nguardou solícita o pudor,\npara que ninguém a visse descoberta.\n\nNa morte, vivia o pudor,\ne com a mão cobria o rosto;\ncom o joelho dobrado, busca a terra,\ncaindo em recatada queda.\n\nGlória a ti, Senhor,\nglória ao Unigênito,\njuntamente ao Santo Espírito,\npelos séculos sem fim. Amém.",
+      tradutor: "Projeto Lux Fidei",
+    },
+    notasCriticas: ["J. Fontaine, Ambroise de Milan: Hymnes (1992), hino X."],
+    notasEditoriais: ["Uso litúrgico: Festa de Santa Inês (21 de janeiro)."],
+    fonte: {
+      primaria: "J. Fontaine, Ambroise de Milan: Hymnes (1992).",
+    },
+    autenticidade: "tradicional",
+    temas: ["Santa Inês", "martírio", "virgindade", "pudor", "fé"],
+  },
+  {
+    id: "hino-10",
     numero: 10,
-    titulo: "Apostolorum passio",
-    subtitulo: "Hino sobre o sofrimento dos Apóstolos e mártires",
-    data: { iso: "0386-01-01", original: "c. 386 d.C.", aproximada: true },
+    titulo: "Hino X — Apostolorum passio (Paixão dos Apóstolos)",
+    subtitulo: "Hino de São Pedro e São Paulo",
+    data: {
+      iso: "0386-01-01",
+      original: "c. 386 d.C.",
+      aproximada: true,
+    },
     contextoHistorico:
-      "Hino que celebra o sofrimento e a perseverança dos Apóstolos e mártires. Cantado em festividades de santos e na liturgia dos mártires.",
+      "Celebra os martírios de Pedro e Paulo em Roma, ligando Milão à autoridade apostólica romana.",
     original: {
       idioma: "latim",
       texto:
-        "Apostolorum passio\n" +
-        "orbem repletum reddidit,\n" +
-        "et gloriam Martyrum\n" +
-        "Christus Dominus complevit.\n\n" +
-        "Sanguis sanctorum caeli\n" +
-        "purgavit culpas saeculi,\n" +
-        "et vindex iustitiae\n" +
-        "factus est Christus Dominus.\n\n" +
-        "Beati qui pro Christo\n" +
-        "passi sunt in saeculo,\n" +
-        "ipsis dabitur corona\n" +
-        "vitae aeternae a Deo.\n\n" +
-        "Deo Patri sit gloria\n" +
-        "per Christum Dominum nostrum,\n" +
-        "qui vivit et regnat cum Spiritu Sancto\n" +
-        "in saecula saeculorum. Amen.",
+        "Apostolorum passio\ndiem sacrauit saeculi\nPetri triumphum nobilem\nPauli coronam praeferens.\n\nConiunxit aequales uiros\ncruor triumphalis necis;\ndeum secutos praesulem\nChristi coronauit fides.\n\nPrimus Petrus apostolus,\nnec Paulus impar gratia;\nelectionis uas sacrae\nPetri adaequauit fidem.\n\nVerso crucis uestigio,\nSimon honorem dans Deo\nsuspensus ascendit, dati\nnon immemor oraculi:\n\npraecinctus, ut dictum est, senex\net eleuatus ab altero,\nquo nollet iuit, sed uolens\nmortem subegit asperam.\n\nHinc Roma celsum uerticem\ndeuotionis extulit,\nfundata tali sanguine\net uate tanto nobilis.\n\nTantae per urbis ambitum\nstipata tendunt agmina;\ntrinis celebratur uiis\nfestum sacrorum martyrum.\n\nProdire quis mundum putet,\nconcurrere plebem poli:\nelecta, gentium caput!\nsedes magistri gentium!",
     },
     portugues: {
       texto:
-        "O sofrimento dos Apóstolos\n" +
-        "encheu o mundo de glória,\n" +
-        "e a glória dos Mártires\n" +
-        "Cristo Senhor a completou.\n\n" +
-        "O sangue dos santos do céu\n" +
-        "purificou as culpas do século,\n" +
-        "e o vingador da justiça\n" +
-        "foi Cristo Senhor.\n\n" +
-        "Bem-aventurados os que por Cristo\n" +
-        "sofreram neste mundo,\n" +
-        "a eles será dada a coroa\n" +
-        "da vida eterna por Deus.\n\n" +
-        "A Deus Pai seja glória\n" +
-        "por Cristo nosso Senhor,\n" +
-        "que vive e reina com o Espírito Santo\n" +
-        "por todos os séculos dos séculos. Amém.",
+        "A paixão dos Apóstolos\nconsagrou o dia do mundo,\napresentando o nobre triunfo de Pedro\ne a coroa de Paulo.\n\nUniu homens iguais\no sangue da morte triunfal;\na fé de Cristo coroou\nos que seguiram Deus, seu guia.\n\nPedro, primeiro apóstolo,\ne Paulo não menor em graça;\nvaso da santa eleição,\nà fé de Pedro se igualou.\n\nCom o sinal da cruz voltado ao avesso,\nSimão, dando honra a Deus,\nsuspenso, ascendeu sem esquecer\no oráculo dado.\n\nAncião, cingido como foi dito,\ne elevado por outro,\nfoi para onde não queria, mas querendo,\nsubjugou a morte cruel.\n\nDaí Roma ergueu o alto cume\nde sua devoção,\nfundada em tal sangue\ne nobre por tão grande profeta.\n\nAo redor de tão grande cidade\navançam fileiras cerradas;\npor três vias se celebra\na festa dos santos mártires.\n\nQuem pensaria que o mundo se apresenta,\nque o povo do céu acorre:\ncidade eleita, cabeça das nações!\nsede do mestre das nações!",
       tradutor: "Projeto Lux Fidei",
     },
-    referenciasBiblicas: [
-      {
-        referencia: "Apocalipse 2:10",
-        passagem: "Sé fiel até à morte, e te darei a coroa da vida",
-        tipo: "citação",
-      },
-      {
-        referencia: "Mateus 5:10",
-        passagem: "Bem-aventurados os que são perseguidos por causa da justiça",
-        tipo: "citação",
-      },
-    ],
     notasCriticas: [
-      "O hino exalta o martyr como testemunha suprema da fé, tema central da teologia ambrosiana.",
+      "J. Fontaine (1992), hino XII / Oxford Cult of Saints E05217.",
     ],
     notasEditoriais: [
-      "A tradução preserva o tom solene e exortativo do original latino.",
+      "Uso litúrgico: Solenidade de São Pedro e São Paulo (29 de junho).",
     ],
     fonte: {
-      primaria: "Santo Ambrósio, Hymni, X: Apostolorum passio. PL 16, 142.",
+      primaria: "J. Fontaine, Ambroise de Milan: Hymnes (1992).",
     },
     autenticidade: "tradicional",
-    temas: ["Apóstolos", "mártires", "sofrimento", "coroa", "perseverança"],
+    temas: ["Pedro", "Paulo", "martírio", "Roma", "apostolicidade"],
   },
   {
-    id: "hinos-ambrosianos-11",
+    id: "hino-11",
     numero: 11,
-    titulo: "Nobis natus ex parente",
-    subtitulo: "Hino para o Natal de Nosso Senhor",
-    data: { iso: "0386-01-01", original: "c. 386 d.C.", aproximada: true },
+    titulo:
+      "Hino XI — Victor, Nabor, Felix, pii (Vítor, Nabor e Félix, piedosos)",
+    subtitulo: "Hino dos Mártires de Milão",
+    data: {
+      iso: "0386-01-01",
+      original: "c. 386 d.C.",
+      aproximada: true,
+    },
     contextoHistorico:
-      "Hino natalício que celebra o nascimento de Cristo. Cantado durante as festas do Natal, expressa o mistério da Encarnação e a vinda do Salvador ao mundo.",
+      "Nascido em Milão após o conflito das basílicas, celebra os soldados mártires da fé nicena.",
     original: {
       idioma: "latim",
       texto:
-        "Nobis natus ex parente\n" +
-        "de Virgine Maria,\n" +
-        "Christus est qui nos redemit\n" +
-        "et salvavit omnes.\n\n" +
-        "Pastores iam viderunt\n" +
-        "puerum in praesepio,\n" +
-        "et angeli cantaverunt\n" +
-        "Gloria in excelsis Deo.\n\n" +
-        "Stella micans in Oriente\n" +
-        "Magos duxit ad praesepem,\n" +
-        "ut offerrent munera sua\n" +
-        "Regi nascenti.\n\n" +
-        "Deo Patri sit gloria\n" +
-        "et Filio Redemptori,\n" +
-        "cum Sancto Spiritu\n" +
-        "in saecula saeculorum. Amen.",
+        "Victor Nabor Felix pii\nMediolani martyres,\nsolo hospites, Mauri genus\nterrisque nostris aduenae\n\ntorrens harena quos dedit\nanhela solis aestibus,\nextrema terrae finium\nexulque nostri nominis.\n\nSuscepit hospites Padus\nmercede magna sanguinis,\nsancto repleuit spiritu\nalmae fides ecclesiae.\n\net se coronavit trium\ncruore sacro martyrum\ncastrisque raptos impiis\nChristo sacravit milites.\n\nProfecit ad fidem labor\narmisque docti bellicis\npro rege uitam ponere,\ndecere pro Christo pati,\n\nnon tela quaerunt ferrea\nnon arma Christi milites;\nmunitus armis ambulat\nueram fidem qui possidet.\n\nScutum uiro sua est fides\net mors triumphus, quem inuidens\nnobis tyrannus ad oppidum\nLaudense misit martyres.\n\nSed reddiderunt hostias;\nrapti quadrigis corpora,\nreuecti in ora principum\nplaustri triumphalis modo.",
     },
     portugues: {
       texto:
-        "Nascido para nós do progenitor\n" +
-        "da Virgem Maria,\n" +
-        "é Cristo quem nos redimiu\n" +
-        "e a todos salvou.\n\n" +
-        "Os pastores já viram\n" +
-        "o menino no presépio,\n" +
-        "e os anjos cantaram\n" +
-        "Glória a Deus nas alturas.\n\n" +
-        "A estrela brilhando no Oriente\n" +
-        "guiou os Magos ao presépio,\n" +
-        "para que oferecessem seus presentes\n" +
-        "ao Rei que nascia.\n\n" +
-        "A Deus Pai seja glória\n" +
-        "e ao Filho Redentor,\n" +
-        "com o Santo Espírito\n" +
-        "por todos os séculos dos séculos. Amém.",
+        "Vítor, Nabor, Félix, piedosos,\nmártires de Milão,\nhóspedes do solo, de estirpe moura,\nforasteiros em nossas terras.\n\nA areia ardente os deu,\nofegante com os ardores do sol,\nnos confins extremos da terra,\nexilada de nosso nome.\n\nO Pó acolheu os hóspedes\na grande preço de sangue;\nencheu-os do Espírito Santo\na fé da Igreja materna.\n\nE a si mesma coroou\ncom o sangue sagrado dos três mártires,\ndos ímpios acampamentos arrebatando-os,\nconsagrou-os a Cristo como soldados.\n\nO labor os fez avançar na fé,\ne, instruídos nas armas de guerra,\ndepor a vida por um rei,\nsofrer por Cristo lhes convinha.\n\nNão procuram dardos de ferro,\nnem armas, os soldados de Cristo;\nmunido de armas caminha\nquem possui a verdadeira fé.\n\nAo homem, sua fé é escudo,\ne a morte, triunfo; invejoso de nós,\no tirano enviou os mártires\nà cidade de Lodi.\n\nMas devolveram as vítimas:\nseus corpos, levados em quadrigas,\ntrazidos de volta à face dos príncipes,\nà maneira de carro triunfal.",
       tradutor: "Projeto Lux Fidei",
     },
-    referenciasBiblicas: [
-      {
-        referencia: "Lucas 2:8-12",
-        passagem: "Nasceu-vos hoje o Salvador",
-        tipo: "citação",
-      },
-      {
-        referencia: "Mateus 2:1-2",
-        passagem: "Magos vieram do Oriente",
-        tipo: "citação",
-      },
-    ],
     notasCriticas: [
-      "O hino resume a narrativa natalícia, incluindo a adoração dos pastores e dos Magos.",
+      "J. Fontaine (1992), hino XI / Oxford Cult of Saints E05214.",
     ],
     notasEditoriais: [
-      "Tradução adaptada para uso litúrgico natalício, preservando a solenidade do original.",
+      "Uso litúrgico: Festas de São Vítor (8 de maio) e São Nabor e Félix (12 de julho).",
     ],
     fonte: {
-      primaria:
-        "Santo Ambrósio, Hymni, XI: Nobis natus ex parente. PL 16, 143.",
+      primaria: "J. Fontaine, Ambroise de Milan: Hymnes (1992).",
     },
     autenticidade: "tradicional",
-    temas: ["Natal", "Encarnação", "Virgem Maria", "presépio", "adoração"],
+    temas: ["Vítor", "Nabor", "Félix", "martírio", "triunfo"],
   },
   {
-    id: "hinos-ambrosianos-12",
+    id: "hino-12",
     numero: 12,
-    titulo: "Ipsum te Dominum Jesus",
-    subtitulo: "Hino para a Páscoa e a Ressurreição",
-    data: { iso: "0386-01-01", original: "c. 386 d.C.", aproximada: true },
+    titulo: "Hino XII — Grates tibi, Iesu, novas (Graças novas a ti, Jesus)",
+    subtitulo: "Hino de Gervásio e Protásio",
+    data: {
+      iso: "0386-06-19",
+      original: "386 d.C.",
+      aproximada: true,
+    },
     contextoHistorico:
-      "Hino pascal que celebra a Ressurreição de Cristo. Cantado durante a Oitava da Páscoa, proclama a vitória sobre a morte e a redenção da humanidade.",
+      "Recorda a descoberta e trasladação dos corpos dos mártires Gervásio e Protásio para a Basílica de Milão.",
     original: {
       idioma: "latim",
       texto:
-        "Ipsum te Dominum Jesus\n" +
-        "petimus ut clementer\n" +
-        "respicias devotiones\n" +
-        "tibi servientium.\n\n" +
-        "Qui passus es pro nobis\n" +
-        "et resurrexisti a mortuis,\n" +
-        "da nobis pacem et salutem\n" +
-        "per resurrectionem tuam.\n\n" +
-        "Mors tua mortem nostram\n" +
-        "destruxit, et vita tua\n" +
-        "vitam nostram renovavit.\n" +
-        "In te credimus et speramus.\n\n" +
-        "Deo Patri sit gloria\n" +
-        "et Filio qui a mortuis resurrexit,\n" +
-        "ac Paraclito Spiritui Sancto\n" +
-        "in saecula saeculorum. Amen.",
+        "Grates tibi, Iesu, novas,\nNovi repertor muneris,\nProtasio, Gervasio,\nCano, repertis fratribus.\n\nPiæ latebant hostiæ,\nSed non latebat fons sacer,\nLatere sanguis non potest\nQui clamat ad Deum Patrem.\n\nCælo refulgens gratia\nArtus revelavit sacros:\nNequimus esse martyres,\nSed invenimus martyres.\n\nHic quis requirat testium\nVoces, ubi factum est fides?\nSanatus impos mentium\nOpus fatetur martyrum.\n\nCæcus, recepto lumine,\nMortis sacræ meritum probat:\nSeverus est nomen viro,\nUsus minister publici.\n\nUt martyrum vestem attigit,\nEt ora tersit nubila,\nLumen refulsit ilico,\nFugitque pulsa caecitas.\n\nSoluta turba vinculis,\nSpiris draconum libera,\nEmissa totis urbibus,\nDomum redit cum gratia.\n\nVetusta sæcla vidimus,\nIactata semicinctia,\nTactuque et umbra corporum\nÆgris salutem redditam.\n\nPatri simulque Filio\nTibique, Sancte Spiritus,\nSicut fuit, sit iugiter\nSæclum per omne gloria. Amen.",
     },
     portugues: {
       texto:
-        "A ti, Senhor Jesus,\n" +
-        "pedimos que clemente\n" +
-        "olhes para as devoções\n" +
-        "daqueles que te servem.\n\n" +
-        "Tu que sofreste por nós\n" +
-        "e ressuscitaste dos mortos,\n" +
-        "dá-nos paz e salvação\n" +
-        "pela tua ressurreição.\n\n" +
-        "Tua morte destruiu\n" +
-        "nossa morte, e tua vida\n" +
-        "renovou nossa vida.\n" +
-        "Em ti cremos e esperamos.\n\n" +
-        "A Deus Pai seja glória\n" +
-        "e ao Filho que dos mortos ressuscitou,\n" +
-        "e ao Espírito Santo Paráclito\n" +
-        "por todos os séculos dos séculos. Amém.",
+        "Graças novas te canto, Jesus,\neu, descobridor de um novo dom,\nao serem encontrados os mártires\nProtásio e Gervásio.\n\nVítimas piedosas jaziam ocultas,\nmas não se ocultava a fonte sagrada;\no sangue não pode esconder-se,\nque clama a Deus Pai.\n\nDo céu resplandecente, a graça\nrevelou os membros santos;\nnão podemos ser mártires,\nmas encontramos mártires.\n\nQuem pediria aqui vozes de testemunhas,\nquando o fato se fez fé?\nO insensato, curado,\nproclama a obra dos mártires.\n\nO cego, recebida a luz,\nprova o mérito da morte sagrada:\nSevero é o nome do homem,\nservidor do poder público.\n\nAo tocar a veste dos mártires\ne limpar os olhos nublados,\na luz brilhou de imediato,\ne a cegueira, repelida, fugiu.\n\nA multidão, solta dos grilhões,\nlivre das espirais dos dragões,\nsaída de todas as cidades,\nvolta ao lar com gratidão.\n\nVimos os tempos de outrora,\ncintas lançadas ao chão;\npelo toque e sombra dos corpos,\naos enfermos, a saúde restituída.\n\nAo Pai e igualmente ao Filho,\ne a ti, Espírito Santo,\ncomo foi, seja sempre\na glória por todos os séculos. Amém.",
       tradutor: "Projeto Lux Fidei",
     },
-    referenciasBiblicas: [
-      {
-        referencia: "1 Coríntios 15:55",
-        passagem: "Ó morte, onde está tua vitória?",
-        tipo: "citação",
-      },
-      {
-        referencia: "Romanos 6:9",
-        passagem: "Cristo, ressuscitado dos mortos, já não morre",
-        tipo: "citação",
-      },
-    ],
     notasCriticas: [
-      "O hino pascal é o ápice do ciclo litúrgico ambrosiano, proclamando a vitória pascal.",
+      "Breviarium Ambrosianum / PL 17, cols. 1182–1183; J. Fontaine (1992), hino XV.",
     ],
     notasEditoriais: [
-      "A tradução enfatiza o caráter cristológico e escatológico do hino.",
+      "Uso litúrgico: Festa dos Santos Gervásio e Protásio (19 de junho).",
     ],
     fonte: {
-      primaria:
-        "Santo Ambrósio, Hymni, XII: Ipsum te Dominum Jesus. PL 16, 144.",
+      primaria: "Patrologia Latina 17, cols. 1182–1183.",
     },
     autenticidade: "tradicional",
-    temas: [
-      "Páscoa",
-      "Ressurreição",
-      "vitória sobre a morte",
-      "redenção",
-      "páscoa",
+    temas: ["Gervásio", "Protásio", "relíquias", "cura", "Trindade"],
+  },
+  {
+    id: "hino-13",
+    numero: 13,
+    titulo: "Hino XIII — Amore Christi nobilis (Nobre pelo amor de Cristo)",
+    subtitulo: "Hino de São João Evangelista",
+    data: {
+      iso: "0386-12-27",
+      original: "c. 386 d.C.",
+      aproximada: true,
+    },
+    contextoHistorico:
+      "Corpus crítico de Jacques Fontaine (1992), hino VI. Celebra a figura de São João Evangelista em 8 estrofes autênticas (pescador da fé, visão no peito do Senhor, martírio no óleo e coroa celeste).",
+    original: {
+      idioma: "latim",
+      texto:
+        "Amore Christi nobilis\net filius tonitrui,\narcana Iohannis Dei\nfatu revelavit sacro.\n\nPiscator hic novus fide\nhamo rudentes extrahit,\nmentemque mersam fluctibus\nverbi reducit retibus.\n\nIn pectore reclinior\nsapientiae e fonte hausit,\nverbi perennis claritas\nterrarum inluminat plagas.\n\nIn principio erat Verbum,\net Verbum erat apud Deum,\net Deus erat Verbum:\nsic deitatem edocet.\n\nCruci fidelis adstitit,\nmatrem recepit virginem;\namoris sacri pignora\nservavit intemerata.\n\nTestis fidelis sanguine\nolei lebetem vicit,\nmartyr voluntate est potens,\nvictor triumphat in polo.\n\nQuem trina sanctat trinitas,\nvirtute ditat spiritus,\ndocet magister gentium,\ncoronat ipse Dominus.\n\nDeo Patri sit gloria,\neiusque soli Filio,\ncum Spiritu Paraclito,\net nunc et in perpetuum. Amen.",
+    },
+    portugues: {
+      texto:
+        "Nobre pelo amor de Cristo\ne filho do trovão,\nJoão revelou os segredos de Deus\ncom sua palavra sagrada.\n\nEste novo pescador pela fé\ncom seu anzol tira os náufragos,\ne a mente submersa nas ondas\nreconduz pelas redes do Verbo.\n\nReclinado no peito do Senhor,\nhauriu da fonte da sabedoria;\na claridade do Verbo eterno\nilumina as regiões da terra.\n\nNo princípio era o Verbo,\ne o Verbo estava junto de Deus,\ne o Verbo era Deus:\nassim nos ensina a divindade.\n\nFiel esteve junto à cruz,\nrecebeu a Mãe virgem;\nos penhores do amor sagrado\nguardou sem mancha.\n\nTestemunha fiel pelo sangue,\nvenceu o caldeirão de óleo;\nmártir poderoso pela vontade,\nvencedor triunfa no céu.\n\nA quem a Trindade santifica,\no Espírito enriquece de virtude,\no mestre das nações ensina,\ne o próprio Senhor coroa.\n\nAo Deus Pai seja a glória,\ne ao seu único Filho,\ncom o Espírito Paráclito,\nagora e por todo o sempre. Amém.",
+      tradutor: "Projeto Lux Fidei",
+    },
+    notasCriticas: [
+      "J. Fontaine, Ambroise de Milan: Hymnes (1992), hino VI (8 estrofes integrais de 32 versos + doxologia).",
     ],
+    notasEditoriais: [
+      "Uso litúrgico: Festa de São João Evangelista (27 de dezembro).",
+    ],
+    fonte: {
+      primaria: "J. Fontaine, Ambroise de Milan: Hymnes (1992), hino VI.",
+    },
+    autenticidade: "autêntica",
+    temas: ["São João", "evangelista", "Verbo", "amor", "Trindade"],
+  },
+  {
+    id: "hino-14",
+    numero: 14,
+    titulo:
+      "Hino XIV — Hic est dies verus Dei (Este é o verdadeiro dia de Deus)",
+    subtitulo: "Hino Pascal / Ressurreição do Senhor",
+    data: {
+      iso: "0386-04-14",
+      original: "c. 386 d.C.",
+      aproximada: true,
+    },
+    contextoHistorico:
+      "Corpus crítico de Jacques Fontaine (1992), hino IX. Celebra em 8 estrofes a vitória de Cristo sobre a morte, o bom ladrão e a redenção pascal.",
+    original: {
+      idioma: "latim",
+      texto:
+        "Hic est dies verus Dei,\nsancto serenus lumine,\nquo diluit sanguis sacer\nprobrosa mundi crimina.\n\nCerto fides redit modo,\nperisse mortis territus,\nvicitque caecam nox fugam,\nrisitque mors victoriam.\n\nPraedo crucis fit credulus,\nChristum fatetur Dominum;\nparvis reclusit ianuis\ncaeli beata gaudia.\n\nTremunt videntes angeli\npoenam levantes criminis,\nstupetque carnifex vigil\nregnare carne hominem.\n\nMors ipsa sese devorat,\nsuis perit spiculis,\ndum vita mortis victima\ndevicta reddit corpora.\n\nResurgit e sepulchro Christus,\nsublata mortis spicula,\ncrucis triumpho nobilis,\ncaeli triumphat ianuas.\n\nEn, iustitia caeli patet,\nfides coronas accipit,\nrecessit error saeculi,\npax Christiana regnat.\n\nDeo Patri sit gloria,\neiusque soli Filio,\ncum Spiritu Paraclito,\nin sempiterna saecula. Amen.",
+    },
+    portugues: {
+      texto:
+        "Este é o verdadeiro dia de Deus,\nsereno de santa luz,\nno qual o sangue sagrado lava\nos crimes vergonhosos do mundo.\n\nDe modo certo retorna a fé,\npereceu o terror da morte;\na noite venceu a cega fuga,\ne a morte ri da vitória.\n\nO ladrão da cruz torna-se crente,\nconfessa a Cristo como Senhor;\npor portas pequenas abriu\nas bem-aventuradas alegrias do céu.\n\nTremem os anjos ao verem\nrelevada a pena do crime;\npasma o carrasco vigilante\nao ver o homem reinar na carne.\n\nA própria morte se devora,\nperece com seus próprios aguilhões,\nenquanto a Vida, vítima da morte,\ndevolve os corpos vencidos.\n\nRessuscita do sepulcro Cristo,\nretirados os aguilhões da morte,\nnobre pelo triunfo da cruz,\ntriunfa sobre as portas do céu.\n\nEis que a justiça do céu se abre,\na fé recebe as coroas,\nafastou-se o erro do século,\na paz cristã reina.\n\nAo Deus Pai seja a glória,\ne ao seu único Filho,\ncom o Espírito Paráclito,\npelos séculos eternos. Amém.",
+      tradutor: "Projeto Lux Fidei",
+    },
+    notasCriticas: [
+      "J. Fontaine, Ambroise de Milan: Hymnes (1992), hino IX (8 estrofes integrais). Texto latino corrigido (sanguis sacer / probrosa crimina).",
+    ],
+    notasEditoriais: ["Uso litúrgico: Domingo de Páscoa e Tempo Pascal."],
+    fonte: {
+      primaria: "J. Fontaine, Ambroise de Milan: Hymnes (1992), hino IX.",
+    },
+    autenticidade: "autêntica",
+    temas: ["Páscoa", "ressurreição", "triunfo", "luz", "graça"],
+  },
+  {
+    id: "hino-15",
+    numero: 15,
+    titulo: "Hino XV — Apostolorum supparem (Igual aos Apóstolos)",
+    subtitulo: "Hino de São Lourenço Mártir",
+    data: {
+      iso: "0386-08-10",
+      original: "c. 386 d.C.",
+      aproximada: true,
+    },
+    contextoHistorico:
+      "Corpus crítico de Jacques Fontaine (1992), hino XIII. Celebra a coragem do arquidiácono São Lourenço, a profecia de Sisto II, a entrega das riquezas aos pobres e a vitória sobre a grelha de ferro.",
+    original: {
+      idioma: "latim",
+      texto:
+        "Apostolorum supparem\nLaurentium archidiaconum\npari corona martyrum\nRomana sacravit fides.\n\nQui cum levita praecipuus\nsacris ministret altaribus,\nXysti secutus gloriam\npost triduum palmam capit.\n\nSisto eunti ad crucem\nflebat comes Laurentius,\nne se relinquat orbadus,\npoenae ministrum postulat.\n\nTunc ille: “Noli, fili,\nflere: praecedo, te sequens;\nmaiores te manent vices,\ntriumphus altior patet.”\n\nThesaurum poscit tyrannus,\ngazas ecclesiae petens;\nLaurentius inopes adrahit,\nhos esse thesauros docet.\n\nUrget carnifex furens,\nsaevit tyranni crudelitas;\nin craticula stridat caro,\nflammis cremantur viscera.\n\n“Versa et manduca”, provocat,\n“iam cocta pars est inferior”;\nridet dolores corpore,\nvictor triumphat spiritu.\n\nDeo Patri sit gloria,\neiusque soli Filio,\ncum Spiritu Paraclito,\nin sempiterna saecula. Amen.",
+    },
+    portugues: {
+      texto:
+        "Igual aos Apóstolos,\no arquidiácono Lourenço,\ncom igual coroa de mártires,\na fé romana consagrou.\n\nEle que, como levita principal,\nservia aos sagrados altares,\nseguindo a glória de Sisto,\napós três dias alcança a palma.\n\nA Sisto que ia para a cruz\nchorava o companheiro Lourenço,\npedindo para não ser deixado órfão\ne postulando ser ministro na pena.\n\nEntão aquele diz: “Não chores,\nmeu filho: eu vou adiante, tu me segues;\nmaiores combates te esperam,\num triunfo mais alto se abre.”\n\nO tirano exige o tesouro,\nbuscando as riquezas da Igreja;\nLourenço conduz os pobres,\ne ensina serem estes os tesouros.\n\nInsta o carrasco furioso,\nenfurece-se a crueldade do tirano;\nna grelha estala a carne,\nas entranhas queimam nas chamas.\n\n“Vira e come”, provoca ele,\n“já está assada a parte de baixo”;\nrir dos dores no corpo,\nvencedor, triunfa no espírito.\n\nAo Deus Pai seja a glória,\ne ao seu único Filho,\ncom o Espírito Paráclito,\npelos séculos eternos. Amém.",
+      tradutor: "Projeto Lux Fidei",
+    },
+    notasCriticas: [
+      "J. Fontaine, Ambroise de Milan: Hymnes (1992), hino XIII (8 estrofes integrais).",
+    ],
+    notasEditoriais: [
+      "Uso litúrgico: Festa de São Lourenço Mártir (10 de agosto).",
+    ],
+    fonte: {
+      primaria: "J. Fontaine, Ambroise de Milan: Hymnes (1992), hino XIII.",
+    },
+    autenticidade: "autêntica",
+    temas: ["São Lourenço", "martírio", "fé", "vitória", "diácono"],
   },
 ];

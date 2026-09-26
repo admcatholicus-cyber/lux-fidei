@@ -114,50 +114,150 @@
   padding-bottom: 8px;
 }
 
-.secoesGrid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-  gap: 16px;
+.obrasGrid {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  margin-top: 32px;
 }
 
-.cardSecao {
-  display: block;
-  padding: 20px;
-  background: #fff;
-  border: 1px solid var(--greg-borda-leve);
-  border-radius: 4px;
+.cardObra {
+  display: flex;
+  flex-direction: row;
+  background-color: #faf8f4;
+  border: 1px solid #e2d9ec;
+  border-radius: 8px;
+  overflow: hidden;
   text-decoration: none;
-  color: var(--greg-texto);
-  transition: border-color 0.2s, box-shadow 0.2s;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
 }
 
-.cardSecao:hover {
-  border-color: var(--greg-roxo);
-  box-shadow: 0 2px 12px rgba(91, 44, 131, 0.08);
+.cardObra:hover {
+  transform: translateX(4px);
+  box-shadow: 0 10px 24px rgba(91, 44, 131, 0.12);
+  border-color: #c5a059;
 }
 
-.cardSecaoIcone {
-  font-size: 1.6rem;
-  margin-bottom: 8px;
+.capaObraContainer {
+  flex: 0 0 210px;
+  position: relative;
+  background: linear-gradient(135deg, #f4effa, #e6dfed);
+  border-right: 1px solid #e6dfed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
 }
 
-.cardSecaoTitulo {
-  font-size: 1.05rem;
+.imagemCapaHorizontal {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.5s ease;
+}
+
+.cardObra:hover .imagemCapaHorizontal {
+  transform: scale(1.04);
+}
+
+.capaFallback {
+  font-size: 3.5rem;
+  color: #8b6508;
+}
+
+.cardObraConteudo {
+  flex: 1;
+  padding: 28px 32px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.cardHeaderArea {
+  margin-bottom: 12px;
+}
+
+.cardObraTitulo {
+  font-family: "Cinzel", Georgia, serif;
+  font-size: 1.4rem;
   font-weight: 700;
-  margin: 0 0 6px;
-  color: var(--greg-roxo);
+  color: #4a2269;
+  margin: 0 0 4px 0;
+  line-height: 1.3;
 }
 
-.cardSecaoDescricao {
-  font-size: 0.88rem;
-  color: var(--greg-texto-leve);
-  margin: 0 0 8px;
-  line-height: 1.5;
+.tituloLatim {
+  font-family: Georgia, serif;
+  font-size: 0.9rem;
+  font-style: italic;
+  color: #8b6508;
+  display: block;
 }
 
-.cardSecaoContagem {
+.cardObraDescricao {
+  font-family: Georgia, serif;
+  font-size: 0.98rem;
+  color: #444444;
+  line-height: 1.65;
+  margin: 12px 0 20px 0;
+}
+
+.cardObraFooter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid #e6dfed;
+  padding-top: 16px;
+}
+
+.capitulosBadge {
+  font-family: "Inter", sans-serif;
   font-size: 0.82rem;
-  color: var(--greg-texto-leve);
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #666666;
+  background: #f0e9f5;
+  padding: 4px 12px;
+  border-radius: 4px;
+}
+
+.lerAgoraBtn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: "Cinzel", Georgia, serif;
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #8b6508;
+  transition: color 0.3s ease;
+}
+
+.lerAgoraBtn span {
+  transition: transform 0.3s ease;
+}
+
+.cardObra:hover .lerAgoraBtn {
+  color: #5b2c83;
+}
+
+.cardObra:hover .lerAgoraBtn span {
+  transform: translateX(5px);
+}
+
+@media (max-width: 680px) {
+  .cardObra {
+    flex-direction: column;
+  }
+  .capaObraContainer {
+    flex: none;
+    width: 100%;
+    height: 220px;
+    border-right: none;
+    border-bottom: 1px solid #e6dfed;
+  }
 }
 
 .cabecalhoSecao {
@@ -222,7 +322,9 @@
   border-radius: 4px;
   text-decoration: none;
   color: var(--greg-texto);
-  transition: border-color 0.2s, box-shadow 0.2s;
+  transition:
+    border-color 0.2s,
+    box-shadow 0.2s;
 }
 
 .leitorCard:hover {

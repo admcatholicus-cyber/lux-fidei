@@ -11,6 +11,7 @@ export interface SecaoObra {
   href: string;
   capa?: string;
   tituloLatim?: string;
+  capitulosCount?: number;
 }
 
 export const obraMetadata = {
@@ -65,8 +66,9 @@ export const obraMetadata = {
       icone: "🎵",
       titulo: "Hinos Ambrosianos",
       descricao:
-        "Coleção canônica de 12 hinos litúrgicos latinos compostos para as Horas e Festas, fundamentais para a hinodia ocidental.",
-      contagem: "1 coleção · 12 hinos",
+        "Quatorze hinos do corpus crítico de Fontaine, acompanhados de um hino anônimo da tradição ambrosiana, com texto em Latim e tradução em Português.",
+      contagem: "14 hinos (Fontaine) + 1 anônimo",
+      capitulosCount: 15,
       href: "/biblioteca/santo-ambrosio/hinos-ambrosianos",
       capa: "/biblioteca/cards/santo-ambrosio-de-milao-/capa-hinos-ambrosianos.webp",
     },

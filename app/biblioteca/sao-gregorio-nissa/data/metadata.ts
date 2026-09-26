@@ -1,11 +1,12 @@
 export interface ObraGregorioMeta {
   slug: string;
   titulo: string;
-  tituloLatim: string;
+  tituloLatim?: string;
   descricao: string;
   icone: string;
   capitulosCount: number;
   rota: string;
+  capa?: string;
 }
 
 export const gregorioMetadata = {
@@ -27,6 +28,7 @@ export const gregorioMetadata = {
       icone: "📜",
       capitulosCount: 1,
       rota: "/biblioteca/sao-gregorio-nissa/ad-ablabium",
+      capa: "/biblioteca/cards/sao-gregorio-nissa/ad-ablabium.webp",
     },
     {
       slug: "de-anima-et-resurrectione",
@@ -37,6 +39,7 @@ export const gregorioMetadata = {
       icone: "📖",
       capitulosCount: 4,
       rota: "/biblioteca/sao-gregorio-nissa/de-anima-et-resurrectione",
+      capa: "/biblioteca/cards/sao-gregorio-nissa/capa-sobre-a-alma-e-a-ressurreicao.webp",
     },
     {
       slug: "grande-catequese",
@@ -47,6 +50,7 @@ export const gregorioMetadata = {
       icone: "📖",
       capitulosCount: 41,
       rota: "/biblioteca/sao-gregorio-nissa/grande-catequese",
+      capa: "/biblioteca/cards/sao-gregorio-nissa/capa-a-grande-catequese.webp",
     },
     {
       slug: "a-vida-de-moises",
@@ -57,6 +61,7 @@ export const gregorioMetadata = {
       icone: "📜",
       capitulosCount: 2,
       rota: "/biblioteca/sao-gregorio-nissa/a-vida-de-moises",
+      capa: "/biblioteca/cards/sao-gregorio-nissa/a-vida-de-moises.webp",
     },
     {
       slug: "contra-eunomio",
@@ -67,6 +72,7 @@ export const gregorioMetadata = {
       icone: "⚔️",
       capitulosCount: 91,
       rota: "/biblioteca/sao-gregorio-nissa/contra-eunomio",
+      capa: "/biblioteca/cards/sao-gregorio-nissa/contra-eunomio.webp",
     },
   ] as ObraGregorioMeta[],
 };

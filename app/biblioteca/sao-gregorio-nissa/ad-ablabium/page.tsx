@@ -25,16 +25,12 @@ export default function PaginaAdAblabium() {
         >
           ← Voltar ao índice da obra
         </Link>
-        <span className={styles.migalhas}>
-          Biblioteca / Ad Ablabium
-        </span>
+        <span className={styles.migalhas}>Biblioteca / Ad Ablabium</span>
       </nav>
 
       <header className={styles.cabecalhoSecao}>
         <div className={styles.cabecalhoSecaoIcone}>📜</div>
-        <h1 className={styles.cabecalhoSecaoTitulo}>
-          Que Não Há Três Deuses
-        </h1>
+        <h1 className={styles.cabecalhoSecaoTitulo}>Que Não Há Três Deuses</h1>
         <p className={styles.cabecalhoSecaoDescricao}>
           Tratado dogmático dirigido ao bispo Ablábio sobre a unicidade da
           essência divina e a distinção das Pessoas da Santíssima Trindade.
@@ -43,10 +39,12 @@ export default function PaginaAdAblabium() {
 
         <div className={styles.estatisticasBanner}>
           <span className={styles.estatisticaItem}>
-            <strong>{stats.total}</strong> capítulo{stats.total !== 1 ? "s" : ""}
+            <strong>{stats.total}</strong> capítulo
+            {stats.total !== 1 ? "s" : ""}
           </span>
           <span className={styles.estatisticaItem}>
-            <strong>{stats.autenticas}</strong> autêntico{stats.autenticas !== 1 ? "s" : ""}
+            <strong>{stats.autenticas}</strong> autêntico
+            {stats.autenticas !== 1 ? "s" : ""}
           </span>
         </div>
       </header>
@@ -59,9 +57,7 @@ export default function PaginaAdAblabium() {
             className={styles.leitorCard}
           >
             <div className={styles.leitorCardTop}>
-              <span className={styles.leitorCardNumero}>
-                Cap. {cap.numero}
-              </span>
+              <span className={styles.leitorCardNumero}>Cap. {cap.numero}</span>
               <span
                 className={`${styles.etiqueta} ${
                   cap.autenticidade === "autêntica"

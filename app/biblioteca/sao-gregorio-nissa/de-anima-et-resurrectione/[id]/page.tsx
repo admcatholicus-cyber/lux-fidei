@@ -12,9 +12,7 @@ type Props = {
   params: Promise<{ id: string }>;
 };
 
-export async function generateMetadata({
-  params,
-}: Props): Promise<Metadata> {
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { id } = await params;
   const cap = getCapituloDeAnimaEtResurrectioneById(id);
   if (!cap) return { title: "Capítulo não encontrado | Lux Fidei" };
@@ -24,7 +22,9 @@ export async function generateMetadata({
   };
 }
 
-export default async function PaginaLeitorDeAnimaEtResurrectione({ params }: Props) {
+export default async function PaginaLeitorDeAnimaEtResurrectione({
+  params,
+}: Props) {
   const { id } = await params;
   const cap = getCapituloDeAnimaEtResurrectioneById(id);
 
@@ -85,16 +85,20 @@ export default async function PaginaLeitorDeAnimaEtResurrectione({ params }: Pro
 
         {/* TEXTO ORIGINAL */}
         <div className={styles.leitorCorpo}>
-          <h3 style={{ color: "var(--greg-roxo)", fontSize: "1rem", marginBottom: 12 }}>
+          <h3
+            style={{
+              color: "var(--greg-roxo)",
+              fontSize: "1rem",
+              marginBottom: 12,
+            }}
+          >
             Texto original ({cap.original.idioma})
           </h3>
-          {cap.original.texto
-            .split(/\n\s*\n/)
-            .map((p: string, i: number) => (
-              <p key={i} className={styles.paragrafo}>
-                {p.trim()}
-              </p>
-            ))}
+          {cap.original.texto.split(/\n\s*\n/).map((p: string, i: number) => (
+            <p key={i} className={styles.paragrafo}>
+              {p.trim()}
+            </p>
+          ))}
         </div>
 
         {/* TAGS DE TEMA */}
@@ -120,17 +124,16 @@ export default async function PaginaLeitorDeAnimaEtResurrectione({ params }: Pro
             </li>
           </ul>
 
-          {Array.isArray(cap.notasCriticas) &&
-            cap.notasCriticas.length > 0 && (
-              <>
-                <h4>Notas críticas</h4>
-                <ul>
-                  {cap.notasCriticas.map((nota: string, idx: number) => (
-                    <li key={idx}>{nota}</li>
-                  ))}
-                </ul>
-              </>
-            )}
+          {Array.isArray(cap.notasCriticas) && cap.notasCriticas.length > 0 && (
+            <>
+              <h4>Notas críticas</h4>
+              <ul>
+                {cap.notasCriticas.map((nota: string, idx: number) => (
+                  <li key={idx}>{nota}</li>
+                ))}
+              </ul>
+            </>
+          )}
 
           {Array.isArray(cap.notasEditoriais) &&
             cap.notasEditoriais.length > 0 && (
