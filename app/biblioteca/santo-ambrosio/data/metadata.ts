@@ -66,7 +66,7 @@ export const obraMetadata = {
       icone: "🎵",
       titulo: "Hinos Ambrosianos",
       descricao:
-        "Quatorze hinos do corpus crítico de Fontaine, acompanhados de um hino anônimo da tradição ambrosiana, com texto em Latim e tradução em Português.",
+        "Quatorze hinos do corpus crítico de Fontaine, acompanhados de um hino anônimo da tradição ambrosiana.",
       contagem: "14 hinos (Fontaine) + 1 anônimo",
       capitulosCount: 15,
       href: "/biblioteca/santo-ambrosio/hinos-ambrosianos",
