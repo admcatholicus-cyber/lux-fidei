@@ -1275,13 +1275,19 @@
   .landingSection {
     margin-bottom: 56px;
   }
-  .landingTocList a {
-    grid-template-columns: 36px 1fr;
-    gap: 12px;
-    padding: 16px 4px;
+  .landingContainer {
+    padding: 24px 20px 64px;
   }
-  .landingTocTitle {
-    font-size: 1.02rem;
+  .tituloObra {
+    font-size: 1.9rem;
+  }
+  .cardObraConteudo {
+    padding: 22px;
+  }
+  .cardObraFooter {
+    flex-wrap: wrap;
+    gap: 14px;
+    justify-content: flex-start;
   }
   .divider {
     margin: 36px auto 32px;
