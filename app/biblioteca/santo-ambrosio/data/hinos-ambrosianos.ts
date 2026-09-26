@@ -458,7 +458,7 @@ export const hinosAmbrosianosData: CapituloAmbrosio[] = [
       tradutor: "Projeto Lux Fidei",
     },
     notasCriticas: [
-      "J. Fontaine, Ambroise de Milan: Hymnes (1992), hino XIII (8 estrofes integrais de 32 versos + doxologia, segundo a edição crítica de Oxford CSLA E05216).",
+      "J. Fontaine, Ambroise de Milan: Hymnes (1992), hino XIII (7 estrofes de conteúdo + doxologia, totalizando 32 versos em 8 quadras, segundo a edição crítica de Oxford CSLA E05216).",
     ],
     notasEditoriais: [
       "Uso litúrgico: Festa de São Lourenço Mártir (10 de agosto).",
